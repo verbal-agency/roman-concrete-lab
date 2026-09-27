@@ -1,0 +1,37 @@
+{
+  "goal": "G-1",
+  "protocol_version": "g1.1-public-expansion",
+  "execution_date": "2026-09-27",
+  "verdict": "AUDIT_INCOMPLETE",
+  "provisional_verdict": "REPLICATION_STUDY_REQUIRED",
+  "audit_complete": false,
+  "saturated": true,
+  "provider_notes": {
+    "crossref": "queried read-only; indexed records returned",
+    "openalex": "queried read-only; indexed records returned",
+    "semantic_scholar": "API returned HTTP 429; indexed PDFs/search results were screened as alternate lawful discovery",
+    "public_expansion": "repository/thesis/publisher searches and two focused citation-search waves found a second provisional direct family and no additional Tier A family"
+  },
+  "counts": {
+    "deduplicated_records": 34,
+    "full_text_or_preview_assessments": 24,
+    "independent_tier_a_families": 2,
+    "tier_a_arms": 3,
+    "tier_a_functional_families": 2,
+    "tier_a_external_replications": 0,
+    "tier_a_core_covariate_families_ge_70pct": 0
+  },
+  "blocking_reason": "Qualified human adjudication of Tier A eligibility and the final verdict is required by the goal authority boundary; agent screening cannot satisfy it.",
+  "threshold_evidence": {
+    "fewer_than_3_direct_families": true,
+    "fewer_than_30_direct_arms": true,
+    "no_independent_replication": true,
+    "interpretable_core_contrast": true,
+    "protocols_compatible_for_common_estimand": false
+  },
+  "eligible_next_goal": null,
+  "blocked_goals": ["G00", "G01", "G02", "G03", "G04", "G05A", "G05B", "G06", "G07", "G08", "G09", "G10"],
+  "source_manifest": "data/manifests/literature-sufficiency-sources.jsonl",
+  "screening_ledger": "data/manifests/literature-sufficiency-screening.csv",
+  "study_family_ledger": "data/processed/literature-sufficiency-study-families.jsonl"
+}

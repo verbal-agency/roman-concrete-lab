@@ -1,8 +1,10 @@
 # G-1 — Audit literature sufficiency before program construction
 
-**Status:** proposed  
+**Status:** blocked — `AUDIT_INCOMPLETE` pending qualified human adjudication
 **Dependencies:** none  
 **Advances:** an evidence-backed decision about whether the proposed research program should become a modeling project, an evidence-synthesis project, or a replication-first project
+
+**Current amendment:** execution uses protocol `g1.1-public-expansion` in `docs/protocols/literature-sufficiency-search.md`, which broadens lawful public discovery to repository/thesis indexes, exact-title/DOI searches, and citation chaining while explicitly excluding Sci-Hub and other unauthorized access. The amendment records subscription databases as access gaps unless authenticated access is supplied.
 
 ## Objective
 
@@ -57,7 +59,7 @@ Minimum discovery coverage is Crossref, OpenAlex, Semantic Scholar, and citation
 
 Known seeds must include, at minimum, Seymour et al. (2023, DOI `10.1126/sciadv.add1602`), the RILEM hot-lime review (2023, DOI `10.1617/s11527-023-02157-1`), Grosso Giordano et al. (2024, DOI `10.1016/j.conbuildmat.2024.136603`), Grosso Giordano et al. (2025, DOI `10.1016/j.jobe.2025.113234`), and relevant references/citations they expose. Seed status confers no eligibility.
 
-Default search budget is 250 deduplicated records, 60 full-text assessments, and two complete citation-chaining waves. The owner may amend that budget only before screening begins. Reaching a budget limit before the saturation rule is satisfied yields `AUDIT_INCOMPLETE`.
+The original default search budget was 250 deduplicated records, 60 full-text assessments, and two complete citation-chaining waves. The current amended execution uses the frozen `g1.1-public-expansion` budget of 500 deduplicated records, 120 full-text/preview assessments, and four complete citation-chaining waves. Reaching a budget limit before the saturation rule is satisfied yields `AUDIT_INCOMPLETE`.
 
 Saturation requires two successive search/citation waves that each add no new Tier A study family and less than 5% new potentially eligible records relative to the previously screened unique-record total.
 

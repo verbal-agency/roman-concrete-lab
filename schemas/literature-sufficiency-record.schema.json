@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/literature-sufficiency-record.schema.json",
+  "title": "G-1 literature sufficiency record",
+  "type": "object",
+  "required": ["record_id", "title", "source_type", "retrieval_date", "screening", "evidence"],
+  "properties": {
+    "record_id": {"type": "string", "pattern": "^[A-Z0-9_-]+$"},
+    "doi": {"type": ["string", "null"]},
+    "title": {"type": "string", "minLength": 1},
+    "authors": {"type": "array", "items": {"type": "string"}},
+    "year": {"type": ["integer", "null"]},
+    "source_type": {"type": "string", "enum": ["journal", "review", "archaeology", "method", "repository", "other"]},
+    "retrieval_date": {"type": "string", "format": "date"},
+    "locator": {"type": "string", "minLength": 1},
+    "access_class": {"type": "string", "enum": ["open_full_text", "abstract_only", "publisher_metadata", "lawful_local_copy", "inaccessible"]},
+    "screening": {
+      "type": "object",
+      "required": ["stage", "decision", "reason", "reviewer_a", "reviewer_b_or_adjudicator"],
+      "properties": {
+        "stage": {"type": "string", "enum": ["seed", "discovery", "citation_chain"]},
+        "decision": {"type": "string", "enum": ["include", "exclude", "pending"]},
+        "reason": {"type": "string", "minLength": 1},
+        "reviewer_a": {"type": "string", "minLength": 1},
+        "reviewer_b_or_adjudicator": {"type": "string", "minLength": 1}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["tier", "study_family_id", "independence", "arm_count", "endpoint_class", "numeric_data_status"],
+      "properties": {
+        "tier": {"type": "string", "enum": ["A", "B", "C", "D", "pending"]},
+        "study_family_id": {"type": ["string", "null"]},
+        "independence": {"type": "string", "enum": ["independent", "originating", "derivative", "unknown", "not_applicable"]},
+        "arm_count": {"type": "integer", "minimum": 0},
+        "specimen_count": {"type": ["integer", "null"], "minimum": 0},
+        "endpoint_class": {"type": "string", "enum": ["functional_water_transport", "crack_closure_only", "strength_only", "mechanistic", "context_only", "none", "unknown"]},
+        "numeric_data_status": {"type": "string", "enum": ["reported_table", "digitizable", "supplement_or_repository", "narrative_only", "inaccessible", "not_reported"]},
+        "core_covariate_completeness": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "exact_locator": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}
