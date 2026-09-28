@@ -3,7 +3,7 @@ import unittest
 from copy import deepcopy
 from pathlib import Path
 
-from tools.literature_audit.decision import decide, load_families
+from tools.literature_audit.decision import decide, decide_material_candidates, load_candidates, load_families
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -12,6 +12,20 @@ ROOT = Path(__file__).resolve().parents[2]
 class DecisionTests(unittest.TestCase):
     def setUp(self):
         self.families = load_families(ROOT / "data/processed/literature-sufficiency-study-families.jsonl")
+        self.candidates = load_candidates(ROOT / "data/processed/literature-sufficiency-material-candidates.jsonl")
+
+    def test_material_candidate_is_provisionally_plausible_but_blocked(self):
+        result = decide_material_candidates(self.candidates)
+        self.assertEqual(result["verdict"], "AUDIT_INCOMPLETE")
+        self.assertEqual(result["provisional_verdict"], "LAB_CANDIDATE_PLAUSIBLE")
+        self.assertEqual(result["provisional_plausible_candidate_count"], 3)
+
+    def test_material_candidate_can_close_after_adjudication(self):
+        adjudicated = deepcopy(self.candidates)
+        for candidate in adjudicated:
+            candidate["adjudication_status"] = "adjudicated"
+        result = decide_material_candidates(adjudicated, human_adjudicated=True)
+        self.assertEqual(result["verdict"], "LAB_CANDIDATE_PLAUSIBLE")
 
     def test_screened_corpus_is_replication_first(self):
         adjudicated = deepcopy(self.families)

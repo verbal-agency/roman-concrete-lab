@@ -4,11 +4,11 @@
 **Dependencies:** none  
 **Advances:** an evidence-backed decision about whether the proposed research program should become a modeling project, an evidence-synthesis project, or a replication-first project
 
-**Current amendment:** execution uses protocol `g1.1-public-expansion` in `docs/protocols/literature-sufficiency-search.md`, which broadens lawful public discovery to repository/thesis indexes, exact-title/DOI searches, and citation chaining while explicitly excluding Sci-Hub and other unauthorized access. The amendment records subscription databases as access gaps unless authenticated access is supplied.
+**Current amendment:** execution uses protocol `g1.2-material-candidate` in `docs/protocols/literature-sufficiency-search.md`. It adds a material-candidate viability pass—separate from modelability—using public repository/thesis indexes, exact-title/DOI searches, archaeological/material-characterization records, technical reports, and citation chains. It explicitly excludes Sci-Hub and other unauthorized access and records subscription databases as access gaps unless authenticated access is supplied.
 
 ## Objective
 
-Determine whether the published record contains enough independent, comparable, modern terrestrial hot-mixed quicklime/lime-pozzolan experiments with controlled cracking and functional healing outcomes to justify constructing the program proposed in `docs/research_program_v2.md`.
+Determine both (a) whether a materially specified Roman-concrete candidate can be responsibly handed to a qualified laboratory for a bounded, safe test, and (b) whether the published record contains enough independent, comparable, modern terrestrial hot-mixed quicklime/lime-pozzolan experiments with controlled cracking and functional healing outcomes to justify a model-oriented program proposed in `docs/research_program_v2.md`.
 
 This is the only eligible starting goal. It audits the premise; it does not presume that a model-ready corpus exists.
 
@@ -16,7 +16,7 @@ This is the only eligible starting goal. It audits the premise; it does not pres
 
 Can the literature support study-grouped estimation and honest out-of-study evaluation of a declared hot-mixing/quicklime intervention against a process-matched control on functional water-transport recovery after controlled cracking?
 
-The audit must emit exactly one substantive verdict—`MODELABLE_NOW`, `EVIDENCE_SYNTHESIS_ONLY`, or `REPLICATION_STUDY_REQUIRED`—or the non-verdict terminal state `AUDIT_INCOMPLETE`.
+The audit emits a paired decision: `material_candidate_verdict` (`LAB_CANDIDATE_PLAUSIBLE`, `LAB_CANDIDATE_NOT_ESTABLISHED`, or provisional/incomplete) and `modelability_verdict` (`MODELABLE_NOW`, `EVIDENCE_SYNTHESIS_ONLY`, `REPLICATION_STUDY_REQUIRED`, or `AUDIT_INCOMPLETE`). The overall G-1 state remains `AUDIT_INCOMPLETE` until required human adjudication and coverage gates are complete.
 
 ## Frozen evidence tiers
 
@@ -59,7 +59,7 @@ Minimum discovery coverage is Crossref, OpenAlex, Semantic Scholar, and citation
 
 Known seeds must include, at minimum, Seymour et al. (2023, DOI `10.1126/sciadv.add1602`), the RILEM hot-lime review (2023, DOI `10.1617/s11527-023-02157-1`), Grosso Giordano et al. (2024, DOI `10.1016/j.conbuildmat.2024.136603`), Grosso Giordano et al. (2025, DOI `10.1016/j.jobe.2025.113234`), and relevant references/citations they expose. Seed status confers no eligibility.
 
-The original default search budget was 250 deduplicated records, 60 full-text assessments, and two complete citation-chaining waves. The current amended execution uses the frozen `g1.1-public-expansion` budget of 500 deduplicated records, 120 full-text/preview assessments, and four complete citation-chaining waves. Reaching a budget limit before the saturation rule is satisfied yields `AUDIT_INCOMPLETE`.
+The original default search budget was 250 deduplicated records, 60 full-text assessments, and two complete citation-chaining waves. The current amended execution uses the frozen `g1.2-material-candidate` budget of 500 deduplicated records, 120 full-text/preview assessments, and four complete citation-chaining waves. Reaching a budget limit before the saturation rule is satisfied yields `AUDIT_INCOMPLETE`.
 
 Saturation requires two successive search/citation waves that each add no new Tier A study family and less than 5% new potentially eligible records relative to the previously screened unique-record total.
 
@@ -107,6 +107,7 @@ Required invariants:
 - `data/manifests/literature-sufficiency-sources.jsonl` — deduplicated source and retrieval manifest;
 - `data/manifests/literature-sufficiency-screening.csv` — screening ledger;
 - `data/processed/literature-sufficiency-study-families.jsonl` — family/arm counts and eligibility fields;
+- `data/processed/literature-sufficiency-material-candidates.jsonl` — candidate identity, material evidence, lab-handoff readiness, and provisional candidate verdicts;
 - `tools/literature_audit/` — optional, standard-library-only normalization and deterministic verdict code;
 - `fixtures/literature_audit/` — offline positive, negative, duplicate, contradictory, malformed, partial, inaccessible, and budget-exhaustion cases;
 - `tests/literature_audit/` — contract and verdict tests if executable tooling is introduced;
@@ -147,6 +148,7 @@ Equivalent paths are allowed only if the goal report records them. Do not create
 7. The report distinguishes direct, transfer, and contextual evidence; discusses known positive and conflicting/null findings; identifies the smallest evidence gap preventing a stronger verdict; and makes no model-performance claim.
 8. The search satisfies the saturation rule within budget. If it does not, the recorded outcome is `AUDIT_INCOMPLETE` and no downstream goal is marked eligible.
 9. `artifacts/goals/G-1/report.md` maps criteria 1–8 to files, checks, and results and records every deviation or unresolved limitation.
+10. The material-candidate ledger names each candidate, links its supporting records, separates formulation/material evidence from model-arm eligibility, and emits a deterministic provisional candidate verdict without authorizing physical execution.
 
 ## Stop conditions
 
@@ -159,4 +161,5 @@ Equivalent paths are allowed only if the goal report records them. Do not create
 - `MODELABLE_NOW` makes G00 eligible to ratify the bounded modeling program and create its minimal scaffold.
 - `EVIDENCE_SYNTHESIS_ONLY` makes G00 eligible only to ratify a synthesis-first charter and minimal corpus tooling; G05B–G08 remain blocked until a later evidence amendment passes the relevant gate.
 - `REPLICATION_STUDY_REQUIRED` makes G00 eligible only to ratify a replication-first charter and insert a controlled-study-design goal; the software/modeling sequence G01–G10 remains blocked pending roadmap amendment.
+- A paired result with `material_candidate_verdict=LAB_CANDIDATE_PLAUSIBLE` and `modelability_verdict=REPLICATION_STUDY_REQUIRED` makes G00 eligible to ratify only the pre-lab GP1–GP3 branch. GL1 and GL2 remain externally gated; GD1 remains blocked until reproducible physical results pass its data threshold.
 - `AUDIT_INCOMPLETE` has no downstream handoff.

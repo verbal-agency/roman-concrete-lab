@@ -1,7 +1,7 @@
 # G00 — Ratify the verdict-specific charter and authorized scaffold
 
 **Status:** proposed  
-**Dependencies:** G-1 with `MODELABLE_NOW`, `EVIDENCE_SYNTHESIS_ONLY`, or `REPLICATION_STUDY_REQUIRED`; `AUDIT_INCOMPLETE` does not satisfy this dependency  
+**Dependencies:** G-1 with a complete paired decision; `AUDIT_INCOMPLETE` does not satisfy this dependency
 **Advances:** a falsifiable program with explicit authority, scope, and stop conditions
 
 ## Objective
@@ -15,6 +15,7 @@ Read the G-1 decision, report, frozen manifest, and criterion evidence. Record o
 - `MODELABLE_NOW`: ratify the bounded synthesis/modeling program and create the minimal Python project skeleton described below.
 - `EVIDENCE_SYNTHESIS_ONLY`: ratify a synthesis-first program and create only minimal corpus, provenance, and reporting tooling. Predictive modeling, candidate ranking, and agent development remain unauthorized.
 - `REPLICATION_STUDY_REQUIRED`: ratify a replication-first program, define the owner/expert decisions needed to design the controlled study, and amend the roadmap with a dedicated study-design goal. Do not create the general software scaffold or begin G01–G10.
+- `LAB_CANDIDATE_PLAUSIBLE` plus `REPLICATION_STUDY_REQUIRED`: ratify the pre-lab replication track, authorize GP1–GP3 only, and preserve GL1 as the external facility/safety gate. Do not authorize physical execution or GD1.
 
 G00 may tighten the G-1 conclusion. It may not promote the program to a less conservative track without a versioned literature amendment that re-runs and passes G-1's frozen decision rules.
 
@@ -31,6 +32,7 @@ If any choice changes the scientific domain, estimand, rights policy, or physica
 - for `MODELABLE_NOW`, a Python package/test skeleton, lockfile, formatter/linter/test configuration;
 - for `EVIDENCE_SYNTHESIS_ONLY`, only the minimal corpus/provenance/reporting skeleton required by the amended charter;
 - for `REPLICATION_STUDY_REQUIRED`, a roadmap amendment and study-design decision surface, with no general software scaffold;
+- for `LAB_CANDIDATE_PLAUSIBLE`, a roadmap amendment and pre-lab handoff decision surface, with no physical-lab or model scaffold;
 - top-level `README.md` explaining the scientific boundary and stage gates;
 - `LICENSE` decision or an explicit `LICENSE-PENDING.md` blocker;
 - `.gitignore` rules for credentials, restricted raw documents, caches, and generated artifacts;

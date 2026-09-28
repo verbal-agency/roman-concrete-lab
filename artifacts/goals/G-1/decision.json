@@ -1,6 +1,6 @@
 {
   "goal": "G-1",
-  "protocol_version": "g1.1-public-expansion",
+  "protocol_version": "g1.2-material-candidate",
   "execution_date": "2026-09-27",
   "verdict": "AUDIT_INCOMPLETE",
   "provisional_verdict": "REPLICATION_STUDY_REQUIRED",
@@ -10,11 +10,12 @@
     "crossref": "queried read-only; indexed records returned",
     "openalex": "queried read-only; indexed records returned",
     "semantic_scholar": "API returned HTTP 429; indexed PDFs/search results were screened as alternate lawful discovery",
-    "public_expansion": "repository/thesis/publisher searches and two focused citation-search waves found a second provisional direct family and no additional Tier A family"
+    "public_expansion": "repository/thesis/publisher searches and two focused citation-search waves found a second provisional direct family and no additional Tier A family",
+    "material_candidate_pass": "five Roman-concrete candidate records were separated from model-arm eligibility; three candidates are provisionally plausible and remain pending human adjudication"
   },
   "counts": {
-    "deduplicated_records": 34,
-    "full_text_or_preview_assessments": 24,
+    "deduplicated_records": 38,
+    "full_text_or_preview_assessments": 27,
     "independent_tier_a_families": 2,
     "tier_a_arms": 3,
     "tier_a_functional_families": 2,
@@ -29,9 +30,18 @@
     "interpretable_core_contrast": true,
     "protocols_compatible_for_common_estimand": false
   },
+  "material_candidate": {
+    "verdict": "AUDIT_INCOMPLETE",
+    "provisional_verdict": "LAB_CANDIDATE_PLAUSIBLE",
+    "candidate_count": 5,
+    "provisional_plausible_candidate_count": 3,
+    "blocker": "Qualified human adjudication and qualified-lab safety/handoff review are required before a material candidate can be approved for lab consideration.",
+    "candidate_ledger": "data/processed/literature-sufficiency-material-candidates.jsonl"
+  },
   "eligible_next_goal": null,
   "blocked_goals": ["G00", "G01", "G02", "G03", "G04", "G05A", "G05B", "G06", "G07", "G08", "G09", "G10"],
   "source_manifest": "data/manifests/literature-sufficiency-sources.jsonl",
   "screening_ledger": "data/manifests/literature-sufficiency-screening.csv",
-  "study_family_ledger": "data/processed/literature-sufficiency-study-families.jsonl"
+  "study_family_ledger": "data/processed/literature-sufficiency-study-families.jsonl",
+  "material_candidate_ledger": "data/processed/literature-sufficiency-material-candidates.jsonl"
 }

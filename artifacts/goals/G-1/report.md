@@ -1,26 +1,27 @@
 # G-1 criterion-to-evidence report
 
-**Outcome:** blocked — `AUDIT_INCOMPLETE`; provisional finding `REPLICATION_STUDY_REQUIRED`  
+**Outcome:** blocked — `AUDIT_INCOMPLETE`; provisional modelability finding `REPLICATION_STUDY_REQUIRED`; provisional material-candidate finding `LAB_CANDIDATE_PLAUSIBLE`
 **Primary report:** `docs/reports/literature-sufficiency-audit.md`  
 **Decision:** `artifacts/goals/G-1/decision.json`
 
 | Criterion | Evidence | Result |
 |---|---|---|
-| 1. Frozen protocol | `docs/protocols/literature-sufficiency-search.md`, amended protocol `g1.1-public-expansion`, dated before expanded screening artifacts | pass |
-| 2. Complete source/screening ledger | `data/manifests/literature-sufficiency-sources.jsonl` (34 records), `data/manifests/literature-sufficiency-screening.csv` (34 rows) | pass |
+| 1. Frozen protocol | `docs/protocols/literature-sufficiency-search.md`, amended protocol `g1.2-material-candidate`, dated before candidate-ledger artifacts | pass |
+| 2. Complete source/screening ledger | `data/manifests/literature-sufficiency-sources.jsonl` (38 records), `data/manifests/literature-sufficiency-screening.csv` (38 rows) | pass |
 | 3. Independent screening/adjudication | Screening ledger records agent screening passes, but qualified human adjudication is still `pending-human-adjudication` for the provisional Tier A record | blocked |
 | 4. Family/arm/endpoint/replication counts | `data/processed/literature-sufficiency-study-families.jsonl`, report deterministic-count table | pass |
 | 5. Offline failure fixtures | `fixtures/literature_audit/cases.jsonl` covers positive, negative, duplicate, contradictory, malformed, partial, budget, and unsupported cases | pass |
 | 6. Deterministic replay/verdict | `tools/literature_audit/decision.py`; `tests/literature_audit/test_decision.py`; replay supports `AUDIT_INCOMPLETE` until all direct families are adjudicated and shows the provisional 2-family/3-arm result | pass |
 | 7. Direct/transfer/contextual synthesis | `docs/reports/literature-sufficiency-audit.md` sections “What the direct/adjacent split found” and “Why this is a replication problem” | pass |
-| 8. Saturation within budget | 34 records and 24 full-text/preview assessments; two expanded focused search/citation waves added no new Tier A family after the Utah lineage | pass, with provider-rate-limit and subscription-access limitations recorded |
-| 9. Inspectable handoff | this report and `decision.json` preserve the provisional finding, but no downstream goal is eligible until the human-adjudication blocker is resolved | blocked |
+| 8. Saturation within budget | 38 records and 27 full-text/preview assessments; two material-candidate follow-up waves added no new Tier A family after the Utah lineage | pass, with provider-rate-limit and subscription-access limitations recorded |
+| 9. Inspectable handoff | this report and `decision.json` preserve the paired provisional findings; after adjudication, only the G00 `PRELAB_REPLICATION` branch (GP1–GP3) may become eligible, while GL1/GL2/GD1 remain externally/data gated | blocked |
+| 10. Material-candidate audit | `data/processed/literature-sufficiency-material-candidates.jsonl` names five Roman-concrete candidates; RC-01, RC-04, and RC-05 are provisionally plausible, while RC-02/RC-03 lack a qualifying functional or comparator record | blocked pending human and lab-safety adjudication |
 
 ## Verification commands
 
 ```text
 python3 -m unittest discover -s tests/literature_audit -v
-python3 tools/literature_audit/decision.py data/processed/literature-sufficiency-study-families.jsonl --audit-complete --saturated
+python3 tools/literature_audit/decision.py data/processed/literature-sufficiency-study-families.jsonl --candidate-ledger data/processed/literature-sufficiency-material-candidates.jsonl --audit-complete --saturated
 ```
 
 The tests passed on 2026-09-27. The deterministic decision function flags missing human adjudication as `AUDIT_INCOMPLETE`; a separate replay with an adjudicated Tier A ledger emits the provisional `REPLICATION_STUDY_REQUIRED` result.

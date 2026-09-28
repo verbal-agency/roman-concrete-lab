@@ -2,7 +2,7 @@
 
 These files are intended for one-goal-at-a-time execution by a coding agent.
 
-G-1 is the only eligible starting goal. G00 and every later goal require a recorded substantive G-1 verdict and must follow the verdict-specific branch in `docs/roadmap.md`.
+G-1 is the only eligible starting goal. G00 and every later goal require a recorded substantive paired G-1 verdict and must follow the verdict-specific branch in `docs/roadmap.md`. The `GP*` goals are pre-lab work; `GL*` goals require an external qualified facility; `GD1` is conditional on successful physical replication.
 
 ## Required behavior
 

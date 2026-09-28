@@ -4,6 +4,20 @@
 
 Proposed conditional program. G-1 must first establish literature sufficiency; G00 may ratify only the track authorized by that verdict.
 
+## Execution division: pre-lab versus lab-dependent
+
+The program has two deliberately separate planes:
+
+### Pre-lab plane
+
+G-1/G00/GP1–GP3 may run without a laboratory. They produce an evidence-backed candidate dossier, rival hypotheses, a draft study specification, a data/provenance contract, and a facility-readiness packet. These goals may not authorize physical work, infer an unreported recipe, or claim material performance.
+
+### Lab-dependent plane
+
+GL1 requires a qualified facility to review scope, hazards, ownership, and measurement feasibility. GL2 requires returned specimen-level results and decides whether the candidate is supported, narrow, inconclusive, or not reproduced. Only a supported GL2 result with the ratified data threshold can unlock GD1, the conditional discovery loop.
+
+The pre-lab plane is intentionally useful even if no partner is found: it should make the candidate more legible, expose missing evidence, and provide a credible basis for recruiting or declining a facility. It is not a substitute for physical validation.
+
 ## Precondition: literature sufficiency
 
 The program does not assume that a model-ready evidence base exists. Before scaffolding the research system, G-1 performs a bounded, reproducible search and classifies evidence as direct intervention evidence, transfer evidence, contextual evidence, or excluded evidence.

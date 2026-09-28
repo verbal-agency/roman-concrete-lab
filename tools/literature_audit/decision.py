@@ -24,7 +24,61 @@ def load_families(path: Path) -> list[dict]:
     return families
 
 
-def decide(families: list[dict], *, audit_complete: bool, saturated: bool, human_adjudicated: bool = False) -> dict:
+def load_candidates(path: Path) -> list[dict]:
+    candidates: list[dict] = []
+    required = (
+        "candidate_id",
+        "supporting_record_ids",
+        "material_identity_status",
+        "process_identity_status",
+        "comparator_status",
+        "functional_endpoint_status",
+        "lab_handoff_status",
+        "provisional_candidate_verdict",
+        "adjudication_status",
+    )
+    for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        if not line.strip():
+            continue
+        item = json.loads(line)
+        for key in required:
+            if key not in item:
+                raise ValueError(f"candidate line {line_number}: missing {key}")
+        if item["provisional_candidate_verdict"] not in {"LAB_CANDIDATE_PLAUSIBLE", "LAB_CANDIDATE_NOT_ESTABLISHED"}:
+            raise ValueError(f"candidate line {line_number}: invalid provisional verdict")
+        candidates.append(item)
+    return candidates
+
+
+def decide_material_candidates(candidates: list[dict], *, human_adjudicated: bool = False) -> dict:
+    plausible = [item for item in candidates if item["provisional_candidate_verdict"] == "LAB_CANDIDATE_PLAUSIBLE"]
+    all_adjudicated = all(item.get("adjudication_status") == "adjudicated" for item in candidates)
+    effective_human_adjudicated = human_adjudicated and all_adjudicated
+    if not candidates or not effective_human_adjudicated:
+        verdict = "AUDIT_INCOMPLETE"
+    elif plausible:
+        verdict = "LAB_CANDIDATE_PLAUSIBLE"
+    else:
+        verdict = "LAB_CANDIDATE_NOT_ESTABLISHED"
+    return {
+        "verdict": verdict,
+        "provisional_verdict": "LAB_CANDIDATE_PLAUSIBLE" if plausible else "LAB_CANDIDATE_NOT_ESTABLISHED",
+        "candidate_count": len(candidates),
+        "provisional_plausible_candidate_count": len(plausible),
+        "human_adjudicated": effective_human_adjudicated,
+        "human_adjudication_requested": human_adjudicated,
+        "all_candidates_adjudicated": all_adjudicated,
+    }
+
+
+def decide(
+    families: list[dict],
+    *,
+    audit_complete: bool,
+    saturated: bool,
+    human_adjudicated: bool = False,
+    candidates: list[dict] | None = None,
+) -> dict:
     direct = [item for item in families if item["tier"] == "A"]
     all_direct_adjudicated = all(item.get("adjudication_status") == "adjudicated" for item in direct)
     effective_human_adjudicated = human_adjudicated and all_direct_adjudicated
@@ -58,7 +112,7 @@ def decide(families: list[dict], *, audit_complete: bool, saturated: bool, human
         verdict = "REPLICATION_STUDY_REQUIRED"
     else:
         verdict = "EVIDENCE_SYNTHESIS_ONLY"
-    return {
+    result = {
         "verdict": verdict,
         "provisional_verdict": provisional_verdict,
         "independent_tier_a_families": len(direct),
@@ -72,6 +126,9 @@ def decide(families: list[dict], *, audit_complete: bool, saturated: bool, human
         "human_adjudication_requested": human_adjudicated,
         "all_direct_families_adjudicated": all_direct_adjudicated,
     }
+    if candidates is not None:
+        result["material_candidate"] = decide_material_candidates(candidates, human_adjudicated=human_adjudicated)
+    return result
 
 
 def main() -> None:
@@ -80,8 +137,10 @@ def main() -> None:
     parser.add_argument("--audit-complete", action="store_true")
     parser.add_argument("--saturated", action="store_true")
     parser.add_argument("--human-adjudicated", action="store_true")
+    parser.add_argument("--candidate-ledger", type=Path)
     args = parser.parse_args()
-    print(json.dumps(decide(load_families(args.families), audit_complete=args.audit_complete, saturated=args.saturated, human_adjudicated=args.human_adjudicated), sort_keys=True, indent=2))
+    candidates = load_candidates(args.candidate_ledger) if args.candidate_ledger else None
+    print(json.dumps(decide(load_families(args.families), audit_complete=args.audit_complete, saturated=args.saturated, human_adjudicated=args.human_adjudicated, candidates=candidates), sort_keys=True, indent=2))
 
 
 if __name__ == "__main__":
