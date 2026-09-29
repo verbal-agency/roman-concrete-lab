@@ -1,0 +1,61 @@
+{
+  "goal": "GP1",
+  "protocol_version": "gp1.1-candidate-dossier",
+  "execution_date": "2026-09-28",
+  "replay_command": "python3 tools/literature_audit/gp1_replay.py",
+  "inputs": {
+    "candidate_ledger": {
+      "path": "data/processed/literature-sufficiency-material-candidates.jsonl",
+      "sha256": "1e0ed125eaed1229df4e8d7b955489f63e9176a835bbe17866177888173ac5c8"
+    },
+    "source_manifest": {
+      "path": "data/manifests/literature-sufficiency-sources.jsonl",
+      "sha256": "58d87c1e548b91f7dcefb04487e8fd559828f766bdb84d4c0dbfedda0cb41c34"
+    },
+    "study_family_ledger": {
+      "path": "data/processed/literature-sufficiency-study-families.jsonl",
+      "sha256": "e2a43a94424834d26861ba69d749c3ac4ca514ee5599decb6af4d0cd491ebaac"
+    },
+    "screening_ledger": {
+      "path": "data/manifests/literature-sufficiency-screening.csv",
+      "sha256": "b56e1685328c78f49db804e06f74d7c622bfc09b29f323c7c57b37b3257478d6"
+    },
+    "study_family_ledger": {
+      "path": "data/processed/literature-sufficiency-study-families.jsonl",
+      "sha256": "e2a43a94424834d26861ba69d749c3ac4ca514ee5599decb6af4d0cd491ebaac"
+    },
+    "screening_ledger": {
+      "path": "data/manifests/literature-sufficiency-screening.csv",
+      "sha256": "b56e1685328c78f49db804e06f74d7c622bfc09b29f323c7c57b37b3257478d6"
+    },
+    "context_contract": {
+      "path": "docs/protocols/exploration-contracts.md",
+      "sha256": "6878d483bd47ca6d68acfe63124aed92b003879d65bd8322f30682ddaf7874b7"
+    }
+  },
+  "outputs": {
+    "candidate_hypotheses": {
+      "path": "data/processed/candidate-hypotheses.jsonl",
+      "sha256": "e9c8044933546e8e04e62a9553d4269a5b5303e461ef174c54092fd98a31c2be"
+    },
+    "dossier": "docs/reports/material-candidate-dossier.md",
+    "replay_tool": {
+      "path": "tools/literature_audit/gp1_replay.py",
+      "sha256": "8113c049727a77a156ebb756e4618b6d8088d5748c9fcfe7ad3bd370060b2686"
+    }
+  },
+  "counts": {
+    "candidate_count": 5,
+    "hypothesis_count": 6,
+    "study_family_count": 24,
+    "reconciled_supporting_record_count": 10,
+    "provisional_plausible_candidate_count": 3,
+    "exploration_seedable_candidate_ids": ["RC-01", "RC-04", "RC-05"]
+  },
+  "authority": {
+    "network": "none during replay",
+    "model_calls": "none",
+    "physical_execution": "prohibited",
+    "human_adjudication_before_lab": true
+  }
+}

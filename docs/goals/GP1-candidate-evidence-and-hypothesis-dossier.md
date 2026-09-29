@@ -1,6 +1,6 @@
 # GP1 — Candidate evidence and hypothesis dossier
 
-**Status:** proposed  
+**Status:** complete
 **Dependencies:** G00 `EXPLORATORY_PLATFORM` or `PRELAB_REPLICATION` track; `exploration_seedability=EXPLORATION_SEEDABLE` with at least one provisional candidate
 **Advances:** converts the public evidence audit into a problem-specific, falsifiable candidate dossier and hypothesis matrix without claiming material performance
 
