@@ -1,6 +1,6 @@
 # GP2 — Pre-lab experiment specification
 
-**Status:** proposed  
+**Status:** complete
 **Dependencies:** GP1 complete  
 **Advances:** produces a reviewable study package without pretending that a repository document is a laboratory authorization
 

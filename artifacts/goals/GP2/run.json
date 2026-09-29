@@ -1,0 +1,40 @@
+{
+  "goal": "GP2",
+  "protocol_version": "gp2.1-conditional-ranking",
+  "execution_date": "2026-09-28",
+  "replay_command": "python3 tools/prelab/replay.py",
+  "inputs": {
+    "context_contract": {"path": "docs/protocols/exploration-contracts.md", "sha256": "6878d483bd47ca6d68acfe63124aed92b003879d65bd8322f30682ddaf7874b7"},
+    "candidate_hypotheses": {"path": "data/processed/candidate-hypotheses.jsonl", "sha256": "e9c8044933546e8e04e62a9553d4269a5b5303e461ef174c54092fd98a31c2be"},
+    "study_specification": {"path": "docs/protocols/prelab-study-specification.md", "sha256": "7a0bab33c51b11bb2e90ed4dd2672071d909f61e4a37f3c75d9e9d0326536a1b"},
+    "result_schema": {"path": "schemas/prelab-result.schema.json", "sha256": "1a21451a5732ee561d11f4a4475a10cce9669ebfa61da73e12b288387a47b54c"},
+    "ranking": {"path": "data/processed/gp2-conditional-ranking.json", "sha256": "7cf13cfe16a92aba784c85257959a5832be29863d937ad0871e16c589d146772"},
+    "fixtures": [
+      {"path": "fixtures/prelab/positive.json", "sha256": "e64d53349cb6346468587ef92d9a945847fb541678ecd33dfd0d2107b18321c0"},
+      {"path": "fixtures/prelab/null.json", "sha256": "877dae3283a7003c7584edcd72d63f849e8f07d2d0ab45813292e56db68a3b27"},
+      {"path": "fixtures/prelab/contradictory.json", "sha256": "ab2d602dcbf865bd44672ac76a45c8d5e184ca265ab7029ce8a9a2828c6a4d9d"},
+      {"path": "fixtures/prelab/incomplete.json", "sha256": "b8a09d5294f629354c2745314630af83776c7cf74c3ddb8a747e8d89fb2ca03b"},
+      {"path": "fixtures/prelab/unsafe.json", "sha256": "e15746f555e75e40a4a44056a078ffdee0de03e0d3e515badee9171c98ee245c"}
+    ]
+  },
+  "outputs": {
+    "ranking_status": "PROVISIONAL_BEST",
+    "provisional_best": "RC-01",
+    "ranking_entry_count": 5,
+    "fixture_statuses": {
+      "positive": "SUPPORTED",
+      "null": "INCONCLUSIVE",
+      "contradictory": "INCONCLUSIVE",
+      "incomplete": "REVIEW_REQUIRED",
+      "unsafe": "REVIEW_REQUIRED"
+    }
+  },
+  "authority": {
+    "network": "none",
+    "model_calls": "none",
+    "partner_contact": "prohibited",
+    "physical_execution": "prohibited",
+    "safety_approval": "prohibited",
+    "draft_watermark": "DRAFT — EXPERT REVIEW REQUIRED"
+  }
+}

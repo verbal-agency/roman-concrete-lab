@@ -1,0 +1,65 @@
+{
+  "protocol_version": "gp2.1-conditional-ranking",
+  "context_id": "roman-concrete-v1",
+  "context_version": "1.0",
+  "decision_target": "functional_water_flow_or_permeability_recovery_after_controlled_cracking",
+  "utility_dimensions": ["endpoint_fit", "information_value", "feasibility", "risk"],
+  "support_region": "modern terrestrial Roman-inspired lime-pozzolan mortar or explicitly marked mortar-like concrete with inspectable process identity and a reviewable comparator",
+  "ranking_status": "PROVISIONAL_BEST",
+  "provisional_best": {
+    "candidate_id": "RC-01",
+    "condition_ids": ["E-RC01-01", "E-RC01-02"],
+    "reason": "closest evidence and comparator alignment to the declared functional endpoint",
+    "uncertainty": ["S25/S26 lineage requires adjudication", "selected-specimen falling-head endpoint requires qualified review", "no independent direct replication"],
+    "support_limit": "does not establish effectiveness, a recipe, or transfer beyond the declared context"
+  },
+  "entries": [
+    {
+      "candidate_id": "RC-01",
+      "status": "PROVISIONAL_BEST",
+      "endpoint_fit": "HIGH",
+      "information_value": "HIGH",
+      "feasibility": "UNKNOWN",
+      "risk": "REVIEW_REQUIRED",
+      "abstention_reason": null
+    },
+    {
+      "candidate_id": "RC-05",
+      "status": "PARETO_SET",
+      "endpoint_fit": "LOW_UNRESOLVED",
+      "information_value": "MEDIUM",
+      "feasibility": "UNKNOWN",
+      "risk": "REVIEW_REQUIRED",
+      "abstention_reason": "functional transport endpoint and process-matched comparator are unresolved"
+    },
+    {
+      "candidate_id": "RC-04",
+      "status": "ABSTAIN",
+      "endpoint_fit": "OUT_OF_DOMAIN",
+      "information_value": "MEDIUM_TRANSFER_ONLY",
+      "feasibility": "UNKNOWN",
+      "risk": "REVIEW_REQUIRED",
+      "abstention_reason": "seawater formulation and crack-closure-only endpoint are outside v1 support"
+    },
+    {
+      "candidate_id": "RC-02",
+      "status": "ABSTAIN",
+      "endpoint_fit": "MISSING",
+      "information_value": "LOW_UNRESOLVED",
+      "feasibility": "UNKNOWN",
+      "risk": "REVIEW_REQUIRED",
+      "abstention_reason": "comparator and functional endpoint are unclear"
+    },
+    {
+      "candidate_id": "RC-03",
+      "status": "ABSTAIN",
+      "endpoint_fit": "MISSING",
+      "information_value": "MEDIUM_MECHANISM_ONLY",
+      "feasibility": "UNKNOWN",
+      "risk": "REVIEW_REQUIRED",
+      "abstention_reason": "no comparable controlled functional recovery test"
+    }
+  ],
+  "tie_break_rule": "endpoint_fit, then information_value, then lower unresolved risk; ties remain PARETO_SET",
+  "authority": "conditional exploration only; no lab, safety, partner, or performance authority"
+}

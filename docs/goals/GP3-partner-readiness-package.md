@@ -44,6 +44,44 @@ No outbound communication or external state change is authorized. Credentials an
 
 Packet completeness checklist, schema validation, and `artifacts/goals/GP3/report.md`.
 
+## Execution contract
+
+### Expected implementation surface
+
+- `docs/partners/partner-readiness-package.md` — owner-review-only packet carrying the GP2 context, ranking, draft conditions, and explicit boundary;
+- `docs/partners/facility-capability-matrix.csv` — required versus optional capability rows;
+- `schemas/partner-result.schema.json` — versioned facility capability/review response contract;
+- `fixtures/partners/feasible.json`, `revise.json`, `no-match.json`, `unknown.json`, and `unsafe.json` — offline gate fixtures;
+- `tests/partners/test_readiness.py` — packet, schema, gate, unknown-field, and authority tests;
+- `artifacts/goals/GP3/run.json` and `artifacts/goals/GP3/report.md` — hashes, replay command, and criterion evidence.
+
+Equivalent paths require a goal amendment before implementation.
+
+### Canonical contract and invariants
+
+Every capability row has `capability_id`, required/optional status, facility question, evidence/provenance requirement, owner, and response status. A facility response has `context_id/version`, reviewed condition IDs, capability statuses, safety/ownership/data questions, schedule/cost fields with explicit `UNKNOWN` semantics, and one gate result: `FEASIBLE_FOR_REVIEW`, `REVISE`, or `NO_MATCH`.
+
+Illegal states include a guessed price or schedule, an unqualified safety approval, a missing data-return field, a private contact credential, a packet that omits the GP2 support region, or an outbound message represented as if sent. No response may promote a provisional ranking to validated performance.
+
+### Deterministic behavior matrix
+
+| Fixture/input | Required gate |
+|---|---|
+| Required capabilities present; safety, ownership, and data questions answerable | `FEASIBLE_FOR_REVIEW` |
+| Required capability or data field unresolved but potentially reviewable | `REVISE` with named blocker |
+| Primary endpoint unavailable or facility scope incompatible | `NO_MATCH` |
+| Safety or ownership responsibility unassigned | `REVISE`; never approval |
+| Cost, schedule, or material unknown | Preserve `UNKNOWN`; never estimate |
+| Private credential or outbound-contact attempt | Reject as unauthorized |
+
+### Authority, replay, and budget boundaries
+
+GP3 reads only repository artifacts and offline fixtures. It may draft owner-review language but may not send email, contact a facility, choose a vendor, purchase materials, negotiate terms, approve safety, or authorize physical execution. The run records input hashes, a deterministic capability ordering, fixture outcomes, and a bounded local budget; replay is byte-equivalent and budget exhaustion stops with `BUDGET_EXHAUSTED`.
+
+### Criterion-to-test map
+
+`tests/partners/test_readiness.py` must cover packet completeness, required/optional capability distinction, unknown cost/material/safety preservation, specimen/batch/instrument/calibration/unit/uncertainty/missingness fields, all three gate outcomes, malformed/partial responses, credential rejection, no-outbound authority, deterministic replay, and budget exhaustion.
+
 ## Stop conditions
 
 Stop if no qualified facility capability can plausibly cover the primary endpoint, or if the safety/ownership questions cannot be stated clearly enough for review.
