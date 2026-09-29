@@ -1,6 +1,6 @@
 # GP3 — Partner-readiness package
 
-**Status:** proposed  
+**Status:** complete
 **Dependencies:** GP2 complete  
 **Advances:** turns the pre-lab design into a facility-evaluable request without initiating external coordination
 

@@ -1,0 +1,38 @@
+{
+  "goal": "GP3",
+  "protocol_version": "gp3.1-partner-readiness",
+  "execution_date": "2026-09-29",
+  "replay_command": "python3 tools/partners/replay.py",
+  "inputs": {
+    "gp2_ranking": {"path": "data/processed/gp2-conditional-ranking.json", "sha256": "7cf13cfe16a92aba784c85257959a5832be29863d937ad0871e16c589d146772"},
+    "gp2_specification": {"path": "docs/protocols/prelab-study-specification.md", "sha256": "d567555159eda743c4c0f66592c01e0765a0fadefa16696731857948f0bc0f89"},
+    "capability_matrix": {"path": "docs/partners/facility-capability-matrix.csv", "sha256": "b5c23d40ddd08446a438f5b6dcfebd100992263153ce6010458282a9b944b941"},
+    "response_schema": {"path": "schemas/partner-result.schema.json", "sha256": "60d6770fe2898cccf16807e9c976a07339aae58eaef5ba614a911389df2f669f"},
+    "packet": {"path": "docs/partners/partner-readiness-package.md", "sha256": "4d87483971a95b4cd1907798770701e58997143d99fdeb712236e08cc4acf4dd"},
+    "fixtures": [
+      {"path": "fixtures/partners/feasible.json", "sha256": "c7b4660be58c4f6a335faa4a7ba7ef3a0e3efc2fc0e743d2a329e107ca2971db"},
+      {"path": "fixtures/partners/revise.json", "sha256": "5cfbeec34bf9fb88967accc58284ea96e9faa7a50a366246fce93f63ec63381a"},
+      {"path": "fixtures/partners/no-match.json", "sha256": "a1fd67fbc8c5ed5584c0cab924544b7f963c07ffa1ea890721312bd199b874cb"},
+      {"path": "fixtures/partners/unknown.json", "sha256": "7e8f673515f9399a38c7873fd27686f0277fed3e591ad603d6a73a9e594d5d38"},
+      {"path": "fixtures/partners/unsafe.json", "sha256": "4e9b59eedefc2e1528ef58a165fa7a5dda1e80ae892049ad31f872fdb0a57ed5"}
+    ]
+  },
+  "outputs": {
+    "fixture_count": 5,
+    "gate_results": {
+      "feasible": "FEASIBLE_FOR_REVIEW",
+      "revise": "REVISE",
+      "no-match": "NO_MATCH",
+      "unknown": "REVISE",
+      "unsafe": "REVISE"
+    }
+  },
+  "authority": {
+    "network": "none",
+    "outbound_communication": "prohibited",
+    "vendor_selection": "prohibited",
+    "purchase_or_negotiation": "prohibited",
+    "safety_approval": "prohibited",
+    "physical_execution": "prohibited"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/partner-result.schema.json",
+  "title": "GP3 facility review response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "response_id",
+    "context_id",
+    "context_version",
+    "reviewed_condition_ids",
+    "capabilities",
+    "safety_review",
+    "ownership_review",
+    "data_return_review",
+    "cost",
+    "schedule",
+    "gate_result",
+    "outbound_status"
+  ],
+  "properties": {
+    "response_id": {"type": "string", "minLength": 1},
+    "context_id": {"const": "roman-concrete-v1"},
+    "context_version": {"const": "1.0"},
+    "reviewed_condition_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["capability_id", "requirement_level", "status", "evidence_locator", "owner_role", "notes"],
+        "properties": {
+          "capability_id": {"pattern": "^C[0-9]{2}$"},
+          "requirement_level": {"enum": ["required", "optional"]},
+          "status": {"enum": ["available", "unavailable", "unknown"]},
+          "evidence_locator": {"type": ["string", "null"]},
+          "owner_role": {"type": ["string", "null"]},
+          "notes": {"type": "string"}
+        }
+      }
+    },
+    "safety_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "owner_role", "questions"],
+      "properties": {
+        "status": {"enum": ["reviewable", "unassigned", "unsafe"]},
+        "owner_role": {"type": ["string", "null"]},
+        "questions": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "ownership_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "questions"],
+      "properties": {
+        "status": {"enum": ["answerable", "unresolved"]},
+        "questions": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "data_return_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "required_fields", "questions"],
+      "properties": {
+        "status": {"enum": ["answerable", "unresolved"]},
+        "required_fields": {"type": "array", "items": {"type": "string"}},
+        "questions": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "cost": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "value", "currency", "notes"],
+      "properties": {
+        "status": {"enum": ["known", "unknown", "owner_decision_required"]},
+        "value": {"type": ["number", "null"]},
+        "currency": {"type": ["string", "null"]},
+        "notes": {"type": "string"}
+      }
+    },
+    "schedule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "value", "notes"],
+      "properties": {
+        "status": {"enum": ["known", "unknown", "owner_decision_required"]},
+        "value": {"type": ["string", "null"]},
+        "notes": {"type": "string"}
+      }
+    },
+    "gate_result": {"enum": ["FEASIBLE_FOR_REVIEW", "REVISE", "NO_MATCH"]},
+    "blockers": {"type": "array", "items": {"type": "string"}},
+    "outbound_status": {"const": "NOT_SENT"}
+  }
+}

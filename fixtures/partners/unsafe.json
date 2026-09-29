@@ -1,0 +1,30 @@
+{
+  "case_id": "unsafe",
+  "expected_gate": "REVISE",
+  "response": {
+    "response_id": "fixture-unsafe-001",
+    "context_id": "roman-concrete-v1",
+    "context_version": "1.0",
+    "reviewed_condition_ids": ["E-RC01-01"],
+    "capabilities": [
+      {"capability_id":"C01","requirement_level":"required","status":"available","evidence_locator":"fixture/unsafe/C01","owner_role":"materials_lead","notes":"available"},
+      {"capability_id":"C02","requirement_level":"required","status":"available","evidence_locator":"fixture/unsafe/C02","owner_role":"testing_lead","notes":"available"},
+      {"capability_id":"C03","requirement_level":"required","status":"available","evidence_locator":"fixture/unsafe/C03","owner_role":"testing_lead","notes":"available"},
+      {"capability_id":"C04","requirement_level":"required","status":"available","evidence_locator":"fixture/unsafe/C04","owner_role":"testing_lead","notes":"available"},
+      {"capability_id":"C05","requirement_level":"required","status":"available","evidence_locator":"fixture/unsafe/C05","owner_role":"testing_lead","notes":"available"},
+      {"capability_id":"C06","requirement_level":"required","status":"available","evidence_locator":"fixture/unsafe/C06","owner_role":"data_owner","notes":"available"},
+      {"capability_id":"C07","requirement_level":"required","status":"available","evidence_locator":"fixture/unsafe/C07","owner_role":"data_owner","notes":"available"},
+      {"capability_id":"C08","requirement_level":"optional","status":"unknown","evidence_locator":null,"owner_role":null,"notes":"optional"},
+      {"capability_id":"C09","requirement_level":"required","status":"available","evidence_locator":"fixture/unsafe/C09","owner_role":"data_owner","notes":"available"},
+      {"capability_id":"C10","requirement_level":"required","status":"available","evidence_locator":"fixture/unsafe/C10","owner_role":"safety_reviewer","notes":"available for review"}
+    ],
+    "safety_review":{"status":"unassigned","owner_role":null,"questions":["assign qualified safety reviewer before any further consideration"]},
+    "ownership_review":{"status":"answerable","questions":[]},
+    "data_return_review":{"status":"answerable","required_fields":["specimen_id","batch_id","instrument_id","calibration","endpoint","unit","uncertainty","missingness"],"questions":[]},
+    "cost":{"status":"unknown","value":null,"currency":null,"notes":"unknown"},
+    "schedule":{"status":"unknown","value":null,"notes":"unknown"},
+    "gate_result":"REVISE",
+    "blockers":["safety responsibility is unassigned"],
+    "outbound_status":"NOT_SENT"
+  }
+}

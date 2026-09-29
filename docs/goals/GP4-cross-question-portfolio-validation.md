@@ -42,6 +42,47 @@ Offline fixtures and repository artifacts only. No lab execution, external messa
 
 Schema validation, deterministic replay, portfolio behavior matrix, cross-domain rejection tests, and `artifacts/goals/GP4/report.md`.
 
+## Execution contract
+
+### Expected implementation surface
+
+- `schemas/problem-card.schema.json` — versioned problem, endpoint, utility, authority, support, and scoped-memory contract;
+- `schemas/portfolio-entry.schema.json` — candidate/hypothesis/experiment portfolio contract;
+- `fixtures/portfolio/roman.json`, `lime-mortar.json`, and `battery-cathode.json` — one Roman card and two offline distinct-domain cards;
+- `fixtures/portfolio/positive.json`, `contradictory.json`, `incomplete.json`, `unsupported.json`, and `out-of-domain.json` — behavior fixtures;
+- `tests/portfolio/test_validation.py` — schema, replay, lineage, missingness, and cross-domain rejection tests;
+- `docs/protocols/problem-specific-discovery.md` — non-agent contract and scope boundary;
+- `tools/portfolio/replay.py` — deterministic serialization/replay;
+- `artifacts/goals/GP4/run.json` and `artifacts/goals/GP4/report.md` — hashes, outputs, and criterion evidence.
+
+Equivalent paths require an amendment before implementation.
+
+### Canonical contract and invariants
+
+Each problem card has `problem_id/version`, question, domain/process boundary, primary and secondary endpoints, candidate variables, controls, constraints, utility dimensions, support region, allowed outputs, authority, and scoped-memory policy. Each portfolio entry has candidate/hypothesis references, claim type, evidence locators, endpoint mapping, utility, support region, uncertainty, abstention reason, and status (`INCLUDED`, `DEFERRED`, `REJECTED`, `REVIEW_REQUIRED`, or `ABSTAIN`).
+
+Evidence memory is immutable and source-located; hypothesis memory is typed derived/proposed content; reflection or episodic notes are untrusted. No cross-domain performance score is legal without explicit endpoint mapping, common utility, and evidence basis. A missing or contradictory field is preserved, not defaulted.
+
+### Deterministic behavior matrix
+
+| Fixture/input | Required output |
+|---|---|
+| Complete in-domain card and evidence | Conditional `PROVISIONAL_BEST` or `PARETO_SET` with uncertainty and support region |
+| No defensible single utility | `PARETO_SET`; no forced winner |
+| Missing endpoint, utility, provenance, or authority | `ABSTAIN` or `REVIEW_REQUIRED` with named reason |
+| Contradictory evidence | Preserve claims and emit review/uncertainty status |
+| Unsupported or out-of-domain card | `ABSTAIN`; never rank as performance evidence |
+| Cross-domain comparison without common utility/endpoint mapping | Reject comparison with explicit reason |
+| Request for agent, lab, or external communication | Reject as unauthorized |
+
+### Authority, replay, and budget boundaries
+
+GP4 uses repository artifacts and recorded offline fixtures only. No network, model call, external message, partner contact, physical execution, or agent runtime is permitted. Replay must preserve candidate lineage, claim type, missingness, and scoped-memory tier byte-for-byte; duplicate replay must be equivalent. A fixed local budget is recorded, and exhaustion returns `BUDGET_EXHAUSTED` without widening the fixture set.
+
+### Criterion-to-test map
+
+`tests/portfolio/test_validation.py` must cover schema validation, Roman and two cross-domain round trips, positive/contradictory/incomplete/unsupported/out-of-domain outcomes, evidence-versus-hypothesis memory separation, conditional ranking, Pareto output, cross-domain rejection, unauthorized-action rejection, deterministic replay, duplicate replay, and budget exhaustion.
+
 ## Stop conditions
 
 Stop if the contracts require silently treating domain-specific endpoints, utilities, or safety rules as interchangeable, or if a provisional ranking cannot expose its support and uncertainty boundaries.
