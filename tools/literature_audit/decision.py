@@ -1,4 +1,4 @@
-"""Deterministic G-1 verdict from an adjudicated study-family JSONL ledger."""
+"""Deterministic G-1 gates from study-family and candidate JSONL ledgers."""
 
 from __future__ import annotations
 
@@ -71,6 +71,37 @@ def decide_material_candidates(candidates: list[dict], *, human_adjudicated: boo
     }
 
 
+def decide_exploration_seedability(candidates: list[dict]) -> dict:
+    """Decide whether the evidence can seed bounded, problem-specific exploration.
+
+    This is intentionally weaker than the material-candidate and modelability
+    verdicts. It may remain provisional and never authorizes lab work,
+    performance claims, or a generalizable predictive model.
+    """
+    seedable: list[dict] = []
+    for item in candidates:
+        material = str(item.get("material_identity_status", ""))
+        process = str(item.get("process_identity_status", ""))
+        endpoint = str(item.get("functional_endpoint_status", ""))
+        if (
+            item.get("provisional_candidate_verdict") == "LAB_CANDIDATE_PLAUSIBLE"
+            and item.get("supporting_record_ids")
+            and item.get("exact_locator")
+            and material not in {"", "unknown", "uninspectable"}
+            and process not in {"", "unknown", "uninspectable"}
+            and endpoint not in {"", "none", "unknown", "not_reported"}
+        ):
+            seedable.append(item)
+    return {
+        "verdict": "EXPLORATION_SEEDABLE" if seedable else "EXPLORATION_NOT_SEEDABLE",
+        "seedable_candidate_ids": [item["candidate_id"] for item in seedable],
+        "candidate_count": len(candidates),
+        "seedable_candidate_count": len(seedable),
+        "provisional_only": True,
+        "human_adjudication_required_before_lab": True,
+    }
+
+
 def decide(
     families: list[dict],
     *,
@@ -128,6 +159,7 @@ def decide(
     }
     if candidates is not None:
         result["material_candidate"] = decide_material_candidates(candidates, human_adjudicated=human_adjudicated)
+        result["exploration_seedability"] = decide_exploration_seedability(candidates)
     return result
 
 

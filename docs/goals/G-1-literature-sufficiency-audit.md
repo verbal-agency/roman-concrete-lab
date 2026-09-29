@@ -1,14 +1,14 @@
 # G-1 — Audit literature sufficiency before program construction
 
-**Status:** blocked — `AUDIT_INCOMPLETE` pending qualified human adjudication
+**Status:** blocked for final verdict — `AUDIT_INCOMPLETE`; exploratory seedability is provisionally `EXPLORATION_SEEDABLE`
 **Dependencies:** none  
-**Advances:** an evidence-backed decision about whether the proposed research program should become a modeling project, an evidence-synthesis project, or a replication-first project
+**Advances:** an evidence-backed decision about whether the proposed research program can seed problem-specific exploration and, separately, whether it should become a modeling project, an evidence-synthesis project, or a replication-first project
 
 **Current amendment:** execution uses protocol `g1.2-material-candidate` in `docs/protocols/literature-sufficiency-search.md`. It adds a material-candidate viability pass—separate from modelability—using public repository/thesis indexes, exact-title/DOI searches, archaeological/material-characterization records, technical reports, and citation chains. It explicitly excludes Sci-Hub and other unauthorized access and records subscription databases as access gaps unless authenticated access is supplied.
 
 ## Objective
 
-Determine both (a) whether a materially specified Roman-concrete candidate can be responsibly handed to a qualified laboratory for a bounded, safe test, and (b) whether the published record contains enough independent, comparable, modern terrestrial hot-mixed quicklime/lime-pozzolan experiments with controlled cracking and functional healing outcomes to justify a model-oriented program proposed in `docs/research_program_v2.md`.
+Determine (a) whether the reachable evidence can seed bounded, problem-specific exploration; (b) whether a materially specified Roman-concrete candidate can be responsibly handed to a qualified laboratory for a bounded, safe test; and (c) whether the published record contains enough independent, comparable, modern terrestrial hot-mixed quicklime/lime-pozzolan experiments with controlled cracking and functional healing outcomes to justify a model-oriented program proposed in `docs/research_program_v2.md`.
 
 This is the only eligible starting goal. It audits the premise; it does not presume that a model-ready corpus exists.
 
@@ -16,7 +16,7 @@ This is the only eligible starting goal. It audits the premise; it does not pres
 
 Can the literature support study-grouped estimation and honest out-of-study evaluation of a declared hot-mixing/quicklime intervention against a process-matched control on functional water-transport recovery after controlled cracking?
 
-The audit emits a paired decision: `material_candidate_verdict` (`LAB_CANDIDATE_PLAUSIBLE`, `LAB_CANDIDATE_NOT_ESTABLISHED`, or provisional/incomplete) and `modelability_verdict` (`MODELABLE_NOW`, `EVIDENCE_SYNTHESIS_ONLY`, `REPLICATION_STUDY_REQUIRED`, or `AUDIT_INCOMPLETE`). The overall G-1 state remains `AUDIT_INCOMPLETE` until required human adjudication and coverage gates are complete.
+The audit emits three decisions: `exploration_seedability` (`EXPLORATION_SEEDABLE` or `EXPLORATION_NOT_SEEDABLE`), `material_candidate_verdict` (`LAB_CANDIDATE_PLAUSIBLE`, `LAB_CANDIDATE_NOT_ESTABLISHED`, or provisional/incomplete), and `modelability_verdict` (`MODELABLE_NOW`, `EVIDENCE_SYNTHESIS_ONLY`, `REPLICATION_STUDY_REQUIRED`, or `AUDIT_INCOMPLETE`). The overall G-1 state remains `AUDIT_INCOMPLETE` until required human adjudication and coverage gates are complete. Seedability may be provisionally positive while the final state remains incomplete, but it authorizes only the bounded exploration branch.
 
 ## Frozen evidence tiers
 
@@ -72,7 +72,7 @@ Thresholds are governance requirements, not guarantees of statistical adequacy.
 | `MODELABLE_NOW` | At least 5 independent Tier A study families; at least 75 extractable experimental arms; at least 3 independent families reporting a comparable functional endpoint; at least one qualifying external replication outside the originating research group; treatment/control identity is defensible; at least 70% of arms have reported or faithfully extractable numeric primary outcomes and preregistered core covariates; study-grouped evaluation is feasible. |
 | `EVIDENCE_SYNTHESIS_ONLY` | The audit is complete and the direct/transfer record can support a reproducible descriptive synthesis or experimental design, but one or more `MODELABLE_NOW` conditions fail without triggering the replication-first conditions below. Ordinarily this requires at least 3 independent Tier A families and 30 extractable arms. No predictive ranking is authorized. |
 | `REPLICATION_STUDY_REQUIRED` | Any of: fewer than 3 independent Tier A families; fewer than 30 extractable Tier A arms; no independent replication; no interpretable intervention/control contrast; or protocols/endpoints are too incompatible to support a common estimand. The next program must design evidence generation, not build a literature-trained predictor. |
-| `AUDIT_INCOMPLETE` | Required sources could not be lawfully inspected, screening/adjudication is unfinished, the search budget ended before saturation, or the frozen protocol was materially violated. This state authorizes no downstream goal. |
+| `AUDIT_INCOMPLETE` | Required sources could not be lawfully inspected, screening/adjudication is unfinished, the search budget ended before saturation, or the frozen protocol was materially violated. This state authorizes no predictive-model, physical-lab, or performance-claim goal. If `exploration_seedability=EXPLORATION_SEEDABLE`, it may authorize only the exploration-only G00 track. |
 
 Where conditions conflict, the most conservative applicable verdict wins. Counts may not be rescued by treating specimens, timepoints, images, crack segments, or multiple publications from the same experimental lineage as independent arms or studies.
 
@@ -144,22 +144,23 @@ Equivalent paths are allowed only if the goal report records them. Do not create
 3. Every potential Tier A record receives two independent screening decisions or one decision plus documented expert adjudication; disagreements remain visible.
 4. Publication families, experimental arms, research-group independence, endpoint comparability, numeric-data availability, and core-covariate completeness are counted with exact locators and auditable derivations.
 5. Offline fixtures demonstrate correct handling of eligible, ineligible, duplicate, derivative, contradictory, malformed, partial, inaccessible, and budget-exhausted inputs.
-6. A frozen-manifest replay deterministically emits the same counts and exactly one allowed verdict, or `AUDIT_INCOMPLETE`, with every decision-matrix condition mapped to evidence.
+6. A frozen-manifest replay deterministically emits the same counts, `exploration_seedability`, and exactly one allowed final verdict, or `AUDIT_INCOMPLETE`, with every decision-matrix condition mapped to evidence.
 7. The report distinguishes direct, transfer, and contextual evidence; discusses known positive and conflicting/null findings; identifies the smallest evidence gap preventing a stronger verdict; and makes no model-performance claim.
-8. The search satisfies the saturation rule within budget. If it does not, the recorded outcome is `AUDIT_INCOMPLETE` and no downstream goal is marked eligible.
+8. The search satisfies the saturation rule within budget. If it does not, the recorded outcome is `AUDIT_INCOMPLETE`; only an independently satisfied exploration-seedability gate may make the exploration-only track eligible.
 9. `artifacts/goals/G-1/report.md` maps criteria 1–8 to files, checks, and results and records every deviation or unresolved limitation.
-10. The material-candidate ledger names each candidate, links its supporting records, separates formulation/material evidence from model-arm eligibility, and emits a deterministic provisional candidate verdict without authorizing physical execution.
+10. The material-candidate ledger names each candidate, links its supporting records, separates formulation/material evidence from model-arm eligibility, emits deterministic provisional candidate and exploration-seedability results, and authorizes neither physical execution nor performance claims.
 
 ## Stop conditions
 
 - Stop with `AUDIT_INCOMPLETE` if lawful access, reviewer availability, source coverage, protocol integrity, or search budget prevents a defensible audit.
 - Stop and amend the goal before continuing if screening reveals that the intervention or primary endpoint cannot be operationally defined as written.
-- Do not begin G00 or any later goal until a substantive verdict is recorded and the corresponding G00 track is explicitly selected.
+- Do not begin a substantive model, synthesis, or lab goal until a final G-1 verdict is recorded and the corresponding G00 track is explicitly selected. An exploration-only G00 track may begin from `EXPLORATION_SEEDABLE` while the final G-1 state remains incomplete.
 
 ## Handoff
 
 - `MODELABLE_NOW` makes G00 eligible to ratify the bounded modeling program and create its minimal scaffold.
 - `EVIDENCE_SYNTHESIS_ONLY` makes G00 eligible only to ratify a synthesis-first charter and minimal corpus tooling; G05B–G08 remain blocked until a later evidence amendment passes the relevant gate.
 - `REPLICATION_STUDY_REQUIRED` makes G00 eligible only to ratify a replication-first charter and insert a controlled-study-design goal; the software/modeling sequence G01–G10 remains blocked pending roadmap amendment.
-- A paired result with `material_candidate_verdict=LAB_CANDIDATE_PLAUSIBLE` and `modelability_verdict=REPLICATION_STUDY_REQUIRED` makes G00 eligible to ratify only the pre-lab GP1–GP3 branch. GL1 and GL2 remain externally gated; GD1 remains blocked until reproducible physical results pass its data threshold.
-- `AUDIT_INCOMPLETE` has no downstream handoff.
+- A paired result with `material_candidate_verdict=LAB_CANDIDATE_PLAUSIBLE` and `modelability_verdict=REPLICATION_STUDY_REQUIRED` makes G00 eligible to ratify only the pre-lab GP1–GP4 branch. GL1 and GL2 remain externally gated; GD1 remains blocked until reproducible physical results pass its data threshold.
+- `exploration_seedability=EXPLORATION_SEEDABLE` makes G00 eligible to ratify only the problem-specific exploratory GP1–GP4 branch. It does not close G-1 or unlock physical work, predictive modeling, or agent development.
+- `AUDIT_INCOMPLETE` without exploration seedability has no downstream handoff.

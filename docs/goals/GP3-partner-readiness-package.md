@@ -6,7 +6,7 @@
 
 ## Objective
 
-Prepare a concise partner packet that allows qualified materials facilities to decide whether they can safely execute, price, and return data for the draft study.
+Prepare a concise problem-specific experiment portfolio and partner packet that allows qualified materials facilities to decide whether they can safely execute, price, and return data for selected draft studies.
 
 ## In scope
 
@@ -17,6 +17,7 @@ Prepare a concise partner packet that allows qualified materials facilities to d
 - unknown cost/equipment/material fields, never guessed values;
 - partner selection criteria and a comparison template;
 - draft outreach language for owner review only.
+- portfolio view showing why each candidate/question is included, deferred, or rejected under the declared utility and evidence limits.
 
 ## Excluded
 
@@ -29,6 +30,7 @@ Sending messages, selecting a vendor, purchasing materials, negotiating terms, a
 3. Every unknown cost, material, and safety item is explicitly marked unknown or owner/facility decision-required.
 4. The data-return contract preserves specimen, batch, instrument, calibration, unit, uncertainty, and missingness metadata.
 5. The packet contains a binary partner gate: `FEASIBLE_FOR_REVIEW`, `REVISE`, or `NO_MATCH`.
+6. The portfolio distinguishes exploratory rankings from validated performance and preserves the problem-specific utility assumptions behind each selection.
 
 ## Expected implementation surface
 

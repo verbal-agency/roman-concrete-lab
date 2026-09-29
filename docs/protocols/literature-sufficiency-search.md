@@ -2,7 +2,7 @@
 
 **Protocol version:** `g1.2-material-candidate`
 **Amended/frozen:** 2026-09-27  
-**Decision questions:** (1) whether inspectable evidence supports handing a materially specified Roman-concrete candidate to a qualified laboratory, and (2) separately, whether direct evidence supports study-grouped estimation of a modern terrestrial hot-mixed quicklime/lime-pozzolan intervention on functional water-transport recovery after controlled cracking.
+**Decision questions:** (1) whether the evidence can seed bounded, problem-specific exploration; (2) whether inspectable evidence supports handing a materially specified Roman-concrete candidate to a qualified laboratory; and (3) separately, whether direct evidence supports study-grouped estimation of a modern terrestrial hot-mixed quicklime/lime-pozzolan intervention on functional water-transport recovery after controlled cracking.
 
 ## Search coverage
 
@@ -45,6 +45,14 @@ The candidate pass is separate from modelability. `LAB_CANDIDATE_PLAUSIBLE` requ
 
 Potential Tier A records require two context-isolated screening passes or one pass plus documented expert adjudication. Any disagreement remains `pending` and contributes zero to thresholds until resolved. No model or LLM may be the final eligibility authority.
 
+## Exploration-seedability gate
+
+The exploration gate is intentionally weaker than the material-candidate and modelability gates. It answers whether the platform can form a useful, problem-specific hypothesis and candidate space from the reachable evidence; it does not answer whether a material works or whether a predictive model is justified.
+
+`EXPLORATION_SEEDABLE` requires at least one provisional candidate with: (a) a non-empty supporting-record set and exact locators; (b) an inspectable or explicitly bounded material/process identity; and (c) at least one measurable property, functional endpoint, or artifact/process observation that can support a falsifiable question. A comparator, baseline, or artifact rationale must be named, but it may remain unresolved for later study design. The candidate and all resulting rankings remain provisional until human adjudication.
+
+The gate authorizes only problem-specific evidence mapping, rival-hypothesis generation, conditional candidate ranking, and experiment-question design. It does not authorize physical work, safety approval, effectiveness claims, recipe inference, a generalizable predictive model, or an agent framework. If no candidate meets the seedability fields, the result is `EXPLORATION_NOT_SEEDABLE`.
+
 ## Budget and saturation
 
 Amended expansion limits: 500 deduplicated records, 120 full-text/preview assessments, and four complete citation-chaining waves across the expanded source families. A budget limit reached before saturation produces `AUDIT_INCOMPLETE`. The expansion is a public/lawful-access search, not a claim of subscription-database exhaustiveness.
@@ -53,12 +61,14 @@ Saturation requires two successive waves adding no new Tier A family and fewer t
 
 ## Decision thresholds
 
+`EXPLORATION_SEEDABLE`: at least one provisional candidate satisfies the exploration-seedability fields above. This is a capability gate for problem-specific question generation and conditional ranking, not a substantive scientific verdict.
+
 `MODELABLE_NOW`: at least 5 independent Tier A families, 75 extractable arms, comparable functional endpoint in at least 3 families, external replication, defensible treatment/control identity, at least 70% numeric primary outcome/core-covariate completeness, and feasible study-grouped evaluation.
 
 `EVIDENCE_SYNTHESIS_ONLY`: complete audit with enough direct evidence for descriptive synthesis or design, normally at least 3 Tier A families and 30 arms, but one or more modelability conditions fail and no replication-first condition is triggered.
 
 `REPLICATION_STUDY_REQUIRED`: fewer than 3 Tier A families, fewer than 30 Tier A arms, no independent replication, uninterpretable intervention/control contrast, or incompatible protocols/endpoints.
 
-`AUDIT_INCOMPLETE`: required coverage, access, adjudication, saturation, or protocol integrity is not achieved. The paired candidate result may still be reported provisionally while the overall goal remains incomplete.
+`AUDIT_INCOMPLETE`: required coverage, access, adjudication, saturation, or protocol integrity is not achieved. The paired candidate and exploration-seedability results may still be reported provisionally while the overall goal remains incomplete. An `EXPLORATION_SEEDABLE` result may unlock only the exploration-only G00 track; it does not close the audit or unlock model/lab work.
 
 The most conservative applicable verdict wins.

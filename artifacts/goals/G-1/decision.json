@@ -11,7 +11,8 @@
     "openalex": "queried read-only; indexed records returned",
     "semantic_scholar": "API returned HTTP 429; indexed PDFs/search results were screened as alternate lawful discovery",
     "public_expansion": "repository/thesis/publisher searches and two focused citation-search waves found a second provisional direct family and no additional Tier A family",
-    "material_candidate_pass": "five Roman-concrete candidate records were separated from model-arm eligibility; three candidates are provisionally plausible and remain pending human adjudication"
+    "material_candidate_pass": "five Roman-concrete candidate records were separated from model-arm eligibility; three candidates are provisionally plausible and remain pending human adjudication",
+    "exploration_seedability_pass": "three provisional candidates have traceable material/process identity and measurable or falsifiable outcomes; exploration remains provisional and non-authorizing"
   },
   "counts": {
     "deduplicated_records": 38,
@@ -22,7 +23,7 @@
     "tier_a_external_replications": 0,
     "tier_a_core_covariate_families_ge_70pct": 0
   },
-  "blocking_reason": "Qualified human adjudication of Tier A eligibility and the final verdict is required by the goal authority boundary; agent screening cannot satisfy it.",
+  "blocking_reason": "Qualified human adjudication of Tier A eligibility and the final verdict is required by the goal authority boundary; agent screening cannot satisfy it. The provisional exploration gate is separate and does not authorize lab or model work.",
   "threshold_evidence": {
     "fewer_than_3_direct_families": true,
     "fewer_than_30_direct_arms": true,
@@ -38,8 +39,19 @@
     "blocker": "Qualified human adjudication and qualified-lab safety/handoff review are required before a material candidate can be approved for lab consideration.",
     "candidate_ledger": "data/processed/literature-sufficiency-material-candidates.jsonl"
   },
-  "eligible_next_goal": null,
-  "blocked_goals": ["G00", "G01", "G02", "G03", "G04", "G05A", "G05B", "G06", "G07", "G08", "G09", "G10"],
+  "exploration_seedability": {
+    "verdict": "EXPLORATION_SEEDABLE",
+    "candidate_count": 5,
+    "seedable_candidate_count": 3,
+    "seedable_candidate_ids": ["RC-01", "RC-04", "RC-05"],
+    "provisional_only": true,
+    "human_adjudication_required_before_lab": true,
+    "authorized_scope": ["versioned_problem_context", "problem_specific_evidence_mapping", "rival_hypotheses", "conditional_candidate_ranking", "experiment_question_design", "reusable_portfolio_contract"],
+    "prohibited_scope": ["physical_execution", "effectiveness_claims", "recipe_inference", "generalizable_predictive_model", "agent_framework"]
+  },
+  "eligible_next_goal": "G00",
+  "eligible_next_track": "EXPLORATORY_PLATFORM",
+  "blocked_goals": ["G00_PRELAB_REPLICATION", "G00_MODELING", "G01", "G02", "G03", "G04", "G05A", "G05B", "G06", "G07", "G08", "G09", "G10", "GL1", "GL2", "GD1"],
   "source_manifest": "data/manifests/literature-sufficiency-sources.jsonl",
   "screening_ledger": "data/manifests/literature-sufficiency-screening.csv",
   "study_family_ledger": "data/processed/literature-sufficiency-study-families.jsonl",

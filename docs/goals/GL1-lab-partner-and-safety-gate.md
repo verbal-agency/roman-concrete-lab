@@ -1,7 +1,7 @@
 # GL1 — Lab-partner and safety gate
 
 **Status:** proposed / externally blocked until a qualified facility responds  
-**Dependencies:** GP3 complete; owner supplies or authorizes a qualified facility review  
+**Dependencies:** GP4 complete; owner supplies or authorizes a qualified facility review
 **Advances:** separates pre-lab planning from physical execution authority
 
 ## Objective

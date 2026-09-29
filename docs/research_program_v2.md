@@ -2,15 +2,27 @@
 
 ## Status
 
-Proposed conditional program. G-1 must first establish literature sufficiency; G00 may ratify only the track authorized by that verdict.
+Proposed conditional program. G-1 first determines whether the evidence can seed problem-specific exploration, while separately testing whether it is sufficient for synthesis or predictive modeling. G00 may ratify only the track authorized by those gates.
 
 ## Execution division: pre-lab versus lab-dependent
 
-The program has two deliberately separate planes:
+The program has three deliberately separate planes:
+
+### Exploratory platform plane
+
+When G-1 records `exploration_seedability=EXPLORATION_SEEDABLE`, G00 may authorize a problem-specific exploration track even if the overall audit remains `AUDIT_INCOMPLETE`. GP1–GP4 may define a problem, generate evidence-traceable candidates and rival hypotheses, issue a conditional `PROVISIONAL_BEST` ranking, package experiment questions, and validate the reusable substrate across offline problem cards. These outputs are provisional and support-bounded. They do not authorize physical work, infer unreported recipes, claim effectiveness, or train a generalizable predictor.
+
+Roman concrete is the first vertical slice, not the whole platform. The reusable core should be evaluated across multiple problem cards before a general-purpose agent framework is considered.
+
+## Product substrate versus execution context
+
+The product is a reusable discovery substrate, not a bespoke Roman-concrete application. Its stable contracts cover evidence, provenance, claims, candidate lineage, hypotheses, utilities, uncertainty, abstention, experiment portfolios, and feedback ingestion. Each execution loads a versioned problem context that declares the scientific question, endpoint semantics, candidate variables, controls, constraints, safety boundaries, utility function, support region, and allowed outputs. A new problem should normally add or revise context and domain adapters—not fork the product or import a generic ranking assumption from a public framework.
+
+The execution remains problem-specific even when the product is reusable. The substrate must reject missing or contradictory context, keep domain-specific assumptions visible, and prevent cross-problem comparisons unless endpoint mappings and utility are explicitly justified.
 
 ### Pre-lab plane
 
-G-1/G00/GP1–GP3 may run without a laboratory. They produce an evidence-backed candidate dossier, rival hypotheses, a draft study specification, a data/provenance contract, and a facility-readiness packet. These goals may not authorize physical work, infer an unreported recipe, or claim material performance.
+G-1/G00/GP1–GP4 may run without a laboratory. They produce an evidence-backed candidate dossier, rival hypotheses, a problem-specific provisional ranking, a draft study specification, a data/provenance contract, a facility-readiness packet, and a cross-question portfolio validation. These goals may not authorize physical work, infer an unreported recipe, or claim material performance.
 
 ### Lab-dependent plane
 
@@ -26,16 +38,17 @@ Only direct evidence counts toward modelability: modern terrestrial mortar exper
 
 G-1 returns:
 
+- `EXPLORATION_SEEDABLE` when at least one bounded candidate has traceable material/process identity and a measurable or falsifiable outcome; this permits only problem-specific exploratory ranking;
 - `MODELABLE_NOW` only with at least 5 independent direct study families, 75 extractable arms, a comparable functional endpoint across at least 3 families, external replication, at least 70% numeric outcome/core-covariate completeness, and support for study-grouped evaluation;
 - `EVIDENCE_SYNTHESIS_ONLY` when a complete audit supports reproducible synthesis or experimental design but not predictive ranking;
 - `REPLICATION_STUDY_REQUIRED` when fewer than 3 direct families or 30 arms exist, independent replication is absent, the intervention/control contrast is uninterpretable, or protocols cannot support a common estimand;
 - `AUDIT_INCOMPLETE` when access, screening, saturation, or protocol integrity prevents a defensible verdict.
 
-These thresholds are conservative governance rules, not claims of statistical power. `AUDIT_INCOMPLETE` authorizes nothing downstream. `REPLICATION_STUDY_REQUIRED` replaces the software/modeling sequence with a roadmap amendment for controlled evidence generation. `EVIDENCE_SYNTHESIS_ONLY` blocks predictive ranking unless a later versioned evidence amendment passes the applicable gate.
+These thresholds are conservative governance rules, not claims of statistical power. `AUDIT_INCOMPLETE` blocks predictive-model, physical-lab, and performance-claim work, but an independently satisfied `EXPLORATION_SEEDABLE` result may authorize the exploration-only branch. `REPLICATION_STUDY_REQUIRED` replaces the software/modeling sequence with a roadmap amendment for controlled evidence generation, while still allowing bounded exploratory questions when seedability passes. `EVIDENCE_SYNTHESIS_ONLY` blocks predictive ranking unless a later versioned evidence amendment passes the applicable gate.
 
 ## Program objective
 
-Determine whether published evidence is sufficient to estimate how hot-mixing and lime-clast-related process variables affect functional crack healing in modern, terrestrial, Roman-inspired lime-pozzolan mortar. If and only if a preregistered feasibility gate passes, produce a reproducible, abstention-aware ranking of a small set of physical experiments that discriminate explicit rival hypotheses.
+Explore which problem-specific Roman-inspired material/process candidates and mechanisms are worth testing, then determine whether published evidence and physical feedback are sufficient to estimate how hot-mixing and lime-clast-related process variables affect functional crack healing in modern, terrestrial, Roman-inspired lime-pozzolan mortar. A `PROVISIONAL_BEST` ranking is allowed under a declared problem, utility, support region, and uncertainty contract; generalizable predictive ranking requires the stricter feasibility gate and real or validated-simulator feedback.
 
 The program may conclude that the literature is insufficient. That is a valid pre-lab result.
 
@@ -62,14 +75,14 @@ The program may conclude that the literature is insufficient. That is a valid pr
 - production use of generated laboratory protocols without expert approval;
 - closed-loop Bayesian optimization before real or validated-simulator feedback exists.
 
-## Decision target
+## Problem-specific decision target
 
 Given a declared laboratory budget and material-availability constraints, select a small experiment set that either:
 
 - tests whether hot mixing improves functional healing relative to a process-matched control; or
 - separates two or more explicit mechanisms through observably different predicted outcomes.
 
-No single “best concrete” score is produced.
+The platform may produce a conditional `PROVISIONAL_BEST` candidate or a Pareto set when the owner declares the utility function and constraints. It must not produce a universal “best concrete” score or compare unrelated problem domains without a common, explicit utility.
 
 ## Primary estimand
 
@@ -139,7 +152,7 @@ Any critical condition fails:
 - critical covariates make the effect non-identifiable;
 - licensing/provenance prevents a reproducible release.
 
-Output: descriptive evidence synthesis and minimum evidence-generation experiment. Do not fit a candidate-ranking surrogate.
+Output: descriptive evidence synthesis and minimum evidence-generation experiment. Do not fit a generalizable candidate-ranking surrogate. Problem-specific provisional ranking remains allowed only under the separate exploration gate and must abstain outside support.
 
 ### LIMITED: explanatory-model track
 
@@ -246,9 +259,25 @@ A mechanistic tool is added only when a one-page model card identifies:
 
 Failure to identify a valid model is a successful negative spike. Mechanistic outputs remain model assertions and are never merged with measurements.
 
+## Agent-society plan
+
+The hypothesis layer is independent of the agent layer. G07 defines the typed hypothesis registry, shared-memory permissions, deterministic tournament, and focus policy. G09 releases that loop without agents. G10 may then test a small society of role-biased agents—evidence skeptic, mechanism proposer, transfer analyst, experimental designer, and safety/provenance reviewer—against the deterministic baseline.
+
+Each agent receives the same frozen evidence packet and problem context but may maintain private episodic memory and a declared prior. The shared store has three authority tiers: immutable evidence, typed derived hypotheses, and untrusted episodic/reflection notes. Agents may propose and critique; only the adjudication policy and qualified humans can promote records. A tournament rewards prediction distinctness, counterevidence, provenance, and useful experiment selection—not consensus alone.
+
+The full loop is:
+
+```text
+context card -> evidence retrieval -> hypothesis proposals -> rival critique
+    -> deterministic adjudication/focus -> lab or validated simulator
+    -> result ingestion -> hypothesis/context update -> next loop
+```
+
+Before physical feedback exists, this is a dry, literature/evidence loop. After GL2, returned specimen-level results can update the registry. G10 is a comparison of orchestration strategies, not an authorization for autonomous lab execution.
+
 ## Agent evaluation
 
-The agent is outside the critical path. First release the non-agent research package. Then compare deterministic and agentic orchestration with identical:
+The agent society is outside the critical path. First release the deterministic research package and exercise it across multiple problem cards. Then compare deterministic and society orchestration with identical:
 
 - frozen evidence packets;
 - callable tools;

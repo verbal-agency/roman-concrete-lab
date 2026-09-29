@@ -6,7 +6,7 @@
 
 ## Objective
 
-Translate the strongest candidate dossier into a draft study specification that lets a qualified facility judge feasibility, cost, safety, and scientific value.
+Translate the strongest candidate dossier into a problem-specific provisional ranking and a draft study specification that lets a qualified facility judge feasibility, cost, safety, and scientific value.
 
 ## In scope
 
@@ -16,6 +16,8 @@ Translate the strongest candidate dossier into a draft study specification that 
 - hypotheses-to-observation decision table;
 - data dictionary, provenance fields, missingness, censoring, and negative-result handling;
 - analysis plan and candidate decision rules;
+- provisional ranking of performance, information value, feasibility, and risk as separate dimensions;
+- declared utility function, support region, uncertainty, and abstention conditions for any `PROVISIONAL_BEST` label;
 - explicit unknowns for materials, equipment, cost, and safety.
 
 ## Excluded
@@ -24,12 +26,13 @@ Physical execution, unreviewed hazardous procedures, invented cost or safety val
 
 ## Acceptance criteria
 
-1. The package names one primary functional endpoint and does not substitute surface crack closure for functional recovery.
+1. The package names one primary functional endpoint and does not substitute surface crack closure for functional recovery; exploratory-only endpoints are labeled as such.
 2. Every treatment condition has a process-matched comparator and a reason for inclusion.
 3. Every rival hypothesis maps to at least one distinguishable observation or is labeled unresolved.
 4. Specimen-level identifiers, batch lineage, measurement units, uncertainty, and exact source/protocol provenance are defined before any data are collected.
 5. The package is watermarked `DRAFT — EXPERT REVIEW REQUIRED` and contains no unapproved physical execution instruction.
 6. A deterministic decision table maps positive, null, contradictory, incomplete, and unsafe outcomes to `SUPPORTED`, `NARROW_USE_CASE`, `INCONCLUSIVE`, or `NOT_REPRODUCED`.
+7. Any provisional ranking is conditional on the declared problem, utility, and support region; it emits uncertainty and abstains when those conditions are not met.
 
 ## Expected implementation surface
 

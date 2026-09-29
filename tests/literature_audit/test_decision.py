@@ -3,7 +3,13 @@ import unittest
 from copy import deepcopy
 from pathlib import Path
 
-from tools.literature_audit.decision import decide, decide_material_candidates, load_candidates, load_families
+from tools.literature_audit.decision import (
+    decide,
+    decide_exploration_seedability,
+    decide_material_candidates,
+    load_candidates,
+    load_families,
+)
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -27,16 +33,39 @@ class DecisionTests(unittest.TestCase):
         result = decide_material_candidates(adjudicated, human_adjudicated=True)
         self.assertEqual(result["verdict"], "LAB_CANDIDATE_PLAUSIBLE")
 
+    def test_provisional_candidates_can_seed_exploration_without_lab_authority(self):
+        result = decide_exploration_seedability(self.candidates)
+        self.assertEqual(result["verdict"], "EXPLORATION_SEEDABLE")
+        self.assertEqual(result["seedable_candidate_ids"], ["RC-01", "RC-04", "RC-05"])
+        self.assertTrue(result["provisional_only"])
+        self.assertTrue(result["human_adjudication_required_before_lab"])
+
+    def test_unbounded_candidates_cannot_seed_exploration(self):
+        candidate = deepcopy(self.candidates[0])
+        candidate["material_identity_status"] = "uninspectable"
+        self.assertEqual(
+            decide_exploration_seedability([candidate])["verdict"],
+            "EXPLORATION_NOT_SEEDABLE",
+        )
+
+        candidate = deepcopy(self.candidates[0])
+        candidate["exact_locator"] = ""
+        self.assertEqual(
+            decide_exploration_seedability([candidate])["verdict"],
+            "EXPLORATION_NOT_SEEDABLE",
+        )
+
     def test_screened_corpus_is_replication_first(self):
         adjudicated = deepcopy(self.families)
         for family in adjudicated:
             if family["tier"] == "A":
                 family["adjudication_status"] = "adjudicated"
-        result = decide(adjudicated, audit_complete=True, saturated=True, human_adjudicated=True)
+        result = decide(adjudicated, audit_complete=True, saturated=True, human_adjudicated=True, candidates=self.candidates)
         self.assertEqual(result["verdict"], "REPLICATION_STUDY_REQUIRED")
         self.assertEqual(result["independent_tier_a_families"], 2)
         self.assertEqual(result["tier_a_arms"], 3)
         self.assertFalse(result["tier_a_external_replication"])
+        self.assertEqual(result["exploration_seedability"]["verdict"], "EXPLORATION_SEEDABLE")
 
     def test_human_flag_cannot_override_pending_direct_family(self):
         result = decide(self.families, audit_complete=True, saturated=True, human_adjudicated=True)

@@ -2,7 +2,7 @@
 
 **Status:** proposed / blocked until GL2 unlocks  
 **Dependencies:** GL2 `SUPPORTED` plus the ratified minimum dataset and independent-batch threshold  
-**Advances:** tests whether repeated physical evidence justifies a discovery platform
+**Advances:** tests whether repeated physical evidence justifies a closed-loop discovery platform and, later, a bounded agent society
 
 ## Objective
 
@@ -14,6 +14,9 @@ Build the smallest deterministic experiment-selection or explanatory model that 
 - explicit baselines and no-model comparisons;
 - uncertainty and abstention;
 - bounded hypothesis discrimination or experiment selection;
+- hypothesis-registry updates from returned results, including support, contradiction, retirement, and context-amendment events;
+- deterministic tournament/focus selection before any agent-society overlay;
+- feedback-loop replay from context card through result ingestion to the next proposed action;
 - sensitivity to candidate, batch, exposure, crack, and measurement choices;
 - a model-use decision.
 
@@ -28,6 +31,8 @@ Training before GL2, synthetic-data claims presented as material evidence, uncon
 3. Predictions include uncertainty and abstain outside the declared support region.
 4. Every selected experiment has a measurable rationale and a qualified-lab execution path.
 5. The report distinguishes material evidence from model output and states whether the discovery loop is adopted or rejected.
+6. Each returned result updates the typed hypothesis registry without overwriting prior evidence, and the next action is selected by a replayable tournament/focus manifest.
+7. The loop reports whether an agent society is not yet justified, is eligible for G10 evaluation, or is explicitly out of scope; physical feedback alone does not imply agent adoption.
 
 ## Verification evidence
 

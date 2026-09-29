@@ -1,8 +1,8 @@
 # GP1 — Candidate evidence and hypothesis dossier
 
 **Status:** proposed  
-**Dependencies:** G00 `PRELAB_REPLICATION` track; complete paired G-1 decision with at least one `LAB_CANDIDATE_PLAUSIBLE` candidate  
-**Advances:** converts the public evidence audit into a falsifiable, lab-readable candidate dossier without claiming material performance
+**Dependencies:** G00 `EXPLORATORY_PLATFORM` or `PRELAB_REPLICATION` track; `exploration_seedability=EXPLORATION_SEEDABLE` with at least one provisional candidate
+**Advances:** converts the public evidence audit into a problem-specific, falsifiable candidate dossier and hypothesis matrix without claiming material performance
 
 ## Objective
 
@@ -14,7 +14,8 @@ Freeze the candidate families, evidence claims, uncertainties, and competing hyp
 - produce one dossier per candidate, including material/process identity, comparator, endpoint, supporting locators, and missing fields;
 - separate measured observations, author interpretations, curator interpretations, and proposed hypotheses;
 - define rival hypotheses and the observations that would distinguish them;
-- identify which candidates are candidates for lab review versus contextual or transfer evidence;
+- identify which candidates are candidates for exploratory ranking, lab review, or contextual/transfer use;
+- declare the problem-specific endpoint, constraints, utility dimensions, and support region that define what “best current candidate” could mean;
 - preserve derivative lineages and conflicting results.
 
 ## Excluded
@@ -25,9 +26,9 @@ Exact recipe invention, unverified proportions, physical mixing, hazardous handl
 
 1. Every candidate has a stable ID, supporting record IDs, exact locators, material/process identity status, comparator status, endpoint status, and explicit blockers.
 2. Every hypothesis has a named intervention, comparator, measurable outcome, applicable domain, and at least one rival prediction.
-3. No candidate is promoted from provisional to approved without the human adjudication and lab-safety gates recorded in G-1/G00.
+3. No candidate is promoted from provisional exploration status to validated material status without the human adjudication and lab-safety gates recorded in G-1/G00.
 4. A deterministic replay reconstructs candidate counts and statuses from the frozen ledgers.
-5. The dossier labels all formulation and performance claims as reported, derived, proposed, or unresolved.
+5. The dossier labels all formulation and performance claims as reported, derived, proposed, or unresolved, and any `PROVISIONAL_BEST` label includes its problem definition, utility assumptions, support limits, and uncertainty.
 
 ## Expected implementation surface
 

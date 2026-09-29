@@ -2,19 +2,24 @@
 
 **Protocol:** `g1.2-material-candidate`
 **Execution date:** 2026-09-27
-**Decision question:** whether direct literature supports study-grouped estimation of a modern terrestrial hot-mixed quicklime/lime-pozzolan intervention on functional water-transport recovery after controlled cracking.
+**Decision questions:** whether the evidence can seed bounded problem-specific exploration; whether a materially specified candidate can be handed to a qualified laboratory; and whether direct literature supports study-grouped estimation of a modern terrestrial hot-mixed quicklime/lime-pozzolan intervention on functional water-transport recovery after controlled cracking.
 
 ## Verdict
 
+**Exploration-seedability finding:** `EXPLORATION_SEEDABLE` for RC-01, RC-04, and RC-05
 **Provisional modelability finding:** `REPLICATION_STUDY_REQUIRED`
 **Provisional material-candidate finding:** `LAB_CANDIDATE_PLAUSIBLE` for RC-01, RC-04, and RC-05
 **Recorded G-1 state:** `AUDIT_INCOMPLETE` pending qualified human adjudication
 
-The expanded lawful search materially changes the evidence map: it found a second provisional Tier A family, the 2025 Utah State University/Utah Department of Transportation quicklime bridge-deck program. The thesis and final report are one experimental lineage, not two independent replications. The expanded record still contains only two provisional direct families, three conservative direct dose-contrast arms, and zero independent external replications. That remains far below the thresholds for a literature-trained predictive model or experiment ranker.
+The expanded lawful search materially changes the evidence map: it found a second provisional Tier A family, the 2025 Utah State University/Utah Department of Transportation quicklime bridge-deck program. The thesis and final report are one experimental lineage, not two independent replications. The expanded record still contains only two provisional direct families, three conservative direct dose-contrast arms, and zero independent external replications. That remains far below the thresholds for a literature-trained predictive model or experiment ranker, but it is sufficient to seed bounded, problem-specific exploration.
 
 The amended material-candidate pass reaches a different provisional conclusion. RC-01—modern Roman-inspired quicklime/hot-mix concrete supported by Seymour plus the Utah thesis/report—has enough inspectable material identity, process description, comparator evidence, and functional testing to justify a qualified-lab review as a **candidate**, not an approved experiment. Two additional modern theses (RC-04 and RC-05) provide plausible Roman-inspired quicklime/volcanic-ash formulations with crack-closure or microcrack-occlusion outcomes, but lack through-depth transport measurements. RC-02 (shell-derived quicklime) and RC-03 (hot-mixed lime mortar) remain insufficiently specified for a functional lab handoff. Candidate status is recorded separately from Tier A model-arm status.
 
-The new family is a genuine reason to revise the earlier “one direct family” statement, but not a reason to reverse the go/no-go decision. G-1 remains blocked because Tier A eligibility, family independence, and the final verdict require qualified human adjudication; Scopus, Web of Science, and ProQuest were access gaps without an authenticated session. No downstream goal is authorized by this report.
+The new family is a genuine reason to revise the earlier “one direct family” statement, but not a reason to reverse the predictive-model or physical-validation gates. G-1 remains incomplete because Tier A eligibility, family independence, and the final verdict require qualified human adjudication; Scopus, Web of Science, and ProQuest were access gaps without an authenticated session. The separate exploration gate is open provisionally: G00 may authorize problem-specific GP1–GP4 work, but no physical execution, effectiveness claim, predictive model, or agent framework.
+
+## Exploration seedability
+
+The candidate ledger contains three provisional seed candidates—RC-01, RC-04, and RC-05—with traceable supporting records, bounded material/process identity, and a measurable or falsifiable outcome. This is enough to ask and rank problem-specific questions such as which formulation/process differences could explain observed crack closure or water-transport recovery, and which next measurement would discriminate the rival explanations. It is not enough to claim that any candidate works, to infer an unreported recipe, or to rank candidates across unrelated problems without an explicit utility function and support region.
 
 ## Coverage and stopping
 
@@ -69,7 +74,7 @@ The RILEM hot-lime review (DOI `10.1617/s11527-023-02157-1`) remains important e
 
 The new Utah family improves feasibility but does not supply independence. The two direct lineages use different material systems, crack protocols, conditioning regimes, and flow measurements; one is a modern Roman-inspired mortar and the other is quicklime aggregate concrete for bridge-deck conditions. Pooling them as if they identify one stable treatment effect would confound intervention with formulation, specimen geometry, exposure, and measurement selection. The Utah report also tests water flow only on selected specimens with complete surface closure, which limits comparability to a continuously monitored flow endpoint.
 
-The conservative conclusion is therefore unchanged: do not build a literature-trained predictor or ranker. First run an independently batched, process-matched replication that pre-specifies quicklime/hot-mix versus a slaked-lime or quicklime-free control, crack-width band, exposure schedule, continuous water-flow/permeability endpoint, specimen-level replication, and the rule for handling surface closure versus through-depth sealing.
+The conservative model conclusion is unchanged: do not build a literature-trained predictor or generalizable ranker. The next platform step may build a deterministic, problem-specific exploratory ranking and experiment portfolio, with uncertainty and abstention. Separately, an independently batched, process-matched replication should pre-specify quicklime/hot-mix versus a slaked-lime or quicklime-free control, crack-width band, exposure schedule, continuous water-flow/permeability endpoint, specimen-level replication, and the rule for handling surface closure versus through-depth sealing.
 
 ## Limitations and retained uncertainty
 
@@ -81,7 +86,7 @@ The conservative conclusion is therefore unchanged: do not build a literature-tr
 
 ## Handoff
 
-G00 is not yet eligible while G-1 remains incomplete. Once the paired decision is adjudicated, the likely route for a plausible candidate is G00 `PRELAB_REPLICATION` followed by GP1 (candidate dossier), GP2 (draft study specification), and GP3 (partner-readiness package). GL1 remains the external facility/safety gate; GL2 must return reproducible physical results before GD1 can be considered. No physical protocol, formulation, or safety authorization is created by this report.
+G00 `EXPLORATORY_PLATFORM` is eligible provisionally from `exploration_seedability=EXPLORATION_SEEDABLE`; it may authorize GP1 (problem-specific candidate/hypothesis dossier), GP2 (conditional ranking and draft study specification), GP3 (portfolio/partner-readiness package), and GP4 (cross-question portfolio validation). G00 `PRELAB_REPLICATION`, GL1, GL2, and GD1 remain gated by human adjudication, qualified-facility review, and returned physical evidence. No physical protocol, formulation, or safety authorization is created by this report.
 
 ## Source links
 

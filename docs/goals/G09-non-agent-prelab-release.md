@@ -1,8 +1,8 @@
 # G09 — Release the non-agent pre-lab research package
 
 **Status:** proposed  
-**Dependencies:** G05A complete or G08 complete  
-**Advances:** delivers the program's scientific result before any agent is credited
+**Dependencies:** G05A complete, G08 complete, or GD1 complete
+**Advances:** delivers the program's scientific result and the reusable context/memory/hypothesis substrate before any agent is credited
 
 ## Objective
 
@@ -13,6 +13,7 @@ Assemble, reproduce, audit, and version the complete non-agent pre-lab package f
 - one command/workflow that rebuilds all redistributable artifacts from frozen manifests and recorded fixtures;
 - corpus, rights, extraction, evidence, feasibility, modeling, hypothesis, ranking, mechanistic, and claim manifests as applicable;
 - machine-readable candidate/experiment records and a human-readable research report;
+- versioned problem-context cards, scoped memory contracts, append-only hypothesis registry, deterministic tournament, and focus-policy manifests;
 - full limitation and rejected-model ledger;
 - environment lock, seeds/configs, artifact hashes, and software bill of materials;
 - redaction/release check for restricted content, credentials, and unsafe instructions;
@@ -32,7 +33,7 @@ The release must use exactly one and explain the downstream implication.
 
 ## Expected implementation surface
 
-`src/roman_concrete_lab/release/`, `tests/release/`, `docs/reports/prelab-report.md`, `artifacts/releases/<version>/manifest.*`, and a documented build command.
+`src/roman_concrete_lab/release/`, `src/roman_concrete_lab/memory/`, `src/roman_concrete_lab/hypotheses/`, `src/roman_concrete_lab/focus/`, `tests/release/`, `docs/reports/prelab-report.md`, `artifacts/releases/<version>/manifest.*`, and a documented build command.
 
 ## Acceptance criteria
 
@@ -41,8 +42,11 @@ The release must use exactly one and explain the downstream implication.
 3. Every public claim links to evidence and a claim type; a linter rejects prohibited empirical language for unvalidated outputs.
 4. Restricted source content and secrets are absent; license/access obligations are summarized.
 5. Rankings/protocols preserve support, uncertainty, stability, and expert-review status.
-6. An independent reviewer can trace a reported value to its source locator and transformation history using documented commands.
-7. The release has no runtime dependency on a live LLM, network service, or unavailable database.
+6. Evidence memory is immutable and provenance-linked; hypothesis and episodic memory are typed derived records with explicit write and promotion rules.
+7. The deterministic hypothesis tournament and focus policy replay from a frozen context/evidence manifest without a live agent.
+8. The release freezes the approved focus and promotion policies, legal transitions, abstention rules, reviewer authority, and retraction/context-amendment behavior for later agent evaluation.
+9. An independent reviewer can trace a reported value to its source locator and transformation history using documented commands.
+10. The release has no runtime dependency on a live LLM, network service, or unavailable database.
 
 ## Verification evidence
 
