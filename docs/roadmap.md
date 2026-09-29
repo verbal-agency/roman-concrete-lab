@@ -51,6 +51,8 @@ G09 accepts the evidence-gap package, the completed modeling branch, or a comple
 
 The agent-society progression is deliberate: G07 defines the typed hypothesis layer, shared-memory permissions, deterministic tournament, and explicitly discusses and freezes the focus and promotion layers; G09 releases that loop without agents; G10 tests role-biased agents against it under identical evidence and budgets; G11 reviews any adopted society before it appears in a lab handoff.
 
+G00 is now a problem-charter gate, not a commercialization, extraction, or agent-provider gate. It ratifies the Roman-concrete context, lawful current-plane data rights, conditional-ranking boundary, no-external-spend rule, and exploration NO-GO semantics. Commercial licensing is deferred to the GP3/G09 release decision; extraction quality thresholds apply only if the G03 branch becomes eligible; LLM/provider choices apply only at G10; and qualified scientist-of-record review is required at GL1/G11 before any physical handoff. Every GP1–GP4 run must load the versioned context and contracts in `docs/protocols/exploration-contracts.md`.
+
 ## Goals
 
 | Goal | Objective | Depends on | Gate/output |

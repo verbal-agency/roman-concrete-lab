@@ -1,6 +1,6 @@
 # G00 — Ratify the verdict-specific charter and authorized scaffold
 
-**Status:** proposed  
+**Status:** complete
 **Dependencies:** G-1 with either a complete substantive paired decision or `exploration_seedability=EXPLORATION_SEEDABLE` for the exploration-only track
 **Advances:** a falsifiable program with explicit authority, scope, and stop conditions
 
@@ -22,7 +22,7 @@ G00 may tighten the G-1 conclusion. It may not promote exploratory outputs to a 
 
 ## Required owner decisions
 
-Record the selected G-1 track and explicit answers for program purpose, the problem-specific question, v1 material/domain boundary, primary/secondary outcomes, utility and constraints for any provisional ranking, initial focus and promotion policy owners, scientist-of-record status, acceptable data rights, acceptance of NO-GO, initial budgets, commercial-use intent, allowed network/LLM providers, and—only when the selected track reaches extraction—the quality thresholds that G03 must enforce. Recommended defaults are in `docs/premise_review.md`; recommended extraction defaults are at least 0.95 exact value/unit accuracy on critical numeric fields, at least 0.99 provenance-locator accuracy, and zero unsupported measured observations on the gold set.
+Record the selected G-1 track and explicit answers for program purpose, the problem-specific question, v1 material/domain boundary, primary/secondary outcomes, utility and constraints for any provisional ranking, authority status, acceptable data rights, acceptance of NO-GO, and the budget and provider boundary for the current exploratory plane. Defer commercial licensing to the release gate, extraction thresholds to G03, and LLM/provider policy to G10; do not make those later-stage decisions a prerequisite for documentation-only G00 work.
 
 If any choice changes the scientific domain, estimand, rights policy, or physical-safety responsibility, update the program and roadmap before scaffolding. Do not silently adopt a different direction.
 
@@ -68,4 +68,4 @@ Equivalent paths are allowed only if recorded in the goal report.
 
 ## Stop conditions
 
-Block the substantive model, synthesis, or physical tracks if G-1 is absent, incomplete, or internally inconsistent. The exploration-only track may proceed from a provisional G-1 state only when the seedability gate is explicit and its no-lab/no-model boundaries are preserved. Also block if the requested track contradicts its verdict without a passing amendment, or if the owner does not decide the problem domain, acceptable data rights, commercial intent, or whether NO-GO is acceptable. Those choices materially change every later goal.
+Block the substantive model, synthesis, or physical tracks if G-1 is absent, incomplete, or internally inconsistent. The exploration-only track may proceed from a provisional G-1 state only when the seedability gate is explicit and its no-lab/no-model boundaries are preserved. Also block if the requested track contradicts its verdict without a passing amendment, or if the owner has not decided the problem context, current-plane data rights, or whether an exploration NO-GO is acceptable. Commercial licensing, extraction thresholds, LLM providers, and facility/scientist-of-record approval are later-gate decisions and must not be implied by G00.

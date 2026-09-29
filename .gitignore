@@ -1,2 +1,16 @@
 __pycache__/
 *.pyc
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Restricted or generated research material
+data/raw/**
+data/restricted/**
+artifacts/generated/**
+.cache/
+.pytest_cache/
