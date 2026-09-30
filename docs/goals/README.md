@@ -2,7 +2,7 @@
 
 These files are intended for one-goal-at-a-time execution by a coding agent.
 
-G-1 is the only eligible starting goal. G00 and every substantive later goal require a recorded G-1 decision and must follow the verdict-specific branch in `docs/roadmap.md`. A provisional `exploration_seedability=EXPLORATION_SEEDABLE` result may unlock only the reusable substrate instantiated through a declared problem-context contract and the problem-specific exploratory GP1–GP4 branch; it does not close G-1 or authorize lab/model work. The `GP*` goals are exploratory/pre-lab work; `GL*` goals require an external qualified facility; `GD1` is conditional on successful physical replication.
+G-1 is the only eligible starting goal. G00 and every substantive later goal require a recorded G-1 decision and must follow the verdict-specific branch in `docs/roadmap.md`. A provisional `exploration_seedability=EXPLORATION_SEEDABLE` result may unlock only the reusable substrate instantiated through a declared problem-context contract and the problem-specific exploratory GP1–GP4 branch. After GP4, G07E is the model-free tournament goal and G09 may release it as `EXPLORATORY_PLATFORM`; neither closes G-1 or authorizes lab/model work. The `GP*`, `G07E`, and exploratory `G09` goals are exploratory/pre-lab work; `GL*` goals require an external qualified facility; `GD1` is conditional on successful physical replication.
 
 ## Required behavior
 

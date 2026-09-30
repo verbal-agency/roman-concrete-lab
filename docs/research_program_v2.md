@@ -10,7 +10,7 @@ The program has three deliberately separate planes:
 
 ### Exploratory platform plane
 
-When G-1 records `exploration_seedability=EXPLORATION_SEEDABLE`, G00 may authorize a problem-specific exploration track even if the overall audit remains `AUDIT_INCOMPLETE`. GP1–GP4 may define a problem, generate evidence-traceable candidates and rival hypotheses, issue a conditional `PROVISIONAL_BEST` ranking, package experiment questions, and validate the reusable substrate across offline problem cards. These outputs are provisional and support-bounded. They do not authorize physical work, infer unreported recipes, claim effectiveness, or train a generalizable predictor.
+When G-1 records `exploration_seedability=EXPLORATION_SEEDABLE`, G00 may authorize a problem-specific exploration track even if the overall audit remains `AUDIT_INCOMPLETE`. GP1–GP4 may define a problem, generate evidence-traceable candidates and rival hypotheses, issue a conditional `PROVISIONAL_BEST` ranking, package experiment questions, and validate the reusable substrate across offline problem cards. G07E then turns that substrate into a model-free deterministic hypothesis tournament and G09 may release it as `EXPLORATORY_PLATFORM`. These outputs are provisional and support-bounded. They do not authorize physical work, infer unreported recipes, claim effectiveness, or train a generalizable predictor.
 
 Roman concrete is the first vertical slice, not the whole platform. The reusable core should be evaluated across multiple problem cards before a general-purpose agent framework is considered.
 
@@ -22,7 +22,7 @@ The execution remains problem-specific even when the product is reusable. The su
 
 ### Pre-lab plane
 
-G-1/G00/GP1–GP4 may run without a laboratory. They produce an evidence-backed candidate dossier, rival hypotheses, a problem-specific provisional ranking, a draft study specification, a data/provenance contract, a facility-readiness packet, and a cross-question portfolio validation. These goals may not authorize physical work, infer an unreported recipe, or claim material performance.
+G-1/G00/GP1–GP4/G07E/G09 may run without a laboratory. They produce an evidence-backed candidate dossier, rival hypotheses, a problem-specific provisional ranking, a draft study specification, a data/provenance contract, a facility-readiness packet, a cross-question portfolio validation, and—when G07E is executed—a replayable tournament/release package. These goals may not authorize physical work, infer an unreported recipe, or claim material performance.
 
 ### Lab-dependent plane
 
@@ -261,7 +261,7 @@ Failure to identify a valid model is a successful negative spike. Mechanistic ou
 
 ## Agent-society plan
 
-The hypothesis layer is independent of the agent layer. G07 defines the typed hypothesis registry, shared-memory permissions, deterministic tournament, and focus policy. G09 releases that loop without agents. G10 may then test a small society of role-biased agents—evidence skeptic, mechanism proposer, transfer analyst, experimental designer, and safety/provenance reviewer—against the deterministic baseline.
+The hypothesis layer is independent of the agent layer. G07E defines the model-free exploratory typed hypothesis registry, shared-memory permissions, deterministic tournament, and focus policy; G07 is the equivalent model-branch goal when G06 is eligible. G09 releases that loop without agents. G10 may then test a small society of role-biased agents—evidence skeptic, mechanism proposer, transfer analyst, experimental designer, and safety/provenance reviewer—against the deterministic baseline.
 
 Each agent receives the same frozen evidence packet and problem context but may maintain private episodic memory and a declared prior. The shared store has three authority tiers: immutable evidence, typed derived hypotheses, and untrusted episodic/reflection notes. Agents may propose and critique; only the adjudication policy and qualified humans can promote records. A tournament rewards prediction distinctness, counterevidence, provenance, and useful experiment selection—not consensus alone.
 

@@ -1,12 +1,12 @@
 # G09 — Release the non-agent pre-lab research package
 
 **Status:** proposed  
-**Dependencies:** G05A complete, G08 complete, or GD1 complete
+**Dependencies:** G05A complete, G08 complete, GD1 complete, or G07E complete
 **Advances:** delivers the program's scientific result and the reusable context/memory/hypothesis substrate before any agent is credited
 
 ## Objective
 
-Assemble, reproduce, audit, and version the complete non-agent pre-lab package for the selected branch: either evidence-gap, qualitative/LIMITED, or bounded-ranking/GO.
+Assemble, reproduce, audit, and version the complete non-agent pre-lab package for the selected branch: evidence-gap, qualitative/LIMITED, bounded-ranking/GO, or the model-free `EXPLORATORY_PLATFORM` tournament path.
 
 ## In scope
 
@@ -28,6 +28,7 @@ Agent orchestration, physical validation, final safety approval, journal-style c
 - `NO_GO_EVIDENCE_GAP`
 - `LIMITED_QUALITATIVE_DESIGN`
 - `GO_BOUNDED_RANKING`
+- `EXPLORATORY_PLATFORM`
 
 The release must use exactly one and explain the downstream implication.
 
@@ -38,7 +39,7 @@ The release must use exactly one and explain the downstream implication.
 ## Acceptance criteria
 
 1. A clean, offline reproduction from permitted fixtures/manifests regenerates every redistributable release artifact and verifies hashes.
-2. The release mode matches the unmodified gate verdicts from G04/G06/G08.
+2. The release mode matches the unmodified gate verdicts and completed source branch: G04/G06/G08 when a model branch is applicable, G05A for an evidence-gap release, or GP4/G07E for `EXPLORATORY_PLATFORM`.
 3. Every public claim links to evidence and a claim type; a linter rejects prohibited empirical language for unvalidated outputs.
 4. Restricted source content and secrets are absent; license/access obligations are summarized.
 5. Rankings/protocols preserve support, uncertainty, stability, and expert-review status.

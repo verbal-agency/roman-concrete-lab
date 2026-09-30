@@ -12,8 +12,9 @@ G-1 -> verdict-specific G00
           +-- exploration_seedability=EXPLORATION_SEEDABLE
           |       -> G00 EXPLORATORY_PLATFORM -> GP1 -> GP2 -> GP3 -> GP4
           |                                                    |
+          |                                                    +-- G07E deterministic tournament -> G09 exploratory release -> optional G10
           |                                                    +-- exploratory-only stop
-          |                                                    +-- qualified partner -> GL1 -> GL2
+          |                                                    +-- qualified partner (owner activated) -> GL1 -> GL2
           |
           +-- material candidate plausible + REPLICATION_STUDY_REQUIRED
           |       -> G00 PRELAB_REPLICATION -> GP1 -> GP2 -> GP3 -> GP4 -> GL1 -> GL2
@@ -47,13 +48,13 @@ G-1 -> verdict-specific G00
 
 The diagram after G00 now has an exploratory branch and a lab-dependent branch. `EXPLORATION_SEEDABLE` permits a problem-specific candidate/hypothesis and experiment-ranking work while the overall G-1 audit remains provisional; it does not authorize physical execution, performance claims, or a generalizable predictive model. The pre-lab branch (`GP1`–`GP4`) may create evidence dossiers, hypotheses, study specifications, partner-readiness material, and a cross-question portfolio checkpoint without a lab. `GL1` is the external facility/safety gate; `GL2` requires returned physical results. The discovery branch (`GD1`) is unavailable until GL2 produces reproducible, comparable data. A `REPLICATION_STUDY_REQUIRED` verdict without a material candidate blocks physical planning. `EVIDENCE_SYNTHESIS_ONLY` may proceed through evidence infrastructure but cannot authorize predictive ranking merely by reaching a later goal.
 
-G09 accepts the evidence-gap package, the completed modeling branch, or a completed physical-feedback discovery loop from GD1. G10 is not eligible until G09 releases a complete non-agent package. G11 requires external expert review regardless of whether G10 executes.
+G09 accepts the evidence-gap package, the completed modeling branch, a completed physical-feedback discovery loop from GD1, or the model-free G07E tournament. G10 is not eligible until G09 releases a complete non-agent package. G11 requires external expert review regardless of whether G10 executes.
 
-The agent-society progression is deliberate: G07 defines the typed hypothesis layer, shared-memory permissions, deterministic tournament, and explicitly discusses and freezes the focus and promotion layers; G09 releases that loop without agents; G10 tests role-biased agents against it under identical evidence and budgets; G11 reviews any adopted society before it appears in a lab handoff.
+The agent-society progression is deliberate: G07E defines the exploratory typed hypothesis layer, shared-memory permissions, deterministic tournament, and explicitly freezes the focus and promotion layers without models or agents; G07 remains the model-branch equivalent. G09 releases that loop without agents; G10 tests role-biased agents against it under identical evidence and budgets; G11 reviews any adopted society before it appears in a lab handoff.
 
 G00 is now a problem-charter gate, not a commercialization, extraction, or agent-provider gate. It ratifies the Roman-concrete context, lawful current-plane data rights, conditional-ranking boundary, no-external-spend rule, and exploration NO-GO semantics. Commercial licensing is deferred to the GP3/G09 release decision; extraction quality thresholds apply only if the G03 branch becomes eligible; LLM/provider choices apply only at G10; and qualified scientist-of-record review is required at GL1/G11 before any physical handoff. Every GP1–GP4 run must load the versioned context and contracts in `docs/protocols/exploration-contracts.md`.
 
-GP4 is the internal exploratory stopping point. GL1 is not automatically activated when GP4 completes: it remains `DEFERRED_NOT_REQUESTED` until the owner explicitly authorizes facility coordination or supplies an attributable qualified facility review. Only an activated GL1 with missing external review is `BLOCKED`.
+GP4 is the validated substrate checkpoint. G07E/G09 are the optional internal tournament and release path; GL1 is a separate physical-validation branch and is not automatically activated when GP4 completes. GL1 remains `DEFERRED_NOT_REQUESTED` until the owner explicitly authorizes facility coordination or supplies an attributable qualified facility review. Only an activated GL1 with missing external review is `BLOCKED`.
 
 ## Goals
 
@@ -65,7 +66,8 @@ GP4 is the internal exploratory stopping point. GL1 is not automatically activat
 | [GP2](goals/GP2-prelab-experiment-specification.md) | Produce a provisional candidate/experiment ranking and a draft, non-authorizing study specification | GP1 | conditional ranking plus `DRAFT — EXPERT REVIEW REQUIRED` study package |
 | [GP3](goals/GP3-partner-readiness-package.md) | Package a problem-specific experiment portfolio, facility requirements, data contracts, and partner-review questions | GP2 | exploratory portfolio and partner-ready handoff packet |
 | [GP4](goals/GP4-cross-question-portfolio-validation.md) | Validate the reusable problem-card and portfolio substrate across the Roman case and two offline cross-domain fixtures | GP3 | cross-question portfolio validation and explicit no-go/continue decision |
-| [GL1](goals/GL1-lab-partner-and-safety-gate.md) | Obtain qualified facility feasibility and safety review before any physical execution | GP4 | approved, revised, or blocked lab gate |
+| [G07E](goals/G07E-exploratory-deterministic-tournament.md) | Implement the model-free deterministic hypothesis tournament, scoped memory, focus, and promotion policies | GP4 | replayable exploratory tournament and policy manifest |
+| [GL1](goals/GL1-lab-partner-and-safety-gate.md) | Obtain qualified facility feasibility and safety review before any physical execution | GP4 plus explicit owner activation or qualified facility review | approved, revised, or blocked lab gate |
 | [GL2](goals/GL2-replication-result-ingestion.md) | Ingest partner results and decide whether the candidate is supported, narrow, inconclusive, or rejected | GL1 plus returned lab data | result snapshot and candidate verdict |
 | [GD1](goals/GD1-conditional-discovery-loop.md) | Build a discovery loop only if replication produces sufficient comparable data | GL2 `SUPPORTED` with data threshold | conditional discovery GO/NO-GO |
 | [G01](goals/G01-domain-and-evidence-contracts.md) | Implement canonical domain, evidence, provenance, and claim contracts | G00 | schema/contract conformance |
@@ -75,9 +77,9 @@ GP4 is the internal exploratory stopping point. GL1 is not automatically activat
 | [G05A](goals/G05A-evidence-gap-package.md) | On NO-GO, publish the evidence-gap synthesis and minimum lab study | G04 NO-GO | terminal non-model package |
 | [G05B](goals/G05B-analysis-dataset.md) | On LIMITED/GO, freeze the analysis dataset and split plan | G04 LIMITED/GO | analysis-ready release |
 | [G06](goals/G06-baselines-and-validation.md) | Fit honest baselines and validate by held-out study and time | G05B | model-use verdict |
-| [G07](goals/G07-hypotheses-and-experiment-ranking.md) | Formalize the hypothesis registry, deterministic tournament, scoped shared memory, and rank bounded experiments | G06 (any verdict) | hypothesis/tournament contract and ranked design set |
+| [G07](goals/G07-hypotheses-and-experiment-ranking.md) | Formalize the model-branch hypothesis registry, deterministic tournament, scoped shared memory, and rank bounded experiments | G06 (any verdict) | hypothesis/tournament contract and ranked design set |
 | [G08](goals/G08-mechanistic-spike-and-synthesis.md) | Test one justified mechanistic model and synthesize without false fusion | G07 | model card and synthesis |
-| [G09](goals/G09-non-agent-prelab-release.md) | Release the reproducible non-agent context, memory, hypothesis, focus, feedback, and pre-lab package | G05A, G08, or GD1 | versioned non-agent release |
+| [G09](goals/G09-non-agent-prelab-release.md) | Release the reproducible non-agent context, memory, hypothesis, focus, feedback, and pre-lab package | G05A, G08, GD1, or G07E | versioned non-agent release |
 | [G10](goals/G10-agent-ablation.md) | Evaluate whether a bounded agent society with shared memory and hypothesis tournament adds value | G09 | task-specific society adoption/rejection decision |
 | [G11](goals/G11-expert-handoff.md) | Obtain scientific/safety review and issue the lab handoff | G09; G10 only if adopted | approved or blocked handoff |
 
@@ -88,11 +90,12 @@ GP4 is the internal exploratory stopping point. GL1 is not automatically activat
 - On G-1 `REPLICATION_STUDY_REQUIRED` with a provisional/confirmed material candidate, G00 may authorize only GP1–GP4. No physical work is authorized until GL1 passes.
 - On G-1 `REPLICATION_STUDY_REQUIRED` without a material candidate, use G00 only to document the evidence gap; do not execute GP2, GL1, GL2, or G01–G10.
 - GL2 must return `SUPPORTED`, `NARROW_USE_CASE`, `INCONCLUSIVE`, or `NOT_REPRODUCED`; only `SUPPORTED` with the ratified data threshold may unlock GD1.
-- G07 must establish the deterministic hypothesis registry, shared-memory permissions, tournament, and focus policy before G09 or G10 can claim a complete discovery loop.
+- G07E or G07 must establish the deterministic hypothesis registry, shared-memory permissions, tournament, and focus policy before G09 or G10 can claim a complete discovery loop.
 - G09 must release and replay the non-agent loop before G10 introduces role-biased agents; agent society is an overlay to evaluate, not the source of scientific truth.
 - G10 adoption is task-specific. A society may be adopted for query formulation, contradiction triage, hypothesis critique, or experiment explanation without receiving authority to alter evidence, approve safety, or run a lab.
 - A single problem may have a `PROVISIONAL_BEST` candidate under declared constraints, but a global or cross-problem “best material” claim is prohibited unless the utility function, support region, and validation evidence are explicit.
 - The reusable platform core should be exercised across multiple problem cards before introducing a general-purpose agent framework; Roman concrete is the first vertical slice, not the whole platform.
+- G07E is the model-free exploratory tournament path; it may proceed from GP4 without a lab or predictive model. It must not be treated as physical discovery or a validated performance system.
 - On G-1 `EVIDENCE_SYNTHESIS_ONLY`, prohibit predictive modeling and ranking unless a versioned evidence amendment later satisfies the frozen gate.
 - Stop predictive-model work at G04 NO-GO. Execute G05A; do not continue through G05B–G07.
 - Stop model-based ranking at G06 if the preregistered baseline/coverage criteria fail. Route to qualitative design mode in G07.
