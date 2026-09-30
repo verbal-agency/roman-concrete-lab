@@ -53,6 +53,8 @@ The agent-society progression is deliberate: G07 defines the typed hypothesis la
 
 G00 is now a problem-charter gate, not a commercialization, extraction, or agent-provider gate. It ratifies the Roman-concrete context, lawful current-plane data rights, conditional-ranking boundary, no-external-spend rule, and exploration NO-GO semantics. Commercial licensing is deferred to the GP3/G09 release decision; extraction quality thresholds apply only if the G03 branch becomes eligible; LLM/provider choices apply only at G10; and qualified scientist-of-record review is required at GL1/G11 before any physical handoff. Every GP1–GP4 run must load the versioned context and contracts in `docs/protocols/exploration-contracts.md`.
 
+GP4 is the internal exploratory stopping point. GL1 is not automatically activated when GP4 completes: it remains `DEFERRED_NOT_REQUESTED` until the owner explicitly authorizes facility coordination or supplies an attributable qualified facility review. Only an activated GL1 with missing external review is `BLOCKED`.
+
 ## Goals
 
 | Goal | Objective | Depends on | Gate/output |
@@ -96,7 +98,7 @@ G00 is now a problem-charter gate, not a commercialization, extraction, or agent
 - Stop model-based ranking at G06 if the preregistered baseline/coverage criteria fail. Route to qualitative design mode in G07.
 - Stop mechanistic integration if G08 cannot establish input availability, validity, and an observable validation target.
 - Stop agent development at G10 if it fails any critical safety/provenance threshold or does not beat deterministic orchestration on the preregistered primary metric.
-- Stop release at G11 if qualified reviewers have not approved the protocol. A blocked review is reported; it is not converted into approval.
+- Stop release at G11 if qualified reviewers have not approved the protocol. A deferred or blocked review is reported; it is not converted into approval.
 
 ## Cross-cutting definition of done
 

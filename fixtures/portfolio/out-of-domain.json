@@ -1,0 +1,8 @@
+{
+  "case_id": "out-of-domain",
+  "expected_status": "REJECT_COMPARISON",
+  "comparison_attempt": {"problem_ids":["roman-concrete","battery-cathode"],"common_utility":null,"endpoint_mapping":null,"evidence_basis":null},
+  "entry": {
+    "entry_id":"portfolio-out-of-domain-001","problem_id":"roman-concrete","problem_version":"1.0","candidate_id":"RC-01","hypothesis_id":"H-RC01-01","claim_type":"PROPOSED","evidence_locators":["data/processed/literature-sufficiency-material-candidates.jsonl#RC-01"],"endpoint_mapping":{"primary_endpoint":"capacity_retention","mapping_status":"unmapped","rationale":"battery endpoint is not mapped to Roman-concrete transport"},"utility":{"dimensions":["endpoint_fit","information_value"],"ordering_policy":"comparison not allowed"},"support_region":"modern terrestrial Roman-inspired mortar","uncertainty":["cross-domain mapping absent"],"missingness":{"missing_fields":["common_utility","endpoint_mapping","evidence_basis"],"censored_fields":[]},"abstention_reason":"no common utility or endpoint mapping","status":"REJECT_COMPARISON","memory_refs":{"evidence_memory_ids":["E-S01"],"hypothesis_memory_ids":["H-RC01-01"],"untrusted_note_ids":[]}
+  }
+}

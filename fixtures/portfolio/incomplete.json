@@ -1,0 +1,7 @@
+{
+  "case_id": "incomplete",
+  "expected_status": "REVIEW_REQUIRED",
+  "entry": {
+    "entry_id":"portfolio-incomplete-001","problem_id":"lime-mortar","problem_version":"1.0","candidate_id":"LM-01","hypothesis_id":"H-LM-01","claim_type":"PROPOSED","evidence_locators":["fixture://lime-mortar/evidence-1"],"endpoint_mapping":{"primary_endpoint":"sorptivity_recovery","mapping_status":"native","rationale":"fixture endpoint is defined but result completeness is unresolved"},"utility":{"dimensions":["endpoint_fit","information_value","feasibility","risk"],"ordering_policy":"conditional only"},"support_region":"fixture-defined lime-mortar curing question","uncertainty":["missing endpoint observation","replicate lineage incomplete"],"missingness":{"missing_fields":["endpoint_observation","replicate_lineage"],"censored_fields":[]},"abstention_reason":"required observation is incomplete","status":"REVIEW_REQUIRED","memory_refs":{"evidence_memory_ids":["E-LM-F01"],"hypothesis_memory_ids":["H-LM-01"],"untrusted_note_ids":["N-LM-01"]}
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "case_id": "contradictory",
+  "expected_status": "REVIEW_REQUIRED",
+  "entry": {
+    "entry_id":"portfolio-contradictory-001","problem_id":"roman-concrete","problem_version":"1.0","candidate_id":"RC-01","hypothesis_id":"H-RC01-02","claim_type":"PROPOSED","evidence_locators":["fixture://portfolio/contradictory"],"endpoint_mapping":{"primary_endpoint":"functional_water_flow_recovery","mapping_status":"contradictory","rationale":"fixture contains conflicting surface and transport observations"},"utility":{"dimensions":["endpoint_fit","information_value","feasibility","risk"],"ordering_policy":"do not force a winner"},"support_region":"modern terrestrial Roman-inspired mortar","uncertainty":["conflicting observations"],"missingness":{"missing_fields":[],"censored_fields":["transport_observation"]},"abstention_reason":"contradictory evidence requires adjudication","status":"REVIEW_REQUIRED","memory_refs":{"evidence_memory_ids":["E-S01"],"hypothesis_memory_ids":["H-RC01-02"],"untrusted_note_ids":[]}
+  }
+}

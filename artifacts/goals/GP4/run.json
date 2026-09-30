@@ -1,0 +1,30 @@
+{
+  "goal": "GP4",
+  "protocol_version": "gp4.1-cross-question-portfolio",
+  "execution_date": "2026-09-29",
+  "replay_command": "python3 tools/portfolio/replay.py",
+  "inputs": {
+    "problem_card_schema": {"path": "schemas/problem-card.schema.json", "sha256": "0371cc65717a76ce1cfb50950051e37e319f3082f7e5b53f8a6e3e8731a52ca6"},
+    "portfolio_schema": {"path": "schemas/portfolio-entry.schema.json", "sha256": "f4d8afb456290331cf153cd7a507d07f0e4c692e710b58c49d8adc188f1ce800"},
+    "discovery_protocol": {"path": "docs/protocols/problem-specific-discovery.md", "sha256": "ca756cab4f15ab395fbf3724addb97a8ecb10cc0a5e2bfe87d40fc6d4a74dc51"},
+    "replay_tool": {"path": "tools/portfolio/replay.py", "sha256": "5328a657a6db139bf8fdf772f533dfddd543f9f0ca8a0d72f19a2479fa1fc821"},
+    "cards": [
+      {"path": "fixtures/portfolio/roman.json", "sha256": "4a6a1c3534cf4959355e5cbcbe2c604100fb479ee0ee7a33f6569b1689aa1d22"},
+      {"path": "fixtures/portfolio/lime-mortar.json", "sha256": "2f2be2c9d72bc03c2344d884417415b3d4664572f83e3c8f1f1a40e0be209c6c"},
+      {"path": "fixtures/portfolio/battery-cathode.json", "sha256": "bba0941f1ffd8b34a73125a47ba93968f16aea119c9971b0703e57affcb6e500"}
+    ],
+    "portfolio_fixtures": [
+      {"path": "fixtures/portfolio/positive.json", "sha256": "6dd9d4e389c38b1b3ffb454dac94457208f696c46a351f624bb4c60f826533ec"},
+      {"path": "fixtures/portfolio/contradictory.json", "sha256": "0bca5e57cbb4989fcc7eb5dfa1a7bd4c65830c191755158769f9391ab1abdebd"},
+      {"path": "fixtures/portfolio/incomplete.json", "sha256": "f874a67854b05029c9b8b386dfe800810a7c7e116305a4605860d1b7ea62c360"},
+      {"path": "fixtures/portfolio/unsupported.json", "sha256": "e4aebad4aa8b087f633fb55eb43a57c8d77a2538ce6bc9020f19001924afc24c"},
+      {"path": "fixtures/portfolio/out-of-domain.json", "sha256": "48485c65c384ab2e19f2ef83adcebabf55b50f8f916b4efef7f1a977274bc1ca"}
+    ]
+  },
+  "outputs": {
+    "card_count": 3,
+    "card_outputs": {"roman-concrete": "PROVISIONAL_BEST", "lime-mortar": "PARETO_SET", "battery-cathode": "ABSTAIN"},
+    "fixture_results": {"positive": "PROVISIONAL_BEST", "contradictory": "REVIEW_REQUIRED", "incomplete": "REVIEW_REQUIRED", "unsupported": "ABSTAIN", "out-of-domain": "REJECT_COMPARISON"}
+  },
+  "authority": {"network": "none", "model_calls": "none", "agent_runtime": "prohibited", "lab_execution": "prohibited", "external_communication": "prohibited"}
+}

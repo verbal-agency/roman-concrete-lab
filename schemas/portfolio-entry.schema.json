@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/portfolio-entry.schema.json",
+  "title": "Problem-specific portfolio entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["entry_id", "problem_id", "problem_version", "candidate_id", "hypothesis_id", "claim_type", "evidence_locators", "endpoint_mapping", "utility", "support_region", "uncertainty", "missingness", "abstention_reason", "status", "memory_refs"],
+  "properties": {
+    "entry_id": {"type": "string", "minLength": 1},
+    "problem_id": {"type": "string", "minLength": 1},
+    "problem_version": {"type": "string", "minLength": 1},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "hypothesis_id": {"type": "string", "minLength": 1},
+    "claim_type": {"enum": ["REPORTED", "DERIVED", "PROPOSED", "UNRESOLVED"]},
+    "evidence_locators": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "endpoint_mapping": {
+      "type": "object", "additionalProperties": false,
+      "required": ["primary_endpoint", "mapping_status", "rationale"],
+      "properties": {"primary_endpoint": {"type": "string"}, "mapping_status": {"enum": ["native", "explicit", "unmapped", "contradictory"]}, "rationale": {"type": "string"}}
+    },
+    "utility": {"type": "object", "additionalProperties": false, "required": ["dimensions", "ordering_policy"], "properties": {"dimensions": {"type": "array", "items": {"type": "string"}, "minItems": 1}, "ordering_policy": {"type": "string"}}},
+    "support_region": {"type": "string", "minLength": 1},
+    "uncertainty": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "missingness": {"type": "object", "additionalProperties": false, "required": ["missing_fields", "censored_fields"], "properties": {"missing_fields": {"type": "array", "items": {"type": "string"}}, "censored_fields": {"type": "array", "items": {"type": "string"}}}},
+    "abstention_reason": {"type": ["string", "null"]},
+    "status": {"enum": ["INCLUDED", "DEFERRED", "REJECTED", "REVIEW_REQUIRED", "ABSTAIN", "PROVISIONAL_BEST", "PARETO_SET", "REJECT_COMPARISON"]},
+    "memory_refs": {"type": "object", "additionalProperties": false, "required": ["evidence_memory_ids", "hypothesis_memory_ids", "untrusted_note_ids"], "properties": {"evidence_memory_ids": {"type": "array", "items": {"type": "string"}}, "hypothesis_memory_ids": {"type": "array", "items": {"type": "string"}}, "untrusted_note_ids": {"type": "array", "items": {"type": "string"}}}}
+  }
+}

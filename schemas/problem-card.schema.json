@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/problem-card.schema.json",
+  "title": "Problem-specific discovery card",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["problem_id", "version", "question", "domain", "process_boundary", "primary_endpoint", "secondary_endpoints", "candidate_variables", "controls", "constraints", "utility", "support_region", "allowed_outputs", "authority", "scoped_memory", "candidates"],
+  "properties": {
+    "problem_id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "version": {"type": "string", "minLength": 1},
+    "question": {"type": "string", "minLength": 1},
+    "domain": {"type": "string", "minLength": 1},
+    "process_boundary": {"type": "string", "minLength": 1},
+    "primary_endpoint": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "semantics", "unit_policy"],
+      "properties": {"name": {"type": "string"}, "semantics": {"type": "string"}, "unit_policy": {"type": "string"}}
+    },
+    "secondary_endpoints": {"type": "array", "items": {"type": "string"}},
+    "candidate_variables": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "controls": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "constraints": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "utility": {
+      "type": "object", "additionalProperties": false,
+      "required": ["dimensions", "ordering_policy"],
+      "properties": {"dimensions": {"type": "array", "items": {"type": "string"}, "minItems": 1}, "ordering_policy": {"type": "string"}}
+    },
+    "support_region": {"type": "string", "minLength": 1},
+    "allowed_outputs": {"type": "array", "items": {"enum": ["PROVISIONAL_BEST", "PARETO_SET", "HYPOTHESIS", "EXPERIMENT_CANDIDATE", "ABSTAIN"]}, "minItems": 1},
+    "authority": {
+      "type": "object", "additionalProperties": false,
+      "required": ["decision_owner", "prohibited_actions", "next_reviewer"],
+      "properties": {"decision_owner": {"type": "string"}, "prohibited_actions": {"type": "array", "items": {"type": "string"}}, "next_reviewer": {"type": "string"}}
+    },
+    "scoped_memory": {
+      "type": "object", "additionalProperties": false,
+      "required": ["evidence", "hypotheses", "untrusted_notes", "write_policy"],
+      "properties": {
+        "evidence": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["memory_id", "memory_type", "locator", "claim_type"], "properties": {"memory_id": {"type": "string"}, "memory_type": {"const": "immutable_evidence"}, "locator": {"type": "string"}, "claim_type": {"enum": ["REPORTED", "DERIVED", "UNRESOLVED"]}}}},
+        "hypotheses": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["memory_id", "memory_type", "claim_type", "status"], "properties": {"memory_id": {"type": "string"}, "memory_type": {"const": "typed_hypothesis"}, "claim_type": {"enum": ["PROPOSED", "DERIVED", "UNRESOLVED"]}, "status": {"enum": ["HYPOTHESIS", "REVIEW_REQUIRED", "ABSTAIN"]}}}},
+        "untrusted_notes": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["memory_id", "memory_type", "text"], "properties": {"memory_id": {"type": "string"}, "memory_type": {"const": "untrusted_note"}, "text": {"type": "string"}}}},
+        "write_policy": {"type": "string", "minLength": 1}
+      }
+    },
+    "candidates": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["candidate_id", "claim_type", "evidence_locators", "support_region", "uncertainty", "missing_fields", "status"],
+        "properties": {
+          "candidate_id": {"type": "string", "minLength": 1},
+          "claim_type": {"enum": ["REPORTED", "DERIVED", "PROPOSED", "UNRESOLVED"]},
+          "evidence_locators": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "support_region": {"type": "string", "minLength": 1},
+          "uncertainty": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "missing_fields": {"type": "array", "items": {"type": "string"}},
+          "status": {"enum": ["PROVISIONAL", "CONTEXT_ONLY", "REVIEW_REQUIRED", "ABSTAIN"]}
+        }
+      }
+    }
+  }
+}

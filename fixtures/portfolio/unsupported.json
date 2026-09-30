@@ -1,0 +1,7 @@
+{
+  "case_id": "unsupported",
+  "expected_status": "ABSTAIN",
+  "entry": {
+    "entry_id":"portfolio-unsupported-001","problem_id":"battery-cathode","problem_version":"1.0","candidate_id":"BC-01","hypothesis_id":"H-BC-01","claim_type":"PROPOSED","evidence_locators":["fixture://battery-cathode/evidence-1"],"endpoint_mapping":{"primary_endpoint":"capacity_retention","mapping_status":"unmapped","rationale":"fixture does not contain a measured result"},"utility":{"dimensions":["endpoint_fit","information_value","feasibility","risk"],"ordering_policy":"conditional only"},"support_region":"fixture-defined lab-scale cathode manufacturing question","uncertainty":["no measured observation"],"missingness":{"missing_fields":["measured_result"],"censored_fields":[]},"abstention_reason":"unsupported by measured evidence","status":"ABSTAIN","memory_refs":{"evidence_memory_ids":["E-BC-F01"],"hypothesis_memory_ids":["H-BC-01"],"untrusted_note_ids":["N-BC-01"]}
+  }
+}

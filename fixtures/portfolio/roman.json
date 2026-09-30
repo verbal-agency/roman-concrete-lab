@@ -1,0 +1,30 @@
+{
+  "problem_id": "roman-concrete",
+  "version": "1.0",
+  "question": "Which evidenced quicklime or hot-mix process candidate merits a controlled experiment for functional crack-healing recovery?",
+  "domain": "modern terrestrial Roman-inspired lime-pozzolan mortar or mortar-like concrete",
+  "process_boundary": "quicklime or lime-clast hot-mix process versus a process-matched non-intervention control",
+  "primary_endpoint": {"name":"functional_water_flow_recovery","semantics":"water-flow or permeability recovery after controlled cracking","unit_policy":"record facility-defined unit and uncertainty; do not convert surface closure to transport recovery"},
+  "secondary_endpoints": ["crack_closure", "compressive_strength_retention"],
+  "candidate_variables": ["quicklime_or_lime-clast_hot-mix_process"],
+  "controls": ["quicklime-free_or_0pct_process-matched_control"],
+  "constraints": ["no physical execution before GL1", "no recipe inference", "no universal best-material claim", "qualified review required before lab handoff"],
+  "utility": {"dimensions":["endpoint_fit","information_value","feasibility","risk"],"ordering_policy":"keep dimensions separate; conditional ranking only"},
+  "support_region": "modern terrestrial Roman-inspired lime-pozzolan mortar or explicitly marked mortar-like concrete with inspectable process identity and a reviewable comparator",
+  "allowed_outputs": ["PROVISIONAL_BEST", "PARETO_SET", "HYPOTHESIS", "EXPERIMENT_CANDIDATE", "ABSTAIN"],
+  "authority": {"decision_owner":"repository program owner", "prohibited_actions":["lab execution","safety approval","partner contact","agent runtime"], "next_reviewer":"qualified materials and safety reviewer before GL1"},
+  "scoped_memory": {
+    "evidence":[
+      {"memory_id":"E-S01","memory_type":"immutable_evidence","locator":"data/manifests/literature-sufficiency-sources.jsonl#S01; S01 PDF pp.4,6,9-10","claim_type":"REPORTED"},
+      {"memory_id":"E-S25","memory_type":"immutable_evidence","locator":"data/manifests/literature-sufficiency-sources.jsonl#S25; thesis abstract/DOI","claim_type":"REPORTED"},
+      {"memory_id":"E-S26","memory_type":"immutable_evidence","locator":"data/manifests/literature-sufficiency-sources.jsonl#S26; PDF pp.44-49,51-52,75-80","claim_type":"REPORTED"}
+    ],
+    "hypotheses":[
+      {"memory_id":"H-RC01-01","memory_type":"typed_hypothesis","claim_type":"PROPOSED","status":"HYPOTHESIS"},
+      {"memory_id":"H-RC01-02","memory_type":"typed_hypothesis","claim_type":"PROPOSED","status":"HYPOTHESIS"}
+    ],
+    "untrusted_notes":[{"memory_id":"N-RC01-01","memory_type":"untrusted_note","text":"Selected-specimen endpoint and S25/S26 lineage require qualified adjudication."}],
+    "write_policy":"immutable evidence is append-only and source-located; hypotheses are typed derived records; notes cannot promote evidence or authorize action"
+  },
+  "candidates":[{"candidate_id":"RC-01","claim_type":"DERIVED","evidence_locators":["data/processed/literature-sufficiency-material-candidates.jsonl#RC-01","S01 PDF pp.4,6,9-10","S25 abstract/DOI","S26 PDF pp.44-49,51-52,75-80"],"support_region":"modern terrestrial Roman-inspired mortar or mortar-like concrete","uncertainty":["S25/S26 lineage requires adjudication","selected-specimen functional endpoint requires review","no independent direct replication"],"missing_fields":["validated_effectiveness","qualified_safety_review"],"status":"PROVISIONAL"}]
+}

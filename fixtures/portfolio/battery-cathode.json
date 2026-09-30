@@ -1,0 +1,23 @@
+{
+  "problem_id": "battery-cathode",
+  "version": "1.0",
+  "question": "Which binder-process question merits a controlled offline study of capacity retention in a lab-scale battery cathode?",
+  "domain": "battery cathode manufacturing",
+  "process_boundary": "declared binder formulation and calendaring-process comparison within a cathode fixture",
+  "primary_endpoint": {"name":"capacity_retention","semantics":"retained discharge capacity after a declared cycling window","unit_policy":"fixture-defined percentage with cycle count recorded; not comparable to mortar transport"},
+  "secondary_endpoints": ["impedance_change", "manufacturing_feasibility"],
+  "candidate_variables": ["binder_formulation", "calendaring_process"],
+  "controls": ["process-matched_reference_binder"],
+  "constraints": ["offline fixture only", "no electrochemical execution", "no cross-domain performance comparison"],
+  "utility": {"dimensions":["endpoint_fit","information_value","feasibility","risk"],"ordering_policy":"conditional ranking within battery-cathode context only"},
+  "support_region": "fixture-defined lab-scale cathode manufacturing question; no transfer to concrete or mortar",
+  "allowed_outputs": ["PROVISIONAL_BEST", "PARETO_SET", "HYPOTHESIS", "EXPERIMENT_CANDIDATE", "ABSTAIN"],
+  "authority": {"decision_owner":"offline fixture owner", "prohibited_actions":["electrochemical execution","procurement","cross-domain score","agent runtime"], "next_reviewer":"qualified electrochemistry reviewer if promoted beyond fixture"},
+  "scoped_memory": {
+    "evidence":[{"memory_id":"E-BC-F01","memory_type":"immutable_evidence","locator":"fixture://battery-cathode/evidence-1","claim_type":"REPORTED"}],
+    "hypotheses":[{"memory_id":"H-BC-01","memory_type":"typed_hypothesis","claim_type":"PROPOSED","status":"HYPOTHESIS"}],
+    "untrusted_notes":[{"memory_id":"N-BC-01","memory_type":"untrusted_note","text":"Fixture is structural validation data, not a literature result."}],
+    "write_policy":"immutable fixture evidence cannot be overwritten; typed hypotheses and untrusted notes cannot promote performance claims"
+  },
+  "candidates":[{"candidate_id":"BC-01","claim_type":"PROPOSED","evidence_locators":["fixture://battery-cathode/evidence-1"],"support_region":"fixture-defined lab-scale cathode manufacturing question","uncertainty":["fixture contains no physical result","endpoint is domain-specific"],"missing_fields":["physical_result","cross-domain_mapping"],"status":"PROVISIONAL"}]
+}

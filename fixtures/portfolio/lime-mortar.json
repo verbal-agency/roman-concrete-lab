@@ -1,0 +1,23 @@
+{
+  "problem_id": "lime-mortar",
+  "version": "1.0",
+  "question": "Which curing-regime question merits a controlled offline study of functional transport recovery in historic lime mortar?",
+  "domain": "lime mortar conservation materials",
+  "process_boundary": "declared curing-regime comparison within a lime-mortar formulation envelope",
+  "primary_endpoint": {"name":"sorptivity_recovery","semantics":"change in capillary water uptake after a declared damage state","unit_policy":"fixture-defined units only; no mapping to Roman-concrete water flow without evidence"},
+  "secondary_endpoints": ["surface_crack_closure", "strength_retention"],
+  "candidate_variables": ["curing_regime"],
+  "controls": ["process-matched_reference_cure"],
+  "constraints": ["offline fixture only", "no unsupported literature claim", "no cross-domain performance comparison"],
+  "utility": {"dimensions":["endpoint_fit","information_value","feasibility","risk"],"ordering_policy":"no single utility weight; emit Pareto set when trade-offs remain"},
+  "support_region": "fixture-defined lime-mortar curing question; not a Roman-concrete performance claim",
+  "allowed_outputs": ["PROVISIONAL_BEST", "PARETO_SET", "HYPOTHESIS", "EXPERIMENT_CANDIDATE", "ABSTAIN"],
+  "authority": {"decision_owner":"offline fixture owner", "prohibited_actions":["literature retrieval","lab execution","cross-domain score","agent runtime"], "next_reviewer":"domain reviewer if promoted beyond fixture"},
+  "scoped_memory": {
+    "evidence":[{"memory_id":"E-LM-F01","memory_type":"immutable_evidence","locator":"fixture://lime-mortar/evidence-1","claim_type":"REPORTED"}],
+    "hypotheses":[{"memory_id":"H-LM-01","memory_type":"typed_hypothesis","claim_type":"PROPOSED","status":"HYPOTHESIS"}],
+    "untrusted_notes":[{"memory_id":"N-LM-01","memory_type":"untrusted_note","text":"Fixture is structural validation data, not a literature result."}],
+    "write_policy":"evidence and hypotheses remain separate; fixture notes cannot become measured observations"
+  },
+  "candidates":[{"candidate_id":"LM-01","claim_type":"PROPOSED","evidence_locators":["fixture://lime-mortar/evidence-1"],"support_region":"fixture-defined lime-mortar curing question","uncertainty":["fixture contains no physical result","endpoint mapping is domain-specific"],"missing_fields":["physical_result","cross-domain_mapping"],"status":"PROVISIONAL"}]
+}

@@ -1,6 +1,6 @@
 # GP4 — Cross-question portfolio validation
 
-**Status:** proposed  
+**Status:** complete
 **Dependencies:** GP3 complete; G00 `EXPLORATORY_PLATFORM` or `PRELAB_REPLICATION` track  
 **Advances:** tests whether the problem-specific discovery substrate can represent more than one scientific question without making unsupported cross-domain claims
 
