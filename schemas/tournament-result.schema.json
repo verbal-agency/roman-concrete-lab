@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/tournament-result.schema.json",
+  "title": "Deterministic hypothesis tournament result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "result_id",
+    "problem_id",
+    "problem_version",
+    "card_digest",
+    "evidence_manifest_digest",
+    "policy_version",
+    "policy_hash",
+    "status",
+    "stages",
+    "hypotheses",
+    "focus_decision",
+    "recommendations",
+    "cache_policy",
+    "authority"
+  ],
+  "properties": {
+    "protocol_version": {"type": "string", "minLength": 1},
+    "result_id": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+    "problem_id": {"type": "string", "minLength": 1},
+    "problem_version": {"type": "string", "minLength": 1},
+    "card_digest": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+    "evidence_manifest_digest": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+    "policy_version": {"type": "string", "minLength": 1},
+    "policy_hash": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+    "status": {
+      "enum": [
+        "RANKED_SET",
+        "PARETO_SET",
+        "REVIEW_REQUIRED",
+        "ABSTAIN",
+        "NO_FEASIBLE_CANDIDATE",
+        "UNSAFE_REJECTED",
+        "BUDGET_EXHAUSTED"
+      ]
+    },
+    "stages": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["propose", "critique", "adjudicate", "focus", "promote_retract"],
+      "properties": {
+        "propose": {"type": "object"},
+        "critique": {"type": "object"},
+        "adjudicate": {"type": "object"},
+        "focus": {"type": "object"},
+        "promote_retract": {"type": "object"}
+      }
+    },
+    "hypotheses": {"type": "array", "items": {"$ref": "hypothesis-registry.schema.json"}},
+    "focus_decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reason", "budget_declared", "budget_consumed", "candidates_considered", "abstention_condition"],
+      "properties": {
+        "reason": {"type": "string", "minLength": 1},
+        "budget_declared": {"type": "integer", "minimum": 0},
+        "budget_consumed": {"type": "integer", "minimum": 0},
+        "candidates_considered": {"type": "array", "items": {"type": "string"}},
+        "abstention_condition": {"type": "string", "minLength": 1}
+      }
+    },
+    "recommendations": {"type": "array", "items": {"type": "object"}},
+    "sensitivity": {"type": "object"},
+    "cache_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "invalidation"],
+      "properties": {
+        "mode": {"const": "NONE"},
+        "invalidation": {"type": "string", "minLength": 1}
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["network", "model_calls", "agent_runtime", "lab_execution", "external_communication"],
+      "properties": {
+        "network": {"const": "none"},
+        "model_calls": {"const": "none"},
+        "agent_runtime": {"const": "prohibited"},
+        "lab_execution": {"const": "prohibited"},
+        "external_communication": {"const": "prohibited"}
+      }
+    }
+  }
+}

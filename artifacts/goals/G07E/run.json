@@ -1,0 +1,57 @@
+{
+  "goal": "G07E",
+  "protocol_version": "g07e.1-deterministic-tournament",
+  "execution_date": "2026-09-30",
+  "replay_command": "python3 tools/tournament/replay.py",
+  "test_command": "python3 -m pytest -q",
+  "inputs": {
+    "hypothesis_schema": {"path": "schemas/hypothesis-registry.schema.json", "sha256": "d83ea2dbd5a0e44f482d8c2404e54b4f34ede9eb1d414066ed034fc17535077e"},
+    "result_schema": {"path": "schemas/tournament-result.schema.json", "sha256": "a8ad719d3a3b30dc35bb42318f905484353cdf6c246d8545d2f942ee8d19b881"},
+    "protocol": {"path": "docs/protocols/hypothesis-tournament.md", "sha256": "3208b0c515cc2d76b7e735c9d8d8fa9aec2b2c2ef7c28d320f723bdd83300de6"},
+    "policy": {"path": "tools/tournament/policy.py", "sha256": "bfc152258b459abe8caa53a3a5e6db22642c1fcfd1c46a91f9fe48a4f4061d03"},
+    "replay": {"path": "tools/tournament/replay.py", "sha256": "7e82a578cc59aa103e16548fb5d4f1b14802627f929c479f60bce0e15cced3f9"},
+    "tests": {"path": "tests/tournament/test_replay.py", "sha256": "9cc0be826f7d8bd826c494b7ede354ac71bd473546c770ce005b3f627b4a4822"},
+    "cards": [
+      {"path": "fixtures/portfolio/roman.json", "sha256": "4a6a1c3534cf4959355e5cbcbe2c604100fb479ee0ee7a33f6569b1689aa1d22"},
+      {"path": "fixtures/portfolio/lime-mortar.json", "sha256": "2f2be2c9d72bc03c2344d884417415b3d4664572f83e3c8f1f1a40e0be209c6c"},
+      {"path": "fixtures/portfolio/battery-cathode.json", "sha256": "bba0941f1ffd8b34a73125a47ba93968f16aea119c9971b0703e57affcb6e500"}
+    ],
+    "tournament_fixture_count": 8
+  },
+  "policy": {
+    "version": "g07e-policy.1",
+    "hash": "sha256:d6e735ab6beabaa0eb6987f1377292b6add7cb761a0042c3443753145ee74537"
+  },
+  "outputs": {
+    "card_count": 3,
+    "card_statuses": {
+      "roman-concrete": "PARETO_SET",
+      "lime-mortar": "PARETO_SET",
+      "battery-cathode": "PARETO_SET"
+    },
+    "roman_hypothesis_count": 2,
+    "roman_explicit_rivals": true,
+    "fixture_statuses": {
+      "positive": "PARETO_SET",
+      "contradictory": "REVIEW_REQUIRED",
+      "malformed": "REVIEW_REQUIRED",
+      "partial": "REVIEW_REQUIRED",
+      "unsupported": "ABSTAIN",
+      "unsafe": "UNSAFE_REJECTED",
+      "no-feasible": "NO_FEASIBLE_CANDIDATE",
+      "budget-exhaustion": "BUDGET_EXHAUSTED"
+    },
+    "deterministic_replay": true,
+    "numeric_eig_or_predictive_model": false,
+    "universal_best_claim": false,
+    "test_count": 26,
+    "tests_passed": true
+  },
+  "authority": {
+    "network": "none",
+    "model_calls": "none",
+    "agent_runtime": "prohibited",
+    "lab_execution": "prohibited",
+    "external_communication": "prohibited"
+  }
+}

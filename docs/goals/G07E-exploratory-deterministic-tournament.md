@@ -1,7 +1,7 @@
 # G07E — Exploratory deterministic hypothesis tournament
 
-**Status:** proposed  
-**Dependencies:** GP4 complete; G00 `EXPLORATORY_PLATFORM` track  
+**Status:** complete
+**Dependencies:** GP4 complete; G00 `EXPLORATORY_PLATFORM` track
 **Advances:** turns the validated non-agent substrate into a replayable tournament-style discovery loop without requiring a model, lab, network, or agent runtime
 
 ## Objective

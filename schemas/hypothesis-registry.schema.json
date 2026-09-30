@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/hypothesis-registry.schema.json",
+  "title": "Typed hypothesis registry record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "hypothesis_id",
+    "problem_id",
+    "problem_version",
+    "intervention",
+    "comparator",
+    "applicable_domain",
+    "support_region",
+    "predicted_observation",
+    "rival_hypothesis_ids",
+    "rival_state",
+    "evidence_memory_ids",
+    "claim_type",
+    "uncertainty",
+    "status",
+    "promotion_retraction_reason",
+    "reviewer_authority",
+    "provenance",
+    "utility_components"
+  ],
+  "properties": {
+    "hypothesis_id": {"type": "string", "pattern": "^[A-Za-z0-9._-]+$"},
+    "problem_id": {"type": "string", "minLength": 1},
+    "problem_version": {"type": "string", "minLength": 1},
+    "intervention": {"type": "string", "minLength": 1},
+    "comparator": {"type": "string", "minLength": 1},
+    "applicable_domain": {"type": "string", "minLength": 1},
+    "support_region": {"type": "string", "minLength": 1},
+    "predicted_observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["endpoint", "statement", "discriminator"],
+      "properties": {
+        "endpoint": {"type": "string", "minLength": 1},
+        "statement": {"type": "string", "minLength": 1},
+        "discriminator": {"type": "string", "minLength": 1}
+      }
+    },
+    "rival_hypothesis_ids": {"type": "array", "items": {"type": "string"}},
+    "rival_state": {"enum": ["EXPLICIT_RIVALS", "UNRESOLVED_RIVAL", "NO_RIVAL_PERMITTED"]},
+    "evidence_memory_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "claim_type": {"enum": ["PROPOSED", "DERIVED", "UNRESOLVED"]},
+    "uncertainty": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "status": {
+      "enum": [
+        "HYPOTHESIS",
+        "SUPPORTED_WITHIN_CONTEXT",
+        "NARROW_USE_CASE",
+        "CONTRADICTED",
+        "RETIRED",
+        "REVIEW_REQUIRED",
+        "ABSTAIN"
+      ]
+    },
+    "promotion_retraction_reason": {"type": "string", "minLength": 1},
+    "reviewer_authority": {"type": "string", "minLength": 1},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["card_path", "candidate_id", "source_locators"],
+      "properties": {
+        "card_path": {"type": "string", "minLength": 1},
+        "candidate_id": {"type": "string", "minLength": 1},
+        "source_locators": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      }
+    },
+    "utility_components": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["endpoint_fit", "information_value", "feasibility", "risk"],
+      "properties": {
+        "endpoint_fit": {"enum": ["LOW", "MEDIUM", "HIGH"]},
+        "information_value": {"enum": ["LOW", "MEDIUM", "HIGH"]},
+        "feasibility": {"enum": ["LOW", "MEDIUM", "HIGH"]},
+        "risk": {"enum": ["LOW", "MEDIUM", "HIGH"]}
+      }
+    }
+  }
+}
