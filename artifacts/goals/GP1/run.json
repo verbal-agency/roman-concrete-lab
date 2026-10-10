@@ -1,7 +1,8 @@
 {
   "goal": "GP1",
   "protocol_version": "gp1.1-candidate-dossier",
-  "execution_date": "2026-09-28",
+  "execution_date": "2026-10-09",
+  "replay_reason": "Replayed after G-1 g1.3-public-access-audit changed source access classifications; candidate and hypothesis ledgers were unchanged.",
   "replay_command": "python3 tools/literature_audit/gp1_replay.py",
   "inputs": {
     "candidate_ledger": {
@@ -10,7 +11,11 @@
     },
     "source_manifest": {
       "path": "data/manifests/literature-sufficiency-sources.jsonl",
-      "sha256": "58d87c1e548b91f7dcefb04487e8fd559828f766bdb84d4c0dbfedda0cb41c34"
+      "sha256": "a9a1567bc3b760a4624b113d3f1622c228350b2cc2ff55154f410c344a4c33d9"
+    },
+    "access_register": {
+      "path": "data/manifests/literature-sufficiency-access-register.csv",
+      "sha256": "25f16ab1f02f08d2ea29aed58020fbd8902749c236bfeb623257cc187aca1428"
     },
     "study_family_ledger": {
       "path": "data/processed/literature-sufficiency-study-families.jsonl",

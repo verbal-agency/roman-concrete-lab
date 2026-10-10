@@ -1,8 +1,8 @@
 # GP1 — Candidate evidence and hypothesis dossier
 
 **Status:** complete
-**Dependencies:** G00 `EXPLORATORY_PLATFORM` or `PRELAB_REPLICATION` track; `exploration_seedability=EXPLORATION_SEEDABLE` with at least one provisional candidate
-**Advances:** converts the public evidence audit into a problem-specific, falsifiable candidate dossier and hypothesis matrix without claiming material performance
+**Dependencies:** G-LR complete; G00 `EXPLORATORY_PLATFORM` or `PRELAB_REPLICATION` track; `exploration_seedability=EXPLORATION_SEEDABLE` with at least one provisional candidate
+**Advances:** converts a recorded landscape and evidence map into a problem-specific, falsifiable candidate dossier and hypothesis matrix without claiming material performance
 
 ## Objective
 
@@ -11,6 +11,7 @@ Freeze the candidate families, evidence claims, uncertainties, and competing hyp
 ## In scope
 
 - reconcile the material-candidate ledger with the source and study-family ledgers;
+- record the G-LR verdict and landscape-manifest hash, and preserve its `LANDSCAPE_READY`/`LANDSCAPE_INCOMPLETE` boundary;
 - produce one dossier per candidate, including material/process identity, comparator, endpoint, supporting locators, and missing fields;
 - separate measured observations, author interpretations, curator interpretations, and proposed hypotheses;
 - define rival hypotheses and the observations that would distinguish them;
@@ -29,6 +30,7 @@ Exact recipe invention, unverified proportions, physical mixing, hazardous handl
 3. No candidate is promoted from provisional exploration status to validated material status without the human adjudication and lab-safety gates recorded in G-1/G00.
 4. A deterministic replay reconstructs candidate counts and statuses from the frozen ledgers.
 5. The dossier labels all formulation and performance claims as reported, derived, proposed, or unresolved, and any `PROVISIONAL_BEST` label includes its problem definition, utility assumptions, support limits, and uncertainty.
+6. The run records the G-LR verdict and landscape-manifest hash; `LANDSCAPE_INCOMPLETE` cannot be represented as a discovery-grade landscape or hypothesis basis.
 
 ## Expected implementation surface
 

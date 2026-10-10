@@ -10,14 +10,14 @@ The roadmap is stage-gated. G-1 is the only eligible starting goal. The amended 
 G-1 -> verdict-specific G00
           |
           +-- exploration_seedability=EXPLORATION_SEEDABLE
-          |       -> G00 EXPLORATORY_PLATFORM -> GP1 -> GP2 -> GP3 -> GP4
+          |       -> G00 EXPLORATORY_PLATFORM -> G-LR -> GP1 -> GP2 -> GP3 -> GP4
           |                                                    |
           |                                                    +-- G07E deterministic tournament -> G09 exploratory release -> optional G10 -> optional G10R
           |                                                    +-- exploratory-only stop
           |                                                    +-- qualified partner (owner activated) -> GL1 -> GL2
           |
           +-- material candidate plausible + REPLICATION_STUDY_REQUIRED
-          |       -> G00 PRELAB_REPLICATION -> GP1 -> GP2 -> GP3 -> GP4 -> GL1 -> GL2
+          |       -> G00 PRELAB_REPLICATION -> G-LR -> GP1 -> GP2 -> GP3 -> GP4 -> GL1 -> GL2
           |                                      |
           |                                      +-- supported -> GD1 (conditional discovery)
           |                                      +-- narrow / null / inconclusive -> stop or revise
@@ -48,13 +48,13 @@ G-1 -> verdict-specific G00
                                                                       G11
 ```
 
-The diagram after G00 now has an exploratory branch and a lab-dependent branch. `EXPLORATION_SEEDABLE` permits a problem-specific candidate/hypothesis and experiment-ranking work while the overall G-1 audit remains provisional; it does not authorize physical execution, performance claims, or a generalizable predictive model. The pre-lab branch (`GP1`–`GP4`) may create evidence dossiers, hypotheses, study specifications, partner-readiness material, and a cross-question portfolio checkpoint without a lab. `GL1` is the external facility/safety gate; `GL2` requires returned physical results. The discovery branch (`GD1`) is unavailable until GL2 produces reproducible, comparable data. A `REPLICATION_STUDY_REQUIRED` verdict without a material candidate blocks physical planning. `EVIDENCE_SYNTHESIS_ONLY` may proceed through evidence infrastructure but cannot authorize predictive ranking merely by reaching a later goal.
+The diagram after G00 now has an explicit landscape-readiness stage before the exploratory and lab-dependent branches. `EXPLORATION_SEEDABLE` permits bounded candidate work, but discovery-grade hypothesis generation requires G-LR `LANDSCAPE_READY`; `LANDSCAPE_INCOMPLETE` may produce only provisional evidence-gap outputs. The pre-lab branch (`GP1`–`GP4`) may create evidence dossiers, hypotheses, study specifications, partner-readiness material, and a cross-question portfolio checkpoint without a lab, subject to that boundary. `GL1` is the external facility/safety gate; `GL2` requires returned physical results. The discovery branch (`GD1`) is unavailable until GL2 produces reproducible, comparable data. A `REPLICATION_STUDY_REQUIRED` verdict without a material candidate blocks physical planning. `EVIDENCE_SYNTHESIS_ONLY` may proceed through evidence infrastructure but cannot authorize predictive ranking merely by reaching a later goal.
 
 G09 accepts the evidence-gap package, the completed modeling branch, a completed physical-feedback discovery loop from GD1, or the model-free G07E tournament. G10 is not eligible until G09 releases a complete non-agent package. G10 is the closed-world agent ablation; G10R is the optional configured-retrieval extension for lateral research. G11 requires external expert review regardless of whether G10 or G10R executes.
 
 The agent-society progression is deliberate: G07E defines the exploratory typed hypothesis layer, shared-memory permissions, deterministic tournament, and explicitly freezes the focus and promotion layers without models or agents; G07 remains the model-branch equivalent. G09 releases that loop without agents; G10 tests role-biased agents against it under identical evidence and budgets; G10R separately tests configured lawful retrieval for lateral research; G11 reviews any adopted society or retrieval capability before it appears in a lab handoff.
 
-G00 is now a problem-charter gate, not a commercialization, extraction, or agent-provider gate. It ratifies the Roman-concrete context, lawful current-plane data rights, conditional-ranking boundary, no-external-spend rule, and exploration NO-GO semantics. Commercial licensing is deferred to the GP3/G09 release decision; extraction quality thresholds apply only if the G03 branch becomes eligible; LLM/provider choices apply only at G10; and qualified scientist-of-record review is required at GL1/G11 before any physical handoff. Every GP1–GP4 run must load the versioned context and contracts in `docs/protocols/exploration-contracts.md`.
+G00 is now a problem-charter gate, not a commercialization, extraction, or agent-provider gate. It ratifies the Roman-concrete context, lawful current-plane data rights, conditional-ranking boundary, no-external-spend rule, and exploration NO-GO semantics. Commercial licensing is deferred to the GP3/G09 release decision; extraction quality thresholds apply only if the G03 branch becomes eligible; LLM/provider choices apply only at G10; and qualified scientist-of-record review is required at GL1/G11 before any physical handoff. Every G-LR and GP1–GP4 run must load the versioned context and contracts in `docs/protocols/exploration-contracts.md`; GP1 must also record the G-LR verdict and landscape manifest hash.
 
 GP4 is the validated substrate checkpoint. G07E/G09 are the optional internal tournament and release path; GL1 is a separate physical-validation branch and is not automatically activated when GP4 completes. GL1 remains `DEFERRED_NOT_REQUESTED` until the owner explicitly authorizes facility coordination or supplies an attributable qualified facility review. Only an activated GL1 with missing external review is `BLOCKED`.
 
@@ -64,7 +64,8 @@ GP4 is the validated substrate checkpoint. G07E/G09 are the optional internal to
 |---|---|---|---|
 | [G-1](goals/G-1-literature-sufficiency-audit.md) | Determine whether the evidence can seed problem-specific exploration, support synthesis, or justify predictive modeling; exhaust lawful public-copy routes and quantify the value of subscription access | none | `EXPLORATION_SEEDABLE` plus conservative modelability/material verdicts and a public-access/subscription-value register |
 | [G00](goals/G00-charter-and-scaffold.md) | Ratify the reusable substrate, declared problem context, and selected exploration, replication, synthesis, or modeling charter | G-1 `EXPLORATION_SEEDABLE` or complete substantive verdict | approved decision record, context contract, and selected track |
-| [GP1](goals/GP1-candidate-evidence-and-hypothesis-dossier.md) | Convert evidence into a problem-specific candidate dossier and rival-hypothesis matrix | G00 `EXPLORATORY_PLATFORM` or `PRELAB_REPLICATION` | candidate dossier and hypothesis gate |
+| [G-LR](goals/G-LR-landscape-readiness.md) | Establish a bounded, source-located literature landscape and evidence map before discovery-grade hypothesis generation | G00 `EXPLORATORY_PLATFORM` or `PRELAB_REPLICATION` | `LANDSCAPE_READY` or `LANDSCAPE_INCOMPLETE` verdict |
+| [GP1](goals/GP1-candidate-evidence-and-hypothesis-dossier.md) | Convert landscape-ready evidence into a problem-specific candidate dossier and rival-hypothesis matrix | G-LR complete; `LANDSCAPE_READY` for discovery-grade outputs | candidate dossier and hypothesis gate |
 | [GP2](goals/GP2-prelab-experiment-specification.md) | Produce a provisional candidate/experiment ranking and a draft, non-authorizing study specification | GP1 | conditional ranking plus `DRAFT — EXPERT REVIEW REQUIRED` study package |
 | [GP3](goals/GP3-partner-readiness-package.md) | Package a problem-specific experiment portfolio, facility requirements, data contracts, and partner-review questions | GP2 | exploratory portfolio and partner-ready handoff packet |
 | [GP4](goals/GP4-cross-question-portfolio-validation.md) | Validate the reusable problem-card and portfolio substrate across the Roman case and two offline cross-domain fixtures | GP3 | cross-question portfolio validation and explicit no-go/continue decision |
@@ -92,6 +93,7 @@ GP4 is the validated substrate checkpoint. G07E/G09 are the optional internal to
 - G-1 cannot call a paper subscription-blocked until repository, preprint, author-manuscript, thesis/report, open-index, exact-title/DOI, and citation-chain routes are recorded as attempted. Publisher metadata alone is not an access verdict.
 - G-1 must produce a named public-access register separating unavailable papers from unsearched providers and ranking any subscription or document-delivery request by expected decision value. A subscription is deferred when the inaccessible records are only contextual or method-adjacent and cannot plausibly change the gate.
 - Exploratory outputs must remain `PROVISIONAL_BEST`, `HYPOTHESIS`, or `EXPERIMENT_CANDIDATE`; they may not be promoted to validated performance, a recipe, or a generalizable model.
+- G-LR must precede GP1. A `LANDSCAPE_INCOMPLETE` result permits only explicitly provisional evidence-gap and candidate outputs; it cannot authorize discovery-grade hypothesis generation or a claim that the field has been mapped.
 - On G-1 `REPLICATION_STUDY_REQUIRED` with a provisional/confirmed material candidate, G00 may authorize only GP1–GP4. No physical work is authorized until GL1 passes.
 - On G-1 `REPLICATION_STUDY_REQUIRED` without a material candidate, use G00 only to document the evidence gap; do not execute GP2, GL1, GL2, or G01–G10.
 - GL2 must return `SUPPORTED`, `NARROW_USE_CASE`, `INCONCLUSIVE`, or `NOT_REPRODUCED`; only `SUPPORTED` with the ratified data threshold may unlock GD1.
