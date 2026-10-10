@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 from pathlib import Path
 
@@ -11,6 +12,29 @@ try:
     from tools.literature_audit.decision import decide_exploration_seedability, load_candidates
 except ModuleNotFoundError:  # direct script invocation from the repository root
     from decision import decide_exploration_seedability, load_candidates
+
+
+ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_CANDIDATES = ROOT / "data/processed/literature-sufficiency-material-candidates.jsonl"
+DEFAULT_SOURCES = ROOT / "data/manifests/literature-sufficiency-sources.jsonl"
+DEFAULT_FAMILIES = ROOT / "data/processed/literature-sufficiency-study-families.jsonl"
+DEFAULT_SCREENING = ROOT / "data/manifests/literature-sufficiency-screening.csv"
+DEFAULT_HYPOTHESES = ROOT / "data/processed/candidate-hypotheses.jsonl"
+DEFAULT_CONTEXT = ROOT / "docs/protocols/exploration-contracts.md"
+DEFAULT_LANDSCAPE_MAP = ROOT / "data/processed/evidence-landscape.json"
+DEFAULT_LANDSCAPE_RUN = ROOT / "artifacts/goals/G-LR/run.json"
+DEFAULT_OUTPUT = ROOT / "artifacts/goals/GP1/run.json"
+
+
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def display_path(path: Path) -> str:
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        return str(path)
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -32,13 +56,25 @@ def replay(
     candidates_path: Path,
     sources_path: Path,
     hypotheses_path: Path,
-    families_path: Path = Path("data/processed/literature-sufficiency-study-families.jsonl"),
-    screening_path: Path = Path("data/manifests/literature-sufficiency-screening.csv"),
+    families_path: Path = DEFAULT_FAMILIES,
+    screening_path: Path = DEFAULT_SCREENING,
+    landscape_map_path: Path = DEFAULT_LANDSCAPE_MAP,
+    landscape_run_path: Path = DEFAULT_LANDSCAPE_RUN,
+    context_path: Path = DEFAULT_CONTEXT,
 ) -> dict:
     candidates = load_candidates(candidates_path)
     sources = load_jsonl(sources_path)
     families = load_jsonl(families_path)
     hypotheses = load_jsonl(hypotheses_path)
+    landscape_map = json.loads(landscape_map_path.read_text(encoding="utf-8"))
+    landscape_run = json.loads(landscape_run_path.read_text(encoding="utf-8"))
+    if not context_path.exists():
+        raise ValueError(f"missing context contract: {context_path}")
+    landscape_verdict = landscape_map.get("readiness")
+    if landscape_verdict not in {"LANDSCAPE_READY", "LANDSCAPE_INCOMPLETE"}:
+        raise ValueError(f"invalid G-LR readiness verdict: {landscape_verdict}")
+    if landscape_run.get("readiness") != landscape_verdict:
+        raise ValueError("G-LR map/run readiness verdicts do not reconcile")
     with screening_path.open(encoding="utf-8", newline="") as handle:
         screening = list(csv.DictReader(handle))
     candidate_ids = [item["candidate_id"] for item in candidates]
@@ -85,8 +121,29 @@ def replay(
                 {screening_by_record[record_id]["study_family_id"] for record_id in supported_records}
             ),
         }
-    return {
+    result = {
         "protocol_version": "gp1.1-candidate-dossier",
+        "execution_date": landscape_run.get("execution_date"),
+        "replay_command": "python3 tools/literature_audit/gp1_replay.py --write",
+        "inputs": {
+            "candidate_ledger": {"path": display_path(candidates_path), "sha256": sha256(candidates_path)},
+            "source_manifest": {"path": display_path(sources_path), "sha256": sha256(sources_path)},
+            "study_family_ledger": {"path": display_path(families_path), "sha256": sha256(families_path)},
+            "screening_ledger": {"path": display_path(screening_path), "sha256": sha256(screening_path)},
+            "candidate_hypotheses": {"path": display_path(hypotheses_path), "sha256": sha256(hypotheses_path)},
+            "context_contract": {"path": display_path(context_path), "sha256": sha256(context_path)},
+            "landscape_manifest": {"path": display_path(landscape_map_path), "sha256": sha256(landscape_map_path)},
+            "landscape_run": {"path": display_path(landscape_run_path), "sha256": sha256(landscape_run_path)},
+        },
+        "landscape_gate": {
+            "verdict": landscape_verdict,
+            "discovery_grade_authorized": landscape_verdict == "LANDSCAPE_READY",
+            "landscape_manifest_path": str(landscape_map_path.relative_to(ROOT)) if landscape_map_path.is_relative_to(ROOT) else str(landscape_map_path),
+            "landscape_manifest_sha256": sha256(landscape_map_path),
+            "landscape_run_id": landscape_run.get("run_id"),
+            "permitted_outputs": landscape_map.get("permitted_outputs", []),
+            "prohibited_outputs": landscape_map.get("prohibited_outputs", []),
+        },
         "candidate_count": len(candidates),
         "hypothesis_count": len(hypotheses),
         "study_family_count": len(families),
@@ -98,18 +155,47 @@ def replay(
         ),
         "exploration_seedability": seedability,
         "candidate_statuses": statuses,
+        "outputs": {
+            "candidate_hypotheses": {"path": "data/processed/candidate-hypotheses.jsonl", "sha256": sha256(hypotheses_path)},
+            "dossier": "docs/reports/material-candidate-dossier.md",
+            "replay_tool": {"path": "tools/literature_audit/gp1_replay.py", "sha256": sha256(Path(__file__))},
+        },
+        "authority": {
+            "network": "none during replay",
+            "model_calls": "none",
+            "physical_execution": "prohibited",
+            "human_adjudication_before_lab": True,
+        },
     }
+    return result
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--candidate-ledger", type=Path, default=Path("data/processed/literature-sufficiency-material-candidates.jsonl"))
-    parser.add_argument("--sources", type=Path, default=Path("data/manifests/literature-sufficiency-sources.jsonl"))
-    parser.add_argument("--families", type=Path, default=Path("data/processed/literature-sufficiency-study-families.jsonl"))
-    parser.add_argument("--screening", type=Path, default=Path("data/manifests/literature-sufficiency-screening.csv"))
-    parser.add_argument("--hypotheses", type=Path, default=Path("data/processed/candidate-hypotheses.jsonl"))
+    parser.add_argument("--candidate-ledger", type=Path, default=DEFAULT_CANDIDATES)
+    parser.add_argument("--sources", type=Path, default=DEFAULT_SOURCES)
+    parser.add_argument("--families", type=Path, default=DEFAULT_FAMILIES)
+    parser.add_argument("--screening", type=Path, default=DEFAULT_SCREENING)
+    parser.add_argument("--hypotheses", type=Path, default=DEFAULT_HYPOTHESES)
+    parser.add_argument("--landscape-map", type=Path, default=DEFAULT_LANDSCAPE_MAP)
+    parser.add_argument("--landscape-run", type=Path, default=DEFAULT_LANDSCAPE_RUN)
+    parser.add_argument("--context", type=Path, default=DEFAULT_CONTEXT)
+    parser.add_argument("--write", action="store_true")
     args = parser.parse_args()
-    print(json.dumps(replay(args.candidate_ledger, args.sources, args.hypotheses, args.families, args.screening), indent=2, sort_keys=True))
+    result = replay(
+        args.candidate_ledger,
+        args.sources,
+        args.hypotheses,
+        args.families,
+        args.screening,
+        args.landscape_map,
+        args.landscape_run,
+        args.context,
+    )
+    if args.write:
+        DEFAULT_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+        DEFAULT_OUTPUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(result, indent=2, sort_keys=True))
 
 
 if __name__ == "__main__":

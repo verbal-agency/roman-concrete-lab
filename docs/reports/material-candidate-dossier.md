@@ -5,12 +5,12 @@
 
 ## Evidence status
 
-This dossier is a deterministic transformation of the G-1 ledgers. It contains five candidate records, three exploration-seedable candidates (`RC-01`, `RC-04`, `RC-05`), two provisional Tier-A study families (`F001`, `F013`), and zero independent direct replications. All candidate adjudication statuses remain `pending`. These are not validated materials.
+This dossier is a deterministic transformation of the G-1 ledgers bound to the G-LR replay. The current G-LR verdict is `LANDSCAPE_INCOMPLETE` (run `ee1b9bca61df457d`), so it contains five candidate records, three exploration-seedable candidates (`RC-01`, `RC-04`, `RC-05`), two provisional Tier-A study families (`F001`, `F013`), and zero independent direct replications. All candidate adjudication statuses remain `pending`. These are not validated materials or discovery-grade hypotheses.
 
 The replay command is:
 
 ```text
-python3 tools/literature_audit/gp1_replay.py
+python3 tools/literature_audit/gp1_replay.py --write
 ```
 
 It must reproduce the candidate and hypothesis counts recorded in `artifacts/goals/GP1/run.json`.

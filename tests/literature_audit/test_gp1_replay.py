@@ -1,7 +1,7 @@
 import unittest
 from pathlib import Path
 
-from tools.literature_audit.gp1_replay import replay
+from tools.literature_audit.gp1_replay import replay, sha256
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -19,6 +19,13 @@ class GP1ReplayTests(unittest.TestCase):
         self.assertEqual(result["study_family_count"], 24)
         self.assertEqual(result["reconciled_supporting_record_count"], 10)
         self.assertEqual(result["provisional_plausible_candidate_count"], 3)
+        self.assertEqual(result["landscape_gate"]["verdict"], "LANDSCAPE_INCOMPLETE")
+        self.assertFalse(result["landscape_gate"]["discovery_grade_authorized"])
+        self.assertEqual(
+            result["landscape_gate"]["landscape_manifest_sha256"],
+            sha256(ROOT / "data/processed/evidence-landscape.json"),
+        )
+        self.assertTrue(result["landscape_gate"]["landscape_run_id"])
         self.assertEqual(
             result["exploration_seedability"]["seedable_candidate_ids"],
             ["RC-01", "RC-04", "RC-05"],
