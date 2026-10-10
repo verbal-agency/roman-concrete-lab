@@ -4,13 +4,13 @@
 **Dependencies:** none  
 **Advances:** an evidence-backed decision about whether the proposed research program can seed problem-specific exploration and, separately, whether it should become a modeling project, an evidence-synthesis project, or a replication-first project
 
-**Current amendment:** execution uses protocol `g1.2-material-candidate` in `docs/protocols/literature-sufficiency-search.md`. It adds a material-candidate viability pass—separate from modelability—using public repository/thesis indexes, exact-title/DOI searches, archaeological/material-characterization records, technical reports, and citation chains. It explicitly excludes Sci-Hub and other unauthorized access and records subscription databases as access gaps unless authenticated access is supplied.
+**Current amendment:** execution uses protocol `g1.3-public-access-audit` in `docs/protocols/literature-sufficiency-search.md`. It adds a material-candidate viability pass and a mandatory lawful public-access exhaustion pass—separate from modelability—using repository, preprint, author-manuscript, thesis/report, open-index, exact-title/DOI, and citation-chain searches. It explicitly excludes Sci-Hub and other unauthorized access. Subscription value is not assessed until every decision-relevant record has a route-by-route public-copy audit.
 
 ## Objective
 
 Determine (a) whether the reachable evidence can seed bounded, problem-specific exploration; (b) whether a materially specified Roman-concrete candidate can be responsibly handed to a qualified laboratory for a bounded, safe test; and (c) whether the published record contains enough independent, comparable, modern terrestrial hot-mixed quicklime/lime-pozzolan experiments with controlled cracking and functional healing outcomes to justify a model-oriented program proposed in `docs/research_program_v2.md`.
 
-This is the only eligible starting goal. It audits the premise; it does not presume that a model-ready corpus exists.
+This is the only eligible starting goal. It audits the premise and the reachable evidence boundary; it does not presume that a model-ready corpus exists or that publisher access is necessary.
 
 ## Decision question
 
@@ -105,6 +105,7 @@ Required invariants:
 - `docs/protocols/literature-sufficiency-search.md` — frozen search, screening, saturation, and adjudication protocol;
 - `schemas/literature-sufficiency-record.schema.json` — machine-readable record contract;
 - `data/manifests/literature-sufficiency-sources.jsonl` — deduplicated source and retrieval manifest;
+- `data/manifests/literature-sufficiency-access-register.csv` — route-by-route public-copy audit and subscription-value register;
 - `data/manifests/literature-sufficiency-screening.csv` — screening ledger;
 - `data/processed/literature-sufficiency-study-families.jsonl` — family/arm counts and eligibility fields;
 - `data/processed/literature-sufficiency-material-candidates.jsonl` — candidate identity, material evidence, lab-handoff readiness, and provisional candidate verdicts;
@@ -126,6 +127,7 @@ Equivalent paths are allowed only if the goal report records them. Do not create
 - Partial provider failure is recorded per query/source; required-coverage or saturation failure yields `AUDIT_INCOMPLETE`.
 - Budget counters include queries, unique records, full-text assessments, citation waves, optional model calls, and reviewer adjudications.
 - Unsupported formats or unavailable lawful access produce typed reasons, never fabricated metadata or silent exclusion.
+- A `publisher_metadata` record cannot be final: it must either be relabeled with a lawful alternate-copy status or appear in the access register with an exhausted-route record and subscription-value assessment.
 
 ## Authority boundaries
 
@@ -139,7 +141,7 @@ Equivalent paths are allowed only if the goal report records them. Do not create
 
 ## Acceptance criteria
 
-1. The versioned protocol freezes sources, queries, eligibility tiers, independence/arm rules, thresholds, budget, saturation, and adjudication before final screening.
+1. The versioned protocol freezes sources, queries, alternate-copy routes, eligibility tiers, independence/arm rules, thresholds, budget, saturation, and adjudication before final screening.
 2. The source manifest and screening ledger cover every discovered record, use stable deduplication, preserve lawful-access metadata, and contain no unresolved record silently counted as eligible.
 3. Every potential Tier A record receives two independent screening decisions or one decision plus documented expert adjudication; disagreements remain visible.
 4. Publication families, experimental arms, research-group independence, endpoint comparability, numeric-data availability, and core-covariate completeness are counted with exact locators and auditable derivations.
@@ -149,10 +151,14 @@ Equivalent paths are allowed only if the goal report records them. Do not create
 8. The search satisfies the saturation rule within budget. If it does not, the recorded outcome is `AUDIT_INCOMPLETE`; only an independently satisfied exploration-seedability gate may make the exploration-only track eligible.
 9. `artifacts/goals/G-1/report.md` maps criteria 1–8 to files, checks, and results and records every deviation or unresolved limitation.
 10. The material-candidate ledger names each candidate, links its supporting records, separates formulation/material evidence from model-arm eligibility, emits deterministic provisional candidate and exploration-seedability results, and authorizes neither physical execution nor performance claims.
+11. Every decision-relevant record has a route-by-route access-register entry. No record remains `publisher_metadata` without either a discovered lawful copy or a documented exhausted-route result.
+12. Every record still unavailable publicly has a named missing-content field, verified barrier/provider, decision relevance, plausible subscription source, incremental-value rating, and `buy_or_borrow`/`defer`/`do_not_pursue` recommendation.
+13. The report separates (a) evidence absent from the literature, (b) evidence found but not publicly accessible, (c) evidence publicly accessible but not yet extracted, and (d) providers not searched or rate-limited.
 
 ## Stop conditions
 
 - Stop with `AUDIT_INCOMPLETE` if lawful access, reviewer availability, source coverage, protocol integrity, or search budget prevents a defensible audit.
+- Stop with `AUDIT_INCOMPLETE` if any direct, candidate, or otherwise decision-relevant record has not completed the public-access exhaustion pass; do not convert an unsearched publisher page into a subscription recommendation.
 - Stop and amend the goal before continuing if screening reveals that the intervention or primary endpoint cannot be operationally defined as written.
 - Do not begin a substantive model, synthesis, or lab goal until a final G-1 verdict is recorded and the corresponding G00 track is explicitly selected. An exploration-only G00 track may begin from `EXPLORATION_SEEDABLE` while the final G-1 state remains incomplete.
 

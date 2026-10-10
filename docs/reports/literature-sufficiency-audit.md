@@ -1,7 +1,7 @@
 # G-1 literature sufficiency audit report
 
-**Protocol:** `g1.2-material-candidate`
-**Execution date:** 2026-09-27
+**Protocol:** `g1.3-public-access-audit`
+**Execution date:** 2026-10-09
 **Decision questions:** whether the evidence can seed bounded problem-specific exploration; whether a materially specified candidate can be handed to a qualified laboratory; and whether direct literature supports study-grouped estimation of a modern terrestrial hot-mixed quicklime/lime-pozzolan intervention on functional water-transport recovery after controlled cracking.
 
 ## Verdict
@@ -11,11 +11,13 @@
 **Provisional material-candidate finding:** `LAB_CANDIDATE_PLAUSIBLE` for RC-01, RC-04, and RC-05
 **Recorded G-1 state:** `AUDIT_INCOMPLETE` pending qualified human adjudication
 
-The expanded lawful search materially changes the evidence map: it found a second provisional Tier A family, the 2025 Utah State University/Utah Department of Transportation quicklime bridge-deck program. The thesis and final report are one experimental lineage, not two independent replications. The expanded record still contains only two provisional direct families, three conservative direct dose-contrast arms, and zero independent external replications. That remains far below the thresholds for a literature-trained predictive model or experiment ranker, but it is sufficient to seed bounded, problem-specific exploration.
+**Public-access finding:** the lawful alternate-copy audit is complete for all 38 records. Thirty-four records have a public or lawful local copy; four remain `not_located_publicly` (`S09`, `S18`, `S22`, `S38`). No record remains classified only as `publisher_metadata`. Broad subscription purchase is not justified by this run; S22 is the only high-value targeted access candidate.
+
+The rerun preserves the substantive finding: it found a second provisional Tier A family, the 2025 Utah State University/Utah Department of Transportation quicklime bridge-deck program. The thesis and final report are one experimental lineage, not two independent replications. The record still contains only two provisional direct families, three conservative direct dose-contrast arms, and zero independent external replications. That remains far below the thresholds for a literature-trained predictive model or experiment ranker, but it is sufficient to seed bounded, problem-specific exploration.
 
 The amended material-candidate pass reaches a different provisional conclusion. RC-01—modern Roman-inspired quicklime/hot-mix concrete supported by Seymour plus the Utah thesis/report—has enough inspectable material identity, process description, comparator evidence, and functional testing to justify a qualified-lab review as a **candidate**, not an approved experiment. Two additional modern theses (RC-04 and RC-05) provide plausible Roman-inspired quicklime/volcanic-ash formulations with crack-closure or microcrack-occlusion outcomes, but lack through-depth transport measurements. RC-02 (shell-derived quicklime) and RC-03 (hot-mixed lime mortar) remain insufficiently specified for a functional lab handoff. Candidate status is recorded separately from Tier A model-arm status.
 
-The new family is a genuine reason to revise the earlier “one direct family” statement, but not a reason to reverse the predictive-model or physical-validation gates. G-1 remains incomplete because Tier A eligibility, family independence, and the final verdict require qualified human adjudication; Scopus, Web of Science, and ProQuest were access gaps without an authenticated session. The separate exploration gate is open provisionally: G00 may authorize problem-specific GP1–GP4 work, but no physical execution, effectiveness claim, predictive model, or agent framework.
+The new family is a genuine reason to revise the earlier “one direct family” statement, but not a reason to reverse the predictive-model or physical-validation gates. G-1 remains incomplete because Tier A eligibility, family independence, and the final verdict require qualified human adjudication. Scopus, Web of Science, and ProQuest remain provider-coverage gaps, not evidence that named papers are unavailable. The separate exploration gate is open provisionally: G00 may authorize problem-specific GP1–GP4 work, but no physical execution, effectiveness claim, predictive model, or agent framework.
 
 ## Exploration seedability
 
@@ -23,9 +25,21 @@ The candidate ledger contains three provisional seed candidates—RC-01, RC-04, 
 
 ## Coverage and stopping
 
-The amended public/lawful search screened 38 deduplicated records: the original 24 plus 14 records from expanded quicklime/lime-clast, hot-mix, thesis/repository, archaeology, and exact-title/DOI searches. Twenty-seven records received full-text or full-preview assessment. Two additional material-candidate search waves found new candidate formulations and archaeological process evidence but no new provisional Tier A water-flow family. This satisfies the amended public-search saturation rule for the reachable sources, while the report continues to disclose subscription access gaps.
+The rerun covers 38 deduplicated records: the original 24 plus 14 records from expanded quicklime/lime-clast, hot-mix, thesis/repository, archaeology, and exact-title/DOI searches. Twenty-seven records received full-text or full-preview assessment. Every record then received the route-by-route public-copy audit required by `g1.3-public-access-audit`. This corrected the prior classification of S04 and found additional lawful copies for S06, S11, S13, S15, S16, S17, S19, S20, and S21.
 
 Crossref and OpenAlex API discovery returned indexed records. Semantic Scholar's API returned HTTP 429; lawful indexed PDFs/search pages were used as alternate discovery. Repository and publisher pages supplied public copies for the Utah thesis/report, Bath and Sheffield records, and other adjacent studies. No Sci-Hub or equivalent unauthorized source was accessed.
+
+## Public-access audit and subscription assessment
+
+| Access result | Count | Records / interpretation |
+|---|---:|---|
+| Lawful public or local copy available | 34 | Includes open full text, repository copies, accepted manuscripts, preprints, and the existing local copy |
+| Newly located public copies in this rerun | 10 | S04, S06, S11, S13, S15, S16, S17, S19, S20, S21 |
+| Not located publicly after required routes | 4 | S09, S18, S22, S38 |
+| Publisher-metadata-only records remaining | 0 | No final access classification remains unresolved |
+| Provider-coverage gaps | 3 | Scopus, Web of Science, ProQuest; these are database gaps, not named-paper barriers |
+
+The four unavailable records are not equivalent. S09 is an adjacent cement study with a related thesis but no verified canonical copy; S18 is an unrelated crystalline-admixture study; S22 is a potentially useful 2026 natural-hydraulic-lime permeability/healing study; and S38 is a marine dissertation whose repository download is deferred until 2027. The register therefore recommends targeted access only for S22, defers S09, and does not pursue S18 or S38. A broad subscription is not justified by the current marginal value.
 
 ## Deterministic counts
 
@@ -79,9 +93,9 @@ The conservative model conclusion is unchanged: do not build a literature-traine
 ## Limitations and retained uncertainty
 
 - Qualified human adjudication has not been supplied; all potential Tier A records remain `pending` and contribute zero to any final threshold until adjudicated.
-- Scopus, Web of Science, and ProQuest were not accessible without an authenticated subscription session. This is an access limitation, not evidence that those databases contain no additional records.
+- Scopus, Web of Science, and ProQuest were not accessible without an authenticated subscription session. This is a provider-coverage limitation, not evidence that those databases contain no additional records.
 - Semantic Scholar API coverage was rate-limited; indexed lawful results were screened, but complete API recall is not claimed.
-- Several adjacent publisher records remain metadata/abstract-only and cannot count as extractable Tier A arms.
+- Four records remain not located publicly after the frozen route set; their decision relevance and targeted-access value are recorded in `data/manifests/literature-sufficiency-access-register.csv`.
 - The search is a bounded sufficiency audit, not a meta-analysis and not evidence of material superiority.
 
 ## Handoff

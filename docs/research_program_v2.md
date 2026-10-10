@@ -261,7 +261,7 @@ Failure to identify a valid model is a successful negative spike. Mechanistic ou
 
 ## Agent-society plan
 
-The hypothesis layer is independent of the agent layer. G07E defines the model-free exploratory typed hypothesis registry, shared-memory permissions, deterministic tournament, and focus policy; G07 is the equivalent model-branch goal when G06 is eligible. G09 releases that loop without agents. G10 may then test a small society of role-biased agents—evidence skeptic, mechanism proposer, transfer analyst, experimental designer, and safety/provenance reviewer—against the deterministic baseline.
+The hypothesis layer is independent of the agent layer. G07E defines the model-free exploratory typed hypothesis registry, shared-memory permissions, deterministic tournament, and focus policy; G07 is the equivalent model-branch goal when G06 is eligible. G09 releases that loop without agents. G10 then tests a small society of role-biased agents—evidence skeptic, mechanism proposer, transfer analyst, experimental designer, and safety/provenance reviewer—against the deterministic baseline with identical frozen evidence. G10R is a separate optional factorial test of configured lawful retrieval for lateral research; it must not be folded into G10's causal comparison.
 
 Each agent receives the same frozen evidence packet and problem context but may maintain private episodic memory and a declared prior. The shared store has three authority tiers: immutable evidence, typed derived hypotheses, and untrusted episodic/reflection notes. Agents may propose and critique; only the adjudication policy and qualified humans can promote records. A tournament rewards prediction distinctness, counterevidence, provenance, and useful experiment selection—not consensus alone.
 
@@ -277,7 +277,7 @@ Before physical feedback exists, this is a dry, literature/evidence loop. After 
 
 ## Agent evaluation
 
-The agent society is outside the critical path. First release the deterministic research package and exercise it across multiple problem cards. Then compare deterministic and society orchestration with identical:
+The agent society is outside the critical path. First release the deterministic research package and exercise it across multiple problem cards. Then compare deterministic and society orchestration in G10 with identical:
 
 - frozen evidence packets;
 - callable tools;
@@ -285,7 +285,7 @@ The agent society is outside the critical path. First release the deterministic 
 - output schemas;
 - evaluation cases.
 
-Use repeated agent runs. Score extraction/query correctness, unsupported-claim rate, provenance completeness, constraint violations, experiment-ranking quality under a blinded rubric, stability, latency, and cost. Production orchestration proceeds only if the agent meets preregistered thresholds and introduces no safety-critical regression.
+Use repeated agent runs. Score extraction/query correctness, unsupported-claim rate, provenance completeness, constraint violations, experiment-ranking quality under a blinded rubric, stability, latency, and cost. Production orchestration proceeds only if the agent meets preregistered thresholds and introduces no safety-critical regression. G10R may be considered only after that closed-world baseline and must use a separate deterministic retrieval control, source-rights policy, and lateral-hypothesis rubric.
 
 ## Authority and safety boundaries
 

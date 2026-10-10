@@ -13,7 +13,7 @@
     "source_type": {"type": "string", "enum": ["journal", "review", "archaeology", "method", "repository", "repository_journal", "thesis", "government_report", "conference_abstract", "patent", "other"]},
     "retrieval_date": {"type": "string", "format": "date"},
     "locator": {"type": "string", "minLength": 1},
-    "access_class": {"type": "string", "enum": ["open_full_text", "abstract_only", "publisher_metadata", "lawful_local_copy", "inaccessible"]},
+    "access_class": {"type": "string", "enum": ["open_full_text", "public_preprint", "public_author_manuscript", "public_repository_copy", "public_thesis_report", "abstract_only", "publisher_metadata", "lawful_local_copy", "subscription_only_verified", "not_located_publicly", "rights_blocked", "provider_unsearched", "provider_rate_limited", "inaccessible"]},
     "screening": {
       "type": "object",
       "required": ["stage", "decision", "reason", "reviewer_a", "reviewer_b_or_adjudicator"],

@@ -1,7 +1,7 @@
 # G10 — Evaluate bounded agentic orchestration
 
-**Status:** proposed and optional  
-**Dependencies:** G09 complete  
+**Status:** proposed and optional
+**Dependencies:** G09 complete
 **Advances:** answers whether a bounded agent society improves the frozen workflow rather than assuming that multiple agents, shared memory, or hypothesis competition add value
 
 ## Objective
@@ -27,7 +27,7 @@ Build the smallest bounded agent-society prototype necessary for a fair factoria
 
 ## Excluded
 
-Open-web autonomy, arbitrary code execution, changing scientific records without review, giving the agent extra evidence/tools, production LangGraph adoption before the verdict, and tuning on the sealed evaluation cases.
+Open-world retrieval, arbitrary code execution, changing scientific records without review, giving the agent extra evidence/tools, production LangGraph adoption before the verdict, and tuning on the sealed evaluation cases. Open-world lateral research is a separate optional G10R goal.
 
 ## Required state machine
 

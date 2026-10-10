@@ -1,12 +1,18 @@
 # G-1 literature sufficiency search protocol
 
-**Protocol version:** `g1.2-material-candidate`
-**Amended/frozen:** 2026-09-27  
+**Protocol version:** `g1.3-public-access-audit`
+**Amended/frozen:** 2026-10-09
 **Decision questions:** (1) whether the evidence can seed bounded, problem-specific exploration; (2) whether inspectable evidence supports handing a materially specified Roman-concrete candidate to a qualified laboratory; and (3) separately, whether direct evidence supports study-grouped estimation of a modern terrestrial hot-mixed quicklime/lime-pozzolan intervention on functional water-transport recovery after controlled cracking.
 
-## Search coverage
+## Search coverage and public-access audit
 
-The audit uses read-only discovery from Crossref, OpenAlex, Semantic Scholar, CORE/OpenAIRE/repository indexes when available, publisher/repository pages, theses/dissertations that are lawfully accessible, and backward/forward citation chaining. Scopus, Web of Science, ProQuest, and institutional library search are recorded as access-gap sources unless the user supplies lawful authenticated access. No paywall, authentication, robots, rate-limit, or copyright bypass is permitted. Sci-Hub and equivalent unauthorized copies are explicitly excluded.
+The audit uses read-only discovery from Crossref, OpenAlex, Semantic Scholar, Unpaywall or equivalent open-access indexes when available, CORE/OpenAIRE/repository indexes, publisher and repository pages, theses/dissertations, author or institutional pages, preprint servers, technical-report collections, and backward/forward citation chaining. Scopus, Web of Science, ProQuest, and institutional library search are recorded as provider-coverage gaps unless the user supplies lawful authenticated access. No paywall, authentication, robots, rate-limit, or copyright bypass is permitted. Sci-Hub and equivalent unauthorized copies are explicitly excluded.
+
+This amendment adds a mandatory **public-access exhaustion pass**. A publisher metadata result is not evidence that a paper is unavailable publicly. For every included, potentially eligible, direct-adjacent, or decision-relevant record, search the canonical title, DOI, author/year, and distinctive title phrases across (1) institutional repositories, (2) author/lab pages, (3) preprint and working-paper servers, (4) thesis/report repositories, (5) open-access indexes and library catalogues, and (6) exact-title web results. Record every attempted route, URL, retrieval date, version relationship, license/access statement, and outcome in `data/manifests/literature-sufficiency-access-register.csv`.
+
+Only after those routes are exhausted may a record be classified as `not_located_publicly`, `subscription_only_verified`, `rights_blocked`, or `provider_unsearched`. `publisher_metadata` is an interim observation, not a final access status. A lawful preprint, author manuscript, repository copy, thesis chapter, or government report may be used for screening and extraction when its relationship to the canonical publication is recorded; it must not be silently treated as the published version.
+
+The access audit has two outputs: (a) a public evidence corpus with version/provenance labels and (b) a named subscription-value register identifying what remains unavailable, why it matters, what source would provide it, and the expected decision value of obtaining access. The audit must not recommend a subscription merely because a publisher page is paywalled.
 
 The amended material-candidate pass searches four evidence streams separately: modern experiments; archaeological/residue/material-characterization evidence; theses, reports, proceedings, and patents that expose material identity or process constraints; and citation/author chains. A paper may establish that a candidate exists without qualifying as a Tier A model arm.
 
@@ -57,7 +63,28 @@ The gate authorizes only problem-specific evidence mapping, rival-hypothesis gen
 
 Amended expansion limits: 500 deduplicated records, 120 full-text/preview assessments, and four complete citation-chaining waves across the expanded source families. A budget limit reached before saturation produces `AUDIT_INCOMPLETE`. The expansion is a public/lawful-access search, not a claim of subscription-database exhaustiveness.
 
-Saturation requires two successive waves adding no new Tier A family and fewer than 5% new potentially eligible records relative to the prior screened unique-record total. The report must state which public providers were reachable, which subscription sources were access gaps, and whether any early stopping rule was invoked.
+Saturation requires two successive waves adding no new Tier A family and fewer than 5% new potentially eligible records relative to the prior screened unique-record total. The public-access exhaustion pass is complete only when every decision-relevant record has a recorded route-by-route outcome and no `publisher_metadata` record remains unaudited. The report must state which public providers were reachable, which records remain unavailable publicly, which subscription sources were provider-coverage gaps, and whether any early stopping rule was invoked.
+
+## Access-status and subscription-value rules
+
+Use these final access statuses in the access register:
+
+- `public_full_text`, `public_preprint`, `public_author_manuscript`, `public_repository_copy`, or `public_thesis_report` when a lawful inspectable copy is reachable;
+- `metadata_only_pending_audit` while alternate-copy searches remain incomplete;
+- `subscription_only_verified` only when the publisher/library barrier is confirmed after the required alternate-copy routes;
+- `not_located_publicly` when the work is bibliographically verified but no lawful public copy is found after the frozen search routes;
+- `rights_blocked` when a copy is located but cannot lawfully be retained or inspected under the available terms;
+- `provider_unsearched` or `provider_rate_limited` when a named discovery provider was not reachable.
+
+For every non-public record, assign:
+
+- `decision_relevance`: `direct_tier_a`, `candidate`, `transfer_method`, `context_only`, or `low`;
+- `missing_content`: the exact methods, tables, figures, supplements, or covariates that cannot be inspected;
+- `subscription_source`: the database, publisher package, or institutional service that would plausibly unlock it;
+- `incremental_value`: `high`, `medium`, `low`, or `none`, with a one-sentence rationale;
+- `subscription_priority`: `buy_or_borrow`, `defer`, or `do_not_pursue`.
+
+`buy_or_borrow` requires both high decision relevance and a credible expectation that access could change a G-1 verdict, candidate status, study-family count, extractable-arm count, or experimental design. A review or adjacent paper cannot receive high priority solely because it is inaccessible.
 
 ## Decision thresholds
 

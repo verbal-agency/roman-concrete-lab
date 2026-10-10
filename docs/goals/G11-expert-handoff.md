@@ -1,7 +1,7 @@
 # G11 — Complete expert review and issue the laboratory handoff
 
-**Status:** proposed  
-**Dependencies:** G09 complete; G10 only if its agent output is included  
+**Status:** proposed
+**Dependencies:** G09 complete; G10/G10R only if their agent or retrieval output is included
 **Advances:** converts the pre-lab package into an externally reviewable physical-validation proposal
 
 ## Objective
@@ -15,7 +15,7 @@ Submit the candidate experiment package to qualified materials-science and labor
 - traceable comments and dispositions: accepted, revised, rejected, or unresolved;
 - revised protocol/version and change impact on rankings/hypotheses;
 - release status and explicit claim boundary;
-- if G10 adopts any agent-society task: shared-memory permissions, hypothesis-tournament logs, focus-policy limits, model/provider identity, and human override boundaries;
+- if G10 or G10R adopts any agent-society or retrieval task: shared-memory permissions, hypothesis-tournament logs, focus/retrieval-policy limits, model/provider/source-policy identity, and human override boundaries;
 - a machine-readable handoff manifest for later physical results.
 
 ## Excluded

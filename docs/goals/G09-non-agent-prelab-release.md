@@ -1,6 +1,6 @@
 # G09 — Release the non-agent pre-lab research package
 
-**Status:** proposed  
+**Status:** complete
 **Dependencies:** G05A complete, G08 complete, GD1 complete, or G07E complete
 **Advances:** delivers the program's scientific result and the reusable context/memory/hypothesis substrate before any agent is credited
 

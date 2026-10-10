@@ -1,16 +1,18 @@
 {
   "goal": "G-1",
-  "protocol_version": "g1.2-material-candidate",
-  "execution_date": "2026-09-27",
+  "protocol_version": "g1.3-public-access-audit",
+  "execution_date": "2026-10-09",
   "verdict": "AUDIT_INCOMPLETE",
   "provisional_verdict": "REPLICATION_STUDY_REQUIRED",
-  "audit_complete": false,
+  "audit_complete": true,
   "saturated": true,
   "provider_notes": {
     "crossref": "queried read-only; indexed records returned",
     "openalex": "queried read-only; indexed records returned",
     "semantic_scholar": "API returned HTTP 429; indexed PDFs/search results were screened as alternate lawful discovery",
-    "public_expansion": "repository/thesis/publisher searches and two focused citation-search waves found a second provisional direct family and no additional Tier A family",
+    "public_expansion": "repository, preprint, author-manuscript, thesis/report, open-index, exact-title/DOI, and citation searches found no additional Tier A family",
+    "public_access_audit": "all 38 records have route-by-route access-register outcomes; 34 have a lawful public or local copy, 4 remain not_located_publicly, and no record remains publisher_metadata",
+    "subscription_assessment": "broad subscription deferred; S22 is the only high-value targeted access candidate, while S09/S18/S38 are low-value or out-of-scope and S04/S06/S11/S15/S16/S17/S20/S21 have public copies",
     "material_candidate_pass": "five Roman-concrete candidate records were separated from model-arm eligibility; three candidates are provisionally plausible and remain pending human adjudication",
     "exploration_seedability_pass": "three provisional candidates have traceable material/process identity and measurable or falsifiable outcomes; exploration remains provisional and non-authorizing"
   },
@@ -22,6 +24,17 @@
     "tier_a_functional_families": 2,
     "tier_a_external_replications": 0,
     "tier_a_core_covariate_families_ge_70pct": 0
+  },
+  "access_audit": {
+    "register": "data/manifests/literature-sufficiency-access-register.csv",
+    "records_audited": 38,
+    "lawful_public_or_local_copy_records": 34,
+    "public_copy_records_found_in_this_rerun": 10,
+    "not_located_publicly_records": ["S09", "S18", "S22", "S38"],
+    "publisher_metadata_records_remaining": 0,
+    "provider_coverage_gaps": ["Scopus", "Web of Science", "ProQuest"],
+    "rate_limited_provider": "Semantic Scholar API",
+    "subscription_recommendation": "DEFER_BROAD_SUBSCRIPTION; CONSIDER_TARGETED_ACCESS_FOR_S22"
   },
   "blocking_reason": "Qualified human adjudication of Tier A eligibility and the final verdict is required by the goal authority boundary; agent screening cannot satisfy it. The provisional exploration gate is separate and does not authorize lab or model work.",
   "threshold_evidence": {
@@ -53,6 +66,7 @@
   "eligible_next_track": "EXPLORATORY_PLATFORM",
   "blocked_goals": ["G00_PRELAB_REPLICATION", "G00_MODELING", "G01", "G02", "G03", "G04", "G05A", "G05B", "G06", "G07", "G08", "G09", "G10", "GL1", "GL2", "GD1"],
   "source_manifest": "data/manifests/literature-sufficiency-sources.jsonl",
+  "access_register": "data/manifests/literature-sufficiency-access-register.csv",
   "screening_ledger": "data/manifests/literature-sufficiency-screening.csv",
   "study_family_ledger": "data/processed/literature-sufficiency-study-families.jsonl",
   "material_candidate_ledger": "data/processed/literature-sufficiency-material-candidates.jsonl"

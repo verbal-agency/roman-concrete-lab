@@ -1,0 +1,38 @@
+{
+  "goal": "G09",
+  "protocol_version": "g09.1",
+  "execution_date": "2026-09-30",
+  "release_mode": "EXPLORATORY_PLATFORM",
+  "source_branch": "GP4/G07E",
+  "build_command": "PYTHONPATH=src python3 -m roman_concrete_lab.release.build --version 2026-09-30-exploratory-platform --output artifacts/releases/2026-09-30-exploratory-platform",
+  "release_manifest": {
+    "path": "artifacts/releases/2026-09-30-exploratory-platform/manifest.json",
+    "sha256": "d179e419734f94fe17c22784767f3cb339d454125e8f0c68b9a628236b3c29e5"
+  },
+  "artifact_count": 8,
+  "artifact_hashes": {
+    "claims.json": "8f704085bd6cccac4ac85270ef25428a1ac0e0468cfcbc2eac7ea2b432686ac9",
+    "release.json": "23481fb5cedbbf0fbf99ded03a37a4af9f9b5e5e84ad73d5b1aefd65ddbf9045",
+    "report.md": "7edc150c1e9ef77c019e55d73532cf2860a734d7025dbf50a85b5f5c5aad9584",
+    "reproduction.json": "dbc6cc4f9ccbf475baf5233ce22bb25972726f0e8f2c93328872721b9747a9e2",
+    "rights.json": "598c250f3bf929b13bc7974db1b6e325695b2853adeace353e41963d10e26c69",
+    "security-scan.json": "49324d9bf6e37161cb33c3be2d5c266a4c402cb4fee2c761f4fbaf20bf43f413",
+    "software-bill-of-materials.json": "8193e1d931bdde7be123231dbf29bc7411029d5466e9266574ecd11607b9161b",
+    "tournament-replay.json": "cf0f2110421a944ea23327caa61f32cbe64773084c900642527a835c09b1215e"
+  },
+  "verification": {
+    "pytest": "29 passed",
+    "clean_reproduction": true,
+    "claim_lint": "PASS",
+    "rights_scan": "PASS",
+    "security_scan": "PASS",
+    "runtime_dependencies": {"network": false, "database": false, "llm": false, "agent": false}
+  },
+  "authority": {
+    "network": "none",
+    "model_calls": "none",
+    "agent_runtime": "prohibited",
+    "lab_execution": "prohibited",
+    "external_communication": "prohibited"
+  }
+}
