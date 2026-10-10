@@ -1,6 +1,6 @@
 # G-LR — Landscape and evidence-map readiness
 
-**Status:** proposed  
+**Status:** complete
 **Dependencies:** G00 `EXPLORATORY_PLATFORM` or `PRELAB_REPLICATION`  
 **Advances:** establishes whether the accessible evidence landscape is sufficiently mapped for discovery-grade hypothesis generation
 
@@ -42,6 +42,27 @@ Predictive modeling, recipe invention, physical mixing, safety approval, partner
 ## Expected implementation surface
 
 `data/manifests/landscape-sources.*`, `data/processed/evidence-landscape.*`, `docs/protocols/landscape-readiness.md`, `docs/reports/landscape-readiness.md`, `artifacts/goals/G-LR/`, and focused tests under `tests/landscape/`.
+
+## Execution contract
+
+The canonical landscape-source record contains `record_id`, canonical citation, source locator, access/version state, screening decision, study-family ID, independence/lineage state, exact evidence locator, extracted-field status, missing fields, contradiction IDs, reviewer state, and provenance. The evidence-map record contains `map_version`, problem-card version, source/family IDs, field states, coverage counts, missingness, contradiction references, and support-region labels. The only readiness statuses are `LANDSCAPE_READY` and `LANDSCAPE_INCOMPLETE`.
+
+Illegal states include duplicate record IDs, a screening or family reference to an unknown source, a direct claim without an exact locator, a missing-field value silently represented as zero, a contradiction silently merged, or a `LANDSCAPE_READY` verdict with unresolved required checks. A source candidate cannot become immutable evidence through this goal.
+
+| Condition | Required result |
+|---|---|
+| duplicate source or family ID | deterministic validation error; no output snapshot |
+| unknown source/family reference | deterministic validation error naming the reference |
+| metadata-only or unavailable direct record | retain manifest row; mark `EVIDENCE_PENDING`/missing fields; readiness cannot pass |
+| contradictory field values | preserve both assertions and emit a contradiction reference; do not merge |
+| rights-blocked or restricted source | retain provenance and access state; do not retain unauthorized content |
+| changed input hash or protocol version | invalidate prior replay and require a new run ID |
+| network unavailable during replay | `NETWORK_UNAVAILABLE` only for retrieval mode; frozen replay remains offline and deterministic |
+| saturation, extraction, or review requirement unmet | `LANDSCAPE_INCOMPLETE` with named blockers |
+
+The goal permits read-only repository access and lawful read-only retrieval only under the frozen protocol. It permits no credentials, model calls, agent society, external messages, physical execution, safety approval, or promotion authority. Offline fixtures under `fixtures/landscape/` cover complete, partial, duplicate, contradictory, malformed, restricted, unsupported-transfer, and budget-exhaustion cases. Replay must be idempotent, checkpointable, hash-validated, and byte-stable for unchanged inputs.
+
+Criterion-to-evidence mapping is recorded in `artifacts/goals/G-LR/report.md`; focused tests live in `tests/landscape/test_replay.py` and validate schema/lineage checks, missingness and contradiction preservation, readiness transitions, input invalidation, and deterministic replay.
 
 ## Authority boundaries
 

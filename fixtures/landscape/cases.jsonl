@@ -1,0 +1,8 @@
+{"case_id":"complete_ready","expected_readiness":"LANDSCAPE_READY","status":"pass"}
+{"case_id":"partial_access","expected_readiness":"LANDSCAPE_INCOMPLETE","status":"retain_with_missingness"}
+{"case_id":"duplicate_source_id","expected_error":"duplicate record_id","status":"reject"}
+{"case_id":"contradictory_field_values","expected_action":"preserve_both_and_emit_contradiction_ref","status":"retain_with_contradiction"}
+{"case_id":"malformed_record","expected_error":"invalid JSON or missing key","status":"reject"}
+{"case_id":"rights_restricted","expected_readiness":"LANDSCAPE_INCOMPLETE","status":"retain_provenance_only"}
+{"case_id":"unsupported_transfer","expected_readiness":"LANDSCAPE_INCOMPLETE","status":"retain_as_transfer"}
+{"case_id":"budget_exhaustion","expected_readiness":"LANDSCAPE_INCOMPLETE","status":"stop"}

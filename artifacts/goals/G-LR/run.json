@@ -1,0 +1,75 @@
+{
+  "blockers": [
+    "route-level access register covers 14/38 source records",
+    "source content/version hashes are absent for one or more records",
+    "critical evidence fields remain normalized as UNRESOLVED rather than source-located extraction",
+    "2 Tier-A study families remain pending adjudication",
+    "no explicit contradiction ledger is present",
+    "38 screening rows remain pending human adjudication"
+  ],
+  "checks": {
+    "content_hashes_complete": false,
+    "contradiction_map_complete": false,
+    "critical_field_extraction_complete": false,
+    "family_references_reconciled": true,
+    "lineage_adjudication_complete": false,
+    "protocol_frozen": true,
+    "route_audit_complete": false,
+    "saturation_evidence_recorded": true,
+    "scientific_adjudication_complete": false,
+    "second_review_sample_complete": true,
+    "source_access_state_visible": true,
+    "source_screening_reconciled": true
+  },
+  "counts": {
+    "access_register_count": 14,
+    "candidate_count": 5,
+    "route_audit_coverage": 0.3684210526315789,
+    "screening_count": 38,
+    "source_count": 38,
+    "study_family_count": 24
+  },
+  "execution_date": "2026-10-09",
+  "goal": "G-LR",
+  "inputs": {
+    "access_register": {
+      "path": "data/manifests/literature-sufficiency-access-register.csv",
+      "sha256": "25f16ab1f02f08d2ea29aed58020fbd8902749c236bfeb623257cc187aca1428"
+    },
+    "candidates": {
+      "path": "data/processed/literature-sufficiency-material-candidates.jsonl",
+      "sha256": "1e0ed125eaed1229df4e8d7b955489f63e9176a835bbe17866177888173ac5c8"
+    },
+    "families": {
+      "path": "data/processed/literature-sufficiency-study-families.jsonl",
+      "sha256": "e2a43a94424834d26861ba69d749c3ac4ca514ee5599decb6af4d0cd491ebaac"
+    },
+    "g1_decision": {
+      "path": "artifacts/goals/G-1/decision.json",
+      "sha256": "1ab5f018dc8bd64a084b4a43c1d2218bfaca6d39461e5d209460bdd7f13c5734"
+    },
+    "protocol": {
+      "path": "docs/protocols/landscape-readiness.md",
+      "sha256": "2edded7c53dd0f0eb18e96a94864a1d0f6b5cd53d982eee7a65b0caee15412bc"
+    },
+    "screening": {
+      "path": "data/manifests/literature-sufficiency-screening.csv",
+      "sha256": "b56e1685328c78f49db804e06f74d7c622bfc09b29f323c7c57b37b3257478d6"
+    },
+    "sources": {
+      "path": "data/manifests/literature-sufficiency-sources.jsonl",
+      "sha256": "a9a1567bc3b760a4624b113d3f1622c228350b2cc2ff55154f410c344a4c33d9"
+    }
+  },
+  "model_calls": "none",
+  "network": "none during replay",
+  "outputs": {
+    "evidence_map": "data/processed/evidence-landscape.json",
+    "landscape_sources": "data/manifests/landscape-sources.jsonl",
+    "second_review": "data/manifests/landscape-second-review.json"
+  },
+  "physical_execution": "prohibited",
+  "protocol_version": "glr.1-landscape-map",
+  "readiness": "LANDSCAPE_INCOMPLETE",
+  "run_id": "ee1b9bca61df457d"
+}
