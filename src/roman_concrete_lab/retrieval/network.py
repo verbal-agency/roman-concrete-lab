@@ -283,8 +283,11 @@ class ConfiguredNetworkRetrievalAdapter:
         }
 
     def fetch_public_text(self, locator: str) -> dict[str, Any]:
-        final_url, content_type, payload = self._get(locator, fetch_content=True)
-        self.budget.debit(payload_bytes=len(payload))
+        response = self.fetch_public_payload(locator)
+        final_url = response["locator"]
+        content_type = response["content_type"]
+        payload = response["payload"]
+
         policy = self.policy.record["request_policy"]
         if content_type == "application/pdf":
             try:
@@ -325,4 +328,15 @@ class ConfiguredNetworkRetrievalAdapter:
                 "text_characters": len(text[:12_000]),
                 "status": "PARTIAL",
             }],
+        }
+
+    def fetch_public_payload(self, locator: str) -> dict[str, Any]:
+        """Return a permitted payload to a caller that owns an ignored raw cache."""
+        final_url, content_type, payload = self._get(locator, fetch_content=True)
+        self.budget.debit(payload_bytes=len(payload))
+        return {
+            "locator": final_url,
+            "content_type": content_type,
+            "payload_bytes": len(payload),
+            "payload": payload,
         }

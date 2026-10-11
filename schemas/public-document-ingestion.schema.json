@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "public-document-ingestion.schema.json",
+  "title": "PublicDocumentIngestionRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "record_id", "source_record_id", "source_locator",
+    "document_locator", "access_class", "rights_state", "content_hash",
+    "parser", "page_count", "extraction_status", "raw_cache_key", "route_ids", "route_attempts",
+    "ingestion_status", "review_status", "selected_pages", "failure_detail"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "record_id": {"type": "string", "pattern": "^PDI-[A-Za-z0-9_-]+$"},
+    "source_record_id": {"type": "string", "minLength": 1},
+    "source_locator": {"type": "string", "format": "uri"},
+    "document_locator": {"type": ["string", "null"]},
+    "access_class": {"const": "PUBLIC"},
+    "rights_state": {"enum": ["PERMITTED", "METADATA_ONLY", "BLOCKED"]},
+    "content_hash": {"type": ["string", "null"], "pattern": "^sha256:[0-9a-f]{64}$"},
+    "parser": {"type": ["string", "null"]},
+    "page_count": {"type": "integer", "minimum": 0},
+    "extraction_status": {"enum": ["EXTRACTED", "PARTIAL", "OCR_REQUIRED", "NOT_ATTEMPTED"]},
+    "raw_cache_key": {"type": ["string", "null"]},
+    "route_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "format": "uri"}},
+    "route_attempts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["locator", "status", "detail"],
+        "properties": {
+          "locator": {"type": "string", "format": "uri"},
+          "status": {"enum": ["PDF_RETRIEVED", "PUBLIC_LANDING_NO_PDF", "PUBLIC_LANDING_AMBIGUOUS", "RIGHTS_BLOCKED", "FETCH_FAILED", "MALFORMED_DOCUMENT"]},
+          "detail": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "ingestion_status": {
+      "enum": [
+        "INGESTED", "DUPLICATE_CONTENT", "OCR_REQUIRED", "FETCH_FAILED", "RIGHTS_BLOCKED",
+        "MALFORMED_DOCUMENT", "PUBLIC_LANDING_NO_PDF", "PUBLIC_LANDING_AMBIGUOUS", "OUT_OF_SCOPE"
+      ]
+    },
+    "review_status": {"enum": ["PENDING_HUMAN_REVIEW", "NOT_READY_FOR_REVIEW", "OUT_OF_SCOPE"]},
+    "selected_pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["page_number", "locator", "text_hash", "excerpt_text_hash"],
+        "properties": {
+          "page_number": {"type": "integer", "minimum": 1},
+          "locator": {"type": "string"},
+          "text_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+          "excerpt_text_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "failure_detail": {"type": ["string", "null"]},
+    "canonical_record_id": {"type": ["string", "null"]}
+  }
+}

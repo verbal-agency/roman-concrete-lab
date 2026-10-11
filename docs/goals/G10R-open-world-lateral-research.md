@@ -1,7 +1,7 @@
 # G10R — Bounded active-investigation society pilot
 
 **Status:** in progress
-**Dependencies:** G09 complete; G10B complete with any verdict; explicit owner activation of the frozen lawful source policy and Phase B network/model execution
+**Dependencies:** G09 complete; G10B complete with any verdict; G-LI complete; explicit owner activation of the frozen lawful source policy and Phase B network/model execution
 **Advances:** tests whether a branch-specialized society adds value when investigators can acquire different information or invoke declared simulation tools under the same aggregate budget as one tool-using investigator
 
 ## Why this goal exists
