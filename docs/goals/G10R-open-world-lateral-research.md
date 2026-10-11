@@ -1,14 +1,14 @@
 # G10R — Bounded active-investigation society pilot
 
 **Status:** in progress
-**Dependencies:** G09 complete; G10B complete with any verdict; G-LI complete; explicit owner activation of the frozen lawful source policy and Phase B network/model execution
+**Dependencies:** G09 complete; G10B complete with any verdict; G-LI complete; G10M complete; explicit owner activation of the frozen lawful source policy and Phase B network/model execution
 **Advances:** tests whether a branch-specialized society adds value when investigators can acquire different information or invoke declared simulation tools under the same aggregate budget as one tool-using investigator
 
 ## Why this goal exists
 
 G10B tested several roles against one strong analyst using the same frozen packet and no tools. The roles produced distinguishable text, but C1 and C4-lite tied at 19/20 and the society added no supported prediction or discriminator. That result does not estimate the value of coordinated search: every role started with the same information and could only rewrite or reinterpret it.
 
-G10R tests a different causal hypothesis. A society may be useful when the bottleneck is allocating investigation across competing branches, not synthesizing a fixed packet. The society must therefore perform asymmetric work—different queries, sources, contradiction checks, or declared simulations—and earn credit only for a valid contribution the same-budget single investigator missed. Discourse, persona variation, consensus, and source volume alone receive no credit.
+G10R tests a different causal hypothesis. A society may be useful when the bottleneck is allocating investigation across competing mechanisms and evidence frontiers, not synthesizing a fixed packet. The amended society therefore performs asymmetric work through mechanism proponents plus structural auditors—different queries, sources, contradiction checks, or declared simulations—and earns credit only for a valid contribution the same-budget single investigator missed. Discourse, persona variation, consensus, mechanism advocacy, and source volume alone receive no credit. G10M must complete the offline design gate before Phase B; the current G10R Phase-A artifact remains a valid baseline freeze but does not authorize live execution of the superseded A2 treatment.
 
 ### Phase-A amendment: live source identity
 

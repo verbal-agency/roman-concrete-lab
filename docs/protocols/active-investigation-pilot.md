@@ -4,6 +4,8 @@
 
 G10R compares one tool-using investigator (A1) with three protected investigation branches plus deterministic focus and bounded adjudication (A2). A0 is a recorded-fixture control for policy, replay, and scoring plumbing. The comparison asks whether society structure improves information acquisition under equal aggregate resources; it does not retest closed-world discourse quality.
 
+This `g10r.3` document records the baseline structural-branch freeze and remains useful for Phase-A provenance and regression tests. It is not Phase-B authorization: G10M must first replace A2 with the mechanism-proponent plus structural-auditor design, issue a new protocol version and manifest, and pass its offline acceptance criteria.
+
 ## Frozen treatments
 
 A1 and A2 receive identical base packets, problem context, model (`gpt-6-luna`), reasoning policy (`low`), source policy, retrieval/simulation adapters, schemas, stopping conditions, and aggregate per-case budgets: 12 queries, two rounds, 24 retained candidates, 5 MB permitted payload, 4 declared simulation calls, 80,000 input tokens, and 7,200 output tokens. Phase B has a proposed $25 total external-spend cap and cannot start until the owner reviews the Phase A manifest and activates the frozen network/model policy.
