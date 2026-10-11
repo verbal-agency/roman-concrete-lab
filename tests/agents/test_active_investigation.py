@@ -19,7 +19,9 @@ from src.roman_concrete_lab.agents.investigation import (
     run_phase_b,
     schema,
     score_portfolio,
+    source_identity_map,
     source_policy,
+    validate_source_identity_map,
     validate_paper_evidence_card,
 )
 from src.roman_concrete_lab.retrieval import (
@@ -171,6 +173,37 @@ class ActiveInvestigationTests(unittest.TestCase):
         self.assertFalse(result["manifest"]["model_policy"]["store"])
         self.assertLess(result["activation_request"]["maximum_estimated_model_cost_usd"], 1.0)
         self.assertEqual(result["activation_request"]["hard_total_external_spend_cap_usd"], 25.0)
+        self.assertTrue(result["identity_preflight"]["passes"])
+
+    def test_live_metadata_identity_is_canonicalized_only_at_blinded_scoring(self):
+        case = next(item for item in load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl") if item["case_id"] == "S-ACTIVE-TRANSFER")
+        candidate_id = "OA-W-LIVE-TRANSFER"
+        output = portfolio(case["case_id"], candidate_id)
+        candidate = {
+            "source_candidate_id": candidate_id,
+            "deduplication_key": "doi:10.24191/scl.v20i2.10259",
+            "locator": "https://api.openalex.org/works/W-LIVE-TRANSFER",
+            "content_locator": "https://journal.uitm.edu.my/index.php/ScL/article/view/10259",
+            "title": "Self-Healing Effects of Silica Fume and Quicklime on Microcracks in Cement-Based Materials",
+        }
+        score = score_portfolio(
+            case,
+            output,
+            candidate_records={candidate_id: candidate},
+            identity_map=source_identity_map(),
+        )
+        self.assertGreaterEqual(score["score"], 5)
+        self.assertEqual(score["invalid_source_candidate_ids"], [])
+        self.assertEqual(score["cited_source_candidate_ids"], ["SRC-S30-QUICKLIME"])
+        self.assertEqual(score["raw_cited_source_candidate_ids"], [candidate_id])
+
+    def test_identity_map_rejects_missing_expected_entry(self):
+        cases = load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl")
+        sources = load_jsonl(ROOT / "fixtures/investigation/recorded-sources.jsonl")
+        identities = source_identity_map()
+        del identities["entries"]["SRC-S16-SIM"]
+        with self.assertRaisesRegex(ValueError, "missing expected IDs"):
+            validate_source_identity_map(identities, recorded_sources=sources, cases=cases)
 
     def test_hidden_rubric_and_information_need_are_not_sent(self):
         case = load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl")[0]

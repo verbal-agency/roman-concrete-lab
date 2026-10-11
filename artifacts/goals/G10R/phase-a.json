@@ -103,6 +103,7 @@
         "max_score": 6,
         "negative_search_count": 0,
         "provenance_completeness": 1.0,
+        "raw_cited_source_candidate_ids": [],
         "rubric_hits": [
           {
             "criterion_id": "find_lineage_sources",
@@ -142,6 +143,7 @@
           }
         ],
         "score": 0,
+        "source_identity_aliases": {},
         "supported_contribution_digests": []
       }
     },
@@ -171,6 +173,7 @@
         "max_score": 6,
         "negative_search_count": 0,
         "provenance_completeness": 1.0,
+        "raw_cited_source_candidate_ids": [],
         "rubric_hits": [
           {
             "criterion_id": "find_public_preprint",
@@ -210,6 +213,7 @@
           }
         ],
         "score": 0,
+        "source_identity_aliases": {},
         "supported_contribution_digests": []
       }
     },
@@ -239,6 +243,7 @@
         "max_score": 6,
         "negative_search_count": 0,
         "provenance_completeness": 1.0,
+        "raw_cited_source_candidate_ids": [],
         "rubric_hits": [
           {
             "criterion_id": "find_simulation_record",
@@ -278,6 +283,7 @@
           }
         ],
         "score": 0,
+        "source_identity_aliases": {},
         "supported_contribution_digests": []
       }
     },
@@ -307,6 +313,7 @@
         "max_score": 6,
         "negative_search_count": 0,
         "provenance_completeness": 1.0,
+        "raw_cited_source_candidate_ids": [],
         "rubric_hits": [
           {
             "criterion_id": "find_quicklime_record",
@@ -346,12 +353,34 @@
           }
         ],
         "score": 0,
+        "source_identity_aliases": {},
         "supported_contribution_digests": []
       }
     }
   ],
   "development_case_count": 2,
   "goal": "G10R",
+  "identity_preflight": {
+    "entry_count": 7,
+    "expected_ids": [
+      "SRC-S04-SSRN",
+      "SRC-S16-SIM",
+      "SRC-S30-QUICKLIME",
+      "SRC-UDOT-REPORT",
+      "SRC-USU-THESIS"
+    ],
+    "live_candidate_rule": "exact deduplication key, locator, or normalized title; ambiguous matches fail closed",
+    "passes": true,
+    "recorded_resolutions": {
+      "SRC-S04-SSRN": "SRC-S04-SSRN",
+      "SRC-S11-HOTLIME": "SRC-S11-HOTLIME",
+      "SRC-S16-SIM": "SRC-S16-SIM",
+      "SRC-S28-COMPARATOR": "SRC-S28-COMPARATOR",
+      "SRC-S30-QUICKLIME": "SRC-S30-QUICKLIME",
+      "SRC-UDOT-REPORT": "SRC-UDOT-REPORT",
+      "SRC-USU-THESIS": "SRC-USU-THESIS"
+    }
+  },
   "manifest": {
     "allowed_hosts": [
       "api.crossref.org",
@@ -402,7 +431,7 @@
       },
       "goal": {
         "path": "docs/goals/G10R-open-world-lateral-research.md",
-        "sha256": "sha256:227ae63a3ef6dba2065a231de16fdd7cebc9f453ae304a507901aa011f797038"
+        "sha256": "sha256:8ce74a403316954105de0390c9466122242005cee25921b816999be18e1ac904"
       },
       "investigation_action_schema": {
         "path": "schemas/investigation-action.schema.json",
@@ -418,7 +447,7 @@
       },
       "network_adapter": {
         "path": "src/roman_concrete_lab/retrieval/network.py",
-        "sha256": "sha256:efc63597cd46768e60987138727a3c409a6d8f8488955507cfbdedf4d19a23e7"
+        "sha256": "sha256:08a565e5f6b9b57a025953ccd07b65c9cc512f69261ce9b355db706f05802953"
       },
       "openai_provider": {
         "path": "src/roman_concrete_lab/agents/providers/openai_provider.py",
@@ -454,11 +483,11 @@
       },
       "protocol": {
         "path": "docs/protocols/active-investigation-pilot.md",
-        "sha256": "sha256:b53981a222a7faf41063ada38cfbce1fe66f02ee83d664a622c94e3496830a6d"
+        "sha256": "sha256:dae6bfd0b238700a68aebe17c32ac7a2c941711a72f2dd90e8d42067d6104afd"
       },
       "recorded_sources": {
         "path": "fixtures/investigation/recorded-sources.jsonl",
-        "sha256": "sha256:5d9df629a0c669e98d499779a7d8016e69e61d31f966befba470e6417405b10b"
+        "sha256": "sha256:2729c0c4bd1fee6b1aeafbcb478b48cdac0808d95af48ba09e757127083e5636"
       },
       "retrieval_contracts": {
         "path": "src/roman_concrete_lab/retrieval/contracts.py",
@@ -466,7 +495,7 @@
       },
       "runner": {
         "path": "src/roman_concrete_lab/agents/investigation.py",
-        "sha256": "sha256:e4118eb47d4c343d19526be0badd9ada20235f084db1776167230046d0257b28"
+        "sha256": "sha256:d29b4bec0dd680be9615d7b76831ef79aec5cccd249671bb96a9fb1cff2d809e"
       },
       "sealed_cases": {
         "path": "fixtures/investigation/sealed.jsonl",
@@ -483,6 +512,10 @@
       "source_candidate_schema": {
         "path": "schemas/source-candidate.schema.json",
         "sha256": "sha256:91adce74c07efc55b529356f4b145ec934fbd8d1443adb4dd632a6f90ce5926a"
+      },
+      "source_identity_map": {
+        "path": "fixtures/investigation/source-identity-map.json",
+        "sha256": "sha256:697e36eafcdc668bef4bf9a60eddf6d8ef9fff4b84f9b03cec3aa5ae10f533c7"
       },
       "source_policy": {
         "path": "fixtures/investigation/source-policy.json",
@@ -526,7 +559,7 @@
     },
     "phase_b_case_count": 4,
     "phase_b_treatment_case_count": 8,
-    "protocol_version": "g10r.2-active-investigation-pilot",
+    "protocol_version": "g10r.3-active-investigation-pilot",
     "simulation_policy": {
       "all_outputs": "MODEL_ASSERTION",
       "roman_concrete_adapter": "SIMULATOR_UNAVAILABLE",
@@ -539,7 +572,7 @@
       "A2": "three protected branches plus deterministic focus and bounded adjudication"
     }
   },
-  "manifest_sha256": "sha256:807b046b10880a4488c2b769c03ebed42da71de64f9f2725c54e183ce63b5981",
+  "manifest_sha256": "sha256:a4180852c8f4a109489ee6e0fea208c325d756e69364fd72380aec8ef59b8af2",
   "pdf_extraction_benchmark": {
     "content_hash": "sha256:1540877149ab6337014e32440a19059304270ac4a6d9bc18d035f2105f339e4c",
     "parser": "pypdf-6.20.0-page-text",

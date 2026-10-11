@@ -1,6 +1,6 @@
 # Active-investigation society pilot protocol
 
-**Protocol version:** `g10r.2-active-investigation-pilot`
+**Protocol version:** `g10r.3-active-investigation-pilot`
 
 G10R compares one tool-using investigator (A1) with three protected investigation branches plus deterministic focus and bounded adjudication (A2). A0 is a recorded-fixture control for policy, replay, and scoring plumbing. The comparison asks whether society structure improves information acquisition under equal aggregate resources; it does not retest closed-world discourse quality.
 
@@ -23,6 +23,8 @@ Simulation requires a declared adapter and trace. Every output is `MODEL_ASSERTI
 ## Freeze, replay, and failure
 
 Development and sealed cases, prompts, hidden rubrics, source policy, fixtures, schemas, provider/runner code, focus policy, budgets, and decision thresholds are hashed before treatment. Checkpoints bind those hashes. Completed action IDs and normalized queries replay without external calls or additional budget debits. Stale, duplicate-write, cross-problem, rights-blocked, malformed, unavailable, partial, prompt-injection, and budget paths fail closed with attributable states.
+
+The hidden `source-identity-map.json` is part of the Phase-A hash manifest. It repairs canonical fixture identity and maps provider-specific live metadata IDs to frozen `SRC-*` IDs only during blinded scoring, by exact deduplication key, locator, or normalized title. The map is never included in model packets; zero or multiple matches receive no source credit and are recorded as an identity failure.
 
 ## Scoring and outcome
 

@@ -10,6 +10,10 @@ G10B tested several roles against one strong analyst using the same frozen packe
 
 G10R tests a different causal hypothesis. A society may be useful when the bottleneck is allocating investigation across competing branches, not synthesizing a fixed packet. The society must therefore perform asymmetric work—different queries, sources, contradiction checks, or declared simulations—and earn credit only for a valid contribution the same-budget single investigator missed. Discourse, persona variation, consensus, and source volume alone receive no credit.
 
+### Phase-A amendment: live source identity
+
+The original Phase-A freeze exposed a scoring defect: live OpenAlex/Crossref candidates use dynamic IDs while the sealed rubrics use canonical `SRC-*` IDs, and two recorded fixture locators were misbound. This amendment corrects the S04 and S16 fixtures, freezes `fixtures/investigation/source-identity-map.json`, and adds a hidden scoring-only normalization from exact deduplication key, locator, or normalized title to the canonical ID. The alias map is never sent to the provider; ambiguous or unmatched identities fail closed. Phase A is rerun and rehashed under protocol `g10r.3-active-investigation-pilot` before Phase B may activate.
+
 ## Objective
 
 Run a preregistered directional pilot comparing one tool-using investigator with a three-branch investigation society on new, non-ceiling cases. Both treatments receive byte-identical base packets, problem contexts, model/provider policy, allowed tools, aggregate query/source/simulation/token/cost budgets, stopping conditions, and output contracts. Determine whether coordinated branching produces at least one blinded, decision-relevant evidence or hypothesis contribution absent from the single-investigator result.
@@ -42,6 +46,7 @@ Before any live request, freeze and hash:
 
 - at least two development cases and exactly four new sealed cases with retrievable decision-relevant information absent from the base packet;
 - the problem contexts, hidden case-specific rubric, source-policy fixture, prompts, branch charters, focus rule, schemas, tool contracts, model/provider policy, token and action budgets, de-identification map, and decision thresholds;
+- the hidden canonical source-identity map and its collision/match preflight; live candidate IDs must normalize only at blinded scoring time;
 - A0 fixture outputs and recorded tool responses for positive, negative, contradictory, duplicate, malformed, rights-blocked, unavailable, prompt-injection, budget, and no-useful-result paths;
 - the page-aware PDF extractor, parser/version policy, OCR-required state, private raw-document cache boundary, evidence-card schema, page/table/figure locator contract, and a manually checked extraction benchmark;
 - the A1/A2 orchestrator, checkpoint format, cost estimator, hard pre-call spend guard, scorer, and replay command.
@@ -51,6 +56,8 @@ Phase A must demonstrate headroom: neither A0 nor a no-retrieval baseline may re
 The default provider policy reuses G10B's OpenAI Responses API configuration: `gpt-6-luna`, `reasoning.effort=low`, `store=false`, structured outputs, runtime-only credentials, and no provider-managed search or file tools. Retrieval occurs only through the repository adapter and frozen source policy. The proposed total external-spend cap is **$25 across Phase B**; execution still requires the owner's explicit activation after the Phase A manifest reports the maximum estimated cost.
 
 The default source policy permits metadata from frozen scholarly indexes and full, page-aware extraction of any **relevant, lawfully public PDF** from an exact, preflighted publisher, author, government, or institutional-repository host marked `PUBLIC`. Restricted, authenticated, unlisted, or rights-unclear PDFs remain metadata-only. The raw PDF and extracted page text are stored only in ignored local raw storage for replay; artifacts and shared memory receive hashes, locators, extraction quality, and compact source-located derived cards—not full text. Phase A records the exact host allowlist, access class, payload rule, request policy, parser/version, and rights check used for the run. Discovery of a new host during treatment does not expand the allowlist.
+
+Live retrieval candidates may carry provider-specific IDs. The hidden identity map resolves them only after treatment, using an exact deduplication key, exact permitted locator, or normalized title; an ambiguous or unmatched candidate is not credited. The map is included in the frozen hash manifest but is excluded from model packets and public-case context.
 
 ### Phase B — smallest informative live pilot
 
@@ -132,6 +139,8 @@ No outcome authorizes production use. A positive outcome creates a proposed G10S
 | Condition | Required behavior |
 |---|---|
 | A1 and A2 receive different base content or aggregate budgets | invalidate run before treatment |
+| Live candidate matches zero or multiple canonical identities | retain the raw ID, record `UNRESOLVED`/critical ambiguity, and award no source credit |
+| Live candidate matches one canonical identity by frozen key/locator/title | canonicalize only in blinded scoring; retain raw ID and match reason in the score ledger |
 | Two branches issue the same normalized query | debit once, return one replayed result, record duplication |
 | Duplicate DOI, locator, or content hash | `DUPLICATE`; preserve first provenance and all discovery links |
 | Host, rights, robots, payload, or content policy fails | `RIGHTS_BLOCKED` or `POLICY_BLOCKED`; retain no prohibited payload |

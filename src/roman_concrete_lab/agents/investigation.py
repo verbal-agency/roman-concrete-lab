@@ -33,7 +33,7 @@ from ..simulation import SimulationRegistry
 from tools.tournament.replay import ROOT
 
 
-PROTOCOL_VERSION = "g10r.2-active-investigation-pilot"
+PROTOCOL_VERSION = "g10r.3-active-investigation-pilot"
 MODEL = "gpt-6-luna"
 REASONING_EFFORT = "low"
 CAP_USD = 25.0
@@ -160,6 +160,86 @@ def source_policy() -> SourcePolicy:
     return SourcePolicy.load(ROOT / "fixtures/investigation/source-policy.json")
 
 
+def source_identity_map() -> dict[str, Any]:
+    """Load the hidden evaluation-only map for live metadata identities."""
+    return load_json(ROOT / "fixtures/investigation/source-identity-map.json")
+
+
+def _identity_text(value: str) -> str:
+    return " ".join(value.casefold().split())
+
+
+def resolve_source_identity(
+    source_candidate_id: str,
+    *,
+    candidate_records: dict[str, dict[str, Any]] | None,
+    identity_map: dict[str, Any] | None,
+) -> str | None:
+    """Resolve a live OA/CR candidate without exposing hidden aliases to the model."""
+    if identity_map is None:
+        return source_candidate_id
+    entries = identity_map["entries"]
+    if source_candidate_id in entries:
+        return source_candidate_id
+    candidate = (candidate_records or {}).get(source_candidate_id)
+    if candidate is None:
+        return None
+    candidate_keys = {candidate.get("deduplication_key")}
+    candidate_locators = {candidate.get("locator"), candidate.get("content_locator")}
+    candidate_title = _identity_text(candidate.get("title", ""))
+    matches = []
+    for canonical_id, entry in entries.items():
+        if candidate_keys.intersection(entry.get("deduplication_keys", [])):
+            matches.append(canonical_id)
+            continue
+        if candidate_locators.intersection(entry.get("locators", [])):
+            matches.append(canonical_id)
+            continue
+        if candidate_title and candidate_title == _identity_text(entry.get("title", "")):
+            matches.append(canonical_id)
+    if len(matches) > 1:
+        raise PolicyBlocked(f"live source identity is ambiguous: {source_candidate_id} -> {sorted(matches)}")
+    return matches[0] if matches else None
+
+
+def validate_source_identity_map(
+    identity_map: dict[str, Any],
+    *,
+    recorded_sources: list[dict[str, Any]],
+    cases: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """Validate hidden aliases against recorded candidates and sealed expectations."""
+    if identity_map.get("schema_version") != "1.0":
+        raise ValueError("source identity map schema version is not 1.0")
+    entries = identity_map.get("entries", {})
+    expected = sorted({source_id for case in cases for source_id in case["expected_source_ids"]})
+    missing = sorted(set(expected) - set(entries))
+    if missing:
+        raise ValueError(f"source identity map is missing expected IDs: {missing}")
+    records = {source["source_candidate_id"]: source for source in recorded_sources}
+    resolutions = {}
+    for source_id, source in records.items():
+        resolved = resolve_source_identity(source_id, candidate_records=records, identity_map=identity_map)
+        if source_id in entries and resolved != source_id:
+            raise ValueError(f"recorded source {source_id} resolves to {resolved}")
+        if source_id in expected and resolved != source_id:
+            raise ValueError(f"expected source {source_id} has no exact identity mapping")
+        resolutions[source_id] = resolved
+    key_owners: dict[str, str] = {}
+    for canonical_id, entry in entries.items():
+        for key in entry.get("deduplication_keys", []):
+            previous = key_owners.setdefault(key, canonical_id)
+            if previous != canonical_id:
+                raise ValueError(f"identity key collision: {key}")
+    return {
+        "passes": True,
+        "expected_ids": expected,
+        "entry_count": len(entries),
+        "recorded_resolutions": resolutions,
+        "live_candidate_rule": "exact deduplication key, locator, or normalized title; ambiguous matches fail closed",
+    }
+
+
 def _portfolio_text(portfolio: dict[str, Any]) -> str:
     values = [
         portfolio["summary"],
@@ -184,16 +264,31 @@ def _portfolio_text(portfolio: dict[str, Any]) -> str:
     return " ".join(values).lower()
 
 
-def score_portfolio(case: dict[str, Any], portfolio: dict[str, Any]) -> dict[str, Any]:
+def score_portfolio(
+    case: dict[str, Any],
+    portfolio: dict[str, Any],
+    *,
+    candidate_records: dict[str, dict[str, Any]] | None = None,
+    identity_map: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     validate_portfolio(portfolio)
     expected = set(case["expected_source_ids"])
-    cited = set(portfolio["source_candidate_ids"])
-    cited.update(
+    raw_cited = set(portfolio["source_candidate_ids"])
+    raw_cited.update(
         source_id
         for hypothesis in portfolio["hypotheses"]
         for source_id in hypothesis["source_candidate_ids"]
     )
+    aliases = {
+        source_id: resolve_source_identity(
+            source_id, candidate_records=candidate_records, identity_map=identity_map
+        )
+        for source_id in sorted(raw_cited)
+    }
+    cited = {resolved for resolved in aliases.values() if resolved is not None}
+    unresolved = {source_id for source_id, resolved in aliases.items() if resolved is None}
     invalid = sorted(cited - expected)
+    invalid.extend(sorted(unresolved))
     text = _portfolio_text(portfolio)
     hits = []
     for criterion in case["rubric"]:
@@ -219,14 +314,20 @@ def score_portfolio(case: dict[str, Any], portfolio: dict[str, Any]) -> dict[str
         {
             digest(
                 {
-                    "sources": sorted(hypothesis["source_candidate_ids"]),
+                    "sources": sorted(
+                        aliases[source_id]
+                        for source_id in hypothesis["source_candidate_ids"]
+                        if aliases.get(source_id) is not None
+                    ),
                     "prediction": hypothesis["predicted_observation"].strip().lower(),
                     "falsifier": hypothesis["falsifier"].strip().lower(),
                 }
             )
             for hypothesis in portfolio["hypotheses"]
             if hypothesis["source_candidate_ids"]
-            and not set(hypothesis["source_candidate_ids"]) - expected
+            and not {
+                aliases.get(source_id) for source_id in hypothesis["source_candidate_ids"]
+            } - expected
         }
     )
     return {
@@ -234,6 +335,8 @@ def score_portfolio(case: dict[str, Any], portfolio: dict[str, Any]) -> dict[str
         "max_score": sum(item["points"] for item in case["rubric"]),
         "rubric_hits": hits,
         "cited_source_candidate_ids": sorted(cited),
+        "raw_cited_source_candidate_ids": sorted(raw_cited),
+        "source_identity_aliases": aliases,
         "invalid_source_candidate_ids": invalid,
         "provenance_completeness": (
             round(sum(provenance_links) / len(provenance_links), 4)
@@ -471,6 +574,7 @@ class ActiveInvestigationRunner:
         run_id: str,
         timestamp: str = "2026-10-10T00:00:00Z",
         document_cache_dir: Path | None = None,
+        identity_map: dict[str, Any] | None = None,
     ) -> None:
         if arm not in {"A1", "A2"}:
             raise ValueError("Phase B runner supports A1 or A2 only")
@@ -483,6 +587,7 @@ class ActiveInvestigationRunner:
         self.manifest_sha256 = manifest_sha256
         self.run_id = run_id
         self.timestamp = timestamp
+        self.identity_map = identity_map
         self.machine = RunStateMachine()
         self.checkpoint = load_checkpoint(checkpoint_path, manifest_sha256)
         saved_budget = self.checkpoint.get("budget")
@@ -898,7 +1003,12 @@ class ActiveInvestigationRunner:
             portfolio = self._run_a1() if self.arm == "A1" else self._run_a2()
             for state in ("scored", "completed"):
                 self.machine.transition(state)
-            score = score_portfolio(self.case, portfolio)
+            score = score_portfolio(
+                self.case,
+                portfolio,
+                candidate_records=self.candidates,
+                identity_map=self.identity_map,
+            )
             result = {"status": "COMPLETED", "portfolio": portfolio, "score": score}
         except (BudgetExhausted, BudgetExceeded) as exc:
             self.machine.state = "budget_exhausted"
@@ -946,6 +1056,7 @@ def frozen_manifest() -> dict[str, Any]:
         "development_cases": ROOT / "fixtures/investigation/development.jsonl",
         "sealed_cases": ROOT / "fixtures/investigation/sealed.jsonl",
         "recorded_sources": ROOT / "fixtures/investigation/recorded-sources.jsonl",
+        "source_identity_map": ROOT / "fixtures/investigation/source-identity-map.json",
         "behavior_fixtures": ROOT / "fixtures/investigation/behavior-fixtures.json",
         "pdf_benchmark": ROOT / "fixtures/investigation/pdf-benchmark.json",
         "pdf_benchmark_payload": ROOT / "fixtures/investigation/pdf-benchmark.b64",
@@ -1028,6 +1139,10 @@ def phase_a() -> dict[str, Any]:
     policy = source_policy()
     source_schema = schema("source-candidate.schema.json")
     sources = load_jsonl(ROOT / "fixtures/investigation/recorded-sources.jsonl")
+    identities = source_identity_map()
+    identity_preflight = validate_source_identity_map(
+        identities, recorded_sources=sources, cases=[*development, *sealed]
+    )
     for source in sources:
         candidate = {key: value for key, value in source.items() if not key.startswith("_fixture_")}
         policy.decide(candidate["locator"], fetch_content=False)
@@ -1083,6 +1198,7 @@ def phase_a() -> dict[str, Any]:
         and required_fixture_states.issubset(recorded_states)
         and all(key in policy.record["request_policy"] for key in ("max_pdf_pages", "max_extracted_characters", "public_pdf_handling"))
         and benchmark_passes
+        and identity_preflight["passes"]
     )
     return {
         "goal": "G10R",
@@ -1097,6 +1213,7 @@ def phase_a() -> dict[str, Any]:
         "source_fixture_count": len(sources),
         "behavior_fixture_states": sorted(recorded_states),
         "pdf_extraction_benchmark": {"passes": benchmark_passes, "parser": PARSER_ID, "content_hash": benchmark_document["content_hash"]},
+        "identity_preflight": identity_preflight,
         "arm_budget_equality": asdict(BudgetLimits(estimated_cost_usd=CAP_USD)),
         "activation_request": {
             "network": "read-only exact-host allowlist",
@@ -1213,6 +1330,7 @@ def run_phase_b(*, owner_activated: bool, output_dir: Path | None = None) -> dic
     )
     results: dict[str, list[dict[str, Any]]] = {"A1": [], "A2": []}
     policy = source_policy()
+    identities = source_identity_map()
     for case in load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl"):
         for arm in ("A1", "A2"):
             budget = InvestigationBudget(BudgetLimits(estimated_cost_usd=CAP_USD))
@@ -1230,6 +1348,7 @@ def run_phase_b(*, owner_activated: bool, output_dir: Path | None = None) -> dic
                 checkpoint_path=destination / "checkpoints" / f"{case['case_id']}-{arm}.json",
                 manifest_sha256=manifest_hash,
                 run_id=f"G10R-{case['case_id']}-{arm}",
+                identity_map=identities,
             )
             result = runner.run(owner_activated=True)
             results[arm].append(result)
