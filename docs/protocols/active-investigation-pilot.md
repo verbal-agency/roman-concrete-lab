@@ -1,16 +1,14 @@
 # Active-investigation society pilot protocol
 
-**Protocol version:** `g10r.3-active-investigation-pilot`
+**Protocol version:** `g10r.4-active-investigation-pilot`
 
-G10R compares one tool-using investigator (A1) with three protected investigation branches plus deterministic focus and bounded adjudication (A2). A0 is a recorded-fixture control for policy, replay, and scoring plumbing. The comparison asks whether society structure improves information acquisition under equal aggregate resources; it does not retest closed-world discourse quality.
-
-This `g10r.3` document records the baseline structural-branch freeze and remains useful for Phase-A provenance and regression tests. It is not Phase-B authorization: G10M must first replace A2 with the mechanism-proponent plus structural-auditor design, issue a new protocol version and manifest, and pass its offline acceptance criteria.
+G10R compares one tool-using investigator (A1) with the mechanism-proponent and structural-auditor society (A2-M). A0 is a recorded-fixture control for policy, replay, and scoring plumbing. The comparison asks whether a two-layer society improves information acquisition under equal aggregate resources; it does not retest closed-world discourse quality.
 
 ## Frozen treatments
 
 A1 and A2 receive identical base packets, problem context, model (`gpt-6-luna`), reasoning policy (`low`), source policy, retrieval/simulation adapters, schemas, stopping conditions, and aggregate per-case budgets: 12 queries, two rounds, 24 retained candidates, 5 MB permitted payload, 4 declared simulation calls, 80,000 input tokens, and 7,200 output tokens. Phase B has a proposed $25 total external-spend cap and cannot start until the owner reviews the Phase A manifest and activates the frozen network/model policy.
 
-A2 branches are evidence skeptic/contradiction hunter, mechanism/transfer explorer, and experiment/simulation designer. Their round-one charters are non-overlapping, their state is private until typed reports are shared, and duplicate normalized queries return one cached result. The deterministic focus allocator assigns remaining actions from unresolved uncertainty, expected decision change, provenance risk, unique source yield, duplication, feasibility, and remaining budget. It does not count votes.
+A2-M freezes at least two case-specific mechanism proponents, one null mechanism, and one open mechanism slot. Proponents work privately and return typed claims, predictions, falsifiers, provenance, negative searches, and unresolved questions. After all proponents commit, the evidence skeptic, transfer-boundary, and experiment/simulation structural auditors inspect the typed records. The deterministic focus allocator assigns remaining actions from expected discrimination, unresolved uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; it must preserve the null and a credible rival when budget permits. It does not count votes, consensus, or advocacy.
 
 ## Retrieval and simulation boundary
 
@@ -27,6 +25,8 @@ Simulation requires a declared adapter and trace. Every output is `MODEL_ASSERTI
 Development and sealed cases, prompts, hidden rubrics, source policy, fixtures, schemas, provider/runner code, focus policy, budgets, and decision thresholds are hashed before treatment. Checkpoints bind those hashes. Completed action IDs and normalized queries replay without external calls or additional budget debits. Stale, duplicate-write, cross-problem, rights-blocked, malformed, unavailable, partial, prompt-injection, and budget paths fail closed with attributable states.
 
 The hidden `source-identity-map.json` is part of the Phase-A hash manifest. It repairs canonical fixture identity and maps provider-specific live metadata IDs to frozen `SRC-*` IDs only during blinded scoring, by exact deduplication key, locator, or normalized title. The map is never included in model packets; zero or multiple matches receive no source credit and are recorded as an identity failure.
+
+The mechanism-proponent schemas, roster policy, admission rule, and offline behavior fixtures are also frozen. A mechanism card is a search scaffold, not evidence; all proponent, critique, admission, focus, and adjudication outputs remain derived assertions with `REVIEW_REQUIRED` status.
 
 ## Scoring and outcome
 

@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {"fixture_id":"duplicate-mechanism","input":"two cards share one mechanism_id","expected":"POLICY_BLOCKED"},
+    {"fixture_id":"missing-falsifier","input":"proponent claim omits falsifier","expected":"SCHEMA_INVALID"},
+    {"fixture_id":"null-retention","input":"adjudication has a candidate leader","expected":"null_retained=true"},
+    {"fixture_id":"open-slot-admission","input":"typed admission includes reason and evidence locator","expected":"ADMITTED"},
+    {"fixture_id":"unsupported-promotion","input":"derived claim requests immutable promotion","expected":"POLICY_BLOCKED"},
+    {"fixture_id":"stale-write","input":"event uses old manifest hash","expected":"STALE_CONTEXT"},
+    {"fixture_id":"cross-problem-read","input":"record belongs to another problem","expected":"POLICY_BLOCKED"},
+    {"fixture_id":"budget-exhaustion","input":"focus requests more actions than remaining","expected":"BUDGET_EXHAUSTED"},
+    {"fixture_id":"partial-replay","input":"same event is submitted twice identically","expected":"REPLAY"}
+  ]
+}

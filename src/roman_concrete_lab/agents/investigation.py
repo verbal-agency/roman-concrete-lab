@@ -33,7 +33,7 @@ from ..simulation import SimulationRegistry
 from tools.tournament.replay import ROOT
 
 
-PROTOCOL_VERSION = "g10r.3-active-investigation-pilot"
+PROTOCOL_VERSION = "g10r.4-active-investigation-pilot"
 MODEL = "gpt-6-luna"
 REASONING_EFFORT = "low"
 CAP_USD = 25.0

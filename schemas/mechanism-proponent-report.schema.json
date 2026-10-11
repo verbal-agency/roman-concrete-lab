@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/mechanism-proponent-report.schema.json",
+  "title": "Mechanism proponent report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "report_id", "case_id", "mechanism_id", "role", "action_ids", "source_candidate_ids", "claims", "negative_searches", "unresolved_questions", "proposed_next_actions", "claimed_contribution", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "report_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "mechanism_id": {"type": "string", "minLength": 1},
+    "role": {"const": "mechanism_proponent"},
+    "action_ids": {"type": "array", "items": {"type": "string"}},
+    "source_candidate_ids": {"type": "array", "items": {"type": "string"}},
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim_id", "statement", "prediction", "falsifier", "support_region", "provenance", "promotion_status"],
+        "properties": {
+          "claim_id": {"type": "string", "minLength": 1},
+          "statement": {"type": "string", "minLength": 1},
+          "prediction": {"type": "string", "minLength": 1},
+          "falsifier": {"type": "string", "minLength": 1},
+          "support_region": {"type": "string", "minLength": 1},
+          "provenance": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "promotion_status": {"const": "REVIEW_REQUIRED"}
+        }
+      }
+    },
+    "negative_searches": {"type": "array", "items": {"type": "string"}},
+    "unresolved_questions": {"type": "array", "items": {"type": "string"}},
+    "proposed_next_actions": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "claimed_contribution": {"type": "string", "minLength": 1},
+    "status": {"enum": ["COMPLETE", "ABSTAIN", "PARTIAL", "FAILED"]}
+  }
+}

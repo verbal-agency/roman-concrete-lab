@@ -1,0 +1,3424 @@
+{
+  "authority": {
+    "external_communication": "prohibited",
+    "external_spend": 0.0,
+    "laboratory": "prohibited",
+    "model_calls": "none",
+    "network": "none"
+  },
+  "behavior_fixture_report": {
+    "fixtures": [
+      {
+        "fixture_id": "duplicate-mechanism",
+        "status": "PASS"
+      },
+      {
+        "fixture_id": "missing-falsifier",
+        "status": "PASS"
+      },
+      {
+        "fixture_id": "null-retention",
+        "status": "PASS"
+      },
+      {
+        "fixture_id": "open-slot-admission",
+        "status": "PASS"
+      },
+      {
+        "fixture_id": "unsupported-promotion",
+        "status": "PASS"
+      },
+      {
+        "fixture_id": "stale-write",
+        "status": "PASS"
+      },
+      {
+        "fixture_id": "cross-problem-read",
+        "status": "PASS"
+      },
+      {
+        "fixture_id": "budget-exhaustion",
+        "status": "PASS"
+      },
+      {
+        "fixture_id": "partial-replay",
+        "status": "PASS"
+      }
+    ],
+    "passes": true
+  },
+  "budget_equality": {
+    "control": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 7200,
+      "queries": 12,
+      "simulation_calls": 4
+    },
+    "extra_role_authority": false,
+    "passes": true,
+    "society": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 7200,
+      "queries": 12,
+      "simulation_calls": 4
+    }
+  },
+  "criterion_evidence": {
+    "1": [
+      "docs/protocols/mechanism-proponent-society.md",
+      "schemas/mechanism-card.schema.json",
+      "schemas/mechanism-proponent-report.schema.json",
+      "schemas/structural-critique.schema.json",
+      "schemas/mechanism-admission.schema.json",
+      "schemas/mechanism-tournament-ledger.schema.json"
+    ],
+    "2": [
+      "src/roman_concrete_lab/agents/mechanism_tournament.py",
+      "tests/agents/test_mechanism_tournament.py::test_proponents_are_private_until_all_commit",
+      "tests/agents/test_mechanism_tournament.py::test_structural_audit_requires_sharing_and_admission_is_bounded"
+    ],
+    "3": [
+      "fixtures/investigation/mechanism-rosters.json",
+      "artifacts/goals/G10M/phase-a.json:roster_audit"
+    ],
+    "4": [
+      "artifacts/goals/G10M/phase-a.json:budget_equality",
+      "tests/agents/test_mechanism_tournament.py::test_focus_is_deterministic_and_preserves_null_and_rival"
+    ],
+    "5": [
+      "src/roman_concrete_lab/agents/mechanism_tournament.py:score_mechanism_ledger",
+      "tests/agents/test_mechanism_tournament.py::test_offline_run_preserves_rival_and_null_and_replays"
+    ],
+    "6": [
+      "fixtures/investigation/mechanism-behavior-fixtures.json",
+      "tests/agents/test_mechanism_tournament.py"
+    ],
+    "7": [
+      "artifacts/goals/G10M/phase-a.json",
+      "artifacts/goals/G10M/report.md"
+    ],
+    "8": [
+      "artifacts/goals/G10M/phase-a.json:phase_b_authorized",
+      "docs/protocols/active-investigation-pilot.md"
+    ]
+  },
+  "development_case_count": 2,
+  "goal": "G10M",
+  "handoff": "Offline design gate only; live G10R Phase B requires this manifest plus explicit owner activation of a later amended protocol.",
+  "manifest": {
+    "aggregate_budget": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 7200,
+      "queries": 12,
+      "simulation_calls": 4
+    },
+    "authority": {
+      "external_communication": "prohibited",
+      "external_spend": 0.0,
+      "laboratory": "prohibited",
+      "model_calls": "none",
+      "network": "none"
+    },
+    "files": {
+      "active_protocol": {
+        "path": "docs/protocols/active-investigation-pilot.md",
+        "sha256": "sha256:f9dc553973ac83b3be487ed2f1a9dd85b98b2d9a638b91f0944a25023df84f54"
+      },
+      "admission_schema": {
+        "path": "schemas/mechanism-admission.schema.json",
+        "sha256": "sha256:78e1f45b037834a97a1ecf541a52c2d9580957b7e58079398bd51ba29e90724b"
+      },
+      "behavior_fixtures": {
+        "path": "fixtures/investigation/mechanism-behavior-fixtures.json",
+        "sha256": "sha256:ebe7f76a141a7e90d6eb360799955952f03e2202e11023a8f61eb835fca0bcc9"
+      },
+      "goal": {
+        "path": "docs/goals/G10M-mechanism-proponent-society.md",
+        "sha256": "sha256:eab33260acd9498168532fb3007f0dd619562bb74793d8d70410e0a7cb9da3e8"
+      },
+      "mechanism_card_schema": {
+        "path": "schemas/mechanism-card.schema.json",
+        "sha256": "sha256:587f3c9829573af824a9a13b21819bc7565a7503114d08c022e2b40eae69fcbf"
+      },
+      "prompts": {
+        "path": "fixtures/investigation/mechanism-prompts.json",
+        "sha256": "sha256:18c2f923d82f1b30934b0868fa62c35b00edf24f9bc20c627e8d58ca876df927"
+      },
+      "proponent_report_schema": {
+        "path": "schemas/mechanism-proponent-report.schema.json",
+        "sha256": "sha256:5f849c937678f15e163dc3f861fb6c9321254b119f7baf830cffc3f5d9c614f1"
+      },
+      "protocol": {
+        "path": "docs/protocols/mechanism-proponent-society.md",
+        "sha256": "sha256:d9a8be5caac07c0578b76d270f57a52ae96bb57625cb2687edb6b5aa22b22321"
+      },
+      "rosters": {
+        "path": "fixtures/investigation/mechanism-rosters.json",
+        "sha256": "sha256:73f37684e1edc0fb52aa0474e398fd6aa57fe10aa0f50657d9c238191c6f7d6c"
+      },
+      "runner": {
+        "path": "src/roman_concrete_lab/agents/mechanism_tournament.py",
+        "sha256": "sha256:33c1b28dbba12e401e868126855387ede2bbafd437437154a7fd1b9bdfdccb0f"
+      },
+      "structural_critique_schema": {
+        "path": "schemas/structural-critique.schema.json",
+        "sha256": "sha256:d26df64de76a45f80e27c822539a2425d0bf3ef693c4ad16220b23c6be702eb3"
+      },
+      "tournament_ledger_schema": {
+        "path": "schemas/mechanism-tournament-ledger.schema.json",
+        "sha256": "sha256:78aa9828872d3944a0fc6f175730d410fabe47bb020e6ae9b0cdb154b22a32fc"
+      }
+    },
+    "manifest_sha256": "sha256:6d84976e176129ee464bd0af0166df9611b97bdcf75e58551093fe83838aa81e",
+    "protocol_version": "g10m.1-mechanism-proponent-society",
+    "treatment_ids": {
+      "control": "A1",
+      "society": "A2-M"
+    }
+  },
+  "offline_runs": [
+    {
+      "case_id": "S-ACTIVE-LINEAGE",
+      "checkpoint": {
+        "admitted": [],
+        "context_hash": "sha256:5bdca335d80d3473d009daa6556db9b652f4adb6907a262583328996b374a279",
+        "critiques": [
+          {
+            "auditor_role": "evidence_skeptic",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+            "claim_ids": [
+              "CLAIM-S-ACTIVE-LINEAGE-M1"
+            ],
+            "contradiction_status": "UNRESOLVED",
+            "critique_id": "sha256:b93c8918440c7213ede79bc9364f5f74307e0449a313ff75bb471b25173a00f0",
+            "promotion_status": "REVIEW_REQUIRED",
+            "proposed_discriminator": "Recovery should track the presence and exposure of reactive lime-rich regions.",
+            "provenance": [
+              "TRACE-CRITIQUE-S-ACTIVE-LINEAGE-M1-evidence_skeptic"
+            ],
+            "schema_version": "1.0",
+            "target_mechanism_id": "S-ACTIVE-LINEAGE-M1"
+          },
+          {
+            "auditor_role": "transfer_boundary",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+            "claim_ids": [
+              "CLAIM-S-ACTIVE-LINEAGE-M2"
+            ],
+            "contradiction_status": "UNRESOLVED",
+            "critique_id": "sha256:2a4ef3aa6812e00e928113f56057ef3ecba4490dad21d6894049cc8f96ad85b6",
+            "promotion_status": "REVIEW_REQUIRED",
+            "proposed_discriminator": "Closure can occur without a matching improvement in functional water transport.",
+            "provenance": [
+              "TRACE-CRITIQUE-S-ACTIVE-LINEAGE-M2-transfer_boundary"
+            ],
+            "schema_version": "1.0",
+            "target_mechanism_id": "S-ACTIVE-LINEAGE-M2"
+          },
+          {
+            "auditor_role": "experiment_simulation",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+            "claim_ids": [
+              "CLAIM-S-ACTIVE-LINEAGE-NULL"
+            ],
+            "contradiction_status": "UNRESOLVED",
+            "critique_id": "sha256:0fa01f19ef6fbccee6c734bfb1a01a6dd2255590109b9db4675dca03019bf333",
+            "promotion_status": "REVIEW_REQUIRED",
+            "proposed_discriminator": "A process-matched control is indistinguishable from each proposed mechanism.",
+            "provenance": [
+              "TRACE-CRITIQUE-S-ACTIVE-LINEAGE-NULL-experiment_simulation"
+            ],
+            "schema_version": "1.0",
+            "target_mechanism_id": "S-ACTIVE-LINEAGE-NULL"
+          }
+        ],
+        "events": {
+          "sha256:0fa01f19ef6fbccee6c734bfb1a01a6dd2255590109b9db4675dca03019bf333": {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "critique": {
+              "auditor_role": "experiment_simulation",
+              "case_id": "S-ACTIVE-LINEAGE",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-LINEAGE-NULL"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:0fa01f19ef6fbccee6c734bfb1a01a6dd2255590109b9db4675dca03019bf333",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "A process-matched control is indistinguishable from each proposed mechanism.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-LINEAGE-NULL-experiment_simulation"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-LINEAGE-NULL"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          "sha256:23300e227b6f5d69258699bd622dff9d3d2d0e7a1dbb430b86188135616d2098": {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "event_type": "FOCUS_DECISION",
+            "focus": {
+              "allocations": {
+                "S-ACTIVE-LINEAGE-M1": 1,
+                "S-ACTIVE-LINEAGE-M2": 1,
+                "S-ACTIVE-LINEAGE-NULL": 2,
+                "S-ACTIVE-LINEAGE-OPEN": 2
+              },
+              "ranked_mechanisms": [
+                "S-ACTIVE-LINEAGE-OPEN",
+                "S-ACTIVE-LINEAGE-M1",
+                "S-ACTIVE-LINEAGE-M2",
+                "S-ACTIVE-LINEAGE-NULL"
+              ],
+              "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+              "scores": {
+                "S-ACTIVE-LINEAGE-M1": 7,
+                "S-ACTIVE-LINEAGE-M2": 7,
+                "S-ACTIVE-LINEAGE-NULL": 8,
+                "S-ACTIVE-LINEAGE-OPEN": 3
+              },
+              "status": "ALLOCATED"
+            }
+          },
+          "sha256:2a4ef3aa6812e00e928113f56057ef3ecba4490dad21d6894049cc8f96ad85b6": {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "critique": {
+              "auditor_role": "transfer_boundary",
+              "case_id": "S-ACTIVE-LINEAGE",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-LINEAGE-M2"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:2a4ef3aa6812e00e928113f56057ef3ecba4490dad21d6894049cc8f96ad85b6",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "Closure can occur without a matching improvement in functional water transport.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-LINEAGE-M2-transfer_boundary"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-LINEAGE-M2"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          "sha256:2d972c9e085d96ebd93b0cf6f959f7ee56faf6daeb879aa015d27152592863eb": {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "event_type": "SHARE_PROPONENT_REPORTS",
+            "report_ids": [
+              "S-ACTIVE-LINEAGE-M1",
+              "S-ACTIVE-LINEAGE-M2",
+              "S-ACTIVE-LINEAGE-NULL"
+            ]
+          },
+          "sha256:41859b29a60cf761d9059be584d8bdd269db0f0806a8b9b8ef380d2f20587cb2": {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-LINEAGE-M1-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-LINEAGE",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-LINEAGE-M1",
+                  "falsifier": "Matched specimens without reactive lime-rich regions recover identically under the same exposure.",
+                  "prediction": "Recovery should track the presence and exposure of reactive lime-rich regions.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-LINEAGE-M1"
+                  ],
+                  "statement": "A localized reactive lime reservoir drives functional recovery after damage.",
+                  "support_region": "Modern lime-pozzolan mortar with identified lime-rich inclusions; transfer is unresolved."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-LINEAGE-M1",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:41859b29a60cf761d9059be584d8bdd269db0f0806a8b9b8ef380d2f20587cb2",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          "sha256:6c2f52c3f8cb78522290a7c7d7eccdd069d57de28df53604b8279f7435850e20": {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-LINEAGE-NULL-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-LINEAGE",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-LINEAGE-NULL",
+                  "falsifier": "A preregistered mechanism-specific discriminator separates a candidate from the control.",
+                  "prediction": "A process-matched control is indistinguishable from each proposed mechanism.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-LINEAGE-NULL"
+                  ],
+                  "statement": "No reproducible mechanism-specific recovery is present under the declared conditions.",
+                  "support_region": "The declared case domain and measurement endpoint only."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-LINEAGE-NULL",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:6c2f52c3f8cb78522290a7c7d7eccdd069d57de28df53604b8279f7435850e20",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          "sha256:b93c8918440c7213ede79bc9364f5f74307e0449a313ff75bb471b25173a00f0": {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "critique": {
+              "auditor_role": "evidence_skeptic",
+              "case_id": "S-ACTIVE-LINEAGE",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-LINEAGE-M1"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:b93c8918440c7213ede79bc9364f5f74307e0449a313ff75bb471b25173a00f0",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "Recovery should track the presence and exposure of reactive lime-rich regions.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-LINEAGE-M1-evidence_skeptic"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-LINEAGE-M1"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          "sha256:b9b031f7b074f5a0551f38b2a5d36949c6fc5ae7dcd0292f740b48a1cb149053": {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-LINEAGE-M2-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-LINEAGE",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-LINEAGE-M2",
+                  "falsifier": "Functional recovery consistently exceeds closure-only controls under matched conditions.",
+                  "prediction": "Closure can occur without a matching improvement in functional water transport.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-LINEAGE-M2"
+                  ],
+                  "statement": "Observed recovery is dominated by non-chemical physical crack closure.",
+                  "support_region": "Crack-width and exposure conditions where closure can be separated from water-transport recovery."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-LINEAGE-M2",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:b9b031f7b074f5a0551f38b2a5d36949c6fc5ae7dcd0292f740b48a1cb149053",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          }
+        },
+        "focus": {
+          "allocations": {
+            "S-ACTIVE-LINEAGE-M1": 1,
+            "S-ACTIVE-LINEAGE-M2": 1,
+            "S-ACTIVE-LINEAGE-NULL": 2,
+            "S-ACTIVE-LINEAGE-OPEN": 2
+          },
+          "ranked_mechanisms": [
+            "S-ACTIVE-LINEAGE-OPEN",
+            "S-ACTIVE-LINEAGE-M1",
+            "S-ACTIVE-LINEAGE-M2",
+            "S-ACTIVE-LINEAGE-NULL"
+          ],
+          "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+          "scores": {
+            "S-ACTIVE-LINEAGE-M1": 7,
+            "S-ACTIVE-LINEAGE-M2": 7,
+            "S-ACTIVE-LINEAGE-NULL": 8,
+            "S-ACTIVE-LINEAGE-OPEN": 3
+          },
+          "status": "ALLOCATED"
+        },
+        "private_reports": {
+          "S-ACTIVE-LINEAGE-M1": {
+            "action_ids": [
+              "ACTION-S-ACTIVE-LINEAGE-M1-PRIVATE"
+            ],
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+            "claims": [
+              {
+                "claim_id": "CLAIM-S-ACTIVE-LINEAGE-M1",
+                "falsifier": "Matched specimens without reactive lime-rich regions recover identically under the same exposure.",
+                "prediction": "Recovery should track the presence and exposure of reactive lime-rich regions.",
+                "promotion_status": "REVIEW_REQUIRED",
+                "provenance": [
+                  "TRACE-S-ACTIVE-LINEAGE-M1"
+                ],
+                "statement": "A localized reactive lime reservoir drives functional recovery after damage.",
+                "support_region": "Modern lime-pozzolan mortar with identified lime-rich inclusions; transfer is unresolved."
+              }
+            ],
+            "mechanism_id": "S-ACTIVE-LINEAGE-M1",
+            "negative_searches": [
+              "No external search is authorized in the offline fixture."
+            ],
+            "proposed_next_actions": [
+              "Use the declared discriminator within the shared budget."
+            ],
+            "report_id": "sha256:41859b29a60cf761d9059be584d8bdd269db0f0806a8b9b8ef380d2f20587cb2",
+            "role": "mechanism_proponent",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "status": "COMPLETE",
+            "unresolved_questions": [
+              "Does the declared discriminator separate this mechanism from its rivals and null?"
+            ]
+          },
+          "S-ACTIVE-LINEAGE-M2": {
+            "action_ids": [
+              "ACTION-S-ACTIVE-LINEAGE-M2-PRIVATE"
+            ],
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+            "claims": [
+              {
+                "claim_id": "CLAIM-S-ACTIVE-LINEAGE-M2",
+                "falsifier": "Functional recovery consistently exceeds closure-only controls under matched conditions.",
+                "prediction": "Closure can occur without a matching improvement in functional water transport.",
+                "promotion_status": "REVIEW_REQUIRED",
+                "provenance": [
+                  "TRACE-S-ACTIVE-LINEAGE-M2"
+                ],
+                "statement": "Observed recovery is dominated by non-chemical physical crack closure.",
+                "support_region": "Crack-width and exposure conditions where closure can be separated from water-transport recovery."
+              }
+            ],
+            "mechanism_id": "S-ACTIVE-LINEAGE-M2",
+            "negative_searches": [
+              "No external search is authorized in the offline fixture."
+            ],
+            "proposed_next_actions": [
+              "Use the declared discriminator within the shared budget."
+            ],
+            "report_id": "sha256:b9b031f7b074f5a0551f38b2a5d36949c6fc5ae7dcd0292f740b48a1cb149053",
+            "role": "mechanism_proponent",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "status": "COMPLETE",
+            "unresolved_questions": [
+              "Does the declared discriminator separate this mechanism from its rivals and null?"
+            ]
+          },
+          "S-ACTIVE-LINEAGE-NULL": {
+            "action_ids": [
+              "ACTION-S-ACTIVE-LINEAGE-NULL-PRIVATE"
+            ],
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+            "claims": [
+              {
+                "claim_id": "CLAIM-S-ACTIVE-LINEAGE-NULL",
+                "falsifier": "A preregistered mechanism-specific discriminator separates a candidate from the control.",
+                "prediction": "A process-matched control is indistinguishable from each proposed mechanism.",
+                "promotion_status": "REVIEW_REQUIRED",
+                "provenance": [
+                  "TRACE-S-ACTIVE-LINEAGE-NULL"
+                ],
+                "statement": "No reproducible mechanism-specific recovery is present under the declared conditions.",
+                "support_region": "The declared case domain and measurement endpoint only."
+              }
+            ],
+            "mechanism_id": "S-ACTIVE-LINEAGE-NULL",
+            "negative_searches": [
+              "No external search is authorized in the offline fixture."
+            ],
+            "proposed_next_actions": [
+              "Use the declared discriminator within the shared budget."
+            ],
+            "report_id": "sha256:6c2f52c3f8cb78522290a7c7d7eccdd069d57de28df53604b8279f7435850e20",
+            "role": "mechanism_proponent",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "status": "COMPLETE",
+            "unresolved_questions": [
+              "Does the declared discriminator separate this mechanism from its rivals and null?"
+            ]
+          }
+        },
+        "protocol_version": "g10m.1-mechanism-proponent-society",
+        "roster": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "mechanisms": [
+            {
+              "case_id": "S-ACTIVE-LINEAGE",
+              "falsifiers": [
+                "Matched specimens without reactive lime-rich regions recover identically under the same exposure."
+              ],
+              "kind": "CANDIDATE",
+              "known_alternatives": [
+                "S-ACTIVE-LINEAGE-M2",
+                "S-ACTIVE-LINEAGE-NULL"
+              ],
+              "mechanism_id": "S-ACTIVE-LINEAGE-M1",
+              "mechanism_statement": "A localized reactive lime reservoir drives functional recovery after damage.",
+              "predicted_observations": [
+                "Recovery should track the presence and exposure of reactive lime-rich regions."
+              ],
+              "prior_basis": "Offline mechanism fixture derived from the problem context; not established evidence.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "Modern lime-pozzolan mortar with identified lime-rich inclusions; transfer is unresolved."
+            },
+            {
+              "case_id": "S-ACTIVE-LINEAGE",
+              "falsifiers": [
+                "Functional recovery consistently exceeds closure-only controls under matched conditions."
+              ],
+              "kind": "CANDIDATE",
+              "known_alternatives": [
+                "S-ACTIVE-LINEAGE-M1",
+                "S-ACTIVE-LINEAGE-NULL"
+              ],
+              "mechanism_id": "S-ACTIVE-LINEAGE-M2",
+              "mechanism_statement": "Observed recovery is dominated by non-chemical physical crack closure.",
+              "predicted_observations": [
+                "Closure can occur without a matching improvement in functional water transport."
+              ],
+              "prior_basis": "Offline mechanism fixture derived from the problem context; not established evidence.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "Crack-width and exposure conditions where closure can be separated from water-transport recovery."
+            },
+            {
+              "case_id": "S-ACTIVE-LINEAGE",
+              "falsifiers": [
+                "A preregistered mechanism-specific discriminator separates a candidate from the control."
+              ],
+              "kind": "NULL",
+              "known_alternatives": [
+                "S-ACTIVE-LINEAGE-M1",
+                "S-ACTIVE-LINEAGE-M2"
+              ],
+              "mechanism_id": "S-ACTIVE-LINEAGE-NULL",
+              "mechanism_statement": "No reproducible mechanism-specific recovery is present under the declared conditions.",
+              "predicted_observations": [
+                "A process-matched control is indistinguishable from each proposed mechanism."
+              ],
+              "prior_basis": "Required null comparator for anti-anchoring; not a claim about the material.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "The declared case domain and measurement endpoint only."
+            },
+            {
+              "case_id": "S-ACTIVE-LINEAGE",
+              "falsifiers": [
+                "No distinct prediction or provenance can be supplied."
+              ],
+              "kind": "OPEN_SLOT",
+              "known_alternatives": [
+                "S-ACTIVE-LINEAGE-M1",
+                "S-ACTIVE-LINEAGE-M2",
+                "S-ACTIVE-LINEAGE-NULL"
+              ],
+              "mechanism_id": "S-ACTIVE-LINEAGE-OPEN",
+              "mechanism_statement": "Open slot for a mechanism introduced by bounded evidence or explicit uncertainty.",
+              "predicted_observations": [
+                "A newly admitted mechanism must state a distinct discriminator."
+              ],
+              "prior_basis": "Required discovery slot; empty until an admission record is accepted.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "Must be declared before any new mechanism is scored."
+            }
+          ],
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0"
+        },
+        "shared": true
+      },
+      "focus": {
+        "allocations": {
+          "S-ACTIVE-LINEAGE-M1": 1,
+          "S-ACTIVE-LINEAGE-M2": 1,
+          "S-ACTIVE-LINEAGE-NULL": 2,
+          "S-ACTIVE-LINEAGE-OPEN": 2
+        },
+        "ranked_mechanisms": [
+          "S-ACTIVE-LINEAGE-OPEN",
+          "S-ACTIVE-LINEAGE-M1",
+          "S-ACTIVE-LINEAGE-M2",
+          "S-ACTIVE-LINEAGE-NULL"
+        ],
+        "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+        "scores": {
+          "S-ACTIVE-LINEAGE-M1": 7,
+          "S-ACTIVE-LINEAGE-M2": 7,
+          "S-ACTIVE-LINEAGE-NULL": 8,
+          "S-ACTIVE-LINEAGE-OPEN": 3
+        },
+        "status": "ALLOCATED"
+      },
+      "ledger": {
+        "authority_note": "Derived mechanism and critique records remain REVIEW_REQUIRED; no record grants immutable-evidence, scientific, safety, laboratory, or external-communication authority.",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "credible_rival_ids": [
+          "S-ACTIVE-LINEAGE-M2",
+          "S-ACTIVE-LINEAGE-NULL"
+        ],
+        "events": [
+          {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-LINEAGE-M1-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-LINEAGE",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-LINEAGE-M1",
+                  "falsifier": "Matched specimens without reactive lime-rich regions recover identically under the same exposure.",
+                  "prediction": "Recovery should track the presence and exposure of reactive lime-rich regions.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-LINEAGE-M1"
+                  ],
+                  "statement": "A localized reactive lime reservoir drives functional recovery after damage.",
+                  "support_region": "Modern lime-pozzolan mortar with identified lime-rich inclusions; transfer is unresolved."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-LINEAGE-M1",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:41859b29a60cf761d9059be584d8bdd269db0f0806a8b9b8ef380d2f20587cb2",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-LINEAGE-M2-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-LINEAGE",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-LINEAGE-M2",
+                  "falsifier": "Functional recovery consistently exceeds closure-only controls under matched conditions.",
+                  "prediction": "Closure can occur without a matching improvement in functional water transport.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-LINEAGE-M2"
+                  ],
+                  "statement": "Observed recovery is dominated by non-chemical physical crack closure.",
+                  "support_region": "Crack-width and exposure conditions where closure can be separated from water-transport recovery."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-LINEAGE-M2",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:b9b031f7b074f5a0551f38b2a5d36949c6fc5ae7dcd0292f740b48a1cb149053",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-LINEAGE-NULL-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-LINEAGE",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-LINEAGE-NULL",
+                  "falsifier": "A preregistered mechanism-specific discriminator separates a candidate from the control.",
+                  "prediction": "A process-matched control is indistinguishable from each proposed mechanism.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-LINEAGE-NULL"
+                  ],
+                  "statement": "No reproducible mechanism-specific recovery is present under the declared conditions.",
+                  "support_region": "The declared case domain and measurement endpoint only."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-LINEAGE-NULL",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:6c2f52c3f8cb78522290a7c7d7eccdd069d57de28df53604b8279f7435850e20",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "event_type": "SHARE_PROPONENT_REPORTS",
+            "report_ids": [
+              "S-ACTIVE-LINEAGE-M1",
+              "S-ACTIVE-LINEAGE-M2",
+              "S-ACTIVE-LINEAGE-NULL"
+            ]
+          },
+          {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "critique": {
+              "auditor_role": "evidence_skeptic",
+              "case_id": "S-ACTIVE-LINEAGE",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-LINEAGE-M1"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:b93c8918440c7213ede79bc9364f5f74307e0449a313ff75bb471b25173a00f0",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "Recovery should track the presence and exposure of reactive lime-rich regions.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-LINEAGE-M1-evidence_skeptic"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-LINEAGE-M1"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "critique": {
+              "auditor_role": "transfer_boundary",
+              "case_id": "S-ACTIVE-LINEAGE",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-LINEAGE-M2"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:2a4ef3aa6812e00e928113f56057ef3ecba4490dad21d6894049cc8f96ad85b6",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "Closure can occur without a matching improvement in functional water transport.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-LINEAGE-M2-transfer_boundary"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-LINEAGE-M2"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "critique": {
+              "auditor_role": "experiment_simulation",
+              "case_id": "S-ACTIVE-LINEAGE",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-LINEAGE-NULL"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:0fa01f19ef6fbccee6c734bfb1a01a6dd2255590109b9db4675dca03019bf333",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "A process-matched control is indistinguishable from each proposed mechanism.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-LINEAGE-NULL-experiment_simulation"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-LINEAGE-NULL"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "event_type": "FOCUS_DECISION",
+            "focus": {
+              "allocations": {
+                "S-ACTIVE-LINEAGE-M1": 1,
+                "S-ACTIVE-LINEAGE-M2": 1,
+                "S-ACTIVE-LINEAGE-NULL": 2,
+                "S-ACTIVE-LINEAGE-OPEN": 2
+              },
+              "ranked_mechanisms": [
+                "S-ACTIVE-LINEAGE-OPEN",
+                "S-ACTIVE-LINEAGE-M1",
+                "S-ACTIVE-LINEAGE-M2",
+                "S-ACTIVE-LINEAGE-NULL"
+              ],
+              "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+              "scores": {
+                "S-ACTIVE-LINEAGE-M1": 7,
+                "S-ACTIVE-LINEAGE-M2": 7,
+                "S-ACTIVE-LINEAGE-NULL": 8,
+                "S-ACTIVE-LINEAGE-OPEN": 3
+              },
+              "status": "ALLOCATED"
+            }
+          }
+        ],
+        "focus_decision": {
+          "allocations": {
+            "S-ACTIVE-LINEAGE-M1": 1,
+            "S-ACTIVE-LINEAGE-M2": 1,
+            "S-ACTIVE-LINEAGE-NULL": 2,
+            "S-ACTIVE-LINEAGE-OPEN": 2
+          },
+          "ranked_mechanisms": [
+            "S-ACTIVE-LINEAGE-OPEN",
+            "S-ACTIVE-LINEAGE-M1",
+            "S-ACTIVE-LINEAGE-M2",
+            "S-ACTIVE-LINEAGE-NULL"
+          ],
+          "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+          "scores": {
+            "S-ACTIVE-LINEAGE-M1": 7,
+            "S-ACTIVE-LINEAGE-M2": 7,
+            "S-ACTIVE-LINEAGE-NULL": 8,
+            "S-ACTIVE-LINEAGE-OPEN": 3
+          },
+          "status": "ALLOCATED"
+        },
+        "leading_mechanism_id": "S-ACTIVE-LINEAGE-M1",
+        "ledger_id": "sha256:2b054667a8b8921c1e652a75cae706e41f5d26ff83e5e3021cd42c3f85dfb380",
+        "next_discriminating_action": "Run the cheapest declared observation that separates the provisional leader, a credible rival, and the null.",
+        "null_retained": true,
+        "protocol_version": "g10m.1-mechanism-proponent-society",
+        "roster_ids": [
+          "S-ACTIVE-LINEAGE-M1",
+          "S-ACTIVE-LINEAGE-M2",
+          "S-ACTIVE-LINEAGE-NULL",
+          "S-ACTIVE-LINEAGE-OPEN"
+        ],
+        "schema_version": "1.0",
+        "scoring": {
+          "advocacy_credit": 0,
+          "consensus_credit": 0,
+          "invalid_claim_count": 0,
+          "mechanism_count_credit": 0,
+          "null_retained": true,
+          "primary_score": 6,
+          "scoring_rule": "Only typed prediction/falsifier/provenance records and structural discriminators count; rhetoric, consensus, and mechanism count earn zero.",
+          "valid_claim_count": 3,
+          "valid_discriminator_count": 3
+        },
+        "status": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "case_id": "S-ACTIVE-ACCESS",
+      "checkpoint": {
+        "admitted": [],
+        "context_hash": "sha256:03f018be4ba01dbcd16900d7d2fb34628b4ebc2949d81ccc1b5dcd61b3dd8e3b",
+        "critiques": [
+          {
+            "auditor_role": "evidence_skeptic",
+            "case_id": "S-ACTIVE-ACCESS",
+            "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+            "claim_ids": [
+              "CLAIM-S-ACTIVE-ACCESS-M1"
+            ],
+            "contradiction_status": "UNRESOLVED",
+            "critique_id": "sha256:65464034bbd77bd7ac1d71767750e697267b37724b633affe383f03c80ae98a7",
+            "promotion_status": "REVIEW_REQUIRED",
+            "proposed_discriminator": "A page-level comparison will find matching intervention and endpoint descriptions.",
+            "provenance": [
+              "TRACE-CRITIQUE-S-ACTIVE-ACCESS-M1-evidence_skeptic"
+            ],
+            "schema_version": "1.0",
+            "target_mechanism_id": "S-ACTIVE-ACCESS-M1"
+          },
+          {
+            "auditor_role": "transfer_boundary",
+            "case_id": "S-ACTIVE-ACCESS",
+            "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+            "claim_ids": [
+              "CLAIM-S-ACTIVE-ACCESS-M2"
+            ],
+            "contradiction_status": "UNRESOLVED",
+            "critique_id": "sha256:e6d4665d7504c8804caccd28a26e66ff81553f1a33ca13550326cdb32d5113cd",
+            "promotion_status": "REVIEW_REQUIRED",
+            "proposed_discriminator": "Version comparison reveals a material difference in the reported study or endpoint.",
+            "provenance": [
+              "TRACE-CRITIQUE-S-ACTIVE-ACCESS-M2-transfer_boundary"
+            ],
+            "schema_version": "1.0",
+            "target_mechanism_id": "S-ACTIVE-ACCESS-M2"
+          },
+          {
+            "auditor_role": "experiment_simulation",
+            "case_id": "S-ACTIVE-ACCESS",
+            "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+            "claim_ids": [
+              "CLAIM-S-ACTIVE-ACCESS-NULL"
+            ],
+            "contradiction_status": "UNRESOLVED",
+            "critique_id": "sha256:81381baa12678e34f30d080fc564d75b79a0806e045157096b9ea087f1956ed1",
+            "promotion_status": "REVIEW_REQUIRED",
+            "proposed_discriminator": "The available record remains insufficient to distinguish the candidates.",
+            "provenance": [
+              "TRACE-CRITIQUE-S-ACTIVE-ACCESS-NULL-experiment_simulation"
+            ],
+            "schema_version": "1.0",
+            "target_mechanism_id": "S-ACTIVE-ACCESS-NULL"
+          }
+        ],
+        "events": {
+          "sha256:0a9ac9ce5608c896aeff440cb02d2b1a1f06ac5697bbc22581dc37814413e3e5": {
+            "case_id": "S-ACTIVE-ACCESS",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-ACCESS-NULL-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-ACCESS",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-ACCESS-NULL",
+                  "falsifier": "A lawful page-located comparison resolves the material ambiguity.",
+                  "prediction": "The available record remains insufficient to distinguish the candidates.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-ACCESS-NULL"
+                  ],
+                  "statement": "The available route cannot support a mechanism-level conclusion.",
+                  "support_region": "Rights, access, and version-equivalence boundary of the case."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-ACCESS-NULL",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:0a9ac9ce5608c896aeff440cb02d2b1a1f06ac5697bbc22581dc37814413e3e5",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          "sha256:1f07e1e6913eb4bcb53eb692aea57670ec06c48b48e141af9dd925507442c98a": {
+            "case_id": "S-ACTIVE-ACCESS",
+            "event_type": "FOCUS_DECISION",
+            "focus": {
+              "allocations": {
+                "S-ACTIVE-ACCESS-M1": 1,
+                "S-ACTIVE-ACCESS-M2": 1,
+                "S-ACTIVE-ACCESS-NULL": 2,
+                "S-ACTIVE-ACCESS-OPEN": 2
+              },
+              "ranked_mechanisms": [
+                "S-ACTIVE-ACCESS-OPEN",
+                "S-ACTIVE-ACCESS-M1",
+                "S-ACTIVE-ACCESS-M2",
+                "S-ACTIVE-ACCESS-NULL"
+              ],
+              "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+              "scores": {
+                "S-ACTIVE-ACCESS-M1": 7,
+                "S-ACTIVE-ACCESS-M2": 7,
+                "S-ACTIVE-ACCESS-NULL": 8,
+                "S-ACTIVE-ACCESS-OPEN": 3
+              },
+              "status": "ALLOCATED"
+            }
+          },
+          "sha256:65464034bbd77bd7ac1d71767750e697267b37724b633affe383f03c80ae98a7": {
+            "case_id": "S-ACTIVE-ACCESS",
+            "critique": {
+              "auditor_role": "evidence_skeptic",
+              "case_id": "S-ACTIVE-ACCESS",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-ACCESS-M1"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:65464034bbd77bd7ac1d71767750e697267b37724b633affe383f03c80ae98a7",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "A page-level comparison will find matching intervention and endpoint descriptions.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-ACCESS-M1-evidence_skeptic"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-ACCESS-M1"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          "sha256:81381baa12678e34f30d080fc564d75b79a0806e045157096b9ea087f1956ed1": {
+            "case_id": "S-ACTIVE-ACCESS",
+            "critique": {
+              "auditor_role": "experiment_simulation",
+              "case_id": "S-ACTIVE-ACCESS",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-ACCESS-NULL"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:81381baa12678e34f30d080fc564d75b79a0806e045157096b9ea087f1956ed1",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "The available record remains insufficient to distinguish the candidates.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-ACCESS-NULL-experiment_simulation"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-ACCESS-NULL"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          "sha256:848b6d230b754de4e32c0c5607963b1908c39aa29c2da5dc46235d24396fde6c": {
+            "case_id": "S-ACTIVE-ACCESS",
+            "event_type": "SHARE_PROPONENT_REPORTS",
+            "report_ids": [
+              "S-ACTIVE-ACCESS-M1",
+              "S-ACTIVE-ACCESS-M2",
+              "S-ACTIVE-ACCESS-NULL"
+            ]
+          },
+          "sha256:ca6311a02f56aafed263201e4245b93f34f5bba713fcc98532f6da6f2227012b": {
+            "case_id": "S-ACTIVE-ACCESS",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-ACCESS-M2-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-ACCESS",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-ACCESS-M2",
+                  "falsifier": "The public and canonical records are equivalent on every decision-relevant field.",
+                  "prediction": "Version comparison reveals a material difference in the reported study or endpoint.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-ACCESS-M2"
+                  ],
+                  "statement": "Access-path or version differences explain apparent support more than the intervention does.",
+                  "support_region": "Publisher, preprint, and rights/version comparison only."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-ACCESS-M2",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:ca6311a02f56aafed263201e4245b93f34f5bba713fcc98532f6da6f2227012b",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          "sha256:dd77411697e7c911ea07b6472050d3c25429840bb017e4c9160ed793bad128f6": {
+            "case_id": "S-ACTIVE-ACCESS",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-ACCESS-M1-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-ACCESS",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-ACCESS-M1",
+                  "falsifier": "The public copy differs on intervention, comparator, or endpoint in a decision-relevant way.",
+                  "prediction": "A page-level comparison will find matching intervention and endpoint descriptions.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-ACCESS-M1"
+                  ],
+                  "statement": "The accessible record is a version-equivalent window into the reported intervention.",
+                  "support_region": "Only the public-copy route and its version-equivalence evidence."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-ACCESS-M1",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:dd77411697e7c911ea07b6472050d3c25429840bb017e4c9160ed793bad128f6",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          "sha256:e6d4665d7504c8804caccd28a26e66ff81553f1a33ca13550326cdb32d5113cd": {
+            "case_id": "S-ACTIVE-ACCESS",
+            "critique": {
+              "auditor_role": "transfer_boundary",
+              "case_id": "S-ACTIVE-ACCESS",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-ACCESS-M2"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:e6d4665d7504c8804caccd28a26e66ff81553f1a33ca13550326cdb32d5113cd",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "Version comparison reveals a material difference in the reported study or endpoint.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-ACCESS-M2-transfer_boundary"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-ACCESS-M2"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          }
+        },
+        "focus": {
+          "allocations": {
+            "S-ACTIVE-ACCESS-M1": 1,
+            "S-ACTIVE-ACCESS-M2": 1,
+            "S-ACTIVE-ACCESS-NULL": 2,
+            "S-ACTIVE-ACCESS-OPEN": 2
+          },
+          "ranked_mechanisms": [
+            "S-ACTIVE-ACCESS-OPEN",
+            "S-ACTIVE-ACCESS-M1",
+            "S-ACTIVE-ACCESS-M2",
+            "S-ACTIVE-ACCESS-NULL"
+          ],
+          "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+          "scores": {
+            "S-ACTIVE-ACCESS-M1": 7,
+            "S-ACTIVE-ACCESS-M2": 7,
+            "S-ACTIVE-ACCESS-NULL": 8,
+            "S-ACTIVE-ACCESS-OPEN": 3
+          },
+          "status": "ALLOCATED"
+        },
+        "private_reports": {
+          "S-ACTIVE-ACCESS-M1": {
+            "action_ids": [
+              "ACTION-S-ACTIVE-ACCESS-M1-PRIVATE"
+            ],
+            "case_id": "S-ACTIVE-ACCESS",
+            "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+            "claims": [
+              {
+                "claim_id": "CLAIM-S-ACTIVE-ACCESS-M1",
+                "falsifier": "The public copy differs on intervention, comparator, or endpoint in a decision-relevant way.",
+                "prediction": "A page-level comparison will find matching intervention and endpoint descriptions.",
+                "promotion_status": "REVIEW_REQUIRED",
+                "provenance": [
+                  "TRACE-S-ACTIVE-ACCESS-M1"
+                ],
+                "statement": "The accessible record is a version-equivalent window into the reported intervention.",
+                "support_region": "Only the public-copy route and its version-equivalence evidence."
+              }
+            ],
+            "mechanism_id": "S-ACTIVE-ACCESS-M1",
+            "negative_searches": [
+              "No external search is authorized in the offline fixture."
+            ],
+            "proposed_next_actions": [
+              "Use the declared discriminator within the shared budget."
+            ],
+            "report_id": "sha256:dd77411697e7c911ea07b6472050d3c25429840bb017e4c9160ed793bad128f6",
+            "role": "mechanism_proponent",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "status": "COMPLETE",
+            "unresolved_questions": [
+              "Does the declared discriminator separate this mechanism from its rivals and null?"
+            ]
+          },
+          "S-ACTIVE-ACCESS-M2": {
+            "action_ids": [
+              "ACTION-S-ACTIVE-ACCESS-M2-PRIVATE"
+            ],
+            "case_id": "S-ACTIVE-ACCESS",
+            "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+            "claims": [
+              {
+                "claim_id": "CLAIM-S-ACTIVE-ACCESS-M2",
+                "falsifier": "The public and canonical records are equivalent on every decision-relevant field.",
+                "prediction": "Version comparison reveals a material difference in the reported study or endpoint.",
+                "promotion_status": "REVIEW_REQUIRED",
+                "provenance": [
+                  "TRACE-S-ACTIVE-ACCESS-M2"
+                ],
+                "statement": "Access-path or version differences explain apparent support more than the intervention does.",
+                "support_region": "Publisher, preprint, and rights/version comparison only."
+              }
+            ],
+            "mechanism_id": "S-ACTIVE-ACCESS-M2",
+            "negative_searches": [
+              "No external search is authorized in the offline fixture."
+            ],
+            "proposed_next_actions": [
+              "Use the declared discriminator within the shared budget."
+            ],
+            "report_id": "sha256:ca6311a02f56aafed263201e4245b93f34f5bba713fcc98532f6da6f2227012b",
+            "role": "mechanism_proponent",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "status": "COMPLETE",
+            "unresolved_questions": [
+              "Does the declared discriminator separate this mechanism from its rivals and null?"
+            ]
+          },
+          "S-ACTIVE-ACCESS-NULL": {
+            "action_ids": [
+              "ACTION-S-ACTIVE-ACCESS-NULL-PRIVATE"
+            ],
+            "case_id": "S-ACTIVE-ACCESS",
+            "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+            "claims": [
+              {
+                "claim_id": "CLAIM-S-ACTIVE-ACCESS-NULL",
+                "falsifier": "A lawful page-located comparison resolves the material ambiguity.",
+                "prediction": "The available record remains insufficient to distinguish the candidates.",
+                "promotion_status": "REVIEW_REQUIRED",
+                "provenance": [
+                  "TRACE-S-ACTIVE-ACCESS-NULL"
+                ],
+                "statement": "The available route cannot support a mechanism-level conclusion.",
+                "support_region": "Rights, access, and version-equivalence boundary of the case."
+              }
+            ],
+            "mechanism_id": "S-ACTIVE-ACCESS-NULL",
+            "negative_searches": [
+              "No external search is authorized in the offline fixture."
+            ],
+            "proposed_next_actions": [
+              "Use the declared discriminator within the shared budget."
+            ],
+            "report_id": "sha256:0a9ac9ce5608c896aeff440cb02d2b1a1f06ac5697bbc22581dc37814413e3e5",
+            "role": "mechanism_proponent",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "status": "COMPLETE",
+            "unresolved_questions": [
+              "Does the declared discriminator separate this mechanism from its rivals and null?"
+            ]
+          }
+        },
+        "protocol_version": "g10m.1-mechanism-proponent-society",
+        "roster": {
+          "case_id": "S-ACTIVE-ACCESS",
+          "mechanisms": [
+            {
+              "case_id": "S-ACTIVE-ACCESS",
+              "falsifiers": [
+                "The public copy differs on intervention, comparator, or endpoint in a decision-relevant way."
+              ],
+              "kind": "CANDIDATE",
+              "known_alternatives": [
+                "S-ACTIVE-ACCESS-M2",
+                "S-ACTIVE-ACCESS-NULL"
+              ],
+              "mechanism_id": "S-ACTIVE-ACCESS-M1",
+              "mechanism_statement": "The accessible record is a version-equivalent window into the reported intervention.",
+              "predicted_observations": [
+                "A page-level comparison will find matching intervention and endpoint descriptions."
+              ],
+              "prior_basis": "Offline mechanism fixture for access interpretation; not an empirical promotion.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "Only the public-copy route and its version-equivalence evidence."
+            },
+            {
+              "case_id": "S-ACTIVE-ACCESS",
+              "falsifiers": [
+                "The public and canonical records are equivalent on every decision-relevant field."
+              ],
+              "kind": "CANDIDATE",
+              "known_alternatives": [
+                "S-ACTIVE-ACCESS-M1",
+                "S-ACTIVE-ACCESS-NULL"
+              ],
+              "mechanism_id": "S-ACTIVE-ACCESS-M2",
+              "mechanism_statement": "Access-path or version differences explain apparent support more than the intervention does.",
+              "predicted_observations": [
+                "Version comparison reveals a material difference in the reported study or endpoint."
+              ],
+              "prior_basis": "Offline mechanism fixture for access ambiguity; not an empirical promotion.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "Publisher, preprint, and rights/version comparison only."
+            },
+            {
+              "case_id": "S-ACTIVE-ACCESS",
+              "falsifiers": [
+                "A lawful page-located comparison resolves the material ambiguity."
+              ],
+              "kind": "NULL",
+              "known_alternatives": [
+                "S-ACTIVE-ACCESS-M1",
+                "S-ACTIVE-ACCESS-M2"
+              ],
+              "mechanism_id": "S-ACTIVE-ACCESS-NULL",
+              "mechanism_statement": "The available route cannot support a mechanism-level conclusion.",
+              "predicted_observations": [
+                "The available record remains insufficient to distinguish the candidates."
+              ],
+              "prior_basis": "Required null comparator for access uncertainty.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "Rights, access, and version-equivalence boundary of the case."
+            },
+            {
+              "case_id": "S-ACTIVE-ACCESS",
+              "falsifiers": [
+                "No distinct prediction or provenance can be supplied."
+              ],
+              "kind": "OPEN_SLOT",
+              "known_alternatives": [
+                "S-ACTIVE-ACCESS-M1",
+                "S-ACTIVE-ACCESS-M2",
+                "S-ACTIVE-ACCESS-NULL"
+              ],
+              "mechanism_id": "S-ACTIVE-ACCESS-OPEN",
+              "mechanism_statement": "Open slot for a distinct access or version mechanism supported by a bounded record.",
+              "predicted_observations": [
+                "A new mechanism must predict a distinct version or rights discriminator."
+              ],
+              "prior_basis": "Required discovery slot.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "Must be declared before any new mechanism is scored."
+            }
+          ],
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0"
+        },
+        "shared": true
+      },
+      "focus": {
+        "allocations": {
+          "S-ACTIVE-ACCESS-M1": 1,
+          "S-ACTIVE-ACCESS-M2": 1,
+          "S-ACTIVE-ACCESS-NULL": 2,
+          "S-ACTIVE-ACCESS-OPEN": 2
+        },
+        "ranked_mechanisms": [
+          "S-ACTIVE-ACCESS-OPEN",
+          "S-ACTIVE-ACCESS-M1",
+          "S-ACTIVE-ACCESS-M2",
+          "S-ACTIVE-ACCESS-NULL"
+        ],
+        "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+        "scores": {
+          "S-ACTIVE-ACCESS-M1": 7,
+          "S-ACTIVE-ACCESS-M2": 7,
+          "S-ACTIVE-ACCESS-NULL": 8,
+          "S-ACTIVE-ACCESS-OPEN": 3
+        },
+        "status": "ALLOCATED"
+      },
+      "ledger": {
+        "authority_note": "Derived mechanism and critique records remain REVIEW_REQUIRED; no record grants immutable-evidence, scientific, safety, laboratory, or external-communication authority.",
+        "case_id": "S-ACTIVE-ACCESS",
+        "credible_rival_ids": [
+          "S-ACTIVE-ACCESS-M2",
+          "S-ACTIVE-ACCESS-NULL"
+        ],
+        "events": [
+          {
+            "case_id": "S-ACTIVE-ACCESS",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-ACCESS-M1-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-ACCESS",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-ACCESS-M1",
+                  "falsifier": "The public copy differs on intervention, comparator, or endpoint in a decision-relevant way.",
+                  "prediction": "A page-level comparison will find matching intervention and endpoint descriptions.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-ACCESS-M1"
+                  ],
+                  "statement": "The accessible record is a version-equivalent window into the reported intervention.",
+                  "support_region": "Only the public-copy route and its version-equivalence evidence."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-ACCESS-M1",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:dd77411697e7c911ea07b6472050d3c25429840bb017e4c9160ed793bad128f6",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          {
+            "case_id": "S-ACTIVE-ACCESS",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-ACCESS-M2-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-ACCESS",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-ACCESS-M2",
+                  "falsifier": "The public and canonical records are equivalent on every decision-relevant field.",
+                  "prediction": "Version comparison reveals a material difference in the reported study or endpoint.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-ACCESS-M2"
+                  ],
+                  "statement": "Access-path or version differences explain apparent support more than the intervention does.",
+                  "support_region": "Publisher, preprint, and rights/version comparison only."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-ACCESS-M2",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:ca6311a02f56aafed263201e4245b93f34f5bba713fcc98532f6da6f2227012b",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          {
+            "case_id": "S-ACTIVE-ACCESS",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-ACCESS-NULL-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-ACCESS",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-ACCESS-NULL",
+                  "falsifier": "A lawful page-located comparison resolves the material ambiguity.",
+                  "prediction": "The available record remains insufficient to distinguish the candidates.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-ACCESS-NULL"
+                  ],
+                  "statement": "The available route cannot support a mechanism-level conclusion.",
+                  "support_region": "Rights, access, and version-equivalence boundary of the case."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-ACCESS-NULL",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:0a9ac9ce5608c896aeff440cb02d2b1a1f06ac5697bbc22581dc37814413e3e5",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          {
+            "case_id": "S-ACTIVE-ACCESS",
+            "event_type": "SHARE_PROPONENT_REPORTS",
+            "report_ids": [
+              "S-ACTIVE-ACCESS-M1",
+              "S-ACTIVE-ACCESS-M2",
+              "S-ACTIVE-ACCESS-NULL"
+            ]
+          },
+          {
+            "case_id": "S-ACTIVE-ACCESS",
+            "critique": {
+              "auditor_role": "evidence_skeptic",
+              "case_id": "S-ACTIVE-ACCESS",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-ACCESS-M1"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:65464034bbd77bd7ac1d71767750e697267b37724b633affe383f03c80ae98a7",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "A page-level comparison will find matching intervention and endpoint descriptions.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-ACCESS-M1-evidence_skeptic"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-ACCESS-M1"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          {
+            "case_id": "S-ACTIVE-ACCESS",
+            "critique": {
+              "auditor_role": "transfer_boundary",
+              "case_id": "S-ACTIVE-ACCESS",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-ACCESS-M2"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:e6d4665d7504c8804caccd28a26e66ff81553f1a33ca13550326cdb32d5113cd",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "Version comparison reveals a material difference in the reported study or endpoint.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-ACCESS-M2-transfer_boundary"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-ACCESS-M2"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          {
+            "case_id": "S-ACTIVE-ACCESS",
+            "critique": {
+              "auditor_role": "experiment_simulation",
+              "case_id": "S-ACTIVE-ACCESS",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-ACCESS-NULL"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:81381baa12678e34f30d080fc564d75b79a0806e045157096b9ea087f1956ed1",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "The available record remains insufficient to distinguish the candidates.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-ACCESS-NULL-experiment_simulation"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-ACCESS-NULL"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          {
+            "case_id": "S-ACTIVE-ACCESS",
+            "event_type": "FOCUS_DECISION",
+            "focus": {
+              "allocations": {
+                "S-ACTIVE-ACCESS-M1": 1,
+                "S-ACTIVE-ACCESS-M2": 1,
+                "S-ACTIVE-ACCESS-NULL": 2,
+                "S-ACTIVE-ACCESS-OPEN": 2
+              },
+              "ranked_mechanisms": [
+                "S-ACTIVE-ACCESS-OPEN",
+                "S-ACTIVE-ACCESS-M1",
+                "S-ACTIVE-ACCESS-M2",
+                "S-ACTIVE-ACCESS-NULL"
+              ],
+              "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+              "scores": {
+                "S-ACTIVE-ACCESS-M1": 7,
+                "S-ACTIVE-ACCESS-M2": 7,
+                "S-ACTIVE-ACCESS-NULL": 8,
+                "S-ACTIVE-ACCESS-OPEN": 3
+              },
+              "status": "ALLOCATED"
+            }
+          }
+        ],
+        "focus_decision": {
+          "allocations": {
+            "S-ACTIVE-ACCESS-M1": 1,
+            "S-ACTIVE-ACCESS-M2": 1,
+            "S-ACTIVE-ACCESS-NULL": 2,
+            "S-ACTIVE-ACCESS-OPEN": 2
+          },
+          "ranked_mechanisms": [
+            "S-ACTIVE-ACCESS-OPEN",
+            "S-ACTIVE-ACCESS-M1",
+            "S-ACTIVE-ACCESS-M2",
+            "S-ACTIVE-ACCESS-NULL"
+          ],
+          "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+          "scores": {
+            "S-ACTIVE-ACCESS-M1": 7,
+            "S-ACTIVE-ACCESS-M2": 7,
+            "S-ACTIVE-ACCESS-NULL": 8,
+            "S-ACTIVE-ACCESS-OPEN": 3
+          },
+          "status": "ALLOCATED"
+        },
+        "leading_mechanism_id": "S-ACTIVE-ACCESS-M1",
+        "ledger_id": "sha256:a3e540b9acda0855bbee3301ca1e38fd1060558b5d4407479a75c5bf9622ebb6",
+        "next_discriminating_action": "Run the cheapest declared observation that separates the provisional leader, a credible rival, and the null.",
+        "null_retained": true,
+        "protocol_version": "g10m.1-mechanism-proponent-society",
+        "roster_ids": [
+          "S-ACTIVE-ACCESS-M1",
+          "S-ACTIVE-ACCESS-M2",
+          "S-ACTIVE-ACCESS-NULL",
+          "S-ACTIVE-ACCESS-OPEN"
+        ],
+        "schema_version": "1.0",
+        "scoring": {
+          "advocacy_credit": 0,
+          "consensus_credit": 0,
+          "invalid_claim_count": 0,
+          "mechanism_count_credit": 0,
+          "null_retained": true,
+          "primary_score": 6,
+          "scoring_rule": "Only typed prediction/falsifier/provenance records and structural discriminators count; rhetoric, consensus, and mechanism count earn zero.",
+          "valid_claim_count": 3,
+          "valid_discriminator_count": 3
+        },
+        "status": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "case_id": "S-ACTIVE-SIM",
+      "checkpoint": {
+        "admitted": [],
+        "context_hash": "sha256:63f9976744410e51024f976065549f37361bebbbd89168fa5b0154c6830c2223",
+        "critiques": [
+          {
+            "auditor_role": "evidence_skeptic",
+            "case_id": "S-ACTIVE-SIM",
+            "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+            "claim_ids": [
+              "CLAIM-S-ACTIVE-SIM-M1"
+            ],
+            "contradiction_status": "UNRESOLVED",
+            "critique_id": "sha256:4fa969b6a42387e5cb1c3e6d2f541a2aa90065f0e96a90a3cd9b6e90fdd2eff7",
+            "promotion_status": "REVIEW_REQUIRED",
+            "proposed_discriminator": "A declared validation artifact is required before executable predictions count.",
+            "provenance": [
+              "TRACE-CRITIQUE-S-ACTIVE-SIM-M1-evidence_skeptic"
+            ],
+            "schema_version": "1.0",
+            "target_mechanism_id": "S-ACTIVE-SIM-M1"
+          },
+          {
+            "auditor_role": "transfer_boundary",
+            "case_id": "S-ACTIVE-SIM",
+            "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+            "claim_ids": [
+              "CLAIM-S-ACTIVE-SIM-M2"
+            ],
+            "contradiction_status": "UNRESOLVED",
+            "critique_id": "sha256:347a407b30dbf46486a967fce5312607ffdd5e8c4709e7d6535c5c9b18226c1e",
+            "promotion_status": "REVIEW_REQUIRED",
+            "proposed_discriminator": "The paper supports a typed hypothesis but no live simulation call is eligible.",
+            "provenance": [
+              "TRACE-CRITIQUE-S-ACTIVE-SIM-M2-transfer_boundary"
+            ],
+            "schema_version": "1.0",
+            "target_mechanism_id": "S-ACTIVE-SIM-M2"
+          },
+          {
+            "auditor_role": "experiment_simulation",
+            "case_id": "S-ACTIVE-SIM",
+            "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+            "claim_ids": [
+              "CLAIM-S-ACTIVE-SIM-NULL"
+            ],
+            "contradiction_status": "UNRESOLVED",
+            "critique_id": "sha256:46828071b998ed19facef525ecb83fa6c58bf001a1014701430db812d4182b5a",
+            "promotion_status": "REVIEW_REQUIRED",
+            "proposed_discriminator": "The case remains simulator-unavailable and requires physical or validated feedback.",
+            "provenance": [
+              "TRACE-CRITIQUE-S-ACTIVE-SIM-NULL-experiment_simulation"
+            ],
+            "schema_version": "1.0",
+            "target_mechanism_id": "S-ACTIVE-SIM-NULL"
+          }
+        ],
+        "events": {
+          "sha256:1f7befe470a9ec7b7db01c1d1932ab29d4cc4db38c953913002adbb5027b110b": {
+            "case_id": "S-ACTIVE-SIM",
+            "event_type": "SHARE_PROPONENT_REPORTS",
+            "report_ids": [
+              "S-ACTIVE-SIM-M1",
+              "S-ACTIVE-SIM-M2",
+              "S-ACTIVE-SIM-NULL"
+            ]
+          },
+          "sha256:2cadce8195aea0458ab30feeaf3823e783939a18803bb66d3641e36d3b6ec1e1": {
+            "case_id": "S-ACTIVE-SIM",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-SIM-M2-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-SIM",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-SIM-M2",
+                  "falsifier": "A pre-existing validated adapter with declared inputs and outputs is found.",
+                  "prediction": "The paper supports a typed hypothesis but no live simulation call is eligible.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-SIM-M2"
+                  ],
+                  "statement": "The record is useful only as a model assertion and not as an executable simulator.",
+                  "support_region": "Evidence interpretation without validated execution."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-SIM-M2",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:2cadce8195aea0458ab30feeaf3823e783939a18803bb66d3641e36d3b6ec1e1",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          "sha256:347a407b30dbf46486a967fce5312607ffdd5e8c4709e7d6535c5c9b18226c1e": {
+            "case_id": "S-ACTIVE-SIM",
+            "critique": {
+              "auditor_role": "transfer_boundary",
+              "case_id": "S-ACTIVE-SIM",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-SIM-M2"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:347a407b30dbf46486a967fce5312607ffdd5e8c4709e7d6535c5c9b18226c1e",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "The paper supports a typed hypothesis but no live simulation call is eligible.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-SIM-M2-transfer_boundary"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-SIM-M2"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          "sha256:42ce2e5801f7783055c35168afb00d532ba0887bd4878212342af29d5f075bf7": {
+            "case_id": "S-ACTIVE-SIM",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-SIM-M1-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-SIM",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-SIM-M1",
+                  "falsifier": "No validation artifact or support-region statement can be located.",
+                  "prediction": "A declared validation artifact is required before executable predictions count.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-SIM-M1"
+                  ],
+                  "statement": "The simulation record can constrain a mechanism only inside a declared support region.",
+                  "support_region": "The paper's reported lime-mortar model domain; no Roman-concrete performance extrapolation."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-SIM-M1",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:42ce2e5801f7783055c35168afb00d532ba0887bd4878212342af29d5f075bf7",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          "sha256:46828071b998ed19facef525ecb83fa6c58bf001a1014701430db812d4182b5a": {
+            "case_id": "S-ACTIVE-SIM",
+            "critique": {
+              "auditor_role": "experiment_simulation",
+              "case_id": "S-ACTIVE-SIM",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-SIM-NULL"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:46828071b998ed19facef525ecb83fa6c58bf001a1014701430db812d4182b5a",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "The case remains simulator-unavailable and requires physical or validated feedback.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-SIM-NULL-experiment_simulation"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-SIM-NULL"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          "sha256:4fa969b6a42387e5cb1c3e6d2f541a2aa90065f0e96a90a3cd9b6e90fdd2eff7": {
+            "case_id": "S-ACTIVE-SIM",
+            "critique": {
+              "auditor_role": "evidence_skeptic",
+              "case_id": "S-ACTIVE-SIM",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-SIM-M1"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:4fa969b6a42387e5cb1c3e6d2f541a2aa90065f0e96a90a3cd9b6e90fdd2eff7",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "A declared validation artifact is required before executable predictions count.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-SIM-M1-evidence_skeptic"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-SIM-M1"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          "sha256:dbc56d96aba64183a9f108cdc6bf52abe591f707c3fed8d4b85fb0edf4c26172": {
+            "case_id": "S-ACTIVE-SIM",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-SIM-NULL-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-SIM",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-SIM-NULL",
+                  "falsifier": "A validated adapter is identified before the manifest freezes.",
+                  "prediction": "The case remains simulator-unavailable and requires physical or validated feedback.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-SIM-NULL"
+                  ],
+                  "statement": "No simulator-backed mechanism conclusion is eligible.",
+                  "support_region": "The declared simulation and evidence authority boundary."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-SIM-NULL",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:dbc56d96aba64183a9f108cdc6bf52abe591f707c3fed8d4b85fb0edf4c26172",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          "sha256:dfaed6bde26ef4cfcd38437b2bb55cc876bcfcfd6ab3a4a170fb1f0668110f0f": {
+            "case_id": "S-ACTIVE-SIM",
+            "event_type": "FOCUS_DECISION",
+            "focus": {
+              "allocations": {
+                "S-ACTIVE-SIM-M1": 1,
+                "S-ACTIVE-SIM-M2": 1,
+                "S-ACTIVE-SIM-NULL": 2,
+                "S-ACTIVE-SIM-OPEN": 2
+              },
+              "ranked_mechanisms": [
+                "S-ACTIVE-SIM-OPEN",
+                "S-ACTIVE-SIM-M1",
+                "S-ACTIVE-SIM-M2",
+                "S-ACTIVE-SIM-NULL"
+              ],
+              "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+              "scores": {
+                "S-ACTIVE-SIM-M1": 7,
+                "S-ACTIVE-SIM-M2": 7,
+                "S-ACTIVE-SIM-NULL": 8,
+                "S-ACTIVE-SIM-OPEN": 3
+              },
+              "status": "ALLOCATED"
+            }
+          }
+        },
+        "focus": {
+          "allocations": {
+            "S-ACTIVE-SIM-M1": 1,
+            "S-ACTIVE-SIM-M2": 1,
+            "S-ACTIVE-SIM-NULL": 2,
+            "S-ACTIVE-SIM-OPEN": 2
+          },
+          "ranked_mechanisms": [
+            "S-ACTIVE-SIM-OPEN",
+            "S-ACTIVE-SIM-M1",
+            "S-ACTIVE-SIM-M2",
+            "S-ACTIVE-SIM-NULL"
+          ],
+          "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+          "scores": {
+            "S-ACTIVE-SIM-M1": 7,
+            "S-ACTIVE-SIM-M2": 7,
+            "S-ACTIVE-SIM-NULL": 8,
+            "S-ACTIVE-SIM-OPEN": 3
+          },
+          "status": "ALLOCATED"
+        },
+        "private_reports": {
+          "S-ACTIVE-SIM-M1": {
+            "action_ids": [
+              "ACTION-S-ACTIVE-SIM-M1-PRIVATE"
+            ],
+            "case_id": "S-ACTIVE-SIM",
+            "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+            "claims": [
+              {
+                "claim_id": "CLAIM-S-ACTIVE-SIM-M1",
+                "falsifier": "No validation artifact or support-region statement can be located.",
+                "prediction": "A declared validation artifact is required before executable predictions count.",
+                "promotion_status": "REVIEW_REQUIRED",
+                "provenance": [
+                  "TRACE-S-ACTIVE-SIM-M1"
+                ],
+                "statement": "The simulation record can constrain a mechanism only inside a declared support region.",
+                "support_region": "The paper's reported lime-mortar model domain; no Roman-concrete performance extrapolation."
+              }
+            ],
+            "mechanism_id": "S-ACTIVE-SIM-M1",
+            "negative_searches": [
+              "No external search is authorized in the offline fixture."
+            ],
+            "proposed_next_actions": [
+              "Use the declared discriminator within the shared budget."
+            ],
+            "report_id": "sha256:42ce2e5801f7783055c35168afb00d532ba0887bd4878212342af29d5f075bf7",
+            "role": "mechanism_proponent",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "status": "COMPLETE",
+            "unresolved_questions": [
+              "Does the declared discriminator separate this mechanism from its rivals and null?"
+            ]
+          },
+          "S-ACTIVE-SIM-M2": {
+            "action_ids": [
+              "ACTION-S-ACTIVE-SIM-M2-PRIVATE"
+            ],
+            "case_id": "S-ACTIVE-SIM",
+            "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+            "claims": [
+              {
+                "claim_id": "CLAIM-S-ACTIVE-SIM-M2",
+                "falsifier": "A pre-existing validated adapter with declared inputs and outputs is found.",
+                "prediction": "The paper supports a typed hypothesis but no live simulation call is eligible.",
+                "promotion_status": "REVIEW_REQUIRED",
+                "provenance": [
+                  "TRACE-S-ACTIVE-SIM-M2"
+                ],
+                "statement": "The record is useful only as a model assertion and not as an executable simulator.",
+                "support_region": "Evidence interpretation without validated execution."
+              }
+            ],
+            "mechanism_id": "S-ACTIVE-SIM-M2",
+            "negative_searches": [
+              "No external search is authorized in the offline fixture."
+            ],
+            "proposed_next_actions": [
+              "Use the declared discriminator within the shared budget."
+            ],
+            "report_id": "sha256:2cadce8195aea0458ab30feeaf3823e783939a18803bb66d3641e36d3b6ec1e1",
+            "role": "mechanism_proponent",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "status": "COMPLETE",
+            "unresolved_questions": [
+              "Does the declared discriminator separate this mechanism from its rivals and null?"
+            ]
+          },
+          "S-ACTIVE-SIM-NULL": {
+            "action_ids": [
+              "ACTION-S-ACTIVE-SIM-NULL-PRIVATE"
+            ],
+            "case_id": "S-ACTIVE-SIM",
+            "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+            "claims": [
+              {
+                "claim_id": "CLAIM-S-ACTIVE-SIM-NULL",
+                "falsifier": "A validated adapter is identified before the manifest freezes.",
+                "prediction": "The case remains simulator-unavailable and requires physical or validated feedback.",
+                "promotion_status": "REVIEW_REQUIRED",
+                "provenance": [
+                  "TRACE-S-ACTIVE-SIM-NULL"
+                ],
+                "statement": "No simulator-backed mechanism conclusion is eligible.",
+                "support_region": "The declared simulation and evidence authority boundary."
+              }
+            ],
+            "mechanism_id": "S-ACTIVE-SIM-NULL",
+            "negative_searches": [
+              "No external search is authorized in the offline fixture."
+            ],
+            "proposed_next_actions": [
+              "Use the declared discriminator within the shared budget."
+            ],
+            "report_id": "sha256:dbc56d96aba64183a9f108cdc6bf52abe591f707c3fed8d4b85fb0edf4c26172",
+            "role": "mechanism_proponent",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "status": "COMPLETE",
+            "unresolved_questions": [
+              "Does the declared discriminator separate this mechanism from its rivals and null?"
+            ]
+          }
+        },
+        "protocol_version": "g10m.1-mechanism-proponent-society",
+        "roster": {
+          "case_id": "S-ACTIVE-SIM",
+          "mechanisms": [
+            {
+              "case_id": "S-ACTIVE-SIM",
+              "falsifiers": [
+                "No validation artifact or support-region statement can be located."
+              ],
+              "kind": "CANDIDATE",
+              "known_alternatives": [
+                "S-ACTIVE-SIM-M2",
+                "S-ACTIVE-SIM-NULL"
+              ],
+              "mechanism_id": "S-ACTIVE-SIM-M1",
+              "mechanism_statement": "The simulation record can constrain a mechanism only inside a declared support region.",
+              "predicted_observations": [
+                "A declared validation artifact is required before executable predictions count."
+              ],
+              "prior_basis": "Offline mechanism fixture for simulator-boundary reasoning.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "The paper's reported lime-mortar model domain; no Roman-concrete performance extrapolation."
+            },
+            {
+              "case_id": "S-ACTIVE-SIM",
+              "falsifiers": [
+                "A pre-existing validated adapter with declared inputs and outputs is found."
+              ],
+              "kind": "CANDIDATE",
+              "known_alternatives": [
+                "S-ACTIVE-SIM-M1",
+                "S-ACTIVE-SIM-NULL"
+              ],
+              "mechanism_id": "S-ACTIVE-SIM-M2",
+              "mechanism_statement": "The record is useful only as a model assertion and not as an executable simulator.",
+              "predicted_observations": [
+                "The paper supports a typed hypothesis but no live simulation call is eligible."
+              ],
+              "prior_basis": "Offline mechanism fixture for model-assertion boundaries.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "Evidence interpretation without validated execution."
+            },
+            {
+              "case_id": "S-ACTIVE-SIM",
+              "falsifiers": [
+                "A validated adapter is identified before the manifest freezes."
+              ],
+              "kind": "NULL",
+              "known_alternatives": [
+                "S-ACTIVE-SIM-M1",
+                "S-ACTIVE-SIM-M2"
+              ],
+              "mechanism_id": "S-ACTIVE-SIM-NULL",
+              "mechanism_statement": "No simulator-backed mechanism conclusion is eligible.",
+              "predicted_observations": [
+                "The case remains simulator-unavailable and requires physical or validated feedback."
+              ],
+              "prior_basis": "Required null comparator for unvalidated simulation.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "The declared simulation and evidence authority boundary."
+            },
+            {
+              "case_id": "S-ACTIVE-SIM",
+              "falsifiers": [
+                "No distinct prediction or provenance can be supplied."
+              ],
+              "kind": "OPEN_SLOT",
+              "known_alternatives": [
+                "S-ACTIVE-SIM-M1",
+                "S-ACTIVE-SIM-M2",
+                "S-ACTIVE-SIM-NULL"
+              ],
+              "mechanism_id": "S-ACTIVE-SIM-OPEN",
+              "mechanism_statement": "Open slot for a bounded simulator or mechanism interpretation introduced by admissible evidence.",
+              "predicted_observations": [
+                "A new mechanism must distinguish model assertion from validated execution."
+              ],
+              "prior_basis": "Required discovery slot.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "Must be declared before any new mechanism is scored."
+            }
+          ],
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0"
+        },
+        "shared": true
+      },
+      "focus": {
+        "allocations": {
+          "S-ACTIVE-SIM-M1": 1,
+          "S-ACTIVE-SIM-M2": 1,
+          "S-ACTIVE-SIM-NULL": 2,
+          "S-ACTIVE-SIM-OPEN": 2
+        },
+        "ranked_mechanisms": [
+          "S-ACTIVE-SIM-OPEN",
+          "S-ACTIVE-SIM-M1",
+          "S-ACTIVE-SIM-M2",
+          "S-ACTIVE-SIM-NULL"
+        ],
+        "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+        "scores": {
+          "S-ACTIVE-SIM-M1": 7,
+          "S-ACTIVE-SIM-M2": 7,
+          "S-ACTIVE-SIM-NULL": 8,
+          "S-ACTIVE-SIM-OPEN": 3
+        },
+        "status": "ALLOCATED"
+      },
+      "ledger": {
+        "authority_note": "Derived mechanism and critique records remain REVIEW_REQUIRED; no record grants immutable-evidence, scientific, safety, laboratory, or external-communication authority.",
+        "case_id": "S-ACTIVE-SIM",
+        "credible_rival_ids": [
+          "S-ACTIVE-SIM-M2",
+          "S-ACTIVE-SIM-NULL"
+        ],
+        "events": [
+          {
+            "case_id": "S-ACTIVE-SIM",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-SIM-M1-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-SIM",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-SIM-M1",
+                  "falsifier": "No validation artifact or support-region statement can be located.",
+                  "prediction": "A declared validation artifact is required before executable predictions count.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-SIM-M1"
+                  ],
+                  "statement": "The simulation record can constrain a mechanism only inside a declared support region.",
+                  "support_region": "The paper's reported lime-mortar model domain; no Roman-concrete performance extrapolation."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-SIM-M1",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:42ce2e5801f7783055c35168afb00d532ba0887bd4878212342af29d5f075bf7",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          {
+            "case_id": "S-ACTIVE-SIM",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-SIM-M2-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-SIM",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-SIM-M2",
+                  "falsifier": "A pre-existing validated adapter with declared inputs and outputs is found.",
+                  "prediction": "The paper supports a typed hypothesis but no live simulation call is eligible.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-SIM-M2"
+                  ],
+                  "statement": "The record is useful only as a model assertion and not as an executable simulator.",
+                  "support_region": "Evidence interpretation without validated execution."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-SIM-M2",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:2cadce8195aea0458ab30feeaf3823e783939a18803bb66d3641e36d3b6ec1e1",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          {
+            "case_id": "S-ACTIVE-SIM",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-SIM-NULL-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-SIM",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-SIM-NULL",
+                  "falsifier": "A validated adapter is identified before the manifest freezes.",
+                  "prediction": "The case remains simulator-unavailable and requires physical or validated feedback.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-SIM-NULL"
+                  ],
+                  "statement": "No simulator-backed mechanism conclusion is eligible.",
+                  "support_region": "The declared simulation and evidence authority boundary."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-SIM-NULL",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:dbc56d96aba64183a9f108cdc6bf52abe591f707c3fed8d4b85fb0edf4c26172",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          {
+            "case_id": "S-ACTIVE-SIM",
+            "event_type": "SHARE_PROPONENT_REPORTS",
+            "report_ids": [
+              "S-ACTIVE-SIM-M1",
+              "S-ACTIVE-SIM-M2",
+              "S-ACTIVE-SIM-NULL"
+            ]
+          },
+          {
+            "case_id": "S-ACTIVE-SIM",
+            "critique": {
+              "auditor_role": "evidence_skeptic",
+              "case_id": "S-ACTIVE-SIM",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-SIM-M1"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:4fa969b6a42387e5cb1c3e6d2f541a2aa90065f0e96a90a3cd9b6e90fdd2eff7",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "A declared validation artifact is required before executable predictions count.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-SIM-M1-evidence_skeptic"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-SIM-M1"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          {
+            "case_id": "S-ACTIVE-SIM",
+            "critique": {
+              "auditor_role": "transfer_boundary",
+              "case_id": "S-ACTIVE-SIM",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-SIM-M2"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:347a407b30dbf46486a967fce5312607ffdd5e8c4709e7d6535c5c9b18226c1e",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "The paper supports a typed hypothesis but no live simulation call is eligible.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-SIM-M2-transfer_boundary"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-SIM-M2"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          {
+            "case_id": "S-ACTIVE-SIM",
+            "critique": {
+              "auditor_role": "experiment_simulation",
+              "case_id": "S-ACTIVE-SIM",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-SIM-NULL"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:46828071b998ed19facef525ecb83fa6c58bf001a1014701430db812d4182b5a",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "The case remains simulator-unavailable and requires physical or validated feedback.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-SIM-NULL-experiment_simulation"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-SIM-NULL"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          {
+            "case_id": "S-ACTIVE-SIM",
+            "event_type": "FOCUS_DECISION",
+            "focus": {
+              "allocations": {
+                "S-ACTIVE-SIM-M1": 1,
+                "S-ACTIVE-SIM-M2": 1,
+                "S-ACTIVE-SIM-NULL": 2,
+                "S-ACTIVE-SIM-OPEN": 2
+              },
+              "ranked_mechanisms": [
+                "S-ACTIVE-SIM-OPEN",
+                "S-ACTIVE-SIM-M1",
+                "S-ACTIVE-SIM-M2",
+                "S-ACTIVE-SIM-NULL"
+              ],
+              "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+              "scores": {
+                "S-ACTIVE-SIM-M1": 7,
+                "S-ACTIVE-SIM-M2": 7,
+                "S-ACTIVE-SIM-NULL": 8,
+                "S-ACTIVE-SIM-OPEN": 3
+              },
+              "status": "ALLOCATED"
+            }
+          }
+        ],
+        "focus_decision": {
+          "allocations": {
+            "S-ACTIVE-SIM-M1": 1,
+            "S-ACTIVE-SIM-M2": 1,
+            "S-ACTIVE-SIM-NULL": 2,
+            "S-ACTIVE-SIM-OPEN": 2
+          },
+          "ranked_mechanisms": [
+            "S-ACTIVE-SIM-OPEN",
+            "S-ACTIVE-SIM-M1",
+            "S-ACTIVE-SIM-M2",
+            "S-ACTIVE-SIM-NULL"
+          ],
+          "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+          "scores": {
+            "S-ACTIVE-SIM-M1": 7,
+            "S-ACTIVE-SIM-M2": 7,
+            "S-ACTIVE-SIM-NULL": 8,
+            "S-ACTIVE-SIM-OPEN": 3
+          },
+          "status": "ALLOCATED"
+        },
+        "leading_mechanism_id": "S-ACTIVE-SIM-M1",
+        "ledger_id": "sha256:98c5b841178d2bd4fd164e04b592ae040fea3a8c7ea999dded6e86c84b4242e6",
+        "next_discriminating_action": "Run the cheapest declared observation that separates the provisional leader, a credible rival, and the null.",
+        "null_retained": true,
+        "protocol_version": "g10m.1-mechanism-proponent-society",
+        "roster_ids": [
+          "S-ACTIVE-SIM-M1",
+          "S-ACTIVE-SIM-M2",
+          "S-ACTIVE-SIM-NULL",
+          "S-ACTIVE-SIM-OPEN"
+        ],
+        "schema_version": "1.0",
+        "scoring": {
+          "advocacy_credit": 0,
+          "consensus_credit": 0,
+          "invalid_claim_count": 0,
+          "mechanism_count_credit": 0,
+          "null_retained": true,
+          "primary_score": 6,
+          "scoring_rule": "Only typed prediction/falsifier/provenance records and structural discriminators count; rhetoric, consensus, and mechanism count earn zero.",
+          "valid_claim_count": 3,
+          "valid_discriminator_count": 3
+        },
+        "status": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "case_id": "S-ACTIVE-TRANSFER",
+      "checkpoint": {
+        "admitted": [],
+        "context_hash": "sha256:3f2abe796c1c08b0eac299d667e03d94af60dc0255277723fe7ebd49c56c4a2c",
+        "critiques": [
+          {
+            "auditor_role": "evidence_skeptic",
+            "case_id": "S-ACTIVE-TRANSFER",
+            "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+            "claim_ids": [
+              "CLAIM-S-ACTIVE-TRANSFER-M1"
+            ],
+            "contradiction_status": "UNRESOLVED",
+            "critique_id": "sha256:7c2ddf997bf07e8dea27fd069966790883e8031b16dcb91db74420aacddcbbb6",
+            "promotion_status": "REVIEW_REQUIRED",
+            "proposed_discriminator": "A process-matched target experiment shows functional recovery beyond the control.",
+            "provenance": [
+              "TRACE-CRITIQUE-S-ACTIVE-TRANSFER-M1-evidence_skeptic"
+            ],
+            "schema_version": "1.0",
+            "target_mechanism_id": "S-ACTIVE-TRANSFER-M1"
+          },
+          {
+            "auditor_role": "transfer_boundary",
+            "case_id": "S-ACTIVE-TRANSFER",
+            "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+            "claim_ids": [
+              "CLAIM-S-ACTIVE-TRANSFER-M2"
+            ],
+            "contradiction_status": "UNRESOLVED",
+            "critique_id": "sha256:8b7ada26d7cb9bcd9ac5e203eaafaf4f7a3f9d376602aa8713e24575211ad012",
+            "promotion_status": "REVIEW_REQUIRED",
+            "proposed_discriminator": "The source supports a discriminator but not a direct target performance claim.",
+            "provenance": [
+              "TRACE-CRITIQUE-S-ACTIVE-TRANSFER-M2-transfer_boundary"
+            ],
+            "schema_version": "1.0",
+            "target_mechanism_id": "S-ACTIVE-TRANSFER-M2"
+          },
+          {
+            "auditor_role": "experiment_simulation",
+            "case_id": "S-ACTIVE-TRANSFER",
+            "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+            "claim_ids": [
+              "CLAIM-S-ACTIVE-TRANSFER-NULL"
+            ],
+            "contradiction_status": "UNRESOLVED",
+            "critique_id": "sha256:c0a0a85982e126f9c0582f44c00c556877fdd2615aa6e269c24da1c6546ec7cc",
+            "promotion_status": "REVIEW_REQUIRED",
+            "proposed_discriminator": "The record remains insufficient without a process-matched target comparison.",
+            "provenance": [
+              "TRACE-CRITIQUE-S-ACTIVE-TRANSFER-NULL-experiment_simulation"
+            ],
+            "schema_version": "1.0",
+            "target_mechanism_id": "S-ACTIVE-TRANSFER-NULL"
+          }
+        ],
+        "events": {
+          "sha256:14d3324ac15b5a89186df707d09307cec38eb731904cf86f51e3a06e23ddc5d3": {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-TRANSFER-M1-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-TRANSFER",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-TRANSFER-M1",
+                  "falsifier": "The effect disappears under a matched comparator or endpoint.",
+                  "prediction": "A process-matched target experiment shows functional recovery beyond the control.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-TRANSFER-M1"
+                  ],
+                  "statement": "Quicklime-associated chemistry can transfer to functional recovery in the target domain.",
+                  "support_region": "Only if material, process, comparator, and endpoint are sufficiently matched."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-TRANSFER-M1",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:14d3324ac15b5a89186df707d09307cec38eb731904cf86f51e3a06e23ddc5d3",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          "sha256:3050e5c5d639669c452f55e7dc81e1f548bc16cd08bc3262d99c327f1b74b99e": {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "event_type": "FOCUS_DECISION",
+            "focus": {
+              "allocations": {
+                "S-ACTIVE-TRANSFER-M1": 1,
+                "S-ACTIVE-TRANSFER-M2": 1,
+                "S-ACTIVE-TRANSFER-NULL": 2,
+                "S-ACTIVE-TRANSFER-OPEN": 2
+              },
+              "ranked_mechanisms": [
+                "S-ACTIVE-TRANSFER-OPEN",
+                "S-ACTIVE-TRANSFER-M1",
+                "S-ACTIVE-TRANSFER-M2",
+                "S-ACTIVE-TRANSFER-NULL"
+              ],
+              "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+              "scores": {
+                "S-ACTIVE-TRANSFER-M1": 7,
+                "S-ACTIVE-TRANSFER-M2": 7,
+                "S-ACTIVE-TRANSFER-NULL": 8,
+                "S-ACTIVE-TRANSFER-OPEN": 3
+              },
+              "status": "ALLOCATED"
+            }
+          },
+          "sha256:3a8949a87fc5bfa701ca89b1eb13faa978b29cc93187bb73d0be5350ba7a94ce": {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-TRANSFER-M2-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-TRANSFER",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-TRANSFER-M2",
+                  "falsifier": "A process-matched target-domain record reports the same intervention and functional endpoint.",
+                  "prediction": "The source supports a discriminator but not a direct target performance claim.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-TRANSFER-M2"
+                  ],
+                  "statement": "The observed quicklime record is a domain-limited transfer analogy rather than direct target support.",
+                  "support_region": "Cement-based records with a declared transfer boundary to hot-mixed lime-pozzolan mortar."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-TRANSFER-M2",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:3a8949a87fc5bfa701ca89b1eb13faa978b29cc93187bb73d0be5350ba7a94ce",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          "sha256:7c2ddf997bf07e8dea27fd069966790883e8031b16dcb91db74420aacddcbbb6": {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "critique": {
+              "auditor_role": "evidence_skeptic",
+              "case_id": "S-ACTIVE-TRANSFER",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-TRANSFER-M1"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:7c2ddf997bf07e8dea27fd069966790883e8031b16dcb91db74420aacddcbbb6",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "A process-matched target experiment shows functional recovery beyond the control.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-TRANSFER-M1-evidence_skeptic"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-TRANSFER-M1"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          "sha256:8b7ada26d7cb9bcd9ac5e203eaafaf4f7a3f9d376602aa8713e24575211ad012": {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "critique": {
+              "auditor_role": "transfer_boundary",
+              "case_id": "S-ACTIVE-TRANSFER",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-TRANSFER-M2"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:8b7ada26d7cb9bcd9ac5e203eaafaf4f7a3f9d376602aa8713e24575211ad012",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "The source supports a discriminator but not a direct target performance claim.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-TRANSFER-M2-transfer_boundary"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-TRANSFER-M2"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          "sha256:c0a0a85982e126f9c0582f44c00c556877fdd2615aa6e269c24da1c6546ec7cc": {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "critique": {
+              "auditor_role": "experiment_simulation",
+              "case_id": "S-ACTIVE-TRANSFER",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-TRANSFER-NULL"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:c0a0a85982e126f9c0582f44c00c556877fdd2615aa6e269c24da1c6546ec7cc",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "The record remains insufficient without a process-matched target comparison.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-TRANSFER-NULL-experiment_simulation"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-TRANSFER-NULL"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          "sha256:f38580dc432bf211a92f9ad98256090263d131f0162f43db4ffcc178d0a39ed4": {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-TRANSFER-NULL-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-TRANSFER",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-TRANSFER-NULL",
+                  "falsifier": "A direct target-domain record supplies a valid mechanism discriminator.",
+                  "prediction": "The record remains insufficient without a process-matched target comparison.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-TRANSFER-NULL"
+                  ],
+                  "statement": "The available record cannot distinguish a target-domain mechanism.",
+                  "support_region": "The declared material, process, comparator, and functional endpoint boundary."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-TRANSFER-NULL",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:f38580dc432bf211a92f9ad98256090263d131f0162f43db4ffcc178d0a39ed4",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          "sha256:fecd24716472ef1a95e2a677f3654f708a9fbe402033ea611278df26ca44f1a1": {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "event_type": "SHARE_PROPONENT_REPORTS",
+            "report_ids": [
+              "S-ACTIVE-TRANSFER-M1",
+              "S-ACTIVE-TRANSFER-M2",
+              "S-ACTIVE-TRANSFER-NULL"
+            ]
+          }
+        },
+        "focus": {
+          "allocations": {
+            "S-ACTIVE-TRANSFER-M1": 1,
+            "S-ACTIVE-TRANSFER-M2": 1,
+            "S-ACTIVE-TRANSFER-NULL": 2,
+            "S-ACTIVE-TRANSFER-OPEN": 2
+          },
+          "ranked_mechanisms": [
+            "S-ACTIVE-TRANSFER-OPEN",
+            "S-ACTIVE-TRANSFER-M1",
+            "S-ACTIVE-TRANSFER-M2",
+            "S-ACTIVE-TRANSFER-NULL"
+          ],
+          "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+          "scores": {
+            "S-ACTIVE-TRANSFER-M1": 7,
+            "S-ACTIVE-TRANSFER-M2": 7,
+            "S-ACTIVE-TRANSFER-NULL": 8,
+            "S-ACTIVE-TRANSFER-OPEN": 3
+          },
+          "status": "ALLOCATED"
+        },
+        "private_reports": {
+          "S-ACTIVE-TRANSFER-M1": {
+            "action_ids": [
+              "ACTION-S-ACTIVE-TRANSFER-M1-PRIVATE"
+            ],
+            "case_id": "S-ACTIVE-TRANSFER",
+            "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+            "claims": [
+              {
+                "claim_id": "CLAIM-S-ACTIVE-TRANSFER-M1",
+                "falsifier": "The effect disappears under a matched comparator or endpoint.",
+                "prediction": "A process-matched target experiment shows functional recovery beyond the control.",
+                "promotion_status": "REVIEW_REQUIRED",
+                "provenance": [
+                  "TRACE-S-ACTIVE-TRANSFER-M1"
+                ],
+                "statement": "Quicklime-associated chemistry can transfer to functional recovery in the target domain.",
+                "support_region": "Only if material, process, comparator, and endpoint are sufficiently matched."
+              }
+            ],
+            "mechanism_id": "S-ACTIVE-TRANSFER-M1",
+            "negative_searches": [
+              "No external search is authorized in the offline fixture."
+            ],
+            "proposed_next_actions": [
+              "Use the declared discriminator within the shared budget."
+            ],
+            "report_id": "sha256:14d3324ac15b5a89186df707d09307cec38eb731904cf86f51e3a06e23ddc5d3",
+            "role": "mechanism_proponent",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "status": "COMPLETE",
+            "unresolved_questions": [
+              "Does the declared discriminator separate this mechanism from its rivals and null?"
+            ]
+          },
+          "S-ACTIVE-TRANSFER-M2": {
+            "action_ids": [
+              "ACTION-S-ACTIVE-TRANSFER-M2-PRIVATE"
+            ],
+            "case_id": "S-ACTIVE-TRANSFER",
+            "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+            "claims": [
+              {
+                "claim_id": "CLAIM-S-ACTIVE-TRANSFER-M2",
+                "falsifier": "A process-matched target-domain record reports the same intervention and functional endpoint.",
+                "prediction": "The source supports a discriminator but not a direct target performance claim.",
+                "promotion_status": "REVIEW_REQUIRED",
+                "provenance": [
+                  "TRACE-S-ACTIVE-TRANSFER-M2"
+                ],
+                "statement": "The observed quicklime record is a domain-limited transfer analogy rather than direct target support.",
+                "support_region": "Cement-based records with a declared transfer boundary to hot-mixed lime-pozzolan mortar."
+              }
+            ],
+            "mechanism_id": "S-ACTIVE-TRANSFER-M2",
+            "negative_searches": [
+              "No external search is authorized in the offline fixture."
+            ],
+            "proposed_next_actions": [
+              "Use the declared discriminator within the shared budget."
+            ],
+            "report_id": "sha256:3a8949a87fc5bfa701ca89b1eb13faa978b29cc93187bb73d0be5350ba7a94ce",
+            "role": "mechanism_proponent",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "status": "COMPLETE",
+            "unresolved_questions": [
+              "Does the declared discriminator separate this mechanism from its rivals and null?"
+            ]
+          },
+          "S-ACTIVE-TRANSFER-NULL": {
+            "action_ids": [
+              "ACTION-S-ACTIVE-TRANSFER-NULL-PRIVATE"
+            ],
+            "case_id": "S-ACTIVE-TRANSFER",
+            "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+            "claims": [
+              {
+                "claim_id": "CLAIM-S-ACTIVE-TRANSFER-NULL",
+                "falsifier": "A direct target-domain record supplies a valid mechanism discriminator.",
+                "prediction": "The record remains insufficient without a process-matched target comparison.",
+                "promotion_status": "REVIEW_REQUIRED",
+                "provenance": [
+                  "TRACE-S-ACTIVE-TRANSFER-NULL"
+                ],
+                "statement": "The available record cannot distinguish a target-domain mechanism.",
+                "support_region": "The declared material, process, comparator, and functional endpoint boundary."
+              }
+            ],
+            "mechanism_id": "S-ACTIVE-TRANSFER-NULL",
+            "negative_searches": [
+              "No external search is authorized in the offline fixture."
+            ],
+            "proposed_next_actions": [
+              "Use the declared discriminator within the shared budget."
+            ],
+            "report_id": "sha256:f38580dc432bf211a92f9ad98256090263d131f0162f43db4ffcc178d0a39ed4",
+            "role": "mechanism_proponent",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "status": "COMPLETE",
+            "unresolved_questions": [
+              "Does the declared discriminator separate this mechanism from its rivals and null?"
+            ]
+          }
+        },
+        "protocol_version": "g10m.1-mechanism-proponent-society",
+        "roster": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "mechanisms": [
+            {
+              "case_id": "S-ACTIVE-TRANSFER",
+              "falsifiers": [
+                "The effect disappears under a matched comparator or endpoint."
+              ],
+              "kind": "CANDIDATE",
+              "known_alternatives": [
+                "S-ACTIVE-TRANSFER-M2",
+                "S-ACTIVE-TRANSFER-NULL"
+              ],
+              "mechanism_id": "S-ACTIVE-TRANSFER-M1",
+              "mechanism_statement": "Quicklime-associated chemistry can transfer to functional recovery in the target domain.",
+              "predicted_observations": [
+                "A process-matched target experiment shows functional recovery beyond the control."
+              ],
+              "prior_basis": "Offline mechanism fixture from the transfer case; not direct evidence.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "Only if material, process, comparator, and endpoint are sufficiently matched."
+            },
+            {
+              "case_id": "S-ACTIVE-TRANSFER",
+              "falsifiers": [
+                "A process-matched target-domain record reports the same intervention and functional endpoint."
+              ],
+              "kind": "CANDIDATE",
+              "known_alternatives": [
+                "S-ACTIVE-TRANSFER-M1",
+                "S-ACTIVE-TRANSFER-NULL"
+              ],
+              "mechanism_id": "S-ACTIVE-TRANSFER-M2",
+              "mechanism_statement": "The observed quicklime record is a domain-limited transfer analogy rather than direct target support.",
+              "predicted_observations": [
+                "The source supports a discriminator but not a direct target performance claim."
+              ],
+              "prior_basis": "Offline mechanism fixture for transfer skepticism.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "Cement-based records with a declared transfer boundary to hot-mixed lime-pozzolan mortar."
+            },
+            {
+              "case_id": "S-ACTIVE-TRANSFER",
+              "falsifiers": [
+                "A direct target-domain record supplies a valid mechanism discriminator."
+              ],
+              "kind": "NULL",
+              "known_alternatives": [
+                "S-ACTIVE-TRANSFER-M1",
+                "S-ACTIVE-TRANSFER-M2"
+              ],
+              "mechanism_id": "S-ACTIVE-TRANSFER-NULL",
+              "mechanism_statement": "The available record cannot distinguish a target-domain mechanism.",
+              "predicted_observations": [
+                "The record remains insufficient without a process-matched target comparison."
+              ],
+              "prior_basis": "Required null comparator for transfer uncertainty.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "The declared material, process, comparator, and functional endpoint boundary."
+            },
+            {
+              "case_id": "S-ACTIVE-TRANSFER",
+              "falsifiers": [
+                "No distinct prediction or provenance can be supplied."
+              ],
+              "kind": "OPEN_SLOT",
+              "known_alternatives": [
+                "S-ACTIVE-TRANSFER-M1",
+                "S-ACTIVE-TRANSFER-M2",
+                "S-ACTIVE-TRANSFER-NULL"
+              ],
+              "mechanism_id": "S-ACTIVE-TRANSFER-OPEN",
+              "mechanism_statement": "Open slot for a new transfer or target mechanism introduced by bounded evidence.",
+              "predicted_observations": [
+                "A new mechanism must state a target-domain discriminator."
+              ],
+              "prior_basis": "Required discovery slot.",
+              "promotion_status": "REVIEW_REQUIRED",
+              "schema_version": "1.0",
+              "support_region": "Must be declared before any new mechanism is scored."
+            }
+          ],
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0"
+        },
+        "shared": true
+      },
+      "focus": {
+        "allocations": {
+          "S-ACTIVE-TRANSFER-M1": 1,
+          "S-ACTIVE-TRANSFER-M2": 1,
+          "S-ACTIVE-TRANSFER-NULL": 2,
+          "S-ACTIVE-TRANSFER-OPEN": 2
+        },
+        "ranked_mechanisms": [
+          "S-ACTIVE-TRANSFER-OPEN",
+          "S-ACTIVE-TRANSFER-M1",
+          "S-ACTIVE-TRANSFER-M2",
+          "S-ACTIVE-TRANSFER-NULL"
+        ],
+        "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+        "scores": {
+          "S-ACTIVE-TRANSFER-M1": 7,
+          "S-ACTIVE-TRANSFER-M2": 7,
+          "S-ACTIVE-TRANSFER-NULL": 8,
+          "S-ACTIVE-TRANSFER-OPEN": 3
+        },
+        "status": "ALLOCATED"
+      },
+      "ledger": {
+        "authority_note": "Derived mechanism and critique records remain REVIEW_REQUIRED; no record grants immutable-evidence, scientific, safety, laboratory, or external-communication authority.",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "credible_rival_ids": [
+          "S-ACTIVE-TRANSFER-M2",
+          "S-ACTIVE-TRANSFER-NULL"
+        ],
+        "events": [
+          {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-TRANSFER-M1-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-TRANSFER",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-TRANSFER-M1",
+                  "falsifier": "The effect disappears under a matched comparator or endpoint.",
+                  "prediction": "A process-matched target experiment shows functional recovery beyond the control.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-TRANSFER-M1"
+                  ],
+                  "statement": "Quicklime-associated chemistry can transfer to functional recovery in the target domain.",
+                  "support_region": "Only if material, process, comparator, and endpoint are sufficiently matched."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-TRANSFER-M1",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:14d3324ac15b5a89186df707d09307cec38eb731904cf86f51e3a06e23ddc5d3",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-TRANSFER-M2-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-TRANSFER",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-TRANSFER-M2",
+                  "falsifier": "A process-matched target-domain record reports the same intervention and functional endpoint.",
+                  "prediction": "The source supports a discriminator but not a direct target performance claim.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-TRANSFER-M2"
+                  ],
+                  "statement": "The observed quicklime record is a domain-limited transfer analogy rather than direct target support.",
+                  "support_region": "Cement-based records with a declared transfer boundary to hot-mixed lime-pozzolan mortar."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-TRANSFER-M2",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:3a8949a87fc5bfa701ca89b1eb13faa978b29cc93187bb73d0be5350ba7a94ce",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "event_type": "PRIVATE_PROPONENT_REPORT",
+            "report": {
+              "action_ids": [
+                "ACTION-S-ACTIVE-TRANSFER-NULL-PRIVATE"
+              ],
+              "case_id": "S-ACTIVE-TRANSFER",
+              "claimed_contribution": "Typed mechanism proposal with a falsifier; not evidence of truth.",
+              "claims": [
+                {
+                  "claim_id": "CLAIM-S-ACTIVE-TRANSFER-NULL",
+                  "falsifier": "A direct target-domain record supplies a valid mechanism discriminator.",
+                  "prediction": "The record remains insufficient without a process-matched target comparison.",
+                  "promotion_status": "REVIEW_REQUIRED",
+                  "provenance": [
+                    "TRACE-S-ACTIVE-TRANSFER-NULL"
+                  ],
+                  "statement": "The available record cannot distinguish a target-domain mechanism.",
+                  "support_region": "The declared material, process, comparator, and functional endpoint boundary."
+                }
+              ],
+              "mechanism_id": "S-ACTIVE-TRANSFER-NULL",
+              "negative_searches": [
+                "No external search is authorized in the offline fixture."
+              ],
+              "proposed_next_actions": [
+                "Use the declared discriminator within the shared budget."
+              ],
+              "report_id": "sha256:f38580dc432bf211a92f9ad98256090263d131f0162f43db4ffcc178d0a39ed4",
+              "role": "mechanism_proponent",
+              "schema_version": "1.0",
+              "source_candidate_ids": [],
+              "status": "COMPLETE",
+              "unresolved_questions": [
+                "Does the declared discriminator separate this mechanism from its rivals and null?"
+              ]
+            }
+          },
+          {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "event_type": "SHARE_PROPONENT_REPORTS",
+            "report_ids": [
+              "S-ACTIVE-TRANSFER-M1",
+              "S-ACTIVE-TRANSFER-M2",
+              "S-ACTIVE-TRANSFER-NULL"
+            ]
+          },
+          {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "critique": {
+              "auditor_role": "evidence_skeptic",
+              "case_id": "S-ACTIVE-TRANSFER",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-TRANSFER-M1"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:7c2ddf997bf07e8dea27fd069966790883e8031b16dcb91db74420aacddcbbb6",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "A process-matched target experiment shows functional recovery beyond the control.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-TRANSFER-M1-evidence_skeptic"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-TRANSFER-M1"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "critique": {
+              "auditor_role": "transfer_boundary",
+              "case_id": "S-ACTIVE-TRANSFER",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-TRANSFER-M2"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:8b7ada26d7cb9bcd9ac5e203eaafaf4f7a3f9d376602aa8713e24575211ad012",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "The source supports a discriminator but not a direct target performance claim.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-TRANSFER-M2-transfer_boundary"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-TRANSFER-M2"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "critique": {
+              "auditor_role": "experiment_simulation",
+              "case_id": "S-ACTIVE-TRANSFER",
+              "challenge": "Check provenance, support-region fit, and whether the prediction distinguishes this mechanism from a rival and the null.",
+              "claim_ids": [
+                "CLAIM-S-ACTIVE-TRANSFER-NULL"
+              ],
+              "contradiction_status": "UNRESOLVED",
+              "critique_id": "sha256:c0a0a85982e126f9c0582f44c00c556877fdd2615aa6e269c24da1c6546ec7cc",
+              "promotion_status": "REVIEW_REQUIRED",
+              "proposed_discriminator": "The record remains insufficient without a process-matched target comparison.",
+              "provenance": [
+                "TRACE-CRITIQUE-S-ACTIVE-TRANSFER-NULL-experiment_simulation"
+              ],
+              "schema_version": "1.0",
+              "target_mechanism_id": "S-ACTIVE-TRANSFER-NULL"
+            },
+            "event_type": "STRUCTURAL_CRITIQUE"
+          },
+          {
+            "case_id": "S-ACTIVE-TRANSFER",
+            "event_type": "FOCUS_DECISION",
+            "focus": {
+              "allocations": {
+                "S-ACTIVE-TRANSFER-M1": 1,
+                "S-ACTIVE-TRANSFER-M2": 1,
+                "S-ACTIVE-TRANSFER-NULL": 2,
+                "S-ACTIVE-TRANSFER-OPEN": 2
+              },
+              "ranked_mechanisms": [
+                "S-ACTIVE-TRANSFER-OPEN",
+                "S-ACTIVE-TRANSFER-M1",
+                "S-ACTIVE-TRANSFER-M2",
+                "S-ACTIVE-TRANSFER-NULL"
+              ],
+              "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+              "scores": {
+                "S-ACTIVE-TRANSFER-M1": 7,
+                "S-ACTIVE-TRANSFER-M2": 7,
+                "S-ACTIVE-TRANSFER-NULL": 8,
+                "S-ACTIVE-TRANSFER-OPEN": 3
+              },
+              "status": "ALLOCATED"
+            }
+          }
+        ],
+        "focus_decision": {
+          "allocations": {
+            "S-ACTIVE-TRANSFER-M1": 1,
+            "S-ACTIVE-TRANSFER-M2": 1,
+            "S-ACTIVE-TRANSFER-NULL": 2,
+            "S-ACTIVE-TRANSFER-OPEN": 2
+          },
+          "ranked_mechanisms": [
+            "S-ACTIVE-TRANSFER-OPEN",
+            "S-ACTIVE-TRANSFER-M1",
+            "S-ACTIVE-TRANSFER-M2",
+            "S-ACTIVE-TRANSFER-NULL"
+          ],
+          "rationale": "Deterministic allocation from discrimination, uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget; votes are not an input.",
+          "scores": {
+            "S-ACTIVE-TRANSFER-M1": 7,
+            "S-ACTIVE-TRANSFER-M2": 7,
+            "S-ACTIVE-TRANSFER-NULL": 8,
+            "S-ACTIVE-TRANSFER-OPEN": 3
+          },
+          "status": "ALLOCATED"
+        },
+        "leading_mechanism_id": "S-ACTIVE-TRANSFER-M1",
+        "ledger_id": "sha256:8b33e83972ede2de573ec113074bc0d7a8baff34b1957ae55daf0d5d0aaacf06",
+        "next_discriminating_action": "Run the cheapest declared observation that separates the provisional leader, a credible rival, and the null.",
+        "null_retained": true,
+        "protocol_version": "g10m.1-mechanism-proponent-society",
+        "roster_ids": [
+          "S-ACTIVE-TRANSFER-M1",
+          "S-ACTIVE-TRANSFER-M2",
+          "S-ACTIVE-TRANSFER-NULL",
+          "S-ACTIVE-TRANSFER-OPEN"
+        ],
+        "schema_version": "1.0",
+        "scoring": {
+          "advocacy_credit": 0,
+          "consensus_credit": 0,
+          "invalid_claim_count": 0,
+          "mechanism_count_credit": 0,
+          "null_retained": true,
+          "primary_score": 6,
+          "scoring_rule": "Only typed prediction/falsifier/provenance records and structural discriminators count; rhetoric, consensus, and mechanism count earn zero.",
+          "valid_claim_count": 3,
+          "valid_discriminator_count": 3
+        },
+        "status": "REVIEW_REQUIRED"
+      }
+    }
+  ],
+  "phase_b_authorized": false,
+  "protocol_version": "g10m.1-mechanism-proponent-society",
+  "roster_audit": {
+    "cases": [
+      {
+        "candidate_count": 2,
+        "case_id": "D-ACTIVE-01",
+        "mechanism_count": 4,
+        "null_ids": [
+          "D-ACTIVE-01-NULL"
+        ],
+        "open_slot_ids": [
+          "D-ACTIVE-01-OPEN"
+        ],
+        "passes": true
+      },
+      {
+        "candidate_count": 2,
+        "case_id": "D-ACTIVE-02",
+        "mechanism_count": 4,
+        "null_ids": [
+          "D-ACTIVE-02-NULL"
+        ],
+        "open_slot_ids": [
+          "D-ACTIVE-02-OPEN"
+        ],
+        "passes": true
+      },
+      {
+        "candidate_count": 2,
+        "case_id": "S-ACTIVE-LINEAGE",
+        "mechanism_count": 4,
+        "null_ids": [
+          "S-ACTIVE-LINEAGE-NULL"
+        ],
+        "open_slot_ids": [
+          "S-ACTIVE-LINEAGE-OPEN"
+        ],
+        "passes": true
+      },
+      {
+        "candidate_count": 2,
+        "case_id": "S-ACTIVE-ACCESS",
+        "mechanism_count": 4,
+        "null_ids": [
+          "S-ACTIVE-ACCESS-NULL"
+        ],
+        "open_slot_ids": [
+          "S-ACTIVE-ACCESS-OPEN"
+        ],
+        "passes": true
+      },
+      {
+        "candidate_count": 2,
+        "case_id": "S-ACTIVE-SIM",
+        "mechanism_count": 4,
+        "null_ids": [
+          "S-ACTIVE-SIM-NULL"
+        ],
+        "open_slot_ids": [
+          "S-ACTIVE-SIM-OPEN"
+        ],
+        "passes": true
+      },
+      {
+        "candidate_count": 2,
+        "case_id": "S-ACTIVE-TRANSFER",
+        "mechanism_count": 4,
+        "null_ids": [
+          "S-ACTIVE-TRANSFER-NULL"
+        ],
+        "open_slot_ids": [
+          "S-ACTIVE-TRANSFER-OPEN"
+        ],
+        "passes": true
+      }
+    ],
+    "passes": true
+  },
+  "sealed_case_count": 4,
+  "status": "MECHANISM_SOCIETY_READY"
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/mechanism-tournament-ledger.schema.json",
+  "title": "Mechanism tournament ledger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "ledger_id", "case_id", "protocol_version", "roster_ids", "events", "focus_decision", "leading_mechanism_id", "credible_rival_ids", "null_retained", "next_discriminating_action", "authority_note", "scoring", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "ledger_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "protocol_version": {"type": "string", "minLength": 1},
+    "roster_ids": {"type": "array", "items": {"type": "string"}, "minItems": 4},
+    "events": {"type": "array", "items": {"type": "object"}},
+    "focus_decision": {"type": "object"},
+    "leading_mechanism_id": {"type": ["string", "null"]},
+    "credible_rival_ids": {"type": "array", "items": {"type": "string"}},
+    "null_retained": {"type": "boolean"},
+    "next_discriminating_action": {"type": "string", "minLength": 1},
+    "authority_note": {"type": "string", "minLength": 1},
+    "scoring": {"type": "object"},
+    "status": {"enum": ["REVIEW_REQUIRED", "ABSTAIN", "BUDGET_EXHAUSTED"]}
+  }
+}

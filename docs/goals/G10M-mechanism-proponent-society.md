@@ -1,6 +1,6 @@
 # G10M — Mechanism-proponent society design
 
-**Status:** planned
+**Status:** complete
 **Dependencies:** G10R Phase A complete under `g10r.3-active-investigation-pilot`; G09 complete; G10B complete with any verdict; G-LI complete
 **Advances:** upgrades the active-investigation society from structural search branches alone to a two-layer tournament in which competing mechanism proponents are challenged and resourced by structural investigators
 

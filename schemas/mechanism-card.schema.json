@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/mechanism-card.schema.json",
+  "title": "Mechanism card",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_id", "mechanism_id", "kind", "mechanism_statement", "support_region", "prior_basis", "predicted_observations", "falsifiers", "known_alternatives", "promotion_status"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "case_id": {"type": "string", "minLength": 1},
+    "mechanism_id": {"type": "string", "pattern": "^[A-Za-z0-9._-]+$"},
+    "kind": {"enum": ["CANDIDATE", "NULL", "OPEN_SLOT"]},
+    "mechanism_statement": {"type": "string", "minLength": 1},
+    "support_region": {"type": "string", "minLength": 1},
+    "prior_basis": {"type": "string", "minLength": 1},
+    "predicted_observations": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1},
+    "falsifiers": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1},
+    "known_alternatives": {"type": "array", "items": {"type": "string"}},
+    "promotion_status": {"const": "REVIEW_REQUIRED"}
+  }
+}

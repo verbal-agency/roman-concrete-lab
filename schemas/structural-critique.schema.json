@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/structural-critique.schema.json",
+  "title": "Structural critique",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "critique_id", "case_id", "auditor_role", "target_mechanism_id", "claim_ids", "challenge", "contradiction_status", "proposed_discriminator", "provenance", "promotion_status"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "critique_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "auditor_role": {"enum": ["evidence_skeptic", "transfer_boundary", "experiment_simulation"]},
+    "target_mechanism_id": {"type": "string", "minLength": 1},
+    "claim_ids": {"type": "array", "items": {"type": "string"}},
+    "challenge": {"type": "string", "minLength": 1},
+    "contradiction_status": {"enum": ["NO_CONTRADICTION_FOUND", "CONTRADICTION_FOUND", "UNRESOLVED"]},
+    "proposed_discriminator": {"type": "string", "minLength": 1},
+    "provenance": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "promotion_status": {"const": "REVIEW_REQUIRED"}
+  }
+}
