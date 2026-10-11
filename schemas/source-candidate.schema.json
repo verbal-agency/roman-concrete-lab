@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/source-candidate.schema.json",
+  "title": "SourceCandidate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source_candidate_id",
+    "problem_id",
+    "problem_version",
+    "title",
+    "locator",
+    "discovery_query",
+    "host",
+    "access_class",
+    "rights_state",
+    "content_hash",
+    "deduplication_key",
+    "support_region",
+    "contradiction_ids",
+    "status"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "source_candidate_id": {"type": "string", "minLength": 1},
+    "problem_id": {"type": "string", "minLength": 1},
+    "problem_version": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "locator": {"type": "string", "format": "uri"},
+    "content_locator": {"type": ["string", "null"], "format": "uri"},
+    "discovery_query": {"type": "string"},
+    "host": {"type": "string", "minLength": 1},
+    "access_class": {"enum": ["PUBLIC", "METADATA_ONLY", "RESTRICTED", "UNKNOWN"]},
+    "rights_state": {"enum": ["PERMITTED", "METADATA_ONLY", "RIGHTS_BLOCKED", "REVIEW_REQUIRED"]},
+    "content_hash": {"type": ["string", "null"], "pattern": "^sha256:"},
+    "deduplication_key": {"type": "string", "minLength": 1},
+    "support_region": {"type": "string", "minLength": 1},
+    "contradiction_ids": {"type": "array", "items": {"type": "string"}},
+    "status": {"enum": ["DISCOVERED", "METADATA_SCREENED", "CANDIDATE", "EVIDENCE_PENDING", "ADMISSIBLE_FOR_REVIEW", "REJECTED", "DUPLICATE", "RIGHTS_BLOCKED", "UNSUPPORTED", "ABSTAIN"]}
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/investigation-portfolio.schema.json",
+  "title": "InvestigationPortfolio",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_id", "status", "summary", "source_candidate_ids", "hypotheses", "leading_hypothesis_id", "credible_rival_ids", "unresolved_disputes", "negative_searches", "next_discriminating_action", "authority_note"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "case_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["ANSWER", "REVIEW_REQUIRED", "ABSTAIN"]},
+    "summary": {"type": "string", "minLength": 1},
+    "source_candidate_ids": {"type": "array", "items": {"type": "string"}},
+    "hypotheses": {"type": "array", "items": {"$ref": "lateral-hypothesis.schema.json"}},
+    "leading_hypothesis_id": {"type": ["string", "null"]},
+    "credible_rival_ids": {"type": "array", "items": {"type": "string"}},
+    "unresolved_disputes": {"type": "array", "items": {"type": "string"}},
+    "negative_searches": {"type": "array", "items": {"type": "string"}},
+    "next_discriminating_action": {"type": "string", "minLength": 1},
+    "authority_note": {"type": "string", "minLength": 1}
+  }
+}

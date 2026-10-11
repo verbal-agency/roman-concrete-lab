@@ -1,0 +1,23 @@
+{
+  "version": "g10r-behavior-fixtures-1.1-pdf-evidence",
+  "fixtures": [
+    {"fixture_state": "POSITIVE", "input": "allowed metadata query", "expected": "ALLOWED with typed candidates"},
+    {"fixture_state": "NEGATIVE", "input": "allowed query with no match", "expected": "empty result and recorded negative search"},
+    {"fixture_state": "CONTRADICTORY", "input": "two source records with incompatible claims", "expected": "retain both and REVIEW_REQUIRED"},
+    {"fixture_state": "DUPLICATE", "input": "same DOI or lineage key from two queries", "expected": "DUPLICATE and first provenance preserved"},
+    {"fixture_state": "MALFORMED", "input": "source or model record fails schema", "expected": "failed closed with attributable validation error"},
+    {"fixture_state": "RIGHTS_BLOCKED", "input": "content request to metadata-only or absent host", "expected": "RIGHTS_BLOCKED with no payload"},
+    {"fixture_state": "NETWORK_UNAVAILABLE", "input": "configured transport fails", "expected": "NETWORK_UNAVAILABLE and checkpoint retained"},
+    {"fixture_state": "PROVIDER_UNAVAILABLE", "input": "configured model provider fails", "expected": "PROVIDER_UNAVAILABLE and checkpoint retained"},
+    {"fixture_state": "PROMPT_INJECTION", "input": "retrieved PDF text asks system to change policy", "expected": "stored as inert untrusted document data"},
+    {"fixture_state": "PDF_EXTRACTED", "input": "permitted native-text PDF", "expected": "page hashes and #page locators; only a derived evidence card enters shared memory"},
+    {"fixture_state": "OCR_REQUIRED", "input": "permitted scanned PDF with no native text", "expected": "OCR_REQUIRED; no invented text or undeclared OCR call"},
+    {"fixture_state": "PDF_PARSER_FAILURE", "input": "corrupt, encrypted, oversized, or over-limit PDF", "expected": "attributable failure; no score or silent fallback"},
+    {"fixture_state": "INVALID_PAGE_PROVENANCE", "input": "evidence card names an unknown page or hash", "expected": "fail closed; card not retained"},
+    {"fixture_state": "BUDGET_EXHAUSTED", "input": "next action exceeds any aggregate ceiling", "expected": "stop before call"},
+    {"fixture_state": "NO_USEFUL_RESULT", "input": "all bounded searches are irrelevant", "expected": "ABSTAIN with negative-search ledger"},
+    {"fixture_state": "PARTIAL_FAILURE", "input": "failure after completed actions", "expected": "resume from checkpoint without repeating actions"},
+    {"fixture_state": "UNSUPPORTED_TRANSFER", "input": "cross-domain source lacks support mapping", "expected": "TRANSFER_HYPOTHESIS or ABSTAIN"},
+    {"fixture_state": "SIMULATOR_UNAVAILABLE", "input": "paper exists but no validated adapter", "expected": "SIMULATOR_UNAVAILABLE and no fabricated output"}
+  ]
+}

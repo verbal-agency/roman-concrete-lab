@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/paper-evidence-card.schema.json",
+  "title": "PaperEvidenceCard",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "card_id", "source_candidate_id", "document_hash", "parser", "extraction_status", "page_count", "facts", "unresolved", "authority_note"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "card_id": {"type": "string", "minLength": 1},
+    "source_candidate_id": {"type": "string", "minLength": 1},
+    "document_hash": {"type": "string", "pattern": "^sha256:"},
+    "parser": {"type": "string", "minLength": 1},
+    "extraction_status": {"enum": ["EXTRACTED", "PARTIAL", "OCR_REQUIRED", "ABSTAIN", "FAILED"]},
+    "page_count": {"type": "integer", "minimum": 0},
+    "facts": {
+      "type": "array",
+      "maxItems": 24,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["field", "value", "reporting_status", "support_type", "page_locator", "page_text_hash", "confidence"],
+        "properties": {
+          "field": {"enum": ["study_lineage", "material_process", "intervention", "comparator", "specimen_replicates", "damage_protocol", "exposure", "endpoint", "timepoint", "result", "null_result", "mechanism", "limitation"]},
+          "value": {"type": "string", "minLength": 1, "maxLength": 1200},
+          "reporting_status": {"enum": ["REPORTED", "NOT_REPORTED", "ILLEGIBLE", "AMBIGUOUS"]},
+          "support_type": {"enum": ["DIRECT", "TRANSFER", "CONTEXT", "CONTRADICTION"]},
+          "page_locator": {"type": "string", "pattern": "#page=[1-9][0-9]*$"},
+          "page_text_hash": {"type": "string", "pattern": "^sha256:"},
+          "confidence": {"enum": ["HIGH", "MEDIUM", "LOW"]}
+        }
+      }
+    },
+    "unresolved": {"type": "array", "items": {"type": "string", "minLength": 1}, "maxItems": 16},
+    "authority_note": {"const": "Derived extraction for review; no evidence promotion, performance claim, or laboratory authority."}
+  }
+}

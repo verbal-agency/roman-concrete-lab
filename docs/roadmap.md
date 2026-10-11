@@ -12,7 +12,7 @@ G-1 -> verdict-specific G00
           +-- exploration_seedability=EXPLORATION_SEEDABLE
           |       -> G00 EXPLORATORY_PLATFORM -> G-LR -> GP1 -> GP2 -> GP3 -> GP4
           |                                                    |
-          |                                                    +-- G07E deterministic tournament -> G09 exploratory release -> optional G10 -> optional G10R
+          |                                                    +-- G07E deterministic tournament -> G09 exploratory release -> G10 contract prototype -> optional G10B closed-world pilot -> optional G10R active-investigation pilot
           |                                                    +-- exploratory-only stop
           |                                                    +-- qualified partner (owner activated) -> GL1 -> GL2
           |
@@ -41,18 +41,20 @@ G-1 -> verdict-specific G00
                                                                        |
                                                                       GD1
                                                                        |
-                                                                optional G10
+                                                               G10 contract prototype
                                                                        |
-                                                                    optional G10R
+                                                            optional G10B closed-world pilot
+                                                                       |
+                                                            optional G10R active investigation
                                                                        |
                                                                       G11
 ```
 
 The diagram after G00 now has an explicit landscape-readiness stage before the exploratory and lab-dependent branches. `EXPLORATION_SEEDABLE` permits bounded candidate work, but discovery-grade hypothesis generation requires G-LR `LANDSCAPE_READY`; `LANDSCAPE_INCOMPLETE` may produce only provisional evidence-gap outputs. The pre-lab branch (`GP1`–`GP4`) may create evidence dossiers, hypotheses, study specifications, partner-readiness material, and a cross-question portfolio checkpoint without a lab, subject to that boundary. `GL1` is the external facility/safety gate; `GL2` requires returned physical results. The discovery branch (`GD1`) is unavailable until GL2 produces reproducible, comparable data. A `REPLICATION_STUDY_REQUIRED` verdict without a material candidate blocks physical planning. `EVIDENCE_SYNTHESIS_ONLY` may proceed through evidence infrastructure but cannot authorize predictive ranking merely by reaching a later goal.
 
-G09 accepts the evidence-gap package, the completed modeling branch, a completed physical-feedback discovery loop from GD1, or the model-free G07E tournament. G10 is not eligible until G09 releases a complete non-agent package. G10 is the closed-world agent ablation; G10R is the optional configured-retrieval extension for lateral research. G11 requires external expert review regardless of whether G10 or G10R executes.
+G09 accepts the evidence-gap package, the completed modeling branch, a completed physical-feedback discovery loop from GD1, or the model-free G07E tournament. G10 is not eligible until G09 releases a complete non-agent package. G10 is a closed-world contract prototype; its offline fixture outcome does not estimate real-model value. G10B is the optional real-model, non-ceiling signal pilot. G10R is the optional active-investigation pilot and follows G10B under any verdict: it compares one tool-using investigator with a branch-specialized society under identical aggregate retrieval, simulation, token, and cost budgets. G11 requires external expert review regardless of whether an agent or retrieval evaluation executes.
 
-The agent-society progression is deliberate: G07E defines the exploratory typed hypothesis layer, shared-memory permissions, deterministic tournament, and explicitly freezes the focus and promotion layers without models or agents; G07 remains the model-branch equivalent. G09 releases that loop without agents; G10 tests role-biased agents against it under identical evidence and budgets; G10R separately tests configured lawful retrieval for lateral research; G11 reviews any adopted society or retrieval capability before it appears in a lab handoff.
+The agent-society progression is deliberate: G07E defines the exploratory typed hypothesis layer, shared-memory permissions, deterministic tournament, and explicitly freezes the focus and promotion layers without models or agents; G07 remains the model-branch equivalent. G09 releases that loop without agents; G10 tests the contracts with an offline fixture prototype; G10B asks whether several roles improve closed-world analysis of the same packet; G10R asks the distinct question of whether protected branches improve active information acquisition when a same-budget single investigator can use the same lawful tools. A G10R society must earn credit through unique, source-backed evidence, hypotheses, or discriminators—not discourse or consensus. G11 reviews any capability adopted by a later evaluation before it appears in a lab handoff.
 
 G00 is now a problem-charter gate, not a commercialization, extraction, or agent-provider gate. It ratifies the Roman-concrete context, lawful current-plane data rights, conditional-ranking boundary, no-external-spend rule, and exploration NO-GO semantics. Commercial licensing is deferred to the GP3/G09 release decision; extraction quality thresholds apply only if the G03 branch becomes eligible; LLM/provider choices apply only at G10; and qualified scientist-of-record review is required at GL1/G11 before any physical handoff. Every G-LR and GP1–GP4 run must load the versioned context and contracts in `docs/protocols/exploration-contracts.md`; GP1 must also record the G-LR verdict and landscape manifest hash.
 
@@ -84,8 +86,9 @@ GP4 is the validated substrate checkpoint. G07E/G09 are the optional internal to
 | [G08](goals/G08-mechanistic-spike-and-synthesis.md) | Test one justified mechanistic model and synthesize without false fusion | G07 | model card and synthesis |
 | [G09](goals/G09-non-agent-prelab-release.md) | Release the reproducible non-agent context, memory, hypothesis, focus, feedback, and pre-lab package | G05A, G08, GD1, or G07E | versioned non-agent release |
 | [G10](goals/G10-agent-ablation.md) | Evaluate a bounded closed-world agent society against the frozen deterministic workflow | G09 | task-specific society adoption/rejection decision |
-| [G10R](goals/G10R-open-world-lateral-research.md) | Evaluate whether configured lawful retrieval adds useful lateral hypotheses without weakening provenance or authority | G09 + G10; explicit source-policy activation | retrieval adoption/rejection decision |
-| [G11](goals/G11-expert-handoff.md) | Obtain scientific/safety review and issue the lab handoff | G09; G10/G10R only if adopted | approved or blocked handoff |
+| [G10B](goals/G10B-real-model-agent-ablation.md) | Determine whether a real-model society adds decision-relevant value over one strong analyst on frozen evidence | G09 + G10; explicit owner activation of a configured model provider | directional closed-world escalation decision |
+| [G10R](goals/G10R-open-world-lateral-research.md) | Compare one tool-using investigator with a branch-specialized society under identical aggregate retrieval, declared-simulation, token, and cost budgets | G09 + G10B; explicit source-policy/model/spend activation | directional active-investigation escalation decision |
+| [G11](goals/G11-expert-handoff.md) | Obtain scientific/safety review and issue the lab handoff | G09; G10R retrieval/tool output only if included; society output only after a later adoption-grade evaluation | approved or blocked handoff |
 
 ## Program stop rules
 
@@ -97,10 +100,11 @@ GP4 is the validated substrate checkpoint. G07E/G09 are the optional internal to
 - On G-1 `REPLICATION_STUDY_REQUIRED` with a provisional/confirmed material candidate, G00 may authorize only GP1–GP4. No physical work is authorized until GL1 passes.
 - On G-1 `REPLICATION_STUDY_REQUIRED` without a material candidate, use G00 only to document the evidence gap; do not execute GP2, GL1, GL2, or G01–G10.
 - GL2 must return `SUPPORTED`, `NARROW_USE_CASE`, `INCONCLUSIVE`, or `NOT_REPRODUCED`; only `SUPPORTED` with the ratified data threshold may unlock GD1.
-- G07E or G07 must establish the deterministic hypothesis registry, shared-memory permissions, tournament, and focus policy before G09, G10, or G10R can claim a complete discovery loop.
+- G07E or G07 must establish the deterministic hypothesis registry, shared-memory permissions, tournament, and focus policy before G09, G10, G10B, or G10R can claim a complete discovery loop.
 - G09 must release and replay the non-agent loop before G10 introduces role-biased agents; agent society is an overlay to evaluate, not the source of scientific truth.
-- G10 is closed-world. Only G10R may add retrieved source candidates, and only under an activated lawful source policy with a separate deterministic retrieval control.
-- G10R adoption cannot promote a source candidate to immutable evidence, broaden the problem support region, authorize physical work, or bypass G11/GL1 review.
+- G10 is a fixture-contract prototype, not evidence for or against real-model society value. G10B must use a new non-ceiling sealed case set, an actual configured model provider, blind scoring, and a same-budget single-agent control for its directional closed-world escalation decision. G10B cannot adopt a society for production.
+- G10B is closed-world. Only G10R may add retrieved source candidates, and only under an activated lawful source policy. G10R must compare a single investigator and a society with the same aggregate tools and budgets; its deterministic retrieval arm verifies plumbing but does not substitute for that causal comparison.
+- G10R may use only declared simulation adapters. Synthetic or unvalidated outputs remain model assertions and cannot count as empirical or direct performance evidence. A G10R result cannot promote a source candidate to immutable evidence, broaden the problem support region, authorize physical work, or bypass G11/GL1 review.
 - G10 adoption is task-specific. A society may be adopted for query formulation, contradiction triage, hypothesis critique, or experiment explanation without receiving authority to alter evidence, approve safety, or run a lab.
 - A single problem may have a `PROVISIONAL_BEST` candidate under declared constraints, but a global or cross-problem “best material” claim is prohibited unless the utility function, support region, and validation evidence are explicit.
 - The reusable platform core should be exercised across multiple problem cards before introducing a general-purpose agent framework; Roman concrete is the first vertical slice, not the whole platform.
@@ -109,7 +113,7 @@ GP4 is the validated substrate checkpoint. G07E/G09 are the optional internal to
 - Stop predictive-model work at G04 NO-GO. Execute G05A; do not continue through G05B–G07.
 - Stop model-based ranking at G06 if the preregistered baseline/coverage criteria fail. Route to qualitative design mode in G07.
 - Stop mechanistic integration if G08 cannot establish input availability, validity, and an observable validation target.
-- Stop agent development at G10 if it fails any critical safety/provenance threshold or does not beat deterministic orchestration on the preregistered primary metric.
+- Stop the G10 prototype at its frozen budget if it fails its thresholds; do not generalize its fixture result to real-model agents. A negative G10B result stops a larger closed-world society evaluation but does not answer G10R's separately preregistered active-investigation question. Stop society escalation after G10R unless it produces a unique, source-backed contribution over the same-budget single investigator with no critical authority, rights, safety, or provenance failure.
 - Stop release at G11 if qualified reviewers have not approved the protocol. A deferred or blocked review is reported; it is not converted into approval.
 
 ## Cross-cutting definition of done

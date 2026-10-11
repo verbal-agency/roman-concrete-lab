@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/investigation-plan.schema.json",
+  "title": "InvestigationPlan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_id", "branch_id", "primary_queries", "follow_up_queries", "requested_fetch_locators", "simulation_requests", "abstain_reason"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "case_id": {"type": "string", "minLength": 1},
+    "branch_id": {"type": "string", "minLength": 1},
+    "primary_queries": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["query", "index", "rationale"],
+        "properties": {
+          "query": {"type": "string", "minLength": 1},
+          "index": {"enum": ["catalog", "openalex", "crossref"]},
+          "rationale": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "follow_up_queries": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["query", "index", "rationale"],
+        "properties": {
+          "query": {"type": "string", "minLength": 1},
+          "index": {"enum": ["catalog", "openalex", "crossref"]},
+          "rationale": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "requested_fetch_locators": {"type": "array", "maxItems": 4, "items": {"type": "string", "format": "uri"}},
+    "simulation_requests": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["adapter_id", "inputs", "rationale"],
+        "properties": {
+          "adapter_id": {"type": "string", "minLength": 1},
+          "inputs": {"type": "object"},
+          "rationale": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "abstain_reason": {"type": "string"}
+  }
+}

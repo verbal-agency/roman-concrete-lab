@@ -1,8 +1,12 @@
 # G10 — Evaluate bounded agentic orchestration
 
-**Status:** proposed and optional
+**Status:** complete
 **Dependencies:** G09 complete
-**Advances:** answers whether a bounded agent society improves the frozen workflow rather than assuming that multiple agents, shared memory, or hypothesis competition add value
+**Advances:** establishes and stress-tests the closed-world memory, role, focus, replay, and authority contracts; its offline fixture result rejects only that prototype and cannot settle whether real-model societies add value (deferred to G10B)
+
+## Interpretation note
+
+The completed G10 replay recorded `REJECT_AGENT_SOCIETY` under its frozen threshold. Post-run review found that its deterministic role simulator inherited the control result, evaluated a ceilinged control, and produced near-identical role proposals. It is therefore retained as a contract/safety prototype, with the operational conclusion `REJECT_CURRENT_OFFLINE_SOCIETY_PROTOTYPE`. It does **not** reject real-model agent societies. G10B is the required estimable evaluation before an adoption claim.
 
 ## Objective
 
@@ -27,7 +31,7 @@ Build the smallest bounded agent-society prototype necessary for a fair factoria
 
 ## Excluded
 
-Open-world retrieval, arbitrary code execution, changing scientific records without review, giving the agent extra evidence/tools, production LangGraph adoption before the verdict, and tuning on the sealed evaluation cases. Open-world lateral research is a separate optional G10R goal.
+Open-world retrieval, arbitrary code execution, changing scientific records without review, giving the agent extra evidence/tools, production LangGraph adoption before the verdict, and tuning on the sealed evaluation cases. Tool-using active investigation is a separate optional G10R goal.
 
 ## Required state machine
 

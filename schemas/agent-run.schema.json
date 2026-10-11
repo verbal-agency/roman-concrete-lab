@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/agent-run.schema.json",
+  "type": "object",
+  "required": ["case_id", "seed", "status", "state_trace", "metrics", "authority"],
+  "properties": {
+    "case_id": {"type": "string", "minLength": 1},
+    "seed": {"type": "integer"},
+    "status": {"type": "string"},
+    "state_trace": {"type": "array", "items": {"type": "string"}},
+    "metrics": {"type": "object"},
+    "authority": {"type": "object"}
+  },
+  "additionalProperties": true
+}

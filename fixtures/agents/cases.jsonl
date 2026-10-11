@@ -1,0 +1,8 @@
+{"case_id":"positive","fixture":"fixtures/tournament/positive.json","expected_status":"PARETO_SET"}
+{"case_id":"contradictory","fixture":"fixtures/tournament/contradictory.json","expected_status":"REVIEW_REQUIRED"}
+{"case_id":"malformed","fixture":"fixtures/tournament/malformed.json","expected_status":"REVIEW_REQUIRED"}
+{"case_id":"partial","fixture":"fixtures/tournament/partial.json","expected_status":"REVIEW_REQUIRED"}
+{"case_id":"unsupported","fixture":"fixtures/tournament/unsupported.json","expected_status":"ABSTAIN"}
+{"case_id":"unsafe","fixture":"fixtures/tournament/unsafe.json","expected_status":"UNSAFE_REJECTED"}
+{"case_id":"no-feasible","fixture":"fixtures/tournament/no-feasible.json","expected_status":"NO_FEASIBLE_CANDIDATE"}
+{"case_id":"budget-exhaustion","fixture":"fixtures/tournament/budget-exhaustion.json","expected_status":"BUDGET_EXHAUSTED"}

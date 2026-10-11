@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/lateral-hypothesis.schema.json",
+  "title": "LateralHypothesis",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "hypothesis_id",
+    "problem_id",
+    "problem_version",
+    "source_candidate_ids",
+    "novelty_basis",
+    "transfer_type",
+    "intervention",
+    "comparator",
+    "predicted_observation",
+    "falsifier",
+    "support_region",
+    "uncertainty",
+    "provenance",
+    "promotion_status"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "hypothesis_id": {"type": "string", "minLength": 1},
+    "problem_id": {"type": "string", "minLength": 1},
+    "problem_version": {"type": "string", "minLength": 1},
+    "source_candidate_ids": {"type": "array", "items": {"type": "string"}},
+    "novelty_basis": {"type": "string", "minLength": 1},
+    "transfer_type": {"enum": ["DIRECT_HYPOTHESIS", "TRANSFER_HYPOTHESIS", "ARTIFACT_HYPOTHESIS", "NULL_HYPOTHESIS"]},
+    "intervention": {"type": "string"},
+    "comparator": {"type": "string"},
+    "predicted_observation": {"type": "string", "minLength": 1},
+    "falsifier": {"type": "string", "minLength": 1},
+    "support_region": {"type": "string", "minLength": 1},
+    "uncertainty": {"type": "string", "minLength": 1},
+    "provenance": {"type": "array", "items": {"type": "string"}},
+    "promotion_status": {"const": "REVIEW_REQUIRED"}
+  }
+}

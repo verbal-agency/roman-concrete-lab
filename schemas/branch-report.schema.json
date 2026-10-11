@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/branch-report.schema.json",
+  "title": "BranchReport",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_id", "branch_id", "charter", "action_ids", "source_candidate_ids", "hypotheses", "negative_searches", "unresolved_questions", "proposed_next_action", "claimed_unique_contribution", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "case_id": {"type": "string", "minLength": 1},
+    "branch_id": {"type": "string", "minLength": 1},
+    "charter": {"type": "string", "minLength": 1},
+    "action_ids": {"type": "array", "items": {"type": "string"}},
+    "source_candidate_ids": {"type": "array", "items": {"type": "string"}},
+    "hypotheses": {"type": "array", "items": {"$ref": "lateral-hypothesis.schema.json"}},
+    "negative_searches": {"type": "array", "items": {"type": "string"}},
+    "unresolved_questions": {"type": "array", "items": {"type": "string"}},
+    "proposed_next_action": {"type": "string"},
+    "claimed_unique_contribution": {"type": "string"},
+    "status": {"enum": ["COMPLETE", "ABSTAIN", "PARTIAL", "FAILED"]}
+  }
+}

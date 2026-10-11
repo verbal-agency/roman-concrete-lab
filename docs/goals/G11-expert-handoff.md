@@ -1,7 +1,7 @@
 # G11 — Complete expert review and issue the laboratory handoff
 
 **Status:** proposed
-**Dependencies:** G09 complete; G10/G10R only if their agent or retrieval output is included
+**Dependencies:** G09 complete; G10R retrieval/tool output only if included; any society output only after a later adoption-grade evaluation such as G10S
 **Advances:** converts the pre-lab package into an externally reviewable physical-validation proposal
 
 ## Objective
@@ -15,7 +15,7 @@ Submit the candidate experiment package to qualified materials-science and labor
 - traceable comments and dispositions: accepted, revised, rejected, or unresolved;
 - revised protocol/version and change impact on rankings/hypotheses;
 - release status and explicit claim boundary;
-- if G10 or G10R adopts any agent-society or retrieval task: shared-memory permissions, hypothesis-tournament logs, focus/retrieval-policy limits, model/provider/source-policy identity, and human override boundaries;
+- if G10R retrieval/tool output or any society task approved by a later adoption-grade evaluation is included: shared-memory permissions, hypothesis-tournament logs, investigation/focus/retrieval-policy limits, model/provider/source-policy identity, and human override boundaries;
 - a machine-readable handoff manifest for later physical results.
 
 ## Excluded
@@ -39,7 +39,7 @@ At least one qualified cementitious-materials reviewer and one responsible labor
 5. The handoff manifest can accept future results without erasing deviations, failed specimens, censoring, or provenance.
 6. The release emits exactly one status: `APPROVED_FOR_LAB_PLANNING`, `REVISION_REQUIRED`, or `BLOCKED_NO_REVIEWER`.
 7. All materials remain labeled unvalidated until physical results are ingested and analyzed under a future charter.
-8. Any adopted agent-society task has a documented read/write scope and cannot write empirical results, safety approvals, or protocol authorization.
+8. Any included retrieval/tool capability and any agent-society task approved by a later adoption-grade evaluation has a documented read/write scope and cannot write empirical results, safety approvals, or protocol authorization.
 
 ## Verification evidence
 

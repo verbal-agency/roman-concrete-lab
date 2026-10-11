@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/simulation-trace.schema.json",
+  "title": "SimulationTrace",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "trace_id", "adapter_id", "adapter_version", "adapter_hash", "validation_status", "support_region", "inputs", "outputs", "seed", "estimated_cost_usd", "assertion_type", "score_eligible", "status", "prohibited_interpretations"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "trace_id": {"type": "string", "minLength": 1},
+    "adapter_id": {"type": "string", "minLength": 1},
+    "adapter_version": {"type": "string", "minLength": 1},
+    "adapter_hash": {"type": "string", "pattern": "^sha256:"},
+    "validation_status": {"enum": ["VALIDATED", "SYNTHETIC_DIAGNOSTIC", "UNVALIDATED", "UNAVAILABLE"]},
+    "support_region": {"type": "string", "minLength": 1},
+    "inputs": {"type": "object"},
+    "outputs": {"type": "object"},
+    "seed": {"type": ["integer", "null"]},
+    "estimated_cost_usd": {"type": "number", "minimum": 0},
+    "assertion_type": {"const": "MODEL_ASSERTION"},
+    "score_eligible": {"type": "boolean"},
+    "status": {"enum": ["COMPLETED", "SIMULATOR_UNAVAILABLE", "POLICY_BLOCKED", "FAILED"]},
+    "prohibited_interpretations": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+  }
+}

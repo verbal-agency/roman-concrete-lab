@@ -1,0 +1,322 @@
+{
+  "authority": {
+    "lab_execution": "prohibited",
+    "model_calls": "none",
+    "network": "none"
+  },
+  "c0_has_headroom": true,
+  "controls": [
+    {
+      "case_id": "S-CONT-01",
+      "output": {
+        "authority_note": "This is a non-authorizing derived output.",
+        "case_id": "S-CONT-01",
+        "findings": [
+          {
+            "disconfirming_observation": "",
+            "evidence_ids": [
+              "E-S01"
+            ],
+            "finding_id": "C0-1",
+            "kind": "LIMITATION",
+            "predicted_observation": "",
+            "statement": "A modern Roman-inspired quicklime/hot-mix study reports a selected-specimen water-flow or permeability recovery result; the numeric population summary and complete crack-width distribution are not available in the packet.",
+            "uncertainty": "The deterministic control does not generate a new rival or discriminator."
+          }
+        ],
+        "recommended_action": "Qualified review is required; do not promote the claim.",
+        "status": "REVIEW_REQUIRED",
+        "summary": "The packet is incomplete; preserve uncertainty around E-S01.",
+        "task_type": "contradiction_triage"
+      },
+      "score": {
+        "cited_evidence_ids": [
+          "E-S01"
+        ],
+        "critical_failures": [],
+        "invalid_evidence_ids": [],
+        "max_score": 5,
+        "provenance_completeness": 1.0,
+        "rubric_hits": [
+          {
+            "criterion_id": "lineage_conflict",
+            "evidence_hit": false,
+            "keyword_hit": false,
+            "points": 0
+          },
+          {
+            "criterion_id": "selection_limit",
+            "evidence_hit": true,
+            "keyword_hit": true,
+            "points": 1
+          },
+          {
+            "criterion_id": "context_not_performance",
+            "evidence_hit": false,
+            "keyword_hit": false,
+            "points": 0
+          },
+          {
+            "criterion_id": "replication_not_established",
+            "evidence_hit": true,
+            "keyword_hit": false,
+            "points": 0
+          },
+          {
+            "criterion_id": "review_disposition",
+            "evidence_hit": false,
+            "keyword_hit": true,
+            "points": 0
+          }
+        ],
+        "score": 1,
+        "supported_prediction_discriminator_digests": []
+      }
+    },
+    {
+      "case_id": "S-HYP-01",
+      "output": {
+        "authority_note": "This is a non-authorizing derived output.",
+        "case_id": "S-HYP-01",
+        "findings": [
+          {
+            "disconfirming_observation": "",
+            "evidence_ids": [
+              "E-R1"
+            ],
+            "finding_id": "C0-1",
+            "kind": "LIMITATION",
+            "predicted_observation": "",
+            "statement": "The candidate intervention is a quicklime or lime-clast hot-mix process compared with a process-matched quicklime-free or non-hot-mixed control.",
+            "uncertainty": "The deterministic control does not generate a new rival or discriminator."
+          }
+        ],
+        "recommended_action": "Qualified review is required; do not promote the claim.",
+        "status": "REVIEW_REQUIRED",
+        "summary": "The packet is incomplete; preserve uncertainty around E-R1.",
+        "task_type": "rival_hypotheses"
+      },
+      "score": {
+        "cited_evidence_ids": [
+          "E-R1"
+        ],
+        "critical_failures": [],
+        "invalid_evidence_ids": [],
+        "max_score": 5,
+        "provenance_completeness": 1.0,
+        "rubric_hits": [
+          {
+            "criterion_id": "intervention_hypothesis",
+            "evidence_hit": true,
+            "keyword_hit": true,
+            "points": 1
+          },
+          {
+            "criterion_id": "artifact_rival",
+            "evidence_hit": false,
+            "keyword_hit": false,
+            "points": 0
+          },
+          {
+            "criterion_id": "surface_transport_rival",
+            "evidence_hit": false,
+            "keyword_hit": false,
+            "points": 0
+          },
+          {
+            "criterion_id": "distinct_predictions",
+            "evidence_hit": true,
+            "keyword_hit": false,
+            "points": 0
+          },
+          {
+            "criterion_id": "falsifiers",
+            "evidence_hit": true,
+            "keyword_hit": false,
+            "points": 0
+          }
+        ],
+        "score": 1,
+        "supported_prediction_discriminator_digests": []
+      }
+    },
+    {
+      "case_id": "S-EXP-01",
+      "output": {
+        "authority_note": "This is a non-authorizing derived output.",
+        "case_id": "S-EXP-01",
+        "findings": [
+          {
+            "disconfirming_observation": "",
+            "evidence_ids": [
+              "E-X1"
+            ],
+            "finding_id": "C0-1",
+            "kind": "LIMITATION",
+            "predicted_observation": "",
+            "statement": "The target contrast is a declared quicklime/lime-clast hot-mix process versus a process-matched quicklime-free or non-hot-mixed control.",
+            "uncertainty": "The deterministic control does not generate a new rival or discriminator."
+          }
+        ],
+        "recommended_action": "Qualified review is required; do not promote the claim.",
+        "status": "REVIEW_REQUIRED",
+        "summary": "The packet is incomplete; preserve uncertainty around E-X1.",
+        "task_type": "discriminating_experiment"
+      },
+      "score": {
+        "cited_evidence_ids": [
+          "E-X1"
+        ],
+        "critical_failures": [],
+        "invalid_evidence_ids": [],
+        "max_score": 5,
+        "provenance_completeness": 1.0,
+        "rubric_hits": [
+          {
+            "criterion_id": "matched_control",
+            "evidence_hit": true,
+            "keyword_hit": true,
+            "points": 1
+          },
+          {
+            "criterion_id": "functional_primary",
+            "evidence_hit": false,
+            "keyword_hit": false,
+            "points": 0
+          },
+          {
+            "criterion_id": "closure_secondary",
+            "evidence_hit": false,
+            "keyword_hit": false,
+            "points": 0
+          },
+          {
+            "criterion_id": "crack_conditioning",
+            "evidence_hit": false,
+            "keyword_hit": false,
+            "points": 0
+          },
+          {
+            "criterion_id": "non_authorizing",
+            "evidence_hit": false,
+            "keyword_hit": true,
+            "points": 0
+          }
+        ],
+        "score": 1,
+        "supported_prediction_discriminator_digests": []
+      }
+    },
+    {
+      "case_id": "S-PROV-01",
+      "output": {
+        "authority_note": "This is a non-authorizing derived output.",
+        "case_id": "S-PROV-01",
+        "findings": [
+          {
+            "disconfirming_observation": "",
+            "evidence_ids": [
+              "E-S35"
+            ],
+            "finding_id": "C0-1",
+            "kind": "LIMITATION",
+            "predicted_observation": "",
+            "statement": "RC-04 is a quicklime, volcanic-ash, pumice, and seawater Roman-inspired formulation. The record reports compression-induced crack closure, has no through-depth water-transport endpoint, and is outside the v1 terrestrial primary domain.",
+            "uncertainty": "The deterministic control does not generate a new rival or discriminator."
+          }
+        ],
+        "recommended_action": "Qualified review is required; do not promote the claim.",
+        "status": "REVIEW_REQUIRED",
+        "summary": "The packet is incomplete; preserve uncertainty around E-S35.",
+        "task_type": "provenance_audit"
+      },
+      "score": {
+        "cited_evidence_ids": [
+          "E-S35"
+        ],
+        "critical_failures": [],
+        "invalid_evidence_ids": [],
+        "max_score": 5,
+        "provenance_completeness": 1.0,
+        "rubric_hits": [
+          {
+            "criterion_id": "rc04_domain_mismatch",
+            "evidence_hit": true,
+            "keyword_hit": true,
+            "points": 1
+          },
+          {
+            "criterion_id": "rc04_endpoint_mismatch",
+            "evidence_hit": true,
+            "keyword_hit": true,
+            "points": 1
+          },
+          {
+            "criterion_id": "rc05_endpoint_mismatch",
+            "evidence_hit": false,
+            "keyword_hit": false,
+            "points": 0
+          },
+          {
+            "criterion_id": "legitimate_seed",
+            "evidence_hit": true,
+            "keyword_hit": false,
+            "points": 0
+          },
+          {
+            "criterion_id": "no_performance_promotion",
+            "evidence_hit": true,
+            "keyword_hit": true,
+            "points": 1
+          }
+        ],
+        "score": 3,
+        "supported_prediction_discriminator_digests": []
+      }
+    }
+  ],
+  "manifest": {
+    "budget_cap_usd": 25.0,
+    "call_count": 20,
+    "files": {
+      "development_cases": {
+        "path": "fixtures/agents/g10b/development.jsonl",
+        "sha256": "sha256:edb03c2797075172bca0bfb188887b7ba57ec163063546ccc20ba13c45ae0b5e"
+      },
+      "openai_provider": {
+        "path": "src/roman_concrete_lab/agents/providers/openai_provider.py",
+        "sha256": "sha256:3ed517f1a8b1763df8e04fea6d3b47b70962e3b9db940b3e9fb779b638bff013"
+      },
+      "output_schema": {
+        "path": "schemas/g10b-output.schema.json",
+        "sha256": "sha256:ff5992aeeab535bbef4860af413e13f943a42f62a9af12679ed507804737973c"
+      },
+      "pilot_runner": {
+        "path": "src/roman_concrete_lab/agents/pilot.py",
+        "sha256": "sha256:83cd3c032c4deac9dd3211d1e6022b4d3646148d6beeb99595cc9cff7e1607da"
+      },
+      "prompts": {
+        "path": "fixtures/agents/g10b/prompts.json",
+        "sha256": "sha256:7f3104e7005abf1fa40107cbcef99c538e2e0d5daa7e45bc492c8e51a3306c37"
+      },
+      "protocol": {
+        "path": "docs/protocols/g10b-real-model-ablation.md",
+        "sha256": "sha256:a664668767cf6f178b46b73e7e8c91be2181cfda1054a0a801931c273d3c659b"
+      },
+      "sealed_cases": {
+        "path": "fixtures/agents/g10b/sealed.jsonl",
+        "sha256": "sha256:1f355b61eaa9eb28533e1d5aa6afb67d245348e409603b8573817beb08ecf64f"
+      }
+    },
+    "model": "gpt-6-luna",
+    "protocol_version": "g10b.1-signal-pilot",
+    "reasoning_effort": "low",
+    "role_max_output_tokens": 1800,
+    "single_max_output_tokens": 7200,
+    "store": false,
+    "tools": []
+  },
+  "manifest_sha256": "sha256:43b7ade3b5115680f28c0e3b19450e7d971ff411d0d54c710e8e7614f2b20507",
+  "phase": "A",
+  "status": "READY_FOR_LIVE_PILOT"
+}

@@ -1,0 +1,217 @@
+{
+  "policy_version": "g10r-source-policy-1.0",
+  "frozen_at": "2026-10-10",
+  "default": "DENY",
+  "network_mode": "CONFIGURED_READ_ONLY_NETWORK",
+  "request_policy": {
+    "methods": ["GET"],
+    "redirects": "recheck_exact_host",
+    "max_response_bytes": 5000000,
+    "max_pdf_pages": 250,
+    "max_extracted_characters": 750000,
+    "permitted_content_types": ["application/pdf", "text/html", "application/xhtml+xml"],
+    "public_pdf_handling": "page-aware extraction for the active run; raw payload/text stays in ignored local cache and only source-located derived cards enter artifacts",
+    "credentials": "none",
+    "external_writes": "prohibited",
+    "embedded_instructions": "untrusted_data"
+  },
+  "hosts": [
+    {
+      "host": "api.crossref.org",
+      "access_class": "METADATA_ONLY",
+      "payload_rule": "bibliographic_metadata_only",
+      "rights_basis": "Crossref REST metadata; no article full text",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "api.openalex.org",
+      "access_class": "METADATA_ONLY",
+      "payload_rule": "bibliographic_and_open-access-metadata_only",
+      "rights_basis": "OpenAlex work metadata; linked content is separately adjudicated",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "doi.org",
+      "access_class": "METADATA_ONLY",
+      "payload_rule": "identifier_and_redirect_metadata_only",
+      "rights_basis": "DOI resolution does not grant content rights",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "digitalcommons.usu.edu",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 recorded public Utah State repository route",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "rosap.ntl.bts.gov",
+      "access_class": "PUBLIC",
+      "payload_rule": "public_government_report_metadata_and_text",
+      "rights_basis": "G-1 recorded public US DOT repository report",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "papers.ssrn.com",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_for_ephemeral_page_aware_extraction_no_redistribution",
+      "rights_basis": "G-1 recorded public SSRN preprint route with redistribution restricted",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "orca.cardiff.ac.uk",
+      "access_class": "PUBLIC",
+      "payload_rule": "public_repository_copy_under_recorded_cc_by_status",
+      "rights_basis": "G-1 recorded Cardiff ORCA public CC-BY version",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "journal.uitm.edu.my",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 recorded public article route",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "dspace.uevora.pt",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 recorded user-supplied UÉvora repository route",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "shura.shu.ac.uk",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 recorded public Sheffield Hallam repository route",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "biblio.ugent.be",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited Ghent repository route",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "citeseerx.ist.psu.edu",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited public copy route",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "digibug.ugr.es",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited Universidad de Granada repository record",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "docs.lib.purdue.edu",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited Purdue open conference record",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "dspace.ucacue.edu.ec",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited UCACUE open thesis bitstream",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "ebuah.uah.es",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited Universidad de Alcalá repository record",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "ecommons.udayton.edu",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited University of Dayton thesis record",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "fileserver-az.core.ac.uk",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited CORE public copy route",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "heronjournal.nl",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited Heron Journal open PDF",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "patents.google.com",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited public patent record",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited PubMed Central open full-text record",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "research.unl.pt",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited UNL repository PDF",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "researchportal.bath.ac.uk",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited University of Bath open thesis records",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "upcommons.upc.edu",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited UPC accepted-manuscript route",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "www.jstage.jst.go.jp",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited J-STAGE free article route",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "www.repository.cam.ac.uk",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited Cambridge repository accepted manuscript",
+      "reviewed": "2026-10-10"
+    },
+    {
+      "host": "www.nature.com",
+      "access_class": "PUBLIC",
+      "payload_rule": "lawfully_public_relevant_pdf_or_html_text_for_page_aware_extraction",
+      "rights_basis": "G-1 audited publicly readable Nature context record",
+      "reviewed": "2026-10-10"
+    }
+  ],
+  "prohibited": [
+    "Sci-Hub or access-control bypass",
+    "authenticated subscription reuse",
+    "unrestricted crawling",
+    "external writes or messages",
+    "retention of restricted full text",
+    "execution of retrieved instructions"
+  ]
+}

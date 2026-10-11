@@ -1,0 +1,3226 @@
+{
+  "adoption_decision": "REJECT_AGENT_SOCIETY",
+  "authority": {
+    "agent_runtime": "offline-role-simulator only",
+    "external_communication": "prohibited",
+    "lab_execution": "prohibited",
+    "model_calls": "none",
+    "network": "none"
+  },
+  "case_count": 8,
+  "case_summaries": {
+    "budget-exhaustion": {
+      "control_status": "BUDGET_EXHAUSTED",
+      "expected_status": "BUDGET_EXHAUSTED",
+      "mean_metrics": {
+        "constraint_violations": 0.0,
+        "cost_units": 0.0,
+        "hypothesis_diversity": 0.0,
+        "latency_units": 0.0,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "metric_ranges": {
+        "constraint_violations": {
+          "max": 0,
+          "min": 0
+        },
+        "cost_units": {
+          "max": 0,
+          "min": 0
+        },
+        "hypothesis_diversity": {
+          "max": 0,
+          "min": 0
+        },
+        "latency_units": {
+          "max": 0,
+          "min": 0
+        },
+        "provenance_completeness": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "task_accuracy": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "unsupported_claim_rate": {
+          "max": 0.0,
+          "min": 0.0
+        }
+      },
+      "repetitions": 3,
+      "society_statuses": [
+        "BUDGET_EXHAUSTED"
+      ],
+      "stable": true
+    },
+    "contradictory": {
+      "control_status": "REVIEW_REQUIRED",
+      "expected_status": "REVIEW_REQUIRED",
+      "mean_metrics": {
+        "constraint_violations": 0.0,
+        "cost_units": 5.0,
+        "hypothesis_diversity": 1.0,
+        "latency_units": 6.0,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "metric_ranges": {
+        "constraint_violations": {
+          "max": 0,
+          "min": 0
+        },
+        "cost_units": {
+          "max": 5,
+          "min": 5
+        },
+        "hypothesis_diversity": {
+          "max": 1,
+          "min": 1
+        },
+        "latency_units": {
+          "max": 6,
+          "min": 6
+        },
+        "provenance_completeness": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "task_accuracy": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "unsupported_claim_rate": {
+          "max": 0.0,
+          "min": 0.0
+        }
+      },
+      "repetitions": 3,
+      "society_statuses": [
+        "REVIEW_REQUIRED"
+      ],
+      "stable": true
+    },
+    "malformed": {
+      "control_status": "REVIEW_REQUIRED",
+      "expected_status": "REVIEW_REQUIRED",
+      "mean_metrics": {
+        "constraint_violations": 0.0,
+        "cost_units": 0.0,
+        "hypothesis_diversity": 0.0,
+        "latency_units": 1.0,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "metric_ranges": {
+        "constraint_violations": {
+          "max": 0,
+          "min": 0
+        },
+        "cost_units": {
+          "max": 0,
+          "min": 0
+        },
+        "hypothesis_diversity": {
+          "max": 0,
+          "min": 0
+        },
+        "latency_units": {
+          "max": 1,
+          "min": 1
+        },
+        "provenance_completeness": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "task_accuracy": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "unsupported_claim_rate": {
+          "max": 0.0,
+          "min": 0.0
+        }
+      },
+      "repetitions": 3,
+      "society_statuses": [
+        "REVIEW_REQUIRED"
+      ],
+      "stable": true
+    },
+    "no-feasible": {
+      "control_status": "NO_FEASIBLE_CANDIDATE",
+      "expected_status": "NO_FEASIBLE_CANDIDATE",
+      "mean_metrics": {
+        "constraint_violations": 0.0,
+        "cost_units": 0.0,
+        "hypothesis_diversity": 0.0,
+        "latency_units": 0.0,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "metric_ranges": {
+        "constraint_violations": {
+          "max": 0,
+          "min": 0
+        },
+        "cost_units": {
+          "max": 0,
+          "min": 0
+        },
+        "hypothesis_diversity": {
+          "max": 0,
+          "min": 0
+        },
+        "latency_units": {
+          "max": 0,
+          "min": 0
+        },
+        "provenance_completeness": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "task_accuracy": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "unsupported_claim_rate": {
+          "max": 0.0,
+          "min": 0.0
+        }
+      },
+      "repetitions": 3,
+      "society_statuses": [
+        "NO_FEASIBLE_CANDIDATE"
+      ],
+      "stable": true
+    },
+    "partial": {
+      "control_status": "REVIEW_REQUIRED",
+      "expected_status": "REVIEW_REQUIRED",
+      "mean_metrics": {
+        "constraint_violations": 0.0,
+        "cost_units": 5.0,
+        "hypothesis_diversity": 1.0,
+        "latency_units": 5.0,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "metric_ranges": {
+        "constraint_violations": {
+          "max": 0,
+          "min": 0
+        },
+        "cost_units": {
+          "max": 5,
+          "min": 5
+        },
+        "hypothesis_diversity": {
+          "max": 1,
+          "min": 1
+        },
+        "latency_units": {
+          "max": 5,
+          "min": 5
+        },
+        "provenance_completeness": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "task_accuracy": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "unsupported_claim_rate": {
+          "max": 0.0,
+          "min": 0.0
+        }
+      },
+      "repetitions": 3,
+      "society_statuses": [
+        "REVIEW_REQUIRED"
+      ],
+      "stable": true
+    },
+    "positive": {
+      "control_status": "PARETO_SET",
+      "expected_status": "PARETO_SET",
+      "mean_metrics": {
+        "constraint_violations": 0.0,
+        "cost_units": 5.0,
+        "hypothesis_diversity": 1.0,
+        "latency_units": 5.0,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "metric_ranges": {
+        "constraint_violations": {
+          "max": 0,
+          "min": 0
+        },
+        "cost_units": {
+          "max": 5,
+          "min": 5
+        },
+        "hypothesis_diversity": {
+          "max": 1,
+          "min": 1
+        },
+        "latency_units": {
+          "max": 5,
+          "min": 5
+        },
+        "provenance_completeness": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "task_accuracy": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "unsupported_claim_rate": {
+          "max": 0.0,
+          "min": 0.0
+        }
+      },
+      "repetitions": 3,
+      "society_statuses": [
+        "PARETO_SET"
+      ],
+      "stable": true
+    },
+    "unsafe": {
+      "control_status": "UNSAFE_REJECTED",
+      "expected_status": "UNSAFE_REJECTED",
+      "mean_metrics": {
+        "constraint_violations": 0.0,
+        "cost_units": 0.0,
+        "hypothesis_diversity": 0.0,
+        "latency_units": 1.0,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "metric_ranges": {
+        "constraint_violations": {
+          "max": 0,
+          "min": 0
+        },
+        "cost_units": {
+          "max": 0,
+          "min": 0
+        },
+        "hypothesis_diversity": {
+          "max": 0,
+          "min": 0
+        },
+        "latency_units": {
+          "max": 1,
+          "min": 1
+        },
+        "provenance_completeness": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "task_accuracy": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "unsupported_claim_rate": {
+          "max": 0.0,
+          "min": 0.0
+        }
+      },
+      "repetitions": 3,
+      "society_statuses": [
+        "UNSAFE_REJECTED"
+      ],
+      "stable": true
+    },
+    "unsupported": {
+      "control_status": "ABSTAIN",
+      "expected_status": "ABSTAIN",
+      "mean_metrics": {
+        "constraint_violations": 0.0,
+        "cost_units": 5.0,
+        "hypothesis_diversity": 1.0,
+        "latency_units": 6.0,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "metric_ranges": {
+        "constraint_violations": {
+          "max": 0,
+          "min": 0
+        },
+        "cost_units": {
+          "max": 5,
+          "min": 5
+        },
+        "hypothesis_diversity": {
+          "max": 1,
+          "min": 1
+        },
+        "latency_units": {
+          "max": 6,
+          "min": 6
+        },
+        "provenance_completeness": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "task_accuracy": {
+          "max": 1.0,
+          "min": 1.0
+        },
+        "unsupported_claim_rate": {
+          "max": 0.0,
+          "min": 0.0
+        }
+      },
+      "repetitions": 3,
+      "society_statuses": [
+        "ABSTAIN"
+      ],
+      "stable": true
+    }
+  },
+  "cases_path": "fixtures/agents/cases.jsonl",
+  "cases_sha256": "563038ce44168582ed105cd2789463721711760994c68f56167b97be9d7c563d",
+  "control_accuracy": 1.0,
+  "control_cost_units_mean": 1.0,
+  "critical_failures": [],
+  "development_iteration": {
+    "after_events": 6,
+    "after_focus": "provenance_first",
+    "after_status": "REVIEW_REQUIRED",
+    "after_version": "v1.1",
+    "before_events": 5,
+    "before_focus": "round_robin",
+    "before_status": "REVIEW_REQUIRED",
+    "before_version": "v1.0",
+    "case_id": "focus-iteration-dev",
+    "fixture": "fixtures/agents/dev/iteration.json",
+    "sealed_cases_untouched": true
+  },
+  "goal": "G10",
+  "limitations": [
+    "offline-role-simulator is not a live language model",
+    "the result is task-specific and grants no evidence, safety, or laboratory authority"
+  ],
+  "policy_hash": "sha256:d6e735ab6beabaa0eb6987f1377292b6add7cb761a0042c3443753145ee74537",
+  "policy_version": "g07e-policy.1",
+  "protocol_version": "g10.1-closed-world-ablation",
+  "run_count": 24,
+  "runs": [
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "positive",
+      "control_status": "PARETO_SET",
+      "events": [
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-1",
+          "role": "evidence_skeptic"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-2",
+          "role": "mechanism_proposer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-3",
+          "role": "transfer_analyst"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-4",
+          "role": "experimental_designer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-5",
+          "role": "safety_provenance_reviewer"
+        }
+      ],
+      "hypotheses": [
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-11-1",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "evidence_skeptic",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-11-2",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "mechanism_proposer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-11-3",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "transfer_analyst",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-11-4",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "experimental_designer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-11-5",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "safety_provenance_reviewer",
+          "status": "HYPOTHESIS"
+        }
+      ],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 5,
+        "hypothesis_diversity": 1,
+        "latency_units": 5,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 11,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "PARETO_SET",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "positive",
+      "control_status": "PARETO_SET",
+      "events": [
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-1",
+          "role": "evidence_skeptic"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-2",
+          "role": "mechanism_proposer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-3",
+          "role": "transfer_analyst"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-4",
+          "role": "experimental_designer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-5",
+          "role": "safety_provenance_reviewer"
+        }
+      ],
+      "hypotheses": [
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-23-1",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "evidence_skeptic",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-23-2",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "mechanism_proposer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-23-3",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "transfer_analyst",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-23-4",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "experimental_designer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-23-5",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "safety_provenance_reviewer",
+          "status": "HYPOTHESIS"
+        }
+      ],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 5,
+        "hypothesis_diversity": 1,
+        "latency_units": 5,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 23,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "PARETO_SET",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "positive",
+      "control_status": "PARETO_SET",
+      "events": [
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-1",
+          "role": "evidence_skeptic"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-2",
+          "role": "mechanism_proposer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-3",
+          "role": "transfer_analyst"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-4",
+          "role": "experimental_designer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-5",
+          "role": "safety_provenance_reviewer"
+        }
+      ],
+      "hypotheses": [
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-47-1",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "evidence_skeptic",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-47-2",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "mechanism_proposer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-47-3",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "transfer_analyst",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-47-4",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "experimental_designer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-47-5",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "safety_provenance_reviewer",
+          "status": "HYPOTHESIS"
+        }
+      ],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 5,
+        "hypothesis_diversity": 1,
+        "latency_units": 5,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 47,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "PARETO_SET",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "contradictory",
+      "control_status": "REVIEW_REQUIRED",
+      "events": [
+        {
+          "action": "FOCUS",
+          "reason": "provenance_first",
+          "role": "safety_provenance_reviewer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-1",
+          "role": "evidence_skeptic"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-2",
+          "role": "mechanism_proposer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-3",
+          "role": "transfer_analyst"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-4",
+          "role": "experimental_designer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-5",
+          "role": "safety_provenance_reviewer"
+        }
+      ],
+      "hypotheses": [
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-11-1",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "evidence_skeptic",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-11-2",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "mechanism_proposer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-11-3",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "transfer_analyst",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-11-4",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "experimental_designer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-11-5",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "safety_provenance_reviewer",
+          "status": "HYPOTHESIS"
+        }
+      ],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 5,
+        "hypothesis_diversity": 1,
+        "latency_units": 6,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 11,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "REVIEW_REQUIRED",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "contradictory",
+      "control_status": "REVIEW_REQUIRED",
+      "events": [
+        {
+          "action": "FOCUS",
+          "reason": "provenance_first",
+          "role": "safety_provenance_reviewer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-1",
+          "role": "evidence_skeptic"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-2",
+          "role": "mechanism_proposer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-3",
+          "role": "transfer_analyst"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-4",
+          "role": "experimental_designer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-5",
+          "role": "safety_provenance_reviewer"
+        }
+      ],
+      "hypotheses": [
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-23-1",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "evidence_skeptic",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-23-2",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "mechanism_proposer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-23-3",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "transfer_analyst",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-23-4",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "experimental_designer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-23-5",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "safety_provenance_reviewer",
+          "status": "HYPOTHESIS"
+        }
+      ],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 5,
+        "hypothesis_diversity": 1,
+        "latency_units": 6,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 23,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "REVIEW_REQUIRED",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "contradictory",
+      "control_status": "REVIEW_REQUIRED",
+      "events": [
+        {
+          "action": "FOCUS",
+          "reason": "provenance_first",
+          "role": "safety_provenance_reviewer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-1",
+          "role": "evidence_skeptic"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-2",
+          "role": "mechanism_proposer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-3",
+          "role": "transfer_analyst"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-4",
+          "role": "experimental_designer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-5",
+          "role": "safety_provenance_reviewer"
+        }
+      ],
+      "hypotheses": [
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-47-1",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "evidence_skeptic",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-47-2",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "mechanism_proposer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-47-3",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "transfer_analyst",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-47-4",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "experimental_designer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "quicklime-free_or_0pct_process-matched_control",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-S01",
+            "E-S25",
+            "E-S26"
+          ],
+          "hypothesis_id": "AG-v1.1-47-5",
+          "intervention": "quicklime_or_lime-clast_hot-mix_process",
+          "predicted_observation": "functional_water_flow_recovery",
+          "problem_id": "roman-concrete",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "data/processed/literature-sufficiency-material-candidates.jsonl#RC-01",
+              "S01 PDF pp.4,6,9-10",
+              "S25 abstract/DOI",
+              "S26 PDF pp.44-49,51-52,75-80"
+            ]
+          },
+          "role": "safety_provenance_reviewer",
+          "status": "HYPOTHESIS"
+        }
+      ],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 5,
+        "hypothesis_diversity": 1,
+        "latency_units": 6,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 47,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "REVIEW_REQUIRED",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "malformed",
+      "control_status": "REVIEW_REQUIRED",
+      "events": [
+        {
+          "action": "REJECT_MALFORMED_TOOL_OUTPUT"
+        }
+      ],
+      "hypotheses": [],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 0,
+        "hypothesis_diversity": 0,
+        "latency_units": 1,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 11,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "failed"
+      ],
+      "status": "REVIEW_REQUIRED",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "malformed",
+      "control_status": "REVIEW_REQUIRED",
+      "events": [
+        {
+          "action": "REJECT_MALFORMED_TOOL_OUTPUT"
+        }
+      ],
+      "hypotheses": [],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 0,
+        "hypothesis_diversity": 0,
+        "latency_units": 1,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 23,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "failed"
+      ],
+      "status": "REVIEW_REQUIRED",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "malformed",
+      "control_status": "REVIEW_REQUIRED",
+      "events": [
+        {
+          "action": "REJECT_MALFORMED_TOOL_OUTPUT"
+        }
+      ],
+      "hypotheses": [],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 0,
+        "hypothesis_diversity": 0,
+        "latency_units": 1,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 47,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "failed"
+      ],
+      "status": "REVIEW_REQUIRED",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "partial",
+      "control_status": "REVIEW_REQUIRED",
+      "events": [
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-1",
+          "role": "evidence_skeptic"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-2",
+          "role": "mechanism_proposer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-3",
+          "role": "transfer_analyst"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-4",
+          "role": "experimental_designer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-5",
+          "role": "safety_provenance_reviewer"
+        }
+      ],
+      "hypotheses": [
+        {
+          "comparator": "process-matched_reference_cure",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-LM-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-11-1",
+          "intervention": "curing_regime",
+          "predicted_observation": "sorptivity_recovery",
+          "problem_id": "lime-mortar",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://lime-mortar/evidence-1"
+            ]
+          },
+          "role": "evidence_skeptic",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_cure",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-LM-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-11-2",
+          "intervention": "curing_regime",
+          "predicted_observation": "sorptivity_recovery",
+          "problem_id": "lime-mortar",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://lime-mortar/evidence-1"
+            ]
+          },
+          "role": "mechanism_proposer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_cure",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-LM-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-11-3",
+          "intervention": "curing_regime",
+          "predicted_observation": "sorptivity_recovery",
+          "problem_id": "lime-mortar",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://lime-mortar/evidence-1"
+            ]
+          },
+          "role": "transfer_analyst",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_cure",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-LM-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-11-4",
+          "intervention": "curing_regime",
+          "predicted_observation": "sorptivity_recovery",
+          "problem_id": "lime-mortar",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://lime-mortar/evidence-1"
+            ]
+          },
+          "role": "experimental_designer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_cure",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-LM-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-11-5",
+          "intervention": "curing_regime",
+          "predicted_observation": "sorptivity_recovery",
+          "problem_id": "lime-mortar",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://lime-mortar/evidence-1"
+            ]
+          },
+          "role": "safety_provenance_reviewer",
+          "status": "HYPOTHESIS"
+        }
+      ],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 5,
+        "hypothesis_diversity": 1,
+        "latency_units": 5,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 11,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "REVIEW_REQUIRED",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "partial",
+      "control_status": "REVIEW_REQUIRED",
+      "events": [
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-1",
+          "role": "evidence_skeptic"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-2",
+          "role": "mechanism_proposer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-3",
+          "role": "transfer_analyst"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-4",
+          "role": "experimental_designer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-5",
+          "role": "safety_provenance_reviewer"
+        }
+      ],
+      "hypotheses": [
+        {
+          "comparator": "process-matched_reference_cure",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-LM-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-23-1",
+          "intervention": "curing_regime",
+          "predicted_observation": "sorptivity_recovery",
+          "problem_id": "lime-mortar",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://lime-mortar/evidence-1"
+            ]
+          },
+          "role": "evidence_skeptic",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_cure",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-LM-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-23-2",
+          "intervention": "curing_regime",
+          "predicted_observation": "sorptivity_recovery",
+          "problem_id": "lime-mortar",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://lime-mortar/evidence-1"
+            ]
+          },
+          "role": "mechanism_proposer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_cure",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-LM-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-23-3",
+          "intervention": "curing_regime",
+          "predicted_observation": "sorptivity_recovery",
+          "problem_id": "lime-mortar",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://lime-mortar/evidence-1"
+            ]
+          },
+          "role": "transfer_analyst",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_cure",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-LM-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-23-4",
+          "intervention": "curing_regime",
+          "predicted_observation": "sorptivity_recovery",
+          "problem_id": "lime-mortar",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://lime-mortar/evidence-1"
+            ]
+          },
+          "role": "experimental_designer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_cure",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-LM-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-23-5",
+          "intervention": "curing_regime",
+          "predicted_observation": "sorptivity_recovery",
+          "problem_id": "lime-mortar",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://lime-mortar/evidence-1"
+            ]
+          },
+          "role": "safety_provenance_reviewer",
+          "status": "HYPOTHESIS"
+        }
+      ],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 5,
+        "hypothesis_diversity": 1,
+        "latency_units": 5,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 23,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "REVIEW_REQUIRED",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "partial",
+      "control_status": "REVIEW_REQUIRED",
+      "events": [
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-1",
+          "role": "evidence_skeptic"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-2",
+          "role": "mechanism_proposer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-3",
+          "role": "transfer_analyst"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-4",
+          "role": "experimental_designer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-5",
+          "role": "safety_provenance_reviewer"
+        }
+      ],
+      "hypotheses": [
+        {
+          "comparator": "process-matched_reference_cure",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-LM-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-47-1",
+          "intervention": "curing_regime",
+          "predicted_observation": "sorptivity_recovery",
+          "problem_id": "lime-mortar",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://lime-mortar/evidence-1"
+            ]
+          },
+          "role": "evidence_skeptic",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_cure",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-LM-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-47-2",
+          "intervention": "curing_regime",
+          "predicted_observation": "sorptivity_recovery",
+          "problem_id": "lime-mortar",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://lime-mortar/evidence-1"
+            ]
+          },
+          "role": "mechanism_proposer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_cure",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-LM-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-47-3",
+          "intervention": "curing_regime",
+          "predicted_observation": "sorptivity_recovery",
+          "problem_id": "lime-mortar",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://lime-mortar/evidence-1"
+            ]
+          },
+          "role": "transfer_analyst",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_cure",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-LM-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-47-4",
+          "intervention": "curing_regime",
+          "predicted_observation": "sorptivity_recovery",
+          "problem_id": "lime-mortar",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://lime-mortar/evidence-1"
+            ]
+          },
+          "role": "experimental_designer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_cure",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-LM-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-47-5",
+          "intervention": "curing_regime",
+          "predicted_observation": "sorptivity_recovery",
+          "problem_id": "lime-mortar",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://lime-mortar/evidence-1"
+            ]
+          },
+          "role": "safety_provenance_reviewer",
+          "status": "HYPOTHESIS"
+        }
+      ],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 5,
+        "hypothesis_diversity": 1,
+        "latency_units": 5,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 47,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "REVIEW_REQUIRED",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "unsupported",
+      "control_status": "ABSTAIN",
+      "events": [
+        {
+          "action": "FOCUS",
+          "reason": "provenance_first",
+          "role": "safety_provenance_reviewer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-1",
+          "role": "evidence_skeptic"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-2",
+          "role": "mechanism_proposer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-3",
+          "role": "transfer_analyst"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-4",
+          "role": "experimental_designer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-11-5",
+          "role": "safety_provenance_reviewer"
+        }
+      ],
+      "hypotheses": [
+        {
+          "comparator": "process-matched_reference_binder",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-BC-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-11-1",
+          "intervention": "binder_formulation; calendaring_process",
+          "predicted_observation": "capacity_retention",
+          "problem_id": "battery-cathode",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://battery-cathode/evidence-1"
+            ]
+          },
+          "role": "evidence_skeptic",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_binder",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-BC-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-11-2",
+          "intervention": "binder_formulation; calendaring_process",
+          "predicted_observation": "capacity_retention",
+          "problem_id": "battery-cathode",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://battery-cathode/evidence-1"
+            ]
+          },
+          "role": "mechanism_proposer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_binder",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-BC-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-11-3",
+          "intervention": "binder_formulation; calendaring_process",
+          "predicted_observation": "capacity_retention",
+          "problem_id": "battery-cathode",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://battery-cathode/evidence-1"
+            ]
+          },
+          "role": "transfer_analyst",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_binder",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-BC-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-11-4",
+          "intervention": "binder_formulation; calendaring_process",
+          "predicted_observation": "capacity_retention",
+          "problem_id": "battery-cathode",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://battery-cathode/evidence-1"
+            ]
+          },
+          "role": "experimental_designer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_binder",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-BC-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-11-5",
+          "intervention": "binder_formulation; calendaring_process",
+          "predicted_observation": "capacity_retention",
+          "problem_id": "battery-cathode",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://battery-cathode/evidence-1"
+            ]
+          },
+          "role": "safety_provenance_reviewer",
+          "status": "HYPOTHESIS"
+        }
+      ],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 5,
+        "hypothesis_diversity": 1,
+        "latency_units": 6,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 11,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "ABSTAIN",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "unsupported",
+      "control_status": "ABSTAIN",
+      "events": [
+        {
+          "action": "FOCUS",
+          "reason": "provenance_first",
+          "role": "safety_provenance_reviewer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-1",
+          "role": "evidence_skeptic"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-2",
+          "role": "mechanism_proposer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-3",
+          "role": "transfer_analyst"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-4",
+          "role": "experimental_designer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-23-5",
+          "role": "safety_provenance_reviewer"
+        }
+      ],
+      "hypotheses": [
+        {
+          "comparator": "process-matched_reference_binder",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-BC-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-23-1",
+          "intervention": "binder_formulation; calendaring_process",
+          "predicted_observation": "capacity_retention",
+          "problem_id": "battery-cathode",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://battery-cathode/evidence-1"
+            ]
+          },
+          "role": "evidence_skeptic",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_binder",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-BC-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-23-2",
+          "intervention": "binder_formulation; calendaring_process",
+          "predicted_observation": "capacity_retention",
+          "problem_id": "battery-cathode",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://battery-cathode/evidence-1"
+            ]
+          },
+          "role": "mechanism_proposer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_binder",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-BC-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-23-3",
+          "intervention": "binder_formulation; calendaring_process",
+          "predicted_observation": "capacity_retention",
+          "problem_id": "battery-cathode",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://battery-cathode/evidence-1"
+            ]
+          },
+          "role": "transfer_analyst",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_binder",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-BC-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-23-4",
+          "intervention": "binder_formulation; calendaring_process",
+          "predicted_observation": "capacity_retention",
+          "problem_id": "battery-cathode",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://battery-cathode/evidence-1"
+            ]
+          },
+          "role": "experimental_designer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_binder",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-BC-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-23-5",
+          "intervention": "binder_formulation; calendaring_process",
+          "predicted_observation": "capacity_retention",
+          "problem_id": "battery-cathode",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://battery-cathode/evidence-1"
+            ]
+          },
+          "role": "safety_provenance_reviewer",
+          "status": "HYPOTHESIS"
+        }
+      ],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 5,
+        "hypothesis_diversity": 1,
+        "latency_units": 6,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 23,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "ABSTAIN",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "unsupported",
+      "control_status": "ABSTAIN",
+      "events": [
+        {
+          "action": "FOCUS",
+          "reason": "provenance_first",
+          "role": "safety_provenance_reviewer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-1",
+          "role": "evidence_skeptic"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-2",
+          "role": "mechanism_proposer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-3",
+          "role": "transfer_analyst"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-4",
+          "role": "experimental_designer"
+        },
+        {
+          "action": "PROPOSE",
+          "hypothesis_id": "AG-v1.1-47-5",
+          "role": "safety_provenance_reviewer"
+        }
+      ],
+      "hypotheses": [
+        {
+          "comparator": "process-matched_reference_binder",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-BC-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-47-1",
+          "intervention": "binder_formulation; calendaring_process",
+          "predicted_observation": "capacity_retention",
+          "problem_id": "battery-cathode",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://battery-cathode/evidence-1"
+            ]
+          },
+          "role": "evidence_skeptic",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_binder",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-BC-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-47-2",
+          "intervention": "binder_formulation; calendaring_process",
+          "predicted_observation": "capacity_retention",
+          "problem_id": "battery-cathode",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://battery-cathode/evidence-1"
+            ]
+          },
+          "role": "mechanism_proposer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_binder",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-BC-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-47-3",
+          "intervention": "binder_formulation; calendaring_process",
+          "predicted_observation": "capacity_retention",
+          "problem_id": "battery-cathode",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://battery-cathode/evidence-1"
+            ]
+          },
+          "role": "transfer_analyst",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_binder",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-BC-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-47-4",
+          "intervention": "binder_formulation; calendaring_process",
+          "predicted_observation": "capacity_retention",
+          "problem_id": "battery-cathode",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://battery-cathode/evidence-1"
+            ]
+          },
+          "role": "experimental_designer",
+          "status": "HYPOTHESIS"
+        },
+        {
+          "comparator": "process-matched_reference_binder",
+          "disconfirming_observation": "matched control does not differ on the primary endpoint",
+          "evidence_memory_ids": [
+            "E-BC-F01"
+          ],
+          "hypothesis_id": "AG-v1.1-47-5",
+          "intervention": "binder_formulation; calendaring_process",
+          "predicted_observation": "capacity_retention",
+          "problem_id": "battery-cathode",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": {
+            "source_locators": [
+              "fixture://battery-cathode/evidence-1"
+            ]
+          },
+          "role": "safety_provenance_reviewer",
+          "status": "HYPOTHESIS"
+        }
+      ],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 5,
+        "hypothesis_diversity": 1,
+        "latency_units": 6,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 47,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "ABSTAIN",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "unsafe",
+      "control_status": "UNSAFE_REJECTED",
+      "events": [
+        {
+          "action": "FOCUS",
+          "reason": "provenance_first",
+          "role": "safety_provenance_reviewer"
+        }
+      ],
+      "hypotheses": [],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 0,
+        "hypothesis_diversity": 0,
+        "latency_units": 1,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 11,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "UNSAFE_REJECTED",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "unsafe",
+      "control_status": "UNSAFE_REJECTED",
+      "events": [
+        {
+          "action": "FOCUS",
+          "reason": "provenance_first",
+          "role": "safety_provenance_reviewer"
+        }
+      ],
+      "hypotheses": [],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 0,
+        "hypothesis_diversity": 0,
+        "latency_units": 1,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 23,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "UNSAFE_REJECTED",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "unsafe",
+      "control_status": "UNSAFE_REJECTED",
+      "events": [
+        {
+          "action": "FOCUS",
+          "reason": "provenance_first",
+          "role": "safety_provenance_reviewer"
+        }
+      ],
+      "hypotheses": [],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 0,
+        "hypothesis_diversity": 0,
+        "latency_units": 1,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 47,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "UNSAFE_REJECTED",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "no-feasible",
+      "control_status": "NO_FEASIBLE_CANDIDATE",
+      "events": [],
+      "hypotheses": [],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 0,
+        "hypothesis_diversity": 0,
+        "latency_units": 0,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 11,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "NO_FEASIBLE_CANDIDATE",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "no-feasible",
+      "control_status": "NO_FEASIBLE_CANDIDATE",
+      "events": [],
+      "hypotheses": [],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 0,
+        "hypothesis_diversity": 0,
+        "latency_units": 0,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 23,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "NO_FEASIBLE_CANDIDATE",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "no-feasible",
+      "control_status": "NO_FEASIBLE_CANDIDATE",
+      "events": [],
+      "hypotheses": [],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 0,
+        "hypothesis_diversity": 0,
+        "latency_units": 0,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 47,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "critiquing",
+        "adjudicating",
+        "selecting",
+        "awaiting_review"
+      ],
+      "status": "NO_FEASIBLE_CANDIDATE",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "budget-exhaustion",
+      "control_status": "BUDGET_EXHAUSTED",
+      "events": [],
+      "hypotheses": [],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 0,
+        "hypothesis_diversity": 0,
+        "latency_units": 0,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 11,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "budget_exhausted"
+      ],
+      "status": "BUDGET_EXHAUSTED",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "budget-exhaustion",
+      "control_status": "BUDGET_EXHAUSTED",
+      "events": [],
+      "hypotheses": [],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 0,
+        "hypothesis_diversity": 0,
+        "latency_units": 0,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 23,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "budget_exhausted"
+      ],
+      "status": "BUDGET_EXHAUSTED",
+      "version": "v1.1"
+    },
+    {
+      "authority": {
+        "credentials": "none",
+        "evidence_write": "prohibited",
+        "external_communication": "prohibited",
+        "model_calls": "none",
+        "network": "none",
+        "physical_execution": "prohibited"
+      },
+      "case_id": "budget-exhaustion",
+      "control_status": "BUDGET_EXHAUSTED",
+      "events": [],
+      "hypotheses": [],
+      "metrics": {
+        "constraint_violations": 0,
+        "cost_units": 0,
+        "hypothesis_diversity": 0,
+        "latency_units": 0,
+        "provenance_completeness": 1.0,
+        "task_accuracy": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "model_version": "fixture-agent-v1",
+      "provider": "offline-role-simulator",
+      "roles": [
+        "evidence_skeptic",
+        "mechanism_proposer",
+        "transfer_analyst",
+        "experimental_designer",
+        "safety_provenance_reviewer"
+      ],
+      "seed": 47,
+      "state_trace": [
+        "created",
+        "context_loaded",
+        "evidence_frozen",
+        "proposing",
+        "budget_exhausted"
+      ],
+      "status": "BUDGET_EXHAUSTED",
+      "version": "v1.1"
+    }
+  ],
+  "seeds": [
+    11,
+    23,
+    47
+  ],
+  "society_accuracy": 1.0,
+  "society_cost_units_mean": 2.5
+}
