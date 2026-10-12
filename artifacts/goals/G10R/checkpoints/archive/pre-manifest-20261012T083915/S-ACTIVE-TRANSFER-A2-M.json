@@ -1,0 +1,1300 @@
+{
+  "action_records": [
+    {
+      "action_id": "7d32605398dbda36",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "(\"hot-mixed\" or \"hot mixed\") lime pozzolan mortar quicklime functional recovery matched control",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Seek a target-domain process-matched comparison to test the provisional M1 prediction of functional recovery beyond control. Support is limited to sufficiently matched material, process, comparator, and endpoint; disappearance under matched comparison or endpoint falsifies the prediction. The supplied quicklime/microcrack record is only a lead, not direct evidence. A negative search would not establish absence of an effect.",
+      "replay_key": "sha256:cd13453b6e2a7ea23471adbe8ae07599adafba4273da93ea22bc2e3afc5b245b",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "145ebffc8b7149a4",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "hot-mixed lime pozzolan mortar quicklime silica fume microcrack impermeability functional recovery matched control",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test M2 provisionally: seek process- and endpoint-matched target-domain evidence to distinguish direct support from a cement-based transfer analogy. M2 predicts the quicklime record supplies at most a discriminator, not a target performance claim; a process-matched target record with the same intervention and functional endpoint would falsify it. Support is limited to cement-based records with an explicit transfer boundary to hot-mixed lime-pozzolan mortar. No negative searches have yet been conducted; the supplied quicklime record is EVIDENCE_PENDING, with unknown material and comparator fit.",
+      "replay_key": "sha256:6d6a72813f25c145d4a1c511cbd916235af9428b84693da41def45fac5ee53c3",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "53a0bcd1b8ffa162",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 2,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "hot-mixed lime-pozzolan mortar quicklime process-matched comparator functional recovery performance",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W4226077831",
+        "OA-W4225623403"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Provisional champion: S-ACTIVE-TRANSFER-NULL. The supplied quicklime, microcrack, and impermeability record has unknown material and comparator fit, so it does not distinguish a target-domain mechanism. Prediction: without a process-matched target comparison, evidence remains insufficient for a direct performance claim. Falsifier: a direct target-domain record with a valid mechanism discriminator. Support is limited to the declared material, process, comparator, and functional endpoint boundary. No source candidates or prior negative searches were supplied.",
+      "replay_key": "sha256:3233c25f97ce5cb261a0f92d0a9930c2d3e4b0b3e44fa43cc30639f5f79cccc3",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "6256b176fdaa4935",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:evidence_skeptic",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "\"hot-mixed\" lime pozzolan mortar functional recovery comparator",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Seek a target-domain record matching material and process and reporting a functional outcome against a comparator; without that match, the quicklime record remains a transfer hypothesis, not direct support.",
+      "replay_key": "sha256:34aba62ff933db3a5e6372c7bd857c7173f4d3c2a145d1f50ba4bbbdf8728d3c",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "a4a511dd6a3a87db",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:transfer_boundary",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 2,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "hot-mixed lime-pozzolan mortar functional recovery comparator permeability",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W7162826350",
+        "OA-W4415934361"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Find target-domain records that can test material and process match, comparator fit, and functional-endpoint alignment; a cement-based quicklime record alone can seed a transfer hypothesis, not establish target performance.",
+      "replay_key": "sha256:80ca33144922b3130f95cad20fe4c2042f3c9b91160aceaecccdab62f294e54b",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "4d3ca320b746b5db",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:experiment_simulation",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 4,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "hot-mixed lime pozzolan mortar functional recovery matched control",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W3131164780",
+        "OA-W7208789364",
+        "OA-W4403982167",
+        "OA-W7162826350",
+        "OA-W7172058033"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Cheapest discriminating observation is whether a public target-domain record matches the material, process, comparator, and functional endpoint; a quicklime analogy alone cannot establish direct support.",
+      "replay_key": "sha256:6730f038c00ea4386097ae019c23ffa824552c36d7d977f54d468d0354df3b7d",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "364c4f59482aeabe",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-OPEN",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "open slot for a new transfer or target mechanism introduced by bounded evidence. can a public quicklime-and-silica-fume record directly support the hot-mixed lime-pozzolan target, or only seed a transfer hypothesis?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic mechanism discriminator focus",
+      "replay_key": "sha256:2b80703f6a08c4789c18cddfd8f5584db6e5b1a4992e3f268efd42c8cb571da9",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "b708f95e345d0a06",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "the observed quicklime record is a domain-limited transfer analogy rather than direct target support. can a public quicklime-and-silica-fume record directly support the hot-mixed lime-pozzolan target, or only seed a transfer hypothesis?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic mechanism discriminator focus",
+      "replay_key": "sha256:7b2a7edb192b6e281b1d5db56e668b35767b938f1469f2c7d139e2bf31378cec",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "9cabdb1756500e4c",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "the available record cannot distinguish a target-domain mechanism. can a public quicklime-and-silica-fume record directly support the hot-mixed lime-pozzolan target, or only seed a transfer hypothesis?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic mechanism discriminator focus",
+      "replay_key": "sha256:c0056f143896768ad18c8932547f312be948ad5ce890f125f37bc9401540c586",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  ],
+  "actions": {
+    "145ebffc8b7149a4": {
+      "action_id": "145ebffc8b7149a4",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "hot-mixed lime pozzolan mortar quicklime silica fume microcrack impermeability functional recovery matched control",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test M2 provisionally: seek process- and endpoint-matched target-domain evidence to distinguish direct support from a cement-based transfer analogy. M2 predicts the quicklime record supplies at most a discriminator, not a target performance claim; a process-matched target record with the same intervention and functional endpoint would falsify it. Support is limited to cement-based records with an explicit transfer boundary to hot-mixed lime-pozzolan mortar. No negative searches have yet been conducted; the supplied quicklime record is EVIDENCE_PENDING, with unknown material and comparator fit.",
+      "replay_key": "sha256:6d6a72813f25c145d4a1c511cbd916235af9428b84693da41def45fac5ee53c3",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "364c4f59482aeabe": {
+      "action_id": "364c4f59482aeabe",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-OPEN",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "open slot for a new transfer or target mechanism introduced by bounded evidence. can a public quicklime-and-silica-fume record directly support the hot-mixed lime-pozzolan target, or only seed a transfer hypothesis?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic mechanism discriminator focus",
+      "replay_key": "sha256:2b80703f6a08c4789c18cddfd8f5584db6e5b1a4992e3f268efd42c8cb571da9",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "4d3ca320b746b5db": {
+      "action_id": "4d3ca320b746b5db",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:experiment_simulation",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 4,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "hot-mixed lime pozzolan mortar functional recovery matched control",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W3131164780",
+        "OA-W7208789364",
+        "OA-W4403982167",
+        "OA-W7162826350",
+        "OA-W7172058033"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Cheapest discriminating observation is whether a public target-domain record matches the material, process, comparator, and functional endpoint; a quicklime analogy alone cannot establish direct support.",
+      "replay_key": "sha256:6730f038c00ea4386097ae019c23ffa824552c36d7d977f54d468d0354df3b7d",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "53a0bcd1b8ffa162": {
+      "action_id": "53a0bcd1b8ffa162",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 2,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "hot-mixed lime-pozzolan mortar quicklime process-matched comparator functional recovery performance",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W4226077831",
+        "OA-W4225623403"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Provisional champion: S-ACTIVE-TRANSFER-NULL. The supplied quicklime, microcrack, and impermeability record has unknown material and comparator fit, so it does not distinguish a target-domain mechanism. Prediction: without a process-matched target comparison, evidence remains insufficient for a direct performance claim. Falsifier: a direct target-domain record with a valid mechanism discriminator. Support is limited to the declared material, process, comparator, and functional endpoint boundary. No source candidates or prior negative searches were supplied.",
+      "replay_key": "sha256:3233c25f97ce5cb261a0f92d0a9930c2d3e4b0b3e44fa43cc30639f5f79cccc3",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "6256b176fdaa4935": {
+      "action_id": "6256b176fdaa4935",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:evidence_skeptic",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "\"hot-mixed\" lime pozzolan mortar functional recovery comparator",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Seek a target-domain record matching material and process and reporting a functional outcome against a comparator; without that match, the quicklime record remains a transfer hypothesis, not direct support.",
+      "replay_key": "sha256:34aba62ff933db3a5e6372c7bd857c7173f4d3c2a145d1f50ba4bbbdf8728d3c",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "7d32605398dbda36": {
+      "action_id": "7d32605398dbda36",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "(\"hot-mixed\" or \"hot mixed\") lime pozzolan mortar quicklime functional recovery matched control",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Seek a target-domain process-matched comparison to test the provisional M1 prediction of functional recovery beyond control. Support is limited to sufficiently matched material, process, comparator, and endpoint; disappearance under matched comparison or endpoint falsifies the prediction. The supplied quicklime/microcrack record is only a lead, not direct evidence. A negative search would not establish absence of an effect.",
+      "replay_key": "sha256:cd13453b6e2a7ea23471adbe8ae07599adafba4273da93ea22bc2e3afc5b245b",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "9cabdb1756500e4c": {
+      "action_id": "9cabdb1756500e4c",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "the available record cannot distinguish a target-domain mechanism. can a public quicklime-and-silica-fume record directly support the hot-mixed lime-pozzolan target, or only seed a transfer hypothesis?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic mechanism discriminator focus",
+      "replay_key": "sha256:c0056f143896768ad18c8932547f312be948ad5ce890f125f37bc9401540c586",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "a4a511dd6a3a87db": {
+      "action_id": "a4a511dd6a3a87db",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:transfer_boundary",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 2,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "hot-mixed lime-pozzolan mortar functional recovery comparator permeability",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W7162826350",
+        "OA-W4415934361"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Find target-domain records that can test material and process match, comparator fit, and functional-endpoint alignment; a cement-based quicklime record alone can seed a transfer hypothesis, not establish target performance.",
+      "replay_key": "sha256:80ca33144922b3130f95cad20fe4c2042f3c9b91160aceaecccdab62f294e54b",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "b708f95e345d0a06": {
+      "action_id": "b708f95e345d0a06",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "the observed quicklime record is a domain-limited transfer analogy rather than direct target support. can a public quicklime-and-silica-fume record directly support the hot-mixed lime-pozzolan target, or only seed a transfer hypothesis?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic mechanism discriminator focus",
+      "replay_key": "sha256:7b2a7edb192b6e281b1d5db56e668b35767b938f1469f2c7d139e2bf31378cec",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  },
+  "budget": {
+    "limits": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 12000,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "remaining": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 24.9948276,
+      "input_tokens": 51041,
+      "output_tokens": 7447,
+      "payload_bytes": 5000000,
+      "queries": 3,
+      "retained_sources": 16,
+      "simulation_calls": 4
+    },
+    "usage": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.0051724,
+      "input_tokens": 28959,
+      "output_tokens": 4553,
+      "payload_bytes": 0,
+      "queries": 9,
+      "retained_sources": 8,
+      "simulation_calls": 0
+    }
+  },
+  "manifest_sha256": "sha256:eb14c7e5d364a798d86d352d7c4d22cabd106016049bd465a98aeded4adaf7b4",
+  "model_traces": [
+    {
+      "call_id": "c295580136b0a1e4",
+      "estimated_actual_cost_usd": 0.0002944,
+      "estimated_maximum_cost_usd": 0.0003975,
+      "latency_seconds": 4.0966,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "proponent:S-ACTIVE-TRANSFER-M1",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "(\"hot-mixed\" OR \"hot mixed\") lime pozzolan mortar quicklime functional recovery matched control",
+            "rationale": "Seek a target-domain process-matched comparison to test the provisional M1 prediction of functional recovery beyond control. Support is limited to sufficiently matched material, process, comparator, and endpoint; disappearance under matched comparison or endpoint falsifies the prediction. The supplied quicklime/microcrack record is only a lead, not direct evidence. A negative search would not establish absence of an effect."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:e9aafd4514b66cbc00f8440b4979f0cdcd005258baf96752514753db0964ce9c",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1364,
+        "output_tokens": 316
+      }
+    },
+    {
+      "call_id": "2bc7b76655cd2315",
+      "estimated_actual_cost_usd": 0.0003528,
+      "estimated_maximum_cost_usd": 0.0006011,
+      "latency_seconds": 5.0427,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claimed_contribution": "Provisional transfer hypothesis only.",
+        "claims": [
+          {
+            "claim_id": "C-M1",
+            "falsifier": "The effect disappears with a matched comparator or endpoint.",
+            "prediction": "A process-matched target comparison shows functional recovery beyond control.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-T1: quicklime/microcrack record; fit unknown",
+              "Mechanism-card prior basis: offline fixture, not direct evidence"
+            ],
+            "statement": "Quicklime-associated chemistry may transfer to functional recovery in the target domain; this is a hypothesis, not direct support.",
+            "support_region": "Only where material, process, comparator, and endpoint are sufficiently matched."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-TRANSFER-M1",
+        "negative_searches": [
+          "No retrieved source candidates are available; no target-domain match is established."
+        ],
+        "proposed_next_actions": [
+          "Search OpenAlex for process-matched hot-mixed lime-pozzolan comparisons. "
+        ],
+        "report_id": "R-S-ACTIVE-TRANSFER-M1",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Does any process-matched target record report functional recovery beyond control?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:55275fd24c6b6056dca40b8034a7e9d694336c86340a78f896126f70be435368",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1588,
+        "output_tokens": 388
+      }
+    },
+    {
+      "call_id": "b8c49ed60e4c9ce3",
+      "estimated_actual_cost_usd": 0.0003605,
+      "estimated_maximum_cost_usd": 0.0003988,
+      "latency_seconds": 4.7574,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "No source candidates are available. M2 remains a provisional explanation; promotion is REVIEW_REQUIRED.",
+        "branch_id": "proponent:S-ACTIVE-TRANSFER-M2",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "hot-mixed lime pozzolan mortar quicklime silica fume microcrack impermeability functional recovery matched control",
+            "rationale": "Test M2 provisionally: seek process- and endpoint-matched target-domain evidence to distinguish direct support from a cement-based transfer analogy. M2 predicts the quicklime record supplies at most a discriminator, not a target performance claim; a process-matched target record with the same intervention and functional endpoint would falsify it. Support is limited to cement-based records with an explicit transfer boundary to hot-mixed lime-pozzolan mortar. No negative searches have yet been conducted; the supplied quicklime record is EVIDENCE_PENDING, with unknown material and comparator fit."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:96df2033d629b19c2f7ff3715b598abea62976ab048172260204be5070fc2b37",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1375,
+        "output_tokens": 446
+      }
+    },
+    {
+      "call_id": "80085877af65f5fe",
+      "estimated_actual_cost_usd": 0.0003537,
+      "estimated_maximum_cost_usd": 0.000612,
+      "latency_seconds": 5.4459,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claimed_contribution": "Provisional transfer-boundary interpretation only.",
+        "claims": [
+          {
+            "claim_id": "C1",
+            "falsifier": "A process-matched target record reports the same intervention and functional endpoint.",
+            "prediction": "It may suggest a discriminator but lacks target-matched performance evidence.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-T1",
+              "M2 mechanism card"
+            ],
+            "statement": "The quicklime record is a transfer analogy, not direct support for hot-mixed lime-pozzolan performance.",
+            "support_region": "Cement-based records with an explicit boundary to hot-mixed lime-pozzolan mortar."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-TRANSFER-M2",
+        "negative_searches": [
+          "No source searches or negative results are available in this record."
+        ],
+        "proposed_next_actions": [
+          "Search for target-domain records matching material, process, comparator, and functional endpoint."
+        ],
+        "report_id": "R-S-ACTIVE-TRANSFER-M2",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Does a process- and endpoint-matched target-domain record exist?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:9c14be03176dac93f6fbd9743ac60d1442260e685dd7dc4d88cee8f6cdb35d44",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1652,
+        "output_tokens": 377
+      }
+    },
+    {
+      "call_id": "efd0e03e977fdca8",
+      "estimated_actual_cost_usd": 0.0003123,
+      "estimated_maximum_cost_usd": 0.0003964,
+      "latency_seconds": 4.6324,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "proponent:S-ACTIVE-TRANSFER-NULL",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "hot-mixed lime-pozzolan mortar quicklime process-matched comparator functional recovery performance",
+            "rationale": "Provisional champion: S-ACTIVE-TRANSFER-NULL. The supplied quicklime, microcrack, and impermeability record has unknown material and comparator fit, so it does not distinguish a target-domain mechanism. Prediction: without a process-matched target comparison, evidence remains insufficient for a direct performance claim. Falsifier: a direct target-domain record with a valid mechanism discriminator. Support is limited to the declared material, process, comparator, and functional endpoint boundary. No source candidates or prior negative searches were supplied."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:d8e75f6bcb4bebe4dd73c4669b3aad15a67492c3aa9fde335c46c3b632b5a5b3",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1353,
+        "output_tokens": 354
+      }
+    },
+    {
+      "call_id": "eeb56587b175cb04",
+      "estimated_actual_cost_usd": 0.0003911,
+      "estimated_maximum_cost_usd": 0.0006533,
+      "latency_seconds": 4.7988,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claimed_contribution": "Maintain the null pending a target-domain discriminator.",
+        "claims": [
+          {
+            "claim_id": "C1",
+            "falsifier": "A direct target-domain record supplies a valid mechanism discriminator.",
+            "prediction": "Without a process-matched target comparison, direct performance support remains insufficient.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-T1: quicklime, microcracks, and impermeability are mentioned; material and comparator fit are unknown.",
+              "Supplied candidate metadata is unrelated by title and does not establish target support."
+            ],
+            "statement": "Available information cannot distinguish a target-domain mechanism.",
+            "support_region": "Declared material, process, comparator, and functional endpoint boundary only."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-TRANSFER-NULL",
+        "negative_searches": [
+          "Supplied candidate titles did not identify a relevant target-domain record."
+        ],
+        "proposed_next_actions": [
+          "Search boundedly for a target-domain process-matched comparison."
+        ],
+        "report_id": "R-S-ACTIVE-TRANSFER-NULL",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Is there a process-matched target comparison with a functional endpoint?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:249da4646595e203ea78c059d9a2fdb6f334148bd774e7df93c5f10a3fd1f224",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1971,
+        "output_tokens": 388
+      }
+    },
+    {
+      "call_id": "bc2883dee9eadf9e",
+      "estimated_actual_cost_usd": 0.0003135,
+      "estimated_maximum_cost_usd": 0.0004912,
+      "latency_seconds": 3.3103,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "auditor:evidence_skeptic",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "\"hot-mixed\" lime pozzolan mortar functional recovery comparator",
+            "rationale": "Seek a target-domain record matching material and process and reporting a functional outcome against a comparator; without that match, the quicklime record remains a transfer hypothesis, not direct support."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:cbcb0bfe83ddd31a6a35bb623c82b0bb0aef2b1d1dc6783935116f646dc17eb0",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1955,
+        "output_tokens": 236
+      }
+    },
+    {
+      "call_id": "b390b6173b0f8791",
+      "estimated_actual_cost_usd": 0.0003675,
+      "estimated_maximum_cost_usd": 0.000735,
+      "latency_seconds": 4.633,
+      "model": "gpt-6-luna",
+      "output": {
+        "auditor_role": "evidence_skeptic",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "challenge": "E-T1 does not establish the material, process, comparator, or endpoint match needed to support transfer; the claim is appropriately only a hypothesis, not target-domain evidence.",
+        "claim_ids": [
+          "C-M1"
+        ],
+        "contradiction_status": "NO_CONTRADICTION_FOUND",
+        "critique_id": "CRIT-S-ACTIVE-TRANSFER-M1",
+        "promotion_status": "REVIEW_REQUIRED",
+        "proposed_discriminator": "Seek a source documenting hot-mixed lime-pozzolan material, process, comparator, and functional recovery endpoint; absent such a match, retain the transfer-boundary interpretation.",
+        "provenance": [
+          "E-T1: material and comparator fit unknown",
+          "C-M1: provisional transfer hypothesis; no source candidates cited"
+        ],
+        "schema_version": "1.0",
+        "target_mechanism_id": "S-ACTIVE-TRANSFER-M1"
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:9aac97cec2e13a26bd13094c50235ed249256d71c2a12018d41108b231479eda",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2035,
+        "output_tokens": 328
+      }
+    },
+    {
+      "call_id": "b6675defc3f9e13a",
+      "estimated_actual_cost_usd": 0.0003328,
+      "estimated_maximum_cost_usd": 0.0004914,
+      "latency_seconds": 4.6764,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "auditor:transfer_boundary",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "hot-mixed lime-pozzolan mortar functional recovery comparator permeability",
+            "rationale": "Find target-domain records that can test material and process match, comparator fit, and functional-endpoint alignment; a cement-based quicklime record alone can seed a transfer hypothesis, not establish target performance."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:2356b76bc6d1465f1c3cdc7b06adce658e466e5cf371e391ea59cd65f802d3a1",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1953,
+        "output_tokens": 275
+      }
+    },
+    {
+      "call_id": "afb869b9bb5aee8c",
+      "estimated_actual_cost_usd": 0.0004179,
+      "estimated_maximum_cost_usd": 0.0007811,
+      "latency_seconds": 4.6534,
+      "model": "gpt-6-luna",
+      "output": {
+        "auditor_role": "transfer_boundary",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "challenge": "E-T1 only mentions quicklime, microcracks, and impermeability, with material and comparator fit unknown. The supplied candidate titles concern adaptive reuse and ternary blended concrete; metadata alone does not establish a match to hot-mixed lime-pozzolan mortar, its process, comparator, or functional-recovery endpoint. Thus C-M1 is a transfer hypothesis, not direct target support.",
+        "claim_ids": [
+          "C-M1"
+        ],
+        "contradiction_status": "UNRESOLVED",
+        "critique_id": "CRIT-S-ACTIVE-TRANSFER-TB1",
+        "promotion_status": "REVIEW_REQUIRED",
+        "proposed_discriminator": "Seek a target-domain comparison matching material and hot-mixing process, with an appropriate control and a functional-recovery endpoint; assess recovery against that control.",
+        "provenance": [
+          "E-T1",
+          "OA-W7162826350: metadata-only title",
+          "OA-W4415934361: metadata-only title"
+        ],
+        "schema_version": "1.0",
+        "target_mechanism_id": "S-ACTIVE-TRANSFER-M1"
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:998357e182e24a00d2b63f6fd82d63c46a08cf4a920f844f4a6ef23fbc2bf287",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2364,
+        "output_tokens": 363
+      }
+    },
+    {
+      "call_id": "be98cf1787fb154c",
+      "estimated_actual_cost_usd": 0.0002954,
+      "estimated_maximum_cost_usd": 0.0004926,
+      "latency_seconds": 3.1949,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "auditor:experiment_simulation",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "hot-mixed lime pozzolan mortar functional recovery matched control",
+            "rationale": "Cheapest discriminating observation is whether a public target-domain record matches the material, process, comparator, and functional endpoint; a quicklime analogy alone cannot establish direct support."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:49dec3d15b00c409f14f29f094db9b8bfb8612d310252fa1bb4968c21099973d",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1959,
+        "output_tokens": 199
+      }
+    },
+    {
+      "call_id": "f8938e73027b8026",
+      "estimated_actual_cost_usd": 0.0004677,
+      "estimated_maximum_cost_usd": 0.0008495,
+      "latency_seconds": 8.4801,
+      "model": "gpt-6-luna",
+      "output": {
+        "auditor_role": "experiment_simulation",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "challenge": "The quicklime record only mentions microcracks and impermeability; unknown material and comparator fit leave transfer to hot-mixed lime-pozzolan functional recovery unsupported.",
+        "claim_ids": [
+          "C-M1"
+        ],
+        "contradiction_status": "UNRESOLVED",
+        "critique_id": "CRIT-S-ACTIVE-TRANSFER-M1",
+        "promotion_status": "REVIEW_REQUIRED",
+        "proposed_discriminator": "Cheapest discriminator: inspect a public target-domain record for matched material and hot-mixing process, a comparator, and a functional-recovery endpoint; absent that match, retain this as a transfer hypothesis, not direct support.",
+        "provenance": [
+          "E-T1",
+          "Supplied source candidates are metadata-only and their titles do not establish a target-domain match."
+        ],
+        "schema_version": "1.0",
+        "target_mechanism_id": "S-ACTIVE-TRANSFER-M1"
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:a8fae9da04001db8a149e94f176a85043b36dc9bc4975377422aa753fa62f508",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2887,
+        "output_tokens": 358
+      }
+    },
+    {
+      "call_id": "b53612b2ba918811",
+      "estimated_actual_cost_usd": 0.0009128,
+      "estimated_maximum_cost_usd": 0.0017695,
+      "latency_seconds": 6.6942,
+      "model": "gpt-6-luna",
+      "output": {
+        "authority_note": "Evidence remains pending; no laboratory or promotion authority is granted.",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "credible_rival_ids": [
+          "S-ACTIVE-TRANSFER-NULL"
+        ],
+        "hypotheses": [
+          {
+            "comparator": "No established comparator; target comparison must match material, hot-mixing process, and endpoint.",
+            "falsifier": "A process-matched target record reports the same intervention and functional endpoint.",
+            "hypothesis_id": "S-ACTIVE-TRANSFER-M2",
+            "intervention": "Quicklime-associated chemistry in an unspecified source material and process.",
+            "novelty_basis": "Frames the quicklime observation as a bounded transfer analogy.",
+            "predicted_observation": "The record may motivate a discriminator but does not establish target-domain functional recovery.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-T1",
+              "CRIT-S-ACTIVE-TRANSFER-TB1"
+            ],
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "support_region": "Analogy only; no target performance claim without matched material, process, comparator, and endpoint.",
+            "transfer_type": "TRANSFER_HYPOTHESIS",
+            "uncertainty": "Source material and comparator fit are unknown; supplied metadata does not establish target relevance."
+          }
+        ],
+        "leading_hypothesis_id": "S-ACTIVE-TRANSFER-M2",
+        "negative_searches": [
+          "Supplied candidate titles do not establish a target-domain match."
+        ],
+        "next_discriminating_action": "Inspect one public target-domain record for matched material, hot-mixing process, comparator, and functional-recovery endpoint.",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "REVIEW_REQUIRED",
+        "summary": "Quicklime findings are only a transfer analogy, not direct evidence for hot-mixed lime-pozzolan performance.",
+        "unresolved_disputes": [
+          "No target-domain evidence distinguishes transfer from the null; M2 is an interpretation, not demonstrated mechanism."
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:c218f8540684464a3cdc72743d1daa762bf3ff2c89cf6df40ae61b096cf30320",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 6503,
+        "output_tokens": 525
+      }
+    }
+  ],
+  "paper_evidence_cards": {},
+  "simulation_traces": [],
+  "source_candidates": {
+    "OA-W3131164780": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3390/ma14040882",
+      "discovery_query": "hot-mixed lime pozzolan mortar functional recovery matched control",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W3131164780",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W3131164780",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Assessment of Mechanical and Thermal Properties of Hemp-Lime Mortar"
+    },
+    "OA-W4225623403": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.5281/zenodo.6409367",
+      "discovery_query": "hot-mixed lime-pozzolan mortar quicklime process-matched comparator functional recovery performance",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4225623403",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4225623403",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "INAUGURATION OF KIFILIDEEN TRINOMIAL THEOREM OF NEGATIVE POWER OF \u2013 N BY EMPLOYING MATRIX AND STANDARDIZED TECHNIQUES"
+    },
+    "OA-W4226077831": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.5281/zenodo.6409377",
+      "discovery_query": "hot-mixed lime-pozzolan mortar quicklime process-matched comparator functional recovery performance",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4226077831",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4226077831",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "APPLICATION OF EXPANSION OF NEGATIVE POWER OF OF KIFILIDEEN TRINOMIAL THEOREM FOR THE TRANSFORMATION OF COMPOUND FRACTION INTO SERIES OF PARTIAL FRACTIONS WITH OTHER DEVELOPMENTS"
+    },
+    "OA-W4403982167": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1007/s43452-024-01077-3",
+      "discovery_query": "hot-mixed lime pozzolan mortar functional recovery matched control",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4403982167",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4403982167",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Optimizing mix design methods for using slag, ceramic, and glass waste powders in eco-friendly geopolymer mortars"
+    },
+    "OA-W4415934361": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1371/journal.pone.0336231",
+      "discovery_query": "hot-mixed lime-pozzolan mortar functional recovery comparator permeability",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4415934361",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4415934361",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Unleashing recyclates for enhanced mechanical and durability performances of ternary blended concrete"
+    },
+    "OA-W7162826350": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "openalex:w7162826350",
+      "discovery_query": "hot-mixed lime pozzolan mortar functional recovery matched control",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W7162826350",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W7162826350",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Bio-Based Materials in Adaptive Reuse: Assessing Durability, Disassembly, and Reuse Potential"
+    },
+    "OA-W7172058033": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.jobe.2026.117010",
+      "discovery_query": "hot-mixed lime pozzolan mortar functional recovery matched control",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W7172058033",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W7172058033",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Characterization of early 20th-century industrial by-products in construction: Insights from the Pe\u00f1arroya-Pueblonuevo thermal power plant (C\u00f3rdoba, Spain)"
+    },
+    "OA-W7208789364": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.conbuildmat.2026.148042",
+      "discovery_query": "hot-mixed lime pozzolan mortar functional recovery matched control",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W7208789364",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W7208789364",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Bond strength evolution of rendering mortars incorporating ladle furnace slag under natural outdoor exposure"
+    }
+  },
+  "state": "completed",
+  "state_history": [
+    "created",
+    "policy_loaded",
+    "context_frozen",
+    "planning",
+    "round_1",
+    "sharing",
+    "focus_allocated",
+    "round_2",
+    "adjudicating",
+    "scored",
+    "completed"
+  ]
+}

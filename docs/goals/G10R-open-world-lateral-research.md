@@ -1,6 +1,6 @@
 # G10R — Bounded active-investigation society pilot
 
-**Status:** in progress
+**Status:** complete — `DO_NOT_ESCALATE_ACTIVE_SOCIETY`
 **Dependencies:** G09 complete; G10B complete with any verdict; G-LI complete; G10M complete; G10R-R, G10P, and G10D complete for any Phase-B rerun after the contaminated evaluation; explicit owner activation of the frozen lawful source policy and Phase B network/model execution
 **Advances:** tests whether viewpoint-centered research teams, supported by structural task agents and a cross-viewpoint tournament, add value when investigators can acquire different information or invoke declared simulation tools under the same aggregate budget as one tool-using investigator
 

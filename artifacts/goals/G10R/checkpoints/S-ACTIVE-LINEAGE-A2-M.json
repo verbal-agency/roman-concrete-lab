@@ -1,7 +1,7 @@
 {
   "action_records": [
     {
-      "action_id": "17f8193fd357d421",
+      "action_id": "651ec2939723151c",
       "action_type": "SEARCH",
       "arm": "A2-M",
       "branch_id": "S-ACTIVE-LINEAGE-M1",
@@ -18,21 +18,21 @@
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
         "index": "openalex",
-        "query": "utah quicklime thesis transportation report study relationship functional endpoint recovery",
+        "query": "utah quicklime thesis transportation report study relationship independent replication functional endpoint crack recovery water transport",
         "requested_index": "catalog"
       },
       "output_ids": [],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Test whether the named Utah records document independent replication and a relevant functional recovery endpoint for the provisional localized reactive-lime-reservoir mechanism. Its prediction is that recovery tracks reactive lime-rich regions; matched specimens lacking those regions recovering identically would falsify it. Support remains limited to modern lime-pozzolan mortar with identified lime-rich inclusions; transfer is unresolved. No source candidates are supplied, so no provenance or negative-search result is established.",
-      "replay_key": "sha256:3ac5d05e16b262fe0c278c872e7b238a5ace88e733c2a523ee603afa1269478c",
+      "rationale": "Trace the named Utah thesis and transportation report, checking whether they share data, specimens, or authors and whether either reports a functional recovery endpoint. Provisionally champion M1 only within modern lime-pozzolan mortar with identified lime-rich inclusions: it predicts recovery tracking their presence and exposure; matched specimens lacking reactive lime-rich regions recovering identically would falsify it. Record provenance and report unsuccessful linkage or endpoint searches; the base packet establishes neither replication nor endpoint.",
+      "replay_key": "sha256:47e2edb30f8afe96d76b106df860d8e845dfa8efb51f5660dc63f8cf5c121753",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
     },
     {
-      "action_id": "b905fb49ccffa60b",
+      "action_id": "387a3fd2211ac161",
       "action_type": "SEARCH",
       "arm": "A2-M",
       "branch_id": "S-ACTIVE-LINEAGE-M2",
@@ -42,22 +42,28 @@
         "input_tokens": 0,
         "output_tokens": 0,
         "payload_bytes": 0,
-        "queries": 1,
-        "retained_sources": 0,
+        "queries": 2,
+        "retained_sources": 5,
         "simulation_calls": 0
       },
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
-        "index": "openalex",
-        "query": "utah quicklime thesis transportation report study relationship independent replication functional endpoint crack closure water transport",
+        "index": "crossref",
+        "query": "utah quicklime asphalt thesis transportation report crack closure water permeability self-healing",
         "requested_index": "catalog"
       },
-      "output_ids": [],
+      "output_ids": [
+        "CR-f0345f482ff2",
+        "CR-c7e52b0d1136",
+        "CR-f304614dc686",
+        "CR-fe9ff9cdff30",
+        "CR-8b275dff6c12"
+      ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Seek the named records and any documented relationship or endpoint; the base packet does not establish either. Provisionally champion physical crack closure: it predicts closure without corresponding water-transport recovery, and is falsified if matched tests consistently show functional recovery exceeding closure-only controls. Support is limited to conditions where closure and transport recovery can be distinguished. No negative search results or source provenance are yet available; retrieved candidates remain EVIDENCE_PENDING.",
-      "replay_key": "sha256:f410928ccbe75c79628c0e2fa683962fbc6bd6231480fff5d1c696c2b5da0088",
+      "rationale": "Locate the named Utah thesis and transportation report and check their study lineage and reported endpoints. Provisionally champion M2: physical crack closure may occur without corresponding functional water-transport recovery. Prediction: closure and transport recovery can diverge; falsifier: matched evidence consistently shows functional recovery exceeding closure-only controls. Support is limited to conditions separating closure from transport recovery. No source candidates are supplied, so this is a search plan, not evidence; promotion remains REVIEW_REQUIRED.",
+      "replay_key": "sha256:2ac1616d8b8ef309cf4fd3e253d370e54e3814bf6b295520ccf6b95a5125ea4e",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
@@ -74,21 +80,27 @@
         "output_tokens": 0,
         "payload_bytes": 0,
         "queries": 1,
-        "retained_sources": 0,
+        "retained_sources": 5,
         "simulation_calls": 0
       },
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
-        "index": "openalex",
+        "index": "crossref",
         "query": "utah quicklime thesis transportation report study relationship independent replication functional endpoint",
         "requested_index": "catalog"
       },
-      "output_ids": [],
+      "output_ids": [
+        "CR-7447ef119a7d",
+        "CR-b27519feeb64",
+        "CR-ec276fce42ad",
+        "CR-0e351331841f",
+        "CR-458d398a5711"
+      ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Check whether the named records are independent studies and report a relevant functional endpoint; their relationship and endpoint are absent from the packet. Provisionally favor the assigned null: predict no reproducible mechanism-specific recovery under declared conditions, with a process-matched control indistinguishable from proposed mechanisms. A preregistered mechanism-specific discriminator would falsify it. Support is limited to the declared case domain and measurement endpoint; no negative searches or source provenance are yet available beyond E-L1, and any retrieved candidates remain EVIDENCE_PENDING.",
-      "replay_key": "sha256:390129492940737e5fd8f8001a2f1889435db62c844731c54aea7b0687f1df3a",
+      "rationale": "Test whether the named records document independent replication and a relevant functional endpoint; do not presume either from their titles. Provisionally champion the required null comparator: it predicts no reproducible mechanism-specific recovery under declared conditions, and would be challenged by a preregistered discriminator separating a candidate from a process-matched control. Support is limited to the declared case domain and measurement endpoint. Record search provenance and report negative findings as bounded to this catalog query; sources remain EVIDENCE_PENDING.",
+      "replay_key": "sha256:163bd48d89cf00a6a6293a6418d5da298bd558be68de2ff6f3d2f516ec5a4622",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
@@ -110,22 +122,27 @@
       },
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
-        "index": "openalex",
+        "index": "crossref",
         "query": "utah quicklime thesis transportation report study relationship independent replication functional endpoint",
         "requested_index": "catalog"
       },
-      "output_ids": [],
+      "output_ids": [
+        "CR-7447ef119a7d",
+        "CR-b27519feeb64",
+        "CR-ec276fce42ad",
+        "CR-0e351331841f"
+      ],
       "policy_status": "REPLAYED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Locate the named Utah records and determine whether they describe independent studies and report a relevant functional endpoint; names alone do not establish either.",
-      "replay_key": "sha256:390129492940737e5fd8f8001a2f1889435db62c844731c54aea7b0687f1df3a",
+      "rationale": "Locate the named Utah records and determine whether they share study lineage and report a relevant functional endpoint; titles or metadata alone cannot establish either.",
+      "replay_key": "sha256:163bd48d89cf00a6a6293a6418d5da298bd558be68de2ff6f3d2f516ec5a4622",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
     },
     {
-      "action_id": "bd097f152a9c724e",
+      "action_id": "d5a3a03e1ff1735c",
       "action_type": "SEARCH",
       "arm": "A2-M",
       "branch_id": "auditor:transfer_boundary",
@@ -135,22 +152,27 @@
         "input_tokens": 0,
         "output_tokens": 0,
         "payload_bytes": 0,
-        "queries": 1,
+        "queries": 0,
         "retained_sources": 0,
         "simulation_calls": 0
       },
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
-        "index": "openalex",
-        "query": "utah quicklime thesis transportation report study relationship functional endpoint",
+        "index": "crossref",
+        "query": "utah quicklime thesis transportation report study relationship independent replication functional endpoint",
         "requested_index": "catalog"
       },
-      "output_ids": [],
-      "policy_status": "ALLOWED",
+      "output_ids": [
+        "CR-7447ef119a7d",
+        "CR-b27519feeb64",
+        "CR-ec276fce42ad",
+        "CR-0e351331841f"
+      ],
+      "policy_status": "REPLAYED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Identify the named records and determine whether they are independent studies and report a relevant functional endpoint; titles or shared lineage alone do not establish replication.",
-      "replay_key": "sha256:0806c0aec00ab01eda6d84772debc2bd954f2d96a07833fe108582b901ee60a5",
+      "rationale": "Identify the named records and determine whether they are independent studies and report a relevant functional endpoint; metadata alone cannot establish either.",
+      "replay_key": "sha256:163bd48d89cf00a6a6293a6418d5da298bd558be68de2ff6f3d2f516ec5a4622",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
@@ -167,27 +189,24 @@
         "output_tokens": 0,
         "payload_bytes": 0,
         "queries": 1,
-        "retained_sources": 5,
+        "retained_sources": 0,
         "simulation_calls": 0
       },
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
-        "index": "openalex",
+        "index": "crossref",
         "query": "utah quicklime thesis transportation report",
         "requested_index": "catalog"
       },
       "output_ids": [
-        "OA-W1867560517",
-        "OA-W2308050459",
-        "OA-W2120618266",
-        "OA-W4311892906",
-        "OA-W1567384725"
+        "CR-7447ef119a7d",
+        "CR-b27519feeb64"
       ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Cheapest check: identify the named records and determine whether they document independent studies and a relevant functional endpoint.",
-      "replay_key": "sha256:2bf8ebeb33c0701c965c871209e922e8c9284ff182b50be51c646f67b0d18485",
+      "rationale": "Cheapest discriminating check: locate the named records and compare their study provenance and reported functional endpoints; metadata alone would not establish independent replication.",
+      "replay_key": "sha256:9762cd42860f8b57fc68d8b1cc05873648841b50fe35ee757e2172260d8a0ddb",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
@@ -209,7 +228,7 @@
       },
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
-        "index": "openalex",
+        "index": "crossref",
         "query": "open slot for a mechanism introduced by bounded evidence or explicit uncertainty. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?",
         "requested_index": "catalog"
       },
@@ -218,7 +237,7 @@
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rationale": "deterministic mechanism discriminator focus",
-      "replay_key": "sha256:057c242b4f4b35f263f83737b2a5db4fdee825a4bb46187a8e4324939e3a5ddf",
+      "replay_key": "sha256:714cd842e76dceabb2da32403e8b20d5cb51060f1188fdec060ae5efdbc84410",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
@@ -240,7 +259,7 @@
       },
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
-        "index": "openalex",
+        "index": "crossref",
         "query": "observed recovery is dominated by non-chemical physical crack closure. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?",
         "requested_index": "catalog"
       },
@@ -249,7 +268,7 @@
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rationale": "deterministic mechanism discriminator focus",
-      "replay_key": "sha256:8136dc7aba085821859734a8762481b2a3d096bcbe0c5ccccfeb94bde74dde4e",
+      "replay_key": "sha256:b796c51179c0b1f2ff1db2f3a94ac1ef78080b77b9b1f4194434da2cf41b54ee",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
@@ -271,7 +290,7 @@
       },
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
-        "index": "openalex",
+        "index": "crossref",
         "query": "no reproducible mechanism-specific recovery is present under the declared conditions. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?",
         "requested_index": "catalog"
       },
@@ -280,40 +299,46 @@
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rationale": "deterministic mechanism discriminator focus",
-      "replay_key": "sha256:aece0b0e69f90926ba2c2a3d93756bb4e2489feae38d7c18b721957196d8c8ec",
+      "replay_key": "sha256:7ab4acba68ad8e73941672234ab4f0738dbe5c5aa383845782236dbe9765ad77",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
     }
   ],
   "actions": {
-    "17f8193fd357d421": {
-      "action_id": "17f8193fd357d421",
+    "387a3fd2211ac161": {
+      "action_id": "387a3fd2211ac161",
       "action_type": "SEARCH",
       "arm": "A2-M",
-      "branch_id": "S-ACTIVE-LINEAGE-M1",
+      "branch_id": "S-ACTIVE-LINEAGE-M2",
       "budget_debit": {
         "document_fetches": 0,
         "estimated_cost_usd": 0,
         "input_tokens": 0,
         "output_tokens": 0,
         "payload_bytes": 0,
-        "queries": 1,
-        "retained_sources": 0,
+        "queries": 2,
+        "retained_sources": 5,
         "simulation_calls": 0
       },
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
-        "index": "openalex",
-        "query": "utah quicklime thesis transportation report study relationship functional endpoint recovery",
+        "index": "crossref",
+        "query": "utah quicklime asphalt thesis transportation report crack closure water permeability self-healing",
         "requested_index": "catalog"
       },
-      "output_ids": [],
+      "output_ids": [
+        "CR-f0345f482ff2",
+        "CR-c7e52b0d1136",
+        "CR-f304614dc686",
+        "CR-fe9ff9cdff30",
+        "CR-8b275dff6c12"
+      ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Test whether the named Utah records document independent replication and a relevant functional recovery endpoint for the provisional localized reactive-lime-reservoir mechanism. Its prediction is that recovery tracks reactive lime-rich regions; matched specimens lacking those regions recovering identically would falsify it. Support remains limited to modern lime-pozzolan mortar with identified lime-rich inclusions; transfer is unresolved. No source candidates are supplied, so no provenance or negative-search result is established.",
-      "replay_key": "sha256:3ac5d05e16b262fe0c278c872e7b238a5ace88e733c2a523ee603afa1269478c",
+      "rationale": "Locate the named Utah thesis and transportation report and check their study lineage and reported endpoints. Provisionally champion M2: physical crack closure may occur without corresponding functional water-transport recovery. Prediction: closure and transport recovery can diverge; falsifier: matched evidence consistently shows functional recovery exceeding closure-only controls. Support is limited to conditions separating closure from transport recovery. No source candidates are supplied, so this is a search plan, not evidence; promotion remains REVIEW_REQUIRED.",
+      "replay_key": "sha256:2ac1616d8b8ef309cf4fd3e253d370e54e3814bf6b295520ccf6b95a5125ea4e",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
@@ -335,7 +360,7 @@
       },
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
-        "index": "openalex",
+        "index": "crossref",
         "query": "no reproducible mechanism-specific recovery is present under the declared conditions. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?",
         "requested_index": "catalog"
       },
@@ -344,7 +369,38 @@
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rationale": "deterministic mechanism discriminator focus",
-      "replay_key": "sha256:aece0b0e69f90926ba2c2a3d93756bb4e2489feae38d7c18b721957196d8c8ec",
+      "replay_key": "sha256:7ab4acba68ad8e73941672234ab4f0738dbe5c5aa383845782236dbe9765ad77",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "651ec2939723151c": {
+      "action_id": "651ec2939723151c",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-LINEAGE-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime thesis transportation report study relationship independent replication functional endpoint crack recovery water transport",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Trace the named Utah thesis and transportation report, checking whether they share data, specimens, or authors and whether either reports a functional recovery endpoint. Provisionally champion M1 only within modern lime-pozzolan mortar with identified lime-rich inclusions: it predicts recovery tracking their presence and exposure; matched specimens lacking reactive lime-rich regions recovering identically would falsify it. Record provenance and report unsuccessful linkage or endpoint searches; the base packet establishes neither replication nor endpoint.",
+      "replay_key": "sha256:47e2edb30f8afe96d76b106df860d8e845dfa8efb51f5660dc63f8cf5c121753",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
@@ -366,16 +422,21 @@
       },
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
-        "index": "openalex",
+        "index": "crossref",
         "query": "utah quicklime thesis transportation report study relationship independent replication functional endpoint",
         "requested_index": "catalog"
       },
-      "output_ids": [],
+      "output_ids": [
+        "CR-7447ef119a7d",
+        "CR-b27519feeb64",
+        "CR-ec276fce42ad",
+        "CR-0e351331841f"
+      ],
       "policy_status": "REPLAYED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Locate the named Utah records and determine whether they describe independent studies and report a relevant functional endpoint; names alone do not establish either.",
-      "replay_key": "sha256:390129492940737e5fd8f8001a2f1889435db62c844731c54aea7b0687f1df3a",
+      "rationale": "Locate the named Utah records and determine whether they share study lineage and report a relevant functional endpoint; titles or metadata alone cannot establish either.",
+      "replay_key": "sha256:163bd48d89cf00a6a6293a6418d5da298bd558be68de2ff6f3d2f516ec5a4622",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
@@ -392,21 +453,27 @@
         "output_tokens": 0,
         "payload_bytes": 0,
         "queries": 1,
-        "retained_sources": 0,
+        "retained_sources": 5,
         "simulation_calls": 0
       },
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
-        "index": "openalex",
+        "index": "crossref",
         "query": "utah quicklime thesis transportation report study relationship independent replication functional endpoint",
         "requested_index": "catalog"
       },
-      "output_ids": [],
+      "output_ids": [
+        "CR-7447ef119a7d",
+        "CR-b27519feeb64",
+        "CR-ec276fce42ad",
+        "CR-0e351331841f",
+        "CR-458d398a5711"
+      ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Check whether the named records are independent studies and report a relevant functional endpoint; their relationship and endpoint are absent from the packet. Provisionally favor the assigned null: predict no reproducible mechanism-specific recovery under declared conditions, with a process-matched control indistinguishable from proposed mechanisms. A preregistered mechanism-specific discriminator would falsify it. Support is limited to the declared case domain and measurement endpoint; no negative searches or source provenance are yet available beyond E-L1, and any retrieved candidates remain EVIDENCE_PENDING.",
-      "replay_key": "sha256:390129492940737e5fd8f8001a2f1889435db62c844731c54aea7b0687f1df3a",
+      "rationale": "Test whether the named records document independent replication and a relevant functional endpoint; do not presume either from their titles. Provisionally champion the required null comparator: it predicts no reproducible mechanism-specific recovery under declared conditions, and would be challenged by a preregistered discriminator separating a candidate from a process-matched control. Support is limited to the declared case domain and measurement endpoint. Record search provenance and report negative findings as bounded to this catalog query; sources remain EVIDENCE_PENDING.",
+      "replay_key": "sha256:163bd48d89cf00a6a6293a6418d5da298bd558be68de2ff6f3d2f516ec5a4622",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
@@ -423,89 +490,24 @@
         "output_tokens": 0,
         "payload_bytes": 0,
         "queries": 1,
-        "retained_sources": 5,
+        "retained_sources": 0,
         "simulation_calls": 0
       },
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
-        "index": "openalex",
+        "index": "crossref",
         "query": "utah quicklime thesis transportation report",
         "requested_index": "catalog"
       },
       "output_ids": [
-        "OA-W1867560517",
-        "OA-W2308050459",
-        "OA-W2120618266",
-        "OA-W4311892906",
-        "OA-W1567384725"
+        "CR-7447ef119a7d",
+        "CR-b27519feeb64"
       ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Cheapest check: identify the named records and determine whether they document independent studies and a relevant functional endpoint.",
-      "replay_key": "sha256:2bf8ebeb33c0701c965c871209e922e8c9284ff182b50be51c646f67b0d18485",
-      "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
-      "schema_version": "1.0",
-      "timestamp": "2026-10-10T00:00:00Z"
-    },
-    "b905fb49ccffa60b": {
-      "action_id": "b905fb49ccffa60b",
-      "action_type": "SEARCH",
-      "arm": "A2-M",
-      "branch_id": "S-ACTIVE-LINEAGE-M2",
-      "budget_debit": {
-        "document_fetches": 0,
-        "estimated_cost_usd": 0,
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "payload_bytes": 0,
-        "queries": 1,
-        "retained_sources": 0,
-        "simulation_calls": 0
-      },
-      "case_id": "S-ACTIVE-LINEAGE",
-      "input": {
-        "index": "openalex",
-        "query": "utah quicklime thesis transportation report study relationship independent replication functional endpoint crack closure water transport",
-        "requested_index": "catalog"
-      },
-      "output_ids": [],
-      "policy_status": "ALLOWED",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rationale": "Seek the named records and any documented relationship or endpoint; the base packet does not establish either. Provisionally champion physical crack closure: it predicts closure without corresponding water-transport recovery, and is falsified if matched tests consistently show functional recovery exceeding closure-only controls. Support is limited to conditions where closure and transport recovery can be distinguished. No negative search results or source provenance are yet available; retrieved candidates remain EVIDENCE_PENDING.",
-      "replay_key": "sha256:f410928ccbe75c79628c0e2fa683962fbc6bd6231480fff5d1c696c2b5da0088",
-      "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
-      "schema_version": "1.0",
-      "timestamp": "2026-10-10T00:00:00Z"
-    },
-    "bd097f152a9c724e": {
-      "action_id": "bd097f152a9c724e",
-      "action_type": "SEARCH",
-      "arm": "A2-M",
-      "branch_id": "auditor:transfer_boundary",
-      "budget_debit": {
-        "document_fetches": 0,
-        "estimated_cost_usd": 0,
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "payload_bytes": 0,
-        "queries": 1,
-        "retained_sources": 0,
-        "simulation_calls": 0
-      },
-      "case_id": "S-ACTIVE-LINEAGE",
-      "input": {
-        "index": "openalex",
-        "query": "utah quicklime thesis transportation report study relationship functional endpoint",
-        "requested_index": "catalog"
-      },
-      "output_ids": [],
-      "policy_status": "ALLOWED",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rationale": "Identify the named records and determine whether they are independent studies and report a relevant functional endpoint; titles or shared lineage alone do not establish replication.",
-      "replay_key": "sha256:0806c0aec00ab01eda6d84772debc2bd954f2d96a07833fe108582b901ee60a5",
+      "rationale": "Cheapest discriminating check: locate the named records and compare their study provenance and reported functional endpoints; metadata alone would not establish independent replication.",
+      "replay_key": "sha256:9762cd42860f8b57fc68d8b1cc05873648841b50fe35ee757e2172260d8a0ddb",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
@@ -527,7 +529,7 @@
       },
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
-        "index": "openalex",
+        "index": "crossref",
         "query": "open slot for a mechanism introduced by bounded evidence or explicit uncertainty. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?",
         "requested_index": "catalog"
       },
@@ -536,7 +538,7 @@
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rationale": "deterministic mechanism discriminator focus",
-      "replay_key": "sha256:057c242b4f4b35f263f83737b2a5db4fdee825a4bb46187a8e4324939e3a5ddf",
+      "replay_key": "sha256:714cd842e76dceabb2da32403e8b20d5cb51060f1188fdec060ae5efdbc84410",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
@@ -558,7 +560,7 @@
       },
       "case_id": "S-ACTIVE-LINEAGE",
       "input": {
-        "index": "openalex",
+        "index": "crossref",
         "query": "observed recovery is dominated by non-chemical physical crack closure. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?",
         "requested_index": "catalog"
       },
@@ -567,7 +569,43 @@
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rationale": "deterministic mechanism discriminator focus",
-      "replay_key": "sha256:8136dc7aba085821859734a8762481b2a3d096bcbe0c5ccccfeb94bde74dde4e",
+      "replay_key": "sha256:b796c51179c0b1f2ff1db2f3a94ac1ef78080b77b9b1f4194434da2cf41b54ee",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "d5a3a03e1ff1735c": {
+      "action_id": "d5a3a03e1ff1735c",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:transfer_boundary",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 0,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "crossref",
+        "query": "utah quicklime thesis transportation report study relationship independent replication functional endpoint",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "CR-7447ef119a7d",
+        "CR-b27519feeb64",
+        "CR-ec276fce42ad",
+        "CR-0e351331841f"
+      ],
+      "policy_status": "REPLAYED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the named records and determine whether they are independent studies and report a relevant functional endpoint; metadata alone cannot establish either.",
+      "replay_key": "sha256:163bd48d89cf00a6a6293a6418d5da298bd558be68de2ff6f3d2f516ec5a4622",
       "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
@@ -586,32 +624,32 @@
     },
     "remaining": {
       "document_fetches": 4,
-      "estimated_cost_usd": 24.9950143,
-      "input_tokens": 51843,
-      "output_tokens": 7660,
+      "estimated_cost_usd": 24.9947165,
+      "input_tokens": 48435,
+      "output_tokens": 7746,
       "payload_bytes": 5000000,
-      "queries": 4,
-      "retained_sources": 19,
+      "queries": 0,
+      "retained_sources": 0,
       "simulation_calls": 4
     },
     "usage": {
       "document_fetches": 0,
-      "estimated_cost_usd": 0.0049857,
-      "input_tokens": 28157,
-      "output_tokens": 4340,
+      "estimated_cost_usd": 0.0052835,
+      "input_tokens": 31565,
+      "output_tokens": 4254,
       "payload_bytes": 0,
-      "queries": 8,
-      "retained_sources": 5,
+      "queries": 12,
+      "retained_sources": 24,
       "simulation_calls": 0
     }
   },
-  "manifest_sha256": "sha256:eb14c7e5d364a798d86d352d7c4d22cabd106016049bd465a98aeded4adaf7b4",
+  "manifest_sha256": "sha256:23b4f83354e576eb3497b4b4b38ac905e2441698501b5d5fd6ac6e07675236bd",
   "model_traces": [
     {
       "call_id": "ae6f58280401429a",
-      "estimated_actual_cost_usd": 0.0003175,
+      "estimated_actual_cost_usd": 0.0002805,
       "estimated_maximum_cost_usd": 0.0004031,
-      "latency_seconds": 4.8925,
+      "latency_seconds": 4.1529,
       "model": "gpt-6-luna",
       "output": {
         "abstain_reason": "",
@@ -621,8 +659,8 @@
         "primary_queries": [
           {
             "index": "catalog",
-            "query": "Utah quicklime thesis transportation report study relationship functional endpoint recovery",
-            "rationale": "Test whether the named Utah records document independent replication and a relevant functional recovery endpoint for the provisional localized reactive-lime-reservoir mechanism. Its prediction is that recovery tracks reactive lime-rich regions; matched specimens lacking those regions recovering identically would falsify it. Support remains limited to modern lime-pozzolan mortar with identified lime-rich inclusions; transfer is unresolved. No source candidates are supplied, so no provenance or negative-search result is established."
+            "query": "Utah quicklime thesis transportation report study relationship independent replication functional endpoint crack recovery water transport",
+            "rationale": "Trace the named Utah thesis and transportation report, checking whether they share data, specimens, or authors and whether either reports a functional recovery endpoint. Provisionally champion M1 only within modern lime-pozzolan mortar with identified lime-rich inclusions: it predicts recovery tracking their presence and exposure; matched specimens lacking reactive lime-rich regions recovering identically would falsify it. Record provenance and report unsuccessful linkage or endpoint searches; the base packet establishes neither replication nor endpoint."
           }
         ],
         "requested_fetch_locators": [],
@@ -631,71 +669,71 @@
       },
       "provider": "openai",
       "reasoning_effort": "low",
-      "response_id_sha256": "sha256:621e01cdd3f6b7fa459c19de2b3a5fa96a2bf4d0b43cc924854a9b172194b559",
+      "response_id_sha256": "sha256:86b769ffcbd3b940f8567795e9b622f9c9407e69d9ccd3aa6f2878a63f751de3",
       "store": false,
       "tools": [],
       "usage": {
         "cached_input_tokens": 0,
         "input_tokens": 1400,
-        "output_tokens": 355
+        "output_tokens": 281
       }
     },
     {
       "call_id": "e95cad83665882bb",
-      "estimated_actual_cost_usd": 0.0003598,
-      "estimated_maximum_cost_usd": 0.00061,
-      "latency_seconds": 6.2328,
+      "estimated_actual_cost_usd": 0.0003671,
+      "estimated_maximum_cost_usd": 0.0006124,
+      "latency_seconds": 7.4132,
       "model": "gpt-6-luna",
       "output": {
         "action_ids": [],
         "case_id": "S-ACTIVE-LINEAGE",
-        "claimed_contribution": "Provisional mechanism framing only; no empirical finding.",
+        "claimed_contribution": "Provisional M1 framing only; no empirical support established.",
         "claims": [
           {
             "claim_id": "C1",
-            "falsifier": "Matched specimens lacking those regions recover identically.",
-            "prediction": "Recovery tracks exposed reactive lime-rich regions.",
+            "falsifier": "Matched specimens without such regions recover identically under the same exposure.",
+            "prediction": "Recovery tracks the presence and exposure of reactive lime-rich regions.",
             "promotion_status": "REVIEW_REQUIRED",
             "provenance": [
-              "Mechanism card: prior basis is an offline fixture, not evidence.",
-              "E-L1: Utah records are named; relationship and endpoint absent."
+              "Mechanism card S-ACTIVE-LINEAGE-M1; prior basis is not established evidence.",
+              "Base evidence E-L1 notes the endpoint and study relationship are absent."
             ],
-            "statement": "A localized reactive lime reservoir is a provisional explanation for functional recovery; the supplied record does not establish it.",
+            "statement": "Provisional: a localized reactive lime reservoir may drive functional recovery after damage.",
             "support_region": "Modern lime-pozzolan mortar with identified lime-rich inclusions; transfer unresolved."
           }
         ],
         "mechanism_id": "S-ACTIVE-LINEAGE-M1",
         "negative_searches": [
-          "No search results or source candidates supplied; no negative search established."
+          "No source candidates or paper evidence cards were supplied; no search results establish replication or a functional endpoint."
         ],
         "proposed_next_actions": [
-          "Search the catalog for the named Utah records and their study relationship and endpoints."
+          "Search the catalog for the Utah thesis and transportation report; compare provenance and endpoints."
         ],
-        "report_id": "R-S-ACTIVE-LINEAGE-M1",
+        "report_id": "R1",
         "role": "mechanism_proponent",
         "schema_version": "1.0",
         "source_candidate_ids": [],
         "status": "PARTIAL",
         "unresolved_questions": [
-          "Do the Utah records establish independent replication and a relevant functional endpoint?"
+          "Are the thesis and report independent, and does either measure functional recovery?"
         ]
       },
       "provider": "openai",
       "reasoning_effort": "low",
-      "response_id_sha256": "sha256:334e4b13e25f27151f34b137c6737828a7acd9fa655c47d49002dbeed5280259",
+      "response_id_sha256": "sha256:afe9b793618205a7b50c10d9539bdc0092579688eba3e4673cbf9fe6d09f2fcf",
       "store": false,
       "tools": [],
       "usage": {
         "cached_input_tokens": 0,
-        "input_tokens": 1628,
-        "output_tokens": 394
+        "input_tokens": 1636,
+        "output_tokens": 407
       }
     },
     {
       "call_id": "903d12eedfad769a",
-      "estimated_actual_cost_usd": 0.0002903,
+      "estimated_actual_cost_usd": 0.0002783,
       "estimated_maximum_cost_usd": 0.0004031,
-      "latency_seconds": 3.8185,
+      "latency_seconds": 4.5801,
       "model": "gpt-6-luna",
       "output": {
         "abstain_reason": "",
@@ -705,8 +743,8 @@
         "primary_queries": [
           {
             "index": "catalog",
-            "query": "Utah quicklime thesis transportation report study relationship independent replication functional endpoint crack closure water transport",
-            "rationale": "Seek the named records and any documented relationship or endpoint; the base packet does not establish either. Provisionally champion physical crack closure: it predicts closure without corresponding water-transport recovery, and is falsified if matched tests consistently show functional recovery exceeding closure-only controls. Support is limited to conditions where closure and transport recovery can be distinguished. No negative search results or source provenance are yet available; retrieved candidates remain EVIDENCE_PENDING."
+            "query": "Utah quicklime asphalt thesis transportation report crack closure water permeability self-healing",
+            "rationale": "Locate the named Utah thesis and transportation report and check their study lineage and reported endpoints. Provisionally champion M2: physical crack closure may occur without corresponding functional water-transport recovery. Prediction: closure and transport recovery can diverge; falsifier: matched evidence consistently shows functional recovery exceeding closure-only controls. Support is limited to conditions separating closure from transport recovery. No source candidates are supplied, so this is a search plan, not evidence; promotion remains REVIEW_REQUIRED."
           }
         ],
         "requested_fetch_locators": [],
@@ -715,45 +753,45 @@
       },
       "provider": "openai",
       "reasoning_effort": "low",
-      "response_id_sha256": "sha256:19590166b2f492c6ce48c142f6d932fe61dff55733883335d5521b1a509fa4d2",
+      "response_id_sha256": "sha256:5b97bc3bb0c8e427d54fa0a9bec2fc41653c5a8d62db38186e348270be5aaf65",
       "store": false,
       "tools": [],
       "usage": {
         "cached_input_tokens": 0,
         "input_tokens": 1398,
-        "output_tokens": 301
+        "output_tokens": 277
       }
     },
     {
       "call_id": "33f99af6c9119966",
-      "estimated_actual_cost_usd": 0.0003466,
-      "estimated_maximum_cost_usd": 0.0006113,
-      "latency_seconds": 5.2876,
+      "estimated_actual_cost_usd": 0.0004493,
+      "estimated_maximum_cost_usd": 0.0007222,
+      "latency_seconds": 6.1409,
       "model": "gpt-6-luna",
       "output": {
         "action_ids": [],
         "case_id": "S-ACTIVE-LINEAGE",
-        "claimed_contribution": "Provisional physical-closure interpretation; no empirical support established.",
+        "claimed_contribution": "Provisional M2 prediction; no empirical support established.",
         "claims": [
           {
             "claim_id": "C1",
-            "falsifier": "Matched tests consistently show functional recovery beyond closure-only controls.",
-            "prediction": "Closure may occur without improved water transport.",
+            "falsifier": "Matched evidence consistently shows recovery exceeding closure-only controls.",
+            "prediction": "Closure and transport recovery may diverge.",
             "promotion_status": "REVIEW_REQUIRED",
             "provenance": [
-              "E-L1 states the Utah records\u2019 relationship and endpoint are absent.",
-              "Mechanism card: offline fixture, not established evidence."
+              "Mechanism card; provisional fixture, not evidence.",
+              "Supplied metadata candidates do not establish Utah study lineage or endpoints."
             ],
-            "statement": "Physical crack closure is a provisional explanation; the supplied records do not establish it.",
-            "support_region": "Conditions separating crack closure from water-transport recovery only."
+            "statement": "Provisionally, physical crack closure may occur without functional water-transport recovery.",
+            "support_region": "Conditions that distinguish crack closure from water-transport recovery; transfer is unresolved."
           }
         ],
         "mechanism_id": "S-ACTIVE-LINEAGE-M2",
         "negative_searches": [
-          "No catalog, OpenAlex, or Crossref search results were supplied; no records were verified."
+          "Supplied metadata titles do not identify a Utah quicklime thesis or transportation report."
         ],
         "proposed_next_actions": [
-          "Search permitted indexes for both records and documented study relationship and endpoints."
+          "Search catalog for the named Utah thesis and transportation report; verify lineage and endpoints."
         ],
         "report_id": "R-S-ACTIVE-LINEAGE-M2",
         "role": "mechanism_proponent",
@@ -761,25 +799,25 @@
         "source_candidate_ids": [],
         "status": "PARTIAL",
         "unresolved_questions": [
-          "Are the Utah thesis and report independent studies with a relevant functional endpoint?"
+          "Do the named Utah records establish independent replication and a functional endpoint?"
         ]
       },
       "provider": "openai",
       "reasoning_effort": "low",
-      "response_id_sha256": "sha256:36f40537693611d7b7ce6753ba9e475b28956a2a32e8d956c8e0a2c90542d03d",
+      "response_id_sha256": "sha256:6813c1724a841e3851d84f6e190f47a27150abc84eedd9395971e11edc10a2bd",
       "store": false,
       "tools": [],
       "usage": {
         "cached_input_tokens": 0,
-        "input_tokens": 1626,
-        "output_tokens": 368
+        "input_tokens": 2503,
+        "output_tokens": 398
       }
     },
     {
       "call_id": "579826ff5ce5bc8e",
-      "estimated_actual_cost_usd": 0.0003097,
+      "estimated_actual_cost_usd": 0.0002777,
       "estimated_maximum_cost_usd": 0.0004017,
-      "latency_seconds": 4.1964,
+      "latency_seconds": 5.7097,
       "model": "gpt-6-luna",
       "output": {
         "abstain_reason": "",
@@ -790,7 +828,7 @@
           {
             "index": "catalog",
             "query": "Utah quicklime thesis transportation report study relationship independent replication functional endpoint",
-            "rationale": "Check whether the named records are independent studies and report a relevant functional endpoint; their relationship and endpoint are absent from the packet. Provisionally favor the assigned null: predict no reproducible mechanism-specific recovery under declared conditions, with a process-matched control indistinguishable from proposed mechanisms. A preregistered mechanism-specific discriminator would falsify it. Support is limited to the declared case domain and measurement endpoint; no negative searches or source provenance are yet available beyond E-L1, and any retrieved candidates remain EVIDENCE_PENDING."
+            "rationale": "Test whether the named records document independent replication and a relevant functional endpoint; do not presume either from their titles. Provisionally champion the required null comparator: it predicts no reproducible mechanism-specific recovery under declared conditions, and would be challenged by a preregistered discriminator separating a candidate from a process-matched control. Support is limited to the declared case domain and measurement endpoint. Record search provenance and report negative findings as bounded to this catalog query; sources remain EVIDENCE_PENDING."
           }
         ],
         "requested_fetch_locators": [],
@@ -799,45 +837,45 @@
       },
       "provider": "openai",
       "reasoning_effort": "low",
-      "response_id_sha256": "sha256:40679201f3805f434e8eff701efb4438824fbedc3d4ae0b5eb614cb0cff3f5ea",
+      "response_id_sha256": "sha256:60004d2b41c9f9242c4a4c4cd9de5dd10f8b587eae3c7fa4af66164da050bb97",
       "store": false,
       "tools": [],
       "usage": {
         "cached_input_tokens": 0,
         "input_tokens": 1397,
-        "output_tokens": 340
+        "output_tokens": 276
       }
     },
     {
       "call_id": "4aa3ec92abd092c8",
-      "estimated_actual_cost_usd": 0.0003486,
-      "estimated_maximum_cost_usd": 0.0006117,
-      "latency_seconds": 5.2201,
+      "estimated_actual_cost_usd": 0.0004476,
+      "estimated_maximum_cost_usd": 0.000716,
+      "latency_seconds": 6.2325,
       "model": "gpt-6-luna",
       "output": {
         "action_ids": [],
         "case_id": "S-ACTIVE-LINEAGE",
-        "claimed_contribution": "Provisional null framing only; no new evidence.",
+        "claimed_contribution": "Bounded null comparison; no mechanism or performance validation.",
         "claims": [
           {
             "claim_id": "C1",
-            "falsifier": "A preregistered mechanism-specific discriminator separates a candidate from control.",
-            "prediction": "A process-matched control is indistinguishable from proposed mechanisms at the declared endpoint.",
+            "falsifier": "A preregistered mechanism-specific discriminator separates a candidate from the control.",
+            "prediction": "A process-matched control is indistinguishable from each proposed mechanism.",
             "promotion_status": "REVIEW_REQUIRED",
             "provenance": [
               "E-L1",
-              "Assigned null mechanism card; prior basis is a comparator, not material evidence."
+              "S-ACTIVE-LINEAGE-NULL mechanism card"
             ],
-            "statement": "Provisionally retain the null: no reproducible mechanism-specific recovery is established by the supplied record.",
+            "statement": "Provisionally, no reproducible mechanism-specific recovery is established; the supplied record set does not establish independent replication or a relevant functional endpoint.",
             "support_region": "Declared case domain and measurement endpoint only."
           }
         ],
         "mechanism_id": "S-ACTIVE-LINEAGE-NULL",
         "negative_searches": [
-          "No source search or retrieval is recorded; no negative finding can be asserted."
+          "Catalog query returned only metadata-screened candidates; none establishes the study relationship, replication, or endpoint."
         ],
         "proposed_next_actions": [
-          "Search the catalog for both named Utah records and their study relationship; keep any candidates EVIDENCE_PENDING."
+          "Inspect accessible full text for the thesis and transportation report; retain evidence as pending."
         ],
         "report_id": "R-S-ACTIVE-LINEAGE-NULL",
         "role": "mechanism_proponent",
@@ -845,25 +883,25 @@
         "source_candidate_ids": [],
         "status": "PARTIAL",
         "unresolved_questions": [
-          "Do the Utah thesis and transportation report establish independent replication or a relevant functional endpoint?"
+          "Do the named Utah records document independent replication and a relevant functional endpoint?"
         ]
       },
       "provider": "openai",
       "reasoning_effort": "low",
-      "response_id_sha256": "sha256:0b62662227aab240799159464cbda9fb47d6daeb8e0b4483c32c5ded2edf7b1d",
+      "response_id_sha256": "sha256:b5516d410bbb1d65c46e1ed23cee71e8667d3b5f38e03082a1c23b8a76f1211c",
       "store": false,
       "tools": [],
       "usage": {
         "cached_input_tokens": 0,
-        "input_tokens": 1641,
-        "output_tokens": 369
+        "input_tokens": 2391,
+        "output_tokens": 417
       }
     },
     {
       "call_id": "2cc06831558319bf",
-      "estimated_actual_cost_usd": 0.0002849,
-      "estimated_maximum_cost_usd": 0.0005008,
-      "latency_seconds": 2.3921,
+      "estimated_actual_cost_usd": 0.0002825,
+      "estimated_maximum_cost_usd": 0.0005038,
+      "latency_seconds": 2.2511,
       "model": "gpt-6-luna",
       "output": {
         "abstain_reason": "",
@@ -874,7 +912,7 @@
           {
             "index": "catalog",
             "query": "Utah quicklime thesis transportation report study relationship independent replication functional endpoint",
-            "rationale": "Locate the named Utah records and determine whether they describe independent studies and report a relevant functional endpoint; names alone do not establish either."
+            "rationale": "Locate the named Utah records and determine whether they share study lineage and report a relevant functional endpoint; titles or metadata alone cannot establish either."
           }
         ],
         "requested_fetch_locators": [],
@@ -883,55 +921,59 @@
       },
       "provider": "openai",
       "reasoning_effort": "low",
-      "response_id_sha256": "sha256:169d8b0749623bae558d717d5c209e3ac2b6af6efd810408148b3ad09cfe44d1",
+      "response_id_sha256": "sha256:1625a93d3ac7d143fd495d57b552b17a2ce930ad5e3a578152cce4a688e4ef92",
       "store": false,
       "tools": [],
       "usage": {
         "cached_input_tokens": 0,
-        "input_tokens": 1994,
-        "output_tokens": 171
+        "input_tokens": 2005,
+        "output_tokens": 164
       }
     },
     {
       "call_id": "302313e29de108f4",
-      "estimated_actual_cost_usd": 0.0003715,
-      "estimated_maximum_cost_usd": 0.0007445,
-      "latency_seconds": 5.1929,
+      "estimated_actual_cost_usd": 0.0004469,
+      "estimated_maximum_cost_usd": 0.000832,
+      "latency_seconds": 5.1643,
       "model": "gpt-6-luna",
       "output": {
         "auditor_role": "evidence_skeptic",
         "case_id": "S-ACTIVE-LINEAGE",
-        "challenge": "The supplied record does not establish that the Utah thesis and transportation report are independent studies or that either measures a relevant functional endpoint; the provisional mechanism framing cannot resolve either point.",
+        "challenge": "The supplied metadata candidates do not identify the named Utah quicklime thesis or transportation report, establish their study lineage, or report a relevant functional endpoint. Thus they provide no support for independent replication or M1\u2019s functional-recovery claim.",
         "claim_ids": [
           "C1"
         ],
         "contradiction_status": "UNRESOLVED",
-        "critique_id": "CR-S-ACTIVE-LINEAGE-01",
+        "critique_id": "SC-S-ACTIVE-LINEAGE-01",
         "promotion_status": "REVIEW_REQUIRED",
-        "proposed_discriminator": "Verify both records\u2019 bibliographic and methods details, comparing authorship, specimen and dataset provenance, and reported endpoints to determine study independence and whether a functional recovery endpoint was measured.",
+        "proposed_discriminator": "Obtain the actual thesis and report records, then compare authorship, source specimens, methods, and study lineage; verify whether either measures a defined functional endpoint. Keep any located sources pending until assessed.",
         "provenance": [
-          "E-L1: study relationship and endpoint absent.",
-          "No source candidates or search results supplied; mechanism report R-S-ACTIVE-LINEAGE-M1 is provisional."
+          "E-L1",
+          "CR-7447ef119a7d",
+          "CR-b27519feeb64",
+          "CR-ec276fce42ad",
+          "CR-0e351331841f",
+          "R1"
         ],
         "schema_version": "1.0",
         "target_mechanism_id": "S-ACTIVE-LINEAGE-M1"
       },
       "provider": "openai",
       "reasoning_effort": "low",
-      "response_id_sha256": "sha256:8a24264ad9d2f038c9a9ebe0cdc877f0ca7b843c662fe2610ff2ef5e82c4051f",
+      "response_id_sha256": "sha256:efaf7d4b0d1485faebb11fb61d039a38d584117371af400f31161d511d6d3be5",
       "store": false,
       "tools": [],
       "usage": {
         "cached_input_tokens": 0,
-        "input_tokens": 2065,
-        "output_tokens": 330
+        "input_tokens": 2704,
+        "output_tokens": 353
       }
     },
     {
       "call_id": "8e12563db7c8e954",
-      "estimated_actual_cost_usd": 0.0002977,
-      "estimated_maximum_cost_usd": 0.000501,
-      "latency_seconds": 2.854,
+      "estimated_actual_cost_usd": 0.0002833,
+      "estimated_maximum_cost_usd": 0.000504,
+      "latency_seconds": 2.8809,
       "model": "gpt-6-luna",
       "output": {
         "abstain_reason": "",
@@ -941,8 +983,8 @@
         "primary_queries": [
           {
             "index": "catalog",
-            "query": "Utah quicklime thesis transportation report study relationship functional endpoint",
-            "rationale": "Identify the named records and determine whether they are independent studies and report a relevant functional endpoint; titles or shared lineage alone do not establish replication."
+            "query": "Utah quicklime thesis transportation report study relationship independent replication functional endpoint",
+            "rationale": "Identify the named records and determine whether they are independent studies and report a relevant functional endpoint; metadata alone cannot establish either."
           }
         ],
         "requested_fetch_locators": [],
@@ -951,55 +993,58 @@
       },
       "provider": "openai",
       "reasoning_effort": "low",
-      "response_id_sha256": "sha256:580daf4db704c1fba3e3978e4ca15ad7462a7e0c3dc23b4768693f4c4c3ff2c1",
+      "response_id_sha256": "sha256:9540ba9d4e50393d36d647871ca71490c5ac4135fed4cb44be1a03a94616f492",
       "store": false,
       "tools": [],
       "usage": {
         "cached_input_tokens": 0,
-        "input_tokens": 1992,
-        "output_tokens": 197
+        "input_tokens": 2003,
+        "output_tokens": 166
       }
     },
     {
       "call_id": "2550c83b295be3d3",
-      "estimated_actual_cost_usd": 0.0003706,
-      "estimated_maximum_cost_usd": 0.0007445,
-      "latency_seconds": 5.8237,
+      "estimated_actual_cost_usd": 0.0004338,
+      "estimated_maximum_cost_usd": 0.0008319,
+      "latency_seconds": 4.0026,
       "model": "gpt-6-luna",
       "output": {
         "auditor_role": "transfer_boundary",
         "case_id": "S-ACTIVE-LINEAGE",
-        "challenge": "The supplied packet does not establish whether the Utah thesis and transportation report are independent studies or measure functional recovery. Even if related evidence is found, transfer from modern lime-pozzolan mortar to Roman hot mix is outside the stated support region and cannot establish this mechanism or endpoint.",
+        "challenge": "The provisional lime-reservoir mechanism is not supported by these metadata records: none identifies the named Utah quicklime study, establishes independence between the thesis and report, or documents a relevant functional endpoint. Transfer from the modern mortar support region is therefore unresolved.",
         "claim_ids": [
           "C1"
         ],
         "contradiction_status": "UNRESOLVED",
-        "critique_id": "CR-S-ACTIVE-LINEAGE-TB1",
+        "critique_id": "CRIT-S-ACTIVE-LINEAGE-TB-1",
         "promotion_status": "REVIEW_REQUIRED",
-        "proposed_discriminator": "Verify the records\u2019 study lineage and reported endpoints from their full texts; determine whether either directly measures functional recovery, rather than crack closure alone, under conditions relevant to the claimed domain.",
+        "proposed_discriminator": "Inspect the thesis and report for provenance and methods, then determine whether independently conducted work measures the same prespecified functional endpoint; metadata titles alone cannot discriminate replication from lineage or endpoint relevance.",
         "provenance": [
-          "E-L1: study relationship and endpoint absent.",
-          "M1 support region: modern lime-pozzolan mortar; transfer unresolved."
+          "E-L1",
+          "CR-7447ef119a7d",
+          "CR-b27519feeb64",
+          "CR-ec276fce42ad",
+          "CR-0e351331841f"
         ],
         "schema_version": "1.0",
         "target_mechanism_id": "S-ACTIVE-LINEAGE-M1"
       },
       "provider": "openai",
       "reasoning_effort": "low",
-      "response_id_sha256": "sha256:0aeb8d07568c3275e4463851d0e2a8043673d5a6d56bb332313d356b6c91b021",
+      "response_id_sha256": "sha256:55541a4d68fd529ec4f9f1955b320494505bbfc7d4ce55c34e58fade8c710a32",
       "store": false,
       "tools": [],
       "usage": {
         "cached_input_tokens": 0,
-        "input_tokens": 2061,
-        "output_tokens": 329
+        "input_tokens": 2698,
+        "output_tokens": 328
       }
     },
     {
       "call_id": "c517d41a5d1742bf",
-      "estimated_actual_cost_usd": 0.0002903,
-      "estimated_maximum_cost_usd": 0.0005022,
-      "latency_seconds": 3.3843,
+      "estimated_actual_cost_usd": 0.0002953,
+      "estimated_maximum_cost_usd": 0.0005052,
+      "latency_seconds": 3.1054,
       "model": "gpt-6-luna",
       "output": {
         "abstain_reason": "",
@@ -1010,7 +1055,7 @@
           {
             "index": "catalog",
             "query": "Utah quicklime thesis transportation report",
-            "rationale": "Cheapest check: identify the named records and determine whether they document independent studies and a relevant functional endpoint."
+            "rationale": "Cheapest discriminating check: locate the named records and compare their study provenance and reported functional endpoints; metadata alone would not establish independent replication."
           }
         ],
         "requested_fetch_locators": [],
@@ -1019,205 +1064,299 @@
       },
       "provider": "openai",
       "reasoning_effort": "low",
-      "response_id_sha256": "sha256:74aef337d346139fc6a105e8cdd17b3f14cd7538b5816210d90f96c071ce06df",
+      "response_id_sha256": "sha256:cf1809b3a84fb48f3be1380935d857b4915c3c74c6cbec48ae11de585e172b65",
       "store": false,
       "tools": [],
       "usage": {
         "cached_input_tokens": 0,
-        "input_tokens": 1998,
-        "output_tokens": 181
+        "input_tokens": 2008,
+        "output_tokens": 189
       }
     },
     {
       "call_id": "8d783e85d3c2a757",
-      "estimated_actual_cost_usd": 0.0004731,
-      "estimated_maximum_cost_usd": 0.0008528,
-      "latency_seconds": 4.8475,
+      "estimated_actual_cost_usd": 0.0004309,
+      "estimated_maximum_cost_usd": 0.0007844,
+      "latency_seconds": 4.754,
       "model": "gpt-6-luna",
       "output": {
         "auditor_role": "experiment_simulation",
         "case_id": "S-ACTIVE-LINEAGE",
-        "challenge": "The supplied OpenAlex candidates are metadata-only and their titles do not establish that the Utah thesis and transportation report are independent studies or report a relevant functional endpoint. They neither support nor contradict the proposed mechanism.",
+        "challenge": "The supplied Utah metadata candidates are duplicate geologic thesis-map indexes, not evidence that the named thesis and transportation report are independent studies or report a functional recovery endpoint. They neither establish nor contradict M1.",
         "claim_ids": [
           "C1"
         ],
-        "contradiction_status": "UNRESOLVED",
-        "critique_id": "CR-S-ACTIVE-LINEAGE-01",
+        "contradiction_status": "NO_CONTRADICTION_FOUND",
+        "critique_id": "SC-ACTIVE-LINEAGE-01",
         "promotion_status": "REVIEW_REQUIRED",
-        "proposed_discriminator": "Cheapest check: locate the two named records in a catalog and compare their authorship, methods, shared data, and stated endpoints; treat any located sources as EVIDENCE_PENDING.",
+        "proposed_discriminator": "Cheapest check: compare accessible catalog records for the named thesis and report, including authorship, citations or shared data, and methods/endpoints. Independent provenance plus a reported functional endpoint would address the lineage question; metadata alone cannot establish recovery.",
         "provenance": [
           "E-L1",
-          "OA-W1867560517",
-          "OA-W2308050459",
-          "OA-W2120618266",
-          "OA-W4311892906",
-          "OA-W1567384725"
+          "CR-7447ef119a7d",
+          "CR-b27519feeb64",
+          "R1",
+          "R-S-ACTIVE-LINEAGE-M2",
+          "R-S-ACTIVE-LINEAGE-NULL"
         ],
         "schema_version": "1.0",
         "target_mechanism_id": "S-ACTIVE-LINEAGE-M1"
       },
       "provider": "openai",
       "reasoning_effort": "low",
-      "response_id_sha256": "sha256:8bc3a23f87a7c3c30356658b4cf58ebceb524c52ce6666451b80c5d906f90f49",
+      "response_id_sha256": "sha256:b23a28adeaf8db1d46fa043b9464d015934f30c56d4364261a3aa76c6700c7be",
       "store": false,
       "tools": [],
       "usage": {
         "cached_input_tokens": 0,
-        "input_tokens": 2881,
-        "output_tokens": 370
+        "input_tokens": 2374,
+        "output_tokens": 387
       }
     },
     {
       "call_id": "7be75ed53dab9fd7",
-      "estimated_actual_cost_usd": 0.0009251,
-      "estimated_maximum_cost_usd": 0.0017172,
-      "latency_seconds": 8.5759,
+      "estimated_actual_cost_usd": 0.0010103,
+      "estimated_maximum_cost_usd": 0.001833,
+      "latency_seconds": 5.9469,
       "model": "gpt-6-luna",
       "output": {
-        "authority_note": "Provisional adjudication only; no evidence promotion or laboratory authorization.",
+        "authority_note": "All sources remain EVIDENCE_PENDING; no promotion or laboratory authority is granted.",
         "case_id": "S-ACTIVE-LINEAGE",
         "credible_rival_ids": [
           "S-ACTIVE-LINEAGE-NULL",
-          "S-ACTIVE-LINEAGE-M2"
+          "S-ACTIVE-LINEAGE-M1"
         ],
         "hypotheses": [
           {
-            "comparator": "The proposed lime-reservoir and physical-closure explanations.",
-            "falsifier": "Verified records show independent studies and a relevant mechanism-specific functional endpoint.",
+            "comparator": "Evidence of independent studies measuring a shared, defined functional endpoint.",
+            "falsifier": "Accessible records establish independent provenance and a relevant functional endpoint.",
             "hypothesis_id": "H-NULL",
-            "intervention": "Compare the named records\u2019 authorship, specimen/data provenance, and measured endpoints.",
-            "novelty_basis": "No study-lineage or endpoint evidence is supplied.",
-            "predicted_observation": "The supplied record cannot distinguish mechanism-specific recovery from the null.",
+            "intervention": "Compare the actual thesis and report records for provenance, methods, lineage, and measured endpoints.",
+            "novelty_basis": "The named study relationship and endpoint remain absent from the supplied record.",
+            "predicted_observation": "Current metadata will not resolve independence or endpoint relevance.",
             "problem_id": "roman-hot-mix",
             "problem_version": "1.0",
             "promotion_status": "REVIEW_REQUIRED",
             "provenance": [
-              "E-L1"
+              "E-L1",
+              "SC-S-ACTIVE-LINEAGE-01"
             ],
             "schema_version": "1.0",
             "source_candidate_ids": [],
-            "support_region": "Declared case domain and endpoint only.",
+            "support_region": "Supplied Utah record set only.",
             "transfer_type": "NULL_HYPOTHESIS",
-            "uncertainty": "High; Utah record relationship and endpoints are unknown."
+            "uncertainty": "Metadata-screened candidates do not identify the named quicklime studies."
           }
         ],
         "leading_hypothesis_id": "H-NULL",
         "negative_searches": [
-          "No searches or verified negative findings are supplied."
+          "Supplied metadata candidates do not identify the named Utah quicklime thesis or transportation report."
         ],
-        "next_discriminating_action": "Check catalog records and compare bibliographic lineage and stated endpoints; keep findings EVIDENCE_PENDING.",
+        "next_discriminating_action": "Check accessible catalog records for the actual thesis and report, comparing authorship, shared data, methods, and endpoints.",
         "schema_version": "1.0",
-        "source_candidate_ids": [],
+        "source_candidate_ids": [
+          "CR-7447ef119a7d",
+          "CR-b27519feeb64"
+        ],
         "status": "REVIEW_REQUIRED",
-        "summary": "The supplied record set does not establish independent replication or a relevant functional endpoint; retain the null provisionally.",
+        "summary": "The supplied record set does not establish independent replication or a relevant functional endpoint.",
         "unresolved_disputes": [
-          "Independence and functional endpoints are unverified, and transfer to Roman hot mix is unresolved."
+          "The named thesis and report may establish lineage and endpoint details, but no supplied record does so."
         ]
       },
       "provider": "openai",
       "reasoning_effort": "low",
-      "response_id_sha256": "sha256:cc4eff892c73707b95878849a3c39c8c092a7c27bd1ca03acee89443b419c4b2",
+      "response_id_sha256": "sha256:fd3d13aa091c5ec2e72a667acdbaaa4d445af551af73c8bf95b97e3ba05342d8",
       "store": false,
       "tools": [],
       "usage": {
         "cached_input_tokens": 0,
-        "input_tokens": 6076,
-        "output_tokens": 635
+        "input_tokens": 7048,
+        "output_tokens": 611
       }
     }
   ],
   "paper_evidence_cards": {},
   "simulation_traces": [],
   "source_candidates": {
-    "OA-W1567384725": {
+    "CR-0e351331841f": {
       "access_class": "METADATA_ONLY",
       "content_hash": null,
       "content_locator": null,
       "contradiction_ids": [],
-      "deduplication_key": "openalex:w1567384725",
-      "discovery_query": "utah quicklime thesis transportation report",
-      "host": "api.openalex.org",
-      "locator": "https://api.openalex.org/works/W1567384725",
+      "deduplication_key": "doi:10.1007/springerreference_13629",
+      "discovery_query": "utah quicklime thesis transportation report study relationship independent replication functional endpoint",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1007/springerreference_13629",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
-      "source_candidate_id": "OA-W1567384725",
+      "source_candidate_id": "CR-0e351331841f",
       "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
-      "title": "Development of a Sorption Enhanced Steam Hydrogasification Process for In-situ Carbon Dioxide (CO2) Removal and Enhanced Synthetic Fuel Production"
+      "title": "endpoint functional group"
     },
-    "OA-W1867560517": {
+    "CR-458d398a5711": {
       "access_class": "METADATA_ONLY",
       "content_hash": null,
       "content_locator": null,
       "contradiction_ids": [],
-      "deduplication_key": "openalex:w1867560517",
-      "discovery_query": "utah quicklime thesis transportation report",
-      "host": "api.openalex.org",
-      "locator": "https://api.openalex.org/works/W1867560517",
+      "deduplication_key": "doi:10.53846/goediss-3207",
+      "discovery_query": "utah quicklime thesis transportation report study relationship independent replication functional endpoint",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.53846/goediss-3207",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
-      "source_candidate_id": "OA-W1867560517",
+      "source_candidate_id": "CR-458d398a5711",
       "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
-      "title": "Basketmaker II stone-boiling technology at Cedar Mesa, Utah: an experimental study."
+      "title": "Biochemical and functional differences of chromatin assembled replication-coupled or independent in Xenopus laevis egg extracts"
     },
-    "OA-W2120618266": {
+    "CR-7447ef119a7d": {
       "access_class": "METADATA_ONLY",
       "content_hash": null,
       "content_locator": null,
       "contradiction_ids": [],
-      "deduplication_key": "doi:10.1111/j.1475-4754.2008.00430.x",
+      "deduplication_key": "doi:10.34191/m-86",
       "discovery_query": "utah quicklime thesis transportation report",
-      "host": "api.openalex.org",
-      "locator": "https://api.openalex.org/works/W2120618266",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.34191/m-86",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
-      "source_candidate_id": "OA-W2120618266",
-      "status": "METADATA_SCREENED",
+      "source_candidate_id": "CR-7447ef119a7d",
+      "status": "DUPLICATE",
       "support_region": "unadjudicated scholarly metadata",
-      "title": "PROVENANCE OF THE LIMESTONE USED IN TEOTIHUACAN (MEXICO): A METHODOLOGICAL APPROACH*"
+      "title": "Geologic thesis map index of Utah"
     },
-    "OA-W2308050459": {
+    "CR-8b275dff6c12": {
       "access_class": "METADATA_ONLY",
       "content_hash": null,
       "content_locator": null,
       "contradiction_ids": [],
-      "deduplication_key": "openalex:w2308050459",
-      "discovery_query": "utah quicklime thesis transportation report",
-      "host": "api.openalex.org",
-      "locator": "https://api.openalex.org/works/W2308050459",
+      "deduplication_key": "doi:10.2139/ssrn.4570585",
+      "discovery_query": "utah quicklime asphalt thesis transportation report crack closure water permeability self-healing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.2139/ssrn.4570585",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
-      "source_candidate_id": "OA-W2308050459",
+      "source_candidate_id": "CR-8b275dff6c12",
       "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
-      "title": "An integrated approach to predict ettringite formation in sulfate soils and identifying sulfate damage along SH 130"
+      "title": "Evaluation of Crack Width and Self-Healing Performance of Concrete Based on Fluid Flow Characteristics: Comparison between Water Permeability Test and Gas Diffusion Test"
     },
-    "OA-W4311892906": {
+    "CR-b27519feeb64": {
       "access_class": "METADATA_ONLY",
       "content_hash": null,
       "content_locator": null,
       "contradiction_ids": [],
-      "deduplication_key": "doi:10.24124/2022/59328",
+      "deduplication_key": "doi:10.34191/m-7",
       "discovery_query": "utah quicklime thesis transportation report",
-      "host": "api.openalex.org",
-      "locator": "https://api.openalex.org/works/W4311892906",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.34191/m-7",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
-      "source_candidate_id": "OA-W4311892906",
+      "source_candidate_id": "CR-b27519feeb64",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Index to unpublished geologic thesis mapping in Utah"
+    },
+    "CR-c7e52b0d1136": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1007/978-3-031-99443-2_2",
+      "discovery_query": "utah quicklime asphalt thesis transportation report crack closure water permeability self-healing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1007/978-3-031-99443-2_2",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-c7e52b0d1136",
       "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
-      "title": "Development of an integrated system dynamics estimation and scenario-based decision-making framework for offshore oil spill waste management"
+      "title": "Intrinsic Self-Healing of Asphalt Pavements"
+    },
+    "CR-ec276fce42ad": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.5962/bhl.title.141648",
+      "discovery_query": "utah quicklime thesis transportation report study relationship independent replication functional endpoint",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.5962/bhl.title.141648",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-ec276fce42ad",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Utah statewide wilderness study report"
+    },
+    "CR-f0345f482ff2": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.46793/sgis26e.258s",
+      "discovery_query": "utah quicklime asphalt thesis transportation report crack closure water permeability self-healing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.46793/sgis26e.258s",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-f0345f482ff2",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "INVESTIGATION OF CRACK CLOSURE AND PERMEABILITY REDUCTION IN SELF-HEALING CONCRETE WITH CRYSTALLINE ADMIXTURES"
+    },
+    "CR-f304614dc686": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1007/978-3-031-99443-2_3",
+      "discovery_query": "utah quicklime asphalt thesis transportation report crack closure water permeability self-healing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1007/978-3-031-99443-2_3",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-f304614dc686",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Extrinsic Self-Healing Technology for Asphalt Pavements"
+    },
+    "CR-fe9ff9cdff30": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1007/978-3-031-99443-2_4",
+      "discovery_query": "utah quicklime asphalt thesis transportation report crack closure water permeability self-healing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1007/978-3-031-99443-2_4",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-fe9ff9cdff30",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Experimental Characterization of Self-Healing of Asphalt Materials"
     }
   },
   "state": "completed",
