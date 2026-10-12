@@ -1,16 +1,16 @@
 # G10R — Bounded active-investigation society pilot
 
 **Status:** in progress
-**Dependencies:** G09 complete; G10B complete with any verdict; G-LI complete; G10M complete; G10R-R complete for any Phase-B rerun after an invalid or scorer-contaminated evaluation; explicit owner activation of the frozen lawful source policy and Phase B network/model execution
-**Advances:** tests whether a two-layer society of mechanism proponents and structural auditors adds value when investigators can acquire different information or invoke declared simulation tools under the same aggregate budget as one tool-using investigator
+**Dependencies:** G09 complete; G10B complete with any verdict; G-LI complete; G10M complete; G10R-R, G10P, and G10D complete for any Phase-B rerun after the contaminated evaluation; explicit owner activation of the frozen lawful source policy and Phase B network/model execution
+**Advances:** tests whether viewpoint-centered research teams, supported by structural task agents and a cross-viewpoint tournament, add value when investigators can acquire different information or invoke declared simulation tools under the same aggregate budget as one tool-using investigator
 
 ## Why this goal exists
 
 G10B tested several roles against one strong analyst using the same frozen packet and no tools. The roles produced distinguishable text, but C1 and C4-lite tied at 19/20 and the society added no supported prediction or discriminator. That result does not estimate the value of coordinated search: every role started with the same information and could only rewrite or reinterpret it.
 
-G10R tests a different causal hypothesis. A society may be useful when the bottleneck is allocating investigation across competing mechanisms and evidence frontiers, not synthesizing a fixed packet. The amended society therefore performs asymmetric work through mechanism proponents plus structural auditors—different queries, sources, contradiction checks, or declared simulations—and earns credit only for a valid contribution the same-budget single investigator missed. Discourse, persona variation, consensus, mechanism advocacy, and source volume alone receive no credit. G10M completes the offline design gate; the current G10R Phase-A artifact remains a valid baseline freeze but does not authorize live execution of the superseded structural-only A2 treatment.
+G10R tests a different causal hypothesis. A society may be useful when the bottleneck is allocating investigation across competing viewpoints and evidence frontiers, not synthesizing a fixed packet. For any rerun, G10D redefines A2-M as viewpoint-centered teams: each viewpoint owns an argument, and structural task agents perform bounded retrieval, extraction, identity, contradiction, and experiment-design work for that viewpoint while remaining free to report weakening evidence. Cross-viewpoint critics and a tournament then compare the resulting dossiers. The society earns credit only for a valid contribution the same-budget single investigator missed. Discourse, persona variation, consensus, mechanism advocacy, and source volume alone receive no credit. G10M completes the prior offline design gate; G10P and G10D are required to replace the superseded structural-only A2 treatment before live rerun.
 
-The first live execution completed the A1 and A2-M workflows but contaminated the comparison by collapsing unresolved live identities and an authority-language match into run-level critical failures. It is retained as a trace artifact, not treated as a society verdict. G10R-R is mandatory before a rerun and must preserve open-world candidates and provisional hypotheses while keeping evidence promotion and external authority gated.
+The first live execution completed the A1 and A2-M workflows but contaminated the comparison by collapsing unresolved live identities and an authority-language match into run-level critical failures. It is retained as a trace artifact, not treated as a society verdict. G10R-R is mandatory before a rerun and must preserve open-world candidates and provisional hypotheses while keeping evidence promotion and external authority gated. The run also exposed two separate follow-on risks: society contributions could be lost between checkpoints and final scoring (G10P), and the role design rewarded cautious review more than information acquisition (G10D). Both gates must complete before a rerun.
 
 ### Phase-A amendment: live source identity
 
@@ -18,7 +18,7 @@ The original Phase-A freeze exposed a scoring defect: live OpenAlex/Crossref can
 
 ## Objective
 
-Run a preregistered directional pilot comparing one tool-using investigator with the amended mechanism-proponent and structural-auditor society on new, non-ceiling cases. Both treatments receive byte-identical base packets, problem contexts, model/provider policy, allowed tools, aggregate query/source/simulation/token/cost budgets, stopping conditions, and output contracts. Determine whether the two-layer tournament produces at least one blinded, decision-relevant evidence or hypothesis contribution absent from the single-investigator result.
+Run a preregistered directional pilot comparing one tool-using investigator with the amended viewpoint-team society on new, non-ceiling cases. Both treatments receive byte-identical base packets, problem contexts, model/provider policy, allowed tools, aggregate query/source/simulation/token/cost budgets, stopping conditions, and output contracts. Determine whether the viewpoint teams and their structural support agents produce at least one blinded, decision-relevant evidence or hypothesis contribution absent from the single-investigator result.
 
 This goal may justify a later adoption-grade G10S evaluation. It cannot adopt an agent society, promote retrieved sources to immutable evidence, validate a material, authorize laboratory work, or overturn G10B's closed-world decision.
 
@@ -28,16 +28,17 @@ This goal may justify a later adoption-grade G10S evaluation. It cannot adopt an
 |---|---|---|
 | A0 | Deterministic recorded-fixture retrieval workflow | Verifies source policy, deduplication, replay, and scoring plumbing; not part of the society-value decision |
 | A1 | One configured model acting as a tool-using investigator | Strong single-investigator control with authority over the entire aggregate investigation budget |
-| A2-M | Independently initialized mechanism proponents, three structural auditors, a deterministic focus allocator, and one bounded adjudicator | Tests whether mechanism competition plus structural audit adds decision-relevant value |
+| A2-M | Independently initialized viewpoint teams, assigned structural support agents, cross-viewpoint critics, a deterministic focus allocator, and one bounded adjudicator | Tests whether competing perspectives plus evidence support and cross-team challenge add decision-relevant value |
 
 A1 and A2-M use the same model, reasoning policy, base context, source allowlist, tool implementations, output schemas, authority, and total per-case budgets. A2-M does not receive extra searches, source payload, simulations, output tokens, elapsed-time allowance, or spend merely because it has more roles. Provider-call count may differ and is recorded as a secondary cost; aggregate capability may not differ.
 
-The A2-M society has two layers:
+The A2-M society has three layers:
 
-1. **Mechanism proponents** — one isolated proponent per frozen candidate mechanism, plus a null mechanism and an open slot. Each returns predictions, falsifiers, support region, provenance, negative searches, and unresolved questions.
-2. **Structural auditors** — evidence skeptic/contradiction hunter, transfer-boundary auditor, and experiment/simulation designer inspect typed proponent records after the private round and propose discriminating actions.
+1. **Viewpoint teams** — one isolated viewpoint agent per frozen candidate mechanism, plus a null mechanism and an open slot. Each returns predictions, falsifiers, support region, provenance, negative searches, and unresolved questions.
+2. **Structural support** — retrieval, extraction, identity/lineage, contradiction, and experiment/simulation task agents work for a bounded viewpoint assignment. Their reports must state whether the result supports, weakens, or fails to discriminate for that viewpoint.
+3. **Cross-viewpoint tournament** — critics and adjudicator compare typed dossiers, preserve rivals and dissent, and propose discriminating actions.
 
-Each proponent receives one mechanism card and works privately during round one; structural auditors remain unable to read those traces until all proponents commit. Only typed proponent records are placed on the shared blackboard. The deterministic focus allocator assigns the remaining round-two budget using expected discrimination, unresolved uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget, while preserving the null and a credible rival when budget permits. The adjudicator must preserve the leading mechanism, credible rivals, material disagreements, negative searches, and cheapest discriminating next action; it may not promote a mechanism because proponents agree or because advocacy is persuasive.
+Each viewpoint agent receives one mechanism card and works privately during round one with its assigned support tasks; other viewpoints cannot read those traces until dossiers commit. Only typed viewpoint and support records are placed on the shared blackboard. The deterministic focus allocator assigns the remaining round-two budget using expected discrimination, unresolved uncertainty, provenance risk, novelty, duplication, feasibility, and remaining budget, while preserving the null and a credible rival when budget permits. The adjudicator must preserve the leading viewpoint, credible rivals, material disagreements, negative searches, support-agent dissent, and cheapest discriminating next action; it may not promote a viewpoint because proponents agree or because advocacy is persuasive.
 
 ## Two-phase execution contract
 
@@ -65,7 +66,7 @@ For any rerun, G10R-R changes this boundary: an ambiguous or unmatched candidate
 
 ### Phase B — smallest informative live pilot
 
-For the first pilot, the following Phase-B contract was used. Before any rerun, G10R-R must complete its offline evaluator replay and emit `EVALUATOR_REPAIRED_FOR_RERUN`; no live calls may be added while that remediation is in progress.
+For the first pilot, the following Phase-B contract was used. Before any rerun, G10R-R, G10P, and G10D must complete their offline handoffs; no live calls may be added while those remediations are in progress.
 
 After the owner reviews Phase A and activates the frozen policy, execute A1 and A2-M once on each of the four sealed cases. The default per-case aggregate ceilings for each treatment are:
 
@@ -181,7 +182,7 @@ Equivalent paths require a recorded amendment before sealed execution. Do not ad
 
 1. Phase A freezes and hashes new development/sealed cases, source policy, prompts, mechanism rosters, focus/admission rules, schemas, page-aware PDF parser and quality rules, tools, budgets, rubric, runner, and provider before any sealed external call; A0/no-retrieval controls demonstrate score headroom.
 2. A1 and A2-M receive byte-identical base packets and identical aggregate query, source, payload, simulation, output-token, elapsed-time, cost, tool, stopping, and authority budgets; any mismatch invalidates the run.
-3. Independent A2-M proponents have isolated mechanism cards, do not see each other's work before sharing, emit attributable typed claims and actions, and are then challenged by structural auditors; the focus allocator uses the frozen rule rather than consensus.
+3. Independent A2-M viewpoint teams have isolated viewpoint cards, do not see each other's work before sharing, emit attributable typed claims and support-task reports, and are then challenged by cross-viewpoint critics; the focus allocator uses the frozen rule rather than consensus.
 4. Source rights, PDF content/extraction quality, deduplication, provenance, contradiction, prompt-injection, immutable-evidence, support-region, and cross-problem boundaries pass positive and negative tests.
 5. Simulation calls use only declared adapters and typed traces; unavailable/unvalidated/synthetic adapters return the prescribed states and cannot become empirical or direct performance evidence.
 6. Four sealed cases complete valid A1/A2-M comparisons within the owner-approved spend cap, or the run emits an attributable `INCONCLUSIVE_ACTIVE_INVESTIGATION` before exceeding it; every external action is checkpointed and replayable without credentials.
