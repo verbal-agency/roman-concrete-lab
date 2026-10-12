@@ -4,7 +4,7 @@
   "status": "EVALUATOR_REPAIRED_FOR_RERUN",
   "source_run": "artifacts/goals/G10R/run.json",
   "source_run_manifest_sha256": "sha256:288ce7af573a5d4708f512e7ddaef089afbf852b8cc1fb156f9fce263a33be79",
-  "replay_sha256": "sha256:9c3c95cfc450033155eaf3e9c773ff9a1e059e5857a375d03e9dd74529791a6c",
+  "replay_sha256": "sha256:889fdcd163bbdf182a3c1844912197ab92075696775b1c164071c8d2c51be7e1",
   "external_calls": {
     "model": 0,
     "network": 0,
@@ -12,15 +12,15 @@
     "laboratory": 0
   },
   "implementation_sha256": {
-    "src/roman_concrete_lab/agents/investigation.py": "sha256:c72981ad1fba45ef93c56b81c814e86483546a9ae877c0da5526173b548cac11",
+    "src/roman_concrete_lab/agents/investigation.py": "sha256:d4f0486e3b492ab52b6ada05fb8dbeeff20f5bbd592cc47139eff253734db876",
     "tools/evaluation/open_world_replay.py": "sha256:2a8d5ffd05ed012f1fb864aa5e2b9978b29d55aca6fd16ddab23e55b8bea5de8",
     "schemas/source-candidate.schema.json": "sha256:69cf715ba3611e13f5ddbb7d18c2813649d60e3c76e2bfb53e411deb86a095a3",
     "schemas/source-attribution-audit.schema.json": "sha256:be37da5b08661a58b153e757d0180333a8e9a62b23babfb473cf902f066a6a4b",
     "schemas/open-world-evaluation-ledger.schema.json": "sha256:dc77dd20da05b3bf9435fb5986531210d19c3fad5237132521b2a225c98a5e4d"
   },
   "verification": {
-    "focused_tests": "33 passed",
-    "full_suite": "102 passed",
+    "focused_tests": "34 passed",
+    "full_suite": "103 passed",
     "diff_check": "passed",
     "replay_status": "REPLAYABLE_AFTER_REPAIR"
   }

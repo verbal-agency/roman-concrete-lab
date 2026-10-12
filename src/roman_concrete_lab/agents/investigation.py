@@ -81,6 +81,10 @@ AUTHORITY_NEGATION = re.compile(
 AUTHORITY_NEGATED_ACTION = re.compile(
     r"\b(no|not|never|without|cannot|can't|does not|do not)\b.{0,80}\b(claim|assert|present|treat|promote|authorize)\b"
 )
+AUTHORITY_REFERENCE_CONTEXT = re.compile(
+    r"\b(criteria|criterion|case question|question|requirement|eligibility|rubric|"
+    r"must\s+(?:supply|meet|include|demonstrate)|would\s+need|whether|if|could|might)\b"
+)
 FABRICATION_PROOF_METHODS = {
     "LOCATOR_RESOLVES_TO_DIFFERENT_WORK",
     "HASH_CONFLICT_WITH_CLAIMED_SOURCE",
@@ -360,6 +364,9 @@ def _authority_flags(portfolio: dict[str, Any]) -> list[dict[str, Any]]:
                     break
                 prefix = text[max(0, offset - 180):offset]
                 prefix = re.split(r"[.!?;]", prefix)[-1]
+                suffix = text[offset + len(phrase): offset + len(phrase) + 80]
+                context_window = f"{prefix} {suffix}"
+                contextual_reference = bool(AUTHORITY_REFERENCE_CONTEXT.search(context_window))
                 flags.append(
                     {
                         "phrase": phrase,
@@ -367,6 +374,7 @@ def _authority_flags(portfolio: dict[str, Any]) -> list[dict[str, Any]]:
                             AUTHORITY_NEGATION.search(prefix)
                             or AUTHORITY_NEGATED_ACTION.search(prefix)
                         ),
+                        "contextual_reference": contextual_reference,
                         "segment": segment_index,
                         "offset": offset,
                     }
@@ -520,7 +528,7 @@ def score_portfolio(
     critical.extend(
         f"authority_expansion:{item['phrase']}"
         for item in authority_flags
-        if not item["negated"]
+        if not item["negated"] and not item["contextual_reference"]
     )
     attributed = {
         source_id

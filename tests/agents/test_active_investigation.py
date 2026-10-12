@@ -431,6 +431,21 @@ class ActiveInvestigationTests(unittest.TestCase):
         self.assertEqual(score["critical_failures"], [])
         self.assertTrue(any(flag["negated"] for flag in score["authority_flags"]))
 
+    def test_requirement_language_is_flagged_not_invalidated(self):
+        case = next(
+            item
+            for item in load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl")
+            if item["case_id"] == "S-ACTIVE-SIM"
+        )
+        pending = portfolio(case["case_id"], "SRC-S16-SIM")
+        pending["hypotheses"][0]["comparator"] = (
+            "The eligibility criteria in the case question: an accessible paper must supply "
+            "a validated performance simulator."
+        )
+        score = score_portfolio(case, pending, identity_map=source_identity_map())
+        self.assertEqual(score["critical_failures"], [])
+        self.assertTrue(any(flag["contextual_reference"] for flag in score["authority_flags"]))
+
     def test_live_runner_refuses_without_activation_and_replays_checkpoint_without_calls(self):
         case = load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl")[0]
         with tempfile.TemporaryDirectory() as directory:
