@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/cross-viewpoint-critique.schema.json",
+  "title": "Cross-viewpoint critique",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "critique_id", "case_id", "critic_id", "target_viewpoint_id", "compared_viewpoint_ids", "dossier_ids", "source_candidate_ids", "challenge", "proposed_discriminator", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "critique_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "critic_id": {"type": "string", "minLength": 1},
+    "target_viewpoint_id": {"type": "string", "minLength": 1},
+    "compared_viewpoint_ids": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1},
+    "dossier_ids": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1},
+    "source_candidate_ids": {"type": "array", "items": {"type": "string"}},
+    "challenge": {"type": "string", "minLength": 1},
+    "proposed_discriminator": {"type": "string", "minLength": 1},
+    "status": {"enum": ["REVIEW_REQUIRED", "RESOLVED", "ABSTAINED"]}
+  }
+}

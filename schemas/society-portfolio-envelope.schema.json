@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/society-portfolio-envelope.schema.json",
+  "title": "Society portfolio envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "envelope_id", "case_id", "treatment_id", "portfolio", "viewpoint_ids", "support_task_ids", "dossier_ids", "critique_ids", "source_candidate_ids", "diagnostics", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "envelope_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "treatment_id": {"type": "string", "minLength": 1},
+    "portfolio": {"type": "object"},
+    "viewpoint_ids": {"type": "array", "items": {"type": "string"}},
+    "support_task_ids": {"type": "array", "items": {"type": "string"}},
+    "dossier_ids": {"type": "array", "items": {"type": "string"}},
+    "critique_ids": {"type": "array", "items": {"type": "string"}},
+    "source_candidate_ids": {"type": "array", "items": {"type": "string"}},
+    "diagnostics": {"type": "array", "items": {"type": "string"}},
+    "status": {"enum": ["READY", "REVIEW_REQUIRED", "NO_GO"]}
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/society-plumbing-replay.schema.json",
+  "title": "Society plumbing replay",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "protocol", "status", "external_calls", "before_after", "summary", "limitations", "authority"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "protocol": {"const": "g10p.1-society-evidence-plumbing"},
+    "status": {"enum": ["SOCIETY_PLUMBING_READY", "SOCIETY_PLUMBING_NO_GO"]},
+    "external_calls": {"const": false},
+    "before_after": {"type": "array", "items": {"type": "object"}},
+    "summary": {"type": "object"},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "authority": {"type": "object"}
+  }
+}

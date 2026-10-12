@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/society-attribution-ledger.schema.json",
+  "title": "Society attribution ledger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "ledger_id", "case_id", "treatment_id", "entries", "diagnostics", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "ledger_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "treatment_id": {"type": "string", "minLength": 1},
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["record_id", "record_type", "viewpoint_id", "support_task_id", "action_ids", "source_candidate_ids", "parent_record_ids", "join_status", "diagnostics"],
+        "properties": {
+          "record_id": {"type": "string", "minLength": 1},
+          "record_type": {"enum": ["ACTION", "SUPPORT_REPORT", "DOSSIER", "CRITIQUE", "PORTFOLIO"]},
+          "viewpoint_id": {"type": ["string", "null"]},
+          "support_task_id": {"type": ["string", "null"]},
+          "action_ids": {"type": "array", "items": {"type": "string"}},
+          "source_candidate_ids": {"type": "array", "items": {"type": "string"}},
+          "parent_record_ids": {"type": "array", "items": {"type": "string"}},
+          "join_status": {"enum": ["ATTRIBUTED", "PARTIAL", "UNATTRIBUTED", "INVALID", "HISTORICAL_UNASSIGNED"]},
+          "diagnostics": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "diagnostics": {"type": "array", "items": {"type": "string"}},
+    "status": {"enum": ["READY", "REVIEW_REQUIRED", "NO_GO"]}
+  }
+}

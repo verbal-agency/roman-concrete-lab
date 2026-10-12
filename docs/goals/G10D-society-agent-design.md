@@ -1,6 +1,6 @@
 # G10D — Society role, incentive, and focus redesign
 
-**Status:** pending
+**Status:** proposed
 **Dependencies:** G10M complete; G10R-R replay available; G10P complete or its typed interfaces frozen; no new live model or network execution
 **Advances:** changes the society from a cautious review panel into viewpoint-centered research teams whose structural task agents compile, test, and challenge evidence for competing arguments
 
@@ -62,6 +62,57 @@ Use deterministic fixtures derived from the completed G10R cases. Compare the vi
 7. Blind scoring distinguishes useful discovery from rhetoric, consensus, viewpoint count, and extra output volume.
 8. Tests cover team isolation, viewpoint/support assignment, disconfirming support, cross-viewpoint critique, follow-up obligations, dissent retention, open-slot admission, focus fairness, budget equality, and replay.
 9. The handoff emits `SOCIETY_DESIGN_READY` or `SOCIETY_DESIGN_NO_GO` and identifies the exact protocol manifest required for a later live rerun.
+
+## Execution contract
+
+### Canonical records and invariants
+
+- `ViewpointCard`: `viewpoint_id`, `case_id`, `kind` (`CANDIDATE`, `NULL`, or `OPEN_SLOT`), mechanism/interpretation statement, prior basis, support region, predictions, falsifiers, and `promotion_status=REVIEW_REQUIRED`.
+- `SupportTask`: `task_id`, `viewpoint_id`, task type, bounded charter, budget debit, and status. A task cannot serve more than one viewpoint or cross problem/version boundaries.
+- `SupportReport`: `report_id`, `viewpoint_id`, `support_task_id`, stance (`SUPPORTS`, `WEAKENS`, or `NON_DISCRIMINATING`), action IDs, source-candidate IDs, claim IDs, unresolved questions, and status. Weakening evidence is retained as dissent.
+- `ViewpointDossier`: one viewpoint's typed reports, source/action/claim unions, dissenting report IDs, unresolved joins, and status.
+- `CrossViewpointCritique`: compared dossier IDs, target viewpoint, challenge, source IDs, proposed discriminator, and review status.
+- `FocusDecision`: deterministic ordered task allocations, expected information value, rival/null coverage, budget debit, and rationale. Votes and prose length are not inputs.
+- `TournamentPortfolio`: leading viewpoint, credible rivals, unresolved disputes, support-task contributions, cheapest discriminator, and authority note. It cannot mutate evidence or authorize a lab.
+
+All records carry `schema_version`, `case_id`, `problem_id`, `problem_version`, and context/treatment scope. Duplicate IDs with identical payloads replay; duplicate IDs with different payloads, stale context, cross-problem reads, and writes outside the declared budget fail closed. A viewpoint may be deprioritized or weakened, but cannot be silently deleted because support is incomplete.
+
+### Deterministic behavior matrix
+
+| Condition | Required result |
+|---|---|
+| First-round viewpoint team runs | Private dossier; competitor traces are unavailable until commit |
+| Support task finds evidence against its viewpoint | Emit `WEAKENS`; preserve the report and reduce or redirect focus as justified |
+| Support task finds an unresolved candidate | Retain raw candidate and diagnostic; no direct-evidence promotion |
+| Viewpoint requests a task outside its charter | Reject the task and record an authority/contract diagnostic |
+| Cross-viewpoint critique lacks a dossier | Reject the critique; do not synthesize from prose |
+| Focus budget is insufficient for null and credible rival coverage | Abstain or record `INCONCLUSIVE`; do not declare a winner |
+| Early majority forms | Preserve independent dossiers; allocate by the frozen information-value rule |
+| Candidate/source IDs are omitted in serialization | Fail the fixture and preserve the pre-serialization record for diagnosis |
+| Stale checkpoint or duplicate action | Replay identical payload; reject conflicting payload |
+| Adjudicator receives incomplete evidence | Preserve multiple viewpoints, dissent, and next discriminator; do not force consensus |
+
+### Expected implementation surface
+
+- Schemas: `schemas/viewpoint-card.schema.json`, `viewpoint-support-task.schema.json`, `viewpoint-support-report.schema.json`, `viewpoint-dossier.schema.json`, `cross-viewpoint-critique.schema.json`, `focus-decision.schema.json`, and `tournament-portfolio.schema.json`.
+- Implementation: `src/roman_concrete_lab/agents/viewpoint_society.py`; integrate with `src/roman_concrete_lab/agents/evidence_bus.py` without changing its authority boundary.
+- Fixtures: `fixtures/investigation/viewpoint-society/development.jsonl`, `sealed.jsonl`, `support-behaviors.json`, and `focus-cases.json`.
+- Tests: `tests/agents/test_viewpoint_society.py`, `tests/agents/test_viewpoint_support_assignment.py`, and `tests/agents/test_viewpoint_society_replay.py`.
+- Documentation/artifacts: `docs/protocols/viewpoint-society.md`, `artifacts/goals/G10D/phase-a.json`, `artifacts/goals/G10D/report.md`, and a frozen manifest.
+
+### Authority and side-effect boundary
+
+G10D is offline-only. It may read/write repository-local fixtures, typed derived records, checkpoints, and manifests. It may not call a model provider, network, subscription, credential, subprocess, external communication channel, laboratory, or arbitrary code from a source document. Structural support records remain derived assertions; no agent can promote evidence, change rights/safety state, expand source policy, authorize a protocol, or increase the aggregate budget.
+
+### Criterion-to-test/artifact map
+
+| Criterion | Evidence |
+|---|---|
+| 1 | Versioned viewpoint/support/critique/focus schemas and protocol document |
+| 2–4 | Sealed behavior fixtures and viewpoint/support assignment tests |
+| 5 | Deterministic focus-decision ledger and replay artifact |
+| 6–8 | Role-isolation, weakening-support, dissent, budget, and replay tests |
+| 9 | `artifacts/goals/G10D/phase-a.json` and `report.md` with a binary handoff |
 
 ## Stop conditions
 

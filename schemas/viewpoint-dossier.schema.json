@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/viewpoint-dossier.schema.json",
+  "title": "Viewpoint dossier",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "dossier_id", "case_id", "viewpoint_id", "support_task_ids", "report_ids", "action_ids", "source_candidate_ids", "claim_ids", "dissenting_report_ids", "diagnostics", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "dossier_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "viewpoint_id": {"type": "string", "minLength": 1},
+    "support_task_ids": {"type": "array", "items": {"type": "string"}},
+    "report_ids": {"type": "array", "items": {"type": "string"}},
+    "action_ids": {"type": "array", "items": {"type": "string"}},
+    "source_candidate_ids": {"type": "array", "items": {"type": "string"}},
+    "claim_ids": {"type": "array", "items": {"type": "string"}},
+    "dissenting_report_ids": {"type": "array", "items": {"type": "string"}},
+    "diagnostics": {"type": "array", "items": {"type": "string"}},
+    "status": {"enum": ["COMPLETE", "PARTIAL", "REVIEW_REQUIRED"]}
+  }
+}

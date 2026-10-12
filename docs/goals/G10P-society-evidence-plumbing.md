@@ -1,6 +1,6 @@
 # G10P — Society evidence-bus and attribution plumbing
 
-**Status:** pending
+**Status:** complete
 **Dependencies:** G10R-R complete; completed G10R trace and checkpoints available; no new live model or network execution
 **Advances:** makes viewpoint, support-task, candidate, claim, branch, and adjudication records survive end to end so useful work cannot disappear before scoring
 
@@ -44,6 +44,25 @@ This is an offline contract and implementation goal. It authorizes no provider c
 5. Replay is deterministic and uses no provider or network calls.
 6. Tests cover positive viewpoint/support propagation, support-agent weakening evidence, unresolved/unattributed retention, duplicate handling, stale/cross-problem writes, serialization, checkpoint/resume, and silent-drop detection.
 7. The handoff contains a before/after attribution ledger for the completed G10R run and emits `SOCIETY_PLUMBING_READY` or `SOCIETY_PLUMBING_NO_GO`.
+
+## Expected implementation surface and criterion map
+
+- Schemas: `schemas/viewpoint-support-task.schema.json`, `viewpoint-support-report.schema.json`, `viewpoint-dossier.schema.json`, `cross-viewpoint-critique.schema.json`, `society-portfolio-envelope.schema.json`, and `society-attribution-ledger.schema.json`.
+- Protocol: `docs/protocols/society-evidence-bus.md`.
+- Implementation: `src/roman_concrete_lab/agents/evidence_bus.py`.
+- Offline replay and artifact: `tools/evaluation/society_plumbing_replay.py` and `artifacts/goals/G10P/replay.json`.
+- Focused verification: `tests/agents/test_evidence_bus.py` and `tests/agents/test_society_plumbing_replay.py`.
+
+Criterion-to-evidence map:
+
+| Criterion | Evidence |
+|---|---|
+| 1 | Versioned schemas plus protocol document |
+| 2–3 | `EvidenceBus` lineage joins and propagation/omission tests |
+| 4 | Candidate preservation and unresolved-source diagnostics in envelope/ledger tests |
+| 5 | `society_plumbing_replay.py` with `external_calls=false` and stable replay test |
+| 6 | Focused evidence-bus and replay test modules |
+| 7 | `artifacts/goals/G10P/replay.json` and `artifacts/goals/G10P/report.md` |
 
 ## Stop conditions
 

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/viewpoint-support-task.schema.json",
+  "title": "Viewpoint support task",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "task_id", "case_id", "problem_id", "problem_version", "treatment_id", "viewpoint_id", "task_type", "charter", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "task_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "problem_id": {"type": "string", "minLength": 1},
+    "problem_version": {"type": "string", "minLength": 1},
+    "treatment_id": {"type": "string", "minLength": 1},
+    "viewpoint_id": {"type": "string", "minLength": 1},
+    "task_type": {"enum": ["RETRIEVAL", "EXTRACTION", "IDENTITY_LINEAGE", "CONTRADICTION", "EXPERIMENT_DESIGN", "SIMULATION", "ADVERSARIAL_REVIEW"]},
+    "charter": {"type": "string", "minLength": 1},
+    "status": {"enum": ["ASSIGNED", "COMPLETED", "ABSTAINED", "FAILED"]}
+  }
+}
