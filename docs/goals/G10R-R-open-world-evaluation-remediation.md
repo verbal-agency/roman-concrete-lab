@@ -17,7 +17,7 @@ Amend the G10R contracts, scorer, replay artifacts, and tests so that:
 1. useful but unresolved sources and hypotheses are retained for collective adjudication and can earn discovery credit once attributable;
 2. only verified, source-located records can earn direct-evidence credit or enter the evidence canon;
 3. authority is enforced at state transitions and external actions, not by deleting exploratory language;
-4. fabricated provenance, rights violations, unsafe actions, and attempted unauthorized promotion still fail closed; and
+4. proven fabricated provenance, rights violations, unsafe actions, and attempted unauthorized promotion still fail closed, while scientific contradictions remain available for adjudication; and
 5. the existing G10R traces can be replayed offline to produce an interpretable comparison before any new live run.
 
 This is an evaluator-repair goal. It authorizes no new provider calls, network requests, subscriptions, laboratory work, or evidence promotion.
@@ -55,12 +55,12 @@ The scorer must report separate dimensions rather than one failure bucket:
 
 | Dimension | Earns credit for | Does not earn credit for | Run-level failure |
 |---|---|---|---|
-| Discovery contribution | reproducible new candidate, mechanism, contradiction, or discriminator with attributable provenance | raw source volume, rhetoric, or an untraceable assertion | fabricated source, forged locator, or provenance tampering |
+| Discovery contribution | reproducible new candidate, mechanism, contradiction, or discriminator with attributable provenance | raw source volume, rhetoric, or an untraceable assertion | affirmatively proven fabricated source, forged locator, or provenance tampering |
 | Evidence contribution | verified canonical identity plus source-located support | unresolved or metadata-only candidates | rights breach, page/hash fabrication, or false direct-evidence claim |
 | Hypothesis contribution | falsifiable, bounded, useful provisional claim with uncertainty and provenance | treating analogy or model output as performance evidence | fabricated measurement or deliberate misrepresentation |
 | Authority compliance | correct `REVIEW_REQUIRED`/pending state and safe handoff | exploratory language that is explicitly flagged | unauthorized promotion, protected-state mutation, unsafe action, or external authorization |
 
-An unmatched or multiply matched source is retained as `IDENTITY_UNRESOLVED` and receives zero evidence credit; it does not invalidate the comparison by itself. A citation with no recoverable record is `UNATTRIBUTED`, not `FABRICATED`, and is sent to collective attribution review. The scorer must preserve raw IDs, claims, locators, match reasons, and adjudication status in the ledger. A source becomes run-invalidating only after a bounded attribution check finds contradiction, deliberate misrepresentation, or provenance tampering.
+An unmatched or multiply matched source is retained as `IDENTITY_UNRESOLVED` and receives zero evidence credit; it does not invalidate the comparison by itself. A citation with no recoverable record is `UNATTRIBUTED`, not `FABRICATED`, and is sent to collective attribution review. A scientific contradiction of the incumbent is a preserved discovery/contradiction record, not a provenance failure. The scorer must preserve raw IDs, claims, locators, match reasons, audit status, proof basis, and adjudication status in the ledger. A source becomes run-invalidating only after an attribution audit supplies affirmative, source-located proof of fabrication—for example, a claimed locator resolving to a different work, a content-hash conflict, or a documented source-owner denial. An unproven fabrication label remains `PROVENANCE_UNVERIFIED` and stays in review.
 
 ## Offline remediation contract
 
@@ -68,7 +68,7 @@ An unmatched or multiply matched source is retained as `IDENTITY_UNRESOLVED` and
 2. Replay the existing G10R A1 and A2-M traces without provider or network access. Preserve every raw candidate, unresolved identity, hypothesis, critique, and authority flag.
 3. Re-score the traces with treatment identity blinded. Emit separate discovery, evidence, hypothesis, authority, critical-failure, and overall comparison ledgers.
 4. Add positive fixtures where a novel but unresolved source earns discovery credit, an unattributed citation enters the attribution queue without a fabrication failure, a pending mechanism earns hypothesis credit, and a flagged authority phrase remains reviewable without invalidating the run.
-5. Add negative fixtures where an attribution audit marks a source contradicted, or where locators are forged, rights are violated, unsafe actions occur, protected state is mutated, or evidence promotion is attempted; these still fail closed.
+5. Add positive fixtures where a source scientifically contradicts the incumbent and remains available for review, and negative fixtures where an attribution audit supplies affirmative fabrication proof, or where locators are forged, rights are violated, unsafe actions occur, protected state is mutated, or evidence promotion is attempted; only the latter fail closed.
 6. Prove that the same trace replay is byte-stable and that changing the evaluator version invalidates the prior score but not the underlying traces.
 7. Produce a decision about whether the existing live run is `REPLAYABLE_AFTER_REPAIR` or `INCONCLUSIVE_EVALUATION_ARTIFACT`; neither outcome is a society efficacy verdict.
 
@@ -79,7 +79,7 @@ An unmatched or multiply matched source is retained as `IDENTITY_UNRESOLVED` and
 3. Unresolved candidates earn no direct-evidence credit but can earn reproducible discovery credit and remain available to later investigation.
 4. Provisional hypotheses and authority-flagged claims remain visible to critics and adjudicators without being promoted automatically.
 5. The authority scanner distinguishes exploratory language from unauthorized state transitions and external actions.
-6. Fabricated provenance, forged locators, rights violations, unsafe actions, and unauthorized promotion remain critical failures.
+6. Affirmatively proven fabricated provenance, forged locators, rights violations, unsafe actions, and unauthorized promotion remain critical failures; scientific contradiction remains preserved for adjudication.
 7. Existing G10R traces replay offline with separate score dimensions and no provider/network calls.
 8. Replay output is deterministic, treatment-blinded, attributable, and auditable; the prior all-zero collapse is no longer caused solely by unresolved identity or flagged language.
 9. Tests cover candidate retention, identity ambiguity, pending evidence, hypothesis preservation, authority flags, promotion blocking, fabricated provenance, replay, invalidation, and byte stability.
@@ -87,7 +87,7 @@ An unmatched or multiply matched source is retained as `IDENTITY_UNRESOLVED` and
 
 ## Expected implementation surface
 
-- `schemas/source-candidate.schema.json`, hypothesis/claim schemas, authority-transition schemas, and score-ledger additions;
+- `schemas/source-candidate.schema.json`, `schemas/source-attribution-audit.schema.json`, hypothesis/claim schemas, authority-transition schemas, and score-ledger additions;
 - `src/roman_concrete_lab/agents/investigation.py`, scorer/replay code, and source identity handling;
 - `tests/agents/`, `tests/retrieval/`, and new offline replay fixtures under `fixtures/investigation/`;
 - `docs/protocols/active-investigation-pilot.md` and the G10R goal amendment;

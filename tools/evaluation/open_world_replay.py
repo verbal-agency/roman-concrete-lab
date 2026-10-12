@@ -76,6 +76,7 @@ def replay(
                         "rights_state": record.get("rights_state"),
                         "content_hash": record.get("content_hash"),
                         "identity_status": scored["identity_statuses"].get(source_id, "NOT_CITED"),
+                        "attribution_status": scored["attribution_adjudications"].get(source_id, "UNREVIEWED"),
                         "resolved_id": scored["source_identity_aliases"].get(source_id),
                     }
                 )
@@ -91,6 +92,10 @@ def replay(
                     "unresolved_source_candidate_ids": scored["unresolved_source_candidate_ids"],
                     "unattributed_source_candidate_ids": scored["unattributed_source_candidate_ids"],
                     "out_of_rubric_source_candidate_ids": scored["out_of_rubric_source_candidate_ids"],
+                    "contradiction_source_candidate_ids": scored["contradiction_source_candidate_ids"],
+                    "provenance_review_source_candidate_ids": scored["provenance_review_source_candidate_ids"],
+                    "fabrication_proof_source_candidate_ids": scored["fabrication_proof_source_candidate_ids"],
+                    "attribution_adjudications": scored["attribution_adjudications"],
                     "authority_flags": scored["authority_flags"],
                     "critical_failures": scored["critical_failures"],
                     "discovery_contribution_digests": scored["discovery_contribution_digests"],

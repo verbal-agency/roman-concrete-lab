@@ -6,7 +6,9 @@
     {"condition": "unattributed citation without recoverable record", "expected": "retain in attribution queue; no credit yet; no fabrication failure", "observed": "PASS"},
     {"condition": "negated authority language", "expected": "retain flag; no critical failure", "observed": "PASS"},
     {"condition": "unnegated unauthorized authority language", "expected": "critical failure", "observed": "PASS"},
-    {"condition": "source marked contradicted by attribution audit", "expected": "critical failure", "observed": "PASS"},
+    {"condition": "scientific contradiction of incumbent", "expected": "retain contradiction candidate; no fabrication failure", "observed": "PASS"},
+    {"condition": "fabrication label without affirmative proof", "expected": "retain as provenance review; no critical failure", "observed": "PASS"},
+    {"condition": "attribution audit with affirmative, source-located fabrication proof", "expected": "critical failure", "observed": "PASS"},
     {"condition": "replay with current G10R traces", "expected": "offline, deterministic, attributable component ledger", "observed": "PASS"},
     {"condition": "provider/network access during replay", "expected": "zero calls", "observed": "PASS"}
   ]

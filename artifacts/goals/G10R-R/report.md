@@ -11,14 +11,16 @@ The existing G10R traces replayed offline as `REPLAYABLE_AFTER_REPAIR`. The repl
 - Attributable but unresolved or out-of-rubric sources remain in the candidate canon and receive no direct-evidence credit rather than invalidating the run.
 - Unattributed citations enter a collective attribution queue; absence from the first ledger is not treated as proof of fabrication.
 - Only canonical, source-located records earn direct-evidence credit.
+- Scientific contradictions of the incumbent remain in the candidate/contradiction ledger; they are not treated as fabricated provenance.
+- A fabrication finding is critical only when the audit supplies affirmative, source-located proof. An unsupported fabrication label remains `PROVENANCE_UNVERIFIED`.
 - Provisional hypotheses remain visible when they carry predictions, falsifiers, support regions, uncertainty, and attributable provenance.
 - Negated authority language is retained as a review flag; only unnegated unauthorized transitions, contradicted provenance, unsafe actions, or promotion attempts are critical failures.
 - Replay treatment identities are blinded in the score ledger and restored only in the comparison section.
 
 ## Verification
 
-- `python3 -m pytest -q`: 100 passed.
-- Focused remediation and active-investigation tests: 30 passed.
+- `python3 -m pytest -q`: 102 passed.
+- Focused remediation, active-investigation, and mechanism-tournament tests: 33 passed.
 - `python3 -m tools.evaluation.open_world_replay`: `REPLAYABLE_AFTER_REPAIR`.
 - `git diff --check`: passed.
 

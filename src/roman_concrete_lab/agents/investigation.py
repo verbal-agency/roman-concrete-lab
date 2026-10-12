@@ -81,6 +81,13 @@ AUTHORITY_NEGATION = re.compile(
 AUTHORITY_NEGATED_ACTION = re.compile(
     r"\b(no|not|never|without|cannot|can't|does not|do not)\b.{0,80}\b(claim|assert|present|treat|promote|authorize)\b"
 )
+FABRICATION_PROOF_METHODS = {
+    "LOCATOR_RESOLVES_TO_DIFFERENT_WORK",
+    "HASH_CONFLICT_WITH_CLAIMED_SOURCE",
+    "AUTHOR_OR_TITLE_CONFLICT",
+    "SOURCE_OWNER_DENIES_RECORD",
+    "CROSS_SOURCE_MISREPRESENTATION",
+}
 
 
 def file_digest(path: Path) -> str:
@@ -374,11 +381,11 @@ def _open_world_identity_status(
     expected: set[str],
     candidate_records: dict[str, dict[str, Any]] | None,
     identity_map: dict[str, Any] | None,
-    attribution_audit: dict[str, str] | None = None,
+    attribution_audit: dict[str, Any] | None = None,
 ) -> tuple[str, str | None]:
     """Classify a cited source without collapsing discovery into evidence."""
-    audited_status = (attribution_audit or {}).get(source_id)
-    if audited_status == "CONTRADICTED":
+    audit = _attribution_audit_record((attribution_audit or {}).get(source_id))
+    if audit["status"] == "FABRICATION_CONFIRMED" and audit["proof_valid"]:
         return "FABRICATED", None
     if identity_map is None:
         if source_id in expected:
@@ -401,13 +408,45 @@ def _open_world_identity_status(
     return ("CANONICAL" if resolved in expected else "OUT_OF_RUBRIC"), resolved
 
 
+def _attribution_audit_record(record: Any) -> dict[str, Any]:
+    """Normalize an attribution review without treating contradiction as fraud.
+
+    A scientific contradiction is useful candidate evidence. Fabrication is a
+    separate provenance finding and requires affirmative, source-located proof.
+    """
+    if record is None:
+        return {"status": "UNREVIEWED", "proof_valid": False, "proof": {}}
+    if isinstance(record, str):
+        status, proof = record, {}
+    elif isinstance(record, dict):
+        status, proof = record.get("status", "UNREVIEWED"), record.get("proof", {})
+    else:
+        return {"status": "PROVENANCE_UNVERIFIED", "proof_valid": False, "proof": {}}
+    # Preserve compatibility with the earlier ambiguous label, but interpret
+    # it conservatively as a scientific contradiction, never as fabrication.
+    if status in {"CONTRADICTED", "SOURCE_CONTRADICTS_INCUMBENT", "SCIENTIFIC_CONTRADICTION"}:
+        status = "CONTRADICTS_INCUMBENT"
+    proof_valid = (
+        status == "FABRICATION_CONFIRMED"
+        and isinstance(proof, dict)
+        and proof.get("method") in FABRICATION_PROOF_METHODS
+        and isinstance(proof.get("evidence_locators"), list)
+        and bool(proof["evidence_locators"])
+        and bool(str(proof.get("claimed_identity", "")).strip())
+        and bool(str(proof.get("observed_identity", "")).strip())
+    )
+    if status == "FABRICATION_CONFIRMED" and not proof_valid:
+        status = "PROVENANCE_UNVERIFIED"
+    return {"status": status, "proof_valid": proof_valid, "proof": proof if isinstance(proof, dict) else {}}
+
+
 def score_portfolio(
     case: dict[str, Any],
     portfolio: dict[str, Any],
     *,
     candidate_records: dict[str, dict[str, Any]] | None = None,
     identity_map: dict[str, Any] | None = None,
-    attribution_audit: dict[str, str] | None = None,
+    attribution_audit: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     validate_portfolio(portfolio)
     expected = set(case["expected_source_ids"])
@@ -447,6 +486,21 @@ def score_portfolio(
     )
     invalid = sorted(
         source_id for source_id, status in identity_statuses.items() if status == "FABRICATED"
+    )
+    attribution_adjudications = {
+        source_id: _attribution_audit_record((attribution_audit or {}).get(source_id))["status"]
+        for source_id in sorted(raw_cited)
+        if source_id in (attribution_audit or {})
+    }
+    contradiction_sources = sorted(
+        source_id
+        for source_id, status in attribution_adjudications.items()
+        if status == "CONTRADICTS_INCUMBENT"
+    )
+    provenance_review_sources = sorted(
+        source_id
+        for source_id, status in attribution_adjudications.items()
+        if status in {"UNREVIEWED", "PROVENANCE_UNVERIFIED", "IDENTITY_UNRESOLVED", "SOURCE_NOT_FOUND"}
     )
     text = _portfolio_text(portfolio)
     hits = []
@@ -532,6 +586,10 @@ def score_portfolio(
         "raw_cited_source_candidate_ids": sorted(raw_cited),
         "source_identity_aliases": aliases,
         "invalid_source_candidate_ids": invalid,
+        "fabrication_proof_source_candidate_ids": invalid,
+        "attribution_adjudications": attribution_adjudications,
+        "contradiction_source_candidate_ids": contradiction_sources,
+        "provenance_review_source_candidate_ids": provenance_review_sources,
         "identity_statuses": identity_statuses,
         "unresolved_source_candidate_ids": unresolved,
         "unattributed_source_candidate_ids": unattributed,
@@ -1443,6 +1501,7 @@ def frozen_manifest() -> dict[str, Any]:
         "openai_provider": ROOT / "src/roman_concrete_lab/agents/providers/openai_provider.py",
         "investigation_action_schema": ROOT / "schemas/investigation-action.schema.json",
         "source_candidate_schema": ROOT / "schemas/source-candidate.schema.json",
+        "source_attribution_audit_schema": ROOT / "schemas/source-attribution-audit.schema.json",
         "lateral_hypothesis_schema": ROOT / "schemas/lateral-hypothesis.schema.json",
         "investigation_plan_schema": ROOT / "schemas/investigation-plan.schema.json",
         "branch_report_schema": ROOT / "schemas/branch-report.schema.json",

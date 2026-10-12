@@ -317,7 +317,7 @@ class ActiveInvestigationTests(unittest.TestCase):
         self.assertEqual(len(orchestrator.actions), 2)
         self.assertEqual(budget.usage.queries, 1)
 
-    def test_scorer_records_hits_and_rejects_invalid_source_and_authority(self):
+    def test_scorer_records_hits_and_rejects_proven_fabrication_and_authority(self):
         case = next(
             item
             for item in load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl")
@@ -328,9 +328,56 @@ class ActiveInvestigationTests(unittest.TestCase):
         self.assertEqual(score["provenance_completeness"], 1.0)
         bad = portfolio(source_id="FABRICATED")
         bad["authority_note"] = "Approved for execution."
-        bad_score = score_portfolio(case, bad, attribution_audit={"FABRICATED": "CONTRADICTED"})
+        bad_score = score_portfolio(
+            case,
+            bad,
+            attribution_audit={
+                "FABRICATED": {
+                    "status": "FABRICATION_CONFIRMED",
+                    "proof": {
+                        "method": "LOCATOR_RESOLVES_TO_DIFFERENT_WORK",
+                        "evidence_locators": ["https://doi.org/10.0000/observed-record"],
+                        "claimed_identity": "claimed Roman-concrete record",
+                        "observed_identity": "unrelated battery paper",
+                    },
+                }
+            },
+        )
         self.assertIn("FABRICATED", bad_score["invalid_source_candidate_ids"])
         self.assertGreaterEqual(len(bad_score["critical_failures"]), 2)
+
+    def test_scientific_contradiction_is_preserved_not_treated_as_fabrication(self):
+        case = next(
+            item
+            for item in load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl")
+            if item["case_id"] == "S-ACTIVE-TRANSFER"
+        )
+        output = portfolio(source_id="SRC-S30-QUICKLIME")
+        score = score_portfolio(
+            case,
+            output,
+            identity_map=source_identity_map(),
+            attribution_audit={"SRC-S30-QUICKLIME": "CONTRADICTS_INCUMBENT"},
+        )
+        self.assertEqual(score["critical_failures"], [])
+        self.assertEqual(score["invalid_source_candidate_ids"], [])
+        self.assertEqual(score["contradiction_source_candidate_ids"], ["SRC-S30-QUICKLIME"])
+        self.assertEqual(score["identity_statuses"]["SRC-S30-QUICKLIME"], "CANONICAL")
+
+    def test_unproven_fabrication_label_stays_in_provenance_review(self):
+        case = next(
+            item
+            for item in load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl")
+            if item["case_id"] == "S-ACTIVE-TRANSFER"
+        )
+        score = score_portfolio(
+            case,
+            portfolio(source_id="UNPROVEN"),
+            attribution_audit={"UNPROVEN": "FABRICATION_CONFIRMED"},
+        )
+        self.assertEqual(score["critical_failures"], [])
+        self.assertEqual(score["invalid_source_candidate_ids"], [])
+        self.assertEqual(score["provenance_review_source_candidate_ids"], ["UNPROVEN"])
 
     def test_open_world_candidate_is_retained_without_evidence_credit(self):
         case = next(
