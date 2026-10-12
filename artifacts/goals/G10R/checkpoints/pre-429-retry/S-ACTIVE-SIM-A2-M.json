@@ -1,0 +1,84 @@
+{
+  "action_records": [],
+  "actions": {},
+  "budget": {
+    "limits": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 7200,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "remaining": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 24.99987442,
+      "input_tokens": 78669,
+      "output_tokens": 6976,
+      "payload_bytes": 5000000,
+      "queries": 11,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "usage": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.00012558,
+      "input_tokens": 1331,
+      "output_tokens": 224,
+      "payload_bytes": 0,
+      "queries": 1,
+      "retained_sources": 0,
+      "simulation_calls": 0
+    }
+  },
+  "manifest_sha256": "sha256:b6bd4f8ee705f0b28d1afe9585b8b8c8826e42ce90b9c150a4e8a25658c08c8a",
+  "model_traces": [
+    {
+      "call_id": "60f3380744fe90b3",
+      "estimated_actual_cost_usd": 0.00012558,
+      "estimated_maximum_cost_usd": 0.0003904,
+      "latency_seconds": 2.8423,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "proponent:S-ACTIVE-SIM-M1",
+        "case_id": "S-ACTIVE-SIM",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "lime mortar simulation model validation artifact declared validation domain support region",
+            "rationale": "Test the provisional M1 prediction that the paper declares both a validation artifact and its model domain. Their absence would falsify M1; any support is limited to the reported lime-mortar domain and cannot establish Roman-concrete performance or simulator eligibility by itself."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:542521904c11841497bd123368af8f9bdbccfacc924e9627c85753ff184d08c2",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 1328,
+        "input_tokens": 1331,
+        "output_tokens": 224
+      }
+    }
+  ],
+  "paper_evidence_cards": {},
+  "simulation_traces": [],
+  "source_candidates": {},
+  "state": "inconclusive",
+  "state_history": [
+    "created",
+    "policy_loaded",
+    "context_frozen",
+    "planning",
+    "round_1",
+    "inconclusive"
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "action_records": [],
+  "actions": {},
+  "budget": {
+    "limits": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 7200,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "remaining": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 24.9996462,
+      "input_tokens": 79437,
+      "output_tokens": 6605,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "usage": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.0003538,
+      "input_tokens": 563,
+      "output_tokens": 595,
+      "payload_bytes": 0,
+      "queries": 0,
+      "retained_sources": 0,
+      "simulation_calls": 0
+    }
+  },
+  "manifest_sha256": "sha256:9943bcb08fea84231f8b033f340ec010e69522dd491f2429c86745974359ed49",
+  "model_traces": [
+    {
+      "call_id": "1a5b9d3fab60bccd",
+      "estimated_actual_cost_usd": 0.0003538,
+      "estimated_maximum_cost_usd": 0.0005033,
+      "latency_seconds": 6.7734,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "single_investigator",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "follow_up_queries": [
+          {
+            "index": "openalex",
+            "query": "Exact thesis title or author identified in catalog results",
+            "rationale": "If the thesis is indexed, compare its metadata and references with the transportation report; preserve a no-result outcome."
+          },
+          {
+            "index": "crossref",
+            "query": "Exact transportation report title or author identified in catalog results",
+            "rationale": "Check for a separately published or DOI-registered report and possible overlap with the thesis."
+          },
+          {
+            "index": "catalog",
+            "query": "Utah quicklime asphalt rutting moisture durability performance endpoint",
+            "rationale": "Determine whether accessible records report a functional endpoint relevant to hot-mix asphalt, rather than composition or processing alone."
+          },
+          {
+            "index": "openalex",
+            "query": "Utah quicklime asphalt thesis report same study author dataset",
+            "rationale": "Test whether apparent two-record support may derive from one underlying study; document absent linkage as unresolved."
+          },
+          {
+            "index": "catalog",
+            "query": "quicklime hydrated lime asphalt Utah independent replication",
+            "rationale": "Search for independent Utah investigations and retain negative results; distinguish quicklime from other lime treatments."
+          },
+          {
+            "index": "crossref",
+            "query": "quicklime hot mix asphalt Utah",
+            "rationale": "Search for additional publication records that could support or contradict an independent-replication interpretation."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "Utah thesis quicklime hot mix asphalt",
+            "rationale": "Locate the named thesis and capture its author, date, institution, abstract, and access information."
+          },
+          {
+            "index": "catalog",
+            "query": "Utah transportation report quicklime hot mix asphalt",
+            "rationale": "Locate the transportation report and identify its sponsor, authors, date, and stated study purpose."
+          },
+          {
+            "index": "openalex",
+            "query": "quicklime asphalt Utah thesis transportation report",
+            "rationale": "Check scholarly metadata for both records and possible shared authorship, citations, or related outputs."
+          },
+          {
+            "index": "crossref",
+            "query": "quicklime asphalt Utah",
+            "rationale": "Search DOI metadata for related publications that may clarify the record set's lineage."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:74f4c2adb899e24181289a3ce5140e24d630a178a3f1ddb59d918afd2a65faac",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 563,
+        "output_tokens": 595
+      }
+    }
+  ],
+  "paper_evidence_cards": {},
+  "simulation_traces": [],
+  "source_candidates": {},
+  "state": "inconclusive",
+  "state_history": [
+    "created",
+    "policy_loaded",
+    "context_frozen",
+    "planning",
+    "round_1",
+    "inconclusive"
+  ]
+}

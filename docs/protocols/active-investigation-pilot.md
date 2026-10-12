@@ -18,13 +18,19 @@ The mapper receives bounded page spans and must attach each extracted fact to an
 
 The frozen native-text parser is `pypdf==6.20.0` (`requirements-g10r.txt`). It is a parser only: it does not execute PDF actions, provide OCR, reconstruct missing tables, or infer values from figures. Those capabilities require separately declared and validated adapters.
 
+### Open-world evaluator amendment for the next rerun
+
+G10R-R adds a separate candidate canon, evidence canon, and authority layer. A reproducible source or mechanism discovered during treatment is retained as `CANDIDATE_PENDING`, `UNATTRIBUTED`, `IDENTITY_UNRESOLVED`, `EVIDENCE_PENDING`, or `ADMISSIBLE_FOR_REVIEW` with its raw identifier, locator, query/action provenance, and uncertainty. It may earn discovery credit and inform a bounded provisional hypothesis, but it earns no direct-evidence credit until identity, rights, and source-located review are complete. A candidate is not discarded merely because it is absent from the predeclared rubric universe. A citation with no recoverable record enters collective attribution review; it is not labeled fabricated solely because the first ledger lacks it.
+
+Provisional hypotheses, transfer hypotheses, and model assertions remain visible to critics and adjudicators with `REVIEW_REQUIRED` status. Authority checks apply to attempted promotion, protected-state mutation, unsafe action, fabricated provenance, or external authorization—not to speculative language that is explicitly framed as uncertain or pending. The next G10R Phase-B run must use the G10R-R score ledger, which reports discovery, evidence, hypothesis, authority flags, attribution queue, and critical failures separately. The amendment does not authorize evidence promotion, laboratory work, or a larger budget.
+
 Simulation requires a declared adapter and trace. Every output is `MODEL_ASSERTION`. Synthetic diagnostics are excluded from the live scientific score. No validated Roman-concrete adapter exists in Phase A, so the required live state is `SIMULATOR_UNAVAILABLE` unless a pre-existing validation artifact is added before the manifest is frozen; adding one afterward invalidates the run.
 
 ## Freeze, replay, and failure
 
 Development and sealed cases, prompts, hidden rubrics, source policy, fixtures, schemas, provider/runner code, focus policy, budgets, and decision thresholds are hashed before treatment. Checkpoints bind those hashes. Completed action IDs and normalized queries replay without external calls or additional budget debits. Stale, duplicate-write, cross-problem, rights-blocked, malformed, unavailable, partial, prompt-injection, and budget paths fail closed with attributable states.
 
-The hidden `source-identity-map.json` is part of the Phase-A hash manifest. It repairs canonical fixture identity and maps provider-specific live metadata IDs to frozen `SRC-*` IDs only during blinded scoring, by exact deduplication key, locator, or normalized title. The map is never included in model packets; zero or multiple matches receive no source credit and are recorded as an identity failure.
+The hidden `source-identity-map.json` is part of the Phase-A hash manifest. It repairs canonical fixture identity and maps provider-specific live metadata IDs to frozen `SRC-*` IDs only during blinded scoring, by exact deduplication key, locator, or normalized title. The map is never included in model packets; zero or multiple matches receive no direct-evidence credit and remain attributable candidate records. They are not run-level failures unless provenance is fabricated or attribution cannot be preserved.
 
 The mechanism-proponent schemas, roster policy, admission rule, and offline behavior fixtures are also frozen. A mechanism card is a search scaffold, not evidence; all proponent, critique, admission, focus, and adjudication outputs remain derived assertions with `REVIEW_REQUIRED` status.
 

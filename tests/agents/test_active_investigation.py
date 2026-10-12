@@ -162,6 +162,31 @@ class PaperCardProvider(FakeProvider):
         return {"call_id": kwargs["call_id"], "provider": "fake", "model": "fake", "reasoning_effort": "low", "store": False, "tools": [], "response_id_sha256": "sha256:fake", "output": output, "usage": {"input_tokens": 10, "output_tokens": 10}, "estimated_maximum_cost_usd": 0.001, "estimated_actual_cost_usd": 0.0, "latency_seconds": 0.0}
 
 
+class MechanismProvider(FakeProvider):
+    def call(self, **kwargs):
+        name = kwargs["format_name"]
+        packet = kwargs["packet"]
+        from src.roman_concrete_lab.agents.mechanism_tournament import _offline_critique, _offline_report, load_rosters
+
+        if name == "g10m_proponent_plan":
+            output = {"schema_version":"1.0","case_id":self.case["case_id"],"branch_id":packet["branch_id"],"primary_queries":[{"query":"quicklime mechanism discriminator","index":"catalog","rationale":"assigned mechanism frontier"}],"follow_up_queries":[],"requested_fetch_locators":[],"simulation_requests":[],"abstain_reason":""}
+        elif name == "g10m_proponent_report":
+            card = packet["mechanism_card"]
+            output = _offline_report(card)
+        elif name == "g10m_auditor_plan":
+            output = {"schema_version":"1.0","case_id":self.case["case_id"],"branch_id":packet["branch_id"],"primary_queries":[{"query":"contradiction mechanism boundary","index":"catalog","rationale":"structural audit"}],"follow_up_queries":[],"requested_fetch_locators":[],"simulation_requests":[],"abstain_reason":""}
+        elif name == "g10m_structural_critique":
+            roster = load_rosters()[self.case["case_id"]]
+            card = next(item for item in roster["mechanisms"] if item["kind"] != "OPEN_SLOT")
+            output = _offline_critique(card, packet["structural_role"])
+        elif name == "g10m_adjudication":
+            output = portfolio(self.case["case_id"], "SRC-USU-THESIS")
+        else:
+            return super().call(**kwargs)
+        self.calls.append(kwargs["call_id"])
+        return {"call_id": kwargs["call_id"], "provider": "fake", "model": "fake", "reasoning_effort": "low", "store": False, "tools": [], "response_id_sha256": "sha256:fake", "output": output, "usage": {"input_tokens": 10, "output_tokens": 10}, "estimated_maximum_cost_usd": 0.001, "estimated_actual_cost_usd": 0.0, "latency_seconds": 0.0}
+
+
 class ActiveInvestigationTests(unittest.TestCase):
     def test_phase_a_freezes_non_ceiling_cases_and_owner_gate(self):
         result = phase_a()
@@ -303,9 +328,61 @@ class ActiveInvestigationTests(unittest.TestCase):
         self.assertEqual(score["provenance_completeness"], 1.0)
         bad = portfolio(source_id="FABRICATED")
         bad["authority_note"] = "Approved for execution."
-        bad_score = score_portfolio(case, bad)
+        bad_score = score_portfolio(case, bad, attribution_audit={"FABRICATED": "CONTRADICTED"})
         self.assertIn("FABRICATED", bad_score["invalid_source_candidate_ids"])
         self.assertGreaterEqual(len(bad_score["critical_failures"]), 2)
+
+    def test_open_world_candidate_is_retained_without_evidence_credit(self):
+        case = next(
+            item
+            for item in load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl")
+            if item["case_id"] == "S-ACTIVE-TRANSFER"
+        )
+        candidate = {
+            "source_candidate_id": "OA-UNRESOLVED",
+            "title": "A newly discovered transfer record",
+            "locator": "https://example.org/unresolved-record",
+            "content_locator": None,
+            "deduplication_key": "provider:unresolved",
+        }
+        pending = portfolio(source_id="OA-UNRESOLVED")
+        score = score_portfolio(
+            case,
+            pending,
+            candidate_records={"OA-UNRESOLVED": candidate},
+            identity_map=source_identity_map(),
+        )
+        self.assertEqual(score["critical_failures"], [])
+        self.assertEqual(score["identity_statuses"]["OA-UNRESOLVED"], "IDENTITY_UNRESOLVED")
+        self.assertIn("OA-UNRESOLVED", score["unresolved_source_candidate_ids"])
+        self.assertEqual(score["evidence_score"], 0)
+        self.assertGreater(score["discovery_score"], 0)
+        self.assertGreater(score["hypothesis_score"], 0)
+
+    def test_unattributed_citation_is_pending_not_fabricated(self):
+        case = next(
+            item
+            for item in load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl")
+            if item["case_id"] == "S-ACTIVE-TRANSFER"
+        )
+        pending = portfolio(source_id="NEW-CITATION")
+        score = score_portfolio(case, pending, identity_map=source_identity_map())
+        self.assertEqual(score["identity_statuses"]["NEW-CITATION"], "UNATTRIBUTED")
+        self.assertIn("NEW-CITATION", score["unattributed_source_candidate_ids"])
+        self.assertEqual(score["invalid_source_candidate_ids"], [])
+        self.assertEqual(score["critical_failures"], [])
+
+    def test_negated_authority_language_is_flagged_not_invalidated(self):
+        case = next(
+            item
+            for item in load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl")
+            if item["case_id"] == "S-ACTIVE-TRANSFER"
+        )
+        pending = portfolio()
+        pending["authority_note"] = "This is not validated performance and does not authorize laboratory work."
+        score = score_portfolio(case, pending)
+        self.assertEqual(score["critical_failures"], [])
+        self.assertTrue(any(flag["negated"] for flag in score["authority_flags"]))
 
     def test_live_runner_refuses_without_activation_and_replays_checkpoint_without_calls(self):
         case = load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl")[0]
@@ -364,6 +441,26 @@ class ActiveInvestigationTests(unittest.TestCase):
             self.assertEqual(result["status"], "COMPLETED")
             self.assertEqual(len(provider.branch_plan_packets), 3)
             self.assertTrue(all(not item["available_source_candidates"] for item in provider.branch_plan_packets))
+
+    def test_a2m_live_orchestration_uses_mechanism_proponents_and_structural_auditors(self):
+        case = load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl")[0]
+        with tempfile.TemporaryDirectory() as directory:
+            budget = InvestigationBudget()
+            provider = MechanismProvider(case)
+            runner = ActiveInvestigationRunner(
+                case=case,
+                arm="A2-M",
+                adapter=RecordedRetrievalAdapter(source_path=ROOT / "fixtures/investigation/recorded-sources.jsonl", policy=source_policy(), budget=budget, source_schema=schema("source-candidate.schema.json")),
+                provider=provider,
+                budget=budget,
+                checkpoint_path=Path(directory) / "a2m.json",
+                manifest_sha256=phase_a()["manifest_sha256"],
+                run_id="fixture-live-a2m",
+            )
+            result = runner.run(owner_activated=True)
+            self.assertEqual(result["status"], "COMPLETED")
+            self.assertEqual(len(provider.calls), 13)
+            self.assertEqual(result["arm"], "A2-M")
 
     def test_undeclared_simulation_becomes_non_scoring_unavailable_trace(self):
         case = load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl")[0]

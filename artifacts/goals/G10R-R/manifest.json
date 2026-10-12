@@ -1,0 +1,26 @@
+{
+  "goal": "G10R-R",
+  "protocol": "g10r-r.1-open-world-evaluation-remediation",
+  "status": "EVALUATOR_REPAIRED_FOR_RERUN",
+  "source_run": "artifacts/goals/G10R/run.json",
+  "source_run_manifest_sha256": "sha256:288ce7af573a5d4708f512e7ddaef089afbf852b8cc1fb156f9fce263a33be79",
+  "replay_sha256": "sha256:9c3c95cfc450033155eaf3e9c773ff9a1e059e5857a375d03e9dd74529791a6c",
+  "external_calls": {
+    "model": 0,
+    "network": 0,
+    "subscription": 0,
+    "laboratory": 0
+  },
+  "implementation_sha256": {
+    "src/roman_concrete_lab/agents/investigation.py": "sha256:29d2fe6ead1fc85edc7079e860bdafc2af972605cf262dfef05c1d2392a10514",
+    "tools/evaluation/open_world_replay.py": "sha256:2ac9d0e6964c19d0fede44d5ee72c4117691fd5d273d0776ef07045ddbf7828d",
+    "schemas/source-candidate.schema.json": "sha256:b63cef66d7e9d62e0d8ba8e50f2ddb92bcc05cc58b507f3d2cda8481254bf0c0",
+    "schemas/open-world-evaluation-ledger.schema.json": "sha256:dc77dd20da05b3bf9435fb5986531210d19c3fad5237132521b2a225c98a5e4d"
+  },
+  "verification": {
+    "focused_tests": "30 passed",
+    "full_suite": "100 passed",
+    "diff_check": "passed",
+    "replay_status": "REPLAYABLE_AFTER_REPAIR"
+  }
+}

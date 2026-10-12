@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/open-world-evaluation-ledger.schema.json",
+  "title": "Open-world evaluation ledger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "protocol", "manifest_sha256", "status", "treatments", "candidate_ledger", "score_ledger", "decision"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "protocol": {"const": "g10r-r.1-open-world-evaluation-remediation"},
+    "manifest_sha256": {"type": "string", "minLength": 1},
+    "status": {"enum": ["REPLAYABLE_AFTER_REPAIR", "INCONCLUSIVE_EVALUATION_ARTIFACT"]},
+    "treatments": {"type": "array", "items": {"type": "object"}},
+    "candidate_ledger": {"type": "array", "items": {"type": "object"}},
+    "score_ledger": {"type": "array", "items": {"type": "object"}},
+    "decision": {"type": "object"}
+  }
+}

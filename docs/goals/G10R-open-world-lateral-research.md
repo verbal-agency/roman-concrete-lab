@@ -1,7 +1,7 @@
 # G10R — Bounded active-investigation society pilot
 
 **Status:** in progress
-**Dependencies:** G09 complete; G10B complete with any verdict; G-LI complete; G10M complete; explicit owner activation of the frozen lawful source policy and Phase B network/model execution
+**Dependencies:** G09 complete; G10B complete with any verdict; G-LI complete; G10M complete; G10R-R complete for any Phase-B rerun after an invalid or scorer-contaminated evaluation; explicit owner activation of the frozen lawful source policy and Phase B network/model execution
 **Advances:** tests whether a two-layer society of mechanism proponents and structural auditors adds value when investigators can acquire different information or invoke declared simulation tools under the same aggregate budget as one tool-using investigator
 
 ## Why this goal exists
@@ -9,6 +9,8 @@
 G10B tested several roles against one strong analyst using the same frozen packet and no tools. The roles produced distinguishable text, but C1 and C4-lite tied at 19/20 and the society added no supported prediction or discriminator. That result does not estimate the value of coordinated search: every role started with the same information and could only rewrite or reinterpret it.
 
 G10R tests a different causal hypothesis. A society may be useful when the bottleneck is allocating investigation across competing mechanisms and evidence frontiers, not synthesizing a fixed packet. The amended society therefore performs asymmetric work through mechanism proponents plus structural auditors—different queries, sources, contradiction checks, or declared simulations—and earns credit only for a valid contribution the same-budget single investigator missed. Discourse, persona variation, consensus, mechanism advocacy, and source volume alone receive no credit. G10M completes the offline design gate; the current G10R Phase-A artifact remains a valid baseline freeze but does not authorize live execution of the superseded structural-only A2 treatment.
+
+The first live execution completed the A1 and A2-M workflows but contaminated the comparison by collapsing unresolved live identities and an authority-language match into run-level critical failures. It is retained as a trace artifact, not treated as a society verdict. G10R-R is mandatory before a rerun and must preserve open-world candidates and provisional hypotheses while keeping evidence promotion and external authority gated.
 
 ### Phase-A amendment: live source identity
 
@@ -59,7 +61,11 @@ The default source policy permits metadata from frozen scholarly indexes and ful
 
 Live retrieval candidates may carry provider-specific IDs. The hidden identity map resolves them only after treatment, using an exact deduplication key, exact permitted locator, or normalized title; an ambiguous or unmatched candidate is not credited. The map is included in the frozen hash manifest but is excluded from model packets and public-case context.
 
+For any rerun, G10R-R changes this boundary: an ambiguous or unmatched candidate remains in the candidate canon with its raw ID, locator, identity status, and provenance. It receives no direct-evidence credit until resolved, but may earn reproducible discovery credit and may inform a bounded provisional hypothesis. Similarly, an authority-flagged exploratory claim remains reviewable; only an attempted promotion, protected-state mutation, fabricated provenance, unsafe action, or external authorization is a critical authority failure.
+
 ### Phase B — smallest informative live pilot
+
+For the first pilot, the following Phase-B contract was used. Before any rerun, G10R-R must complete its offline evaluator replay and emit `EVALUATOR_REPAIRED_FOR_RERUN`; no live calls may be added while that remediation is in progress.
 
 After the owner reviews Phase A and activates the frozen policy, execute A1 and A2-M once on each of the four sealed cases. The default per-case aggregate ceilings for each treatment are:
 

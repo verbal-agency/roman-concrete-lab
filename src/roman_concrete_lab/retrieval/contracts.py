@@ -45,7 +45,7 @@ class BudgetLimits:
     payload_bytes: int = 5_000_000
     simulation_calls: int = 4
     input_tokens: int = 80_000
-    output_tokens: int = 7_200
+    output_tokens: int = 12_000
     estimated_cost_usd: float = 25.0
 
 

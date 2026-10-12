@@ -33,6 +33,7 @@
     "host": {"type": "string", "minLength": 1},
     "access_class": {"enum": ["PUBLIC", "METADATA_ONLY", "RESTRICTED", "UNKNOWN"]},
     "rights_state": {"enum": ["PERMITTED", "METADATA_ONLY", "RIGHTS_BLOCKED", "REVIEW_REQUIRED"]},
+    "identity_status": {"enum": ["CANONICAL", "UNATTRIBUTED", "IDENTITY_UNRESOLVED", "IDENTITY_AMBIGUOUS", "OUT_OF_RUBRIC", "FABRICATED"]},
     "content_hash": {"type": ["string", "null"], "pattern": "^sha256:"},
     "deduplication_key": {"type": "string", "minLength": 1},
     "support_region": {"type": "string", "minLength": 1},

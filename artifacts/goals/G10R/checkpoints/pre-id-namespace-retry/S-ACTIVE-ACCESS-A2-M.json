@@ -1,0 +1,1313 @@
+{
+  "action_records": [
+    {
+      "action_id": "3bf656de2c876d50",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-ACCESS-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "2025 lime mortar self-healing publisher record lawful public version preprint intervention comparator endpoint",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Provisional M1 predicts a lawful public copy whose page-located intervention and endpoint descriptions match the publisher record. Compare those fields, including the comparator, and record provenance and version identifiers; a decision-relevant mismatch falsifies M1. Support is limited to the public-copy route and version equivalence, not scientific performance or laboratory authorization. The base packet gives no public route or equivalence decision; report unsuccessful route searches as negative search results, not evidence of equivalence.",
+      "replay_key": "sha256:f6896aff886d5b51998615d27dece1e8e78fb95452ed2dbdbe6d468d9dc8cafe",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "31e695c7ff832c5d",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-ACCESS-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "2025 lime mortar self-healing publisher record preprint repository lawful access version comparison",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Provisional champion: M2 predicts a material difference between accessible and canonical versions that could explain apparent support. Seek publisher, repository, and rights records to compare decision-relevant study and endpoint fields. Falsifier: public and canonical records match on those fields. Support is limited to publisher/preprint/rights and version comparison; the base packet reports no public route or equivalence decision, which is not evidence that none exists. Provenance: supplied case packet and offline mechanism fixture only; no source candidates or empirical comparison are supplied. Promotion remains REVIEW_REQUIRED.",
+      "replay_key": "sha256:fd6ac2140128e91fd246c7bee7379f8f3a08715544b502a2f4827b9e1103062f",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "ab7b6f2609085d41",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-ACCESS-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "2025 lime mortar self-healing publisher record lawful open access public version preprint",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test the provisional null explanation: whether a lawful, locatable route provides enough page-level and version-equivalence evidence to distinguish the candidate access mechanisms. Prediction: the available record remains insufficient; a lawful comparison resolving the material ambiguity would falsify this explanation. Support is limited to rights, access, and version equivalence\u2014not mortar performance. The base packet identifies a publisher record but no public route or equivalence decision; no searches have yet been performed, so no negative-search claim is made. Any retrieved source remains EVIDENCE_PENDING.",
+      "replay_key": "sha256:81f83dafea6d79e8206c11132e7cbd1e1e054f66d7b1119be708afeb705f925b",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "d730403d6516b7e8",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:evidence_skeptic",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "2025 lime mortar self-healing",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W4403767876",
+        "OA-W7133186311",
+        "OA-W4411285286",
+        "OA-W7127140486",
+        "OA-W7125541133"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate a potentially lawful public copy; the supplied packet gives no title, public route, or version-equivalence evidence.",
+      "replay_key": "sha256:c819533e0808320e11b1b02f4b9d4ac82e63c647b353372c4ab0aed943632858",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "93c5934bf101b664",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:transfer_boundary",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "2025 lime mortar self-healing publisher record lawful public copy repository preprint version",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate the record and any lawful accessible version; this is the bounded first step toward checking version equivalence. No performance or mechanism conclusion follows from discovery alone.",
+      "replay_key": "sha256:c8b76ed05bf0b3b3785244bc2447240d8376e6634d6e378a2e7c6c6b83b6b7a2",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "9a7c3a7658b9bc5c",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:experiment_simulation",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 0,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "2025 lime mortar self-healing",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W4403767876",
+        "OA-W7133186311",
+        "OA-W4411285286",
+        "OA-W7127140486",
+        "OA-W7125541133"
+      ],
+      "policy_status": "REPLAYED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Cheapest discriminating observation: check for a lawful cataloged public copy; this can identify a comparison route without assuming version equivalence.",
+      "replay_key": "sha256:c819533e0808320e11b1b02f4b9d4ac82e63c647b353372c4ab0aed943632858",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "f50f1ff149b926ad",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-ACCESS-OPEN",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "open slot for a distinct access or version mechanism supported by a bounded record. can the 2025 lime-mortar self-healing record be lawfully inspected, and what may be concluded from the accessible version?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic mechanism discriminator focus",
+      "replay_key": "sha256:6812c4ed200d52869433c75fd88694a8875183907f3cdd2bb5402d049391c771",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "fc8b970fc15100f4",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-ACCESS-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "access-path or version differences explain apparent support more than the intervention does. can the 2025 lime-mortar self-healing record be lawfully inspected, and what may be concluded from the accessible version?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic mechanism discriminator focus",
+      "replay_key": "sha256:cc8b3dbf3492bb0a377d77f6267550e163cf299e72d510e622dc27508a5a271a",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "4229d6b3d2f728ba",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-ACCESS-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 1,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "the available route cannot support a mechanism-level conclusion. can the 2025 lime-mortar self-healing record be lawfully inspected, and what may be concluded from the accessible version?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W7162765582"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic mechanism discriminator focus",
+      "replay_key": "sha256:04dcf0e357bec85d6c930db479e39cae28955bdcd5a162a87f5e8c883f66b6eb",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  ],
+  "actions": {
+    "31e695c7ff832c5d": {
+      "action_id": "31e695c7ff832c5d",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-ACCESS-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "2025 lime mortar self-healing publisher record preprint repository lawful access version comparison",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Provisional champion: M2 predicts a material difference between accessible and canonical versions that could explain apparent support. Seek publisher, repository, and rights records to compare decision-relevant study and endpoint fields. Falsifier: public and canonical records match on those fields. Support is limited to publisher/preprint/rights and version comparison; the base packet reports no public route or equivalence decision, which is not evidence that none exists. Provenance: supplied case packet and offline mechanism fixture only; no source candidates or empirical comparison are supplied. Promotion remains REVIEW_REQUIRED.",
+      "replay_key": "sha256:fd6ac2140128e91fd246c7bee7379f8f3a08715544b502a2f4827b9e1103062f",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "3bf656de2c876d50": {
+      "action_id": "3bf656de2c876d50",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-ACCESS-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "2025 lime mortar self-healing publisher record lawful public version preprint intervention comparator endpoint",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Provisional M1 predicts a lawful public copy whose page-located intervention and endpoint descriptions match the publisher record. Compare those fields, including the comparator, and record provenance and version identifiers; a decision-relevant mismatch falsifies M1. Support is limited to the public-copy route and version equivalence, not scientific performance or laboratory authorization. The base packet gives no public route or equivalence decision; report unsuccessful route searches as negative search results, not evidence of equivalence.",
+      "replay_key": "sha256:f6896aff886d5b51998615d27dece1e8e78fb95452ed2dbdbe6d468d9dc8cafe",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "4229d6b3d2f728ba": {
+      "action_id": "4229d6b3d2f728ba",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-ACCESS-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 1,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "the available route cannot support a mechanism-level conclusion. can the 2025 lime-mortar self-healing record be lawfully inspected, and what may be concluded from the accessible version?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W7162765582"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic mechanism discriminator focus",
+      "replay_key": "sha256:04dcf0e357bec85d6c930db479e39cae28955bdcd5a162a87f5e8c883f66b6eb",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "93c5934bf101b664": {
+      "action_id": "93c5934bf101b664",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:transfer_boundary",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "2025 lime mortar self-healing publisher record lawful public copy repository preprint version",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate the record and any lawful accessible version; this is the bounded first step toward checking version equivalence. No performance or mechanism conclusion follows from discovery alone.",
+      "replay_key": "sha256:c8b76ed05bf0b3b3785244bc2447240d8376e6634d6e378a2e7c6c6b83b6b7a2",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "9a7c3a7658b9bc5c": {
+      "action_id": "9a7c3a7658b9bc5c",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:experiment_simulation",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 0,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "2025 lime mortar self-healing",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W4403767876",
+        "OA-W7133186311",
+        "OA-W4411285286",
+        "OA-W7127140486",
+        "OA-W7125541133"
+      ],
+      "policy_status": "REPLAYED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Cheapest discriminating observation: check for a lawful cataloged public copy; this can identify a comparison route without assuming version equivalence.",
+      "replay_key": "sha256:c819533e0808320e11b1b02f4b9d4ac82e63c647b353372c4ab0aed943632858",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "ab7b6f2609085d41": {
+      "action_id": "ab7b6f2609085d41",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-ACCESS-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "2025 lime mortar self-healing publisher record lawful open access public version preprint",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test the provisional null explanation: whether a lawful, locatable route provides enough page-level and version-equivalence evidence to distinguish the candidate access mechanisms. Prediction: the available record remains insufficient; a lawful comparison resolving the material ambiguity would falsify this explanation. Support is limited to rights, access, and version equivalence\u2014not mortar performance. The base packet identifies a publisher record but no public route or equivalence decision; no searches have yet been performed, so no negative-search claim is made. Any retrieved source remains EVIDENCE_PENDING.",
+      "replay_key": "sha256:81f83dafea6d79e8206c11132e7cbd1e1e054f66d7b1119be708afeb705f925b",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "d730403d6516b7e8": {
+      "action_id": "d730403d6516b7e8",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:evidence_skeptic",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "2025 lime mortar self-healing",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W4403767876",
+        "OA-W7133186311",
+        "OA-W4411285286",
+        "OA-W7127140486",
+        "OA-W7125541133"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate a potentially lawful public copy; the supplied packet gives no title, public route, or version-equivalence evidence.",
+      "replay_key": "sha256:c819533e0808320e11b1b02f4b9d4ac82e63c647b353372c4ab0aed943632858",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "f50f1ff149b926ad": {
+      "action_id": "f50f1ff149b926ad",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-ACCESS-OPEN",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "open slot for a distinct access or version mechanism supported by a bounded record. can the 2025 lime-mortar self-healing record be lawfully inspected, and what may be concluded from the accessible version?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic mechanism discriminator focus",
+      "replay_key": "sha256:6812c4ed200d52869433c75fd88694a8875183907f3cdd2bb5402d049391c771",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "fc8b970fc15100f4": {
+      "action_id": "fc8b970fc15100f4",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-ACCESS-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "access-path or version differences explain apparent support more than the intervention does. can the 2025 lime-mortar self-healing record be lawfully inspected, and what may be concluded from the accessible version?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic mechanism discriminator focus",
+      "replay_key": "sha256:cc8b3dbf3492bb0a377d77f6267550e163cf299e72d510e622dc27508a5a271a",
+      "run_id": "G10R-S-ACTIVE-ACCESS-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  },
+  "budget": {
+    "limits": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 7200,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "remaining": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 24.9947176,
+      "input_tokens": 51386,
+      "output_tokens": 2358,
+      "payload_bytes": 5000000,
+      "queries": 4,
+      "retained_sources": 18,
+      "simulation_calls": 4
+    },
+    "usage": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.0052824,
+      "input_tokens": 28614,
+      "output_tokens": 4842,
+      "payload_bytes": 0,
+      "queries": 8,
+      "retained_sources": 6,
+      "simulation_calls": 0
+    }
+  },
+  "manifest_sha256": "sha256:0b9ded5b651057bb8f725ddfa21c9bbdcc1b2033fba5c7de2a8a8f4998343ef8",
+  "model_traces": [
+    {
+      "call_id": "16021b42394df9c8",
+      "estimated_actual_cost_usd": 0.0002997,
+      "estimated_maximum_cost_usd": 0.0003961,
+      "latency_seconds": 3.7483,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "proponent:S-ACTIVE-ACCESS-M1",
+        "case_id": "S-ACTIVE-ACCESS",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "2025 lime mortar self-healing publisher record lawful public version preprint intervention comparator endpoint",
+            "rationale": "Provisional M1 predicts a lawful public copy whose page-located intervention and endpoint descriptions match the publisher record. Compare those fields, including the comparator, and record provenance and version identifiers; a decision-relevant mismatch falsifies M1. Support is limited to the public-copy route and version equivalence, not scientific performance or laboratory authorization. The base packet gives no public route or equivalence decision; report unsuccessful route searches as negative search results, not evidence of equivalence."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:5dc261e5123453aad1e267242bdcb64cbb3846428adeee04dc3504bd73ee8a3e",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1362,
+        "output_tokens": 327
+      }
+    },
+    {
+      "call_id": "16203383e81b5db9",
+      "estimated_actual_cost_usd": 0.0003469,
+      "estimated_maximum_cost_usd": 0.0006039,
+      "latency_seconds": 4.699,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-ACCESS",
+        "claimed_contribution": "Provisional access interpretation only; no version equivalence established.",
+        "claims": [
+          {
+            "claim_id": "C1",
+            "falsifier": "A decision-relevant mismatch in those fields.",
+            "prediction": "A lawful public copy matches intervention, comparator, and endpoint descriptions.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-A1",
+              "M1 mechanism card"
+            ],
+            "statement": "M1 provisionally proposes that an accessible copy may match the publisher record on decision-relevant fields; this is unverified.",
+            "support_region": "Public-copy route and version equivalence only."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-ACCESS-M1",
+        "negative_searches": [
+          "No search results or public route are present in the supplied packet; no catalog search is recorded."
+        ],
+        "proposed_next_actions": [
+          "Search the catalog for a lawful public copy; if found, compare page-located intervention, comparator, and endpoint descriptions."
+        ],
+        "report_id": "R-S-ACTIVE-ACCESS-M1",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Is there a lawful public copy, and does it match the publisher record on relevant fields?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:d963addb401dcfa74d94737a7488779098960d0fbee8fa267a343297d71ea135",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1599,
+        "output_tokens": 374
+      }
+    },
+    {
+      "call_id": "e52b042d67d84c82",
+      "estimated_actual_cost_usd": 0.0003105,
+      "estimated_maximum_cost_usd": 0.0003958,
+      "latency_seconds": 4.4552,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "proponent:S-ACTIVE-ACCESS-M2",
+        "case_id": "S-ACTIVE-ACCESS",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "2025 lime mortar self-healing publisher record preprint repository lawful access version comparison",
+            "rationale": "Provisional champion: M2 predicts a material difference between accessible and canonical versions that could explain apparent support. Seek publisher, repository, and rights records to compare decision-relevant study and endpoint fields. Falsifier: public and canonical records match on those fields. Support is limited to publisher/preprint/rights and version comparison; the base packet reports no public route or equivalence decision, which is not evidence that none exists. Provenance: supplied case packet and offline mechanism fixture only; no source candidates or empirical comparison are supplied. Promotion remains REVIEW_REQUIRED."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:38e6c4f5cb3505f58a712e718ffa80aa4a644a07b0ca3a38cb4e88c95ed90b18",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1360,
+        "output_tokens": 349
+      }
+    },
+    {
+      "call_id": "e40bf6e8a6aaaac2",
+      "estimated_actual_cost_usd": 0.0003621,
+      "estimated_maximum_cost_usd": 0.0006061,
+      "latency_seconds": 5.0446,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-ACCESS",
+        "claimed_contribution": "Frames a bounded, testable version-difference explanation; no empirical support established.",
+        "claims": [
+          {
+            "claim_id": "C1",
+            "falsifier": "Public and canonical records match on all decision-relevant fields.",
+            "prediction": "A lawful comparison may find a material difference in study or endpoint reporting.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "Supplied case packet: E-A1; no public route or equivalence decision stated.",
+              "Offline mechanism fixture; not empirical evidence."
+            ],
+            "statement": "Provisionally, access-path or version differences may explain apparent support better than the intervention; this is unverified.",
+            "support_region": "Publisher, preprint, rights, and version comparison only."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-ACCESS-M2",
+        "negative_searches": [
+          "No source search or version comparison is reported in the supplied packet."
+        ],
+        "proposed_next_actions": [
+          "Search publisher, catalog, and repository records for lawful access, then compare versions on study and endpoint fields."
+        ],
+        "report_id": "R-S-ACTIVE-ACCESS-M2",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Is there a lawful public copy, and is it equivalent to the canonical record on decision-relevant fields?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:323252494b578a43ce1986fba2af596801218a19f4cfc2b3a9aad07187566e87",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1611,
+        "output_tokens": 402
+      }
+    },
+    {
+      "call_id": "a4eee6445399b84b",
+      "estimated_actual_cost_usd": 0.0002804,
+      "estimated_maximum_cost_usd": 0.0003931,
+      "latency_seconds": 3.6737,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "proponent:S-ACTIVE-ACCESS-NULL",
+        "case_id": "S-ACTIVE-ACCESS",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "2025 lime mortar self-healing publisher record lawful open access public version preprint",
+            "rationale": "Test the provisional null explanation: whether a lawful, locatable route provides enough page-level and version-equivalence evidence to distinguish the candidate access mechanisms. Prediction: the available record remains insufficient; a lawful comparison resolving the material ambiguity would falsify this explanation. Support is limited to rights, access, and version equivalence\u2014not mortar performance. The base packet identifies a publisher record but no public route or equivalence decision; no searches have yet been performed, so no negative-search claim is made. Any retrieved source remains EVIDENCE_PENDING."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:cf0bd87afb8276266b551b86c320b41d3a65043489795012cb1bd89671229663",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1344,
+        "output_tokens": 292
+      }
+    },
+    {
+      "call_id": "195f0f8ea2af9f96",
+      "estimated_actual_cost_usd": 0.0003455,
+      "estimated_maximum_cost_usd": 0.0006024,
+      "latency_seconds": 4.4199,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-ACCESS",
+        "claimed_contribution": "Provisional null explanation; no access or performance finding.",
+        "claims": [
+          {
+            "claim_id": "C1",
+            "falsifier": "A lawful, page-located comparison resolves the material ambiguity.",
+            "prediction": "Available evidence remains insufficient to distinguish the access candidates.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-A1",
+              "No retrieved sources; mechanism card is a provisional fixture."
+            ],
+            "statement": "The supplied record cannot support a mechanism-level conclusion about the 2025 lime-mortar paper\u2019s accessible version.",
+            "support_region": "Rights, access, and version equivalence only."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-ACCESS-NULL",
+        "negative_searches": [
+          "No searches performed; no negative search result established."
+        ],
+        "proposed_next_actions": [
+          "Search catalog for a lawful public copy and compare page-located versions."
+        ],
+        "report_id": "R-S-ACTIVE-ACCESS-NULL",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Is there a lawful public copy equivalent on decision-relevant fields?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:43638edea670b84541a81ed4b3e51ea5b88612a821af70529c66e09c949012a5",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1590,
+        "output_tokens": 373
+      }
+    },
+    {
+      "call_id": "a4f4f5590ac03107",
+      "estimated_actual_cost_usd": 0.0002844,
+      "estimated_maximum_cost_usd": 0.0003905,
+      "latency_seconds": 2.358,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "auditor:evidence_skeptic",
+        "case_id": "S-ACTIVE-ACCESS",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "2025 lime mortar self-healing",
+            "rationale": "Locate a potentially lawful public copy; the supplied packet gives no title, public route, or version-equivalence evidence."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:ba3c2322cba286ff18d797fb7939a675a9aa7382b1f4a83ac1d579684f9738c0",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1964,
+        "output_tokens": 176
+      }
+    },
+    {
+      "call_id": "4cea373263c30b1d",
+      "estimated_actual_cost_usd": 0.0004515,
+      "estimated_maximum_cost_usd": 0.0005872,
+      "latency_seconds": 4.9623,
+      "model": "gpt-6-luna",
+      "output": {
+        "auditor_role": "evidence_skeptic",
+        "case_id": "S-ACTIVE-ACCESS",
+        "challenge": "The claim that an accessible copy may match the publisher record is unsupported: the packet supplies no public-copy locator, rights determination, or version comparison. Metadata-only records, including duplicate records for one DOI, establish none of these.",
+        "claim_ids": [
+          "C1"
+        ],
+        "contradiction_status": "UNRESOLVED",
+        "critique_id": "CR-S-ACTIVE-ACCESS-M1-01",
+        "promotion_status": "REVIEW_REQUIRED",
+        "proposed_discriminator": "Identify a lawful public copy, then compare page-located intervention, comparator, and endpoint descriptions with the publisher record; document version identity and rights basis.",
+        "provenance": [
+          "E-A1",
+          "OA-W4411285286",
+          "OA-W7127140486"
+        ],
+        "schema_version": "1.0",
+        "target_mechanism_id": "S-ACTIVE-ACCESS-M1"
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:5eea1fb76a7f46045e0772abbd01ddd2e5444119c2f8d638ea3d223ec6088ff9",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2860,
+        "output_tokens": 331
+      }
+    },
+    {
+      "call_id": "f4b2e96b14f8d9e6",
+      "estimated_actual_cost_usd": 0.0002991,
+      "estimated_maximum_cost_usd": 0.0003907,
+      "latency_seconds": 2.7298,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "No source candidates or version-comparison evidence are supplied; conclusions about lawful access and equivalence must remain unresolved.",
+        "branch_id": "auditor:transfer_boundary",
+        "case_id": "S-ACTIVE-ACCESS",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "2025 lime mortar self-healing publisher record lawful public copy repository preprint version",
+            "rationale": "Locate the record and any lawful accessible version; this is the bounded first step toward checking version equivalence. No performance or mechanism conclusion follows from discovery alone."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:03ebfb7e29f99e7f25ee80332e18c25db5d8cffdd5658c4803eabe1ffcb37687",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1961,
+        "output_tokens": 206
+      }
+    },
+    {
+      "call_id": "fd7147f2ff7d33ab",
+      "estimated_actual_cost_usd": 0.0003635,
+      "estimated_maximum_cost_usd": 0.0004893,
+      "latency_seconds": 3.7476,
+      "model": "gpt-6-luna",
+      "output": {
+        "auditor_role": "transfer_boundary",
+        "case_id": "S-ACTIVE-ACCESS",
+        "challenge": "The packet establishes neither a lawful public route nor a canonical-to-public version comparison. A publisher record alone cannot support the inference that an accessible copy is version-equivalent; no conclusion about the reported intervention or endpoint transfers from it.",
+        "claim_ids": [
+          "C1"
+        ],
+        "contradiction_status": "UNRESOLVED",
+        "critique_id": "CR-S-ACTIVE-ACCESS-TB1",
+        "promotion_status": "REVIEW_REQUIRED",
+        "proposed_discriminator": "Locate a lawful public copy, then compare it with the identified canonical record using page-located descriptions of the intervention, comparator, and endpoint; report any decision-relevant mismatch or that equivalence remains unresolved.",
+        "provenance": [
+          "E-A1",
+          "R-S-ACTIVE-ACCESS-M1"
+        ],
+        "schema_version": "1.0",
+        "target_mechanism_id": "S-ACTIVE-ACCESS-M1"
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:343da43d88354dc1571b32cf6bc95b214c5d543e96b649531f39963ffb4d7f79",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2060,
+        "output_tokens": 315
+      }
+    },
+    {
+      "call_id": "58784a20dd51edfe",
+      "estimated_actual_cost_usd": 0.0003018,
+      "estimated_maximum_cost_usd": 0.0003919,
+      "latency_seconds": 2.9071,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "No source candidates or version comparison are supplied, so no conclusion about lawful inspection or accessible-version equivalence is supported yet.",
+        "branch_id": "auditor:experiment_simulation",
+        "case_id": "S-ACTIVE-ACCESS",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "2025 lime mortar self-healing",
+            "rationale": "Cheapest discriminating observation: check for a lawful cataloged public copy; this can identify a comparison route without assuming version equivalence."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:96ef87fbba8cc2ab182d9c4d5cfc1f1418d09573384c2a90d31e18c4c1796254",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1968,
+        "output_tokens": 210
+      }
+    },
+    {
+      "call_id": "fb16e837cabbda8c",
+      "estimated_actual_cost_usd": 0.0004846,
+      "estimated_maximum_cost_usd": 0.0005948,
+      "latency_seconds": 4.9846,
+      "model": "gpt-6-luna",
+      "output": {
+        "auditor_role": "experiment_simulation",
+        "case_id": "S-ACTIVE-ACCESS",
+        "challenge": "M1 predicts equivalence without an identified lawful public copy or page-level comparison; metadata-only records do not establish either.",
+        "claim_ids": [
+          "C1"
+        ],
+        "contradiction_status": "UNRESOLVED",
+        "critique_id": "CR-S-ACTIVE-ACCESS-M1-A2-M",
+        "promotion_status": "REVIEW_REQUIRED",
+        "proposed_discriminator": "Cheapest check: search the catalog for a lawful public copy; if found, compare its page-located intervention, comparator, and endpoint descriptions with the publisher record. Treat metadata alone as insufficient.",
+        "provenance": [
+          "E-A1",
+          "Supplied source candidates are METADATA_ONLY; no public route or version comparison is supplied."
+        ],
+        "schema_version": "1.0",
+        "target_mechanism_id": "S-ACTIVE-ACCESS-M1"
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:225a0d3a1c10cd0682184b32c52320746c82fb673c481a408f23de2765ab5881",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2891,
+        "output_tokens": 391
+      }
+    },
+    {
+      "call_id": "aee18d89fc36dcde",
+      "estimated_actual_cost_usd": 0.0011524,
+      "estimated_maximum_cost_usd": 0.0015194,
+      "latency_seconds": 8.3474,
+      "model": "gpt-6-luna",
+      "output": {
+        "authority_note": "All supplied source candidates are metadata-only. No lawful access, version equivalence, study details, or performance conclusion is established. No evidence is promoted and no laboratory work is authorized.",
+        "case_id": "S-ACTIVE-ACCESS",
+        "credible_rival_ids": [
+          "S-ACTIVE-ACCESS-M1",
+          "S-ACTIVE-ACCESS-M2"
+        ],
+        "hypotheses": [
+          {
+            "comparator": "A lawful, page-located comparison against an identified canonical record.",
+            "falsifier": "A lawful comparison resolves the ambiguity on decision-relevant fields.",
+            "hypothesis_id": "S-ACTIVE-ACCESS-NULL",
+            "intervention": "No access or version-equivalence inference from the supplied packet.",
+            "novelty_basis": "Required null comparator; no lawful route or version comparison is supplied.",
+            "predicted_observation": "Available evidence remains insufficient to determine whether a public copy is lawful or equivalent.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-A1",
+              "No retrieved full text or rights determination is supplied."
+            ],
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "support_region": "Rights, access, and version equivalence only.",
+            "transfer_type": "NULL_HYPOTHESIS",
+            "uncertainty": "High; no searches or comparisons are reported."
+          },
+          {
+            "comparator": "The identified canonical publisher record.",
+            "falsifier": "A decision-relevant mismatch, or inability to establish a lawful copy and version identity.",
+            "hypothesis_id": "S-ACTIVE-ACCESS-M1",
+            "intervention": "Check whether an identified lawful public copy matches the publisher record on intervention, comparator, and endpoint descriptions.",
+            "novelty_basis": "Typed candidate predicts equivalence, but has no supporting public-copy locator or comparison.",
+            "predicted_observation": "A lawful page-level comparison finds matching descriptions on those fields.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-A1",
+              "R-S-ACTIVE-ACCESS-M1",
+              "CR-S-ACTIVE-ACCESS-M1-01",
+              "CR-S-ACTIVE-ACCESS-TB1",
+              "CR-S-ACTIVE-ACCESS-M1-A2-M"
+            ],
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "support_region": "Public-copy route and version equivalence only.",
+            "transfer_type": "DIRECT_HYPOTHESIS",
+            "uncertainty": "Very high; prediction is unverified and challenged by structural critiques."
+          },
+          {
+            "comparator": "Canonical publisher record and any identified lawful public copy.",
+            "falsifier": "Records match on all decision-relevant fields.",
+            "hypothesis_id": "S-ACTIVE-ACCESS-M2",
+            "intervention": "Compare lawful publisher, repository, and public versions on study identity and decision-relevant fields.",
+            "novelty_basis": "Credible rival: access-path or version differences could account for apparent support, but none are documented.",
+            "predicted_observation": "A comparison reveals a material difference in study or endpoint reporting.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-A1",
+              "R-S-ACTIVE-ACCESS-M2"
+            ],
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "support_region": "Publisher, repository, rights, and version comparison only.",
+            "transfer_type": "TRANSFER_HYPOTHESIS",
+            "uncertainty": "High; no source search or comparison is reported."
+          }
+        ],
+        "leading_hypothesis_id": "S-ACTIVE-ACCESS-NULL",
+        "negative_searches": [
+          "No searches are reported; no negative search result is established."
+        ],
+        "next_discriminating_action": "Search the catalog for a lawful public copy. If found, record its locator and rights basis, identify the canonical record, and compare page-located intervention, comparator, and endpoint descriptions; otherwise retain the null.",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "REVIEW_REQUIRED",
+        "summary": "The supplied packet does not establish a lawful public copy or version equivalence. Metadata-only records cannot show access rights or support conclusions about the paper\u2019s intervention or results. The null is the provisional leader; M1 and M2 remain unresolved alternatives.",
+        "unresolved_disputes": [
+          "Whether a lawful public copy exists.",
+          "Whether any accessible copy is version-equivalent to the canonical publisher record on intervention, comparator, and endpoint."
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:568ca8cefa205d5e7728d36266a424071dd7e995138dbf0f4db5d5e4ca444279",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 6044,
+        "output_tokens": 1096
+      }
+    }
+  ],
+  "paper_evidence_cards": {},
+  "simulation_traces": [],
+  "source_candidates": {
+    "OA-W4403767876": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1002/nag.3870",
+      "discovery_query": "2025 lime mortar self-healing",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4403767876",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4403767876",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Simulation of Autogenous Self\u2010Healing in Lime\u2010Based Mortars"
+    },
+    "OA-W4411285286": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1051/matecconf/202540906002",
+      "discovery_query": "2025 lime mortar self-healing",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4411285286",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4411285286",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Evaluation of self-healing capacity of 3D printable bio-based fiber-reinforced cement-lime mortars"
+    },
+    "OA-W7125541133": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.conbuildmat.2026.145154",
+      "discovery_query": "2025 lime mortar self-healing",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W7125541133",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W7125541133",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Lithium silicate as a healing agent in vascular networks for natural hydraulic lime mortars: a step towards cyclic self-healing systems for heritage materials"
+    },
+    "OA-W7127140486": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1051/matecconf/202540906002/pdf",
+      "discovery_query": "2025 lime mortar self-healing",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W7127140486",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W7127140486",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Evaluation of self-healing capacity of 3D printable bio-based fiber-reinforced cement-lime mortars"
+    },
+    "OA-W7133186311": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1617/s11527-026-03007-6",
+      "discovery_query": "2025 lime mortar self-healing",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W7133186311",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W7133186311",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Nanolime dispersions as active agents in self-healing lime mortars for durable heritage preservation"
+    },
+    "OA-W7162765582": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.17615/c4vp-5n68",
+      "discovery_query": "the available route cannot support a mechanism-level conclusion. can the 2025 lime-mortar self-healing record be lawfully inspected, and what may be concluded from the accessible version?",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W7162765582",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W7162765582",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "\u201cTHE WIND BLOWED COLD\u201d: AN ARCHAEOLOGICAL STUDY OF LIFE, LABOR, AND IMPRISONMENT ON THE WESTERN NORTH CAROLINA RAILROAD"
+    }
+  },
+  "state": "completed",
+  "state_history": [
+    "created",
+    "policy_loaded",
+    "context_frozen",
+    "planning",
+    "round_1",
+    "sharing",
+    "focus_allocated",
+    "round_2",
+    "adjudicating",
+    "scored",
+    "completed"
+  ]
+}

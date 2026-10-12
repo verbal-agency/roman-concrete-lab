@@ -4,9 +4,11 @@ from __future__ import annotations
 
 import hashlib
 import json
+import time
 from html.parser import HTMLParser
 from typing import Any, Callable
 from urllib.parse import quote, urlencode
+from urllib.error import HTTPError
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
 from jsonschema import validate
@@ -119,12 +121,23 @@ class ConfiguredNetworkRetrievalAdapter:
         request = Request(url, headers={"User-Agent": user_agent, "Accept": "application/pdf,text/html;q=0.9,application/json;q=0.8,*/*;q=0.1"}, method="GET")
         try:
             opener = build_opener(_PolicyRedirectHandler(self.policy, fetch_content))
-            with opener.open(request, timeout=timeout) as response:
-                limit = int(self.policy.record["request_policy"]["max_response_bytes"])
-                payload = response.read(limit + 1)
-                if len(payload) > limit:
-                    raise PolicyBlocked("response exceeds frozen payload limit")
-                return response.geturl(), response.headers.get_content_type(), payload
+            for attempt in range(2):
+                try:
+                    with opener.open(request, timeout=timeout) as response:
+                        limit = int(self.policy.record["request_policy"]["max_response_bytes"])
+                        payload = response.read(limit + 1)
+                        if len(payload) > limit:
+                            raise PolicyBlocked("response exceeds frozen payload limit")
+                        return response.geturl(), response.headers.get_content_type(), payload
+                except HTTPError as exc:
+                    if exc.code != 429 or attempt:
+                        raise
+                    retry_after = exc.headers.get("Retry-After") if exc.headers else None
+                    try:
+                        delay = min(10.0, max(1.0, float(retry_after))) if retry_after else 2.0
+                    except ValueError:
+                        delay = 2.0
+                    time.sleep(delay)
         except PolicyBlocked:
             raise
         except Exception as exc:
@@ -162,7 +175,12 @@ class ConfiguredNetworkRetrievalAdapter:
             return {"query": normalized, "index": index, "replayed": True, "results": self._query_cache[cache_key]}
         self.budget.debit(queries=1)
         if index == "openalex":
-            url = "https://api.openalex.org/works?" + urlencode({"search": normalized, "per-page": 5})
+            # OpenAlex reserves ``?`` and ``*`` as wildcard operators and
+            # rejects ordinary research questions containing punctuation.
+            # Keep the original query in the trace, but remove those control
+            # characters from the provider request.
+            search_term = normalized.replace("?", "").replace("*", "")
+            url = "https://api.openalex.org/works?" + urlencode({"search": search_term, "per-page": 5})
         else:
             url = "https://api.crossref.org/works?" + urlencode({"query.bibliographic": normalized, "rows": 5})
         _, _, payload = self._get(url, fetch_content=False)
@@ -176,6 +194,11 @@ class ConfiguredNetworkRetrievalAdapter:
             if candidate["deduplication_key"] in self._seen_dedup:
                 candidate["status"] = "DUPLICATE"
             else:
+                # The provider may return more metadata records than the
+                # treatment can retain.  Truncate at the frozen source budget
+                # instead of allowing a whole response to overrun it.
+                if self.budget.remaining()["retained_sources"] <= 0:
+                    break
                 self.budget.debit(retained_sources=1)
                 self._seen_dedup.add(candidate["deduplication_key"])
             validate(candidate, self.source_schema)

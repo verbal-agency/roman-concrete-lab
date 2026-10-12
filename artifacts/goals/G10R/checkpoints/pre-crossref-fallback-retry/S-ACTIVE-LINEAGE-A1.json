@@ -1,0 +1,120 @@
+{
+  "action_records": [],
+  "actions": {},
+  "budget": {
+    "limits": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 7200,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "remaining": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 24.9997347,
+      "input_tokens": 79437,
+      "output_tokens": 6782,
+      "payload_bytes": 5000000,
+      "queries": 11,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "usage": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.0002653,
+      "input_tokens": 563,
+      "output_tokens": 418,
+      "payload_bytes": 0,
+      "queries": 1,
+      "retained_sources": 0,
+      "simulation_calls": 0
+    }
+  },
+  "manifest_sha256": "sha256:453c24ac779249e8d5764e7c8136d7c077d4d7648c5b646f51cf9c6f8e834c3a",
+  "model_traces": [
+    {
+      "call_id": "1a5b9d3fab60bccd",
+      "estimated_actual_cost_usd": 0.0002653,
+      "estimated_maximum_cost_usd": 0.0005033,
+      "latency_seconds": 4.8504,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "single_investigator",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "follow_up_queries": [
+          {
+            "index": "catalog",
+            "query": "\"quicklime\" \"Utah\" asphalt thesis",
+            "rationale": "Use an exact-phrase variant to distinguish the thesis record from similarly described reports."
+          },
+          {
+            "index": "catalog",
+            "query": "Utah Department of Transportation quicklime asphalt report thesis author",
+            "rationale": "Seek agency metadata, authorship, and explicit report-thesis relationship."
+          },
+          {
+            "index": "openalex",
+            "query": "quicklime asphalt Utah replication independent study",
+            "rationale": "Search for separate studies that may provide evidence of independent replication."
+          },
+          {
+            "index": "crossref",
+            "query": "quicklime asphalt Utah moisture damage report",
+            "rationale": "Check for separately indexed work and endpoint terms that could corroborate or contradict relevance."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "Utah thesis quicklime hot mix asphalt moisture damage transportation report",
+            "rationale": "Locate the named thesis and determine whether the report is cataloged as a related or derivative work."
+          },
+          {
+            "index": "openalex",
+            "query": "quicklime hot mix asphalt Utah thesis",
+            "rationale": "Search scholarly metadata for the thesis and any linked publications that could clarify lineage."
+          },
+          {
+            "index": "crossref",
+            "query": "Utah quicklime asphalt transportation report",
+            "rationale": "Search DOI-indexed records for the transportation report and matching thesis-related publications."
+          },
+          {
+            "index": "catalog",
+            "query": "Utah quicklime hot mix asphalt stripping tensile strength moisture susceptibility",
+            "rationale": "Identify records reporting functional endpoints relevant to hot-mix performance, without presuming the endpoint."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:7151848aadbb2150e0191b64b9d47fb0182d072ac40dba9173e55124451c5167",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 563,
+        "output_tokens": 418
+      }
+    }
+  ],
+  "paper_evidence_cards": {},
+  "simulation_traces": [],
+  "source_candidates": {},
+  "state": "inconclusive",
+  "state_history": [
+    "created",
+    "policy_loaded",
+    "context_frozen",
+    "planning",
+    "round_1",
+    "inconclusive"
+  ]
+}

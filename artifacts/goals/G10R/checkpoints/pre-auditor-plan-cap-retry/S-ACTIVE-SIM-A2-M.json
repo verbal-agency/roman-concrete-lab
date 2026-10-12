@@ -1,0 +1,1028 @@
+{
+  "action_records": [
+    {
+      "action_id": "d394ec8b005c5b4e",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-SIM-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 2,
+        "retained_sources": 4,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "crossref",
+        "query": "lime mortar simulation paper validation artifact model domain support region",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-e8e5e991a9ba",
+        "CR-91b10e833208",
+        "CR-c6ee5407a07e",
+        "CR-d2327d9b79f7"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test provisional M1: a paper can constrain a mechanism only within its declared lime-mortar model domain, and executable predictions require a declared validation artifact. Falsifier: no validation artifact or support-region statement is located. Do not extrapolate to Roman-concrete performance; provenance is currently only the E-SIM1 rumor, with no source candidate.",
+      "replay_key": "sha256:488d103ef098ba431b7eae3b505079203f1ced579a938dd84f4369412edce515",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "1ecc28dc4a3ec318",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-SIM-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "crossref",
+        "query": "lime mortar simulation paper roman concrete performance model validation executable simulator adapter",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-da9ae7cd194a",
+        "CR-16adb193fd17",
+        "CR-93ff52d4da39",
+        "CR-156392737c88",
+        "CR-ee08f22865ff"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test provisional M2: an accessible paper may support a typed model assertion, but not eligible executable simulation absent a pre-existing validated adapter with declared inputs and outputs. Prediction: no eligible live call; falsifier: locating such an adapter. Support region is evidence interpretation without validated execution, with no Roman-concrete performance extrapolation. No search results or validation artifact are supplied yet; provenance is the case evidence card E-SIM1 and mechanism fixture, not empirical evidence.",
+      "replay_key": "sha256:abb89dc78b3ac85a7c8a98b44838e86c588bca49f57096dab160d3f691ada919",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "3d027e77b6087bc5",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-SIM-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "crossref",
+        "query": "lime mortar simulation paper validation model support region adapter",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-e8e5e991a9ba",
+        "CR-91b10e833208",
+        "CR-c6ee5407a07e",
+        "CR-d2327d9b79f7"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test the provisional null: without a located pre-existing validated adapter, declared inputs/outputs, and validation artifact, no simulator-backed Roman-concrete conclusion is eligible. Prediction: the case remains simulator-unavailable. Falsifier: identify a validated adapter before the manifest freezes. Any model support is limited to its reported lime-mortar domain; no Roman-concrete performance extrapolation. Provenance is currently only the supplied rumor (E-SIM1); no negative searches have yet been conducted.",
+      "replay_key": "sha256:e3211f11a5f07cbc07db65ccdedd7cde55be8b090ba962f1c7ef90c7ed10aadc",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "e889c296a746ae43",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:evidence_skeptic",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 1,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "crossref",
+        "query": "lime mortar simulation model validation support domain",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-e8e5e991a9ba",
+        "CR-91b10e833208",
+        "CR-c6ee5407a07e",
+        "CR-cf5da4747e05"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate accessible paper content and check whether it reports a validation artifact and a bounded model domain; metadata alone cannot establish simulator eligibility.",
+      "replay_key": "sha256:8da77e55b24a0ebe0650194383c6e3d3ef197c1f70ff65e72ee6fef2a9ec216a",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "fdb901d2cbfb625f",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:transfer_boundary",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 2,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "crossref",
+        "query": "lime mortar simulation model validation support region roman concrete",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-da9ae7cd194a",
+        "CR-03ce7adb4d78",
+        "CR-e8e5e991a9ba",
+        "CR-d3daa09b334c",
+        "CR-91b10e833208"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the reported simulation paper and assess whether accessible records point to validation and a declared model domain; do not infer Roman-concrete performance transfer.",
+      "replay_key": "sha256:0a8663e900ca4226017aa3de0deca93647f463ae276ffe9a91a5cce371e0097e",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  ],
+  "actions": {
+    "1ecc28dc4a3ec318": {
+      "action_id": "1ecc28dc4a3ec318",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-SIM-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "crossref",
+        "query": "lime mortar simulation paper roman concrete performance model validation executable simulator adapter",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-da9ae7cd194a",
+        "CR-16adb193fd17",
+        "CR-93ff52d4da39",
+        "CR-156392737c88",
+        "CR-ee08f22865ff"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test provisional M2: an accessible paper may support a typed model assertion, but not eligible executable simulation absent a pre-existing validated adapter with declared inputs and outputs. Prediction: no eligible live call; falsifier: locating such an adapter. Support region is evidence interpretation without validated execution, with no Roman-concrete performance extrapolation. No search results or validation artifact are supplied yet; provenance is the case evidence card E-SIM1 and mechanism fixture, not empirical evidence.",
+      "replay_key": "sha256:abb89dc78b3ac85a7c8a98b44838e86c588bca49f57096dab160d3f691ada919",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "3d027e77b6087bc5": {
+      "action_id": "3d027e77b6087bc5",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-SIM-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "crossref",
+        "query": "lime mortar simulation paper validation model support region adapter",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-e8e5e991a9ba",
+        "CR-91b10e833208",
+        "CR-c6ee5407a07e",
+        "CR-d2327d9b79f7"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test the provisional null: without a located pre-existing validated adapter, declared inputs/outputs, and validation artifact, no simulator-backed Roman-concrete conclusion is eligible. Prediction: the case remains simulator-unavailable. Falsifier: identify a validated adapter before the manifest freezes. Any model support is limited to its reported lime-mortar domain; no Roman-concrete performance extrapolation. Provenance is currently only the supplied rumor (E-SIM1); no negative searches have yet been conducted.",
+      "replay_key": "sha256:e3211f11a5f07cbc07db65ccdedd7cde55be8b090ba962f1c7ef90c7ed10aadc",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "d394ec8b005c5b4e": {
+      "action_id": "d394ec8b005c5b4e",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-SIM-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 2,
+        "retained_sources": 4,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "crossref",
+        "query": "lime mortar simulation paper validation artifact model domain support region",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-e8e5e991a9ba",
+        "CR-91b10e833208",
+        "CR-c6ee5407a07e",
+        "CR-d2327d9b79f7"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test provisional M1: a paper can constrain a mechanism only within its declared lime-mortar model domain, and executable predictions require a declared validation artifact. Falsifier: no validation artifact or support-region statement is located. Do not extrapolate to Roman-concrete performance; provenance is currently only the E-SIM1 rumor, with no source candidate.",
+      "replay_key": "sha256:488d103ef098ba431b7eae3b505079203f1ced579a938dd84f4369412edce515",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "e889c296a746ae43": {
+      "action_id": "e889c296a746ae43",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:evidence_skeptic",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 1,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "crossref",
+        "query": "lime mortar simulation model validation support domain",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-e8e5e991a9ba",
+        "CR-91b10e833208",
+        "CR-c6ee5407a07e",
+        "CR-cf5da4747e05"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate accessible paper content and check whether it reports a validation artifact and a bounded model domain; metadata alone cannot establish simulator eligibility.",
+      "replay_key": "sha256:8da77e55b24a0ebe0650194383c6e3d3ef197c1f70ff65e72ee6fef2a9ec216a",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "fdb901d2cbfb625f": {
+      "action_id": "fdb901d2cbfb625f",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:transfer_boundary",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 2,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "crossref",
+        "query": "lime mortar simulation model validation support region roman concrete",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-da9ae7cd194a",
+        "CR-03ce7adb4d78",
+        "CR-e8e5e991a9ba",
+        "CR-d3daa09b334c",
+        "CR-91b10e833208"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the reported simulation paper and assess whether accessible records point to validation and a declared model domain; do not infer Roman-concrete performance transfer.",
+      "replay_key": "sha256:0a8663e900ca4226017aa3de0deca93647f463ae276ffe9a91a5cce371e0097e",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  },
+  "budget": {
+    "limits": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 12000,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "remaining": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 24.996354,
+      "input_tokens": 59755,
+      "output_tokens": 8757,
+      "payload_bytes": 5000000,
+      "queries": 6,
+      "retained_sources": 12,
+      "simulation_calls": 4
+    },
+    "usage": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.003646,
+      "input_tokens": 20245,
+      "output_tokens": 3243,
+      "payload_bytes": 0,
+      "queries": 6,
+      "retained_sources": 12,
+      "simulation_calls": 0
+    }
+  },
+  "manifest_sha256": "sha256:1d101b83cb07e275d5770a83b4f1b5e25bcc74ff9fc19501a7086eb66ce200cf",
+  "model_traces": [
+    {
+      "call_id": "60f3380744fe90b3",
+      "estimated_actual_cost_usd": 0.0002616,
+      "estimated_maximum_cost_usd": 0.0003904,
+      "latency_seconds": 3.7108,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "proponent:S-ACTIVE-SIM-M1",
+        "case_id": "S-ACTIVE-SIM",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "lime mortar simulation paper validation artifact model domain support region",
+            "rationale": "Test provisional M1: a paper can constrain a mechanism only within its declared lime-mortar model domain, and executable predictions require a declared validation artifact. Falsifier: no validation artifact or support-region statement is located. Do not extrapolate to Roman-concrete performance; provenance is currently only the E-SIM1 rumor, with no source candidate."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:4e7f1dbdaee544b611ad2dbfbc5184bf0c0f13dce323550f9189fe70ca0062f8",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1331,
+        "output_tokens": 257
+      }
+    },
+    {
+      "call_id": "01ebc35a7bdca178",
+      "estimated_actual_cost_usd": 0.0004111,
+      "estimated_maximum_cost_usd": 0.0006768,
+      "latency_seconds": 5.2989,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-SIM",
+        "claimed_contribution": "Bounded provisional interpretation of simulator eligibility.",
+        "claims": [
+          {
+            "claim_id": "C1",
+            "falsifier": "No validation artifact or support-region statement can be located.",
+            "prediction": "Executable predictions require a declared validation artifact.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-SIM1",
+              "CR-91b10e833208: metadata-only title, no paper content or validation details"
+            ],
+            "statement": "A simulation may constrain mechanisms only within its declared lime-mortar model domain; it does not establish Roman-concrete performance.",
+            "support_region": "The paper's reported lime-mortar model domain; no Roman-concrete performance extrapolation."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-SIM-M1",
+        "negative_searches": [
+          "The supplied metadata records disclose no validation artifact or model support-region statement."
+        ],
+        "proposed_next_actions": [
+          "Seek accessible paper content and check for validation and domain statements; do not execute or extrapolate."
+        ],
+        "report_id": "R-S-ACTIVE-SIM-M1",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "CR-91b10e833208"
+        ],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Does the paper report a validation artifact and declared model domain?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:0b36f8f4f2d1265c2fbc054a2fba52bc59215c390addb871e7366d3be8a78184",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2186,
+        "output_tokens": 385
+      }
+    },
+    {
+      "call_id": "58cd0c19fbd4c033",
+      "estimated_actual_cost_usd": 0.0002714,
+      "estimated_maximum_cost_usd": 0.0003894,
+      "latency_seconds": 3.3699,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "proponent:S-ACTIVE-SIM-M2",
+        "case_id": "S-ACTIVE-SIM",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "crossref",
+            "query": "lime mortar simulation paper Roman concrete performance model validation executable simulator adapter",
+            "rationale": "Test provisional M2: an accessible paper may support a typed model assertion, but not eligible executable simulation absent a pre-existing validated adapter with declared inputs and outputs. Prediction: no eligible live call; falsifier: locating such an adapter. Support region is evidence interpretation without validated execution, with no Roman-concrete performance extrapolation. No search results or validation artifact are supplied yet; provenance is the case evidence card E-SIM1 and mechanism fixture, not empirical evidence."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:ba9d09c17220ca0a21907014e2d0787022416cad46c4aed0b970d389896183a1",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1329,
+        "output_tokens": 277
+      }
+    },
+    {
+      "call_id": "0d894d04fa1a8dd4",
+      "estimated_actual_cost_usd": 0.0004338,
+      "estimated_maximum_cost_usd": 0.0007074,
+      "latency_seconds": 4.5304,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-SIM",
+        "claimed_contribution": "Provisional distinction between model assertion and executable simulation.",
+        "claims": [
+          {
+            "claim_id": "C-M2-1",
+            "falsifier": "A pre-existing validated adapter with declared inputs and outputs is identified.",
+            "prediction": "No eligible live simulation call is available.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-SIM1",
+              "S-ACTIVE-SIM-M2 mechanism fixture"
+            ],
+            "statement": "The supplied record supports only a model assertion, not an eligible executable simulator.",
+            "support_region": "Evidence interpretation without validated execution; no Roman-concrete performance extrapolation."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-SIM-M2",
+        "negative_searches": [
+          "No adapter, validation artifact, or declared support region is present in the supplied records."
+        ],
+        "proposed_next_actions": [
+          "Check metadata-accessible sources for an adapter and validation artifact; do not infer execution eligibility."
+        ],
+        "report_id": "R-S-ACTIVE-SIM-M2",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Does a pre-existing validated adapter exist outside the supplied records?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:2d23aaf9ff88af64eeba1603f22ebc39f500a4a4e080911ed1beb81b16d86abc",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2368,
+        "output_tokens": 394
+      }
+    },
+    {
+      "call_id": "34cd67e281b77b1b",
+      "estimated_actual_cost_usd": 0.0003394,
+      "estimated_maximum_cost_usd": 0.000388,
+      "latency_seconds": 4.3592,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "No adapter, validation artifact, or support region is supplied. This is a provisional null, not evidence that no simulator exists; promotion remains REVIEW_REQUIRED.",
+        "branch_id": "proponent:S-ACTIVE-SIM-NULL",
+        "case_id": "S-ACTIVE-SIM",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "lime mortar simulation paper validation model support region adapter",
+            "rationale": "Test the provisional null: without a located pre-existing validated adapter, declared inputs/outputs, and validation artifact, no simulator-backed Roman-concrete conclusion is eligible. Prediction: the case remains simulator-unavailable. Falsifier: identify a validated adapter before the manifest freezes. Any model support is limited to its reported lime-mortar domain; no Roman-concrete performance extrapolation. Provenance is currently only the supplied rumor (E-SIM1); no negative searches have yet been conducted."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:42938d8d1d8cb23ec4449d96abb7aebae685f82d7610ed140c286f884213245d",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1314,
+        "output_tokens": 416
+      }
+    },
+    {
+      "call_id": "fd67bd96864acfbe",
+      "estimated_actual_cost_usd": 0.0004164,
+      "estimated_maximum_cost_usd": 0.0006823,
+      "latency_seconds": 4.6009,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-SIM",
+        "claimed_contribution": "Provisional null: no eligible simulator-backed conclusion on supplied evidence.",
+        "claims": [
+          {
+            "claim_id": "C1",
+            "falsifier": "A validated adapter with declared inputs, outputs, and support region is identified before the manifest freezes.",
+            "prediction": "Without a validated adapter and declared support region, the case remains simulator-unavailable.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-SIM1",
+              "CR-91b10e833208 metadata only"
+            ],
+            "statement": "No simulator-backed mechanism conclusion is currently eligible.",
+            "support_region": "Declared simulation and evidence authority boundary; no Roman-concrete performance extrapolation."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-SIM-NULL",
+        "negative_searches": [
+          "Available metadata for the lime-mortar simulation candidate reports no validation artifact or adapter."
+        ],
+        "proposed_next_actions": [
+          "Inspect accessible paper content for validation and adapter details; do not execute simulation."
+        ],
+        "report_id": "R-S-ACTIVE-SIM-NULL",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "CR-91b10e833208"
+        ],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Does the paper contain a validation artifact or pre-existing adapter not represented in metadata?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:024e5f2b10e4b579cbb9c2fb24641c51e95ad62f2fb4239e9bac4c79036673c1",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2219,
+        "output_tokens": 389
+      }
+    },
+    {
+      "call_id": "d84de15231e108db",
+      "estimated_actual_cost_usd": 0.0003059,
+      "estimated_maximum_cost_usd": 0.000388,
+      "latency_seconds": 2.6235,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "auditor:evidence_skeptic",
+        "case_id": "S-ACTIVE-SIM",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "lime mortar simulation model validation support domain",
+            "rationale": "Locate accessible paper content and check whether it reports a validation artifact and a bounded model domain; metadata alone cannot establish simulator eligibility."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:bf6f883ba22e62ff2e3ec9ee01c96e99126f64a8ca78d8e7824f51f9815030cd",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1944,
+        "output_tokens": 223
+      }
+    },
+    {
+      "call_id": "bfebb60ffff9b870",
+      "estimated_actual_cost_usd": 0.0004535,
+      "estimated_maximum_cost_usd": 0.0008165,
+      "latency_seconds": 4.1132,
+      "model": "gpt-6-luna",
+      "output": {
+        "auditor_role": "evidence_skeptic",
+        "case_id": "S-ACTIVE-SIM",
+        "challenge": "The claim attributes a reported lime-mortar model domain to a metadata-only record; the supplied title does not establish the paper's domain or validation artifact, so the stated support region is unsupported.",
+        "claim_ids": [
+          "C1"
+        ],
+        "contradiction_status": "NO_CONTRADICTION_FOUND",
+        "critique_id": "SC-S-ACTIVE-SIM-01",
+        "promotion_status": "REVIEW_REQUIRED",
+        "proposed_discriminator": "Inspect accessible paper content for an explicit model domain and validation artifact; separately verify whether a pre-existing adapter has declared inputs and outputs. Until then, neither domain-limited predictions nor executable simulation are established.",
+        "provenance": [
+          "E-SIM1",
+          "CR-91b10e833208: METADATA_ONLY title; no paper content or validation details"
+        ],
+        "schema_version": "1.0",
+        "target_mechanism_id": "S-ACTIVE-SIM-M1"
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:cfdef759436e5ea68dd4521b8523a73c7b83df3d95bcc01e62dc2ae330831151",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2700,
+        "output_tokens": 367
+      }
+    },
+    {
+      "call_id": "8b75de839049ffdb",
+      "estimated_actual_cost_usd": 0.0002987,
+      "estimated_maximum_cost_usd": 0.0003882,
+      "latency_seconds": 3.6563,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "auditor:transfer_boundary",
+        "case_id": "S-ACTIVE-SIM",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "lime mortar simulation model validation support region Roman concrete",
+            "rationale": "Identify the reported simulation paper and assess whether accessible records point to validation and a declared model domain; do not infer Roman-concrete performance transfer."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:072822d07535f14960db6da93af1c0efb841cfc9d201db6a4dba97846d7e2df1",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1942,
+        "output_tokens": 209
+      }
+    },
+    {
+      "call_id": "422e5a7230565a52",
+      "estimated_actual_cost_usd": 0.0004542,
+      "estimated_maximum_cost_usd": 0.0008434,
+      "latency_seconds": 3.8273,
+      "model": "gpt-6-luna",
+      "output": {
+        "auditor_role": "transfer_boundary",
+        "case_id": "S-ACTIVE-SIM",
+        "challenge": "The metadata-only title for an aerial lime-mortar carbonation simulation does not establish a validated model, its support region, or fit to Roman-concrete performance endpoints. The claim\u2019s bounded wording avoids explicit extrapolation, but its stated model domain is not evidenced by the supplied record.",
+        "claim_ids": [
+          "C1"
+        ],
+        "contradiction_status": "UNRESOLVED",
+        "critique_id": "CRIT-S-ACTIVE-SIM-TB1",
+        "promotion_status": "REVIEW_REQUIRED",
+        "proposed_discriminator": "Inspect accessible paper content for the model\u2019s inputs, outputs, validation artifact and tested domain; compare those endpoints and materials with the Roman-concrete question before considering any transfer. Until then, treat the record as metadata only and do not execute or extrapolate.",
+        "provenance": [
+          "E-SIM1",
+          "CR-91b10e833208: metadata-only title",
+          "R-S-ACTIVE-SIM-M1"
+        ],
+        "schema_version": "1.0",
+        "target_mechanism_id": "S-ACTIVE-SIM-M1"
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:72299c04a86d743779af38cb175e71e45149d6a97b56e17b689d5034ca80fb8f",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2912,
+        "output_tokens": 326
+      }
+    }
+  ],
+  "paper_evidence_cards": {},
+  "simulation_traces": [],
+  "source_candidates": {
+    "CR-03ce7adb4d78": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/s0008-8846(02)01038-4",
+      "discovery_query": "lime mortar simulation model validation support region roman concrete",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1016/s0008-8846(02)01038-4",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-03ce7adb4d78",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Study of the water-retention capacity of a lime\u2013sand mortar: Influence of the physicochemical characteristics of the lime"
+    },
+    "CR-156392737c88": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.2514/6.1973-938",
+      "discovery_query": "lime mortar simulation paper roman concrete performance model validation executable simulator adapter",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.2514/6.1973-938",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-156392737c88",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Simulator performance validation and improvement through recorded data"
+    },
+    "CR-16adb193fd17": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.7554/elife.42646.041",
+      "discovery_query": "lime mortar simulation paper roman concrete performance model validation executable simulator adapter",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.7554/elife.42646.041",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-16adb193fd17",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Supplementary file 1. EPISIM Simulator executable model file."
+    },
+    "CR-91b10e833208": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.2139/ssrn.4662904",
+      "discovery_query": "lime mortar simulation model validation support region roman concrete",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.2139/ssrn.4662904",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-91b10e833208",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Numerical Simulation of the Evolution of Carbonation Process in Aerial Lime Mortar"
+    },
+    "CR-93ff52d4da39": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.21236/ada071394",
+      "discovery_query": "lime mortar simulation paper roman concrete performance model validation executable simulator adapter",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.21236/ada071394",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-93ff52d4da39",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Manned Engineering Flight Simulation Validation. Part I. Simulation Requirements and Simulator Motion System Performance."
+    },
+    "CR-c6ee5407a07e": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3403/30309274",
+      "discovery_query": "lime mortar simulation model validation support domain",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.3403/30309274",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-c6ee5407a07e",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Specification for ready-mixed lime: sand for mortar"
+    },
+    "CR-cf5da4747e05": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.23919/annsim55834.2022.9859307",
+      "discovery_query": "lime mortar simulation model validation support domain",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.23919/annsim55834.2022.9859307",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-cf5da4747e05",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "ESS: EMF-Based Simulation Specification, A Domain-Specific Language For Model Validation Experiments"
+    },
+    "CR-d2327d9b79f7": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.4271/2007-01-2655",
+      "discovery_query": "lime mortar simulation paper validation model support region adapter",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.4271/2007-01-2655",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-d2327d9b79f7",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Validation off an SUV Model for Vehicle Dynamics Simulation"
+    },
+    "CR-d3daa09b334c": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1680/macr.1991.43.155.105",
+      "discovery_query": "lime mortar simulation model validation support region roman concrete",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1680/macr.1991.43.155.105",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-d3daa09b334c",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Fracture mechanism and fracture parameters of autoclaved lime\u2013sand mortar and concrete"
+    },
+    "CR-da9ae7cd194a": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/s0958-9465(02)00006-9",
+      "discovery_query": "lime mortar simulation model validation support region roman concrete",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1016/s0958-9465(02)00006-9",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-da9ae7cd194a",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Microstructural investigation of a silica fume\u2013cement\u2013lime mortar"
+    },
+    "CR-e8e5e991a9ba": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.conbuildmat.2018.07.053",
+      "discovery_query": "lime mortar simulation model validation support region roman concrete",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1016/j.conbuildmat.2018.07.053",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-e8e5e991a9ba",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Comparative study on the properties of three hydraulic lime mortar systems: Natural hydraulic lime mortar, cement-aerial lime-based mortar and slag-aerial lime-based mortar"
+    },
+    "CR-ee08f22865ff": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.cemconres.2023.107130",
+      "discovery_query": "lime mortar simulation paper roman concrete performance model validation executable simulator adapter",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1016/j.cemconres.2023.107130",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-ee08f22865ff",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Adding hydrated lime for improving microstructure and mechanical properties of mortar for ultra-high performance concrete"
+    }
+  },
+  "state": "inconclusive",
+  "state_history": [
+    "created",
+    "policy_loaded",
+    "context_frozen",
+    "planning",
+    "round_1",
+    "sharing",
+    "inconclusive"
+  ]
+}

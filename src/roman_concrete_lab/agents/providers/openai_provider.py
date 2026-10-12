@@ -24,6 +24,17 @@ class BudgetExceeded(RuntimeError):
     """The next call would exceed the frozen cost cap."""
 
 
+def _response_debug(response: Any, raw_output: str) -> str:
+    """Return bounded provider diagnostics without logging credentials or packets."""
+    status = getattr(response, "status", None)
+    incomplete = getattr(response, "incomplete_details", None)
+    reason = getattr(incomplete, "reason", None) if incomplete is not None else None
+    output_tokens = getattr(getattr(response, "usage", None), "output_tokens", None)
+    details = [f"status={status!r}", f"incomplete_reason={reason!r}", f"output_tokens={output_tokens!r}"]
+    details.append(f"output_chars={len(raw_output)}")
+    return ", ".join(details)
+
+
 @dataclass(frozen=True)
 class Pricing:
     input_per_million_usd: float = 0.10
@@ -124,11 +135,13 @@ class OpenAIProvider:
         except Exception as exc:  # provider SDK exposes several transport/status subclasses
             raise ProviderUnavailable(f"OpenAI call {call_id} failed: {type(exc).__name__}: {exc}") from exc
         elapsed = time.monotonic() - started
+        raw_output = str(getattr(response, "output_text", ""))
         try:
-            output = json.loads(response.output_text)
+            output = json.loads(raw_output)
             validate(output, active_schema)
         except Exception as exc:
-            raise ValueError(f"MALFORMED_OUTPUT for {call_id}: {exc}") from exc
+            debug = _response_debug(response, raw_output)
+            raise ValueError(f"MALFORMED_OUTPUT for {call_id}: {exc} ({debug})") from exc
         usage = response.usage
         input_tokens = int(getattr(usage, "input_tokens", 0) or 0)
         output_tokens = int(getattr(usage, "output_tokens", 0) or 0)

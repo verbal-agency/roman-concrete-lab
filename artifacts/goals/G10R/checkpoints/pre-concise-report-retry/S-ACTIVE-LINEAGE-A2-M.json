@@ -1,0 +1,148 @@
+{
+  "action_records": [
+    {
+      "action_id": "9a05479144601e1d",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-LINEAGE-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime hot-mix asphalt thesis transportation report self-healing study functional performance endpoint",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the named thesis and report, establish whether they share data or constitute independent studies, and determine whether either reports a relevant functional recovery endpoint. This tests the provisional localized reactive-lime-reservoir explanation; it predicts recovery associated with exposed lime-rich regions and is challenged by matched lime-free specimens recovering identically. Support is limited to modern lime-pozzolan mortar with identified lime-rich inclusions; transfer to Utah asphalt records is unresolved. Record provenance and report negative searches without treating absence of retrieval as evidence.",
+      "replay_key": "sha256:733f46b40cd9a7b4c3c368b44d59d9394a3c68025835fddfb39ac3a862d0a7f8",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  ],
+  "actions": {
+    "9a05479144601e1d": {
+      "action_id": "9a05479144601e1d",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-LINEAGE-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime hot-mix asphalt thesis transportation report self-healing study functional performance endpoint",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the named thesis and report, establish whether they share data or constitute independent studies, and determine whether either reports a relevant functional recovery endpoint. This tests the provisional localized reactive-lime-reservoir explanation; it predicts recovery associated with exposed lime-rich regions and is challenged by matched lime-free specimens recovering identically. Support is limited to modern lime-pozzolan mortar with identified lime-rich inclusions; transfer to Utah asphalt records is unresolved. Record provenance and report negative searches without treating absence of retrieval as evidence.",
+      "replay_key": "sha256:733f46b40cd9a7b4c3c368b44d59d9394a3c68025835fddfb39ac3a862d0a7f8",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  },
+  "budget": {
+    "limits": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 7200,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "remaining": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 24.9997015,
+      "input_tokens": 78600,
+      "output_tokens": 6883,
+      "payload_bytes": 5000000,
+      "queries": 11,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "usage": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.0002985,
+      "input_tokens": 1400,
+      "output_tokens": 317,
+      "payload_bytes": 0,
+      "queries": 1,
+      "retained_sources": 0,
+      "simulation_calls": 0
+    }
+  },
+  "manifest_sha256": "sha256:414d152bb368c21ef6bfb859b5c99b477c67b198b3211195e139679eac2fc1f1",
+  "model_traces": [
+    {
+      "call_id": "ae6f58280401429a",
+      "estimated_actual_cost_usd": 0.0002985,
+      "estimated_maximum_cost_usd": 0.0004031,
+      "latency_seconds": 3.8249,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "proponent:S-ACTIVE-LINEAGE-M1",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "follow_up_queries": [],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "Utah quicklime hot-mix asphalt thesis transportation report self-healing study functional performance endpoint",
+            "rationale": "Identify the named thesis and report, establish whether they share data or constitute independent studies, and determine whether either reports a relevant functional recovery endpoint. This tests the provisional localized reactive-lime-reservoir explanation; it predicts recovery associated with exposed lime-rich regions and is challenged by matched lime-free specimens recovering identically. Support is limited to modern lime-pozzolan mortar with identified lime-rich inclusions; transfer to Utah asphalt records is unresolved. Record provenance and report negative searches without treating absence of retrieval as evidence."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:1124b838c09cb1d209981d688b042a915bba61293578f440e5f41c86e26021f0",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1400,
+        "output_tokens": 317
+      }
+    }
+  ],
+  "paper_evidence_cards": {},
+  "simulation_traces": [],
+  "source_candidates": {},
+  "state": "inconclusive",
+  "state_history": [
+    "created",
+    "policy_loaded",
+    "context_frozen",
+    "planning",
+    "round_1",
+    "inconclusive"
+  ]
+}

@@ -6,6 +6,7 @@ import argparse
 import base64
 import hashlib
 import json
+import re
 from copy import deepcopy
 from dataclasses import asdict
 from pathlib import Path
@@ -74,6 +75,12 @@ PROHIBITED_AUTHORITY = (
     "authorized laboratory",
     "promoted to immutable evidence",
 )
+AUTHORITY_NEGATION = re.compile(
+    r"\b(no|not|never|without|cannot|can't|does not|do not|none|unresolved|unestablished)\b"
+)
+AUTHORITY_NEGATED_ACTION = re.compile(
+    r"\b(no|not|never|without|cannot|can't|does not|do not)\b.{0,80}\b(claim|assert|present|treat|promote|authorize)\b"
+)
 
 
 def file_digest(path: Path) -> str:
@@ -133,12 +140,61 @@ def validate_paper_evidence_card(card: dict[str, Any], document: dict[str, Any])
 
 
 def provider_schema(name: str) -> dict[str, Any]:
-    """Inline the only local reference before using OpenAI strict JSON schemas."""
+    """Return a strict-subset schema suitable for the Responses API.
+
+    The local contracts intentionally retain JSON-Schema constraints such as
+    ``const`` and ``format`` for offline validation.  OpenAI structured
+    outputs accepts a narrower subset: every object field must be required,
+    every object must close additional properties, and scalar types must be
+    explicit.  Normalize only the provider copy; responses are still checked
+    against the full local contract after they return.
+    """
     document = deepcopy(schema(name))
     hypothesis = schema("lateral-hypothesis.schema.json")
     if "hypotheses" in document.get("properties", {}):
         document["properties"]["hypotheses"]["items"] = hypothesis
-    return document
+    return _strict_provider_schema(document)
+
+
+def _strict_provider_schema(document: dict[str, Any]) -> dict[str, Any]:
+    """Normalize a local JSON Schema to the Responses structured-output subset."""
+    scalar_types = {str: "string", int: "integer", float: "number", bool: "boolean", type(None): "null"}
+
+    def normalize(node: Any) -> Any:
+        if isinstance(node, list):
+            return [normalize(item) for item in node]
+        if not isinstance(node, dict):
+            return node
+        if "$ref" in node:
+            return node
+        result = {key: normalize(value) for key, value in node.items() if key not in {
+            "$schema", "$id", "title", "description", "format", "minLength", "maxLength",
+            "minItems", "maxItems", "minimum", "maximum", "exclusiveMinimum", "exclusiveMaximum",
+            "pattern", "uniqueItems",
+        }}
+        if "const" in result:
+            value = result.pop("const")
+            result["type"] = scalar_types.get(type(value), "string")
+            result["enum"] = [value]
+        if isinstance(result.get("type"), list):
+            result["anyOf"] = [{"type": item} for item in result.pop("type")]
+        if "enum" in result and "type" not in result and "anyOf" not in result:
+            values = result["enum"]
+            types = {scalar_types.get(type(value), "string") for value in values}
+            if len(types) == 1:
+                result["type"] = next(iter(types))
+            else:
+                result["anyOf"] = [{"type": item} for item in sorted(types)]
+        if result.get("type") == "object":
+            properties = result.get("properties", {})
+            result["properties"] = properties
+            result["required"] = sorted(properties)
+            result["additionalProperties"] = False
+        return result
+
+    normalized = normalize(document)
+    assert isinstance(normalized, dict)
+    return normalized
 
 
 def validate_plan(plan: dict[str, Any], *, case_id: str, branch_id: str) -> None:
@@ -264,12 +320,94 @@ def _portfolio_text(portfolio: dict[str, Any]) -> str:
     return " ".join(values).lower()
 
 
+def _authority_flags(portfolio: dict[str, Any]) -> list[dict[str, Any]]:
+    """Find authority language while preserving whether it is explicitly negated."""
+    flags: list[dict[str, Any]] = []
+    segments = [
+        portfolio["summary"],
+        portfolio["next_discriminating_action"],
+        portfolio["authority_note"],
+        *portfolio["unresolved_disputes"],
+        *portfolio["negative_searches"],
+    ]
+    for hypothesis in portfolio["hypotheses"]:
+        segments.extend(
+            [
+                hypothesis["novelty_basis"],
+                hypothesis["transfer_type"],
+                hypothesis["intervention"],
+                hypothesis["comparator"],
+                hypothesis["predicted_observation"],
+                hypothesis["falsifier"],
+                hypothesis["support_region"],
+                hypothesis["uncertainty"],
+            ]
+        )
+    for segment_index, segment in enumerate(segments):
+        text = segment.casefold()
+        for phrase in PROHIBITED_AUTHORITY:
+            start = 0
+            while True:
+                offset = text.find(phrase, start)
+                if offset < 0:
+                    break
+                prefix = text[max(0, offset - 180):offset]
+                prefix = re.split(r"[.!?;]", prefix)[-1]
+                flags.append(
+                    {
+                        "phrase": phrase,
+                        "negated": bool(
+                            AUTHORITY_NEGATION.search(prefix)
+                            or AUTHORITY_NEGATED_ACTION.search(prefix)
+                        ),
+                        "segment": segment_index,
+                        "offset": offset,
+                    }
+                )
+                start = offset + len(phrase)
+    return flags
+
+
+def _open_world_identity_status(
+    source_id: str,
+    *,
+    expected: set[str],
+    candidate_records: dict[str, dict[str, Any]] | None,
+    identity_map: dict[str, Any] | None,
+    attribution_audit: dict[str, str] | None = None,
+) -> tuple[str, str | None]:
+    """Classify a cited source without collapsing discovery into evidence."""
+    audited_status = (attribution_audit or {}).get(source_id)
+    if audited_status == "CONTRADICTED":
+        return "FABRICATED", None
+    if identity_map is None:
+        if source_id in expected:
+            return "CANONICAL", source_id
+        if candidate_records and source_id in candidate_records:
+            return "OUT_OF_RUBRIC", source_id
+        return "UNATTRIBUTED", None
+    if source_id in identity_map.get("entries", {}):
+        return ("CANONICAL" if source_id in expected else "OUT_OF_RUBRIC"), source_id
+    if not candidate_records or source_id not in candidate_records:
+        return "UNATTRIBUTED", None
+    try:
+        resolved = resolve_source_identity(
+            source_id, candidate_records=candidate_records, identity_map=identity_map
+        )
+    except PolicyBlocked:
+        return "IDENTITY_AMBIGUOUS", None
+    if resolved is None:
+        return "IDENTITY_UNRESOLVED", None
+    return ("CANONICAL" if resolved in expected else "OUT_OF_RUBRIC"), resolved
+
+
 def score_portfolio(
     case: dict[str, Any],
     portfolio: dict[str, Any],
     *,
     candidate_records: dict[str, dict[str, Any]] | None = None,
     identity_map: dict[str, Any] | None = None,
+    attribution_audit: dict[str, str] | None = None,
 ) -> dict[str, Any]:
     validate_portfolio(portfolio)
     expected = set(case["expected_source_ids"])
@@ -279,16 +417,37 @@ def score_portfolio(
         for hypothesis in portfolio["hypotheses"]
         for source_id in hypothesis["source_candidate_ids"]
     )
-    aliases = {
-        source_id: resolve_source_identity(
-            source_id, candidate_records=candidate_records, identity_map=identity_map
+    identity_statuses: dict[str, str] = {}
+    aliases: dict[str, str | None] = {}
+    for source_id in sorted(raw_cited):
+        status, resolved = _open_world_identity_status(
+            source_id,
+            expected=expected,
+            candidate_records=candidate_records,
+            identity_map=identity_map,
+            attribution_audit=attribution_audit,
         )
-        for source_id in sorted(raw_cited)
+        identity_statuses[source_id] = status
+        aliases[source_id] = resolved
+    cited = {
+        resolved
+        for source_id, resolved in aliases.items()
+        if resolved is not None and identity_statuses[source_id] == "CANONICAL"
     }
-    cited = {resolved for resolved in aliases.values() if resolved is not None}
-    unresolved = {source_id for source_id, resolved in aliases.items() if resolved is None}
-    invalid = sorted(cited - expected)
-    invalid.extend(sorted(unresolved))
+    unresolved = sorted(
+        source_id
+        for source_id, status in identity_statuses.items()
+        if status in {"IDENTITY_UNRESOLVED", "IDENTITY_AMBIGUOUS"}
+    )
+    unattributed = sorted(
+        source_id for source_id, status in identity_statuses.items() if status == "UNATTRIBUTED"
+    )
+    out_of_rubric = sorted(
+        source_id for source_id, status in identity_statuses.items() if status == "OUT_OF_RUBRIC"
+    )
+    invalid = sorted(
+        source_id for source_id, status in identity_statuses.items() if status == "FABRICATED"
+    )
     text = _portfolio_text(portfolio)
     hits = []
     for criterion in case["rubric"]:
@@ -302,10 +461,28 @@ def score_portfolio(
                 "keyword_hit": keyword_hit,
             }
         )
-    critical = [f"invalid_source_candidate:{item}" for item in invalid]
+    authority_flags = _authority_flags(portfolio)
+    critical = [f"fabricated_source_candidate:{item}" for item in invalid]
     critical.extend(
-        f"authority_expansion:{phrase}" for phrase in PROHIBITED_AUTHORITY if phrase in text
+        f"authority_expansion:{item['phrase']}"
+        for item in authority_flags
+        if not item["negated"]
     )
+    attributed = {
+        source_id
+        for source_id, status in identity_statuses.items()
+        if status not in {"FABRICATED", "UNATTRIBUTED"}
+    }
+    hypothesis_quality = [
+        hypothesis
+        for hypothesis in portfolio["hypotheses"]
+        if hypothesis["promotion_status"] == "REVIEW_REQUIRED"
+        and hypothesis["predicted_observation"].strip()
+        and hypothesis["falsifier"].strip()
+        and hypothesis["support_region"].strip()
+        and hypothesis["uncertainty"].strip()
+        and all(source_id in attributed for source_id in hypothesis["source_candidate_ids"])
+    ]
     provenance_links = [
         bool(hypothesis["source_candidate_ids"] and hypothesis["provenance"])
         for hypothesis in portfolio["hypotheses"]
@@ -315,9 +492,8 @@ def score_portfolio(
             digest(
                 {
                     "sources": sorted(
-                        aliases[source_id]
+                        aliases[source_id] or source_id
                         for source_id in hypothesis["source_candidate_ids"]
-                        if aliases.get(source_id) is not None
                     ),
                     "prediction": hypothesis["predicted_observation"].strip().lower(),
                     "falsifier": hypothesis["falsifier"].strip().lower(),
@@ -330,20 +506,47 @@ def score_portfolio(
             } - expected
         }
     )
+    hypothesis_contributions = sorted(
+        {
+            digest(
+                {
+                    "sources": sorted(
+                        aliases[source_id] or source_id
+                        for source_id in hypothesis["source_candidate_ids"]
+                    ),
+                    "prediction": hypothesis["predicted_observation"].strip().lower(),
+                    "falsifier": hypothesis["falsifier"].strip().lower(),
+                }
+            )
+            for hypothesis in hypothesis_quality
+        }
+    )
     return {
         "score": sum(item["points"] for item in hits),
+        "evidence_score": sum(item["points"] for item in hits),
+        "discovery_score": len(attributed),
+        "hypothesis_score": len(hypothesis_contributions),
         "max_score": sum(item["points"] for item in case["rubric"]),
         "rubric_hits": hits,
         "cited_source_candidate_ids": sorted(cited),
         "raw_cited_source_candidate_ids": sorted(raw_cited),
         "source_identity_aliases": aliases,
         "invalid_source_candidate_ids": invalid,
+        "identity_statuses": identity_statuses,
+        "unresolved_source_candidate_ids": unresolved,
+        "unattributed_source_candidate_ids": unattributed,
+        "out_of_rubric_source_candidate_ids": out_of_rubric,
+        "authority_flags": authority_flags,
         "provenance_completeness": (
             round(sum(provenance_links) / len(provenance_links), 4)
             if provenance_links
             else 1.0
         ),
         "supported_contribution_digests": contribution_digests,
+        "hypothesis_contribution_digests": hypothesis_contributions,
+        "discovery_contribution_digests": sorted(
+            digest({"source_candidate_id": source_id}) for source_id in attributed
+        ),
         "negative_search_count": len(portfolio["negative_searches"]),
         "dissent_retained": bool(
             portfolio["credible_rival_ids"] or portfolio["unresolved_disputes"]
@@ -576,8 +779,8 @@ class ActiveInvestigationRunner:
         document_cache_dir: Path | None = None,
         identity_map: dict[str, Any] | None = None,
     ) -> None:
-        if arm not in {"A1", "A2"}:
-            raise ValueError("Phase B runner supports A1 or A2 only")
+        if arm not in {"A1", "A2", "A2-M"}:
+            raise ValueError("Phase B runner supports A1, legacy A2 fixtures, or A2-M")
         self.case = case
         self.arm = arm
         self.adapter = adapter
@@ -588,6 +791,12 @@ class ActiveInvestigationRunner:
         self.run_id = run_id
         self.timestamp = timestamp
         self.identity_map = identity_map
+        self.mechanism_roster = None
+        self._openalex_rate_limited = False
+        if arm == "A2-M":
+            from .mechanism_tournament import load_rosters
+
+            self.mechanism_roster = load_rosters()[case["case_id"]]
         self.machine = RunStateMachine()
         self.checkpoint = load_checkpoint(checkpoint_path, manifest_sha256)
         saved_budget = self.checkpoint.get("budget")
@@ -686,16 +895,37 @@ class ActiveInvestigationRunner:
 
     def _search(self, *, branch_id: str, query: dict[str, Any]) -> list[dict[str, Any]]:
         before = deepcopy(self.budget.usage)
-        index = query["index"]
+        requested_index = query["index"]
+        index = requested_index
+        # Recorded fixtures expose a local catalog; the live adapter exposes
+        # only the frozen OpenAlex/Crossref endpoints.  Preserve the model's
+        # query while mapping the legacy catalog label to the permitted live
+        # metadata index rather than allowing an accidental network call.
+        if index == "catalog" and hasattr(self.adapter, "fetch_public_text"):
+            index = "openalex"
+        if index == "openalex" and self._openalex_rate_limited:
+            index = "crossref"
         if index == "catalog":
             result = self.adapter.search(query["query"])
         else:
-            result = self.adapter.search(
-                query["query"],
-                index=index,
-                problem_id=self.case["problem_id"],
-                problem_version=self.case["problem_version"],
-            )
+            try:
+                result = self.adapter.search(
+                    query["query"],
+                    index=index,
+                    problem_id=self.case["problem_id"],
+                    problem_version=self.case["problem_version"],
+                )
+            except Exception as exc:
+                if index != "openalex" or "HTTP Error 429" not in str(exc):
+                    raise
+                self._openalex_rate_limited = True
+                index = "crossref"
+                result = self.adapter.search(
+                    query["query"],
+                    index=index,
+                    problem_id=self.case["problem_id"],
+                    problem_version=self.case["problem_version"],
+                )
         action_id = digest(
             {"run": self.run_id, "branch": branch_id, "query": result["query"]}
         )[7:23]
@@ -726,7 +956,7 @@ class ActiveInvestigationRunner:
             "branch_id": branch_id,
             "action_type": "SEARCH",
             "rationale": query["rationale"],
-            "input": {"query": result["query"], "index": index},
+            "input": {"query": result["query"], "index": index, "requested_index": requested_index},
             "policy_status": "REPLAYED" if result["replayed"] else "ALLOWED",
             "budget_debit": debit,
             "output_ids": [item["source_candidate_id"] for item in candidates],
@@ -896,6 +1126,8 @@ class ActiveInvestigationRunner:
             "remaining_budget": self.budget.remaining(),
             "authority": "Sources are EVIDENCE_PENDING or earlier; do not grant scientific, laboratory, or promotion authority.",
         }
+        if self.mechanism_roster is not None:
+            packet["mechanism_roster"] = deepcopy(self.mechanism_roster["mechanisms"])
         if extra:
             packet.update(extra)
         return packet
@@ -994,13 +1226,155 @@ class ActiveInvestigationRunner:
         validate_portfolio(portfolio)
         return portfolio
 
+    def _run_a2m(self) -> dict[str, Any]:
+        """Run the live mechanism-proponent plus structural-auditor society."""
+        from .mechanism_tournament import (
+            MechanismBlackboard,
+            validate_proponent_report,
+            validate_structural_critique,
+        )
+
+        prompts_m = load_json(ROOT / "fixtures/investigation/mechanism-prompts.json")
+        board = MechanismBlackboard(roster=self.mechanism_roster, context_hash=self.manifest_sha256)
+        plans: dict[str, dict[str, Any]] = {}
+        proponent_source_ids: dict[str, list[str]] = {}
+        report_ids: set[str] = set()
+        critique_ids: set[str] = set()
+        cards = [card for card in self.mechanism_roster["mechanisms"] if card["kind"] != "OPEN_SLOT"]
+        for card in cards:
+            mechanism_id = card["mechanism_id"]
+            plan = self._model(
+                label=f"a2m_{mechanism_id}_plan",
+                instructions=prompts()["system"] + "\n" + prompts_m["proponent"] + "\nReturn a concise plan with exactly one primary query; use empty follow-up, fetch, and simulation arrays.",
+                packet=self._packet(
+                    branch_id=f"proponent:{mechanism_id}",
+                    extra={"mechanism_card": card},
+                    candidate_ids=[],
+                ),
+                maximum_output_tokens=450,
+                output_schema=provider_schema("investigation-plan.schema.json"),
+                format_name="g10m_proponent_plan",
+            )
+            validate_plan(plan, case_id=self.case["case_id"], branch_id=f"proponent:{mechanism_id}")
+            plans[mechanism_id] = plan
+            found = self._execute_queries(mechanism_id, plan["primary_queries"], 2)
+            self._execute_requested_tools(mechanism_id, plan)
+            proponent_source_ids[mechanism_id] = [item["source_candidate_id"] for item in found]
+            report = self._model(
+                label=f"a2m_{mechanism_id}_report",
+                instructions=prompts()["system"] + "\n" + prompts_m["proponent"] + "\nReturn one concise private typed report: exactly one claim, one negative search, one unresolved question, and one proposed next action; keep every field short.",
+                packet=self._packet(
+                    branch_id=f"proponent:{mechanism_id}",
+                    extra={"mechanism_card": card, "plan": plan},
+                    candidate_ids=proponent_source_ids[mechanism_id],
+                ),
+                maximum_output_tokens=800,
+                output_schema=provider_schema("mechanism-proponent-report.schema.json"),
+                format_name="g10m_proponent_report",
+            )
+            validate_proponent_report(report)
+            if report["case_id"] != self.case["case_id"] or report["mechanism_id"] != mechanism_id:
+                raise PolicyBlocked("mechanism-proponent report does not bind to its assigned card")
+            if report["report_id"] in report_ids:
+                report["report_id"] = digest(
+                    {"run": self.run_id, "mechanism_id": mechanism_id, "raw_report_id": report["report_id"]}
+                )[7:23]
+            report_ids.add(report["report_id"])
+            board.submit_proponent(report)
+        shared = board.share()
+        self.machine.transition("sharing")
+
+        critiques: list[dict[str, Any]] = []
+        for index, role in enumerate(("evidence_skeptic", "transfer_boundary", "experiment_simulation")):
+            plan = self._model(
+                label=f"a2m_{role}_plan",
+                instructions=prompts()["system"] + "\n" + prompts_m["structural_auditors"][role] + "\nReturn a concise plan with exactly one primary query; use empty follow-up, fetch, and simulation arrays.",
+                packet=self._packet(
+                    branch_id=f"auditor:{role}",
+                    extra={"structural_role": role, "shared_mechanism_reports": shared},
+                    candidate_ids=[],
+                ),
+                # Auditor plans are structurally small, but the strict
+                # schema still requires a rationale string. 250 tokens was
+                # low enough for Responses to truncate a valid plan halfway
+                # through a JSON string, producing an apparent parse error.
+                maximum_output_tokens=450,
+                output_schema=provider_schema("investigation-plan.schema.json"),
+                format_name="g10m_auditor_plan",
+            )
+            validate_plan(plan, case_id=self.case["case_id"], branch_id=f"auditor:{role}")
+            found = self._execute_queries(f"auditor:{role}", plan["primary_queries"], 1)
+            self._execute_requested_tools(f"auditor:{role}", plan)
+            critique = self._model(
+                label=f"a2m_{role}_critique",
+                instructions=prompts()["system"] + "\n" + prompts_m["structural_auditors"][role] + "\nReturn one concise typed critique with one challenge, one discriminator, and minimal provenance.",
+                packet=self._packet(
+                    branch_id=f"auditor:{role}",
+                    extra={
+                        "structural_role": role,
+                        "plan": plan,
+                        "shared_mechanism_reports": shared,
+                        "auditor_source_candidate_ids": [item["source_candidate_id"] for item in found],
+                    },
+                    candidate_ids=[item["source_candidate_id"] for item in found],
+                ),
+                maximum_output_tokens=900,
+                output_schema=provider_schema("structural-critique.schema.json"),
+                format_name="g10m_structural_critique",
+            )
+            validate_structural_critique(critique)
+            if critique["case_id"] != self.case["case_id"]:
+                raise PolicyBlocked("structural critique does not bind to the active case")
+            if critique["auditor_role"] != role:
+                raise PolicyBlocked("structural critique role does not bind to its assigned auditor")
+            if critique["critique_id"] in critique_ids:
+                critique["critique_id"] = digest(
+                    {"run": self.run_id, "auditor_role": role, "raw_critique_id": critique["critique_id"]}
+                )[7:23]
+            critique_ids.add(critique["critique_id"])
+            board.add_critique(critique)
+            critiques.append(critique)
+
+        focus = board.allocate_focus(remaining_actions=min(3, int(self.budget.remaining()["queries"])))
+        self.machine.transition("focus_allocated")
+        self.machine.transition("round_2")
+        for mechanism_id, count in focus.get("allocations", {}).items():
+            card = next(card for card in self.mechanism_roster["mechanisms"] if card["mechanism_id"] == mechanism_id)
+            query = {"query": f"{card['mechanism_statement']} {self.case['question']}", "index": "catalog", "rationale": "deterministic mechanism discriminator focus"}
+            self._execute_queries(mechanism_id, [query] * count, count)
+        deterministic_ledger = board.adjudicate()
+        self.machine.transition("adjudicating")
+        portfolio = self._model(
+            label="a2m_adjudication",
+            instructions=prompts()["system"] + "\n" + prompts_m["adjudicator"] + "\nReturn exactly one short leading hypothesis; retain the null mechanism ID in credible_rival_ids, use one-sentence summary/dispute/action fields, and cite at most two provenance IDs. Keep every value concise while preserving dissent and REVIEW_REQUIRED authority.",
+            packet=self._packet(
+                branch_id="adjudicator",
+                extra={
+                    "shared_mechanism_reports": shared,
+                    "structural_critiques": critiques,
+                    "focus": focus,
+                    "mechanism_tournament_ledger": deterministic_ledger,
+                },
+            ),
+            maximum_output_tokens=1800,
+            output_schema=provider_schema("investigation-portfolio.schema.json"),
+            format_name="g10m_adjudication",
+        )
+        validate_portfolio(portfolio)
+        return portfolio
+
     def run(self, *, owner_activated: bool) -> dict[str, Any]:
         if not owner_activated:
             raise OwnerActivationRequired("Phase B requires explicit owner activation of the frozen manifest")
         try:
             for state in ("policy_loaded", "context_frozen", "planning", "round_1"):
                 self.machine.transition(state)
-            portfolio = self._run_a1() if self.arm == "A1" else self._run_a2()
+            if self.arm == "A1":
+                portfolio = self._run_a1()
+            elif self.arm == "A2-M":
+                portfolio = self._run_a2m()
+            else:
+                portfolio = self._run_a2()
             for state in ("scored", "completed"):
                 self.machine.transition(state)
             score = score_portfolio(
@@ -1075,6 +1449,15 @@ def frozen_manifest() -> dict[str, Any]:
         "portfolio_schema": ROOT / "schemas/investigation-portfolio.schema.json",
         "simulation_trace_schema": ROOT / "schemas/simulation-trace.schema.json",
         "paper_evidence_card_schema": ROOT / "schemas/paper-evidence-card.schema.json",
+        "mechanism_runner": ROOT / "src/roman_concrete_lab/agents/mechanism_tournament.py",
+        "mechanism_protocol": ROOT / "docs/protocols/mechanism-proponent-society.md",
+        "mechanism_rosters": ROOT / "fixtures/investigation/mechanism-rosters.json",
+        "mechanism_prompts": ROOT / "fixtures/investigation/mechanism-prompts.json",
+        "mechanism_card_schema": ROOT / "schemas/mechanism-card.schema.json",
+        "mechanism_proponent_schema": ROOT / "schemas/mechanism-proponent-report.schema.json",
+        "structural_critique_schema": ROOT / "schemas/structural-critique.schema.json",
+        "mechanism_admission_schema": ROOT / "schemas/mechanism-admission.schema.json",
+        "mechanism_ledger_schema": ROOT / "schemas/mechanism-tournament-ledger.schema.json",
     }
     limits = BudgetLimits(estimated_cost_usd=CAP_USD)
     prompt_set = prompts()
@@ -1097,7 +1480,7 @@ def frozen_manifest() -> dict[str, Any]:
         "treatments": {
             "A0": "recorded-fixture deterministic plumbing control",
             "A1": "single tool-using investigator",
-            "A2": "three protected branches plus deterministic focus and bounded adjudication",
+            "A2-M": "mechanism proponents plus structural auditors, deterministic focus, and bounded adjudication",
         },
         "branch_charter_hashes": {
             branch: digest(prompt_set["branches"][branch]) for branch in BRANCHES
@@ -1105,7 +1488,7 @@ def frozen_manifest() -> dict[str, Any]:
         "limits_per_treatment_case": asdict(limits),
         "phase_b_case_count": SEALED_CASE_COUNT,
         "phase_b_treatment_case_count": SEALED_CASE_COUNT * 2,
-        "maximum_provider_calls": SEALED_CASE_COUNT * (6 + 11),
+        "maximum_provider_calls": SEALED_CASE_COUNT * (2 + 13),
         "maximum_estimated_model_cost_usd": _maximum_model_cost(limits),
         "hard_total_external_spend_cap_usd": CAP_USD,
         "source_policy_sha256": policy.sha256,
@@ -1143,6 +1526,10 @@ def phase_a() -> dict[str, Any]:
     identity_preflight = validate_source_identity_map(
         identities, recorded_sources=sources, cases=[*development, *sealed]
     )
+    from .mechanism_tournament import load_rosters, validate_roster
+
+    mechanism_rosters = load_rosters()
+    mechanism_preflight = [validate_roster(mechanism_rosters[case["case_id"]]) for case in [*development, *sealed]]
     for source in sources:
         candidate = {key: value for key, value in source.items() if not key.startswith("_fixture_")}
         policy.decide(candidate["locator"], fetch_content=False)
@@ -1199,6 +1586,7 @@ def phase_a() -> dict[str, Any]:
         and all(key in policy.record["request_policy"] for key in ("max_pdf_pages", "max_extracted_characters", "public_pdf_handling"))
         and benchmark_passes
         and identity_preflight["passes"]
+        and all(item["passes"] for item in mechanism_preflight)
     )
     return {
         "goal": "G10R",
@@ -1214,6 +1602,7 @@ def phase_a() -> dict[str, Any]:
         "behavior_fixture_states": sorted(recorded_states),
         "pdf_extraction_benchmark": {"passes": benchmark_passes, "parser": PARSER_ID, "content_hash": benchmark_document["content_hash"]},
         "identity_preflight": identity_preflight,
+        "mechanism_preflight": {"passes": all(item["passes"] for item in mechanism_preflight), "cases": mechanism_preflight},
         "arm_budget_equality": asdict(BudgetLimits(estimated_cost_usd=CAP_USD)),
         "activation_request": {
             "network": "read-only exact-host allowlist",
@@ -1241,10 +1630,10 @@ def write_json(path: Path, value: Any) -> None:
     path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
-def _directional_outcome(arm_results: dict[str, list[dict[str, Any]]]) -> tuple[str, dict[str, Any]]:
+def _directional_outcome(arm_results: dict[str, list[dict[str, Any]]], *, society_arm: str = "A2") -> tuple[str, dict[str, Any]]:
     """Apply the preregistered G10R decision rule after both blinded arms run."""
     a1 = arm_results["A1"]
-    a2 = arm_results["A2"]
+    a2 = arm_results[society_arm]
     if any(item["status"] != "COMPLETED" for item in [*a1, *a2]):
         return "INCONCLUSIVE_ACTIVE_INVESTIGATION", {"reason": "an arm did not complete a valid comparison"}
     by_case_a1 = {item["portfolio"]["case_id"]: item for item in a1}
@@ -1311,9 +1700,13 @@ def run_phase_b(*, owner_activated: bool, output_dir: Path | None = None) -> dic
     already_spent = 0.0
     checkpoint_directory = destination / "checkpoints"
     if checkpoint_directory.exists():
-        for checkpoint_path in checkpoint_directory.glob("*.json"):
+        # Count every prior attempt's recorded provider usage toward the hard
+        # cap, while only direct children are eligible for replay.  Archived
+        # checkpoints are deliberately retained for audit and must not make
+        # a manifest change reset cumulative spend accounting.
+        for checkpoint_path in checkpoint_directory.rglob("*.json"):
             checkpoint = load_json(checkpoint_path)
-            if checkpoint.get("manifest_sha256") != manifest_hash:
+            if checkpoint_path.parent == checkpoint_directory and checkpoint.get("manifest_sha256") != manifest_hash:
                 raise StaleContext("existing Phase B checkpoint has a different frozen manifest")
             already_spent += sum(
                 float(trace.get("estimated_actual_cost_usd", 0.0))
@@ -1328,11 +1721,11 @@ def run_phase_b(*, owner_activated: bool, output_dir: Path | None = None) -> dic
         reasoning_effort=REASONING_EFFORT,
         format_name="g10r_output",
     )
-    results: dict[str, list[dict[str, Any]]] = {"A1": [], "A2": []}
+    results: dict[str, list[dict[str, Any]]] = {"A1": [], "A2-M": []}
     policy = source_policy()
     identities = source_identity_map()
     for case in load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl"):
-        for arm in ("A1", "A2"):
+        for arm in ("A1", "A2-M"):
             budget = InvestigationBudget(BudgetLimits(estimated_cost_usd=CAP_USD))
             adapter = ConfiguredNetworkRetrievalAdapter(
                 policy=policy,
@@ -1356,7 +1749,7 @@ def run_phase_b(*, owner_activated: bool, output_dir: Path | None = None) -> dic
                 break
         if any(item["status"] != "COMPLETED" for values in results.values() for item in values):
             break
-    outcome, decision = _directional_outcome(results) if len(results["A1"]) == len(results["A2"]) == SEALED_CASE_COUNT else (
+    outcome, decision = _directional_outcome(results, society_arm="A2-M") if len(results["A1"]) == len(results["A2-M"]) == SEALED_CASE_COUNT else (
         "INCONCLUSIVE_ACTIVE_INVESTIGATION",
         {"reason": "budget or availability stopped the complete paired comparison"},
     )

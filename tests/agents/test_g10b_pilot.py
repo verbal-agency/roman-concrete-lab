@@ -74,6 +74,27 @@ class FakeClient:
         self.responses = FakeResponses(output)
 
 
+class MalformedResponses:
+    def create(self, **kwargs):
+        return SimpleNamespace(
+            id="response-malformed",
+            model="gpt-6-luna",
+            output_text='{"summary":"truncated',
+            status="incomplete",
+            incomplete_details=SimpleNamespace(reason="max_output_tokens"),
+            usage=SimpleNamespace(
+                input_tokens=10,
+                output_tokens=100,
+                input_tokens_details=SimpleNamespace(cached_tokens=0),
+            ),
+        )
+
+
+class MalformedClient:
+    def __init__(self):
+        self.responses = MalformedResponses()
+
+
 class CountingProvider:
     def __init__(self, trace):
         self.trace = trace
@@ -146,6 +167,16 @@ class G10BPilotTests(unittest.TestCase):
         )
         with self.assertRaises(ValueError):
             provider.call(call_id="bad", instructions="x", packet={}, max_output_tokens=100)
+
+    def test_malformed_output_exposes_completion_diagnostics(self):
+        provider = OpenAIProvider(
+            root=ROOT,
+            schema=output_schema(),
+            budget=BudgetLedger(),
+            client=MalformedClient(),
+        )
+        with self.assertRaisesRegex(ValueError, r"status='incomplete'.*incomplete_reason='max_output_tokens'.*output_chars=21"):
+            provider.call(call_id="truncated", instructions="x", packet={}, max_output_tokens=100)
 
     def test_checkpoint_replays_duplicate_and_rejects_stale_context(self):
         trace = {"output": valid_output(), "estimated_actual_cost_usd": 0.0}

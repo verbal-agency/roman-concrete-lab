@@ -1,0 +1,13 @@
+{
+  "goal": "G10R-R",
+  "rows": [
+    {"condition": "attributable unresolved candidate", "expected": "retain; discovery credit eligible; no evidence credit; no critical failure", "observed": "PASS"},
+    {"condition": "attributable out-of-rubric candidate", "expected": "retain; no rubric evidence credit; no critical failure", "observed": "PASS"},
+    {"condition": "unattributed citation without recoverable record", "expected": "retain in attribution queue; no credit yet; no fabrication failure", "observed": "PASS"},
+    {"condition": "negated authority language", "expected": "retain flag; no critical failure", "observed": "PASS"},
+    {"condition": "unnegated unauthorized authority language", "expected": "critical failure", "observed": "PASS"},
+    {"condition": "source marked contradicted by attribution audit", "expected": "critical failure", "observed": "PASS"},
+    {"condition": "replay with current G10R traces", "expected": "offline, deterministic, attributable component ledger", "observed": "PASS"},
+    {"condition": "provider/network access during replay", "expected": "zero calls", "observed": "PASS"}
+  ]
+}
