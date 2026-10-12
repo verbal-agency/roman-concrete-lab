@@ -1,6 +1,6 @@
 # G10D — Society role, incentive, and focus redesign
 
-**Status:** proposed
+**Status:** complete
 **Dependencies:** G10M complete; G10R-R replay available; G10P complete or its typed interfaces frozen; no new live model or network execution
 **Advances:** changes the society from a cautious review panel into viewpoint-centered research teams whose structural task agents compile, test, and challenge evidence for competing arguments
 

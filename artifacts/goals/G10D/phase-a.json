@@ -1,0 +1,96 @@
+{
+  "authority": {
+    "credentials": "none",
+    "evidence_promotion": "prohibited",
+    "external_communication": "prohibited",
+    "model_calls": "none",
+    "network": "none",
+    "physical_execution": "prohibited"
+  },
+  "case_summaries": [
+    {
+      "case_id": "VS-DEV-LATERAL",
+      "contradiction_or_dissent": true,
+      "deterministic": true,
+      "discriminator_count": 1,
+      "dossier_count": 3,
+      "envelope_status": "REVIEW_REQUIRED",
+      "fixture_class": "development",
+      "lateral_discovery": true,
+      "null_retained": true,
+      "replay_digest": "sha256:c89cd10eadb1144b5fbafc4f7c51dbd76581f015e2172020d286730954b17b7d",
+      "rival_retained": true,
+      "score": {
+        "consensus_credit": 0,
+        "discriminator_count": 1,
+        "dissent_retained": true,
+        "evidence_promotion": false,
+        "primary_score": 6,
+        "rhetoric_credit": 0,
+        "support_contribution_count": 3,
+        "viewpoint_count_credit": 0,
+        "weakening_contribution_count": 2
+      },
+      "status": "COMPLETE",
+      "support_task_count": 6,
+      "unresolved_candidate_retained": true,
+      "viewpoint_ids": [
+        "VP-LIME",
+        "VP-NULL",
+        "VP-THERMAL"
+      ]
+    },
+    {
+      "case_id": "VS-SEALED-LATERAL",
+      "contradiction_or_dissent": true,
+      "deterministic": true,
+      "discriminator_count": 1,
+      "dossier_count": 3,
+      "envelope_status": "READY",
+      "fixture_class": "sealed",
+      "lateral_discovery": true,
+      "null_retained": true,
+      "replay_digest": "sha256:f35959cfa9db69acf0163f8beed216a6e441351c881068cfdf9a6a5bc066caa2",
+      "rival_retained": true,
+      "score": {
+        "consensus_credit": 0,
+        "discriminator_count": 1,
+        "dissent_retained": true,
+        "evidence_promotion": false,
+        "primary_score": 4,
+        "rhetoric_credit": 0,
+        "support_contribution_count": 2,
+        "viewpoint_count_credit": 0,
+        "weakening_contribution_count": 1
+      },
+      "status": "COMPLETE",
+      "support_task_count": 3,
+      "unresolved_candidate_retained": false,
+      "viewpoint_ids": [
+        "VP-LIME",
+        "VP-NULL",
+        "VP-THERMAL"
+      ]
+    }
+  ],
+  "development_case_count": 1,
+  "external_calls": false,
+  "goal": "G10D",
+  "next_gate": "G10R Phase B remains locked until G10D and G10P are complete and a new owner activation is recorded.",
+  "protocol": "g10d.1-viewpoint-centered-society",
+  "required_behavior_checks": {
+    "contradiction_or_dissent": true,
+    "deterministic": true,
+    "lateral_discovery": true,
+    "no_consensus_credit": true,
+    "no_evidence_promotion": true,
+    "no_rhetoric_credit": true,
+    "no_viewpoint_count_credit": true,
+    "null_retained": true,
+    "rival_retained": true,
+    "unresolved_candidate_retained": true
+  },
+  "schema_version": "1.0",
+  "sealed_case_count": 1,
+  "status": "SOCIETY_DESIGN_READY"
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/tournament-portfolio.schema.json",
+  "title": "Viewpoint tournament portfolio",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "portfolio_id", "case_id", "status", "leading_viewpoint_id", "credible_rival_ids", "viewpoint_dossier_ids", "support_contribution_ids", "source_candidate_ids", "unresolved_disputes", "preserved_dissent_ids", "next_discriminating_action", "authority_note"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "portfolio_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["REVIEW_REQUIRED", "INCONCLUSIVE", "ABSTAIN"]},
+    "leading_viewpoint_id": {"type": ["string", "null"]},
+    "credible_rival_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "viewpoint_dossier_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "support_contribution_ids": {"type": "array", "items": {"type": "string"}},
+    "source_candidate_ids": {"type": "array", "items": {"type": "string"}},
+    "unresolved_disputes": {"type": "array", "items": {"type": "string"}},
+    "preserved_dissent_ids": {"type": "array", "items": {"type": "string"}},
+    "next_discriminating_action": {"type": "string", "minLength": 1},
+    "authority_note": {"type": "string", "minLength": 1}
+  }
+}

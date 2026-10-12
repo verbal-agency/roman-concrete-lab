@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "support_behavior_rules": [
+    {"behavior_id":"SUPPORTS_ARGUMENT","stance":"SUPPORTS","requires":"source_candidate_ids"},
+    {"behavior_id":"WEAKENS_ARGUMENT","stance":"WEAKENS","requires":"source_candidate_ids_or_explicit_uncertainty"},
+    {"behavior_id":"NON_DISCRIMINATING","stance":"NON_DISCRIMINATING","requires":"unresolved_questions"}
+  ],
+  "authority": {"evidence_promotion":"prohibited","lab_execution":"prohibited"}
+}

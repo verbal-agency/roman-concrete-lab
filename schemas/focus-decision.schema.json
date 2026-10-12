@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/focus-decision.schema.json",
+  "title": "Viewpoint focus decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "decision_id", "case_id", "treatment_id", "remaining_actions", "allocations", "ranked_tasks", "scores", "null_retained", "rival_retained", "rationale", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "decision_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "treatment_id": {"type": "string", "minLength": 1},
+    "remaining_actions": {"type": "integer", "minimum": 0},
+    "allocations": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "ranked_tasks": {"type": "array", "items": {"type": "string"}},
+    "scores": {"type": "object", "additionalProperties": {"type": "integer"}},
+    "null_retained": {"type": "boolean"},
+    "rival_retained": {"type": "boolean"},
+    "rationale": {"type": "string", "minLength": 1},
+    "status": {"enum": ["ALLOCATED", "ABSTAIN"]}
+  }
+}
