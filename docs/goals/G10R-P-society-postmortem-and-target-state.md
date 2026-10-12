@@ -1,6 +1,6 @@
 # G10R-P — Society postmortem and target-state design
 
-**Status:** proposed
+**Status:** complete — `TARGET_STATE_READY_FOR_OFFLINE_BUILD`
 **Dependencies:** G10R complete with `DO_NOT_ESCALATE_ACTIVE_SOCIETY`, `artifacts/goals/G10R/run.json`, and `artifacts/goals/G10R-R/replay.json`; no new model, network, subscription, or laboratory execution
 **Advances:** determines whether the negative live signal came from society design, runtime integration, information-acquisition policy, task/case construction, or scoring, then defines the measurable target state required before another paid evaluation
 

@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "goal": "G10R-P",
+  "status": "TARGET_STATE_READY_FOR_OFFLINE_BUILD",
+  "non_goals": [
+    "another paid run",
+    "evidence promotion",
+    "laboratory authorization",
+    "production adoption"
+  ],
+  "thresholds": {
+    "topology_fidelity": {
+      "viewpoint_society_runtime": true,
+      "evidence_bus_runtime": true,
+      "legacy_path_only": false
+    },
+    "open_world_coverage": {
+      "null_active": true,
+      "credible_rival_active": true,
+      "open_slot_admission_tested": true
+    },
+    "support_task_link_rate": {
+      "minimum": 1.0,
+      "unit": "support reports with valid viewpoint and task joins"
+    },
+    "support_task_types": [
+      "RETRIEVAL",
+      "EXTRACTION_IDENTITY",
+      "CONTRADICTION",
+      "EXPERIMENT_DESIGN"
+    ],
+    "development_capability": {
+      "unique_attributable_discovery_min": 1,
+      "weakening_result_min": 1,
+      "contradiction_min": 1,
+      "discriminator_min": 1
+    },
+    "evidence_acquisition": {
+      "permitted_fetches_on_fetch_positive_fixture_min": 1,
+      "page_aware_cards_on_fetch_positive_fixture_min": 1
+    },
+    "budget_parity": {
+      "all_aggregate_limits_equal": true,
+      "overhead_visible": true,
+      "pre_call_cap_enforced": true
+    },
+    "replayability": {
+      "byte_stable": true,
+      "duplicate_actions_replay": true,
+      "unresolved_candidates_retained": true
+    },
+    "future_escalation_rule": {
+      "case_gain_min": 1,
+      "society_total_noninferior": true,
+      "unique_source_backed_contribution_required": true,
+      "critical_failures_allowed": 0
+    }
+  }
+}
