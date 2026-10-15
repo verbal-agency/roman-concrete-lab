@@ -1,0 +1,79 @@
+{
+  "document_fixture": {
+    "negative_rights_blocked": true,
+    "page_locator": "fixture://g10r/native-text-benchmark.pdf#page=1",
+    "payload_retained": false,
+    "positive_page_card": true
+  },
+  "external_calls": false,
+  "failure_reasons": [],
+  "fixture_ready": true,
+  "fixtures": [
+    {
+      "case_id": "VS-DEV-LATERAL",
+      "critique_count": 1,
+      "dissent_retained": true,
+      "dossier_count": 3,
+      "envelope_status": "REVIEW_REQUIRED",
+      "evidence_bus_join_diagnostics": [
+        "unresolved_source_candidate:SRC-LIME-MISSING"
+      ],
+      "evidence_promotion": false,
+      "null_retained": true,
+      "open_slot_present": true,
+      "primary_score": 6,
+      "source_candidate_count": 3,
+      "status": "COMPLETE",
+      "support_report_count": 6,
+      "support_task_count": 6,
+      "viewpoint_count": 3
+    },
+    {
+      "case_id": "VS-SEALED-LATERAL",
+      "critique_count": 1,
+      "dissent_retained": true,
+      "dossier_count": 3,
+      "envelope_status": "READY",
+      "evidence_bus_join_diagnostics": [],
+      "evidence_promotion": false,
+      "null_retained": true,
+      "open_slot_present": true,
+      "primary_score": 4,
+      "source_candidate_count": 3,
+      "status": "COMPLETE",
+      "support_report_count": 3,
+      "support_task_count": 3,
+      "viewpoint_count": 3
+    }
+  ],
+  "goal": "G10R-I",
+  "next_action": "Freeze a fresh Phase-A manifest before any future paid evaluation.",
+  "runner_audit": {
+    "evidence_bus_imported": true,
+    "legacy_mechanism_tournament_imported": false,
+    "open_slot_filtered": false,
+    "runtime_contract_ready": true,
+    "viewpoint_society_imported": true
+  },
+  "runtime_ready": true,
+  "runtime_smoke": {
+    "action_count": 9,
+    "authority_safe": true,
+    "checkpoint_has_society": true,
+    "critique_count": 3,
+    "dossier_count": 4,
+    "evidence_bus_join_diagnostics": [],
+    "focus_present": true,
+    "model_trace_count": 13,
+    "open_slot_admitted": true,
+    "portfolio_present": true,
+    "replay_stable": true,
+    "state": "completed",
+    "status": "COMPLETED",
+    "support_report_count": 43,
+    "support_task_count": 20,
+    "viewpoint_count": 4
+  },
+  "schema_version": "1.0",
+  "status": "RUNTIME_INTEGRATION_READY"
+}

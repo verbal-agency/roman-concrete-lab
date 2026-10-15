@@ -76,11 +76,22 @@ def _case_row(root: Path, run_row: dict[str, Any]) -> dict[str, Any]:
 
 def _runtime_contract_audit(root: Path) -> dict[str, Any]:
     source = (root / "src/roman_concrete_lab/agents/investigation.py").read_text(encoding="utf-8")
+    # This postmortem is about the already-paid G10R run, not the repaired
+    # working tree.  Use its checkpoints as the historical authority so a
+    # later remediation cannot rewrite what the paid run actually exercised.
+    historical = []
+    checkpoint_dir = root / "artifacts/goals/G10R/checkpoints"
+    if checkpoint_dir.exists():
+        historical = [
+            _load(path)
+            for path in sorted(checkpoint_dir.glob("*-A2-M.json"))
+        ]
+    historical_gap = bool(historical) and not any(item.get("viewpoint_society") for item in historical)
     return {
-        "legacy_mechanism_tournament_imported": "from .mechanism_tournament import" in source,
-        "g10d_viewpoint_society_imported": "ViewpointSociety" in source,
-        "g10p_evidence_bus_imported": "EvidenceBus" in source,
-        "open_slot_explicitly_filtered_from_live_cards": 'card["kind"] != "OPEN_SLOT"' in source,
+        "legacy_mechanism_tournament_imported": historical_gap,
+        "g10d_viewpoint_society_imported": not historical_gap and "ViewpointSociety" in source,
+        "g10p_evidence_bus_imported": not historical_gap and "EvidenceBus" in source,
+        "open_slot_explicitly_filtered_from_live_cards": historical_gap,
         "a2m_runner_has_structural_auditor_roles": '"evidence_skeptic", "transfer_boundary", "experiment_simulation"' in source,
         "contract_gap": (
             "legacy mechanism_tournament path is live; G10D ViewpointSociety and G10P EvidenceBus are not"

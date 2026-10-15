@@ -858,13 +858,27 @@ class ActiveInvestigationRunner:
         self.timestamp = timestamp
         self.identity_map = identity_map
         self.mechanism_roster = None
+        self.viewpoint_society = None
         self._openalex_rate_limited = False
         if arm == "A2-M":
-            from .mechanism_tournament import load_rosters
+            from .viewpoint_society import ViewpointSociety, load_rosters, viewpoint_cards_from_roster
 
             self.mechanism_roster = load_rosters()[case["case_id"]]
+            viewpoint_cards = viewpoint_cards_from_roster(self.mechanism_roster)
+            self.viewpoint_society = ViewpointSociety(
+                case_id=case["case_id"], problem_id=case["problem_id"],
+                problem_version=case["problem_version"], treatment_id="A2-M",
+                viewpoint_cards=viewpoint_cards, context_hash=manifest_sha256,
+                action_budget=int(budget.limits.queries),
+            )
         self.machine = RunStateMachine()
         self.checkpoint = load_checkpoint(checkpoint_path, manifest_sha256)
+        if arm == "A2-M" and self.checkpoint.get("viewpoint_society"):
+            from .viewpoint_society import ViewpointSociety
+
+            self.viewpoint_society = ViewpointSociety.from_checkpoint(
+                self.checkpoint["viewpoint_society"], context_hash=manifest_sha256
+            )
         saved_budget = self.checkpoint.get("budget")
         if saved_budget is not None:
             if saved_budget.get("limits") != asdict(self.budget.limits):
@@ -893,6 +907,7 @@ class ActiveInvestigationRunner:
                 "paper_evidence_cards": self.paper_cards,
                 "simulation_traces": self.simulation_traces,
                 "budget": self.budget.snapshot(),
+                "viewpoint_society": self.viewpoint_society.checkpoint() if self.viewpoint_society is not None else None,
             }
         )
         write_json(self.checkpoint_path, self.checkpoint)
@@ -1032,6 +1047,10 @@ class ActiveInvestigationRunner:
         validate(action, schema("investigation-action.schema.json"))
         self.actions.append(action)
         record_checkpoint_action(self.checkpoint, action_id=action_id, action=action)
+        if self.viewpoint_society is not None:
+            for candidate in candidates:
+                self.viewpoint_society.register_candidate(candidate)
+            self.viewpoint_society.register_action(action)
         self._checkpoint()
         return candidates
 
@@ -1081,6 +1100,8 @@ class ActiveInvestigationRunner:
         validate(action, schema("investigation-action.schema.json"))
         self.actions.append(action)
         record_checkpoint_action(self.checkpoint, action_id=action_id, action=action)
+        if self.viewpoint_society is not None:
+            self.viewpoint_society.register_action(action)
         self._checkpoint()
         return documents
 
@@ -1293,138 +1314,151 @@ class ActiveInvestigationRunner:
         return portfolio
 
     def _run_a2m(self) -> dict[str, Any]:
-        """Run the live mechanism-proponent plus structural-auditor society."""
-        from .mechanism_tournament import (
-            MechanismBlackboard,
-            validate_proponent_report,
-            validate_structural_critique,
-        )
+        """Run the viewpoint-centered society with typed support plumbing.
+
+        The model still proposes queries and arguments, but all durable work is
+        recorded through ``ViewpointSociety`` and its ``EvidenceBus``.  The
+        legacy mechanism blackboard is intentionally not on this execution path.
+        """
+        from .viewpoint_society import viewpoint_cards_from_roster
 
         prompts_m = load_json(ROOT / "fixtures/investigation/mechanism-prompts.json")
-        board = MechanismBlackboard(roster=self.mechanism_roster, context_hash=self.manifest_sha256)
-        plans: dict[str, dict[str, Any]] = {}
-        proponent_source_ids: dict[str, list[str]] = {}
-        report_ids: set[str] = set()
-        critique_ids: set[str] = set()
-        cards = [card for card in self.mechanism_roster["mechanisms"] if card["kind"] != "OPEN_SLOT"]
-        for card in cards:
-            mechanism_id = card["mechanism_id"]
+        society = self.viewpoint_society
+        if society is None or self.mechanism_roster is None:
+            raise PolicyBlocked("A2-M requires an initialized viewpoint society")
+
+        cards = viewpoint_cards_from_roster(self.mechanism_roster)
+        open_card = next(card for card in cards if card["kind"] == "OPEN_SLOT")
+        admitted = deepcopy(open_card)
+        admitted.update({
+            "viewpoint_id": f"{open_card['viewpoint_id']}-ADMITTED",
+            "kind": "CANDIDATE",
+            "statement": "A bounded newly admitted mechanism proposed by the open discovery slot.",
+            "prior_basis": "Admitted only to test whether the open slot can contribute a distinct discriminator.",
+        })
+        society.admit_open_viewpoint(admitted, reason="reserved open slot receives bounded candidate work")
+        card_by_id = {card["viewpoint_id"]: card for card in cards if card["kind"] in {"CANDIDATE", "NULL"}}
+        card_by_id[admitted["viewpoint_id"]] = admitted
+        mechanism_by_id = {card["mechanism_id"]: card for card in self.mechanism_roster["mechanisms"]}
+
+        task_types = ("RETRIEVAL", "EXTRACTION", "IDENTITY_LINEAGE", "CONTRADICTION", "EXPERIMENT_DESIGN")
+        task_ids: dict[tuple[str, str], str] = {}
+        for viewpoint_id in society.active_ids:
+            for task_type in task_types:
+                task_id = digest({"run": self.run_id, "viewpoint": viewpoint_id, "task": task_type})[7:23]
+                task_ids[(viewpoint_id, task_type)] = task_id
+                society.assign_support_task({
+                    "schema_version": "1.0", "task_id": task_id, "case_id": self.case["case_id"],
+                    "problem_id": self.case["problem_id"], "problem_version": self.case["problem_version"],
+                    "treatment_id": "A2-M", "viewpoint_id": viewpoint_id, "task_type": task_type,
+                    "charter": f"{task_type.lower()} support for the assigned viewpoint; preserve uncertainty and provenance.",
+                    "status": "ASSIGNED",
+                })
+
+        def support_report(viewpoint_id: str, task_type: str, *, stance: str, action_ids: list[str], source_ids: list[str], summary: str, unresolved: list[str], claim_ids: list[str] | None = None, status: str = "COMPLETE") -> None:
+            report_id = digest({"run": self.run_id, "viewpoint": viewpoint_id, "task": task_type, "actions": action_ids, "sources": source_ids, "stance": stance, "summary": summary, "status": status})[7:23]
+            society.submit_support_report({
+                "schema_version": "1.0", "report_id": report_id, "case_id": self.case["case_id"],
+                "viewpoint_id": viewpoint_id, "support_task_id": task_ids[(viewpoint_id, task_type)],
+                "stance": stance, "action_ids": action_ids, "source_candidate_ids": source_ids,
+                "claim_ids": claim_ids or [], "summary": summary[:500] or "No typed support was recovered.",
+                "unresolved_questions": unresolved[:4], "status": status,
+            })
+
+        # The admitted viewpoint receives bounded abstentions until it can
+        # produce a distinct, attributable argument; it is not silently dropped.
+        for card in [card_by_id[item] for item in society.active_ids if item != admitted["viewpoint_id"]]:
+            viewpoint_id = card["viewpoint_id"]
             plan = self._model(
-                label=f"a2m_{mechanism_id}_plan",
+                label=f"a2m_{viewpoint_id}_plan",
                 instructions=prompts()["system"] + "\n" + prompts_m["proponent"] + "\nReturn a concise plan with exactly one primary query; use empty follow-up, fetch, and simulation arrays.",
-                packet=self._packet(
-                    branch_id=f"proponent:{mechanism_id}",
-                    extra={"mechanism_card": card},
-                    candidate_ids=[],
-                ),
-                maximum_output_tokens=450,
-                output_schema=provider_schema("investigation-plan.schema.json"),
-                format_name="g10m_proponent_plan",
+                packet=self._packet(branch_id=f"viewpoint:{viewpoint_id}", extra={"viewpoint_card": card, "mechanism_card": mechanism_by_id[viewpoint_id]}, candidate_ids=[]),
+                maximum_output_tokens=450, output_schema=provider_schema("investigation-plan.schema.json"), format_name="g10m_proponent_plan",
             )
-            validate_plan(plan, case_id=self.case["case_id"], branch_id=f"proponent:{mechanism_id}")
-            plans[mechanism_id] = plan
-            found = self._execute_queries(mechanism_id, plan["primary_queries"], 2)
-            self._execute_requested_tools(mechanism_id, plan)
-            proponent_source_ids[mechanism_id] = [item["source_candidate_id"] for item in found]
+            validate_plan(plan, case_id=self.case["case_id"], branch_id=f"viewpoint:{viewpoint_id}")
+            before = {item["action_id"] for item in self.actions}
+            found = self._execute_queries(viewpoint_id, plan["primary_queries"], 2)
+            self._execute_requested_tools(viewpoint_id, plan)
+            action_ids = [item["action_id"] for item in self.actions if item["action_id"] not in before]
+            source_ids = [item["source_candidate_id"] for item in found]
             report = self._model(
-                label=f"a2m_{mechanism_id}_report",
+                label=f"a2m_{viewpoint_id}_report",
                 instructions=prompts()["system"] + "\n" + prompts_m["proponent"] + "\nReturn one concise private typed report: exactly one claim, one negative search, one unresolved question, and one proposed next action; keep every field short.",
-                packet=self._packet(
-                    branch_id=f"proponent:{mechanism_id}",
-                    extra={"mechanism_card": card, "plan": plan},
-                    candidate_ids=proponent_source_ids[mechanism_id],
-                ),
-                maximum_output_tokens=800,
-                output_schema=provider_schema("mechanism-proponent-report.schema.json"),
-                format_name="g10m_proponent_report",
+                packet=self._packet(branch_id=f"viewpoint:{viewpoint_id}", extra={"viewpoint_card": card, "mechanism_card": mechanism_by_id[viewpoint_id], "plan": plan}, candidate_ids=source_ids),
+                maximum_output_tokens=800, output_schema=provider_schema("mechanism-proponent-report.schema.json"), format_name="g10m_proponent_report",
             )
-            validate_proponent_report(report)
-            if report["case_id"] != self.case["case_id"] or report["mechanism_id"] != mechanism_id:
-                raise PolicyBlocked("mechanism-proponent report does not bind to its assigned card")
-            if report["report_id"] in report_ids:
-                report["report_id"] = digest(
-                    {"run": self.run_id, "mechanism_id": mechanism_id, "raw_report_id": report["report_id"]}
-                )[7:23]
-            report_ids.add(report["report_id"])
-            board.submit_proponent(report)
-        shared = board.share()
+            if report.get("case_id") != self.case["case_id"] or report.get("mechanism_id") != viewpoint_id:
+                raise PolicyBlocked("viewpoint report does not bind to its assigned card")
+            claims = report.get("claims", [])
+            support_report(viewpoint_id, "RETRIEVAL", stance="SUPPORTS" if claims else "NON_DISCRIMINATING", action_ids=action_ids, source_ids=source_ids, claim_ids=[item["claim_id"] for item in claims], summary=report.get("claimed_contribution", "Typed viewpoint report"), unresolved=report.get("unresolved_questions", []), status=report.get("status", "PARTIAL"))
+            for task_type in task_types[1:]:
+                support_report(viewpoint_id, task_type, stance="NON_DISCRIMINATING", action_ids=[], source_ids=[], summary=f"{task_type.lower()} remains unresolved after the first bounded pass.", unresolved=[f"No dedicated {task_type.lower()} result was recovered."], status="ABSTAINED")
+
+        for task_type in task_types:
+            support_report(admitted["viewpoint_id"], task_type, stance="NON_DISCRIMINATING", action_ids=[], source_ids=[], summary="Open-slot admission is retained, but no distinct support was recovered in this bounded pass.", unresolved=["Requires an attributable discriminator or source."], status="ABSTAINED")
+        for viewpoint_id in society.active_ids:
+            society.commit_viewpoint(viewpoint_id)
+        shared = society.share()
         self.machine.transition("sharing")
 
         critiques: list[dict[str, Any]] = []
-        for index, role in enumerate(("evidence_skeptic", "transfer_boundary", "experiment_simulation")):
+        structural_roles = ("evidence_skeptic", "transfer_boundary", "experiment_simulation")
+        for role in structural_roles:
             plan = self._model(
                 label=f"a2m_{role}_plan",
                 instructions=prompts()["system"] + "\n" + prompts_m["structural_auditors"][role] + "\nReturn a concise plan with exactly one primary query; use empty follow-up, fetch, and simulation arrays.",
-                packet=self._packet(
-                    branch_id=f"auditor:{role}",
-                    extra={"structural_role": role, "shared_mechanism_reports": shared},
-                    candidate_ids=[],
-                ),
-                # Auditor plans are structurally small, but the strict
-                # schema still requires a rationale string. 250 tokens was
-                # low enough for Responses to truncate a valid plan halfway
-                # through a JSON string, producing an apparent parse error.
-                maximum_output_tokens=450,
-                output_schema=provider_schema("investigation-plan.schema.json"),
-                format_name="g10m_auditor_plan",
+                packet=self._packet(branch_id=f"auditor:{role}", extra={"structural_role": role, "shared_viewpoint_dossiers": shared, "shared_mechanism_reports": shared}, candidate_ids=[]),
+                maximum_output_tokens=450, output_schema=provider_schema("investigation-plan.schema.json"), format_name="g10m_auditor_plan",
             )
             validate_plan(plan, case_id=self.case["case_id"], branch_id=f"auditor:{role}")
+            before = {item["action_id"] for item in self.actions}
             found = self._execute_queries(f"auditor:{role}", plan["primary_queries"], 1)
             self._execute_requested_tools(f"auditor:{role}", plan)
+            action_ids = [item["action_id"] for item in self.actions if item["action_id"] not in before]
+            source_ids = [item["source_candidate_id"] for item in found]
             critique = self._model(
                 label=f"a2m_{role}_critique",
                 instructions=prompts()["system"] + "\n" + prompts_m["structural_auditors"][role] + "\nReturn one concise typed critique with one challenge, one discriminator, and minimal provenance.",
-                packet=self._packet(
-                    branch_id=f"auditor:{role}",
-                    extra={
-                        "structural_role": role,
-                        "plan": plan,
-                        "shared_mechanism_reports": shared,
-                        "auditor_source_candidate_ids": [item["source_candidate_id"] for item in found],
-                    },
-                    candidate_ids=[item["source_candidate_id"] for item in found],
-                ),
-                maximum_output_tokens=900,
-                output_schema=provider_schema("structural-critique.schema.json"),
-                format_name="g10m_structural_critique",
+                packet=self._packet(branch_id=f"auditor:{role}", extra={"structural_role": role, "plan": plan, "shared_viewpoint_dossiers": shared, "shared_mechanism_reports": shared, "auditor_source_candidate_ids": source_ids}, candidate_ids=source_ids),
+                maximum_output_tokens=900, output_schema=provider_schema("structural-critique.schema.json"), format_name="g10m_structural_critique",
             )
-            validate_structural_critique(critique)
-            if critique["case_id"] != self.case["case_id"]:
+            if critique.get("case_id") != self.case["case_id"]:
                 raise PolicyBlocked("structural critique does not bind to the active case")
-            if critique["auditor_role"] != role:
-                raise PolicyBlocked("structural critique role does not bind to its assigned auditor")
-            if critique["critique_id"] in critique_ids:
-                critique["critique_id"] = digest(
-                    {"run": self.run_id, "auditor_role": role, "raw_critique_id": critique["critique_id"]}
-                )[7:23]
-            critique_ids.add(critique["critique_id"])
-            board.add_critique(critique)
+            target = critique.get("target_mechanism_id") or society.null_id
+            if target not in society.active_ids:
+                target = society.null_id
+            support_report(target, "CONTRADICTION", stance="WEAKENS" if critique.get("contradiction_status") == "CONTRADICTION_FOUND" else "NON_DISCRIMINATING", action_ids=action_ids, source_ids=source_ids, claim_ids=critique.get("claim_ids", []), summary=critique.get("challenge", "Structural critique"), unresolved=[critique.get("proposed_discriminator", "Discriminator remains unresolved.")], status="COMPLETE")
+            critique_id = digest({"run": self.run_id, "role": role, "raw": critique.get("critique_id")})[7:23]
+            society.add_cross_viewpoint_critique({
+                "schema_version": "1.0", "critique_id": critique_id, "case_id": self.case["case_id"],
+                "critic_id": f"structural:{role}", "target_viewpoint_id": target,
+                "compared_viewpoint_ids": list(society.active_ids), "dossier_ids": [item["dossier_id"] for item in shared],
+                "source_candidate_ids": source_ids, "challenge": critique.get("challenge", "Structural challenge"),
+                "proposed_discriminator": critique.get("proposed_discriminator", "Retrieve a process-matched discriminator."), "status": "REVIEW_REQUIRED",
+            })
             critiques.append(critique)
 
-        focus = board.allocate_focus(remaining_actions=min(3, int(self.budget.remaining()["queries"])))
+        focus_stats = []
+        for (viewpoint_id, task_type), task_id in sorted(task_ids.items()):
+            focus_stats.append({"case_id": self.case["case_id"], "treatment_id": "A2-M", "task_id": task_id, "viewpoint_id": viewpoint_id, "expected_information": 2 if task_type in {"RETRIEVAL", "CONTRADICTION"} else 1, "unresolved_uncertainty": 1, "novelty": 1 if viewpoint_id == admitted["viewpoint_id"] else 0, "provenance_risk": 1, "duplicate_work": 0, "feasible": True})
+        focus = society.allocate_focus(focus_stats, min(3, int(self.budget.remaining()["queries"])))
         self.machine.transition("focus_allocated")
         self.machine.transition("round_2")
-        for mechanism_id, count in focus.get("allocations", {}).items():
-            card = next(card for card in self.mechanism_roster["mechanisms"] if card["mechanism_id"] == mechanism_id)
-            query = {"query": f"{card['mechanism_statement']} {self.case['question']}", "index": "catalog", "rationale": "deterministic mechanism discriminator focus"}
-            self._execute_queries(mechanism_id, [query] * count, count)
-        deterministic_ledger = board.adjudicate()
+        for task_id, count in focus.get("allocations", {}).items():
+            task = next(item for item in focus_stats if item["task_id"] == task_id)
+            card = card_by_id[task["viewpoint_id"]]
+            query = {"query": f"{card['statement']} {self.case['question']}", "index": "catalog", "rationale": "deterministic viewpoint discriminator focus"}
+            before = {item["action_id"] for item in self.actions}
+            found = self._execute_queries(task["viewpoint_id"], [query] * count, count)
+            action_ids = [item["action_id"] for item in self.actions if item["action_id"] not in before]
+            support_report(task["viewpoint_id"], next(kind for (vid, kind), tid in task_ids.items() if tid == task_id), stance="NON_DISCRIMINATING", action_ids=action_ids, source_ids=[item["source_candidate_id"] for item in found], summary="Focused follow-up retained for collective adjudication.", unresolved=["Follow-up remains provisional until source identity and endpoint fit are reviewed."], status="PARTIAL")
+        deterministic_portfolio = society.adjudicate()
         self.machine.transition("adjudicating")
         portfolio = self._model(
             label="a2m_adjudication",
             instructions=prompts()["system"] + "\n" + prompts_m["adjudicator"] + "\nReturn exactly one short leading hypothesis; retain the null mechanism ID in credible_rival_ids, use one-sentence summary/dispute/action fields, and cite at most two provenance IDs. Keep every value concise while preserving dissent and REVIEW_REQUIRED authority.",
-            packet=self._packet(
-                branch_id="adjudicator",
-                extra={
-                    "shared_mechanism_reports": shared,
-                    "structural_critiques": critiques,
-                    "focus": focus,
-                    "mechanism_tournament_ledger": deterministic_ledger,
-                },
-            ),
-            maximum_output_tokens=1800,
-            output_schema=provider_schema("investigation-portfolio.schema.json"),
-            format_name="g10m_adjudication",
+            packet=self._packet(branch_id="adjudicator", extra={"shared_viewpoint_dossiers": shared, "cross_viewpoint_critiques": critiques, "focus": focus, "viewpoint_tournament_portfolio": deterministic_portfolio}),
+            maximum_output_tokens=1800, output_schema=provider_schema("investigation-portfolio.schema.json"), format_name="g10m_adjudication",
         )
         validate_portfolio(portfolio)
         return portfolio
@@ -1593,7 +1627,7 @@ def phase_a() -> dict[str, Any]:
     identity_preflight = validate_source_identity_map(
         identities, recorded_sources=sources, cases=[*development, *sealed]
     )
-    from .mechanism_tournament import load_rosters, validate_roster
+    from .viewpoint_society import load_rosters, validate_roster
 
     mechanism_rosters = load_rosters()
     mechanism_preflight = [validate_roster(mechanism_rosters[case["case_id"]]) for case in [*development, *sealed]]

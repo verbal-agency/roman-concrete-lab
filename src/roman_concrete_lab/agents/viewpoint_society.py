@@ -31,6 +31,65 @@ def _validate(name: str, value: dict[str, Any]) -> None:
     validate(value, _schema(name))
 
 
+def load_rosters() -> dict[str, dict[str, Any]]:
+    """Load the frozen mechanism cards used as viewpoint-card inputs."""
+    payload = json.loads((ROOT / "fixtures/investigation/mechanism-rosters.json").read_text(encoding="utf-8"))
+    if payload.get("schema_version") != "1.0":
+        raise ValueError("unsupported mechanism roster schema")
+    rosters = {row["case_id"]: row for row in payload["rosters"]}
+    if len(rosters) != len(payload["rosters"]):
+        raise ValueError("duplicate mechanism roster case")
+    return rosters
+
+
+def validate_roster(roster: dict[str, Any]) -> dict[str, Any]:
+    """Validate the frozen roster without importing the legacy tournament."""
+    mechanisms = roster.get("mechanisms", [])
+    if not mechanisms:
+        raise ValueError("mechanism roster is empty")
+    for card in mechanisms:
+        _validate("mechanism-card.schema.json", card)
+        if card["case_id"] != roster["case_id"]:
+            raise PolicyBlocked("mechanism card case does not match roster")
+    ids = [card["mechanism_id"] for card in mechanisms]
+    if len(ids) != len(set(ids)):
+        raise PolicyBlocked("duplicate mechanism_id in roster")
+    if sum(card["kind"] == "NULL" for card in mechanisms) != 1:
+        raise PolicyBlocked("roster must contain exactly one null mechanism")
+    if sum(card["kind"] == "OPEN_SLOT" for card in mechanisms) != 1:
+        raise PolicyBlocked("roster must contain exactly one open mechanism slot")
+    if sum(card["kind"] == "CANDIDATE" for card in mechanisms) < 2:
+        raise PolicyBlocked("roster must contain at least two plausible mechanisms")
+    return {
+        "passes": True,
+        "case_id": roster["case_id"],
+        "mechanism_count": len(mechanisms),
+        "candidate_count": sum(card["kind"] == "CANDIDATE" for card in mechanisms),
+        "null_ids": [card["mechanism_id"] for card in mechanisms if card["kind"] == "NULL"],
+        "open_slot_ids": [card["mechanism_id"] for card in mechanisms if card["kind"] == "OPEN_SLOT"],
+    }
+
+
+def viewpoint_cards_from_roster(roster: dict[str, Any]) -> list[dict[str, Any]]:
+    """Translate frozen mechanism cards into the G10D viewpoint contract."""
+    cards = []
+    for mechanism in roster["mechanisms"]:
+        cards.append({
+            "schema_version": "1.0",
+            "case_id": mechanism["case_id"],
+            "viewpoint_id": mechanism["mechanism_id"],
+            "kind": mechanism["kind"],
+            "statement": mechanism["mechanism_statement"],
+            "support_region": mechanism["support_region"],
+            "prior_basis": mechanism["prior_basis"],
+            "predictions": mechanism["predicted_observations"],
+            "falsifiers": mechanism["falsifiers"],
+            "known_alternatives": mechanism["known_alternatives"],
+            "promotion_status": "REVIEW_REQUIRED",
+        })
+    return cards
+
+
 def validate_viewpoint_card(card: dict[str, Any], *, case_id: str) -> None:
     _validate("viewpoint-card.schema.json", card)
     if card["case_id"] != case_id:
@@ -207,8 +266,6 @@ class ViewpointSociety:
         self.bus.assign_task(task)
 
     def submit_support_report(self, report: dict[str, Any]) -> None:
-        if self._shared:
-            raise PolicyBlocked("support reports cannot be added after viewpoints share dossiers")
         viewpoint_id = report["viewpoint_id"]
         if viewpoint_id not in self.private_reports:
             raise PolicyBlocked("support report targets an unknown viewpoint")

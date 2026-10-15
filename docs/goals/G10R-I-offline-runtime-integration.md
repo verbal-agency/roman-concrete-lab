@@ -1,6 +1,6 @@
 # G10R-I — Offline society runtime integration gate
 
-**Status:** proposed
+**Status:** complete — `RUNTIME_INTEGRATION_READY`
 **Dependencies:** G10R-P complete with `TARGET_STATE_READY_FOR_OFFLINE_BUILD`; G10D and G10P complete; no model, network, subscription, credential, or laboratory execution
 **Advances:** wires the intended G10D viewpoint society and G10P evidence bus into the live-capable investigation runner and proves the target-state invariants offline before another paid evaluation
 
@@ -15,6 +15,10 @@ again immediately.
 
 This goal makes runtime fidelity a separately testable gate. It does not claim
 that the integrated society is useful, and it does not authorize live calls.
+
+The wiring was repaired within this goal: the A2-M runner now records work
+through `ViewpointSociety` and `EvidenceBus`, admits the reserved open slot as a
+bounded candidate, and persists the typed society checkpoint.
 
 ## Objective
 
