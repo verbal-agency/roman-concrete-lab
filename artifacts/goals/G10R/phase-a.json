@@ -481,13 +481,25 @@
         "path": "schemas/branch-report.schema.json",
         "sha256": "sha256:466d476e360c128d85ee29acc8aa65b176f0b55763fc4f31980b854faf379b0b"
       },
+      "cross_viewpoint_critique_schema": {
+        "path": "schemas/cross-viewpoint-critique.schema.json",
+        "sha256": "sha256:93bd28be7ddae294aeaf2b2a7867385d529383384d6dd95836606dada2541b3f"
+      },
       "development_cases": {
         "path": "fixtures/investigation/development.jsonl",
         "sha256": "sha256:c02e87ccb04dff41fc5d87f448d67bd0fe587d776f0eadce80427dfafd1039f6"
       },
+      "evidence_bus_protocol": {
+        "path": "docs/protocols/society-evidence-bus.md",
+        "sha256": "sha256:ea04b34b480f0c1e1a7c2d2aabb5e001bf0747143b8c8a3cf4bd07399184c0f6"
+      },
+      "evidence_bus_runner": {
+        "path": "src/roman_concrete_lab/agents/evidence_bus.py",
+        "sha256": "sha256:675b125064e916cd6e8d106cbf4f01e1e9cc3eb1f67830cb78b432a20bc235e6"
+      },
       "goal": {
         "path": "docs/goals/G10R-open-world-lateral-research.md",
-        "sha256": "sha256:b3e26facb49a9a2759dfb31362762c6e240ff13be6d0c43ca3bba54f3d98dc01"
+        "sha256": "sha256:b625b25f9ffdfd01f27c0d4190f0dd907dfec845fe98894a9d381b9d4258d3dc"
       },
       "investigation_action_schema": {
         "path": "schemas/investigation-action.schema.json",
@@ -583,7 +595,7 @@
       },
       "runner": {
         "path": "src/roman_concrete_lab/agents/investigation.py",
-        "sha256": "sha256:d4f0486e3b492ab52b6ada05fb8dbeeff20f5bbd592cc47139eff253734db876"
+        "sha256": "sha256:81ea272dc9d85a6e4904a25318ac438ddd9ba3b3b98b1f54df322a5cbfded7d7"
       },
       "sealed_cases": {
         "path": "fixtures/investigation/sealed.jsonl",
@@ -596,6 +608,10 @@
       "simulation_trace_schema": {
         "path": "schemas/simulation-trace.schema.json",
         "sha256": "sha256:870037fd6be919e45db36ab123d112885f1bff729a1a3dd3bece9952e3388bfd"
+      },
+      "society_portfolio_envelope_schema": {
+        "path": "schemas/society-portfolio-envelope.schema.json",
+        "sha256": "sha256:d37347979e3d263a44b17802ad1b177352f1bf686a2df1e951c252209d8a10c9"
       },
       "source_attribution_audit_schema": {
         "path": "schemas/source-attribution-audit.schema.json",
@@ -616,6 +632,30 @@
       "structural_critique_schema": {
         "path": "schemas/structural-critique.schema.json",
         "sha256": "sha256:3c64d2f146cd47cd49517241ecfac0587e953dd35e2bcae1e2d6c1c8aa844a49"
+      },
+      "viewpoint_card_schema": {
+        "path": "schemas/viewpoint-card.schema.json",
+        "sha256": "sha256:37961c17ff5e2fca620f5f91d5f1c684cacea3c1b9414f5f597bfaf389c8d640"
+      },
+      "viewpoint_dossier_schema": {
+        "path": "schemas/viewpoint-dossier.schema.json",
+        "sha256": "sha256:9dc3004404cc4afd1823404e662241b3569edacd086eac3ca8d65e6a01f09536"
+      },
+      "viewpoint_society_protocol": {
+        "path": "docs/protocols/viewpoint-society.md",
+        "sha256": "sha256:1f3572f766ee6f37127051cbbca444e17f8aaebec6c5003d77222f4614f5aaa9"
+      },
+      "viewpoint_society_runner": {
+        "path": "src/roman_concrete_lab/agents/viewpoint_society.py",
+        "sha256": "sha256:efd64a631208ae38ee2a84635594542347058494f84597c04e9da262882d3c4e"
+      },
+      "viewpoint_support_report_schema": {
+        "path": "schemas/viewpoint-support-report.schema.json",
+        "sha256": "sha256:95de968d6110d10526f6df184ae285a782b7595e348769243a922f255b658bb8"
+      },
+      "viewpoint_support_task_schema": {
+        "path": "schemas/viewpoint-support-task.schema.json",
+        "sha256": "sha256:ac477b610458a820e9a58227c2ac6b27c0675acd06501d53cbd099318b13d941"
       }
     },
     "hard_total_external_spend_cap_usd": 25.0,
@@ -665,10 +705,10 @@
     "treatments": {
       "A0": "recorded-fixture deterministic plumbing control",
       "A1": "single tool-using investigator",
-      "A2-M": "mechanism proponents plus structural auditors, deterministic focus, and bounded adjudication"
+      "A2-M": "viewpoint society with structural support tasks, evidence-bus joins, deterministic focus, and bounded adjudication"
     }
   },
-  "manifest_sha256": "sha256:23b4f83354e576eb3497b4b4b38ac905e2441698501b5d5fd6ac6e07675236bd",
+  "manifest_sha256": "sha256:6a26313da1a0a33300e09b723a513ed5146d2bcbf5fec2c72347399c9dbc29cf",
   "mechanism_preflight": {
     "cases": [
       {

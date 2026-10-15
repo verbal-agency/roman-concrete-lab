@@ -1535,6 +1535,10 @@ def frozen_manifest() -> dict[str, Any]:
         "pdf_benchmark": ROOT / "fixtures/investigation/pdf-benchmark.json",
         "pdf_benchmark_payload": ROOT / "fixtures/investigation/pdf-benchmark.b64",
         "runner": ROOT / "src/roman_concrete_lab/agents/investigation.py",
+        "viewpoint_society_runner": ROOT / "src/roman_concrete_lab/agents/viewpoint_society.py",
+        "evidence_bus_runner": ROOT / "src/roman_concrete_lab/agents/evidence_bus.py",
+        "viewpoint_society_protocol": ROOT / "docs/protocols/viewpoint-society.md",
+        "evidence_bus_protocol": ROOT / "docs/protocols/society-evidence-bus.md",
         "retrieval_contracts": ROOT / "src/roman_concrete_lab/retrieval/contracts.py",
         "network_adapter": ROOT / "src/roman_concrete_lab/retrieval/network.py",
         "pdf_extractor": ROOT / "src/roman_concrete_lab/retrieval/pdf.py",
@@ -1550,6 +1554,12 @@ def frozen_manifest() -> dict[str, Any]:
         "portfolio_schema": ROOT / "schemas/investigation-portfolio.schema.json",
         "simulation_trace_schema": ROOT / "schemas/simulation-trace.schema.json",
         "paper_evidence_card_schema": ROOT / "schemas/paper-evidence-card.schema.json",
+        "viewpoint_card_schema": ROOT / "schemas/viewpoint-card.schema.json",
+        "viewpoint_support_task_schema": ROOT / "schemas/viewpoint-support-task.schema.json",
+        "viewpoint_support_report_schema": ROOT / "schemas/viewpoint-support-report.schema.json",
+        "viewpoint_dossier_schema": ROOT / "schemas/viewpoint-dossier.schema.json",
+        "cross_viewpoint_critique_schema": ROOT / "schemas/cross-viewpoint-critique.schema.json",
+        "society_portfolio_envelope_schema": ROOT / "schemas/society-portfolio-envelope.schema.json",
         "mechanism_runner": ROOT / "src/roman_concrete_lab/agents/mechanism_tournament.py",
         "mechanism_protocol": ROOT / "docs/protocols/mechanism-proponent-society.md",
         "mechanism_rosters": ROOT / "fixtures/investigation/mechanism-rosters.json",
@@ -1581,7 +1591,7 @@ def frozen_manifest() -> dict[str, Any]:
         "treatments": {
             "A0": "recorded-fixture deterministic plumbing control",
             "A1": "single tool-using investigator",
-            "A2-M": "mechanism proponents plus structural auditors, deterministic focus, and bounded adjudication",
+            "A2-M": "viewpoint society with structural support tasks, evidence-bus joins, deterministic focus, and bounded adjudication",
         },
         "branch_charter_hashes": {
             branch: digest(prompt_set["branches"][branch]) for branch in BRANCHES
