@@ -133,20 +133,20 @@ def build_postmortem(
         {
             "finding_id": "ARCH-001",
             "dimension": "INTEGRATION",
-            "severity": "HIGH",
-            "finding": "The live A2-M runner uses the legacy mechanism-tournament path rather than the G10D ViewpointSociety plus G10P evidence bus.",
-            "evidence": ["src/roman_concrete_lab/agents/investigation.py:1297", "src/roman_concrete_lab/agents/viewpoint_society.py:140", "src/roman_concrete_lab/agents/evidence_bus.py:1"],
+            "severity": "INFO",
+            "finding": "The prior integration gap is remediated: the current A2-M runner uses ViewpointSociety and EvidenceBus, and the paid checkpoints contain typed society records.",
+            "evidence": ["artifacts/goals/G10R/checkpoints/*-A2-M.json", "src/roman_concrete_lab/agents/viewpoint_society.py", "src/roman_concrete_lab/agents/evidence_bus.py"],
             "confidence": "HIGH",
-            "remediation": "Integrate the versioned G10D/G10P runtime path before treating another live result as a test of the target design.",
+            "remediation": "Preserve the runtime contract and include its topology audit in every future replay; no additional topology work is required for this postmortem.",
         },
         {
             "finding_id": "ARCH-002",
             "dimension": "INTEGRATION",
-            "severity": "HIGH",
-            "finding": "The live runner filters OPEN_SLOT cards out of proponent execution; open-ended admission was not tested in the paid treatment.",
-            "evidence": ["src/roman_concrete_lab/agents/investigation.py:1309"],
+            "severity": "INFO",
+            "finding": "The current paid treatment does not show the prior OPEN_SLOT filtering gap; the runtime audit reports open-slot admission as active.",
+            "evidence": ["artifacts/goals/G10R/checkpoints/*-A2-M.json", "artifacts/goals/G10R-P/postmortem.json"],
             "confidence": "HIGH",
-            "remediation": "Implement typed open-slot admission and bounded work allocation, then prove it offline and in checkpoint output.",
+            "remediation": "Retain bounded open-slot work and require it in the next offline acquisition fixtures.",
         },
         {
             "finding_id": "ACQ-001",
@@ -161,10 +161,10 @@ def build_postmortem(
             "finding_id": "ACQ-002",
             "dimension": "ACQUISITION",
             "severity": "MEDIUM",
-            "finding": "A2-M used 13 model calls and roughly 6x A1 input tokens per case while yielding fewer discovery points on three of four cases.",
-            "evidence": ["artifacts/goals/G10R/run.json", "artifacts/goals/G10R-R/replay.json"],
+            "finding": "A2-M used 13 model calls per case versus A1's 2, while producing discovery scores of 0, 1, 1, and 1 versus A1's 4, 6, 5, and 4; the extra society work did not open a new evidence frontier.",
+            "evidence": ["artifacts/goals/G10R/run.json", "artifacts/goals/G10R-P/postmortem.json"],
             "confidence": "HIGH",
-            "remediation": "Make support-task selection information-seeking and cost-aware; reserve adjudication tokens after evidence work has a chance to run.",
+            "remediation": "Make viewpoint support tasks information-seeking and cost-aware: reserve fetch/extract/identity actions before critique and adjudication, and score unique attributable acquisition separately from discourse.",
         },
         {
             "finding_id": "TASK-001",
@@ -187,11 +187,20 @@ def build_postmortem(
         {
             "finding_id": "PLUMB-001",
             "dimension": "PLUMBING",
-            "severity": "HIGH",
-            "finding": "The paid checkpoints contain no viewpoint, support-task, dossier, or critique records, so G10P joins could not be exercised by the live treatment.",
-            "evidence": ["artifacts/goals/G10R/checkpoints/*-A2-M.json", "artifacts/goals/G10P/replay.json"],
+            "severity": "INFO",
+            "finding": "The current paid checkpoints preserve viewpoint, support-task, dossier, critique, focus, and evidence-bus records; the earlier handoff-loss concern is not present in this run.",
+            "evidence": ["artifacts/goals/G10R/checkpoints/*-A2-M.json", "artifacts/goals/G10R-I/replay.json"],
             "confidence": "HIGH",
-            "remediation": "Require typed evidence-bus records in the runner checkpoint and fail offline fixtures when any support contribution loses its viewpoint/task join.",
+            "remediation": "Keep the 100% join invariant and add acquisition-outcome assertions to the next offline goal.",
+        },
+        {
+            "finding_id": "DESIGN-001",
+            "dimension": "AGENT_DESIGN",
+            "severity": "HIGH",
+            "finding": "The integrated society was structurally discouraged from acquiring evidence: A2-M proponent and auditor instructions require empty follow-up, fetch, and simulation arrays; extraction/identity and experiment tasks are recorded as automatic abstentions; and focus executes only search queries. The zero-fetch result therefore measures a design constraint as much as agent behavior, not a clean test of viewpoint competition.",
+            "evidence": ["src/roman_concrete_lab/agents/investigation.py:1381", "src/roman_concrete_lab/agents/investigation.py:1416", "src/roman_concrete_lab/agents/investigation.py:1454", "artifacts/goals/G10R/checkpoints/*-A2-M.json"],
+            "confidence": "HIGH",
+            "remediation": "Run one offline acquisition-redesign goal that removes the forced-empty tool constraint, instruments requested/allowed/blocked/executed fetches, assigns real extraction/identity and contradiction work, and uses fetch-positive and metadata-only cases before considering another paid test.",
         },
     ]
 
@@ -226,7 +235,7 @@ def build_postmortem(
         "case_ledger": rows,
         "loss_ledger": loss_ledger,
         "target_state": target_state,
-        "next_goal": "Implement and offline-verify the G10D/G10P runtime integration before requesting another paid evaluation.",
+        "next_goal": "Execute G10R-A: offline evidence-acquisition and support-task redesign, preserving viewpoint competition while requiring attributable fetch, extraction, contradiction, or bounded abstention outcomes.",
     }
 
 

@@ -1,28 +1,30 @@
 {
   "case_ledger": [
     {
-      "action_count": 8,
+      "action_count": 9,
       "action_counts": {
-        "SEARCH": 8
+        "SEARCH": 9
       },
       "arm": "A1",
       "candidate_count": 24,
       "case_id": "S-ACTIVE-LINEAGE",
       "credible_rival_ids": [],
       "document_fetch_count": 0,
-      "estimated_cost_usd": 0.001104,
-      "g10p_typed_keys_present": [],
+      "estimated_cost_usd": 0.0011377,
+      "g10p_typed_keys_present": [
+        "viewpoint_society"
+      ],
       "hypothesis_count": 1,
-      "input_tokens": 5315,
+      "input_tokens": 5282,
       "model_call_count": 2,
-      "output_tokens": 1145,
+      "output_tokens": 1219,
       "paper_evidence_card_count": 0,
-      "portfolio_source_candidate_count": 0,
-      "query_count": 12,
+      "portfolio_source_candidate_count": 4,
+      "query_count": 9,
       "retained_source_count": 24,
       "score": {
         "critical_failures": [],
-        "discovery_score": 0,
+        "discovery_score": 4,
         "evidence_score": 0,
         "hypothesis_score": 1,
         "score": 0,
@@ -34,32 +36,32 @@
       "status": "COMPLETED"
     },
     {
-      "action_count": 5,
+      "action_count": 8,
       "action_counts": {
-        "SEARCH": 5
+        "SEARCH": 8
       },
       "arm": "A1",
       "candidate_count": 24,
       "case_id": "S-ACTIVE-ACCESS",
-      "credible_rival_ids": [
-        "H2"
-      ],
+      "credible_rival_ids": [],
       "document_fetch_count": 0,
-      "estimated_cost_usd": 0.0012716,
-      "g10p_typed_keys_present": [],
-      "hypothesis_count": 2,
-      "input_tokens": 5356,
+      "estimated_cost_usd": 0.0012824,
+      "g10p_typed_keys_present": [
+        "viewpoint_society"
+      ],
+      "hypothesis_count": 1,
+      "input_tokens": 5554,
       "model_call_count": 2,
-      "output_tokens": 1472,
+      "output_tokens": 1454,
       "paper_evidence_card_count": 0,
-      "portfolio_source_candidate_count": 5,
-      "query_count": 12,
+      "portfolio_source_candidate_count": 6,
+      "query_count": 8,
       "retained_source_count": 24,
       "score": {
         "critical_failures": [],
-        "discovery_score": 5,
+        "discovery_score": 6,
         "evidence_score": 0,
-        "hypothesis_score": 2,
+        "hypothesis_score": 1,
         "score": 0,
         "supported_contribution_count": 0
       },
@@ -69,30 +71,32 @@
       "status": "COMPLETED"
     },
     {
-      "action_count": 11,
+      "action_count": 9,
       "action_counts": {
-        "SEARCH": 11
+        "SEARCH": 9
       },
       "arm": "A1",
       "candidate_count": 24,
       "case_id": "S-ACTIVE-SIM",
       "credible_rival_ids": [
-        "H2"
+        "H-ARTIFACT-DOMAIN-MISMATCH"
       ],
       "document_fetch_count": 0,
-      "estimated_cost_usd": 0.0014904,
-      "g10p_typed_keys_present": [],
+      "estimated_cost_usd": 0.0014648,
+      "g10p_typed_keys_present": [
+        "viewpoint_society"
+      ],
       "hypothesis_count": 2,
-      "input_tokens": 5674,
+      "input_tokens": 5468,
       "model_call_count": 2,
-      "output_tokens": 1846,
+      "output_tokens": 1836,
       "paper_evidence_card_count": 0,
       "portfolio_source_candidate_count": 5,
-      "query_count": 12,
+      "query_count": 9,
       "retained_source_count": 24,
       "score": {
         "critical_failures": [],
-        "discovery_score": 6,
+        "discovery_score": 5,
         "evidence_score": 0,
         "hypothesis_score": 2,
         "score": 0,
@@ -109,27 +113,67 @@
         "SEARCH": 9
       },
       "arm": "A1",
-      "candidate_count": 24,
+      "candidate_count": 25,
       "case_id": "S-ACTIVE-TRANSFER",
       "credible_rival_ids": [
-        "H-TRANSFER-1"
+        "H-NULL-1"
       ],
       "document_fetch_count": 0,
-      "estimated_cost_usd": 0.0016061,
-      "g10p_typed_keys_present": [],
+      "estimated_cost_usd": 0.0015525,
+      "g10p_typed_keys_present": [
+        "viewpoint_society"
+      ],
       "hypothesis_count": 2,
-      "input_tokens": 5626,
+      "input_tokens": 5875,
       "model_call_count": 2,
-      "output_tokens": 2087,
+      "output_tokens": 1930,
       "paper_evidence_card_count": 0,
-      "portfolio_source_candidate_count": 5,
+      "portfolio_source_candidate_count": 4,
       "query_count": 10,
       "retained_source_count": 24,
       "score": {
         "critical_failures": [],
-        "discovery_score": 5,
+        "discovery_score": 4,
         "evidence_score": 0,
         "hypothesis_score": 2,
+        "score": 0,
+        "supported_contribution_count": 0
+      },
+      "simulation_call_count": 0,
+      "simulation_trace_count": 0,
+      "state": "completed",
+      "status": "COMPLETED"
+    },
+    {
+      "action_count": 8,
+      "action_counts": {
+        "SEARCH": 8
+      },
+      "arm": "A2-M",
+      "candidate_count": 0,
+      "case_id": "S-ACTIVE-LINEAGE",
+      "credible_rival_ids": [
+        "S-ACTIVE-LINEAGE-NULL",
+        "S-ACTIVE-LINEAGE-M2"
+      ],
+      "document_fetch_count": 0,
+      "estimated_cost_usd": 0.00499809,
+      "g10p_typed_keys_present": [
+        "viewpoint_society"
+      ],
+      "hypothesis_count": 1,
+      "input_tokens": 31519,
+      "model_call_count": 13,
+      "output_tokens": 3973,
+      "paper_evidence_card_count": 0,
+      "portfolio_source_candidate_count": 0,
+      "query_count": 7,
+      "retained_source_count": 0,
+      "score": {
+        "critical_failures": [],
+        "discovery_score": 0,
+        "evidence_score": 0,
+        "hypothesis_score": 1,
         "score": 0,
         "supported_contribution_count": 0
       },
@@ -145,25 +189,27 @@
       },
       "arm": "A2-M",
       "candidate_count": 10,
-      "case_id": "S-ACTIVE-LINEAGE",
+      "case_id": "S-ACTIVE-ACCESS",
       "credible_rival_ids": [
-        "S-ACTIVE-LINEAGE-NULL",
-        "S-ACTIVE-LINEAGE-M1"
+        "S-ACTIVE-ACCESS-NULL",
+        "S-ACTIVE-ACCESS-M2"
       ],
       "document_fetch_count": 0,
-      "estimated_cost_usd": 0.0052835,
-      "g10p_typed_keys_present": [],
+      "estimated_cost_usd": 0.00565246,
+      "g10p_typed_keys_present": [
+        "viewpoint_society"
+      ],
       "hypothesis_count": 1,
-      "input_tokens": 31565,
+      "input_tokens": 35999,
       "model_call_count": 13,
-      "output_tokens": 4254,
+      "output_tokens": 4378,
       "paper_evidence_card_count": 0,
-      "portfolio_source_candidate_count": 2,
-      "query_count": 12,
-      "retained_source_count": 24,
+      "portfolio_source_candidate_count": 1,
+      "query_count": 9,
+      "retained_source_count": 10,
       "score": {
         "critical_failures": [],
-        "discovery_score": 2,
+        "discovery_score": 1,
         "evidence_score": 0,
         "hypothesis_score": 1,
         "score": 0,
@@ -175,27 +221,29 @@
       "status": "COMPLETED"
     },
     {
-      "action_count": 9,
+      "action_count": 8,
       "action_counts": {
-        "SEARCH": 9
+        "SEARCH": 8
       },
       "arm": "A2-M",
-      "candidate_count": 24,
-      "case_id": "S-ACTIVE-ACCESS",
+      "candidate_count": 21,
+      "case_id": "S-ACTIVE-SIM",
       "credible_rival_ids": [
-        "S-ACTIVE-ACCESS-NULL",
-        "S-ACTIVE-ACCESS-M2"
+        "S-ACTIVE-SIM-NULL",
+        "S-ACTIVE-SIM-M2"
       ],
       "document_fetch_count": 0,
-      "estimated_cost_usd": 0.005572499999999999,
-      "g10p_typed_keys_present": [],
+      "estimated_cost_usd": 0.0058814,
+      "g10p_typed_keys_present": [
+        "viewpoint_society"
+      ],
       "hypothesis_count": 1,
-      "input_tokens": 33705,
+      "input_tokens": 39016,
       "model_call_count": 13,
-      "output_tokens": 4404,
+      "output_tokens": 4226,
       "paper_evidence_card_count": 0,
       "portfolio_source_candidate_count": 1,
-      "query_count": 11,
+      "query_count": 8,
       "retained_source_count": 21,
       "score": {
         "critical_failures": [],
@@ -211,66 +259,33 @@
       "status": "COMPLETED"
     },
     {
-      "action_count": 9,
+      "action_count": 8,
       "action_counts": {
-        "SEARCH": 9
+        "SEARCH": 8
       },
       "arm": "A2-M",
-      "candidate_count": 24,
-      "case_id": "S-ACTIVE-SIM",
-      "credible_rival_ids": [
-        "S-ACTIVE-SIM-NULL",
-        "S-ACTIVE-SIM-M1"
-      ],
-      "document_fetch_count": 0,
-      "estimated_cost_usd": 0.005738,
-      "g10p_typed_keys_present": [],
-      "hypothesis_count": 1,
-      "input_tokens": 35055,
-      "model_call_count": 13,
-      "output_tokens": 4465,
-      "paper_evidence_card_count": 0,
-      "portfolio_source_candidate_count": 0,
-      "query_count": 8,
-      "retained_source_count": 24,
-      "score": {
-        "critical_failures": [],
-        "discovery_score": 0,
-        "evidence_score": 0,
-        "hypothesis_score": 1,
-        "score": 0,
-        "supported_contribution_count": 0
-      },
-      "simulation_call_count": 0,
-      "simulation_trace_count": 0,
-      "state": "completed",
-      "status": "COMPLETED"
-    },
-    {
-      "action_count": 9,
-      "action_counts": {
-        "SEARCH": 9
-      },
-      "arm": "A2-M",
-      "candidate_count": 24,
+      "candidate_count": 5,
       "case_id": "S-ACTIVE-TRANSFER",
       "credible_rival_ids": [
-        "S-ACTIVE-TRANSFER-NULL"
+        "S-ACTIVE-TRANSFER-NULL",
+        "S-ACTIVE-TRANSFER-M2"
       ],
       "document_fetch_count": 0,
-      "estimated_cost_usd": 0.005734199999999999,
-      "g10p_typed_keys_present": [],
+      "estimated_cost_usd": 0.0056512,
+      "g10p_typed_keys_present": [
+        "viewpoint_society"
+      ],
       "hypothesis_count": 1,
-      "input_tokens": 34632,
+      "input_tokens": 33907,
       "model_call_count": 13,
-      "output_tokens": 4542,
+      "output_tokens": 4521,
       "paper_evidence_card_count": 0,
-      "portfolio_source_candidate_count": 0,
-      "query_count": 10,
-      "retained_source_count": 24,
+      "portfolio_source_candidate_count": 1,
+      "query_count": 8,
+      "retained_source_count": 5,
       "score": {
         "critical_failures": [],
-        "discovery_score": 0,
+        "discovery_score": 1,
         "evidence_score": 0,
         "hypothesis_score": 1,
         "score": 0,
@@ -289,25 +304,26 @@
       "confidence": "HIGH",
       "dimension": "INTEGRATION",
       "evidence": [
-        "src/roman_concrete_lab/agents/investigation.py:1297",
-        "src/roman_concrete_lab/agents/viewpoint_society.py:140",
-        "src/roman_concrete_lab/agents/evidence_bus.py:1"
+        "artifacts/goals/G10R/checkpoints/*-A2-M.json",
+        "src/roman_concrete_lab/agents/viewpoint_society.py",
+        "src/roman_concrete_lab/agents/evidence_bus.py"
       ],
-      "finding": "The live A2-M runner uses the legacy mechanism-tournament path rather than the G10D ViewpointSociety plus G10P evidence bus.",
+      "finding": "The prior integration gap is remediated: the current A2-M runner uses ViewpointSociety and EvidenceBus, and the paid checkpoints contain typed society records.",
       "finding_id": "ARCH-001",
-      "remediation": "Integrate the versioned G10D/G10P runtime path before treating another live result as a test of the target design.",
-      "severity": "HIGH"
+      "remediation": "Preserve the runtime contract and include its topology audit in every future replay; no additional topology work is required for this postmortem.",
+      "severity": "INFO"
     },
     {
       "confidence": "HIGH",
       "dimension": "INTEGRATION",
       "evidence": [
-        "src/roman_concrete_lab/agents/investigation.py:1309"
+        "artifacts/goals/G10R/checkpoints/*-A2-M.json",
+        "artifacts/goals/G10R-P/postmortem.json"
       ],
-      "finding": "The live runner filters OPEN_SLOT cards out of proponent execution; open-ended admission was not tested in the paid treatment.",
+      "finding": "The current paid treatment does not show the prior OPEN_SLOT filtering gap; the runtime audit reports open-slot admission as active.",
       "finding_id": "ARCH-002",
-      "remediation": "Implement typed open-slot admission and bounded work allocation, then prove it offline and in checkpoint output.",
-      "severity": "HIGH"
+      "remediation": "Retain bounded open-slot work and require it in the next offline acquisition fixtures.",
+      "severity": "INFO"
     },
     {
       "confidence": "HIGH",
@@ -327,11 +343,11 @@
       "dimension": "ACQUISITION",
       "evidence": [
         "artifacts/goals/G10R/run.json",
-        "artifacts/goals/G10R-R/replay.json"
+        "artifacts/goals/G10R-P/postmortem.json"
       ],
-      "finding": "A2-M used 13 model calls and roughly 6x A1 input tokens per case while yielding fewer discovery points on three of four cases.",
+      "finding": "A2-M used 13 model calls per case versus A1's 2, while producing discovery scores of 0, 1, 1, and 1 versus A1's 4, 6, 5, and 4; the extra society work did not open a new evidence frontier.",
       "finding_id": "ACQ-002",
-      "remediation": "Make support-task selection information-seeking and cost-aware; reserve adjudication tokens after evidence work has a chance to run.",
+      "remediation": "Make viewpoint support tasks information-seeking and cost-aware: reserve fetch/extract/identity actions before critique and adjudication, and score unique attributable acquisition separately from discourse.",
       "severity": "MEDIUM"
     },
     {
@@ -362,15 +378,29 @@
       "dimension": "PLUMBING",
       "evidence": [
         "artifacts/goals/G10R/checkpoints/*-A2-M.json",
-        "artifacts/goals/G10P/replay.json"
+        "artifacts/goals/G10R-I/replay.json"
       ],
-      "finding": "The paid checkpoints contain no viewpoint, support-task, dossier, or critique records, so G10P joins could not be exercised by the live treatment.",
+      "finding": "The current paid checkpoints preserve viewpoint, support-task, dossier, critique, focus, and evidence-bus records; the earlier handoff-loss concern is not present in this run.",
       "finding_id": "PLUMB-001",
-      "remediation": "Require typed evidence-bus records in the runner checkpoint and fail offline fixtures when any support contribution loses its viewpoint/task join.",
+      "remediation": "Keep the 100% join invariant and add acquisition-outcome assertions to the next offline goal.",
+      "severity": "INFO"
+    },
+    {
+      "confidence": "HIGH",
+      "dimension": "AGENT_DESIGN",
+      "evidence": [
+        "src/roman_concrete_lab/agents/investigation.py:1381",
+        "src/roman_concrete_lab/agents/investigation.py:1416",
+        "src/roman_concrete_lab/agents/investigation.py:1454",
+        "artifacts/goals/G10R/checkpoints/*-A2-M.json"
+      ],
+      "finding": "The integrated society was structurally discouraged from acquiring evidence: A2-M proponent and auditor instructions require empty follow-up, fetch, and simulation arrays; extraction/identity and experiment tasks are recorded as automatic abstentions; and focus executes only search queries. The zero-fetch result therefore measures a design constraint as much as agent behavior, not a clean test of viewpoint competition.",
+      "finding_id": "DESIGN-001",
+      "remediation": "Run one offline acquisition-redesign goal that removes the forced-empty tool constraint, instruments requested/allowed/blocked/executed fetches, assigns real extraction/identity and contradiction work, and uses fetch-positive and metadata-only cases before considering another paid test.",
       "severity": "HIGH"
     }
   ],
-  "next_goal": "Implement and offline-verify the G10D/G10P runtime integration before requesting another paid evaluation.",
+  "next_goal": "Execute G10R-A: offline evidence-acquisition and support-task redesign, preserving viewpoint competition while requiring attributable fetch, extraction, contradiction, or bounded abstention outcomes.",
   "remediation_evidence": {
     "all_external_calls_absent": true,
     "g10d_blocks_evidence_promotion": true,
@@ -387,15 +417,15 @@
   "repaired_replay_status": "REPLAYABLE_AFTER_REPAIR",
   "runtime_contract_audit": {
     "a2m_runner_has_structural_auditor_roles": true,
-    "contract_gap": "legacy mechanism_tournament path is live; G10D ViewpointSociety and G10P EvidenceBus are not",
-    "g10d_viewpoint_society_imported": false,
-    "g10p_evidence_bus_imported": false,
-    "legacy_mechanism_tournament_imported": true,
-    "open_slot_explicitly_filtered_from_live_cards": true
+    "contract_gap": "none: the current paid A2-M run is wired through ViewpointSociety and EvidenceBus",
+    "g10d_viewpoint_society_imported": true,
+    "g10p_evidence_bus_imported": true,
+    "legacy_mechanism_tournament_imported": false,
+    "open_slot_explicitly_filtered_from_live_cards": false
   },
   "schema_version": "1.0",
   "source_run_outcome": "DO_NOT_ESCALATE_ACTIVE_SOCIETY",
-  "source_run_spend_usd": 0.17469979,
+  "source_run_spend_usd": 0.22100185,
   "status": "TARGET_STATE_READY_FOR_OFFLINE_BUILD",
   "target_state": {
     "non_goals": [
