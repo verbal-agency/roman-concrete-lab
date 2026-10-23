@@ -1,6 +1,6 @@
 # G10R-B2 — Post-constraint active-investigation rerun
 
-**Status:** proposed
+**Status:** complete — `DO_NOT_ESCALATE_ACTIVE_SOCIETY`
 **Dependencies:** G10R-F `PHASE_A_READY_FOR_OWNER_ACTIVATION`; G10R-C
 `PRE_RERUN_CONSTRAINTS_READY`; explicit owner activation of the frozen Phase-B
 run and configured provider/network credentials
@@ -95,3 +95,29 @@ Stop immediately on manifest mismatch, source-policy widening, unequal budgets,
 critical provenance/authority/safety failure, or spend-cap violation. A valid
 `DO_NOT_ESCALATE_ACTIVE_SOCIETY` result routes only to a new design/postmortem
 goal; it does not authorize repeated paid runs automatically.
+
+## Completed run
+
+- Run: `artifacts/goals/G10R-B2-retry-20261023/run.json`
+- Replay: `artifacts/goals/G10R-B2-retry-20261023/replay.json`
+- Report: `artifacts/goals/G10R-B2-retry-20261023/report.md`
+- Manifest: `sha256:fb76226b4332f50ce3f5e8ad15a65d3d274d8cc3a031894918f5e020728e38bf`
+- All eight paired treatment/case runs completed; replay status was
+  `REPLAYABLE_AFTER_REPAIR`.
+- Cumulative recorded spend was `$0.33173708` of the `$25.00` cap, including
+  the preserved partial attempt in the prior B2 namespace.
+- The preregistered decision found no qualifying unique society contribution:
+  A1 and A2-M totals were both zero under the live directional scorer, while
+  the repaired replay showed society discovery deltas of `0`, `-3`, `-2`, and
+  `-3` and hypothesis deltas of `-1`, `0`, `-1`, and `-1` across the four
+  cases. This is a result about the executed design and task surface, not a
+  rejection of agent societies generally.
+
+## Verification evidence
+
+- `python3 -m pytest -q` — `130 passed`.
+- `python3 -m pytest -q tests/agents/test_open_world_remediation.py tests/agents/test_constraint_audit_replay.py` — `5 passed`.
+- `python3 -m py_compile src/roman_concrete_lab/agents/investigation.py tools/evaluation/open_world_replay.py tools/evaluation/post_constraint_phase_b.py` — passed.
+- The retry contains four completed A1 checkpoints and four completed A2-M
+  checkpoints, a replayable eight-row score ledger, no critical failures, and
+  no incomplete treatment cases.

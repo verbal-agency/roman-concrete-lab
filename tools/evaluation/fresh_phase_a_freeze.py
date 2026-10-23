@@ -47,7 +47,7 @@ def _display_path(path: Path) -> str:
         return str(path)
 
 
-def freeze(*, output_dir: Path = ROOT / "artifacts/goals/G10R") -> dict[str, Any]:
+def freeze(*, output_dir: Path = ROOT / "artifacts/goals/G10R", refresh: bool = False) -> dict[str, Any]:
     output_dir = output_dir.resolve()
     historical_phase = output_dir / "phase-a.json"
     historical_manifest = output_dir / "manifest.json"
@@ -94,7 +94,7 @@ def freeze(*, output_dir: Path = ROOT / "artifacts/goals/G10R") -> dict[str, Any
         and "investigation_action_schema" in file_map
     )
     status = "PHASE_A_READY_FOR_OWNER_ACTIVATION" if ready else "PHASE_A_FREEZE_NO_GO"
-    if ready:
+    if ready and not refresh:
         if phase_path.exists() and json.loads(phase_path.read_text(encoding="utf-8")) != first:
             status = "PHASE_A_FREEZE_NO_GO"
         if manifest_path.exists() and json.loads(manifest_path.read_text(encoding="utf-8")) != manifest:
@@ -133,8 +133,9 @@ def freeze(*, output_dir: Path = ROOT / "artifacts/goals/G10R") -> dict[str, Any
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output-dir", type=Path, default=ROOT / "artifacts/goals/G10R")
+    parser.add_argument("--refresh", action="store_true")
     args = parser.parse_args()
-    result = freeze(output_dir=args.output_dir)
+    result = freeze(output_dir=args.output_dir, refresh=args.refresh)
     print(json.dumps({"status": result["status"], "external_calls": result["external_calls"], "manifest_sha256": result["manifest_sha256"]}, indent=2))
 
 

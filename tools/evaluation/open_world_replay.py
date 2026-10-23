@@ -44,18 +44,47 @@ def replay(
     score_rows: list[dict[str, Any]] = []
     candidate_rows: list[dict[str, Any]] = []
     treatment_map: list[dict[str, Any]] = []
+    incomplete_results: list[dict[str, Any]] = []
     arm_results: dict[str, dict[str, dict[str, Any]]] = {"A1": {}, "A2-M": {}}
+
+    def case_for_result(item: dict[str, Any]) -> str:
+        portfolio = item.get("portfolio") or {}
+        if portfolio.get("case_id") in cases:
+            return portfolio["case_id"]
+        run_id = item.get("run_id", "")
+        matches = [case_id for case_id in cases if case_id in run_id]
+        if len(matches) == 1:
+            return matches[0]
+        return run_id or "UNKNOWN_CASE"
 
     for arm, results in run["arm_results"].items():
         for item in results:
-            case_id = item["portfolio"]["case_id"]
+            case_id = case_for_result(item)
             checkpoint_path = checkpoint_dir / f"{case_id}-{arm}.json"
             checkpoint = load_json(checkpoint_path)
             if checkpoint.get("manifest_sha256") != run["manifest_sha256"]:
                 raise ValueError(f"checkpoint manifest mismatch: {checkpoint_path}")
             candidate_records = checkpoint.get("source_candidates", {})
             blind_id = "BLIND-" + item["run_id"].split("G10R-", 1)[-1]
-            treatment_map.append({"blind_treatment_id": blind_id, "arm": arm, "run_id": item["run_id"]})
+            treatment_map.append({
+                "blind_treatment_id": blind_id,
+                "arm": arm,
+                "run_id": item["run_id"],
+                "case_id": case_id,
+                "status": item.get("status"),
+            })
+            if "portfolio" not in item:
+                incomplete = {
+                    "blind_treatment_id": blind_id,
+                    "arm": arm,
+                    "case_id": case_id,
+                    "run_id": item["run_id"],
+                    "status": item.get("status", "INCONCLUSIVE_ACTIVE_INVESTIGATION"),
+                    "reason": item.get("reason", "result has no completed portfolio"),
+                }
+                incomplete_results.append(incomplete)
+                score_rows.append(incomplete)
+                continue
             scored = score_portfolio(
                 cases[case_id],
                 item["portfolio"],
@@ -107,9 +136,20 @@ def replay(
             arm_results[arm][case_id] = scored
 
     by_case = []
+    incomplete_cases = set()
+    for item in incomplete_results:
+        incomplete_cases.add(item["case_id"])
     for case_id in sorted(cases):
-        a1 = arm_results["A1"][case_id]
-        society = arm_results["A2-M"][case_id]
+        a1 = arm_results["A1"].get(case_id)
+        society = arm_results["A2-M"].get(case_id)
+        if a1 is None or society is None:
+            by_case.append({
+                "case_id": case_id,
+                "status": "INCOMPLETE",
+                "missing_arms": [arm for arm, result in (("A1", a1), ("A2-M", society)) if result is None],
+                "source_results": [item for item in incomplete_results if item["case_id"] == case_id],
+            })
+            continue
         by_case.append(
             {
                 "case_id": case_id,
@@ -128,9 +168,12 @@ def replay(
         {
             failure
             for row in score_rows
-            for failure in row["critical_failures"]
+            for failure in row.get("critical_failures", [])
         }
     )
+    if incomplete_results:
+        critical.append("incomplete_treatment_case")
+    critical = sorted(set(critical))
     output = {
         "schema_version": "1.0",
         "protocol": PROTOCOL,
@@ -148,8 +191,9 @@ def replay(
             "interpretation": (
                 "The traces are replayable with separated discovery, evidence, hypothesis, and authority dimensions."
                 if not critical
-                else "The traces are preserved, but one or more attributable policy failures still require adjudication before a society comparison."
+                else "The traces are preserved, but one or more attributable policy failures or incomplete treatment cases require adjudication before a society comparison."
             ),
+            "incomplete_results": incomplete_results,
         },
     }
     validate(output, schema("open-world-evaluation-ledger.schema.json"))

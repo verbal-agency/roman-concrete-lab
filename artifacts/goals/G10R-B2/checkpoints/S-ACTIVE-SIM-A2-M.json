@@ -1,0 +1,2342 @@
+{
+  "action_records": [
+    {
+      "action_id": "4eeebab14e666636",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-SIM-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "openalex",
+        "query": "lime mortar simulation model validation experimental validation domain",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W4403767876",
+        "OA-W4414570532",
+        "OA-W7164023905",
+        "OA-W3082163065",
+        "OA-W2388902365"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate the rumored simulation paper and check whether it reports a validation artifact and bounded model domain; do not infer Roman-concrete performance.",
+      "replay_key": "sha256:bcc44845beb4c6db4238ca469ad93abdb2def35c273cccf326380e767df1a6c8",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "b48f5efea87173a7",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-SIM-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 4,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "openalex",
+        "query": "roman concrete lime mortar simulation model validation",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W4313706729",
+        "OA-W3081924918",
+        "OA-W2255322831",
+        "OA-W4391392156",
+        "OA-W2388902365"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate the rumored paper and assess whether it reports a model assertion; no paper evidence or eligible simulator is currently available.",
+      "replay_key": "sha256:e2fd5f1afe5a7b8d06b17e08834f3ad3b4be60aebcf0593bbf83280d86ad61d2",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "b0880f056018b726",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-SIM-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "openalex",
+        "query": "lime mortar simulation paper validation artifact model support region adapter roman concrete performance",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test whether an identifiable paper and validation record exist. Provisional null prediction: absent a validated adapter and declared support region, no simulator-backed conclusion is eligible; any lime-mortar model remains out of scope for Roman-concrete performance. Base provenance is rumor only (E-SIM1), not evidence.",
+      "replay_key": "sha256:17424f6263fe7c79738fa69ba054aa4e998c0bb09018c8061877dbb08976aca9",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  ],
+  "actions": {
+    "4eeebab14e666636": {
+      "action_id": "4eeebab14e666636",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-SIM-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "openalex",
+        "query": "lime mortar simulation model validation experimental validation domain",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W4403767876",
+        "OA-W4414570532",
+        "OA-W7164023905",
+        "OA-W3082163065",
+        "OA-W2388902365"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate the rumored simulation paper and check whether it reports a validation artifact and bounded model domain; do not infer Roman-concrete performance.",
+      "replay_key": "sha256:bcc44845beb4c6db4238ca469ad93abdb2def35c273cccf326380e767df1a6c8",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "b0880f056018b726": {
+      "action_id": "b0880f056018b726",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-SIM-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "openalex",
+        "query": "lime mortar simulation paper validation artifact model support region adapter roman concrete performance",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test whether an identifiable paper and validation record exist. Provisional null prediction: absent a validated adapter and declared support region, no simulator-backed conclusion is eligible; any lime-mortar model remains out of scope for Roman-concrete performance. Base provenance is rumor only (E-SIM1), not evidence.",
+      "replay_key": "sha256:17424f6263fe7c79738fa69ba054aa4e998c0bb09018c8061877dbb08976aca9",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "b48f5efea87173a7": {
+      "action_id": "b48f5efea87173a7",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-SIM-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 4,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "openalex",
+        "query": "roman concrete lime mortar simulation model validation",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W4313706729",
+        "OA-W3081924918",
+        "OA-W2255322831",
+        "OA-W4391392156",
+        "OA-W2388902365"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate the rumored paper and assess whether it reports a model assertion; no paper evidence or eligible simulator is currently available.",
+      "replay_key": "sha256:e2fd5f1afe5a7b8d06b17e08834f3ad3b4be60aebcf0593bbf83280d86ad61d2",
+      "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  },
+  "budget": {
+    "limits": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 12000,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "remaining": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 24.9972767,
+      "input_tokens": 65832,
+      "output_tokens": 9387,
+      "payload_bytes": 5000000,
+      "queries": 9,
+      "retained_sources": 15,
+      "simulation_calls": 4
+    },
+    "usage": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.0027232999999999997,
+      "input_tokens": 14168,
+      "output_tokens": 2613,
+      "payload_bytes": 0,
+      "queries": 3,
+      "retained_sources": 9,
+      "simulation_calls": 0
+    }
+  },
+  "manifest_sha256": "sha256:da7c9b0c3ba34f6dcdcc2b35de831c3e7834ed15c55c87241624fdd0226469a2",
+  "model_traces": [
+    {
+      "call_id": "60f3380744fe90b3",
+      "estimated_actual_cost_usd": 0.0003294,
+      "estimated_maximum_cost_usd": 0.0005904,
+      "latency_seconds": 7.5184,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "No source candidate, fetch locator, or validated adapter is supplied. Until a validation artifact and support region are located, executable predictions are ineligible. Falsifier: no such artifact or region can be found. Any eventual support is limited to the paper's reported lime-mortar model domain, not Roman-concrete performance. Current provenance is the supplied E-SIM1 rumor only; no source has been verified.",
+        "branch_id": "viewpoint:S-ACTIVE-SIM-M1",
+        "case_id": "S-ACTIVE-SIM",
+        "follow_up_queries": [
+          {
+            "index": "crossref",
+            "query": "lime mortar numerical model validation dataset simulation",
+            "rationale": "If the primary search identifies a candidate paper, check bibliographic records for related validation or model documentation."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "lime mortar simulation model validation experimental validation domain",
+            "rationale": "Locate the rumored simulation paper and check whether it reports a validation artifact and bounded model domain; do not infer Roman-concrete performance."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:b19fe3bfe186d61efb3cc03f1b4428c82a415439ab534125f94f56d3ca999543",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1494,
+        "output_tokens": 360
+      }
+    },
+    {
+      "call_id": "01ebc35a7bdca178",
+      "estimated_actual_cost_usd": 0.0004528,
+      "estimated_maximum_cost_usd": 0.0007335,
+      "latency_seconds": 4.5666,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-SIM",
+        "claimed_contribution": "Bounded simulator-eligibility assessment; no performance claim.",
+        "claims": [
+          {
+            "claim_id": "C1",
+            "falsifier": "Locate a relevant paper with both a validation artifact and declared support region.",
+            "prediction": "Executable predictions require a declared validation artifact and support region.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-SIM1 is an unverified rumor.",
+              "Listed OpenAlex candidates are metadata-only; no paper evidence cards or adapter supplied."
+            ],
+            "statement": "Available records do not establish an eligible Roman-concrete performance simulator; any constraint is limited to a paper\u2019s declared lime-mortar model domain.",
+            "support_region": "Reported lime-mortar model domain only; no Roman-concrete performance extrapolation."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-SIM-M1",
+        "negative_searches": [
+          "Supplied records contain no validation artifact, support-region statement, or validated adapter."
+        ],
+        "proposed_next_actions": [
+          "Inspect a candidate paper and its validation documentation, if accessible."
+        ],
+        "report_id": "R-S-ACTIVE-SIM-M1",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W4403767876",
+          "OA-W4414570532",
+          "OA-W2388902365"
+        ],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Does any candidate paper report validation and a bounded model domain?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:c04737a72b3597b90f46a57d3847a6d4020f5740ae4fd841f2ddc23dd74687b5",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2538,
+        "output_tokens": 398
+      }
+    },
+    {
+      "call_id": "58cd0c19fbd4c033",
+      "estimated_actual_cost_usd": 0.0003053,
+      "estimated_maximum_cost_usd": 0.0005881,
+      "latency_seconds": 4.97,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "No source candidate, fetch locator, adapter, or validation artifact is supplied. No simulator-backed performance conclusion is eligible; any located source remains EVIDENCE_PENDING and promotion remains REVIEW_REQUIRED.",
+        "branch_id": "viewpoint:S-ACTIVE-SIM-M2",
+        "case_id": "S-ACTIVE-SIM",
+        "follow_up_queries": [
+          {
+            "index": "crossref",
+            "query": "Roman lime mortar simulation model validation artifact software adapter inputs outputs",
+            "rationale": "Check for reported validation and an existing executable adapter. Prediction: absent those, the paper can support only a typed hypothesis, not a live simulation call. Falsifier: a pre-existing validated adapter with declared inputs and outputs. Support region: evidence interpretation without validated execution."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "Roman concrete lime mortar simulation model validation",
+            "rationale": "Locate the rumored paper and assess whether it reports a model assertion; no paper evidence or eligible simulator is currently available."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:2174b20d2155854c3a8336b73b9627dd26753d1c3cc8faa7d5da475afedfefde",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1488,
+        "output_tokens": 313
+      }
+    },
+    {
+      "call_id": "0d894d04fa1a8dd4",
+      "estimated_actual_cost_usd": 0.000421,
+      "estimated_maximum_cost_usd": 0.0007308,
+      "latency_seconds": 4.4292,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-SIM",
+        "claimed_contribution": "Bounded interpretation of simulation evidence; no performance conclusion.",
+        "claims": [
+          {
+            "claim_id": "C1",
+            "falsifier": "Find a pre-existing validated adapter with declared inputs and outputs.",
+            "prediction": "No live simulation call is eligible without a validated adapter.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-SIM1",
+              "OA-W4313706729 metadata only"
+            ],
+            "statement": "A located record may support a model assertion, but not an eligible executable simulator.",
+            "support_region": "Evidence interpretation without validated execution."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-SIM-M2",
+        "negative_searches": [
+          "No adapter or validation artifact is supplied in the case record."
+        ],
+        "proposed_next_actions": [
+          "Check Crossref for validation artifacts and adapter details."
+        ],
+        "report_id": "R-S-ACTIVE-SIM-M2",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W4313706729"
+        ],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Does any cited paper provide a validated adapter and declared support region?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:c5b111f6e213206e79225037ed623d1a6f2a78fdecf208d51ff9b49b67fa04d1",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2500,
+        "output_tokens": 342
+      }
+    },
+    {
+      "call_id": "34cd67e281b77b1b",
+      "estimated_actual_cost_usd": 0.0003383,
+      "estimated_maximum_cost_usd": 0.0005853,
+      "latency_seconds": 7.2403,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "No source candidate, validation artifact, adapter, or support-region statement is supplied. Retain the null as a provisional, REVIEW_REQUIRED viewpoint; do not infer performance or authorize execution.",
+        "branch_id": "viewpoint:S-ACTIVE-SIM-NULL",
+        "case_id": "S-ACTIVE-SIM",
+        "follow_up_queries": [
+          {
+            "index": "crossref",
+            "query": "lime mortar computational model validation simulation",
+            "rationale": "Check bibliographic records for a candidate paper; a paper alone would not falsify the null."
+          },
+          {
+            "index": "catalog",
+            "query": "Roman concrete lime mortar simulation validated adapter inputs outputs",
+            "rationale": "Look for an existing validated adapter and its declared inputs, outputs, and support region\u2014the null's stated falsifier. No negative search has yet been performed."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "lime mortar simulation paper validation artifact model support region adapter Roman concrete performance",
+            "rationale": "Test whether an identifiable paper and validation record exist. Provisional null prediction: absent a validated adapter and declared support region, no simulator-backed conclusion is eligible; any lime-mortar model remains out of scope for Roman-concrete performance. Base provenance is rumor only (E-SIM1), not evidence."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:ba5f9d546eb58e962efdf8b73bab8e82fda3ae7359bfe77dd3e3f222152e5f54",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1458,
+        "output_tokens": 385
+      }
+    },
+    {
+      "call_id": "fd67bd96864acfbe",
+      "estimated_actual_cost_usd": 0.000342,
+      "estimated_maximum_cost_usd": 0.0006304,
+      "latency_seconds": 5.8601,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-SIM",
+        "claimed_contribution": "Provisional null interpretation; no performance claim.",
+        "claims": [
+          {
+            "claim_id": "C1",
+            "falsifier": "A validated adapter is identified before the manifest freezes.",
+            "prediction": "Without a validated adapter and declared support region, the case remains simulator-unavailable.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-SIM1: rumor only; no adapter, validation artifact, or support region supplied."
+            ],
+            "statement": "No simulator-backed mechanism conclusion is currently eligible.",
+            "support_region": "Declared simulation and evidence authority boundary only."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-SIM-NULL",
+        "negative_searches": [
+          "No search performed; no eligible source candidates supplied."
+        ],
+        "proposed_next_actions": [
+          "Search catalog and bibliographic indexes for the adapter and validation artifact."
+        ],
+        "report_id": "R-S-ACTIVE-SIM-NULL-A2M",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Does an accessible paper provide a validated adapter and declared support region?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:d51a42f6a0e0f043617f9768e4a60f46ef986c0db105686f0b92ac9767ea65c4",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1770,
+        "output_tokens": 330
+      }
+    },
+    {
+      "call_id": "d84de15231e108db",
+      "estimated_actual_cost_usd": 0.0005345,
+      "estimated_maximum_cost_usd": 0.0006852,
+      "latency_seconds": 6.444,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "No adapter, validation artifact, or support-region evidence is supplied. Do not treat model assertions as executable predictions or extrapolate to Roman-concrete performance.",
+        "branch_id": "auditor:evidence_skeptic",
+        "case_id": "S-ACTIVE-SIM",
+        "follow_up_queries": [
+          {
+            "index": "openalex",
+            "query": "lime mortar simulation validation model domain",
+            "rationale": "If the catalog search identifies a candidate, check its bibliographic record and locate an accessible paper or validation artifact."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "lime mortar simulation model validation artifact reported domain",
+            "rationale": "Identify the rumored paper and determine whether its accessible record reports validation and a bounded model domain."
+          }
+        ],
+        "requested_fetch_locators": [
+          "OA-W2388902365",
+          "OA-W3082163065",
+          "OA-W4403767876",
+          "OA-W4414570532",
+          "OA-W7164023905"
+        ],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:b609cfc7c86e815b17c97286e0f7c32f9e58976791f72565c7fe78df7e1ab9d4",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2920,
+        "output_tokens": 485
+      }
+    }
+  ],
+  "paper_evidence_cards": {},
+  "simulation_traces": [],
+  "source_candidates": {
+    "OA-W2255322831": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "openalex:w2255322831",
+      "discovery_query": "roman concrete lime mortar simulation model validation",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2255322831",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W2255322831",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Parametrical studies of the behavior of aerial lime mortars"
+    },
+    "OA-W2388902365": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "openalex:w2388902365",
+      "discovery_query": "lime mortar simulation model validation experimental validation domain",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2388902365",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W2388902365",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "A multi\u2013physics approach applied to masonry structures with non\u2013hydraulic lime mortars"
+    },
+    "OA-W3081924918": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.conbuildmat.2020.120571",
+      "discovery_query": "roman concrete lime mortar simulation model validation",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W3081924918",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W3081924918",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Experimental and numerical assessment of the shear behaviour of lime mortar clay brick masonry triplets"
+    },
+    "OA-W3082163065": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3390/su12177181",
+      "discovery_query": "lime mortar simulation model validation experimental validation domain",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W3082163065",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W3082163065",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Response of Organic Lime Mortars to Thermal and Electrical Shocks Due to Lightning Strikes"
+    },
+    "OA-W4313706729": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1126/sciadv.add1602",
+      "discovery_query": "roman concrete lime mortar simulation model validation",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4313706729",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4313706729",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Hot mixing: Mechanistic insights into the durability of ancient Roman concrete"
+    },
+    "OA-W4391392156": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.20517/mmm.2023.26",
+      "discovery_query": "roman concrete lime mortar simulation model validation",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4391392156",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4391392156",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "A review of mechanical properties and carbonation behavior evolution of lime mortar for architectural heritages restoration"
+    },
+    "OA-W4403767876": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1002/nag.3870",
+      "discovery_query": "lime mortar simulation model validation experimental validation domain",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4403767876",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4403767876",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Simulation of Autogenous Self\u2010Healing in Lime\u2010Based Mortars"
+    },
+    "OA-W4414570532": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1007/s13137-025-00275-2",
+      "discovery_query": "lime mortar simulation model validation experimental validation domain",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4414570532",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4414570532",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Mathematical modelling of water absorption properties for historical lime-based mortars"
+    },
+    "OA-W7164023905": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.35587/brj.ed.978-65-6016-147-4_14",
+      "discovery_query": "lime mortar simulation model validation experimental validation domain",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W7164023905",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W7164023905",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "LIME INCREASE IN THE ADHESION OF INORGANIC MORTARS"
+    }
+  },
+  "state": "inconclusive",
+  "state_history": [
+    "created",
+    "policy_loaded",
+    "context_frozen",
+    "planning",
+    "round_1",
+    "sharing",
+    "inconclusive"
+  ],
+  "tool_request_events": [],
+  "viewpoint_society": {
+    "action_budget": 12,
+    "active_ids": [
+      "S-ACTIVE-SIM-M1",
+      "S-ACTIVE-SIM-M2",
+      "S-ACTIVE-SIM-NULL",
+      "S-ACTIVE-SIM-OPEN-ADMITTED"
+    ],
+    "cards": {
+      "S-ACTIVE-SIM-M1": {
+        "case_id": "S-ACTIVE-SIM",
+        "falsifiers": [
+          "No validation artifact or support-region statement can be located."
+        ],
+        "kind": "CANDIDATE",
+        "known_alternatives": [
+          "S-ACTIVE-SIM-M2",
+          "S-ACTIVE-SIM-NULL"
+        ],
+        "predictions": [
+          "A declared validation artifact is required before executable predictions count."
+        ],
+        "prior_basis": "Offline mechanism fixture for simulator-boundary reasoning.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "The simulation record can constrain a mechanism only inside a declared support region.",
+        "support_region": "The paper's reported lime-mortar model domain; no Roman-concrete performance extrapolation.",
+        "viewpoint_id": "S-ACTIVE-SIM-M1"
+      },
+      "S-ACTIVE-SIM-M2": {
+        "case_id": "S-ACTIVE-SIM",
+        "falsifiers": [
+          "A pre-existing validated adapter with declared inputs and outputs is found."
+        ],
+        "kind": "CANDIDATE",
+        "known_alternatives": [
+          "S-ACTIVE-SIM-M1",
+          "S-ACTIVE-SIM-NULL"
+        ],
+        "predictions": [
+          "The paper supports a typed hypothesis but no live simulation call is eligible."
+        ],
+        "prior_basis": "Offline mechanism fixture for model-assertion boundaries.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "The record is useful only as a model assertion and not as an executable simulator.",
+        "support_region": "Evidence interpretation without validated execution.",
+        "viewpoint_id": "S-ACTIVE-SIM-M2"
+      },
+      "S-ACTIVE-SIM-NULL": {
+        "case_id": "S-ACTIVE-SIM",
+        "falsifiers": [
+          "A validated adapter is identified before the manifest freezes."
+        ],
+        "kind": "NULL",
+        "known_alternatives": [
+          "S-ACTIVE-SIM-M1",
+          "S-ACTIVE-SIM-M2"
+        ],
+        "predictions": [
+          "The case remains simulator-unavailable and requires physical or validated feedback."
+        ],
+        "prior_basis": "Required null comparator for unvalidated simulation.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "No simulator-backed mechanism conclusion is eligible.",
+        "support_region": "The declared simulation and evidence authority boundary.",
+        "viewpoint_id": "S-ACTIVE-SIM-NULL"
+      },
+      "S-ACTIVE-SIM-OPEN": {
+        "case_id": "S-ACTIVE-SIM",
+        "falsifiers": [
+          "No distinct prediction or provenance can be supplied."
+        ],
+        "kind": "OPEN_SLOT",
+        "known_alternatives": [
+          "S-ACTIVE-SIM-M1",
+          "S-ACTIVE-SIM-M2",
+          "S-ACTIVE-SIM-NULL"
+        ],
+        "predictions": [
+          "A new mechanism must distinguish model assertion from validated execution."
+        ],
+        "prior_basis": "Required discovery slot.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "Open slot for a bounded simulator or mechanism interpretation introduced by admissible evidence.",
+        "support_region": "Must be declared before any new mechanism is scored.",
+        "viewpoint_id": "S-ACTIVE-SIM-OPEN"
+      },
+      "S-ACTIVE-SIM-OPEN-ADMITTED": {
+        "case_id": "S-ACTIVE-SIM",
+        "falsifiers": [
+          "No distinct prediction or provenance can be supplied."
+        ],
+        "kind": "CANDIDATE",
+        "known_alternatives": [
+          "S-ACTIVE-SIM-M1",
+          "S-ACTIVE-SIM-M2",
+          "S-ACTIVE-SIM-NULL"
+        ],
+        "predictions": [
+          "A new mechanism must distinguish model assertion from validated execution."
+        ],
+        "prior_basis": "Admitted only to test whether the open slot can contribute a distinct discriminator.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "A bounded newly admitted mechanism proposed by the open discovery slot.",
+        "support_region": "Must be declared before any new mechanism is scored.",
+        "viewpoint_id": "S-ACTIVE-SIM-OPEN-ADMITTED"
+      }
+    },
+    "case_id": "S-ACTIVE-SIM",
+    "context_hash": "sha256:da7c9b0c3ba34f6dcdcc2b35de831c3e7834ed15c55c87241624fdd0226469a2",
+    "critiques": {},
+    "dossiers": {
+      "S-ACTIVE-SIM-M1": {
+        "action_ids": [
+          "4eeebab14e666636"
+        ],
+        "case_id": "S-ACTIVE-SIM",
+        "claim_ids": [
+          "C1"
+        ],
+        "diagnostics": [],
+        "dissenting_report_ids": [],
+        "dossier_id": "DOSSIER-S-ACTIVE-SIM-M1",
+        "report_ids": [
+          "27af4cc9c1274040",
+          "2bb89419bf2f9b1a",
+          "40e2a788dec06a61",
+          "b5e593fda82773ff",
+          "d307ae0a19150e0c"
+        ],
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W2388902365",
+          "OA-W3082163065",
+          "OA-W4403767876",
+          "OA-W4414570532",
+          "OA-W7164023905"
+        ],
+        "status": "COMPLETE",
+        "support_task_ids": [
+          "138a493f7b2bf58b",
+          "270879d74189c6bc",
+          "48f8dea28927c88d",
+          "9963acdef31509fb",
+          "d824117ab4829abf"
+        ],
+        "viewpoint_id": "S-ACTIVE-SIM-M1"
+      },
+      "S-ACTIVE-SIM-M2": {
+        "action_ids": [
+          "b48f5efea87173a7"
+        ],
+        "case_id": "S-ACTIVE-SIM",
+        "claim_ids": [
+          "C1"
+        ],
+        "diagnostics": [],
+        "dissenting_report_ids": [],
+        "dossier_id": "DOSSIER-S-ACTIVE-SIM-M2",
+        "report_ids": [
+          "10338a339168cb14",
+          "9740ebf466eedc79",
+          "dd198903a45df81f",
+          "f606fde7422dcf81",
+          "f6e63a7643762da6"
+        ],
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W2255322831",
+          "OA-W2388902365",
+          "OA-W3081924918",
+          "OA-W4313706729",
+          "OA-W4391392156"
+        ],
+        "status": "COMPLETE",
+        "support_task_ids": [
+          "6f078a8cf1f0b2ce",
+          "745e94c16244808e",
+          "8ac31950c046fc7f",
+          "9cd3c7c0f7d29c1d",
+          "c2d880acc6d02095"
+        ],
+        "viewpoint_id": "S-ACTIVE-SIM-M2"
+      },
+      "S-ACTIVE-SIM-NULL": {
+        "action_ids": [
+          "b0880f056018b726"
+        ],
+        "case_id": "S-ACTIVE-SIM",
+        "claim_ids": [
+          "C1"
+        ],
+        "diagnostics": [],
+        "dissenting_report_ids": [],
+        "dossier_id": "DOSSIER-S-ACTIVE-SIM-NULL",
+        "report_ids": [
+          "3dbcb5b5c11eaac4",
+          "47909a45c214095a",
+          "5a1f1101e9a071fc",
+          "69ba463e297c15eb",
+          "714c409f3a1c0556"
+        ],
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "COMPLETE",
+        "support_task_ids": [
+          "10c53336cf06a6cc",
+          "154aa5cfc053e340",
+          "2ba491a35bece7e9",
+          "8312c55d67fd6199",
+          "c883e2c94130fde2"
+        ],
+        "viewpoint_id": "S-ACTIVE-SIM-NULL"
+      },
+      "S-ACTIVE-SIM-OPEN-ADMITTED": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-SIM",
+        "claim_ids": [],
+        "diagnostics": [],
+        "dissenting_report_ids": [],
+        "dossier_id": "DOSSIER-S-ACTIVE-SIM-OPEN-ADMITTED",
+        "report_ids": [
+          "06c1ded5fa08f3c6",
+          "10877e3e266f0df6",
+          "117da26dc30a8d5c",
+          "1dfe6028f494a0e1",
+          "b7b71761358e05ab"
+        ],
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "COMPLETE",
+        "support_task_ids": [
+          "6b3a6961acc2e965",
+          "add9a50a27f421e2",
+          "b2fd813a5c3d791d",
+          "d4fd7e3fd529f06c",
+          "ebcecc32b75225d5"
+        ],
+        "viewpoint_id": "S-ACTIVE-SIM-OPEN-ADMITTED"
+      }
+    },
+    "evidence_bus": {
+      "actions": {
+        "4eeebab14e666636": {
+          "action_id": "4eeebab14e666636",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "S-ACTIVE-SIM-M1",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 5,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-SIM",
+          "input": {
+            "index": "openalex",
+            "query": "lime mortar simulation model validation experimental validation domain",
+            "requested_index": "openalex"
+          },
+          "output_ids": [
+            "OA-W4403767876",
+            "OA-W4414570532",
+            "OA-W7164023905",
+            "OA-W3082163065",
+            "OA-W2388902365"
+          ],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "Locate the rumored simulation paper and check whether it reports a validation artifact and bounded model domain; do not infer Roman-concrete performance.",
+          "replay_key": "sha256:bcc44845beb4c6db4238ca469ad93abdb2def35c273cccf326380e767df1a6c8",
+          "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "b0880f056018b726": {
+          "action_id": "b0880f056018b726",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "S-ACTIVE-SIM-NULL",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 0,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-SIM",
+          "input": {
+            "index": "openalex",
+            "query": "lime mortar simulation paper validation artifact model support region adapter roman concrete performance",
+            "requested_index": "openalex"
+          },
+          "output_ids": [],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "Test whether an identifiable paper and validation record exist. Provisional null prediction: absent a validated adapter and declared support region, no simulator-backed conclusion is eligible; any lime-mortar model remains out of scope for Roman-concrete performance. Base provenance is rumor only (E-SIM1), not evidence.",
+          "replay_key": "sha256:17424f6263fe7c79738fa69ba054aa4e998c0bb09018c8061877dbb08976aca9",
+          "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "b48f5efea87173a7": {
+          "action_id": "b48f5efea87173a7",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "S-ACTIVE-SIM-M2",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 4,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-SIM",
+          "input": {
+            "index": "openalex",
+            "query": "roman concrete lime mortar simulation model validation",
+            "requested_index": "openalex"
+          },
+          "output_ids": [
+            "OA-W4313706729",
+            "OA-W3081924918",
+            "OA-W2255322831",
+            "OA-W4391392156",
+            "OA-W2388902365"
+          ],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "Locate the rumored paper and assess whether it reports a model assertion; no paper evidence or eligible simulator is currently available.",
+          "replay_key": "sha256:e2fd5f1afe5a7b8d06b17e08834f3ad3b4be60aebcf0593bbf83280d86ad61d2",
+          "run_id": "G10R-S-ACTIVE-SIM-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        }
+      },
+      "append_order": [
+        [
+          "SUPPORT_TASK",
+          "d824117ab4829abf"
+        ],
+        [
+          "SUPPORT_TASK",
+          "9963acdef31509fb"
+        ],
+        [
+          "SUPPORT_TASK",
+          "270879d74189c6bc"
+        ],
+        [
+          "SUPPORT_TASK",
+          "48f8dea28927c88d"
+        ],
+        [
+          "SUPPORT_TASK",
+          "138a493f7b2bf58b"
+        ],
+        [
+          "SUPPORT_TASK",
+          "9cd3c7c0f7d29c1d"
+        ],
+        [
+          "SUPPORT_TASK",
+          "6f078a8cf1f0b2ce"
+        ],
+        [
+          "SUPPORT_TASK",
+          "745e94c16244808e"
+        ],
+        [
+          "SUPPORT_TASK",
+          "c2d880acc6d02095"
+        ],
+        [
+          "SUPPORT_TASK",
+          "8ac31950c046fc7f"
+        ],
+        [
+          "SUPPORT_TASK",
+          "c883e2c94130fde2"
+        ],
+        [
+          "SUPPORT_TASK",
+          "154aa5cfc053e340"
+        ],
+        [
+          "SUPPORT_TASK",
+          "8312c55d67fd6199"
+        ],
+        [
+          "SUPPORT_TASK",
+          "10c53336cf06a6cc"
+        ],
+        [
+          "SUPPORT_TASK",
+          "2ba491a35bece7e9"
+        ],
+        [
+          "SUPPORT_TASK",
+          "b2fd813a5c3d791d"
+        ],
+        [
+          "SUPPORT_TASK",
+          "add9a50a27f421e2"
+        ],
+        [
+          "SUPPORT_TASK",
+          "ebcecc32b75225d5"
+        ],
+        [
+          "SUPPORT_TASK",
+          "d4fd7e3fd529f06c"
+        ],
+        [
+          "SUPPORT_TASK",
+          "6b3a6961acc2e965"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W4403767876"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W4414570532"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W7164023905"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W3082163065"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W2388902365"
+        ],
+        [
+          "ACTION",
+          "4eeebab14e666636"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "40e2a788dec06a61"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "d307ae0a19150e0c"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "2bb89419bf2f9b1a"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "b5e593fda82773ff"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "27af4cc9c1274040"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W4313706729"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W3081924918"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W2255322831"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W4391392156"
+        ],
+        [
+          "ACTION",
+          "b48f5efea87173a7"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "10338a339168cb14"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "f606fde7422dcf81"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "dd198903a45df81f"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "f6e63a7643762da6"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "9740ebf466eedc79"
+        ],
+        [
+          "ACTION",
+          "b0880f056018b726"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "69ba463e297c15eb"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "5a1f1101e9a071fc"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "714c409f3a1c0556"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "47909a45c214095a"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "3dbcb5b5c11eaac4"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "117da26dc30a8d5c"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "06c1ded5fa08f3c6"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "10877e3e266f0df6"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "1dfe6028f494a0e1"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "b7b71761358e05ab"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-SIM-M1"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-SIM-M2"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-SIM-NULL"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-SIM-OPEN-ADMITTED"
+        ]
+      ],
+      "candidate_conflicts": {},
+      "candidate_observations": {
+        "OA-W2255322831": [
+          {
+            "discovery_query": "roman concrete lime mortar simulation model validation",
+            "payload_hash": "sha256:673b6be98e69bf1a42e04a1bcdc76b075e678293eb93ca9db5eff8ad507297f5",
+            "source_candidate_id": "OA-W2255322831",
+            "status": "METADATA_SCREENED"
+          }
+        ],
+        "OA-W2388902365": [
+          {
+            "discovery_query": "lime mortar simulation model validation experimental validation domain",
+            "payload_hash": "sha256:dd187ab39a7fe72385ed7cc535a900dffcd8ce1fe2805327fae95db0a8efc5f8",
+            "source_candidate_id": "OA-W2388902365",
+            "status": "METADATA_SCREENED"
+          },
+          {
+            "discovery_query": "roman concrete lime mortar simulation model validation",
+            "payload_hash": "sha256:3d7a4083ff50bb987f8661b3d3b9f1fd3cf0d5267bb12e435aa11f2b5d9045b7",
+            "source_candidate_id": "OA-W2388902365",
+            "status": "DUPLICATE"
+          }
+        ],
+        "OA-W3081924918": [
+          {
+            "discovery_query": "roman concrete lime mortar simulation model validation",
+            "payload_hash": "sha256:75a37db3b1cf060185303b3d67e502ebd5560bfa64ce3d4eb12e6c9ec33d8300",
+            "source_candidate_id": "OA-W3081924918",
+            "status": "METADATA_SCREENED"
+          }
+        ],
+        "OA-W3082163065": [
+          {
+            "discovery_query": "lime mortar simulation model validation experimental validation domain",
+            "payload_hash": "sha256:28e6e82e34912074af8423e83a80d088156765dac19abb25e2ebdda25510ebff",
+            "source_candidate_id": "OA-W3082163065",
+            "status": "METADATA_SCREENED"
+          }
+        ],
+        "OA-W4313706729": [
+          {
+            "discovery_query": "roman concrete lime mortar simulation model validation",
+            "payload_hash": "sha256:3eff5da6222b593b131b090b14e125b68e736fecfff5b38f914f0c35379c5945",
+            "source_candidate_id": "OA-W4313706729",
+            "status": "METADATA_SCREENED"
+          }
+        ],
+        "OA-W4391392156": [
+          {
+            "discovery_query": "roman concrete lime mortar simulation model validation",
+            "payload_hash": "sha256:ca9a2f1160a2caa40e94c1dd82588cce5f42d6d042489dc51a80b6c24d8e4467",
+            "source_candidate_id": "OA-W4391392156",
+            "status": "METADATA_SCREENED"
+          }
+        ],
+        "OA-W4403767876": [
+          {
+            "discovery_query": "lime mortar simulation model validation experimental validation domain",
+            "payload_hash": "sha256:fdadd68203fde534928cf47f46d1fbd50a5310c0bfd3ef6ccf44b898ea6c73be",
+            "source_candidate_id": "OA-W4403767876",
+            "status": "METADATA_SCREENED"
+          }
+        ],
+        "OA-W4414570532": [
+          {
+            "discovery_query": "lime mortar simulation model validation experimental validation domain",
+            "payload_hash": "sha256:816cd35d04edd9662d278cfec08a2bc44b57a69212291cb81bd2b4fac775da70",
+            "source_candidate_id": "OA-W4414570532",
+            "status": "METADATA_SCREENED"
+          }
+        ],
+        "OA-W7164023905": [
+          {
+            "discovery_query": "lime mortar simulation model validation experimental validation domain",
+            "payload_hash": "sha256:303e3455fc7b2041badb391841dac85f3c1d780a63300dfcfa9a71aafda7977e",
+            "source_candidate_id": "OA-W7164023905",
+            "status": "METADATA_SCREENED"
+          }
+        ]
+      },
+      "candidates": {
+        "OA-W2255322831": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "openalex:w2255322831",
+          "discovery_query": "roman concrete lime mortar simulation model validation",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W2255322831",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W2255322831",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Parametrical studies of the behavior of aerial lime mortars"
+        },
+        "OA-W2388902365": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "openalex:w2388902365",
+          "discovery_query": "lime mortar simulation model validation experimental validation domain",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W2388902365",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W2388902365",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "A multi\u2013physics approach applied to masonry structures with non\u2013hydraulic lime mortars"
+        },
+        "OA-W3081924918": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.1016/j.conbuildmat.2020.120571",
+          "discovery_query": "roman concrete lime mortar simulation model validation",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W3081924918",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W3081924918",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Experimental and numerical assessment of the shear behaviour of lime mortar clay brick masonry triplets"
+        },
+        "OA-W3082163065": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.3390/su12177181",
+          "discovery_query": "lime mortar simulation model validation experimental validation domain",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W3082163065",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W3082163065",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Response of Organic Lime Mortars to Thermal and Electrical Shocks Due to Lightning Strikes"
+        },
+        "OA-W4313706729": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.1126/sciadv.add1602",
+          "discovery_query": "roman concrete lime mortar simulation model validation",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W4313706729",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W4313706729",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Hot mixing: Mechanistic insights into the durability of ancient Roman concrete"
+        },
+        "OA-W4391392156": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.20517/mmm.2023.26",
+          "discovery_query": "roman concrete lime mortar simulation model validation",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W4391392156",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W4391392156",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "A review of mechanical properties and carbonation behavior evolution of lime mortar for architectural heritages restoration"
+        },
+        "OA-W4403767876": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.1002/nag.3870",
+          "discovery_query": "lime mortar simulation model validation experimental validation domain",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W4403767876",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W4403767876",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Simulation of Autogenous Self\u2010Healing in Lime\u2010Based Mortars"
+        },
+        "OA-W4414570532": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.1007/s13137-025-00275-2",
+          "discovery_query": "lime mortar simulation model validation experimental validation domain",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W4414570532",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W4414570532",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Mathematical modelling of water absorption properties for historical lime-based mortars"
+        },
+        "OA-W7164023905": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.35587/brj.ed.978-65-6016-147-4_14",
+          "discovery_query": "lime mortar simulation model validation experimental validation domain",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W7164023905",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W7164023905",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "LIME INCREASE IN THE ADHESION OF INORGANIC MORTARS"
+        }
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "context_hash": "sha256:da7c9b0c3ba34f6dcdcc2b35de831c3e7834ed15c55c87241624fdd0226469a2",
+      "critiques": {},
+      "dossiers": {
+        "DOSSIER-S-ACTIVE-SIM-M1": {
+          "action_ids": [
+            "4eeebab14e666636"
+          ],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [
+            "C1"
+          ],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-SIM-M1",
+          "report_ids": [
+            "27af4cc9c1274040",
+            "2bb89419bf2f9b1a",
+            "40e2a788dec06a61",
+            "b5e593fda82773ff",
+            "d307ae0a19150e0c"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W2388902365",
+            "OA-W3082163065",
+            "OA-W4403767876",
+            "OA-W4414570532",
+            "OA-W7164023905"
+          ],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "138a493f7b2bf58b",
+            "270879d74189c6bc",
+            "48f8dea28927c88d",
+            "9963acdef31509fb",
+            "d824117ab4829abf"
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-M1"
+        },
+        "DOSSIER-S-ACTIVE-SIM-M2": {
+          "action_ids": [
+            "b48f5efea87173a7"
+          ],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [
+            "C1"
+          ],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-SIM-M2",
+          "report_ids": [
+            "10338a339168cb14",
+            "9740ebf466eedc79",
+            "dd198903a45df81f",
+            "f606fde7422dcf81",
+            "f6e63a7643762da6"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W2255322831",
+            "OA-W2388902365",
+            "OA-W3081924918",
+            "OA-W4313706729",
+            "OA-W4391392156"
+          ],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "6f078a8cf1f0b2ce",
+            "745e94c16244808e",
+            "8ac31950c046fc7f",
+            "9cd3c7c0f7d29c1d",
+            "c2d880acc6d02095"
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-M2"
+        },
+        "DOSSIER-S-ACTIVE-SIM-NULL": {
+          "action_ids": [
+            "b0880f056018b726"
+          ],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [
+            "C1"
+          ],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-SIM-NULL",
+          "report_ids": [
+            "3dbcb5b5c11eaac4",
+            "47909a45c214095a",
+            "5a1f1101e9a071fc",
+            "69ba463e297c15eb",
+            "714c409f3a1c0556"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "10c53336cf06a6cc",
+            "154aa5cfc053e340",
+            "2ba491a35bece7e9",
+            "8312c55d67fd6199",
+            "c883e2c94130fde2"
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-NULL"
+        },
+        "DOSSIER-S-ACTIVE-SIM-OPEN-ADMITTED": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-SIM-OPEN-ADMITTED",
+          "report_ids": [
+            "06c1ded5fa08f3c6",
+            "10877e3e266f0df6",
+            "117da26dc30a8d5c",
+            "1dfe6028f494a0e1",
+            "b7b71761358e05ab"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "6b3a6961acc2e965",
+            "add9a50a27f421e2",
+            "b2fd813a5c3d791d",
+            "d4fd7e3fd529f06c",
+            "ebcecc32b75225d5"
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-OPEN-ADMITTED"
+        }
+      },
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "reports": {
+        "06c1ded5fa08f3c6": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "06c1ded5fa08f3c6",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "Open-slot admission is retained, but no distinct support was recovered in this bounded pass.",
+          "support_task_id": "add9a50a27f421e2",
+          "unresolved_questions": [
+            "Requires an attributable discriminator or source."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-OPEN-ADMITTED"
+        },
+        "10338a339168cb14": {
+          "action_ids": [
+            "b48f5efea87173a7"
+          ],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [
+            "C1"
+          ],
+          "report_id": "10338a339168cb14",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W4313706729",
+            "OA-W3081924918",
+            "OA-W2255322831",
+            "OA-W4391392156",
+            "OA-W2388902365"
+          ],
+          "stance": "SUPPORTS",
+          "status": "PARTIAL",
+          "summary": "Bounded interpretation of simulation evidence; no performance conclusion.",
+          "support_task_id": "9cd3c7c0f7d29c1d",
+          "unresolved_questions": [
+            "Does any cited paper provide a validated adapter and declared support region?"
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-M2"
+        },
+        "10877e3e266f0df6": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "10877e3e266f0df6",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "Open-slot admission is retained, but no distinct support was recovered in this bounded pass.",
+          "support_task_id": "ebcecc32b75225d5",
+          "unresolved_questions": [
+            "Requires an attributable discriminator or source."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-OPEN-ADMITTED"
+        },
+        "117da26dc30a8d5c": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "117da26dc30a8d5c",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "Open-slot admission is retained, but no distinct support was recovered in this bounded pass.",
+          "support_task_id": "b2fd813a5c3d791d",
+          "unresolved_questions": [
+            "Requires an attributable discriminator or source."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-OPEN-ADMITTED"
+        },
+        "1dfe6028f494a0e1": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "1dfe6028f494a0e1",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "Open-slot admission is retained, but no distinct support was recovered in this bounded pass.",
+          "support_task_id": "d4fd7e3fd529f06c",
+          "unresolved_questions": [
+            "Requires an attributable discriminator or source."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-OPEN-ADMITTED"
+        },
+        "27af4cc9c1274040": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "27af4cc9c1274040",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "experiment_design remains unresolved after the first bounded pass.",
+          "support_task_id": "138a493f7b2bf58b",
+          "unresolved_questions": [
+            "No dedicated experiment_design result was recovered."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-M1"
+        },
+        "2bb89419bf2f9b1a": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "2bb89419bf2f9b1a",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "identity_lineage remains unresolved after the first bounded pass.",
+          "support_task_id": "270879d74189c6bc",
+          "unresolved_questions": [
+            "No dedicated identity_lineage result was recovered."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-M1"
+        },
+        "3dbcb5b5c11eaac4": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "3dbcb5b5c11eaac4",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "experiment_design remains unresolved after the first bounded pass.",
+          "support_task_id": "2ba491a35bece7e9",
+          "unresolved_questions": [
+            "No dedicated experiment_design result was recovered."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-NULL"
+        },
+        "40e2a788dec06a61": {
+          "action_ids": [
+            "4eeebab14e666636"
+          ],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [
+            "C1"
+          ],
+          "report_id": "40e2a788dec06a61",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W4403767876",
+            "OA-W4414570532",
+            "OA-W7164023905",
+            "OA-W3082163065",
+            "OA-W2388902365"
+          ],
+          "stance": "SUPPORTS",
+          "status": "PARTIAL",
+          "summary": "Bounded simulator-eligibility assessment; no performance claim.",
+          "support_task_id": "d824117ab4829abf",
+          "unresolved_questions": [
+            "Does any candidate paper report validation and a bounded model domain?"
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-M1"
+        },
+        "47909a45c214095a": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "47909a45c214095a",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "contradiction remains unresolved after the first bounded pass.",
+          "support_task_id": "10c53336cf06a6cc",
+          "unresolved_questions": [
+            "No dedicated contradiction result was recovered."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-NULL"
+        },
+        "5a1f1101e9a071fc": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "5a1f1101e9a071fc",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "extraction remains unresolved after the first bounded pass.",
+          "support_task_id": "154aa5cfc053e340",
+          "unresolved_questions": [
+            "No dedicated extraction result was recovered."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-NULL"
+        },
+        "69ba463e297c15eb": {
+          "action_ids": [
+            "b0880f056018b726"
+          ],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [
+            "C1"
+          ],
+          "report_id": "69ba463e297c15eb",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "SUPPORTS",
+          "status": "PARTIAL",
+          "summary": "Provisional null interpretation; no performance claim.",
+          "support_task_id": "c883e2c94130fde2",
+          "unresolved_questions": [
+            "Does an accessible paper provide a validated adapter and declared support region?"
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-NULL"
+        },
+        "714c409f3a1c0556": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "714c409f3a1c0556",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "identity_lineage remains unresolved after the first bounded pass.",
+          "support_task_id": "8312c55d67fd6199",
+          "unresolved_questions": [
+            "No dedicated identity_lineage result was recovered."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-NULL"
+        },
+        "9740ebf466eedc79": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "9740ebf466eedc79",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "experiment_design remains unresolved after the first bounded pass.",
+          "support_task_id": "8ac31950c046fc7f",
+          "unresolved_questions": [
+            "No dedicated experiment_design result was recovered."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-M2"
+        },
+        "b5e593fda82773ff": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "b5e593fda82773ff",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "contradiction remains unresolved after the first bounded pass.",
+          "support_task_id": "48f8dea28927c88d",
+          "unresolved_questions": [
+            "No dedicated contradiction result was recovered."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-M1"
+        },
+        "b7b71761358e05ab": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "b7b71761358e05ab",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "Open-slot admission is retained, but no distinct support was recovered in this bounded pass.",
+          "support_task_id": "6b3a6961acc2e965",
+          "unresolved_questions": [
+            "Requires an attributable discriminator or source."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-OPEN-ADMITTED"
+        },
+        "d307ae0a19150e0c": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "d307ae0a19150e0c",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "extraction remains unresolved after the first bounded pass.",
+          "support_task_id": "9963acdef31509fb",
+          "unresolved_questions": [
+            "No dedicated extraction result was recovered."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-M1"
+        },
+        "dd198903a45df81f": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "dd198903a45df81f",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "identity_lineage remains unresolved after the first bounded pass.",
+          "support_task_id": "745e94c16244808e",
+          "unresolved_questions": [
+            "No dedicated identity_lineage result was recovered."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-M2"
+        },
+        "f606fde7422dcf81": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "f606fde7422dcf81",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "extraction remains unresolved after the first bounded pass.",
+          "support_task_id": "6f078a8cf1f0b2ce",
+          "unresolved_questions": [
+            "No dedicated extraction result was recovered."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-M2"
+        },
+        "f6e63a7643762da6": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-SIM",
+          "claim_ids": [],
+          "report_id": "f6e63a7643762da6",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "contradiction remains unresolved after the first bounded pass.",
+          "support_task_id": "c2d880acc6d02095",
+          "unresolved_questions": [
+            "No dedicated contradiction result was recovered."
+          ],
+          "viewpoint_id": "S-ACTIVE-SIM-M2"
+        }
+      },
+      "schema_version": "1.0",
+      "tasks": {
+        "10c53336cf06a6cc": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "contradiction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "10c53336cf06a6cc",
+          "task_type": "CONTRADICTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-NULL"
+        },
+        "138a493f7b2bf58b": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "experiment_design support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "138a493f7b2bf58b",
+          "task_type": "EXPERIMENT_DESIGN",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-M1"
+        },
+        "154aa5cfc053e340": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "extraction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "154aa5cfc053e340",
+          "task_type": "EXTRACTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-NULL"
+        },
+        "270879d74189c6bc": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "identity_lineage support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "270879d74189c6bc",
+          "task_type": "IDENTITY_LINEAGE",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-M1"
+        },
+        "2ba491a35bece7e9": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "experiment_design support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "2ba491a35bece7e9",
+          "task_type": "EXPERIMENT_DESIGN",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-NULL"
+        },
+        "48f8dea28927c88d": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "contradiction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "48f8dea28927c88d",
+          "task_type": "CONTRADICTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-M1"
+        },
+        "6b3a6961acc2e965": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "experiment_design support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "6b3a6961acc2e965",
+          "task_type": "EXPERIMENT_DESIGN",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-OPEN-ADMITTED"
+        },
+        "6f078a8cf1f0b2ce": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "extraction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "6f078a8cf1f0b2ce",
+          "task_type": "EXTRACTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-M2"
+        },
+        "745e94c16244808e": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "identity_lineage support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "745e94c16244808e",
+          "task_type": "IDENTITY_LINEAGE",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-M2"
+        },
+        "8312c55d67fd6199": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "identity_lineage support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "8312c55d67fd6199",
+          "task_type": "IDENTITY_LINEAGE",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-NULL"
+        },
+        "8ac31950c046fc7f": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "experiment_design support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "8ac31950c046fc7f",
+          "task_type": "EXPERIMENT_DESIGN",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-M2"
+        },
+        "9963acdef31509fb": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "extraction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "9963acdef31509fb",
+          "task_type": "EXTRACTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-M1"
+        },
+        "9cd3c7c0f7d29c1d": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "retrieval support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "9cd3c7c0f7d29c1d",
+          "task_type": "RETRIEVAL",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-M2"
+        },
+        "add9a50a27f421e2": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "extraction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "add9a50a27f421e2",
+          "task_type": "EXTRACTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-OPEN-ADMITTED"
+        },
+        "b2fd813a5c3d791d": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "retrieval support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "b2fd813a5c3d791d",
+          "task_type": "RETRIEVAL",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-OPEN-ADMITTED"
+        },
+        "c2d880acc6d02095": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "contradiction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "c2d880acc6d02095",
+          "task_type": "CONTRADICTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-M2"
+        },
+        "c883e2c94130fde2": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "retrieval support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "c883e2c94130fde2",
+          "task_type": "RETRIEVAL",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-NULL"
+        },
+        "d4fd7e3fd529f06c": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "contradiction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "d4fd7e3fd529f06c",
+          "task_type": "CONTRADICTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-OPEN-ADMITTED"
+        },
+        "d824117ab4829abf": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "retrieval support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "d824117ab4829abf",
+          "task_type": "RETRIEVAL",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-M1"
+        },
+        "ebcecc32b75225d5": {
+          "case_id": "S-ACTIVE-SIM",
+          "charter": "identity_lineage support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "ebcecc32b75225d5",
+          "task_type": "IDENTITY_LINEAGE",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-SIM-OPEN-ADMITTED"
+        }
+      },
+      "treatment_id": "A2-M"
+    },
+    "focus": null,
+    "null_id": "S-ACTIVE-SIM-NULL",
+    "portfolio": null,
+    "private_reports": {
+      "S-ACTIVE-SIM-M1": [
+        "40e2a788dec06a61",
+        "d307ae0a19150e0c",
+        "2bb89419bf2f9b1a",
+        "b5e593fda82773ff",
+        "27af4cc9c1274040"
+      ],
+      "S-ACTIVE-SIM-M2": [
+        "10338a339168cb14",
+        "f606fde7422dcf81",
+        "dd198903a45df81f",
+        "f6e63a7643762da6",
+        "9740ebf466eedc79"
+      ],
+      "S-ACTIVE-SIM-NULL": [
+        "69ba463e297c15eb",
+        "5a1f1101e9a071fc",
+        "714c409f3a1c0556",
+        "47909a45c214095a",
+        "3dbcb5b5c11eaac4"
+      ],
+      "S-ACTIVE-SIM-OPEN-ADMITTED": [
+        "117da26dc30a8d5c",
+        "06c1ded5fa08f3c6",
+        "10877e3e266f0df6",
+        "1dfe6028f494a0e1",
+        "b7b71761358e05ab"
+      ]
+    },
+    "problem_id": "roman-hot-mix",
+    "problem_version": "1.0",
+    "protocol": "g10d.1-viewpoint-centered-society",
+    "shared": true,
+    "treatment_id": "A2-M"
+  }
+}

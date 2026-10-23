@@ -41,6 +41,12 @@ CAP_USD = 25.0
 SEALED_CASE_COUNT = 4
 DEVELOPMENT_CASE_MINIMUM = 2
 PLAN_OUTPUT_TOKENS = 800
+PLAN_ARRAY_LIMITS = {
+    "primary_queries": 6,
+    "follow_up_queries": 6,
+    "requested_fetch_locators": 4,
+    "simulation_requests": 4,
+}
 BRANCHES = ("evidence_skeptic", "mechanism_transfer", "experiment_simulation")
 LEGAL_OUTCOMES = (
     "ESCALATE_ACTIVE_SOCIETY_EVALUATION",
@@ -217,6 +223,18 @@ def validate_plan(plan: dict[str, Any], *, case_id: str, branch_id: str) -> None
     validate(plan, schema("investigation-plan.schema.json"))
     if plan["case_id"] != case_id or plan["branch_id"] != branch_id:
         raise PolicyBlocked("plan case or branch does not match frozen treatment context")
+
+
+def bound_plan(plan: dict[str, Any]) -> tuple[dict[str, Any], dict[str, list[Any]]]:
+    """Apply declared list bounds while preserving overflow diagnostics."""
+    bounded = deepcopy(plan)
+    overflow: dict[str, list[Any]] = {}
+    for field, limit in PLAN_ARRAY_LIMITS.items():
+        values = bounded.get(field, [])
+        if len(values) > limit:
+            overflow[field] = values[limit:]
+            bounded[field] = values[:limit]
+    return bounded, overflow
 
 
 def public_case(case: dict[str, Any]) -> dict[str, Any]:
@@ -892,6 +910,7 @@ class ActiveInvestigationRunner:
         self.traces: list[dict[str, Any]] = list(self.checkpoint.get("model_traces", []))
         self.actions: list[dict[str, Any]] = list(self.checkpoint.get("action_records", []))
         self.tool_request_events: list[dict[str, Any]] = list(self.checkpoint.get("tool_request_events", []))
+        self.plan_constraint_events: list[dict[str, Any]] = list(self.checkpoint.get("plan_constraint_events", []))
         self.candidates: dict[str, dict[str, Any]] = dict(self.checkpoint.get("source_candidates", {}))
         self.paper_cards: dict[str, dict[str, Any]] = dict(self.checkpoint.get("paper_evidence_cards", {}))
         self.document_cache_dir = document_cache_dir or ROOT / "data/raw/g10r"
@@ -910,6 +929,7 @@ class ActiveInvestigationRunner:
                 "model_traces": self.traces,
                 "action_records": self.actions,
                 "tool_request_events": self.tool_request_events,
+                "plan_constraint_events": self.plan_constraint_events,
                 "source_candidates": self.candidates,
                 "paper_evidence_cards": self.paper_cards,
                 "simulation_traces": self.simulation_traces,
@@ -980,6 +1000,25 @@ class ActiveInvestigationRunner:
         self.traces.append(trace)
         self._checkpoint()
         return deepcopy(response["output"])
+
+    def _validated_plan(self, plan: dict[str, Any], *, branch_id: str) -> dict[str, Any]:
+        bounded, overflow = bound_plan(plan)
+        for field, dropped in sorted(overflow.items()):
+            self.plan_constraint_events.append({
+                "event_id": digest({"run": self.run_id, "branch": branch_id, "field": field, "overflow": dropped})[7:23],
+                "branch_id": branch_id,
+                "field": field,
+                "status": "BOUNDED",
+                "declared_limit": PLAN_ARRAY_LIMITS[field],
+                "received_count": len(bounded[field]) + len(dropped),
+                "dropped_count": len(dropped),
+                "dropped_digest": digest(dropped),
+                "reason": "provider output exceeded declared array bound; execution retained the bounded prefix and recorded overflow",
+            })
+        validate_plan(bounded, case_id=self.case["case_id"], branch_id=branch_id)
+        if overflow:
+            self._checkpoint()
+        return bounded
 
     def _search(self, *, branch_id: str, query: dict[str, Any]) -> list[dict[str, Any]]:
         before = deepcopy(self.budget.usage)
@@ -1300,7 +1339,7 @@ class ActiveInvestigationRunner:
             output_schema=provider_schema("investigation-plan.schema.json"),
             format_name="g10r_a1_plan",
         )
-        validate_plan(plan, case_id=self.case["case_id"], branch_id="single_investigator")
+        plan = self._validated_plan(plan, branch_id="single_investigator")
         self._execute_queries("single_investigator", plan["primary_queries"], 6)
         self._execute_requested_tools("single_investigator", plan)
         self.machine.transition("sharing")
@@ -1332,7 +1371,7 @@ class ActiveInvestigationRunner:
                 output_schema=provider_schema("investigation-plan.schema.json"),
                 format_name="g10r_branch_plan",
             )
-            validate_plan(plan, case_id=self.case["case_id"], branch_id=branch)
+            plan = self._validated_plan(plan, branch_id=branch)
             plans[branch] = plan
             found = self._execute_queries(branch, plan["primary_queries"], 2)
             self._execute_requested_tools(branch, plan)
@@ -1447,7 +1486,7 @@ class ActiveInvestigationRunner:
                 packet=self._packet(branch_id=f"viewpoint:{viewpoint_id}", extra={"viewpoint_card": card, "mechanism_card": mechanism_by_id[viewpoint_id]}, candidate_ids=[]),
                 maximum_output_tokens=PLAN_OUTPUT_TOKENS, output_schema=provider_schema("investigation-plan.schema.json"), format_name="g10m_proponent_plan",
             )
-            validate_plan(plan, case_id=self.case["case_id"], branch_id=f"viewpoint:{viewpoint_id}")
+            plan = self._validated_plan(plan, branch_id=f"viewpoint:{viewpoint_id}")
             before = {item["action_id"] for item in self.actions}
             found = self._execute_queries(viewpoint_id, plan["primary_queries"], 2)
             self._execute_requested_tools(viewpoint_id, plan)
@@ -1482,7 +1521,7 @@ class ActiveInvestigationRunner:
                 packet=self._packet(branch_id=f"auditor:{role}", extra={"structural_role": role, "shared_viewpoint_dossiers": shared, "shared_mechanism_reports": shared}, candidate_ids=[]),
                 maximum_output_tokens=PLAN_OUTPUT_TOKENS, output_schema=provider_schema("investigation-plan.schema.json"), format_name="g10m_auditor_plan",
             )
-            validate_plan(plan, case_id=self.case["case_id"], branch_id=f"auditor:{role}")
+            plan = self._validated_plan(plan, branch_id=f"auditor:{role}")
             before = {item["action_id"] for item in self.actions}
             found = self._execute_queries(f"auditor:{role}", plan["primary_queries"], 1)
             self._execute_requested_tools(f"auditor:{role}", plan)
@@ -1857,7 +1896,13 @@ def _directional_outcome(arm_results: dict[str, list[dict[str, Any]]], *, societ
     )
 
 
-def run_phase_b(*, owner_activated: bool, output_dir: Path | None = None) -> dict[str, Any]:
+def run_phase_b(
+    *,
+    owner_activated: bool,
+    output_dir: Path | None = None,
+    phase_path: Path | None = None,
+    spend_roots: list[Path] | None = None,
+) -> dict[str, Any]:
     """Execute the smallest live pilot only after an explicit owner activation.
 
     This entry point is intentionally separate from ``phase_a``.  Merely
@@ -1873,8 +1918,9 @@ def run_phase_b(*, owner_activated: bool, output_dir: Path | None = None) -> dic
     from .providers.openai_provider import BudgetLedger, OpenAIProvider
 
     destination = output_dir or ROOT / "artifacts/goals/G10R"
+    destination.mkdir(parents=True, exist_ok=True)
     manifest_hash = phase_a_result["manifest_sha256"]
-    frozen_phase_a_path = destination / "phase-a.json"
+    frozen_phase_a_path = phase_path or destination / "phase-a.json"
     if not frozen_phase_a_path.exists():
         raise OwnerActivationRequired("Phase A manifest file is missing; freeze it before activating Phase B")
     frozen_phase_a = load_json(frozen_phase_a_path)
@@ -1882,14 +1928,17 @@ def run_phase_b(*, owner_activated: bool, output_dir: Path | None = None) -> dic
         raise StaleContext("stored Phase A manifest is absent, invalid, or stale relative to the runner")
     already_spent = 0.0
     checkpoint_directory = destination / "checkpoints"
-    if checkpoint_directory.exists():
+    roots = spend_roots or [checkpoint_directory]
+    for spend_root in roots:
+        if not spend_root.exists():
+            continue
         # Count every prior attempt's recorded provider usage toward the hard
         # cap, while only direct children are eligible for replay.  Archived
         # checkpoints are deliberately retained for audit and must not make
         # a manifest change reset cumulative spend accounting.
-        for checkpoint_path in checkpoint_directory.rglob("*.json"):
+        for checkpoint_path in spend_root.rglob("*.json"):
             checkpoint = load_json(checkpoint_path)
-            if checkpoint_path.parent == checkpoint_directory and checkpoint.get("manifest_sha256") != manifest_hash:
+            if spend_root == checkpoint_directory and checkpoint_path.parent == checkpoint_directory and checkpoint.get("manifest_sha256") != manifest_hash:
                 raise StaleContext("existing Phase B checkpoint has a different frozen manifest")
             already_spent += sum(
                 float(trace.get("estimated_actual_cost_usd", 0.0))

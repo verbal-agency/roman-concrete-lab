@@ -3,7 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from src.roman_concrete_lab.agents.investigation import ActiveInvestigationRunner, load_jsonl, phase_a
+from src.roman_concrete_lab.agents.investigation import ActiveInvestigationRunner, bound_plan, load_jsonl, phase_a
 from src.roman_concrete_lab.retrieval import InvestigationBudget
 from tools.evaluation.constraint_audit_replay import replay
 from tools.tournament.replay import ROOT
@@ -50,3 +50,13 @@ def test_runner_rejection_is_not_mislabeled_as_policy_block():
         )
         assert runner.actions[-1]["policy_status"] == "RUNNER_REJECTED"
         assert runner.tool_request_events[-1]["status"] == "RUNNER_REJECTED"
+
+
+def test_plan_overflow_is_bounded_and_recorded():
+    plan = {
+        "requested_fetch_locators": ["OA-1", "OA-2", "OA-3", "OA-4", "OA-5"],
+        "primary_queries": [], "follow_up_queries": [], "simulation_requests": [],
+    }
+    bounded, overflow = bound_plan(plan)
+    assert bounded["requested_fetch_locators"] == ["OA-1", "OA-2", "OA-3", "OA-4"]
+    assert overflow["requested_fetch_locators"] == ["OA-5"]
