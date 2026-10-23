@@ -1,0 +1,1313 @@
+{
+  "action_records": [
+    {
+      "action_id": "763cde214c165c45",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 2,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "\"quicklime\" \"silica fume\" microcracks impermeability",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-42184bdf3781",
+        "CR-2b14f912e76a",
+        "CR-856169716e23",
+        "CR-d90fc6bf77df",
+        "CR-6674964dd937"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the recent record and assess whether its material, comparator, and measured outcome are reported.",
+      "replay_key": "sha256:d08a4c9de485d564cccdcdf404315619c8db6915fbfe922eaa73f1ae1cc8e540",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "0afa640b2e7e84f7",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "hot-mixed lime mortar pozzolan roman mortar evidence properties comparator",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-c6ee5407a07e",
+        "CR-a2b507490952",
+        "CR-e8e5e991a9ba",
+        "CR-f6f5c9aa640d",
+        "CR-a5eb5beca81d"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Find target-domain studies and establish the materials and conditions relevant to transfer.",
+      "replay_key": "sha256:3239d41c43f1cf60229c8692019623ade261e66c6d7110262e326c968a1b5f74",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "15b7204cfe67737e",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 3,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "roman lime pozzolan hot mixing quicklime experimental mortar",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "CR-a2b507490952",
+        "CR-f6f5c9aa640d",
+        "CR-820a7e2d0d74",
+        "CR-8ec5025f1877",
+        "CR-4fb3de698058"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Search collections for primary historical or experimental records relevant to the target and hot-mixing distinction.",
+      "replay_key": "sha256:023cfb572be29faf6dcd2bbbfdddb1b17c59efa93474e5aa95099f5ca90bc243",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "f7abd44a07afd754",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "quicklime silica fume mortar crack sealing permeability comparator",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-eb937cb84162",
+        "CR-2264ac0263d1",
+        "CR-b27151082f62",
+        "CR-78de42d0fc05",
+        "CR-fc4de7d283cb"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Seek studies that could support or contradict the claimed crack and impermeability effects, including comparator details.",
+      "replay_key": "sha256:415af7dbad2607ce9d9584688a38511a3d9a11abff31de30d211c9987aec2166",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "b11f0d8c53cbf4d3",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 2,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "lime silica fume mortar microcracking permeability negative results",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-da9ae7cd194a",
+        "CR-899e68515bce",
+        "CR-eb937cb84162",
+        "CR-2264ac0263d1",
+        "CR-b27151082f62"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Search for counterevidence and outcome-specific studies rather than assuming a favorable effect.",
+      "replay_key": "sha256:f89adbaca433a71639639c39d2385ce04445b390cc69feaca44d3ae34d1bf4d8",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "e4de7ee70c05d31a",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 4,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "[identified candidate title or doi] full text methods quicklime silica fume comparator curing",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "CR-ab8036502453",
+        "CR-675ed5a9efa5",
+        "CR-457c1835e733",
+        "CR-b4e0f8b44423"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "If a candidate is identified, check accessible full text for material identity, comparator, methods, and outcome definitions.",
+      "replay_key": "sha256:a214b3a649ce697185f1bac64e55bda7f23b8adbf2f6f6eab428b445f3fa63c2",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "508ff048575facac",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "[identified candidate title or doi] cited by quicklime silica fume microcracks",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-856169716e23",
+        "CR-d90fc6bf77df",
+        "CR-6674964dd937"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Trace lineage and later corroboration or criticism of the candidate record.",
+      "replay_key": "sha256:88e79a2769371b9c82d7d2771e8e587b1d67141ddee7d02667f72117a78729f7",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "63497f5aab283e34",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "roman hot mixed lime mortar pozzolan modern transfer limits aggregate curing",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-a2b507490952",
+        "CR-c6ee5407a07e"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test domain fit and identify differences that could block direct support.",
+      "replay_key": "sha256:7f84ff27279cc555582ddeff97d466182dcfd2e17acbcd2154c44ce31f10812f",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "66943f745057afbd",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "quicklime silica fume lime mortar impermeability replicate study",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Look for independent replication or conflicting measurements.",
+      "replay_key": "sha256:dbe5e0f22272b3d0185e4d17fe110da4bddda1f8f1495dac01c0754bd8aa9e58",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  ],
+  "actions": {
+    "0afa640b2e7e84f7": {
+      "action_id": "0afa640b2e7e84f7",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "hot-mixed lime mortar pozzolan roman mortar evidence properties comparator",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-c6ee5407a07e",
+        "CR-a2b507490952",
+        "CR-e8e5e991a9ba",
+        "CR-f6f5c9aa640d",
+        "CR-a5eb5beca81d"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Find target-domain studies and establish the materials and conditions relevant to transfer.",
+      "replay_key": "sha256:3239d41c43f1cf60229c8692019623ade261e66c6d7110262e326c968a1b5f74",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "15b7204cfe67737e": {
+      "action_id": "15b7204cfe67737e",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 3,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "roman lime pozzolan hot mixing quicklime experimental mortar",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "CR-a2b507490952",
+        "CR-f6f5c9aa640d",
+        "CR-820a7e2d0d74",
+        "CR-8ec5025f1877",
+        "CR-4fb3de698058"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Search collections for primary historical or experimental records relevant to the target and hot-mixing distinction.",
+      "replay_key": "sha256:023cfb572be29faf6dcd2bbbfdddb1b17c59efa93474e5aa95099f5ca90bc243",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "508ff048575facac": {
+      "action_id": "508ff048575facac",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "[identified candidate title or doi] cited by quicklime silica fume microcracks",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-856169716e23",
+        "CR-d90fc6bf77df",
+        "CR-6674964dd937"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Trace lineage and later corroboration or criticism of the candidate record.",
+      "replay_key": "sha256:88e79a2769371b9c82d7d2771e8e587b1d67141ddee7d02667f72117a78729f7",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "63497f5aab283e34": {
+      "action_id": "63497f5aab283e34",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "roman hot mixed lime mortar pozzolan modern transfer limits aggregate curing",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-a2b507490952",
+        "CR-c6ee5407a07e"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test domain fit and identify differences that could block direct support.",
+      "replay_key": "sha256:7f84ff27279cc555582ddeff97d466182dcfd2e17acbcd2154c44ce31f10812f",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "66943f745057afbd": {
+      "action_id": "66943f745057afbd",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "quicklime silica fume lime mortar impermeability replicate study",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Look for independent replication or conflicting measurements.",
+      "replay_key": "sha256:dbe5e0f22272b3d0185e4d17fe110da4bddda1f8f1495dac01c0754bd8aa9e58",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "763cde214c165c45": {
+      "action_id": "763cde214c165c45",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 2,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "\"quicklime\" \"silica fume\" microcracks impermeability",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-42184bdf3781",
+        "CR-2b14f912e76a",
+        "CR-856169716e23",
+        "CR-d90fc6bf77df",
+        "CR-6674964dd937"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the recent record and assess whether its material, comparator, and measured outcome are reported.",
+      "replay_key": "sha256:d08a4c9de485d564cccdcdf404315619c8db6915fbfe922eaa73f1ae1cc8e540",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "b11f0d8c53cbf4d3": {
+      "action_id": "b11f0d8c53cbf4d3",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 2,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "lime silica fume mortar microcracking permeability negative results",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "CR-da9ae7cd194a",
+        "CR-899e68515bce",
+        "CR-eb937cb84162",
+        "CR-2264ac0263d1",
+        "CR-b27151082f62"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Search for counterevidence and outcome-specific studies rather than assuming a favorable effect.",
+      "replay_key": "sha256:f89adbaca433a71639639c39d2385ce04445b390cc69feaca44d3ae34d1bf4d8",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "e4de7ee70c05d31a": {
+      "action_id": "e4de7ee70c05d31a",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 4,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "[identified candidate title or doi] full text methods quicklime silica fume comparator curing",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "CR-ab8036502453",
+        "CR-675ed5a9efa5",
+        "CR-457c1835e733",
+        "CR-b4e0f8b44423"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "If a candidate is identified, check accessible full text for material identity, comparator, methods, and outcome definitions.",
+      "replay_key": "sha256:a214b3a649ce697185f1bac64e55bda7f23b8adbf2f6f6eab428b445f3fa63c2",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "f7abd44a07afd754": {
+      "action_id": "f7abd44a07afd754",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "crossref",
+        "query": "quicklime silica fume mortar crack sealing permeability comparator",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-eb937cb84162",
+        "CR-2264ac0263d1",
+        "CR-b27151082f62",
+        "CR-78de42d0fc05",
+        "CR-fc4de7d283cb"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Seek studies that could support or contradict the claimed crack and impermeability effects, including comparator details.",
+      "replay_key": "sha256:415af7dbad2607ce9d9584688a38511a3d9a11abff31de30d211c9987aec2166",
+      "run_id": "G10R-S-ACTIVE-TRANSFER-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  },
+  "budget": {
+    "limits": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 12000,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "remaining": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 24.9983939,
+      "input_tokens": 74374,
+      "output_tokens": 9913,
+      "payload_bytes": 5000000,
+      "queries": 2,
+      "retained_sources": 0,
+      "simulation_calls": 4
+    },
+    "usage": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.0016061,
+      "input_tokens": 5626,
+      "output_tokens": 2087,
+      "payload_bytes": 0,
+      "queries": 10,
+      "retained_sources": 24,
+      "simulation_calls": 0
+    }
+  },
+  "manifest_sha256": "sha256:23b4f83354e576eb3497b4b4b38ac905e2441698501b5d5fd6ac6e07675236bd",
+  "model_traces": [
+    {
+      "call_id": "6c60f3ee1d09c61b",
+      "estimated_actual_cost_usd": 0.000373,
+      "estimated_maximum_cost_usd": 0.0005035,
+      "latency_seconds": 5.6,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "single_investigator",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "follow_up_queries": [
+          {
+            "index": "catalog",
+            "query": "[identified candidate title or DOI] full text methods quicklime silica fume comparator curing",
+            "rationale": "If a candidate is identified, check accessible full text for material identity, comparator, methods, and outcome definitions."
+          },
+          {
+            "index": "openalex",
+            "query": "[identified candidate title or DOI] cited by quicklime silica fume microcracks",
+            "rationale": "Trace lineage and later corroboration or criticism of the candidate record."
+          },
+          {
+            "index": "crossref",
+            "query": "Roman hot mixed lime mortar pozzolan modern transfer limits aggregate curing",
+            "rationale": "Test domain fit and identify differences that could block direct support."
+          },
+          {
+            "index": "openalex",
+            "query": "quicklime silica fume lime mortar impermeability replicate study",
+            "rationale": "Look for independent replication or conflicting measurements."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "\"quicklime\" \"silica fume\" microcracks impermeability",
+            "rationale": "Identify the recent record and assess whether its material, comparator, and measured outcome are reported."
+          },
+          {
+            "index": "crossref",
+            "query": "\"quicklime\" \"silica fume\" microcracks impermeability",
+            "rationale": "Independently locate the record and compare bibliographic metadata for lineage and access clues."
+          },
+          {
+            "index": "openalex",
+            "query": "hot-mixed lime mortar pozzolan Roman mortar evidence properties comparator",
+            "rationale": "Find target-domain studies and establish the materials and conditions relevant to transfer."
+          },
+          {
+            "index": "catalog",
+            "query": "Roman lime pozzolan hot mixing quicklime experimental mortar",
+            "rationale": "Search collections for primary historical or experimental records relevant to the target and hot-mixing distinction."
+          },
+          {
+            "index": "crossref",
+            "query": "quicklime silica fume mortar crack sealing permeability comparator",
+            "rationale": "Seek studies that could support or contradict the claimed crack and impermeability effects, including comparator details."
+          },
+          {
+            "index": "openalex",
+            "query": "lime silica fume mortar microcracking permeability negative results",
+            "rationale": "Search for counterevidence and outcome-specific studies rather than assuming a favorable effect."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:ac905b62d2feb7f5211e6cd8ecf03994ca6ab0241770318f0ec3dc32b6f830a7",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 575,
+        "output_tokens": 631
+      }
+    },
+    {
+      "call_id": "12249045846be9f2",
+      "estimated_actual_cost_usd": 0.0012331,
+      "estimated_maximum_cost_usd": 0.00257,
+      "latency_seconds": 13.6116,
+      "model": "gpt-6-luna",
+      "output": {
+        "authority_note": "All source candidates remain EVIDENCE_PENDING. This portfolio grants no scientific, laboratory, or promotion authority; it specifies no recipe and makes no validated-performance claim.",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "credible_rival_ids": [
+          "H-TRANSFER-1"
+        ],
+        "hypotheses": [
+          {
+            "comparator": "The comparator reported in each verified source, with any target-domain comparison treated separately; no comparator is established by the supplied metadata.",
+            "falsifier": "Accessible primary text shows that the cited record does not study the claimed material or outcome, or that verified target-relevant evidence contradicts transfer under comparable conditions.",
+            "hypothesis_id": "H-TRANSFER-1",
+            "intervention": "Assess whether outcome-specific findings in the identified silica-fume records transfer to hot-mixed lime-pozzolan mortar only after verifying material composition, mixing sequence, comparator, curing, and test method in accessible primary text.",
+            "novelty_basis": "The metadata titles concern silica fume in concrete or cement-lime mortar, while the target is hot-mixed lime-pozzolan mortar; the records do not establish equivalence of binder, process, comparator, or measured outcomes.",
+            "predicted_observation": "Verified source text may report an impermeability or microstructure outcome in a non-target mortar system, but metadata alone will not demonstrate the same effect in hot-mixed lime-pozzolan mortar.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-T1 states that material and comparator fit are unknown.",
+              "CR-42184bdf3781 title: silica fume, concrete workability and water impermeability.",
+              "CR-2b14f912e76a title: nano-silica and silica-fume modified cement mortar.",
+              "CR-da9ae7cd194a title: silica-fume\u2013cement\u2013lime mortar microstructure.",
+              "CR-78de42d0fc05 title: silica-fume concrete and mortar."
+            ],
+            "schema_version": "1.0",
+            "source_candidate_ids": [
+              "CR-42184bdf3781",
+              "CR-2b14f912e76a",
+              "CR-da9ae7cd194a",
+              "CR-78de42d0fc05"
+            ],
+            "support_region": "Unadjudicated scholarly metadata for the named silica-fume concrete and cement-lime mortar records; no established target-domain support.",
+            "transfer_type": "TRANSFER_HYPOTHESIS",
+            "uncertainty": "High: source content, experimental conditions, comparator, outcome definitions, and target-domain correspondence are unavailable."
+          },
+          {
+            "comparator": "No verified comparator is available in the supplied records.",
+            "falsifier": "Accessible primary evidence verifies a study directly matching the target material and hot-mixing process, with an interpretable comparator and relevant measured outcome.",
+            "hypothesis_id": "H-NULL-1",
+            "intervention": "Withhold direct-support attribution unless full text verifies target-relevant materials, process, comparator, and outcome.",
+            "novelty_basis": "The present record set consists of metadata-only entries and does not verify that any candidate studies quicklime hot mixing or the target mortar.",
+            "predicted_observation": "The supplied metadata will remain insufficient to establish direct support for the hot-mixed lime-pozzolan target.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "All listed candidates have METADATA_ONLY access class.",
+              "No paper evidence cards or fetched full text were supplied.",
+              "E-T1 explicitly leaves material and comparator fit unknown."
+            ],
+            "schema_version": "1.0",
+            "source_candidate_ids": [
+              "CR-42184bdf3781",
+              "CR-2b14f912e76a",
+              "CR-da9ae7cd194a",
+              "CR-78de42d0fc05"
+            ],
+            "support_region": "Current supplied record only; it does not assert that no qualifying evidence exists elsewhere.",
+            "transfer_type": "NULL_HYPOTHESIS",
+            "uncertainty": "High: this is an evidence-status hypothesis, not a claim that the effect is absent."
+          }
+        ],
+        "leading_hypothesis_id": "H-NULL-1",
+        "negative_searches": [
+          "Supplied search results include metadata-only records with adjacent silica-fume topics, but no verified direct study of hot-mixed lime-pozzolan mortar.",
+          "No primary text, replication, or outcome-level counterevidence was supplied."
+        ],
+        "next_discriminating_action": "Use an allowed query to identify and retrieve the primary text for the most relevant candidate, then verify binder identity, mixing process, comparator, curing, and outcome definitions before assessing transfer; separately search for target-domain evidence and independent replication.",
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "CR-42184bdf3781",
+          "CR-2b14f912e76a",
+          "CR-da9ae7cd194a",
+          "CR-78de42d0fc05",
+          "CR-8ec5025f1877"
+        ],
+        "status": "REVIEW_REQUIRED",
+        "summary": "The supplied evidence does not establish that a public quicklime-and-silica-fume record directly supports hot-mixed lime-pozzolan mortar. Available records are metadata-only; material identity, comparator, methods, and outcome details remain unverified. At most, they motivate a bounded transfer hypothesis.",
+        "unresolved_disputes": [
+          "Whether any candidate actually uses quicklime rather than hydrated lime or a cement-based binder.",
+          "Whether any candidate tests hot mixing or measures outcomes relevant to the target mortar.",
+          "Whether the reported impermeability or microcrack claims have suitable comparators and independently corroborated measurements."
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:26de492aa3c011cdba9ddf12673d13d2697333414e4ac514803523eac11a77a9",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 5051,
+        "output_tokens": 1456
+      }
+    }
+  ],
+  "paper_evidence_cards": {},
+  "simulation_traces": [],
+  "source_candidates": {
+    "CR-2264ac0263d1": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.20944/preprints202309.1725.v1",
+      "discovery_query": "lime silica fume mortar microcracking permeability negative results",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.20944/preprints202309.1725.v1",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-2264ac0263d1",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Characteristics of Silica Fume Nano-Alumina Ternary Blended Mortar"
+    },
+    "CR-2b14f912e76a": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.cemconcomp.2018.05.012",
+      "discovery_query": "\"quicklime\" \"silica fume\" microcracks impermeability",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1016/j.cemconcomp.2018.05.012",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-2b14f912e76a",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Nano-silica and silica fume modified cement mortar used as Surface Protection Material to enhance the impermeability"
+    },
+    "CR-42184bdf3781": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.4028/www.scientific.net/amm.238.157",
+      "discovery_query": "\"quicklime\" \"silica fume\" microcracks impermeability",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.4028/www.scientific.net/amm.238.157",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-42184bdf3781",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Effect of Silica Fume on Workability and Water Impermeability of Concrete"
+    },
+    "CR-457c1835e733": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.14359/2483",
+      "discovery_query": "[identified candidate title or doi] full text methods quicklime silica fume comparator curing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.14359/2483",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-457c1835e733",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Influence of Curing on the Salt Scaling Resistance of Concrete With and Without Silica Fume"
+    },
+    "CR-4fb3de698058": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3403/bs6463",
+      "discovery_query": "roman lime pozzolan hot mixing quicklime experimental mortar",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.3403/bs6463",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-4fb3de698058",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Quicklime, hydrated lime and natural calcium carbonate"
+    },
+    "CR-6674964dd937": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3403/bsen13263",
+      "discovery_query": "[identified candidate title or doi] cited by quicklime silica fume microcracks",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.3403/bsen13263",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-6674964dd937",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Silica fume for concrete"
+    },
+    "CR-675ed5a9efa5": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.14359/1222",
+      "discovery_query": "[identified candidate title or doi] full text methods quicklime silica fume comparator curing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.14359/1222",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-675ed5a9efa5",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Durability of High Early Strength Silica Fume Concretes Subjected to Accelerated and Normal Curing"
+    },
+    "CR-78de42d0fc05": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.14359/3892",
+      "discovery_query": "quicklime silica fume mortar crack sealing permeability comparator",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.14359/3892",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-78de42d0fc05",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Properties of Silica Fume Concrete and Mortar"
+    },
+    "CR-820a7e2d0d74": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3403/00172928u",
+      "discovery_query": "roman lime pozzolan hot mixing quicklime experimental mortar",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.3403/00172928u",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-820a7e2d0d74",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Quicklime, hydrated lime and natural calcium carbonate"
+    },
+    "CR-856169716e23": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.21203/rs.3.rs-10107398/v1",
+      "discovery_query": "[identified candidate title or doi] cited by quicklime silica fume microcracks",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.21203/rs.3.rs-10107398/v1",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-856169716e23",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Silica fume as an industrial by-product modifier for reducing quicklime demand in earthen building materials: mechanical, microstructural and carbon-performance assessment"
+    },
+    "CR-899e68515bce": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.21660/2023.108.3800",
+      "discovery_query": "lime silica fume mortar microcracking permeability negative results",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.21660/2023.108.3800",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-899e68515bce",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "THE EFFECT OF USING LIME, SILICA FUME AND NANO-SILICAON MORTAR MADE FROM SEA SAND AND SEAWATER"
+    },
+    "CR-8ec5025f1877": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3403/00172928",
+      "discovery_query": "roman lime pozzolan hot mixing quicklime experimental mortar",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.3403/00172928",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-8ec5025f1877",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Quicklime, hydrated lime and natural calcium carbonate"
+    },
+    "CR-a2b507490952": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1520/stp11035s",
+      "discovery_query": "roman hot mixed lime mortar pozzolan modern transfer limits aggregate curing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1520/stp11035s",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-a2b507490952",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Pozzolan-Lime Mortar: Limitations of ASTM C593"
+    },
+    "CR-a5eb5beca81d": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.29303/spektrum.v12i1.379",
+      "discovery_query": "hot-mixed lime mortar pozzolan roman mortar evidence properties comparator",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.29303/spektrum.v12i1.379",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-a5eb5beca81d",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "DURABILITAS MORTAR  DENGAN REPLACEMENT BAHAN POZZOLAN TERHADAP LINGKUNGAN AGRESIF"
+    },
+    "CR-ab8036502453": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.14359/2413",
+      "discovery_query": "[identified candidate title or doi] full text methods quicklime silica fume comparator curing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.14359/2413",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-ab8036502453",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Effect of Variable Curing Conditions on the Properties of Mortars With Silica Fume"
+    },
+    "CR-b27151082f62": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.14359/2167",
+      "discovery_query": "lime silica fume mortar microcracking permeability negative results",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.14359/2167",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-b27151082f62",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Permeabilities of Silica Fume Concrete"
+    },
+    "CR-b4e0f8b44423": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.14359/2394",
+      "discovery_query": "[identified candidate title or doi] full text methods quicklime silica fume comparator curing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.14359/2394",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-b4e0f8b44423",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Heat Curing of Concrete With and Without Condensed Silica Fume--Effect of Early Temperature History on Compressive Strength"
+    },
+    "CR-c6ee5407a07e": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3403/30309274",
+      "discovery_query": "roman hot mixed lime mortar pozzolan modern transfer limits aggregate curing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.3403/30309274",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-c6ee5407a07e",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Specification for ready-mixed lime: sand for mortar"
+    },
+    "CR-d90fc6bf77df": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.14359/1227",
+      "discovery_query": "[identified candidate title or doi] cited by quicklime silica fume microcracks",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.14359/1227",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-d90fc6bf77df",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Wet-Mix silica Fume Shotcrete: Effect of Silica Fume Form"
+    },
+    "CR-da9ae7cd194a": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/s0958-9465(02)00006-9",
+      "discovery_query": "lime silica fume mortar microcracking permeability negative results",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1016/s0958-9465(02)00006-9",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-da9ae7cd194a",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Microstructural investigation of a silica fume\u2013cement\u2013lime mortar"
+    },
+    "CR-e8e5e991a9ba": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.conbuildmat.2018.07.053",
+      "discovery_query": "hot-mixed lime mortar pozzolan roman mortar evidence properties comparator",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1016/j.conbuildmat.2018.07.053",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-e8e5e991a9ba",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Comparative study on the properties of three hydraulic lime mortar systems: Natural hydraulic lime mortar, cement-aerial lime-based mortar and slag-aerial lime-based mortar"
+    },
+    "CR-eb937cb84162": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.14359/2327",
+      "discovery_query": "lime silica fume mortar microcracking permeability negative results",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.14359/2327",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-eb937cb84162",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Some Moisture Sorption Properties of Silica Fume Mortar"
+    },
+    "CR-f6f5c9aa640d": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1080/09613219208727188",
+      "discovery_query": "roman lime pozzolan hot mixing quicklime experimental mortar",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1080/09613219208727188",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-f6f5c9aa640d",
+      "status": "DUPLICATE",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Proposed improvements in sand\u2010lime bricks and mortar bonding"
+    },
+    "CR-fc4de7d283cb": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.14359/1105",
+      "discovery_query": "quicklime silica fume mortar crack sealing permeability comparator",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.14359/1105",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-fc4de7d283cb",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "\"Effects of Fly Ash, blast Furnace Slag, and Silica Fume on Resistance of Mortar to Calcium Chloride Attack\""
+    }
+  },
+  "state": "completed",
+  "state_history": [
+    "created",
+    "policy_loaded",
+    "context_frozen",
+    "planning",
+    "round_1",
+    "sharing",
+    "focus_allocated",
+    "round_2",
+    "adjudicating",
+    "scored",
+    "completed"
+  ]
+}

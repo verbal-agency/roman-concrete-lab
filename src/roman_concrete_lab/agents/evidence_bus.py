@@ -22,6 +22,22 @@ from tools.tournament.replay import ROOT
 
 SCHEMA_VERSION = "1.0"
 
+# A source candidate is an identity-bearing record, but several fields are
+# observations that can legitimately change as the same work is encountered
+# through another query or provider.  Keep those observations instead of
+# treating them as an append-only identity collision.  The stable fields are
+# deliberately conservative: a disagreement in title/locator/provider
+# identity is retained as a reviewable variant, never silently overwritten.
+_CANDIDATE_IDENTITY_FIELDS = {
+    "source_candidate_id",
+    "problem_id",
+    "problem_version",
+    "title",
+    "locator",
+    "host",
+    "deduplication_key",
+}
+
 
 def _load_schema(name: str) -> dict[str, Any]:
     return json.loads((ROOT / "schemas" / name).read_text(encoding="utf-8"))
@@ -54,6 +70,10 @@ class EvidenceBus:
         self.reports: dict[str, dict[str, Any]] = {}
         self.dossiers: dict[str, dict[str, Any]] = {}
         self.critiques: dict[str, dict[str, Any]] = {}
+        # Repeated observations and substantive variants are first-class
+        # diagnostics.  They do not replace the canonical candidate.
+        self.candidate_observations: dict[str, list[dict[str, Any]]] = {}
+        self.candidate_conflicts: dict[str, list[dict[str, Any]]] = {}
         self._append_order: list[tuple[str, str]] = []
 
     def _scope(self, record: dict[str, Any], *, context_hash: str | None = None) -> None:
@@ -88,7 +108,48 @@ class EvidenceBus:
         candidate_id = candidate.get("source_candidate_id")
         if not candidate_id:
             raise PolicyBlocked("candidate is missing source_candidate_id")
-        return self._append(self.candidates, "SOURCE_CANDIDATE", candidate_id, candidate)
+        existing = self.candidates.get(candidate_id)
+        if existing is None:
+            self.candidates[candidate_id] = deepcopy(candidate)
+            self._append_order.append(("SOURCE_CANDIDATE", candidate_id))
+            existing = self.candidates[candidate_id]
+        observed = {
+            "source_candidate_id": candidate_id,
+            "payload_hash": digest(candidate),
+            "discovery_query": candidate.get("discovery_query"),
+            "status": candidate.get("status"),
+        }
+        self.candidate_observations.setdefault(candidate_id, []).append(deepcopy(observed))
+
+        # Preserve all metadata, including a variant that disagrees with the
+        # first-seen identity.  This is a review signal, not a rejection: a
+        # later adjudication may promote the variant after checking the source.
+        identity_differences = sorted(
+            field for field in _CANDIDATE_IDENTITY_FIELDS
+            if existing.get(field) != candidate.get(field)
+        )
+        if identity_differences:
+            self.candidate_conflicts.setdefault(candidate_id, []).append({
+                "source_candidate_id": candidate_id,
+                "canonical_payload_hash": digest(existing),
+                "observed_payload_hash": digest(candidate),
+                "differing_identity_fields": identity_differences,
+                "resolution_status": "PENDING_REVIEW",
+                "promotable_after_validation": True,
+                "observed_candidate": deepcopy(candidate),
+            })
+            return {
+                "replayed": False,
+                "record": deepcopy(existing),
+                "observation_recorded": True,
+                "conflict": True,
+            }
+        return {
+            "replayed": existing is not None and len(self.candidate_observations[candidate_id]) > 1,
+            "record": deepcopy(existing),
+            "observation_recorded": True,
+            "conflict": False,
+        }
 
     def assign_task(self, task: dict[str, Any]) -> dict[str, Any]:
         _validate("viewpoint-support-task.schema.json", task)
@@ -295,6 +356,8 @@ class EvidenceBus:
             "reports": deepcopy(self.reports),
             "dossiers": deepcopy(self.dossiers),
             "critiques": deepcopy(self.critiques),
+            "candidate_observations": deepcopy(self.candidate_observations),
+            "candidate_conflicts": deepcopy(self.candidate_conflicts),
             "append_order": deepcopy(self._append_order),
         }
 
@@ -308,7 +371,10 @@ class EvidenceBus:
             problem_version=checkpoint["problem_version"], treatment_id=checkpoint["treatment_id"],
             context_hash=expected_context,
         )
-        for name in ("actions", "candidates", "tasks", "reports", "dossiers", "critiques"):
+        for name in (
+            "actions", "candidates", "tasks", "reports", "dossiers", "critiques",
+            "candidate_observations", "candidate_conflicts",
+        ):
             setattr(bus, name, deepcopy(checkpoint.get(name, {})))
         bus._append_order = [tuple(item) for item in checkpoint.get("append_order", [])]
         return bus

@@ -1019,13 +1019,20 @@ class ActiveInvestigationRunner:
             for key in asdict(before)
         }
         candidates = []
+        observed_candidates = []
         for candidate in result["results"]:
             # Search metadata cannot become evidence.  The record is merely
             # screened and remains attributable to this problem/version.
             if candidate["status"] == "DISCOVERED":
                 candidate = transition_source_candidate(candidate, "METADATA_SCREENED")
-            self.candidates[candidate["source_candidate_id"]] = candidate
-            candidates.append(candidate)
+            observed_candidates.append(candidate)
+            candidate_id = candidate["source_candidate_id"]
+            # Keep the first-seen/enriched record as the runner's canonical
+            # view.  The evidence bus retains subsequent query/provider
+            # observations and any substantive metadata variants separately.
+            if candidate_id not in self.candidates:
+                self.candidates[candidate_id] = candidate
+            candidates.append(self.candidates[candidate_id])
         action = {
             "schema_version": "1.0",
             "action_id": action_id,
@@ -1048,7 +1055,7 @@ class ActiveInvestigationRunner:
         self.actions.append(action)
         record_checkpoint_action(self.checkpoint, action_id=action_id, action=action)
         if self.viewpoint_society is not None:
-            for candidate in candidates:
+            for candidate in observed_candidates:
                 self.viewpoint_society.register_candidate(candidate)
             self.viewpoint_society.register_action(action)
         self._checkpoint()

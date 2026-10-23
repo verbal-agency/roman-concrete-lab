@@ -116,13 +116,18 @@ class EvidenceBusTests(unittest.TestCase):
         self.assertIn("portfolio_omitted_source_candidate:SRC-1", envelope["diagnostics"])
         self.assertIn("SRC-1", envelope["source_candidate_ids"])
 
-    def test_duplicate_and_stale_writes_fail_closed_and_checkpoint_replays(self):
+    def test_duplicate_observations_and_substantive_variants_are_retained(self):
         self.bus.register_candidate(self.source)
-        replay = self.bus.register_candidate(dict(self.source))
+        replay = self.bus.register_candidate(dict(self.source, discovery_query="different query", status="DUPLICATE"))
         self.assertTrue(replay["replayed"])
+        self.assertFalse(replay["conflict"])
+        self.assertEqual(len(self.bus.candidate_observations["SRC-1"]), 2)
         changed = dict(self.source, title="different")
-        with self.assertRaises(PolicyBlocked):
-            self.bus.register_candidate(changed)
+        variant = self.bus.register_candidate(changed)
+        self.assertTrue(variant["conflict"])
+        self.assertEqual(self.bus.candidates["SRC-1"]["title"], "A candidate source")
+        self.assertEqual(len(self.bus.candidate_conflicts["SRC-1"]), 1)
+        self.assertTrue(self.bus.candidate_conflicts["SRC-1"][0]["promotable_after_validation"])
         with self.assertRaises(StaleContext):
             self.bus.from_checkpoint(self.bus.checkpoint(), context_hash="sha256:stale")
         resumed = EvidenceBus.from_checkpoint(self.bus.checkpoint())

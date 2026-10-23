@@ -3,17 +3,17 @@ from __future__ import annotations
 from tools.evaluation.society_postmortem import build_postmortem
 
 
-def test_postmortem_reconstructs_live_run_and_detects_contract_gap() -> None:
+def test_postmortem_reconstructs_live_run_and_confirms_runtime_contract() -> None:
     output = build_postmortem()
 
     assert output["status"] == "TARGET_STATE_READY_FOR_OFFLINE_BUILD"
     assert output["external_calls"] is False
     assert output["source_run_outcome"] == "DO_NOT_ESCALATE_ACTIVE_SOCIETY"
     assert len(output["case_ledger"]) == 8
-    assert output["runtime_contract_audit"]["legacy_mechanism_tournament_imported"] is True
-    assert output["runtime_contract_audit"]["g10d_viewpoint_society_imported"] is False
-    assert output["runtime_contract_audit"]["g10p_evidence_bus_imported"] is False
-    assert output["runtime_contract_audit"]["open_slot_explicitly_filtered_from_live_cards"] is True
+    assert output["runtime_contract_audit"]["legacy_mechanism_tournament_imported"] is False
+    assert output["runtime_contract_audit"]["g10d_viewpoint_society_imported"] is True
+    assert output["runtime_contract_audit"]["g10p_evidence_bus_imported"] is True
+    assert output["runtime_contract_audit"]["open_slot_explicitly_filtered_from_live_cards"] is False
 
 
 def test_postmortem_preserves_offline_remediation_evidence() -> None:

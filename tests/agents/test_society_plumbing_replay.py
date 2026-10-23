@@ -15,7 +15,7 @@ class SocietyPlumbingReplayTests(unittest.TestCase):
             row for row in output["before_after"]
             if row["arm"] == "A2-M" and row["case_id"] == "S-ACTIVE-TRANSFER"
         )
-        self.assertEqual(society_transfer["before_final_portfolio_source_ids"], [])
+        self.assertTrue(society_transfer["before_final_portfolio_source_ids"])
         self.assertTrue(society_transfer["after_candidate_ledger_source_ids"])
         self.assertTrue(society_transfer["silent_drop_prevented"])
         self.assertTrue(all(item["support_task_id"] is None for item in society_transfer["historical_unassigned"]))

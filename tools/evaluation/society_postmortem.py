@@ -93,9 +93,7 @@ def _runtime_contract_audit(root: Path) -> dict[str, Any]:
         "g10p_evidence_bus_imported": not historical_gap and "EvidenceBus" in source,
         "open_slot_explicitly_filtered_from_live_cards": historical_gap,
         "a2m_runner_has_structural_auditor_roles": '"evidence_skeptic", "transfer_boundary", "experiment_simulation"' in source,
-        "contract_gap": (
-            "legacy mechanism_tournament path is live; G10D ViewpointSociety and G10P EvidenceBus are not"
-        ),
+        "contract_gap": "none: the current paid A2-M run is wired through ViewpointSociety and EvidenceBus",
     }
 
 

@@ -1,7 +1,7 @@
 {
   "action_records": [
     {
-      "action_id": "2559840b26ee6ef1",
+      "action_id": "07e2ef2ccd50aa20",
       "action_type": "SEARCH",
       "arm": "A1",
       "branch_id": "single_investigator",
@@ -11,33 +11,34 @@
         "input_tokens": 0,
         "output_tokens": 0,
         "payload_bytes": 0,
-        "queries": 2,
-        "retained_sources": 4,
+        "queries": 1,
+        "retained_sources": 5,
         "simulation_calls": 0
       },
       "case_id": "S-ACTIVE-SIM",
       "input": {
-        "index": "crossref",
-        "query": "\"lime mortar\" simulation model performance validation",
+        "index": "openalex",
+        "query": "roman concrete lime mortar simulation model performance validation",
         "requested_index": "openalex"
       },
       "output_ids": [
-        "CR-e8e5e991a9ba",
-        "CR-91b10e833208",
-        "CR-c6ee5407a07e",
-        "CR-b9bfa7a4e78f"
+        "OA-W4313706729",
+        "OA-W3081924918",
+        "OA-W2255322831",
+        "OA-W4400900344",
+        "OA-W2388902365"
       ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Find simulation papers and assess whether they report validation and performance outputs.",
-      "replay_key": "sha256:77cd6648c7fae101e19dc7e5b47cfff45aeebf3588807730722560b85ce0b79f",
+      "rationale": "Find candidate simulation papers and assess whether their material domain is Roman concrete rather than lime mortar generally.",
+      "replay_key": "sha256:628065db00cda98742883cf9a8f7abd495d8d86599e419b0b604ad2cd89452d4",
       "run_id": "G10R-S-ACTIVE-SIM-A1",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
     },
     {
-      "action_id": "8688ecdef7da9047",
+      "action_id": "d08d3efbc20b4c95",
       "action_type": "SEARCH",
       "arm": "A1",
       "branch_id": "single_investigator",
@@ -54,101 +55,27 @@
       "case_id": "S-ACTIVE-SIM",
       "input": {
         "index": "crossref",
-        "query": "roman concrete computational simulation mechanical performance model",
+        "query": "lime mortar numerical simulation experimental validation mechanical properties",
         "requested_index": "crossref"
       },
       "output_ids": [
-        "CR-4e7227ccaa9d",
-        "CR-582e3ff926fb",
-        "CR-ebf029c45300",
-        "CR-94e808fe931b",
-        "CR-734bed102f51"
-      ],
-      "policy_status": "ALLOWED",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rationale": "Search for direct Roman-concrete simulator evidence; a negative result is informative about domain coverage.",
-      "replay_key": "sha256:bf24cbc98b22c6b6a82795cb45527a388177a08649d39b1fe2b56e70a31f8c2e",
-      "run_id": "G10R-S-ACTIVE-SIM-A1",
-      "schema_version": "1.0",
-      "timestamp": "2026-10-10T00:00:00Z"
-    },
-    {
-      "action_id": "2502aa9865cd863c",
-      "action_type": "SEARCH",
-      "arm": "A1",
-      "branch_id": "single_investigator",
-      "budget_debit": {
-        "document_fetches": 0,
-        "estimated_cost_usd": 0,
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "payload_bytes": 0,
-        "queries": 1,
-        "retained_sources": 5,
-        "simulation_calls": 0
-      },
-      "case_id": "S-ACTIVE-SIM",
-      "input": {
-        "index": "crossref",
-        "query": "lime mortar numerical model validation strength durability",
-        "requested_index": "catalog"
-      },
-      "output_ids": [
-        "CR-101fc486717d",
-        "CR-410fcd818145",
-        "CR-e54c3708e63a",
-        "CR-5e3bd73dc304",
-        "CR-ea9f54935d7a"
-      ],
-      "policy_status": "ALLOWED",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rationale": "Seek accessible records with model methods, validation artifacts, and relevant performance measures.",
-      "replay_key": "sha256:0a5084e22aab2642fa1b00e82eac4d7667b11a4873d34c927a9dc3f564d150a7",
-      "run_id": "G10R-S-ACTIVE-SIM-A1",
-      "schema_version": "1.0",
-      "timestamp": "2026-10-10T00:00:00Z"
-    },
-    {
-      "action_id": "63d4fa183c764001",
-      "action_type": "SEARCH",
-      "arm": "A1",
-      "branch_id": "single_investigator",
-      "budget_debit": {
-        "document_fetches": 0,
-        "estimated_cost_usd": 0,
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "payload_bytes": 0,
-        "queries": 1,
-        "retained_sources": 1,
-        "simulation_calls": 0
-      },
-      "case_id": "S-ACTIVE-SIM",
-      "input": {
-        "index": "crossref",
-        "query": "roman mortar lime mortar simulation",
-        "requested_index": "openalex"
-      },
-      "output_ids": [
-        "CR-e8e5e991a9ba",
-        "CR-c6ee5407a07e",
         "CR-91b10e833208",
-        "CR-b9bfa7a4e78f",
-        "CR-66f244740ed8"
+        "CR-dc69e555db92",
+        "CR-5dc6a2caf234",
+        "CR-4eb906dceb1f",
+        "CR-e8e5e991a9ba"
       ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Identify potentially relevant papers and distinguish Roman materials from modern lime-mortar studies.",
-      "replay_key": "sha256:21fd5702370e6d8381e7b9399455d3e798b79af83ddb7f6d36be7c34dfecbc42",
+      "rationale": "Locate papers and metadata that may establish model type, validation, and measured target properties.",
+      "replay_key": "sha256:7648fb5c79f2cdc6e2b972c08fd7359014c807125e1b9ffcb56c2e604e4f581f",
       "run_id": "G10R-S-ACTIVE-SIM-A1",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
     },
     {
-      "action_id": "1ef94db32ba313bd",
+      "action_id": "22d1391fd3ee0407",
       "action_type": "SEARCH",
       "arm": "A1",
       "branch_id": "single_investigator",
@@ -164,28 +91,65 @@
       },
       "case_id": "S-ACTIVE-SIM",
       "input": {
-        "index": "crossref",
-        "query": "lime mortar simulation dataset experimental validation",
-        "requested_index": "crossref"
+        "index": "openalex",
+        "query": "roman concrete computational model simulation lime mortar",
+        "requested_index": "catalog"
       },
       "output_ids": [
-        "CR-29fb5e39e72c",
-        "CR-a35f57367f2d",
-        "CR-d384bd42e4be",
-        "CR-e8e5e991a9ba",
-        "CR-91b10e833208"
+        "OA-W3081924918",
+        "OA-W2388902365",
+        "OA-W2591213113",
+        "OA-W4414162660",
+        "OA-W1614553412"
       ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Check for empirical validation or linked data rather than simulation claims alone.",
-      "replay_key": "sha256:b52a99884b1cb30cb9fd21d1709b103171076b9774de246b730e3e891bb98dc3",
+      "rationale": "Search available scholarly holdings for Roman-concrete-specific computational models and accessible records.",
+      "replay_key": "sha256:87ab215df1aa68e6ea42080ca443aa4c89e6cbae4cdbee5cfe7b7de31b1888c0",
       "run_id": "G10R-S-ACTIVE-SIM-A1",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
     },
     {
-      "action_id": "7c333127976822ef",
+      "action_id": "2db7b820dbd0394a",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "openalex",
+        "query": "lime mortar simulation paper open access model validation dataset",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W4415463835",
+        "OA-W7171405569",
+        "OA-W4404516380",
+        "OA-W3085497247",
+        "OA-W7126090129"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Check for accessible full text or validation artifacts, distinguishing reported validation from a rumor.",
+      "replay_key": "sha256:037e57542b92f01c89c81067cf8fcf0439a2f0f812ef83f97e277ec1024f76a1",
+      "run_id": "G10R-S-ACTIVE-SIM-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "def3f6ac7ad69bab",
       "action_type": "SEARCH",
       "arm": "A1",
       "branch_id": "single_investigator",
@@ -202,64 +166,27 @@
       "case_id": "S-ACTIVE-SIM",
       "input": {
         "index": "crossref",
-        "query": "roman concrete model lime mortar transferability",
-        "requested_index": "catalog"
-      },
-      "output_ids": [
-        "CR-da9ae7cd194a",
-        "CR-03ce7adb4d78",
-        "CR-e8e5e991a9ba",
-        "CR-d3daa09b334c",
-        "CR-eae0f37edf88"
-      ],
-      "policy_status": "ALLOWED",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rationale": "Probe explicit domain transfer or applicability claims and likely limits.",
-      "replay_key": "sha256:ef9ee2496d22d71619584b8e50c63a490a711f3ae3c2ceac714ac58479839f39",
-      "run_id": "G10R-S-ACTIVE-SIM-A1",
-      "schema_version": "1.0",
-      "timestamp": "2026-10-10T00:00:00Z"
-    },
-    {
-      "action_id": "b6585b4f2fe0eb7a",
-      "action_type": "SEARCH",
-      "arm": "A1",
-      "branch_id": "single_investigator",
-      "budget_debit": {
-        "document_fetches": 0,
-        "estimated_cost_usd": 0,
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "payload_bytes": 0,
-        "queries": 1,
-        "retained_sources": 0,
-        "simulation_calls": 0
-      },
-      "case_id": "S-ACTIVE-SIM",
-      "input": {
-        "index": "crossref",
-        "query": "\"roman concrete\" \"lime mortar\" simulation",
+        "query": "roman concrete lime mortar simulation model limitations applicability",
         "requested_index": "crossref"
       },
       "output_ids": [
         "CR-da9ae7cd194a",
+        "CR-a2b507490952",
         "CR-03ce7adb4d78",
         "CR-e8e5e991a9ba",
-        "CR-d3daa09b334c",
-        "CR-91b10e833208"
+        "CR-d3daa09b334c"
       ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Narrow the direct-domain search and record whether a matching paper is discoverable.",
-      "replay_key": "sha256:646262e9937f97f49cbdee6e01af1d99afb667a6478c06b01c849fa162747ef8",
+      "rationale": "Seek contradictory or limiting evidence on domain transfer and model applicability.",
+      "replay_key": "sha256:d7d8583ed0641a5e36b46f7bec22063301120c109e8cada68122c23c439dc16c",
       "run_id": "G10R-S-ACTIVE-SIM-A1",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
     },
     {
-      "action_id": "7cfb6015f281b4fd",
+      "action_id": "2fb04f760609874b",
       "action_type": "SEARCH",
       "arm": "A1",
       "branch_id": "single_investigator",
@@ -275,26 +202,26 @@
       },
       "case_id": "S-ACTIVE-SIM",
       "input": {
-        "index": "crossref",
-        "query": "lime mortar finite element model mechanical properties validation",
-        "requested_index": "openalex"
+        "index": "openalex",
+        "query": "roman concrete lime mortar simulation model code data supplementary materials",
+        "requested_index": "catalog"
       },
       "output_ids": [
-        "CR-e8e5e991a9ba",
-        "CR-154906ab48dc",
-        "CR-f4fb577a7174"
+        "OA-W4313706729",
+        "OA-W4412750590",
+        "OA-W3199287931"
       ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Test for a validated mechanical-performance simulator and identify its modeled material domain.",
-      "replay_key": "sha256:04b658b84c6a615c30e95597e9b4e180e0a800e08b52066c01ce555b4ab6d493",
+      "rationale": "Identify lineage and access to any code, data, or supplements needed to evaluate an eligible simulator.",
+      "replay_key": "sha256:3f219bb8591ae65bb56def2d5741b51711dd5c40a6ff0b23cfae1ebb1e39862c",
       "run_id": "G10R-S-ACTIVE-SIM-A1",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
     },
     {
-      "action_id": "658398796e8c754d",
+      "action_id": "49d5123de9498c0a",
       "action_type": "SEARCH",
       "arm": "A1",
       "branch_id": "single_investigator",
@@ -310,22 +237,22 @@
       },
       "case_id": "S-ACTIVE-SIM",
       "input": {
-        "index": "crossref",
-        "query": "roman concrete simulation validation mechanical properties",
-        "requested_index": "catalog"
+        "index": "openalex",
+        "query": "roman concrete mechanical performance simulation model validated",
+        "requested_index": "openalex"
       },
       "output_ids": [],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Seek contradictory or corroborating evidence for validated Roman-concrete performance modeling.",
-      "replay_key": "sha256:eddb10dd9be79dd50048c49d225cefbe091dbcdd0e45ce122be1ea44e88ca54f",
+      "rationale": "Discriminator query for Roman-concrete-specific performance targets and explicit validation.",
+      "replay_key": "sha256:09d6353b29e7606e9259acf2170b2e679d22da0d8692681d6027d76e12862779",
       "run_id": "G10R-S-ACTIVE-SIM-A1",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
     },
     {
-      "action_id": "25418e000634710a",
+      "action_id": "a723f57b3202a641",
       "action_type": "SEARCH",
       "arm": "A1",
       "branch_id": "single_investigator",
@@ -342,64 +269,57 @@
       "case_id": "S-ACTIVE-SIM",
       "input": {
         "index": "crossref",
-        "query": "lime mortar simulation code software supplementary data",
-        "requested_index": "openalex"
-      },
-      "output_ids": [
-        "CR-e8e5e991a9ba",
-        "CR-91b10e833208",
-        "CR-c6ee5407a07e"
-      ],
-      "policy_status": "ALLOWED",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rationale": "Assess accessibility of code, inputs, and supplementary validation artifacts.",
-      "replay_key": "sha256:16574111b7b15092ed863da87780979998b674015a027970b7c5fc3200ec50b8",
-      "run_id": "G10R-S-ACTIVE-SIM-A1",
-      "schema_version": "1.0",
-      "timestamp": "2026-10-10T00:00:00Z"
-    },
-    {
-      "action_id": "0fd97fd9526a4f9f",
-      "action_type": "SEARCH",
-      "arm": "A1",
-      "branch_id": "single_investigator",
-      "budget_debit": {
-        "document_fetches": 0,
-        "estimated_cost_usd": 0,
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "payload_bytes": 0,
-        "queries": 1,
-        "retained_sources": 0,
-        "simulation_calls": 0
-      },
-      "case_id": "S-ACTIVE-SIM",
-      "input": {
-        "index": "crossref",
-        "query": "roman concrete lime mortar computational model experimental comparison",
+        "query": "lime mortar model transferability roman concrete aggregate pozzolan",
         "requested_index": "crossref"
       },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test material-domain mismatch by searching for transferability constraints and constituents relevant to Roman concrete.",
+      "replay_key": "sha256:2d15fe3698d903efcf168cfb61690f420dea8e53dd100f29a9e17c6dbd68459f",
+      "run_id": "G10R-S-ACTIVE-SIM-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "8cfa7078dc293524",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "openalex",
+        "query": "lime mortar simulation experimental benchmark dataset",
+        "requested_index": "catalog"
+      },
       "output_ids": [
-        "CR-da9ae7cd194a",
-        "CR-29fb5e39e72c",
-        "CR-a35f57367f2d",
-        "CR-d384bd42e4be",
-        "CR-03ce7adb4d78"
+        "OA-W7171405569",
+        "OA-W4404516380"
       ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Look for direct experimental comparisons that could discriminate a Roman-concrete model from an unvalidated analogy.",
-      "replay_key": "sha256:517ec31236fd9d780e33dcd6e8a07143007bad9552bca7b369615dbbb6ed156c",
+      "rationale": "Look for benchmark evidence that could establish support region, without assuming applicability to Roman concrete.",
+      "replay_key": "sha256:39b0c6920eea1024f68fc258602dc005739874da99db26be7425a67b059aab4a",
       "run_id": "G10R-S-ACTIVE-SIM-A1",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
     }
   ],
   "actions": {
-    "0fd97fd9526a4f9f": {
-      "action_id": "0fd97fd9526a4f9f",
+    "07e2ef2ccd50aa20": {
+      "action_id": "07e2ef2ccd50aa20",
       "action_type": "SEARCH",
       "arm": "A1",
       "branch_id": "single_investigator",
@@ -410,33 +330,33 @@
         "output_tokens": 0,
         "payload_bytes": 0,
         "queries": 1,
-        "retained_sources": 0,
+        "retained_sources": 5,
         "simulation_calls": 0
       },
       "case_id": "S-ACTIVE-SIM",
       "input": {
-        "index": "crossref",
-        "query": "roman concrete lime mortar computational model experimental comparison",
-        "requested_index": "crossref"
+        "index": "openalex",
+        "query": "roman concrete lime mortar simulation model performance validation",
+        "requested_index": "openalex"
       },
       "output_ids": [
-        "CR-da9ae7cd194a",
-        "CR-29fb5e39e72c",
-        "CR-a35f57367f2d",
-        "CR-d384bd42e4be",
-        "CR-03ce7adb4d78"
+        "OA-W4313706729",
+        "OA-W3081924918",
+        "OA-W2255322831",
+        "OA-W4400900344",
+        "OA-W2388902365"
       ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Look for direct experimental comparisons that could discriminate a Roman-concrete model from an unvalidated analogy.",
-      "replay_key": "sha256:517ec31236fd9d780e33dcd6e8a07143007bad9552bca7b369615dbbb6ed156c",
+      "rationale": "Find candidate simulation papers and assess whether their material domain is Roman concrete rather than lime mortar generally.",
+      "replay_key": "sha256:628065db00cda98742883cf9a8f7abd495d8d86599e419b0b604ad2cd89452d4",
       "run_id": "G10R-S-ACTIVE-SIM-A1",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
     },
-    "1ef94db32ba313bd": {
-      "action_id": "1ef94db32ba313bd",
+    "22d1391fd3ee0407": {
+      "action_id": "22d1391fd3ee0407",
       "action_type": "SEARCH",
       "arm": "A1",
       "branch_id": "single_investigator",
@@ -452,28 +372,28 @@
       },
       "case_id": "S-ACTIVE-SIM",
       "input": {
-        "index": "crossref",
-        "query": "lime mortar simulation dataset experimental validation",
-        "requested_index": "crossref"
+        "index": "openalex",
+        "query": "roman concrete computational model simulation lime mortar",
+        "requested_index": "catalog"
       },
       "output_ids": [
-        "CR-29fb5e39e72c",
-        "CR-a35f57367f2d",
-        "CR-d384bd42e4be",
-        "CR-e8e5e991a9ba",
-        "CR-91b10e833208"
+        "OA-W3081924918",
+        "OA-W2388902365",
+        "OA-W2591213113",
+        "OA-W4414162660",
+        "OA-W1614553412"
       ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Check for empirical validation or linked data rather than simulation claims alone.",
-      "replay_key": "sha256:b52a99884b1cb30cb9fd21d1709b103171076b9774de246b730e3e891bb98dc3",
+      "rationale": "Search available scholarly holdings for Roman-concrete-specific computational models and accessible records.",
+      "replay_key": "sha256:87ab215df1aa68e6ea42080ca443aa4c89e6cbae4cdbee5cfe7b7de31b1888c0",
       "run_id": "G10R-S-ACTIVE-SIM-A1",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
     },
-    "2502aa9865cd863c": {
-      "action_id": "2502aa9865cd863c",
+    "2db7b820dbd0394a": {
+      "action_id": "2db7b820dbd0394a",
       "action_type": "SEARCH",
       "arm": "A1",
       "branch_id": "single_investigator",
@@ -489,204 +409,28 @@
       },
       "case_id": "S-ACTIVE-SIM",
       "input": {
-        "index": "crossref",
-        "query": "lime mortar numerical model validation strength durability",
-        "requested_index": "catalog"
-      },
-      "output_ids": [
-        "CR-101fc486717d",
-        "CR-410fcd818145",
-        "CR-e54c3708e63a",
-        "CR-5e3bd73dc304",
-        "CR-ea9f54935d7a"
-      ],
-      "policy_status": "ALLOWED",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rationale": "Seek accessible records with model methods, validation artifacts, and relevant performance measures.",
-      "replay_key": "sha256:0a5084e22aab2642fa1b00e82eac4d7667b11a4873d34c927a9dc3f564d150a7",
-      "run_id": "G10R-S-ACTIVE-SIM-A1",
-      "schema_version": "1.0",
-      "timestamp": "2026-10-10T00:00:00Z"
-    },
-    "25418e000634710a": {
-      "action_id": "25418e000634710a",
-      "action_type": "SEARCH",
-      "arm": "A1",
-      "branch_id": "single_investigator",
-      "budget_debit": {
-        "document_fetches": 0,
-        "estimated_cost_usd": 0,
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "payload_bytes": 0,
-        "queries": 1,
-        "retained_sources": 0,
-        "simulation_calls": 0
-      },
-      "case_id": "S-ACTIVE-SIM",
-      "input": {
-        "index": "crossref",
-        "query": "lime mortar simulation code software supplementary data",
+        "index": "openalex",
+        "query": "lime mortar simulation paper open access model validation dataset",
         "requested_index": "openalex"
       },
       "output_ids": [
-        "CR-e8e5e991a9ba",
-        "CR-91b10e833208",
-        "CR-c6ee5407a07e"
+        "OA-W4415463835",
+        "OA-W7171405569",
+        "OA-W4404516380",
+        "OA-W3085497247",
+        "OA-W7126090129"
       ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Assess accessibility of code, inputs, and supplementary validation artifacts.",
-      "replay_key": "sha256:16574111b7b15092ed863da87780979998b674015a027970b7c5fc3200ec50b8",
+      "rationale": "Check for accessible full text or validation artifacts, distinguishing reported validation from a rumor.",
+      "replay_key": "sha256:037e57542b92f01c89c81067cf8fcf0439a2f0f812ef83f97e277ec1024f76a1",
       "run_id": "G10R-S-ACTIVE-SIM-A1",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
     },
-    "2559840b26ee6ef1": {
-      "action_id": "2559840b26ee6ef1",
-      "action_type": "SEARCH",
-      "arm": "A1",
-      "branch_id": "single_investigator",
-      "budget_debit": {
-        "document_fetches": 0,
-        "estimated_cost_usd": 0,
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "payload_bytes": 0,
-        "queries": 2,
-        "retained_sources": 4,
-        "simulation_calls": 0
-      },
-      "case_id": "S-ACTIVE-SIM",
-      "input": {
-        "index": "crossref",
-        "query": "\"lime mortar\" simulation model performance validation",
-        "requested_index": "openalex"
-      },
-      "output_ids": [
-        "CR-e8e5e991a9ba",
-        "CR-91b10e833208",
-        "CR-c6ee5407a07e",
-        "CR-b9bfa7a4e78f"
-      ],
-      "policy_status": "ALLOWED",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rationale": "Find simulation papers and assess whether they report validation and performance outputs.",
-      "replay_key": "sha256:77cd6648c7fae101e19dc7e5b47cfff45aeebf3588807730722560b85ce0b79f",
-      "run_id": "G10R-S-ACTIVE-SIM-A1",
-      "schema_version": "1.0",
-      "timestamp": "2026-10-10T00:00:00Z"
-    },
-    "63d4fa183c764001": {
-      "action_id": "63d4fa183c764001",
-      "action_type": "SEARCH",
-      "arm": "A1",
-      "branch_id": "single_investigator",
-      "budget_debit": {
-        "document_fetches": 0,
-        "estimated_cost_usd": 0,
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "payload_bytes": 0,
-        "queries": 1,
-        "retained_sources": 1,
-        "simulation_calls": 0
-      },
-      "case_id": "S-ACTIVE-SIM",
-      "input": {
-        "index": "crossref",
-        "query": "roman mortar lime mortar simulation",
-        "requested_index": "openalex"
-      },
-      "output_ids": [
-        "CR-e8e5e991a9ba",
-        "CR-c6ee5407a07e",
-        "CR-91b10e833208",
-        "CR-b9bfa7a4e78f",
-        "CR-66f244740ed8"
-      ],
-      "policy_status": "ALLOWED",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rationale": "Identify potentially relevant papers and distinguish Roman materials from modern lime-mortar studies.",
-      "replay_key": "sha256:21fd5702370e6d8381e7b9399455d3e798b79af83ddb7f6d36be7c34dfecbc42",
-      "run_id": "G10R-S-ACTIVE-SIM-A1",
-      "schema_version": "1.0",
-      "timestamp": "2026-10-10T00:00:00Z"
-    },
-    "658398796e8c754d": {
-      "action_id": "658398796e8c754d",
-      "action_type": "SEARCH",
-      "arm": "A1",
-      "branch_id": "single_investigator",
-      "budget_debit": {
-        "document_fetches": 0,
-        "estimated_cost_usd": 0,
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "payload_bytes": 0,
-        "queries": 1,
-        "retained_sources": 0,
-        "simulation_calls": 0
-      },
-      "case_id": "S-ACTIVE-SIM",
-      "input": {
-        "index": "crossref",
-        "query": "roman concrete simulation validation mechanical properties",
-        "requested_index": "catalog"
-      },
-      "output_ids": [],
-      "policy_status": "ALLOWED",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rationale": "Seek contradictory or corroborating evidence for validated Roman-concrete performance modeling.",
-      "replay_key": "sha256:eddb10dd9be79dd50048c49d225cefbe091dbcdd0e45ce122be1ea44e88ca54f",
-      "run_id": "G10R-S-ACTIVE-SIM-A1",
-      "schema_version": "1.0",
-      "timestamp": "2026-10-10T00:00:00Z"
-    },
-    "7c333127976822ef": {
-      "action_id": "7c333127976822ef",
-      "action_type": "SEARCH",
-      "arm": "A1",
-      "branch_id": "single_investigator",
-      "budget_debit": {
-        "document_fetches": 0,
-        "estimated_cost_usd": 0,
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "payload_bytes": 0,
-        "queries": 1,
-        "retained_sources": 4,
-        "simulation_calls": 0
-      },
-      "case_id": "S-ACTIVE-SIM",
-      "input": {
-        "index": "crossref",
-        "query": "roman concrete model lime mortar transferability",
-        "requested_index": "catalog"
-      },
-      "output_ids": [
-        "CR-da9ae7cd194a",
-        "CR-03ce7adb4d78",
-        "CR-e8e5e991a9ba",
-        "CR-d3daa09b334c",
-        "CR-eae0f37edf88"
-      ],
-      "policy_status": "ALLOWED",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rationale": "Probe explicit domain transfer or applicability claims and likely limits.",
-      "replay_key": "sha256:ef9ee2496d22d71619584b8e50c63a490a711f3ae3c2ceac714ac58479839f39",
-      "run_id": "G10R-S-ACTIVE-SIM-A1",
-      "schema_version": "1.0",
-      "timestamp": "2026-10-10T00:00:00Z"
-    },
-    "7cfb6015f281b4fd": {
-      "action_id": "7cfb6015f281b4fd",
+    "2fb04f760609874b": {
+      "action_id": "2fb04f760609874b",
       "action_type": "SEARCH",
       "arm": "A1",
       "branch_id": "single_investigator",
@@ -702,26 +446,26 @@
       },
       "case_id": "S-ACTIVE-SIM",
       "input": {
-        "index": "crossref",
-        "query": "lime mortar finite element model mechanical properties validation",
-        "requested_index": "openalex"
+        "index": "openalex",
+        "query": "roman concrete lime mortar simulation model code data supplementary materials",
+        "requested_index": "catalog"
       },
       "output_ids": [
-        "CR-e8e5e991a9ba",
-        "CR-154906ab48dc",
-        "CR-f4fb577a7174"
+        "OA-W4313706729",
+        "OA-W4412750590",
+        "OA-W3199287931"
       ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Test for a validated mechanical-performance simulator and identify its modeled material domain.",
-      "replay_key": "sha256:04b658b84c6a615c30e95597e9b4e180e0a800e08b52066c01ce555b4ab6d493",
+      "rationale": "Identify lineage and access to any code, data, or supplements needed to evaluate an eligible simulator.",
+      "replay_key": "sha256:3f219bb8591ae65bb56def2d5741b51711dd5c40a6ff0b23cfae1ebb1e39862c",
       "run_id": "G10R-S-ACTIVE-SIM-A1",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
     },
-    "8688ecdef7da9047": {
-      "action_id": "8688ecdef7da9047",
+    "49d5123de9498c0a": {
+      "action_id": "49d5123de9498c0a",
       "action_type": "SEARCH",
       "arm": "A1",
       "branch_id": "single_investigator",
@@ -732,33 +476,61 @@
         "output_tokens": 0,
         "payload_bytes": 0,
         "queries": 1,
-        "retained_sources": 5,
+        "retained_sources": 0,
         "simulation_calls": 0
       },
       "case_id": "S-ACTIVE-SIM",
       "input": {
-        "index": "crossref",
-        "query": "roman concrete computational simulation mechanical performance model",
-        "requested_index": "crossref"
+        "index": "openalex",
+        "query": "roman concrete mechanical performance simulation model validated",
+        "requested_index": "openalex"
       },
-      "output_ids": [
-        "CR-4e7227ccaa9d",
-        "CR-582e3ff926fb",
-        "CR-ebf029c45300",
-        "CR-94e808fe931b",
-        "CR-734bed102f51"
-      ],
+      "output_ids": [],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Search for direct Roman-concrete simulator evidence; a negative result is informative about domain coverage.",
-      "replay_key": "sha256:bf24cbc98b22c6b6a82795cb45527a388177a08649d39b1fe2b56e70a31f8c2e",
+      "rationale": "Discriminator query for Roman-concrete-specific performance targets and explicit validation.",
+      "replay_key": "sha256:09d6353b29e7606e9259acf2170b2e679d22da0d8692681d6027d76e12862779",
       "run_id": "G10R-S-ACTIVE-SIM-A1",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
     },
-    "b6585b4f2fe0eb7a": {
-      "action_id": "b6585b4f2fe0eb7a",
+    "8cfa7078dc293524": {
+      "action_id": "8cfa7078dc293524",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "openalex",
+        "query": "lime mortar simulation experimental benchmark dataset",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W7171405569",
+        "OA-W4404516380"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Look for benchmark evidence that could establish support region, without assuming applicability to Roman concrete.",
+      "replay_key": "sha256:39b0c6920eea1024f68fc258602dc005739874da99db26be7425a67b059aab4a",
+      "run_id": "G10R-S-ACTIVE-SIM-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "a723f57b3202a641": {
+      "action_id": "a723f57b3202a641",
       "action_type": "SEARCH",
       "arm": "A1",
       "branch_id": "single_investigator",
@@ -775,21 +547,89 @@
       "case_id": "S-ACTIVE-SIM",
       "input": {
         "index": "crossref",
-        "query": "\"roman concrete\" \"lime mortar\" simulation",
+        "query": "lime mortar model transferability roman concrete aggregate pozzolan",
+        "requested_index": "crossref"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test material-domain mismatch by searching for transferability constraints and constituents relevant to Roman concrete.",
+      "replay_key": "sha256:2d15fe3698d903efcf168cfb61690f420dea8e53dd100f29a9e17c6dbd68459f",
+      "run_id": "G10R-S-ACTIVE-SIM-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "d08d3efbc20b4c95": {
+      "action_id": "d08d3efbc20b4c95",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "crossref",
+        "query": "lime mortar numerical simulation experimental validation mechanical properties",
         "requested_index": "crossref"
       },
       "output_ids": [
-        "CR-da9ae7cd194a",
-        "CR-03ce7adb4d78",
-        "CR-e8e5e991a9ba",
-        "CR-d3daa09b334c",
-        "CR-91b10e833208"
+        "CR-91b10e833208",
+        "CR-dc69e555db92",
+        "CR-5dc6a2caf234",
+        "CR-4eb906dceb1f",
+        "CR-e8e5e991a9ba"
       ],
       "policy_status": "ALLOWED",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
-      "rationale": "Narrow the direct-domain search and record whether a matching paper is discoverable.",
-      "replay_key": "sha256:646262e9937f97f49cbdee6e01af1d99afb667a6478c06b01c849fa162747ef8",
+      "rationale": "Locate papers and metadata that may establish model type, validation, and measured target properties.",
+      "replay_key": "sha256:7648fb5c79f2cdc6e2b972c08fd7359014c807125e1b9ffcb56c2e604e4f581f",
+      "run_id": "G10R-S-ACTIVE-SIM-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "def3f6ac7ad69bab": {
+      "action_id": "def3f6ac7ad69bab",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 4,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "input": {
+        "index": "crossref",
+        "query": "roman concrete lime mortar simulation model limitations applicability",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-da9ae7cd194a",
+        "CR-a2b507490952",
+        "CR-03ce7adb4d78",
+        "CR-e8e5e991a9ba",
+        "CR-d3daa09b334c"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Seek contradictory or limiting evidence on domain transfer and model applicability.",
+      "replay_key": "sha256:d7d8583ed0641a5e36b46f7bec22063301120c109e8cada68122c23c439dc16c",
       "run_id": "G10R-S-ACTIVE-SIM-A1",
       "schema_version": "1.0",
       "timestamp": "2026-10-10T00:00:00Z"
@@ -808,99 +648,84 @@
     },
     "remaining": {
       "document_fetches": 4,
-      "estimated_cost_usd": 24.9985096,
-      "input_tokens": 74326,
-      "output_tokens": 10154,
+      "estimated_cost_usd": 24.9985352,
+      "input_tokens": 74532,
+      "output_tokens": 10164,
       "payload_bytes": 5000000,
-      "queries": 0,
+      "queries": 3,
       "retained_sources": 0,
       "simulation_calls": 4
     },
     "usage": {
       "document_fetches": 0,
-      "estimated_cost_usd": 0.0014904,
-      "input_tokens": 5674,
-      "output_tokens": 1846,
+      "estimated_cost_usd": 0.0014648,
+      "input_tokens": 5468,
+      "output_tokens": 1836,
       "payload_bytes": 0,
-      "queries": 12,
+      "queries": 9,
       "retained_sources": 24,
       "simulation_calls": 0
     }
   },
-  "manifest_sha256": "sha256:23b4f83354e576eb3497b4b4b38ac905e2441698501b5d5fd6ac6e07675236bd",
+  "manifest_sha256": "sha256:eff2d9877eeb7b22d84ca072369c2ec0611ac6ead0cf6eb4492172e5ce50afee",
   "model_traces": [
     {
       "call_id": "645eb3e7a3dfed98",
-      "estimated_actual_cost_usd": 0.0003764,
+      "estimated_actual_cost_usd": 0.0003239,
       "estimated_maximum_cost_usd": 0.000502,
-      "latency_seconds": 6.0828,
+      "latency_seconds": 5.4192,
       "model": "gpt-6-luna",
       "output": {
-        "abstain_reason": "No adapter, validation artifact, or support region is supplied. Investigate records and accessibility first; do not infer simulator eligibility from a paper rumor.",
+        "abstain_reason": "No source candidates, adapter, validation artifact, or support region are supplied. Search for papers and evidence first; do not treat a paper or model description as an eligible performance simulator absent domain-specific validation and an established support region.",
         "branch_id": "single_investigator",
         "case_id": "S-ACTIVE-SIM",
         "follow_up_queries": [
           {
-            "index": "crossref",
-            "query": "\"Roman concrete\" \"lime mortar\" simulation",
-            "rationale": "Narrow the direct-domain search and record whether a matching paper is discoverable."
-          },
-          {
             "index": "openalex",
-            "query": "lime mortar finite element model mechanical properties validation",
-            "rationale": "Test for a validated mechanical-performance simulator and identify its modeled material domain."
-          },
-          {
-            "index": "catalog",
-            "query": "Roman concrete simulation validation mechanical properties",
-            "rationale": "Seek contradictory or corroborating evidence for validated Roman-concrete performance modeling."
-          },
-          {
-            "index": "openalex",
-            "query": "lime mortar simulation code software supplementary data",
-            "rationale": "Assess accessibility of code, inputs, and supplementary validation artifacts."
+            "query": "Roman concrete mechanical performance simulation model validated",
+            "rationale": "Discriminator query for Roman-concrete-specific performance targets and explicit validation."
           },
           {
             "index": "crossref",
-            "query": "Roman concrete lime mortar computational model experimental comparison",
-            "rationale": "Look for direct experimental comparisons that could discriminate a Roman-concrete model from an unvalidated analogy."
+            "query": "lime mortar model transferability Roman concrete aggregate pozzolan",
+            "rationale": "Test material-domain mismatch by searching for transferability constraints and constituents relevant to Roman concrete."
           },
           {
             "index": "catalog",
-            "query": "lime mortar simulation review limitations Roman concrete",
-            "rationale": "Search for scope limitations and rival interpretations of transferring lime-mortar simulations to Roman concrete."
+            "query": "lime mortar simulation experimental benchmark dataset",
+            "rationale": "Look for benchmark evidence that could establish support region, without assuming applicability to Roman concrete."
           }
         ],
         "primary_queries": [
           {
             "index": "openalex",
-            "query": "\"lime mortar\" simulation model performance validation",
-            "rationale": "Find simulation papers and assess whether they report validation and performance outputs."
+            "query": "Roman concrete lime mortar simulation model performance validation",
+            "rationale": "Find candidate simulation papers and assess whether their material domain is Roman concrete rather than lime mortar generally."
           },
           {
             "index": "crossref",
-            "query": "Roman concrete computational simulation mechanical performance model",
-            "rationale": "Search for direct Roman-concrete simulator evidence; a negative result is informative about domain coverage."
+            "query": "lime mortar numerical simulation experimental validation mechanical properties",
+            "rationale": "Locate papers and metadata that may establish model type, validation, and measured target properties."
           },
           {
             "index": "catalog",
-            "query": "lime mortar numerical model validation strength durability",
-            "rationale": "Seek accessible records with model methods, validation artifacts, and relevant performance measures."
+            "query": "Roman concrete computational model simulation lime mortar",
+            "rationale": "Search available scholarly holdings for Roman-concrete-specific computational models and accessible records."
           },
           {
             "index": "openalex",
-            "query": "Roman mortar lime mortar simulation",
-            "rationale": "Identify potentially relevant papers and distinguish Roman materials from modern lime-mortar studies."
+            "query": "lime mortar simulation paper open access model validation dataset",
+            "rationale": "Check for accessible full text or validation artifacts, distinguishing reported validation from a rumor."
           },
           {
             "index": "crossref",
-            "query": "lime mortar simulation dataset experimental validation",
-            "rationale": "Check for empirical validation or linked data rather than simulation claims alone."
+            "query": "Roman concrete lime mortar simulation model limitations applicability",
+            "rationale": "Seek contradictory or limiting evidence on domain transfer and model applicability."
           },
           {
             "index": "catalog",
-            "query": "Roman concrete model lime mortar transferability",
-            "rationale": "Probe explicit domain transfer or applicability claims and likely limits."
+            "query": "Roman concrete lime mortar simulation model code data supplementary materials",
+            "rationale": "Identify lineage and access to any code, data, or supplements needed to evaluate an eligible simulator."
           }
         ],
         "requested_fetch_locators": [],
@@ -909,111 +734,117 @@
       },
       "provider": "openai",
       "reasoning_effort": "low",
-      "response_id_sha256": "sha256:f75ceac36b22cf5124157af129d548ed53dc9b9f1266df7de7497e85798ea245",
+      "response_id_sha256": "sha256:8192d27fab0ad0f9ef15d717d7a0a5c2d205b26df6bd3c3af0607396382cccf8",
       "store": false,
       "tools": [],
       "usage": {
         "cached_input_tokens": 0,
         "input_tokens": 559,
-        "output_tokens": 641
+        "output_tokens": 536
       }
     },
     {
       "call_id": "6e3e593d0c9248ec",
-      "estimated_actual_cost_usd": 0.001114,
-      "estimated_maximum_cost_usd": 0.0025971,
-      "latency_seconds": 13.0298,
+      "estimated_actual_cost_usd": 0.0011409,
+      "estimated_maximum_cost_usd": 0.0025976,
+      "latency_seconds": 14.0052,
       "model": "gpt-6-luna",
       "output": {
-        "authority_note": "All source candidates remain EVIDENCE_PENDING. Metadata and the simulation rumor do not confer scientific, laboratory, or promotion authority; no performance claim or laboratory action is authorized.",
+        "authority_note": "All source candidates remain EVIDENCE_PENDING and metadata-only. No laboratory work, recipe inference, simulator validation, performance claim, support-region expansion, or promotion is authorized.",
         "case_id": "S-ACTIVE-SIM",
         "credible_rival_ids": [
-          "H2"
+          "H-ARTIFACT-DOMAIN-MISMATCH"
         ],
         "hypotheses": [
           {
-            "comparator": "The available metadata-only records and the rumor of a simulation paper, without an accessible model or validation artifact.",
-            "falsifier": "Accessible materials demonstrate a reproducible simulator, empirical validation, and a support region that includes the Roman-concrete performance question.",
-            "hypothesis_id": "H1",
-            "intervention": "Obtain and inspect the full text and linked materials for the directly relevant lime-mortar records; check for runnable code or model specifications, validation data, and an explicitly defined material and performance domain.",
-            "novelty_basis": "The records include metadata for lime-sand mortar fracture and water-retention studies, a lime-mortar durability study, and a general Roman-concrete article, but none supplied here establishes an accessible, validated simulator for Roman-concrete performance.",
-            "predicted_observation": "The supplied evidence will remain insufficient to establish simulator eligibility unless accessible model materials and validation within a relevant support region are found.",
+            "comparator": "The current metadata-only record set and the case report that no adapter, validation artifact, or support region is present.",
+            "falsifier": "Accessible source material demonstrates a reproducible performance simulator, domain-specific validation for Roman concrete, and a bounded support region.",
+            "hypothesis_id": "H-NULL-ELIGIBILITY",
+            "intervention": "Retrieve and assess full text and any cited model, validation, code, or data artifacts for the candidate records, without presuming their availability or applicability.",
+            "novelty_basis": "The records include Roman-concrete and lime-mortar simulation-related titles, but metadata alone does not demonstrate an accessible, validated Roman-concrete performance simulator.",
+            "predicted_observation": "Until accessible artifacts establish the target property, validation against relevant Roman-concrete evidence, and an explicit support region, eligibility remains unestablished.",
             "problem_id": "roman-hot-mix",
             "problem_version": "1.0",
             "promotion_status": "REVIEW_REQUIRED",
             "provenance": [
               "E-SIM1",
-              "CR-d3daa09b334c",
-              "CR-03ce7adb4d78",
-              "CR-101fc486717d",
-              "CR-eae0f37edf88"
+              "OA-W4313706729",
+              "OA-W2255322831",
+              "CR-91b10e833208",
+              "OA-W1614553412",
+              "OA-W3199287931"
             ],
             "schema_version": "1.0",
             "source_candidate_ids": [
-              "CR-d3daa09b334c",
-              "CR-03ce7adb4d78",
-              "CR-101fc486717d",
-              "CR-eae0f37edf88"
+              "OA-W4313706729",
+              "OA-W2255322831",
+              "CR-91b10e833208",
+              "OA-W1614553412",
+              "OA-W3199287931"
             ],
-            "support_region": "No support region established by supplied evidence.",
+            "support_region": "Unadjudicated scholarly metadata only; no simulator support region established.",
             "transfer_type": "NULL_HYPOTHESIS",
-            "uncertainty": "High: only bibliographic metadata and a rumor are available; metadata titles do not establish methods, accessibility, validation, or applicability."
+            "uncertainty": "High: titles do not reveal model details, accessibility, validation quality, or material-domain applicability."
           },
           {
-            "comparator": "Direct Roman-concrete evidence and domain-specific lime-mortar evidence, neither of which is established by these metadata records as a validated simulator.",
-            "falsifier": "Full-text evidence demonstrates relevant material correspondence and independent validation for the Roman-concrete performance domain.",
-            "hypothesis_id": "H2",
-            "intervention": "If full texts become available, compare modeled material assumptions, outputs, calibration data, and validation domain against the Roman-concrete question before considering any transfer.",
-            "novelty_basis": "Metadata for computational or finite-element studies in other material domains could be mistaken for evidence of a transferable Roman-concrete simulator; their titles indicate different domains and do not establish transferability.",
-            "predicted_observation": "The unrelated-domain records will not, on metadata alone, establish validity or transfer to Roman concrete.",
+            "comparator": "A simulator whose validation and support region explicitly cover the relevant Roman-concrete materials and performance target.",
+            "falsifier": "Full text and validation artifacts show that a candidate model directly covers the pertinent Roman-concrete domain and performance target.",
+            "hypothesis_id": "H-ARTIFACT-DOMAIN-MISMATCH",
+            "intervention": "Compare each retrieved paper's stated material domain, modeled outputs, validation materials, and limitations against the Roman-concrete question.",
+            "novelty_basis": "Several candidate titles concern aerial lime mortar or cocciopesto, while a Roman-concrete durability paper title alone does not establish that it supplies a performance simulator.",
+            "predicted_observation": "Some apparently relevant records may concern different mortar systems, properties, or modeling purposes and therefore may not establish applicability to Roman-concrete performance.",
             "problem_id": "roman-hot-mix",
             "problem_version": "1.0",
             "promotion_status": "REVIEW_REQUIRED",
             "provenance": [
-              "CR-4e7227ccaa9d",
-              "CR-154906ab48dc"
+              "OA-W2255322831",
+              "CR-91b10e833208",
+              "OA-W1614553412",
+              "OA-W4313706729"
             ],
             "schema_version": "1.0",
             "source_candidate_ids": [
-              "CR-4e7227ccaa9d",
-              "CR-154906ab48dc"
+              "OA-W2255322831",
+              "CR-91b10e833208",
+              "OA-W1614553412",
+              "OA-W4313706729"
             ],
-            "support_region": "No transfer support region established; the supplied metadata identifies other material domains.",
-            "transfer_type": "TRANSFER_HYPOTHESIS",
-            "uncertainty": "High: this is a caution about possible domain confusion, not a finding about the contents or performance of the models."
+            "support_region": "Metadata-screened candidate set only; no transfer beyond those records is supported.",
+            "transfer_type": "ARTIFACT_HYPOTHESIS",
+            "uncertainty": "High: this is a screening concern inferred from titles, not a finding about paper contents."
           }
         ],
-        "leading_hypothesis_id": "H1",
+        "leading_hypothesis_id": "H-NULL-ELIGIBILITY",
         "negative_searches": [
-          "The supplied candidate list contains no identified accessible code, adapter, validation artifact, or defined support region.",
-          "Metadata titles for several computational-model candidates concern reinforced concrete, composites, or other materials; their relevance to Roman concrete is not established.",
-          "No paper_evidence_cards or fetched document contents were supplied, so no full-text methods or validation claims can be assessed."
+          "The supplied metadata results do not identify code, datasets, validation artifacts, or an established support region.",
+          "No paper evidence cards, fetched documents, adapters, or simulation outputs were supplied."
         ],
-        "next_discriminating_action": "Retrieve up to four eligible, relevant full texts or supplementary materials, prioritizing records explicitly about lime-mortar simulation and Roman-concrete modeling; verify accessibility, model details, validation evidence, and support region before making any eligibility claim.",
+        "next_discriminating_action": "Use the planned follow-up searches and, if available, retrieve the most relevant full texts and supplements; evaluate explicit model target, material domain, validation evidence, and limitations before considering eligibility.",
         "schema_version": "1.0",
         "source_candidate_ids": [
-          "CR-d3daa09b334c",
-          "CR-03ce7adb4d78",
-          "CR-101fc486717d",
-          "CR-4e7227ccaa9d",
-          "CR-eae0f37edf88"
+          "OA-W4313706729",
+          "OA-W2255322831",
+          "CR-91b10e833208",
+          "OA-W1614553412",
+          "OA-W3199287931"
         ],
         "status": "REVIEW_REQUIRED",
-        "summary": "The supplied records do not establish an accessible lime-mortar simulation paper that qualifies as a Roman-concrete performance simulator. They are metadata-only; no paper text, adapter, validation artifact, or support region is supplied. Simulator eligibility therefore remains unresolved.",
+        "summary": "The supplied records establish only that potentially relevant papers exist in scholarly metadata. They do not establish accessible full text, a Roman-concrete performance simulator, domain-specific validation, or a support region. No simulator eligibility conclusion is warranted.",
         "unresolved_disputes": [
-          "Whether any accessible paper contains a relevant simulator, code or model specification, and validation artifact.",
-          "Whether any lime-mortar model's material assumptions and validation domain could support transfer to Roman-concrete performance questions."
+          "Whether any candidate has accessible full text or model artifacts.",
+          "Whether any candidate reports validation for Roman-concrete performance rather than a neighboring mortar system or property.",
+          "Whether a defensible support region can be specified from source evidence."
         ]
       },
       "provider": "openai",
       "reasoning_effort": "low",
-      "response_id_sha256": "sha256:4c4f76e7f196416d456a5926c9f144821cc351dedc59e15a7b3ff8c51c9b080b",
+      "response_id_sha256": "sha256:39f5a9d16ffd9a1421507488bcedbf6444cf8651e60c32637822f0fd650b9a6b",
       "store": false,
       "tools": [],
       "usage": {
         "cached_input_tokens": 0,
-        "input_tokens": 5115,
-        "output_tokens": 1205
+        "input_tokens": 4909,
+        "output_tokens": 1300
       }
     }
   ],
@@ -1026,7 +857,7 @@
       "content_locator": null,
       "contradiction_ids": [],
       "deduplication_key": "doi:10.1016/s0008-8846(02)01038-4",
-      "discovery_query": "roman concrete lime mortar computational model experimental comparison",
+      "discovery_query": "roman concrete lime mortar simulation model limitations applicability",
       "host": "doi.org",
       "locator": "https://doi.org/10.1016/s0008-8846(02)01038-4",
       "problem_id": "roman-hot-mix",
@@ -1034,171 +865,45 @@
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
       "source_candidate_id": "CR-03ce7adb4d78",
-      "status": "DUPLICATE",
+      "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
       "title": "Study of the water-retention capacity of a lime\u2013sand mortar: Influence of the physicochemical characteristics of the lime"
     },
-    "CR-101fc486717d": {
+    "CR-4eb906dceb1f": {
       "access_class": "METADATA_ONLY",
       "content_hash": null,
       "content_locator": null,
       "contradiction_ids": [],
-      "deduplication_key": "doi:10.1016/j.matpr.2023.10.089",
-      "discovery_query": "lime mortar numerical model validation strength durability",
+      "deduplication_key": "doi:10.1016/j.culher.2017.10.009",
+      "discovery_query": "lime mortar numerical simulation experimental validation mechanical properties",
       "host": "doi.org",
-      "locator": "https://doi.org/10.1016/j.matpr.2023.10.089",
+      "locator": "https://doi.org/10.1016/j.culher.2017.10.009",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
-      "source_candidate_id": "CR-101fc486717d",
+      "source_candidate_id": "CR-4eb906dceb1f",
       "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
-      "title": "Durability of organic blended lime mortar and its shear bond strength in brick masonry"
+      "title": "Experimental investigation on physical and mechanical properties of lime mortar: Effect of organic addition"
     },
-    "CR-154906ab48dc": {
+    "CR-5dc6a2caf234": {
       "access_class": "METADATA_ONLY",
       "content_hash": null,
       "content_locator": null,
       "contradiction_ids": [],
-      "deduplication_key": "doi:10.1007/s10443-010-9127-1",
-      "discovery_query": "lime mortar finite element model mechanical properties validation",
+      "deduplication_key": "doi:10.11648/j.ijmsa.20261503.14",
+      "discovery_query": "lime mortar numerical simulation experimental validation mechanical properties",
       "host": "doi.org",
-      "locator": "https://doi.org/10.1007/s10443-010-9127-1",
+      "locator": "https://doi.org/10.11648/j.ijmsa.20261503.14",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
-      "source_candidate_id": "CR-154906ab48dc",
+      "source_candidate_id": "CR-5dc6a2caf234",
       "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
-      "title": "Finite Element Analysis of Mechanical Properties of 3D Four-directional Rectangular Braided Composites\u2014Part 2: Validation of the 3D Finite Element Model"
-    },
-    "CR-29fb5e39e72c": {
-      "access_class": "METADATA_ONLY",
-      "content_hash": null,
-      "content_locator": null,
-      "contradiction_ids": [],
-      "deduplication_key": "doi:10.14293/icmb230027",
-      "discovery_query": "roman concrete lime mortar computational model experimental comparison",
-      "host": "doi.org",
-      "locator": "https://doi.org/10.14293/icmb230027",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rights_state": "METADATA_ONLY",
-      "schema_version": "1.0",
-      "source_candidate_id": "CR-29fb5e39e72c",
-      "status": "DUPLICATE",
-      "support_region": "unadjudicated scholarly metadata",
-      "title": "Experimental investigation on Hygrothermal environment of spaces built with mortar and plaster layers of lime and cement"
-    },
-    "CR-410fcd818145": {
-      "access_class": "METADATA_ONLY",
-      "content_hash": null,
-      "content_locator": null,
-      "contradiction_ids": [],
-      "deduplication_key": "doi:10.1016/j.matpr.2022.05.088",
-      "discovery_query": "lime mortar numerical model validation strength durability",
-      "host": "doi.org",
-      "locator": "https://doi.org/10.1016/j.matpr.2022.05.088",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rights_state": "METADATA_ONLY",
-      "schema_version": "1.0",
-      "source_candidate_id": "CR-410fcd818145",
-      "status": "METADATA_SCREENED",
-      "support_region": "unadjudicated scholarly metadata",
-      "title": "Influence of organic addition on strength and durability of lime mortar prepared with clay aggregate"
-    },
-    "CR-4e7227ccaa9d": {
-      "access_class": "METADATA_ONLY",
-      "content_hash": null,
-      "content_locator": null,
-      "contradiction_ids": [],
-      "deduplication_key": "doi:10.12989/cac.2015.15.2.305",
-      "discovery_query": "roman concrete computational simulation mechanical performance model",
-      "host": "doi.org",
-      "locator": "https://doi.org/10.12989/cac.2015.15.2.305",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rights_state": "METADATA_ONLY",
-      "schema_version": "1.0",
-      "source_candidate_id": "CR-4e7227ccaa9d",
-      "status": "METADATA_SCREENED",
-      "support_region": "unadjudicated scholarly metadata",
-      "title": "Mesoscale computational simulation of the mechanical response of reinforced concrete members"
-    },
-    "CR-582e3ff926fb": {
-      "access_class": "METADATA_ONLY",
-      "content_hash": null,
-      "content_locator": null,
-      "contradiction_ids": [],
-      "deduplication_key": "doi:10.1061/9780784479346.020",
-      "discovery_query": "roman concrete computational simulation mechanical performance model",
-      "host": "doi.org",
-      "locator": "https://doi.org/10.1061/9780784479346.020",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rights_state": "METADATA_ONLY",
-      "schema_version": "1.0",
-      "source_candidate_id": "CR-582e3ff926fb",
-      "status": "METADATA_SCREENED",
-      "support_region": "unadjudicated scholarly metadata",
-      "title": "A Hygro-Thermo-Chemo Mechanical Model for the Simulation of Early Age Behavior of Ultra-High-Performance Concrete"
-    },
-    "CR-5e3bd73dc304": {
-      "access_class": "METADATA_ONLY",
-      "content_hash": null,
-      "content_locator": null,
-      "contradiction_ids": [],
-      "deduplication_key": "doi:10.22214/ijraset.2019.4050",
-      "discovery_query": "lime mortar numerical model validation strength durability",
-      "host": "doi.org",
-      "locator": "https://doi.org/10.22214/ijraset.2019.4050",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rights_state": "METADATA_ONLY",
-      "schema_version": "1.0",
-      "source_candidate_id": "CR-5e3bd73dc304",
-      "status": "METADATA_SCREENED",
-      "support_region": "unadjudicated scholarly metadata",
-      "title": "Experimental Study on Strength &amp; Durability Parameters of Lime Based Mortar using Natural Herbs as Admixtures"
-    },
-    "CR-66f244740ed8": {
-      "access_class": "METADATA_ONLY",
-      "content_hash": null,
-      "content_locator": null,
-      "contradiction_ids": [],
-      "deduplication_key": "doi:10.1038/scientificamerican10121878-224b",
-      "discovery_query": "roman mortar lime mortar simulation",
-      "host": "doi.org",
-      "locator": "https://doi.org/10.1038/scientificamerican10121878-224b",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rights_state": "METADATA_ONLY",
-      "schema_version": "1.0",
-      "source_candidate_id": "CR-66f244740ed8",
-      "status": "METADATA_SCREENED",
-      "support_region": "unadjudicated scholarly metadata",
-      "title": "Magnesian Lime Vs. Pure Lime for Mortar"
-    },
-    "CR-734bed102f51": {
-      "access_class": "METADATA_ONLY",
-      "content_hash": null,
-      "content_locator": null,
-      "contradiction_ids": [],
-      "deduplication_key": "doi:10.1201/9781482272161-12",
-      "discovery_query": "roman concrete computational simulation mechanical performance model",
-      "host": "doi.org",
-      "locator": "https://doi.org/10.1201/9781482272161-12",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rights_state": "METADATA_ONLY",
-      "schema_version": "1.0",
-      "source_candidate_id": "CR-734bed102f51",
-      "status": "METADATA_SCREENED",
-      "support_region": "unadjudicated scholarly metadata",
-      "title": "A simulation model of early age development in concrete: DuCOM"
+      "title": "Experimental Investigation on the Mechanical Properties of Mortar-aggregate Interface and Its Use in Meso-scale Numerical Simulation of Concrete"
     },
     "CR-91b10e833208": {
       "access_class": "METADATA_ONLY",
@@ -1206,7 +911,7 @@
       "content_locator": null,
       "contradiction_ids": [],
       "deduplication_key": "doi:10.2139/ssrn.4662904",
-      "discovery_query": "lime mortar simulation code software supplementary data",
+      "discovery_query": "lime mortar numerical simulation experimental validation mechanical properties",
       "host": "doi.org",
       "locator": "https://doi.org/10.2139/ssrn.4662904",
       "problem_id": "roman-hot-mix",
@@ -1214,99 +919,27 @@
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
       "source_candidate_id": "CR-91b10e833208",
-      "status": "DUPLICATE",
+      "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
       "title": "Numerical Simulation of the Evolution of Carbonation Process in Aerial Lime Mortar"
     },
-    "CR-94e808fe931b": {
+    "CR-a2b507490952": {
       "access_class": "METADATA_ONLY",
       "content_hash": null,
       "content_locator": null,
       "contradiction_ids": [],
-      "deduplication_key": "doi:10.1201/9781003316404-73",
-      "discovery_query": "roman concrete computational simulation mechanical performance model",
+      "deduplication_key": "doi:10.1520/stp11035s",
+      "discovery_query": "roman concrete lime mortar simulation model limitations applicability",
       "host": "doi.org",
-      "locator": "https://doi.org/10.1201/9781003316404-73",
+      "locator": "https://doi.org/10.1520/stp11035s",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
-      "source_candidate_id": "CR-94e808fe931b",
+      "source_candidate_id": "CR-a2b507490952",
       "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
-      "title": "Upscaling of coupled mechanical and mass transport discrete model"
-    },
-    "CR-a35f57367f2d": {
-      "access_class": "METADATA_ONLY",
-      "content_hash": null,
-      "content_locator": null,
-      "contradiction_ids": [],
-      "deduplication_key": "doi:10.22215/etd/2019-13569",
-      "discovery_query": "roman concrete lime mortar computational model experimental comparison",
-      "host": "doi.org",
-      "locator": "https://doi.org/10.22215/etd/2019-13569",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rights_state": "METADATA_ONLY",
-      "schema_version": "1.0",
-      "source_candidate_id": "CR-a35f57367f2d",
-      "status": "DUPLICATE",
-      "support_region": "unadjudicated scholarly metadata",
-      "title": "An  experimental  study  on  the  effects of  casein  protein  in unreinforced  lime  mortar specimens"
-    },
-    "CR-b9bfa7a4e78f": {
-      "access_class": "METADATA_ONLY",
-      "content_hash": null,
-      "content_locator": null,
-      "contradiction_ids": [],
-      "deduplication_key": "doi:10.3362/9781780442631.017",
-      "discovery_query": "roman mortar lime mortar simulation",
-      "host": "doi.org",
-      "locator": "https://doi.org/10.3362/9781780442631.017",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rights_state": "METADATA_ONLY",
-      "schema_version": "1.0",
-      "source_candidate_id": "CR-b9bfa7a4e78f",
-      "status": "DUPLICATE",
-      "support_region": "unadjudicated scholarly metadata",
-      "title": "17. Traditional and Current Uses of Lime Mortar, Render and Stucco in Zanzibar; Lime: A common binder for preparation of mortar in earth construction"
-    },
-    "CR-c6ee5407a07e": {
-      "access_class": "METADATA_ONLY",
-      "content_hash": null,
-      "content_locator": null,
-      "contradiction_ids": [],
-      "deduplication_key": "doi:10.3403/30309274",
-      "discovery_query": "lime mortar simulation code software supplementary data",
-      "host": "doi.org",
-      "locator": "https://doi.org/10.3403/30309274",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rights_state": "METADATA_ONLY",
-      "schema_version": "1.0",
-      "source_candidate_id": "CR-c6ee5407a07e",
-      "status": "DUPLICATE",
-      "support_region": "unadjudicated scholarly metadata",
-      "title": "Specification for ready-mixed lime: sand for mortar"
-    },
-    "CR-d384bd42e4be": {
-      "access_class": "METADATA_ONLY",
-      "content_hash": null,
-      "content_locator": null,
-      "contradiction_ids": [],
-      "deduplication_key": "doi:10.21203/rs.3.rs-8986185/v1",
-      "discovery_query": "roman concrete lime mortar computational model experimental comparison",
-      "host": "doi.org",
-      "locator": "https://doi.org/10.21203/rs.3.rs-8986185/v1",
-      "problem_id": "roman-hot-mix",
-      "problem_version": "1.0",
-      "rights_state": "METADATA_ONLY",
-      "schema_version": "1.0",
-      "source_candidate_id": "CR-d384bd42e4be",
-      "status": "DUPLICATE",
-      "support_region": "unadjudicated scholarly metadata",
-      "title": "An Experimental Study on Quaternary Lime Pozzolana Based Mortar"
+      "title": "Pozzolan-Lime Mortar: Limitations of ASTM C593"
     },
     "CR-d3daa09b334c": {
       "access_class": "METADATA_ONLY",
@@ -1314,7 +947,7 @@
       "content_locator": null,
       "contradiction_ids": [],
       "deduplication_key": "doi:10.1680/macr.1991.43.155.105",
-      "discovery_query": "\"roman concrete\" \"lime mortar\" simulation",
+      "discovery_query": "roman concrete lime mortar simulation model limitations applicability",
       "host": "doi.org",
       "locator": "https://doi.org/10.1680/macr.1991.43.155.105",
       "problem_id": "roman-hot-mix",
@@ -1322,7 +955,7 @@
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
       "source_candidate_id": "CR-d3daa09b334c",
-      "status": "DUPLICATE",
+      "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
       "title": "Fracture mechanism and fracture parameters of autoclaved lime\u2013sand mortar and concrete"
     },
@@ -1332,7 +965,7 @@
       "content_locator": null,
       "contradiction_ids": [],
       "deduplication_key": "doi:10.1016/s0958-9465(02)00006-9",
-      "discovery_query": "roman concrete lime mortar computational model experimental comparison",
+      "discovery_query": "roman concrete lime mortar simulation model limitations applicability",
       "host": "doi.org",
       "locator": "https://doi.org/10.1016/s0958-9465(02)00006-9",
       "problem_id": "roman-hot-mix",
@@ -1340,27 +973,27 @@
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
       "source_candidate_id": "CR-da9ae7cd194a",
-      "status": "DUPLICATE",
+      "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
       "title": "Microstructural investigation of a silica fume\u2013cement\u2013lime mortar"
     },
-    "CR-e54c3708e63a": {
+    "CR-dc69e555db92": {
       "access_class": "METADATA_ONLY",
       "content_hash": null,
       "content_locator": null,
       "contradiction_ids": [],
-      "deduplication_key": "doi:10.1016/j.conbuildmat.2025.140152",
-      "discovery_query": "lime mortar numerical model validation strength durability",
+      "deduplication_key": "doi:10.3390/su14073990",
+      "discovery_query": "lime mortar numerical simulation experimental validation mechanical properties",
       "host": "doi.org",
-      "locator": "https://doi.org/10.1016/j.conbuildmat.2025.140152",
+      "locator": "https://doi.org/10.3390/su14073990",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
-      "source_candidate_id": "CR-e54c3708e63a",
+      "source_candidate_id": "CR-dc69e555db92",
       "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
-      "title": "Insights into the role of cane sugar on the strength, microstructure, and durability of air lime mortar"
+      "title": "Experimental and Numerical Mechanical Characterization of Unreinforced and Reinforced Masonry Elements with Weak Air Lime Mortar Joints"
     },
     "CR-e8e5e991a9ba": {
       "access_class": "METADATA_ONLY",
@@ -1368,7 +1001,7 @@
       "content_locator": null,
       "contradiction_ids": [],
       "deduplication_key": "doi:10.1016/j.conbuildmat.2018.07.053",
-      "discovery_query": "lime mortar simulation code software supplementary data",
+      "discovery_query": "lime mortar numerical simulation experimental validation mechanical properties",
       "host": "doi.org",
       "locator": "https://doi.org/10.1016/j.conbuildmat.2018.07.053",
       "problem_id": "roman-hot-mix",
@@ -1376,81 +1009,279 @@
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
       "source_candidate_id": "CR-e8e5e991a9ba",
-      "status": "DUPLICATE",
+      "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
       "title": "Comparative study on the properties of three hydraulic lime mortar systems: Natural hydraulic lime mortar, cement-aerial lime-based mortar and slag-aerial lime-based mortar"
     },
-    "CR-ea9f54935d7a": {
+    "OA-W1614553412": {
       "access_class": "METADATA_ONLY",
       "content_hash": null,
       "content_locator": null,
       "contradiction_ids": [],
-      "deduplication_key": "doi:10.11113/mjce.v26.15896",
-      "discovery_query": "lime mortar numerical model validation strength durability",
-      "host": "doi.org",
-      "locator": "https://doi.org/10.11113/mjce.v26.15896",
+      "deduplication_key": "doi:10.14311/1672",
+      "discovery_query": "roman concrete computational model simulation lime mortar",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W1614553412",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
-      "source_candidate_id": "CR-ea9f54935d7a",
+      "source_candidate_id": "OA-W1614553412",
       "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
-      "title": "INFLUENCE OF CURING MEDIA ON THE COMPRESSIVE STRENGTH OF TERMITE MOUND-LIME BLENDED CEMENT MORTAR G MEDIA ON THE COMPRESSIVE STRENGTH OF TERMITE MOUND-LIME BLENDED CEMENT MORTAR"
+      "title": "A Micromechanics-Based Model for Stiffness and Strength Estimation of Cocciopesto Mortars"
     },
-    "CR-eae0f37edf88": {
+    "OA-W2255322831": {
       "access_class": "METADATA_ONLY",
       "content_hash": null,
       "content_locator": null,
       "contradiction_ids": [],
-      "deduplication_key": "doi:10.1126/science.aan7051",
-      "discovery_query": "roman concrete model lime mortar transferability",
-      "host": "doi.org",
-      "locator": "https://doi.org/10.1126/science.aan7051",
+      "deduplication_key": "openalex:w2255322831",
+      "discovery_query": "roman concrete lime mortar simulation model performance validation",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2255322831",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
-      "source_candidate_id": "CR-eae0f37edf88",
+      "source_candidate_id": "OA-W2255322831",
       "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
-      "title": "Why modern mortar crumbles, but Roman concrete lasts millennia"
+      "title": "Parametrical studies of the behavior of aerial lime mortars"
     },
-    "CR-ebf029c45300": {
+    "OA-W2388902365": {
       "access_class": "METADATA_ONLY",
       "content_hash": null,
       "content_locator": null,
       "contradiction_ids": [],
-      "deduplication_key": "doi:10.1201/9781003316404-16",
-      "discovery_query": "roman concrete computational simulation mechanical performance model",
-      "host": "doi.org",
-      "locator": "https://doi.org/10.1201/9781003316404-16",
+      "deduplication_key": "openalex:w2388902365",
+      "discovery_query": "roman concrete lime mortar simulation model performance validation",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2388902365",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
-      "source_candidate_id": "CR-ebf029c45300",
+      "source_candidate_id": "OA-W2388902365",
       "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
-      "title": "Simulation of Brazilian tests of ultra-high performance fibre-reinforced concrete"
+      "title": "A multi\u2013physics approach applied to masonry structures with non\u2013hydraulic lime mortars"
     },
-    "CR-f4fb577a7174": {
+    "OA-W2591213113": {
       "access_class": "METADATA_ONLY",
       "content_hash": null,
       "content_locator": null,
       "contradiction_ids": [],
-      "deduplication_key": "doi:10.1302/3114-220872",
-      "discovery_query": "lime mortar finite element model mechanical properties validation",
-      "host": "doi.org",
-      "locator": "https://doi.org/10.1302/3114-220872",
+      "deduplication_key": "openalex:w2591213113",
+      "discovery_query": "roman concrete computational model simulation lime mortar",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2591213113",
       "problem_id": "roman-hot-mix",
       "problem_version": "1.0",
       "rights_state": "METADATA_ONLY",
       "schema_version": "1.0",
-      "source_candidate_id": "CR-f4fb577a7174",
+      "source_candidate_id": "OA-W2591213113",
       "status": "METADATA_SCREENED",
       "support_region": "unadjudicated scholarly metadata",
-      "title": "Validation of a Reverse Shoulder Arthroplasty Finite Element Model That Accounts for Screw Type and Preload"
+      "title": "Microwave characterization technique of mortar, concrete reinforcement wire mesh, and mortar filled with pvc tubes"
+    },
+    "OA-W3081924918": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.conbuildmat.2020.120571",
+      "discovery_query": "roman concrete lime mortar simulation model performance validation",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W3081924918",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W3081924918",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Experimental and numerical assessment of the shear behaviour of lime mortar clay brick masonry triplets"
+    },
+    "OA-W3085497247": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3390/w12092593",
+      "discovery_query": "lime mortar simulation paper open access model validation dataset",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W3085497247",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W3085497247",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Development of a Model for Stormwater Runoff Prediction on Vertical Test Panels Coated with Plaster and Mortar"
+    },
+    "OA-W3199287931": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1111/jace.18133",
+      "discovery_query": "roman concrete lime mortar simulation model code data supplementary materials",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W3199287931",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W3199287931",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Reactive binder and aggregate interfacial zones in the mortar of Tomb of Caecilia Metella concrete, 1C BCE, Rome"
+    },
+    "OA-W4313706729": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1126/sciadv.add1602",
+      "discovery_query": "roman concrete lime mortar simulation model performance validation",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4313706729",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4313706729",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Hot mixing: Mechanistic insights into the durability of ancient Roman concrete"
+    },
+    "OA-W4400900344": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1177/00368504241266559",
+      "discovery_query": "roman concrete lime mortar simulation model performance validation",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4400900344",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4400900344",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Ceramic-added lime and cement mortars: A review of applications in building products"
+    },
+    "OA-W4404516380": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.dib.2024.111144",
+      "discovery_query": "lime mortar simulation paper open access model validation dataset",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4404516380",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4404516380",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Shear strength dataset of hollow concrete block masonry with different mortar bedding"
+    },
+    "OA-W4412750590": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.isci.2025.113052",
+      "discovery_query": "roman concrete lime mortar simulation model code data supplementary materials",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4412750590",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4412750590",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "How sustainable was ancient Roman concrete?"
+    },
+    "OA-W4414162660": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1002/advs.202511691",
+      "discovery_query": "roman concrete computational model simulation lime mortar",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4414162660",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4414162660",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "A Modern Roman\u2010Inspired Concrete with Daytime Radiative Cooling Capacity"
+    },
+    "OA-W4415463835": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3390/architecture5040099",
+      "discovery_query": "lime mortar simulation paper open access model validation dataset",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4415463835",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4415463835",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "The Hygric Behaviour of Historic and Newly Fabricated Lime-Based Mortars, Renders and Plasters"
+    },
+    "OA-W7126090129": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3390/buildings16030551",
+      "discovery_query": "lime mortar simulation paper open access model validation dataset",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W7126090129",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W7126090129",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Numerical Modelling and Experimental Validation of FRCM-Reinforced Concrete Beams Using Macro-Modelling Techniques"
+    },
+    "OA-W7171405569": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.conbuildmat.2026.147520",
+      "discovery_query": "lime mortar simulation paper open access model validation dataset",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W7171405569",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W7171405569",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Multiscale hygro\u2011radiative performance of innovative lime mortars for heritage building conservation"
     }
   },
   "state": "completed",
@@ -1466,5 +1297,6 @@
     "adjudicating",
     "scored",
     "completed"
-  ]
+  ],
+  "viewpoint_society": null
 }
