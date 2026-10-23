@@ -1,4 +1,4 @@
-# G10R-Q — Post-B2 society acquisition-remediation build
+# G10R-Q — Post-B2 society failure-experiment loop
 
 **Status:** proposed
 **Dependencies:** G10R-B2 complete with
@@ -9,13 +9,14 @@ fixtures only; this goal does not reconsider the society architecture
 
 ## Objective
 
-Repair the concrete mechanics that caused the post-constraint society to
-produce discourse instead of attributable evidence. This is an implementation
-goal, not a referendum on the society architecture. Build and verify an
-acquisition-first offline treatment in which viewpoint proponents and their
-structural support agents can open new evidence paths, resolve lawful locators,
-execute contradiction and identity work, and preserve every result through the
-evidence bus. This goal must not authorize another paid run.
+Experiment on the concrete failure modes that caused the post-constraint
+society to produce discourse instead of attributable evidence. This is an
+offline controlled-experiment goal, not a referendum on the society
+architecture. Compare the current baseline with bounded interventions for
+acquisition-first scheduling, executable support tasks, locator resolution,
+query deduplication, and open-slot work. Keep only interventions that improve
+attributable information acquisition without breaking budget, provenance, or
+authority invariants. This goal must not authorize another paid run.
 
 ## Why this goal exists
 
@@ -39,9 +40,14 @@ slot with no work, and high coordination overhead with no unique contribution.
   open-slot activity, and society overhead;
 - run deterministic positive, negative, contradictory, malformed, partial, and
   budget-exhaustion fixtures through the scorer and replay;
-- implement the smallest coherent offline remediation for those symptoms;
-- prove the remediation on deterministic fixtures before any further paid
-  evaluation.
+- define a failure matrix mapping each B2 symptom to one or more falsifiable
+  interventions and a measurable outcome;
+- run the baseline, single-factor interventions, and the smallest justified
+  combined treatment on deterministic fixtures;
+- preserve null, contradictory, malformed, partial, and budget-exhaustion
+  cases so an apparent gain cannot come from relaxed safety or scoring;
+- produce an experiment-backed remediation recommendation before any further
+  paid evaluation.
 
 ## Explicit exclusions
 
@@ -61,9 +67,9 @@ answer length, or mechanism count as scientific credit.
 - `src/roman_concrete_lab/agents/viewpoint_society.py` and evidence-bus
   modules;
 - `tools/evaluation/open_world_replay.py`, the evidence-bus implementation,
-  and a new offline remediation runner;
+  and a new offline failure-experiment runner;
 - `fixtures/investigation/` and focused tests under `tests/agents/`;
-- `artifacts/goals/G10R-Q/{loss-ledger.json,remediation-manifest.json,report.md}`.
+- `artifacts/goals/G10R-Q/{loss-ledger.json,experiment-matrix.json,experiment-results.json,report.md}`.
 
 ### Required ledger fields
 
@@ -94,6 +100,26 @@ The remediation manifest must also record `support_task_id`, `viewpoint_id`,
 | Open slot is admitted | allocate it bounded retrieval or contradiction work and preserve its result |
 | No repair passes the deterministic thresholds | `INCONCLUSIVE_SOCIETY_REMEDIATION`; retain the society architecture and route the specific failed layer to follow-up |
 
+### Required experiment arms
+
+The offline runner must include:
+
+1. `BASELINE_B2_BEHAVIOR` — the current society behavior, replayed unchanged;
+2. `ACQUISITION_FIRST` — reserve an explicit acquisition budget before critique
+   and adjudication;
+3. `EXECUTABLE_SUPPORT` — execute identity, extraction, contradiction, and
+   experiment-design tasks instead of auto-abstaining them;
+4. `LOCATOR_BRIDGE` — resolve exact candidate IDs/content locators into typed
+   fetch requests and page-card joins;
+5. `DEDUP_AND_OPEN_SLOT` — suppress duplicate searches and give the admitted
+   open slot bounded novel work; and
+6. one combined arm only if the single-factor results justify it.
+
+Each arm must declare its changed policy surface, hold all other budgets and
+scoring rules fixed, and report unique attributable candidates, fetch-request
+yield, evidence-card yield, contradiction coverage, attribution completeness,
+useful-hypothesis yield, duplicate-work rate, and coordination cost.
+
 ### Authority and side effects
 
 The goal may read repository-local artifacts and write generated artifacts under
@@ -108,29 +134,32 @@ path. Replay and tests must be deterministic and offline.
    missing fields are typed rather than inferred.
 2. The loss ledger identifies the B2 symptoms with evidence locators and
    confidence, and separates observed failure from causal hypothesis.
-3. The repaired offline runner executes, rather than merely assigns, at least
-   one retrieval task and one identity, extraction, contradiction, or
-   experiment-design task for every active viewpoint; any true abstention has a
-   typed reason and survives replay.
-4. A candidate with an exact lawful content locator produces a deterministic
-   fetch/identity request and page-card join; a metadata-only candidate remains
-   pending without receiving evidence credit.
-5. Query deduplication prevents repeated work unless a novelty or decision-value
-   justification is recorded; the focus policy reserves work for acquisition
-   before critique and adjudication.
-6. The admitted open slot receives bounded work and its unresolved or positive
-   result remains visible in the portfolio and score ledger.
-7. Offline fixtures demonstrate a unique discovery, a weakening/contradiction,
+3. The experiment matrix contains the unchanged baseline, every required
+   single-factor arm, and a combined arm only when justified by the results.
+4. Each arm changes only its declared intervention and is evaluated under
+   equal action, retrieval, token, cost, authority, and scoring limits.
+5. The executable-support arm runs, rather than merely assigns, at least one
+   retrieval task and one identity, extraction, contradiction, or
+   experiment-design task for every active viewpoint; true abstentions have
+   typed reasons and survive replay.
+6. The locator-bridge arm turns an exact lawful content locator into a typed
+   fetch/identity request and page-card join; metadata-only candidates remain
+   pending without evidence credit.
+7. The acquisition-first and deduplication/open-slot arms report whether they
+   increase unique attributable candidates, fetch-request yield, evidence-card
+   yield, contradiction coverage, or useful hypotheses without increasing
+   duplicate-work rate beyond the declared threshold.
+8. Offline fixtures demonstrate a unique discovery, a weakening/contradiction,
    an unresolved candidate, malformed output, partial failure, budget
-   exhaustion, duplicate-query suppression, and open-slot work.
-8. The remediation manifest defines binary thresholds for support-task
-   execution, fetch-request yield, evidence-card yield, contradiction
-   coverage, attribution completeness, budget parity, and replayability.
-9. The report emits exactly one of `SOCIETY_REMEDIATION_READY` or
-   `INCONCLUSIVE_SOCIETY_REMEDIATION`, explicitly preserves the society
-   architecture, and forbids an automatic paid rerun.
-10. `python3 -m pytest -q` and focused remediation/replay tests pass; all
-    generated artifacts are byte-stable on a second offline run.
+   exhaustion, duplicate-query suppression, and open-slot work in every arm
+   where the fixture applies.
+9. The results artifact records effect sizes against baseline, failed
+   interventions, and the minimum combined treatment justified by evidence.
+10. The report emits exactly one of `SOCIETY_REMEDIATION_READY` or
+    `INCONCLUSIVE_SOCIETY_REMEDIATION`, explicitly preserves the society
+    architecture, and forbids an automatic paid rerun.
+11. `python3 -m pytest -q` and focused failure-experiment/replay tests pass;
+    all generated artifacts are byte-stable on a second offline run.
 
 ## Stop conditions
 
