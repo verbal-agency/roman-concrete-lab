@@ -40,6 +40,7 @@ REASONING_EFFORT = "low"
 CAP_USD = 25.0
 SEALED_CASE_COUNT = 4
 DEVELOPMENT_CASE_MINIMUM = 2
+PLAN_OUTPUT_TOKENS = 800
 BRANCHES = ("evidence_skeptic", "mechanism_transfer", "experiment_simulation")
 LEGAL_OUTCOMES = (
     "ESCALATE_ACTIVE_SOCIETY_EVALUATION",
@@ -1404,7 +1405,7 @@ class ActiveInvestigationRunner:
                 label=f"a2m_{viewpoint_id}_plan",
                 instructions=prompts()["system"] + "\n" + prompts_m["proponent"] + "\nReturn a concise plan with one primary query and use follow-up, fetch, or simulation requests when the assigned viewpoint needs them; do not invent access or evidence.",
                 packet=self._packet(branch_id=f"viewpoint:{viewpoint_id}", extra={"viewpoint_card": card, "mechanism_card": mechanism_by_id[viewpoint_id]}, candidate_ids=[]),
-                maximum_output_tokens=450, output_schema=provider_schema("investigation-plan.schema.json"), format_name="g10m_proponent_plan",
+                maximum_output_tokens=PLAN_OUTPUT_TOKENS, output_schema=provider_schema("investigation-plan.schema.json"), format_name="g10m_proponent_plan",
             )
             validate_plan(plan, case_id=self.case["case_id"], branch_id=f"viewpoint:{viewpoint_id}")
             before = {item["action_id"] for item in self.actions}
@@ -1439,7 +1440,7 @@ class ActiveInvestigationRunner:
                 label=f"a2m_{role}_plan",
                 instructions=prompts()["system"] + "\n" + prompts_m["structural_auditors"][role] + "\nReturn a concise plan with one primary query and request follow-up or fetch work when it is the cheapest valid discriminator; do not invent access or evidence.",
                 packet=self._packet(branch_id=f"auditor:{role}", extra={"structural_role": role, "shared_viewpoint_dossiers": shared, "shared_mechanism_reports": shared}, candidate_ids=[]),
-                maximum_output_tokens=450, output_schema=provider_schema("investigation-plan.schema.json"), format_name="g10m_auditor_plan",
+                maximum_output_tokens=PLAN_OUTPUT_TOKENS, output_schema=provider_schema("investigation-plan.schema.json"), format_name="g10m_auditor_plan",
             )
             validate_plan(plan, case_id=self.case["case_id"], branch_id=f"auditor:{role}")
             before = {item["action_id"] for item in self.actions}
