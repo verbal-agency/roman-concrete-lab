@@ -1,6 +1,6 @@
 # G10R-F — Fresh Phase-A freeze after constraint remediation
 
-**Status:** proposed
+**Status:** complete — `PHASE_A_READY_FOR_OWNER_ACTIVATION`
 **Dependencies:** G10R-C `PRE_RERUN_CONSTRAINTS_READY`; G10R-A `ACQUISITION_DESIGN_READY`; no paid run authorized
 **Authority:** offline repository work only; no model, network, subscription, credential, laboratory, or external communication
 
