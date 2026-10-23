@@ -34,7 +34,7 @@
     "action_type": {"enum": ["SEARCH", "FETCH_PERMITTED_CONTENT", "INSPECT_EXISTING_EVIDENCE", "RUN_DECLARED_SIMULATION", "ABSTAIN"]},
     "rationale": {"type": "string"},
     "input": {"type": "object"},
-    "policy_status": {"enum": ["ALLOWED", "REPLAYED", "RIGHTS_BLOCKED", "POLICY_BLOCKED", "BUDGET_EXHAUSTED", "SIMULATOR_UNAVAILABLE", "ABSTAIN"]},
+    "policy_status": {"enum": ["ALLOWED", "REPLAYED", "RIGHTS_BLOCKED", "POLICY_BLOCKED", "RUNNER_REJECTED", "BUDGET_EXHAUSTED", "SIMULATOR_UNAVAILABLE", "ABSTAIN"]},
     "budget_debit": {
       "type": "object",
       "additionalProperties": false,

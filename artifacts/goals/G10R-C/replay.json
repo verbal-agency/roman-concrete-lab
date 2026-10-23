@@ -1,0 +1,379 @@
+{
+  "authority": {
+    "credentials": "none",
+    "evidence_promotion": "prohibited",
+    "model_calls": "none",
+    "network": "none",
+    "physical_execution": "prohibited",
+    "subscription": "prohibited"
+  },
+  "constraint_matrix": [
+    {
+      "affected": "A1/A2-M planning and report calls",
+      "classification": "REMEDIATED_ACCIDENTAL",
+      "evidence": "PLAN_OUTPUT_TOKENS=800; output fixture and replay pass",
+      "layer": "prompt_schema",
+      "observed_effect": "the previous 450-token A2-M planning ceiling truncated useful plans",
+      "purpose": "bounded structured model output",
+      "remediation": "shared 800-token planning ceiling plus compact-schema replay",
+      "source": "src/roman_concrete_lab/agents/investigation.py:PLAN_OUTPUT_TOKENS and schemas/investigation-plan.schema.json"
+    },
+    {
+      "affected": "viewpoint support and structural audit tasks",
+      "classification": "DECLARED_EXPERIMENTAL_LIMIT",
+      "evidence": "runtime and acquisition fixture reports, focus ledger, dossier joins",
+      "layer": "task_focus",
+      "observed_effect": "every task has a typed report or abstention; focus is allocated before final adjudication",
+      "purpose": "keep viewpoint work scoped while preserving dissent and unresolved work",
+      "remediation": "retain typed abstention and add lifecycle causes rather than silent empty arrays",
+      "source": "src/roman_concrete_lab/agents/investigation.py:_run_a2m and viewpoint_society.py"
+    },
+    {
+      "affected": "model fetch requests using provider IDs or metadata locators",
+      "classification": "REMEDIATED_ACCIDENTAL",
+      "evidence": "resolution fixture distinguishes candidate, direct, unresolved, and blocked paths",
+      "layer": "locator_retrieval",
+      "observed_effect": "provider IDs were previously sent directly to content fetch and became policy blocks",
+      "purpose": "allow only exact candidate-record resolution to lawful content",
+      "remediation": "resolve exact candidate ID/metadata locator to recorded content_locator; never infer by title/query",
+      "source": "src/roman_concrete_lab/agents/investigation.py:_resolve_fetch_locator/_fetch"
+    },
+    {
+      "affected": "all content fetches",
+      "classification": "INTENTIONAL_BOUNDARY",
+      "evidence": "public, metadata-only, rights-blocked, malformed, and unavailable fixtures",
+      "layer": "source_policy",
+      "observed_effect": "metadata hosts cannot be fetched; declared public hosts can reach extraction",
+      "purpose": "rights, host, read-only, and payload boundary",
+      "remediation": "unchanged; diagnostics are typed rather than widened",
+      "source": "fixtures/investigation/source-policy.json and retrieval/contracts.py:SourcePolicy"
+    },
+    {
+      "affected": "candidate/action/task/viewpoint/card/dossier/critique joins",
+      "classification": "INTENTIONAL_BOUNDARY",
+      "evidence": "G10R-A acquisition replay and G10P plumbing replay",
+      "layer": "evidence_bus",
+      "observed_effect": "variants and dissent remain reviewable; missing joins become diagnostics",
+      "purpose": "append-only attribution without evidence promotion",
+      "remediation": "none; replay and duplicate behavior are required",
+      "source": "src/roman_concrete_lab/agents/evidence_bus.py"
+    },
+    {
+      "affected": "queries, retained sources, fetches, tokens, payload, simulation, cost",
+      "classification": "INTENTIONAL_BOUNDARY",
+      "evidence": "budget tests, phase-A manifest, and equal-budget fixture ledger",
+      "layer": "budget_runtime",
+      "observed_effect": "budget debits are recorded and exhausted work is typed",
+      "purpose": "equal aggregate treatment ceilings and fail-before-call behavior",
+      "remediation": "no increase; compare equal ceilings explicitly",
+      "source": "retrieval/contracts.py:InvestigationBudget and investigation.py:_model"
+    },
+    {
+      "affected": "duplicate, partial, stale, and resumed traces",
+      "classification": "INTENTIONAL_BOUNDARY",
+      "evidence": "runtime, plumbing, acquisition, and open-world replays",
+      "layer": "checkpoint_replay",
+      "observed_effect": "checkpoint digests and duplicate actions replay without side effects",
+      "purpose": "deterministic continuation without duplicate external work",
+      "remediation": "none; stale manifests remain rejected",
+      "source": "investigation.py:_checkpoint and evidence_bus.py:checkpoint"
+    },
+    {
+      "affected": "discovery, evidence, hypotheses, weakening, identity, blocked access, overhead",
+      "classification": "INTENTIONAL_BOUNDARY",
+      "evidence": "per-arm score rows and open-world replay status",
+      "layer": "scoring",
+      "observed_effect": "component dimensions remain separate and unresolved candidates are retained",
+      "purpose": "do not confuse rhetoric or unresolved candidates with direct evidence",
+      "remediation": "add request-lifecycle and acquisition fields to the audit ledger",
+      "source": "investigation.py:score_portfolio and open-world evaluation ledger"
+    }
+  ],
+  "external_calls": false,
+  "failure_reasons": [],
+  "goal": "G10R-C",
+  "join_fixture": {
+    "candidate_variant_retained": true,
+    "checkpoint_resume_stable": true,
+    "dissent_and_unresolved_retained": true,
+    "duplicate_action_replayed": true,
+    "envelope_diagnostics": []
+  },
+  "next_action": "Freeze a fresh Phase-A manifest; no paid Phase-B run is authorized by G10R-C.",
+  "output_fixture": {
+    "compact_schema_valid": true,
+    "full_plan_schema_required_fields": [
+      "abstain_reason",
+      "branch_id",
+      "case_id",
+      "follow_up_queries",
+      "primary_queries",
+      "requested_fetch_locators",
+      "schema_version",
+      "simulation_requests"
+    ],
+    "malformed_rejected": true,
+    "truncation_is_not_silent": true
+  },
+  "protocol": "g10r-c.1-pre-rerun-constraint-audit",
+  "replays": {
+    "acquisition_byte_stable": true,
+    "acquisition_first_status": "ACQUISITION_DESIGN_READY",
+    "acquisition_second_status": "ACQUISITION_DESIGN_READY",
+    "open_world_byte_stable": true,
+    "open_world_manifest_matches": true,
+    "open_world_status": "REPLAYABLE_AFTER_REPAIR",
+    "plumbing_status": "SOCIETY_PLUMBING_READY",
+    "runtime_status": "RUNTIME_INTEGRATION_READY"
+  },
+  "resolution_fixture": {
+    "cases": {
+      "direct_content_locator": [
+        "https://www.repository.cam.ac.uk/fixture.pdf",
+        "DIRECT_CONTENT_LOCATOR"
+      ],
+      "metadata_locator": [
+        "https://www.repository.cam.ac.uk/fixture.pdf",
+        "CANDIDATE_CONTENT_LOCATOR"
+      ],
+      "provider_id": [
+        "https://www.repository.cam.ac.uk/fixture.pdf",
+        "CANDIDATE_CONTENT_LOCATOR"
+      ],
+      "unknown_locator": [
+        "https://api.openalex.org/works/W-UNKNOWN",
+        "DIRECT_CONTENT_LOCATOR"
+      ]
+    },
+    "expected": {
+      "direct_content_locator": [
+        "https://www.repository.cam.ac.uk/fixture.pdf",
+        "DIRECT_CONTENT_LOCATOR"
+      ],
+      "metadata_locator": [
+        "https://www.repository.cam.ac.uk/fixture.pdf",
+        "CANDIDATE_CONTENT_LOCATOR"
+      ],
+      "provider_id": [
+        "https://www.repository.cam.ac.uk/fixture.pdf",
+        "CANDIDATE_CONTENT_LOCATOR"
+      ],
+      "unknown_locator": [
+        "https://api.openalex.org/works/W-UNKNOWN",
+        "DIRECT_CONTENT_LOCATOR"
+      ]
+    },
+    "passes": true
+  },
+  "schema_version": "1.0",
+  "score_ledger": [
+    {
+      "acquisition": {
+        "fetch_actions": 0,
+        "page_aware_cards": 0,
+        "search_actions": 7
+      },
+      "arm": "A1",
+      "blocked_access": 0,
+      "case_id": "S-ACTIVE-ACCESS",
+      "hypothesis": 1,
+      "overhead": {
+        "actions": 7,
+        "model_calls": 2
+      },
+      "request_cause": {
+        "EXECUTED_CARD": 0,
+        "NOT_REQUESTED": 0,
+        "NO_USABLE_RESULT": 0,
+        "POLICY_BLOCKED": 0,
+        "RUNNER_REJECTED": 0
+      },
+      "unresolved_identity": 6,
+      "weakening": 0
+    },
+    {
+      "acquisition": {
+        "fetch_actions": 0,
+        "page_aware_cards": 0,
+        "search_actions": 8
+      },
+      "arm": "A1",
+      "blocked_access": 0,
+      "case_id": "S-ACTIVE-LINEAGE",
+      "hypothesis": 1,
+      "overhead": {
+        "actions": 8,
+        "model_calls": 2
+      },
+      "request_cause": {
+        "EXECUTED_CARD": 0,
+        "NOT_REQUESTED": 0,
+        "NO_USABLE_RESULT": 0,
+        "POLICY_BLOCKED": 0,
+        "RUNNER_REJECTED": 0
+      },
+      "unresolved_identity": 3,
+      "weakening": 0
+    },
+    {
+      "acquisition": {
+        "fetch_actions": 0,
+        "page_aware_cards": 0,
+        "search_actions": 8
+      },
+      "arm": "A1",
+      "blocked_access": 0,
+      "case_id": "S-ACTIVE-SIM",
+      "hypothesis": 2,
+      "overhead": {
+        "actions": 8,
+        "model_calls": 2
+      },
+      "request_cause": {
+        "EXECUTED_CARD": 0,
+        "NOT_REQUESTED": 0,
+        "NO_USABLE_RESULT": 0,
+        "POLICY_BLOCKED": 0,
+        "RUNNER_REJECTED": 0
+      },
+      "unresolved_identity": 4,
+      "weakening": 0
+    },
+    {
+      "acquisition": {
+        "fetch_actions": 0,
+        "page_aware_cards": 0,
+        "search_actions": 12
+      },
+      "arm": "A1",
+      "blocked_access": 0,
+      "case_id": "S-ACTIVE-TRANSFER",
+      "hypothesis": 2,
+      "overhead": {
+        "actions": 12,
+        "model_calls": 2
+      },
+      "request_cause": {
+        "EXECUTED_CARD": 0,
+        "NOT_REQUESTED": 0,
+        "NO_USABLE_RESULT": 0,
+        "POLICY_BLOCKED": 0,
+        "RUNNER_REJECTED": 0
+      },
+      "unresolved_identity": 6,
+      "weakening": 0
+    },
+    {
+      "acquisition": {
+        "fetch_actions": 0,
+        "page_aware_cards": 0,
+        "search_actions": 9
+      },
+      "arm": "A2-M",
+      "blocked_access": 0,
+      "case_id": "S-ACTIVE-ACCESS",
+      "hypothesis": 1,
+      "overhead": {
+        "actions": 9,
+        "model_calls": 13
+      },
+      "request_cause": {
+        "EXECUTED_CARD": 0,
+        "NOT_REQUESTED": 0,
+        "NO_USABLE_RESULT": 0,
+        "POLICY_BLOCKED": 0,
+        "RUNNER_REJECTED": 0
+      },
+      "unresolved_identity": 2,
+      "weakening": 0
+    },
+    {
+      "acquisition": {
+        "fetch_actions": 1,
+        "page_aware_cards": 0,
+        "search_actions": 8
+      },
+      "arm": "A2-M",
+      "blocked_access": 1,
+      "case_id": "S-ACTIVE-LINEAGE",
+      "hypothesis": 1,
+      "overhead": {
+        "actions": 9,
+        "model_calls": 13
+      },
+      "request_cause": {
+        "EXECUTED_CARD": 0,
+        "NOT_REQUESTED": 0,
+        "NO_USABLE_RESULT": 0,
+        "POLICY_BLOCKED": 1,
+        "RUNNER_REJECTED": 0
+      },
+      "unresolved_identity": 0,
+      "weakening": 0
+    },
+    {
+      "acquisition": {
+        "fetch_actions": 0,
+        "page_aware_cards": 0,
+        "search_actions": 8
+      },
+      "arm": "A2-M",
+      "blocked_access": 0,
+      "case_id": "S-ACTIVE-SIM",
+      "hypothesis": 1,
+      "overhead": {
+        "actions": 8,
+        "model_calls": 13
+      },
+      "request_cause": {
+        "EXECUTED_CARD": 0,
+        "NOT_REQUESTED": 0,
+        "NO_USABLE_RESULT": 0,
+        "POLICY_BLOCKED": 0,
+        "RUNNER_REJECTED": 0
+      },
+      "unresolved_identity": 1,
+      "weakening": 1
+    },
+    {
+      "acquisition": {
+        "fetch_actions": 2,
+        "page_aware_cards": 0,
+        "search_actions": 8
+      },
+      "arm": "A2-M",
+      "blocked_access": 2,
+      "case_id": "S-ACTIVE-TRANSFER",
+      "hypothesis": 1,
+      "overhead": {
+        "actions": 10,
+        "model_calls": 13
+      },
+      "request_cause": {
+        "EXECUTED_CARD": 0,
+        "NOT_REQUESTED": 0,
+        "NO_USABLE_RESULT": 0,
+        "POLICY_BLOCKED": 2,
+        "RUNNER_REJECTED": 0
+      },
+      "unresolved_identity": 2,
+      "weakening": 0
+    }
+  ],
+  "status": "PRE_RERUN_CONSTRAINTS_READY",
+  "task_fixture": {
+    "all_tasks_have_reports": true,
+    "report_statuses": [
+      "ABSTAINED",
+      "COMPLETE"
+    ],
+    "required_task_types_present": true,
+    "task_types": [
+      "CONTRADICTION",
+      "EXPERIMENT_DESIGN",
+      "EXTRACTION",
+      "IDENTITY_LINEAGE",
+      "RETRIEVAL"
+    ]
+  }
+}

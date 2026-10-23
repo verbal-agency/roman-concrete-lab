@@ -1,6 +1,6 @@
 # G10R-C — Pre-rerun constraint audit and remediation
 
-**Status:** proposed
+**Status:** complete — `PRE_RERUN_CONSTRAINTS_READY`
 **Dependencies:** completed G10R-A; refreshed G10R Phase-B rerun with `DO_NOT_ESCALATE_ACTIVE_SOCIETY`; no new model, network, subscription, or laboratory work
 **Authority:** offline repository work only
 

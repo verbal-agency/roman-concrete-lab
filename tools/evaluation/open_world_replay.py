@@ -35,9 +35,10 @@ def replay(
     *,
     run_path: Path = ROOT / "artifacts/goals/G10R/run.json",
     checkpoint_dir: Path = ROOT / "artifacts/goals/G10R/checkpoints",
+    phase_path: Path = ROOT / "artifacts/goals/G10R/phase-a.json",
 ) -> dict[str, Any]:
     run = load_json(run_path)
-    phase = load_json(ROOT / "artifacts/goals/G10R/phase-a.json")
+    phase = load_json(phase_path)
     cases = {item["case_id"]: item for item in load_jsonl(ROOT / "fixtures/investigation/sealed.jsonl")}
     identities = source_identity_map()
     score_rows: list[dict[str, Any]] = []
@@ -159,9 +160,10 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--run", type=Path, default=ROOT / "artifacts/goals/G10R/run.json")
     parser.add_argument("--checkpoints", type=Path, default=ROOT / "artifacts/goals/G10R/checkpoints")
+    parser.add_argument("--phase", type=Path, default=ROOT / "artifacts/goals/G10R/phase-a.json")
     parser.add_argument("--output", type=Path, default=ROOT / "artifacts/goals/G10R-R/replay.json")
     args = parser.parse_args()
-    output = replay(run_path=args.run, checkpoint_dir=args.checkpoints)
+    output = replay(run_path=args.run, checkpoint_dir=args.checkpoints, phase_path=args.phase)
     _write(args.output, output)
     print(json.dumps({"status": output["status"], "critical_failures": output["decision"]["critical_failures"], "output": str(args.output)}, indent=2))
 

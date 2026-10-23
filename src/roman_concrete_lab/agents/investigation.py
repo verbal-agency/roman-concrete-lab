@@ -95,6 +95,10 @@ FABRICATION_PROOF_METHODS = {
 }
 
 
+class RunnerRejected(RuntimeError):
+    """The runner could not execute a requested action with its configured adapter."""
+
+
 def file_digest(path: Path) -> str:
     return "sha256:" + hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -1069,24 +1073,26 @@ class ActiveInvestigationRunner:
         if any(item["action_id"] == action_id for item in self.actions):
             cached = []
             for candidate in self.candidates.values():
-                if locator in {candidate.get("locator"), candidate.get("content_locator")} and candidate.get("content_hash"):
+                if locator in {candidate.get("source_candidate_id"), candidate.get("locator"), candidate.get("content_locator")} and candidate.get("content_hash"):
                     document = self._cached_document(candidate["content_hash"])
                     if document is not None:
                         cached.append((candidate["source_candidate_id"], document))
             return cached
+        resolved_locator, locator_resolution = self._resolve_fetch_locator(locator)
         before = deepcopy(self.budget.usage)
         policy_status = "ALLOWED"
+        failure_reason = None
         output_ids: list[str] = []
         documents: list[tuple[str, dict[str, Any]]] = []
         try:
             if not hasattr(self.adapter, "fetch_public_text"):
-                raise PolicyBlocked("configured adapter does not expose public-content fetch")
+                raise RunnerRejected("configured adapter does not expose public-content fetch")
             self.budget.preflight(document_fetches=1)
-            fetched = self.adapter.fetch_public_text(locator)
+            fetched = self.adapter.fetch_public_text(resolved_locator)
             self.budget.debit(document_fetches=1)
             self._cache_document(fetched)
             for candidate_id, candidate in list(self.candidates.items()):
-                if locator not in {candidate.get("locator"), candidate.get("content_locator")}:
+                if not ({locator, resolved_locator} & {candidate.get("source_candidate_id"), candidate.get("locator"), candidate.get("content_locator")}):
                     continue
                 if candidate["status"] == "METADATA_SCREENED":
                     candidate = transition_source_candidate(candidate, "CANDIDATE")
@@ -1096,17 +1102,26 @@ class ActiveInvestigationRunner:
                 self.candidates[candidate_id] = candidate
                 output_ids.append(candidate_id)
                 documents.append((candidate_id, fetched))
-        except PolicyBlocked:
+        except PolicyBlocked as exc:
             policy_status = "RIGHTS_BLOCKED"
+            failure_reason = str(exc)
+        except BudgetExhausted as exc:
+            policy_status = "BUDGET_EXHAUSTED"
+            failure_reason = str(exc)
+        except RunnerRejected as exc:
+            policy_status = "RUNNER_REJECTED"
+            failure_reason = str(exc)
         after = self.budget.usage
         debit = {key: max(0, getattr(after, key) - getattr(before, key)) for key in asdict(before)}
         action = {
             "schema_version": "1.0", "action_id": action_id, "run_id": self.run_id,
             "case_id": self.case["case_id"], "problem_id": self.case["problem_id"], "problem_version": self.case["problem_version"],
             "arm": self.arm, "branch_id": branch_id, "action_type": "FETCH_PERMITTED_CONTENT", "rationale": rationale,
-            "input": {"locator": locator}, "policy_status": policy_status, "budget_debit": debit,
+            "input": {"locator": locator, "resolved_locator": resolved_locator, "locator_resolution": locator_resolution}, "policy_status": policy_status, "budget_debit": debit,
             "output_ids": output_ids, "replay_key": digest({"action": "FETCH", "locator": locator}), "timestamp": self.timestamp,
         }
+        if failure_reason:
+            action["input"]["failure_reason"] = failure_reason
         validate(action, schema("investigation-action.schema.json"))
         self.actions.append(action)
         record_checkpoint_action(self.checkpoint, action_id=action_id, action=action)
@@ -1114,6 +1129,29 @@ class ActiveInvestigationRunner:
             self.viewpoint_society.register_action(action)
         self._checkpoint()
         return documents
+
+    def _resolve_fetch_locator(self, locator: str) -> tuple[str, str]:
+        """Resolve a candidate/provider reference to its recorded public locator.
+
+        The model may cite a provider identifier, a metadata locator, or a
+        direct content locator.  Only an exact candidate-record match can
+        resolve the first two; the runner never guesses from a title or query.
+        """
+        for candidate in self.candidates.values():
+            references = {
+                candidate.get("source_candidate_id"),
+                candidate.get("locator"),
+                candidate.get("content_locator"),
+            }
+            if locator not in references:
+                continue
+            content_locator = candidate.get("content_locator")
+            if locator == content_locator:
+                return locator, "DIRECT_CONTENT_LOCATOR"
+            if content_locator:
+                return content_locator, "CANDIDATE_CONTENT_LOCATOR"
+            return locator, "UNRESOLVED_CANDIDATE_LOCATOR"
+        return locator, "DIRECT_CONTENT_LOCATOR"
 
     def _map_document(self, *, branch_id: str, source_candidate_id: str, document: dict[str, Any]) -> None:
         card_id = digest({"source_candidate_id": source_candidate_id, "document_hash": document["content_hash"]})[7:23]
@@ -1194,7 +1232,9 @@ class ActiveInvestigationRunner:
                     self._map_document(branch_id=branch_id, source_candidate_id=source_candidate_id, document=document)
                 action = next((item for item in reversed(self.actions) if item["action_type"] == "FETCH_PERMITTED_CONTENT" and item["branch_id"] == branch_id and item["input"].get("locator") == locator), None)
                 if action is not None and action["policy_status"] == "RIGHTS_BLOCKED":
-                    event.update({"status": "POLICY_BLOCKED", "action_id": action["action_id"]})
+                    event.update({"status": "POLICY_BLOCKED", "action_id": action["action_id"], "reason": action["input"].get("failure_reason", "source policy blocked content")})
+                elif action is not None and action["policy_status"] in {"RUNNER_REJECTED", "BUDGET_EXHAUSTED"}:
+                    event.update({"status": "RUNNER_REJECTED", "action_id": action["action_id"], "reason": action["input"].get("failure_reason", "runner rejected request")})
                 elif set(self.paper_cards) - before_cards:
                     event.update({"status": "EXECUTED_CARD", "action_id": action["action_id"] if action else None})
                 else:
