@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "goal": "G10R-A",
+  "status": "ACQUISITION_DESIGN_READY",
+  "protocol": "g10r-a.1-offline-acquisition-redesign",
+  "external_calls": false,
+  "authority": {
+    "model_calls": "none",
+    "network": "none",
+    "credentials": "none",
+    "subscription": "none",
+    "laboratory": "prohibited",
+    "evidence_promotion": "prohibited",
+    "external_communication": "prohibited"
+  },
+  "replay": {
+    "artifact": "artifacts/goals/G10R-A/replay.json",
+    "replay_stable": true,
+    "checkpoint_resume_stable": true,
+    "duplicate_action_replayed": true,
+    "request_lifecycle": {
+      "EXECUTED_CARD": 1,
+      "NO_USABLE_RESULT": 1,
+      "NOT_REQUESTED": 1,
+      "POLICY_BLOCKED": 1,
+      "RUNNER_REJECTED": 1
+    },
+    "page_aware_card_count": 1,
+    "unique_attributable_acquisition": 1,
+    "contradiction_weakening_coverage": 4,
+    "candidate_variant_count": 1,
+    "blocked_fixture_verified": true,
+    "malformed_fixture_verified": true,
+    "evidence_promotion": false
+  },
+  "budget_equality": {
+    "society": {"queries": 8, "document_fetches": 2, "action_budget": 8},
+    "a1_control": {"queries": 8, "document_fetches": 2, "action_budget": 8}
+  },
+  "acceptance": {
+    "1_fetch_card_and_diagnostics": "PASS",
+    "2_request_lifecycle": "PASS",
+    "3_typed_support_tasks": "PASS",
+    "4_candidate_observations_and_variants": "PASS",
+    "5_focus_before_adjudication": "PASS",
+    "6_null_rival_open_slot_and_dissent": "PASS",
+    "7_equal_budget_ledger": "PASS",
+    "8_checkpoint_duplicate_partial_failure_replay": "PASS",
+    "9_single_handoff": "PASS"
+  },
+  "handoff": "Freeze a fresh Phase-A manifest before any future paid evaluation; G10R-A does not authorize a live call."
+}

@@ -1,0 +1,2466 @@
+{
+  "external_calls": false,
+  "failure_reasons": [],
+  "goal": "G10R-A",
+  "next_action": "Freeze a fresh Phase-A manifest before any future paid evaluation; no live call is authorized by G10R-A.",
+  "offline_run": {
+    "attribution_ledger": {
+      "case_id": "G10R-A-FETCH-POSITIVE",
+      "diagnostics": [],
+      "entries": [
+        {
+          "action_ids": [
+            "ACT-FETCH"
+          ],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [
+            "REPORT-VP-LIME-RETRIEVAL"
+          ],
+          "record_id": "ACT-FETCH",
+          "record_type": "ACTION",
+          "source_candidate_ids": [
+            "SRC-FETCH"
+          ],
+          "support_task_id": "TASK-VP-LIME-RETRIEVAL",
+          "viewpoint_id": "VP-LIME"
+        },
+        {
+          "action_ids": [
+            "ACT-CARD"
+          ],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [
+            "REPORT-VP-LIME-EXTRACTION"
+          ],
+          "record_id": "ACT-CARD",
+          "record_type": "ACTION",
+          "source_candidate_ids": [
+            "SRC-FETCH"
+          ],
+          "support_task_id": "TASK-VP-LIME-EXTRACTION",
+          "viewpoint_id": "VP-LIME"
+        },
+        {
+          "action_ids": [
+            "ACT-BLOCKED"
+          ],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [
+            "REPORT-VP-NULL-CONTRADICTION"
+          ],
+          "record_id": "ACT-BLOCKED",
+          "record_type": "ACTION",
+          "source_candidate_ids": [
+            "SRC-BLOCKED"
+          ],
+          "support_task_id": "TASK-VP-NULL-CONTRADICTION",
+          "viewpoint_id": "VP-NULL"
+        },
+        {
+          "action_ids": [
+            "ACT-META"
+          ],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [
+            "REPORT-VP-THERMAL-RETRIEVAL"
+          ],
+          "record_id": "ACT-META",
+          "record_type": "ACTION",
+          "source_candidate_ids": [
+            "SRC-META"
+          ],
+          "support_task_id": "TASK-VP-THERMAL-RETRIEVAL",
+          "viewpoint_id": "VP-THERMAL"
+        },
+        {
+          "action_ids": [
+            "ACT-FETCH"
+          ],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-LIME-RETRIEVAL",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [
+            "SRC-FETCH"
+          ],
+          "support_task_id": "TASK-VP-LIME-RETRIEVAL",
+          "viewpoint_id": "VP-LIME"
+        },
+        {
+          "action_ids": [
+            "ACT-CARD"
+          ],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-LIME-EXTRACTION",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [
+            "SRC-FETCH"
+          ],
+          "support_task_id": "TASK-VP-LIME-EXTRACTION",
+          "viewpoint_id": "VP-LIME"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-LIME-IDENTITY_LINEAGE",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-LIME-IDENTITY_LINEAGE",
+          "viewpoint_id": "VP-LIME"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-LIME-CONTRADICTION",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-LIME-CONTRADICTION",
+          "viewpoint_id": "VP-LIME"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-LIME-EXPERIMENT_DESIGN",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-LIME-EXPERIMENT_DESIGN",
+          "viewpoint_id": "VP-LIME"
+        },
+        {
+          "action_ids": [
+            "ACT-META"
+          ],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-THERMAL-RETRIEVAL",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [
+            "SRC-META"
+          ],
+          "support_task_id": "TASK-VP-THERMAL-RETRIEVAL",
+          "viewpoint_id": "VP-THERMAL"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-THERMAL-EXTRACTION",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-THERMAL-EXTRACTION",
+          "viewpoint_id": "VP-THERMAL"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-THERMAL-IDENTITY_LINEAGE",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-THERMAL-IDENTITY_LINEAGE",
+          "viewpoint_id": "VP-THERMAL"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-THERMAL-CONTRADICTION",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-THERMAL-CONTRADICTION",
+          "viewpoint_id": "VP-THERMAL"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-THERMAL-EXPERIMENT_DESIGN",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-THERMAL-EXPERIMENT_DESIGN",
+          "viewpoint_id": "VP-THERMAL"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-NULL-RETRIEVAL",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-NULL-RETRIEVAL",
+          "viewpoint_id": "VP-NULL"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-NULL-EXTRACTION",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-NULL-EXTRACTION",
+          "viewpoint_id": "VP-NULL"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-NULL-IDENTITY_LINEAGE",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-NULL-IDENTITY_LINEAGE",
+          "viewpoint_id": "VP-NULL"
+        },
+        {
+          "action_ids": [
+            "ACT-BLOCKED"
+          ],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-NULL-CONTRADICTION",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [
+            "SRC-BLOCKED"
+          ],
+          "support_task_id": "TASK-VP-NULL-CONTRADICTION",
+          "viewpoint_id": "VP-NULL"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-NULL-EXPERIMENT_DESIGN",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-NULL-EXPERIMENT_DESIGN",
+          "viewpoint_id": "VP-NULL"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-OPEN-ADMITTED-RETRIEVAL",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-OPEN-ADMITTED-RETRIEVAL",
+          "viewpoint_id": "VP-OPEN-ADMITTED"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-OPEN-ADMITTED-EXTRACTION",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-OPEN-ADMITTED-EXTRACTION",
+          "viewpoint_id": "VP-OPEN-ADMITTED"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+          "viewpoint_id": "VP-OPEN-ADMITTED"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-OPEN-ADMITTED-CONTRADICTION",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-OPEN-ADMITTED-CONTRADICTION",
+          "viewpoint_id": "VP-OPEN-ADMITTED"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [],
+          "record_id": "REPORT-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+          "record_type": "SUPPORT_REPORT",
+          "source_candidate_ids": [],
+          "support_task_id": "TASK-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+          "viewpoint_id": "VP-OPEN-ADMITTED"
+        },
+        {
+          "action_ids": [
+            "ACT-CARD",
+            "ACT-FETCH"
+          ],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [
+            "REPORT-VP-LIME-CONTRADICTION",
+            "REPORT-VP-LIME-EXPERIMENT_DESIGN",
+            "REPORT-VP-LIME-EXTRACTION",
+            "REPORT-VP-LIME-IDENTITY_LINEAGE",
+            "REPORT-VP-LIME-RETRIEVAL"
+          ],
+          "record_id": "DOSSIER-VP-LIME",
+          "record_type": "DOSSIER",
+          "source_candidate_ids": [
+            "SRC-FETCH"
+          ],
+          "support_task_id": null,
+          "viewpoint_id": "VP-LIME"
+        },
+        {
+          "action_ids": [
+            "ACT-META"
+          ],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [
+            "REPORT-VP-THERMAL-CONTRADICTION",
+            "REPORT-VP-THERMAL-EXPERIMENT_DESIGN",
+            "REPORT-VP-THERMAL-EXTRACTION",
+            "REPORT-VP-THERMAL-IDENTITY_LINEAGE",
+            "REPORT-VP-THERMAL-RETRIEVAL"
+          ],
+          "record_id": "DOSSIER-VP-THERMAL",
+          "record_type": "DOSSIER",
+          "source_candidate_ids": [
+            "SRC-META"
+          ],
+          "support_task_id": null,
+          "viewpoint_id": "VP-THERMAL"
+        },
+        {
+          "action_ids": [
+            "ACT-BLOCKED"
+          ],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [
+            "REPORT-VP-NULL-CONTRADICTION",
+            "REPORT-VP-NULL-EXPERIMENT_DESIGN",
+            "REPORT-VP-NULL-EXTRACTION",
+            "REPORT-VP-NULL-IDENTITY_LINEAGE",
+            "REPORT-VP-NULL-RETRIEVAL"
+          ],
+          "record_id": "DOSSIER-VP-NULL",
+          "record_type": "DOSSIER",
+          "source_candidate_ids": [
+            "SRC-BLOCKED"
+          ],
+          "support_task_id": null,
+          "viewpoint_id": "VP-NULL"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [
+            "REPORT-VP-OPEN-ADMITTED-CONTRADICTION",
+            "REPORT-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+            "REPORT-VP-OPEN-ADMITTED-EXTRACTION",
+            "REPORT-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+            "REPORT-VP-OPEN-ADMITTED-RETRIEVAL"
+          ],
+          "record_id": "DOSSIER-VP-OPEN-ADMITTED",
+          "record_type": "DOSSIER",
+          "source_candidate_ids": [],
+          "support_task_id": null,
+          "viewpoint_id": "VP-OPEN-ADMITTED"
+        },
+        {
+          "action_ids": [],
+          "diagnostics": [],
+          "join_status": "ATTRIBUTED",
+          "parent_record_ids": [
+            "CRITIQUE-G10R-A",
+            "DOSSIER-VP-LIME",
+            "DOSSIER-VP-NULL",
+            "DOSSIER-VP-OPEN-ADMITTED",
+            "DOSSIER-VP-THERMAL"
+          ],
+          "record_id": "ENVELOPE-G10R-A-FETCH-POSITIVE",
+          "record_type": "PORTFOLIO",
+          "source_candidate_ids": [
+            "SRC-BLOCKED",
+            "SRC-FETCH",
+            "SRC-META"
+          ],
+          "support_task_id": null,
+          "viewpoint_id": null
+        }
+      ],
+      "ledger_id": "LEDGER-G10R-A-FETCH-POSITIVE",
+      "schema_version": "1.0",
+      "status": "READY",
+      "treatment_id": "A2-M"
+    },
+    "case_id": "G10R-A-FETCH-POSITIVE",
+    "checkpoint": {
+      "action_budget": 8,
+      "active_ids": [
+        "VP-LIME",
+        "VP-THERMAL",
+        "VP-NULL",
+        "VP-OPEN-ADMITTED"
+      ],
+      "cards": {
+        "VP-LIME": {
+          "case_id": "G10R-A-FETCH-POSITIVE",
+          "falsifiers": [
+            "matched controls recover identically"
+          ],
+          "kind": "CANDIDATE",
+          "known_alternatives": [
+            "VP-THERMAL",
+            "VP-NULL"
+          ],
+          "predictions": [
+            "matched lime-rich specimens recover more water-flow function than controls"
+          ],
+          "prior_basis": "lime-rich inclusion observations",
+          "promotion_status": "REVIEW_REQUIRED",
+          "schema_version": "1.0",
+          "statement": "Reactive lime-rich regions created by hot mixing drive later crack-water recovery.",
+          "support_region": "modern terrestrial lime-pozzolan mortar with controlled cracking and water-flow recovery",
+          "viewpoint_id": "VP-LIME"
+        },
+        "VP-NULL": {
+          "case_id": "G10R-A-FETCH-POSITIVE",
+          "falsifiers": [
+            "replicated matched groups separate on the functional endpoint"
+          ],
+          "kind": "NULL",
+          "known_alternatives": [
+            "VP-LIME",
+            "VP-THERMAL"
+          ],
+          "predictions": [
+            "matched controls and intervention groups do not separate after measurement uncertainty"
+          ],
+          "prior_basis": "absence of process-matched endpoint evidence",
+          "promotion_status": "REVIEW_REQUIRED",
+          "schema_version": "1.0",
+          "statement": "The apparent recovery is explained by sampling, preservation, or measurement variation rather than a material mechanism.",
+          "support_region": "studies with matched controls and reported measurement uncertainty",
+          "viewpoint_id": "VP-NULL"
+        },
+        "VP-OPEN": {
+          "case_id": "G10R-A-FETCH-POSITIVE",
+          "falsifiers": [
+            "no distinct prediction or evidence basis"
+          ],
+          "kind": "OPEN_SLOT",
+          "known_alternatives": [
+            "VP-LIME",
+            "VP-THERMAL",
+            "VP-NULL"
+          ],
+          "predictions": [
+            "a new discriminator separates the incumbent viewpoints"
+          ],
+          "prior_basis": "open search slot",
+          "promotion_status": "REVIEW_REQUIRED",
+          "schema_version": "1.0",
+          "statement": "A newly admitted mechanism may explain the unresolved pattern.",
+          "support_region": "bounded by a typed admission record",
+          "viewpoint_id": "VP-OPEN"
+        },
+        "VP-OPEN-ADMITTED": {
+          "case_id": "G10R-A-FETCH-POSITIVE",
+          "falsifiers": [
+            "no distinct prediction or evidence basis"
+          ],
+          "kind": "CANDIDATE",
+          "known_alternatives": [
+            "VP-LIME",
+            "VP-THERMAL",
+            "VP-NULL"
+          ],
+          "predictions": [
+            "a new discriminator separates the incumbent viewpoints"
+          ],
+          "prior_basis": "offline acquisition fixture",
+          "promotion_status": "REVIEW_REQUIRED",
+          "schema_version": "1.0",
+          "statement": "A bounded newly admitted acquisition viewpoint.",
+          "support_region": "bounded by a typed admission record",
+          "viewpoint_id": "VP-OPEN-ADMITTED"
+        },
+        "VP-THERMAL": {
+          "case_id": "G10R-A-FETCH-POSITIVE",
+          "falsifiers": [
+            "recovery tracks lime regions after thermal history is matched"
+          ],
+          "kind": "CANDIDATE",
+          "known_alternatives": [
+            "VP-LIME",
+            "VP-NULL"
+          ],
+          "predictions": [
+            "thermal-history matched samples show recovery despite different lime-region abundance"
+          ],
+          "prior_basis": "thermal-process alternative",
+          "promotion_status": "REVIEW_REQUIRED",
+          "schema_version": "1.0",
+          "statement": "Hot-mixing thermal history, rather than lime-rich regions, drives the recovery behavior.",
+          "support_region": "hot-mixed mortar with a matched thermal-history comparator",
+          "viewpoint_id": "VP-THERMAL"
+        }
+      },
+      "case_id": "G10R-A-FETCH-POSITIVE",
+      "context_hash": "sha256:g10r-a-fetch-positive",
+      "critiques": {
+        "CRITIQUE-G10R-A": {
+          "case_id": "G10R-A-FETCH-POSITIVE",
+          "challenge": "The fetch-positive card is useful but does not resolve comparator fit; the blocked contradiction remains a live uncertainty.",
+          "compared_viewpoint_ids": [
+            "VP-LIME",
+            "VP-THERMAL",
+            "VP-NULL",
+            "VP-OPEN-ADMITTED"
+          ],
+          "critic_id": "offline-acquisition-critic",
+          "critique_id": "CRITIQUE-G10R-A",
+          "dossier_ids": [
+            "DOSSIER-VP-LIME",
+            "DOSSIER-VP-NULL",
+            "DOSSIER-VP-OPEN-ADMITTED",
+            "DOSSIER-VP-THERMAL"
+          ],
+          "proposed_discriminator": "Retrieve a lawful matched comparator and inspect the reported endpoint.",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "SRC-FETCH",
+            "SRC-BLOCKED"
+          ],
+          "status": "REVIEW_REQUIRED",
+          "target_viewpoint_id": "VP-LIME"
+        }
+      },
+      "dossiers": {
+        "VP-LIME": {
+          "action_ids": [
+            "ACT-CARD",
+            "ACT-FETCH"
+          ],
+          "case_id": "G10R-A-FETCH-POSITIVE",
+          "claim_ids": [],
+          "diagnostics": [],
+          "dissenting_report_ids": [
+            "REPORT-VP-LIME-CONTRADICTION"
+          ],
+          "dossier_id": "DOSSIER-VP-LIME",
+          "report_ids": [
+            "REPORT-VP-LIME-CONTRADICTION",
+            "REPORT-VP-LIME-EXPERIMENT_DESIGN",
+            "REPORT-VP-LIME-EXTRACTION",
+            "REPORT-VP-LIME-IDENTITY_LINEAGE",
+            "REPORT-VP-LIME-RETRIEVAL"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "SRC-FETCH"
+          ],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "TASK-VP-LIME-CONTRADICTION",
+            "TASK-VP-LIME-EXPERIMENT_DESIGN",
+            "TASK-VP-LIME-EXTRACTION",
+            "TASK-VP-LIME-IDENTITY_LINEAGE",
+            "TASK-VP-LIME-RETRIEVAL"
+          ],
+          "viewpoint_id": "VP-LIME"
+        },
+        "VP-NULL": {
+          "action_ids": [
+            "ACT-BLOCKED"
+          ],
+          "case_id": "G10R-A-FETCH-POSITIVE",
+          "claim_ids": [],
+          "diagnostics": [],
+          "dissenting_report_ids": [
+            "REPORT-VP-NULL-CONTRADICTION"
+          ],
+          "dossier_id": "DOSSIER-VP-NULL",
+          "report_ids": [
+            "REPORT-VP-NULL-CONTRADICTION",
+            "REPORT-VP-NULL-EXPERIMENT_DESIGN",
+            "REPORT-VP-NULL-EXTRACTION",
+            "REPORT-VP-NULL-IDENTITY_LINEAGE",
+            "REPORT-VP-NULL-RETRIEVAL"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "SRC-BLOCKED"
+          ],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "TASK-VP-NULL-CONTRADICTION",
+            "TASK-VP-NULL-EXPERIMENT_DESIGN",
+            "TASK-VP-NULL-EXTRACTION",
+            "TASK-VP-NULL-IDENTITY_LINEAGE",
+            "TASK-VP-NULL-RETRIEVAL"
+          ],
+          "viewpoint_id": "VP-NULL"
+        },
+        "VP-OPEN-ADMITTED": {
+          "action_ids": [],
+          "case_id": "G10R-A-FETCH-POSITIVE",
+          "claim_ids": [],
+          "diagnostics": [],
+          "dissenting_report_ids": [
+            "REPORT-VP-OPEN-ADMITTED-CONTRADICTION"
+          ],
+          "dossier_id": "DOSSIER-VP-OPEN-ADMITTED",
+          "report_ids": [
+            "REPORT-VP-OPEN-ADMITTED-CONTRADICTION",
+            "REPORT-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+            "REPORT-VP-OPEN-ADMITTED-EXTRACTION",
+            "REPORT-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+            "REPORT-VP-OPEN-ADMITTED-RETRIEVAL"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "TASK-VP-OPEN-ADMITTED-CONTRADICTION",
+            "TASK-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+            "TASK-VP-OPEN-ADMITTED-EXTRACTION",
+            "TASK-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+            "TASK-VP-OPEN-ADMITTED-RETRIEVAL"
+          ],
+          "viewpoint_id": "VP-OPEN-ADMITTED"
+        },
+        "VP-THERMAL": {
+          "action_ids": [
+            "ACT-META"
+          ],
+          "case_id": "G10R-A-FETCH-POSITIVE",
+          "claim_ids": [],
+          "diagnostics": [],
+          "dissenting_report_ids": [
+            "REPORT-VP-THERMAL-CONTRADICTION"
+          ],
+          "dossier_id": "DOSSIER-VP-THERMAL",
+          "report_ids": [
+            "REPORT-VP-THERMAL-CONTRADICTION",
+            "REPORT-VP-THERMAL-EXPERIMENT_DESIGN",
+            "REPORT-VP-THERMAL-EXTRACTION",
+            "REPORT-VP-THERMAL-IDENTITY_LINEAGE",
+            "REPORT-VP-THERMAL-RETRIEVAL"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "SRC-META"
+          ],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "TASK-VP-THERMAL-CONTRADICTION",
+            "TASK-VP-THERMAL-EXPERIMENT_DESIGN",
+            "TASK-VP-THERMAL-EXTRACTION",
+            "TASK-VP-THERMAL-IDENTITY_LINEAGE",
+            "TASK-VP-THERMAL-RETRIEVAL"
+          ],
+          "viewpoint_id": "VP-THERMAL"
+        }
+      },
+      "evidence_bus": {
+        "actions": {
+          "ACT-BLOCKED": {
+            "action_id": "ACT-BLOCKED",
+            "action_type": "FETCH_PERMITTED_CONTENT",
+            "arm": "A2-M",
+            "branch_id": "TASK-VP-NULL-CONTRADICTION",
+            "budget_debit": {
+              "document_fetches": 0,
+              "estimated_cost_usd": 0.0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "payload_bytes": 0,
+              "queries": 0,
+              "retained_sources": 1,
+              "simulation_calls": 0
+            },
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "input": {
+              "task_id": "TASK-VP-NULL-CONTRADICTION"
+            },
+            "output_ids": [
+              "SRC-BLOCKED"
+            ],
+            "policy_status": "RIGHTS_BLOCKED",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "rationale": "bounded offline acquisition action for TASK-VP-NULL-CONTRADICTION",
+            "replay_key": "sha256:7e8229bbaa49b4fcd7be8229b8372afd5bc9f7cd42744c284711dcc5cfe81d2b",
+            "run_id": "G10R-A-offline",
+            "schema_version": "1.0",
+            "timestamp": "2026-10-23T00:00:00Z"
+          },
+          "ACT-CARD": {
+            "action_id": "ACT-CARD",
+            "action_type": "INSPECT_EXISTING_EVIDENCE",
+            "arm": "A2-M",
+            "branch_id": "TASK-VP-LIME-EXTRACTION",
+            "budget_debit": {
+              "document_fetches": 0,
+              "estimated_cost_usd": 0.0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "payload_bytes": 0,
+              "queries": 0,
+              "retained_sources": 1,
+              "simulation_calls": 0
+            },
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "input": {
+              "task_id": "TASK-VP-LIME-EXTRACTION"
+            },
+            "output_ids": [
+              "SRC-FETCH"
+            ],
+            "policy_status": "ALLOWED",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "rationale": "bounded offline acquisition action for TASK-VP-LIME-EXTRACTION",
+            "replay_key": "sha256:1f468a0ec133da622b2c4791219df1da8fc3200bf37c800bbeba5b9bf221a4e9",
+            "run_id": "G10R-A-offline",
+            "schema_version": "1.0",
+            "timestamp": "2026-10-23T00:00:00Z"
+          },
+          "ACT-FETCH": {
+            "action_id": "ACT-FETCH",
+            "action_type": "FETCH_PERMITTED_CONTENT",
+            "arm": "A2-M",
+            "branch_id": "TASK-VP-LIME-RETRIEVAL",
+            "budget_debit": {
+              "document_fetches": 1,
+              "estimated_cost_usd": 0.0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "payload_bytes": 0,
+              "queries": 0,
+              "retained_sources": 1,
+              "simulation_calls": 0
+            },
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "input": {
+              "task_id": "TASK-VP-LIME-RETRIEVAL"
+            },
+            "output_ids": [
+              "SRC-FETCH"
+            ],
+            "policy_status": "ALLOWED",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "rationale": "bounded offline acquisition action for TASK-VP-LIME-RETRIEVAL",
+            "replay_key": "sha256:072ffec428da67f94289169a11ca1739d86ee612c8c7e4113dee227a765a0faf",
+            "run_id": "G10R-A-offline",
+            "schema_version": "1.0",
+            "timestamp": "2026-10-23T00:00:00Z"
+          },
+          "ACT-META": {
+            "action_id": "ACT-META",
+            "action_type": "SEARCH",
+            "arm": "A2-M",
+            "branch_id": "TASK-VP-THERMAL-RETRIEVAL",
+            "budget_debit": {
+              "document_fetches": 0,
+              "estimated_cost_usd": 0.0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "payload_bytes": 0,
+              "queries": 1,
+              "retained_sources": 1,
+              "simulation_calls": 0
+            },
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "input": {
+              "task_id": "TASK-VP-THERMAL-RETRIEVAL"
+            },
+            "output_ids": [
+              "SRC-META"
+            ],
+            "policy_status": "ALLOWED",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "rationale": "bounded offline acquisition action for TASK-VP-THERMAL-RETRIEVAL",
+            "replay_key": "sha256:3ecbf969b1ec2a083433ec85b0bcd5caf5aeb6a9817f7222719644ede07705ac",
+            "run_id": "G10R-A-offline",
+            "schema_version": "1.0",
+            "timestamp": "2026-10-23T00:00:00Z"
+          }
+        },
+        "append_order": [
+          [
+            "SOURCE_CANDIDATE",
+            "SRC-FETCH"
+          ],
+          [
+            "SOURCE_CANDIDATE",
+            "SRC-META"
+          ],
+          [
+            "SOURCE_CANDIDATE",
+            "SRC-BLOCKED"
+          ],
+          [
+            "SOURCE_CANDIDATE",
+            "SRC-MALFORMED"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-LIME-RETRIEVAL"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-LIME-EXTRACTION"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-LIME-IDENTITY_LINEAGE"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-LIME-CONTRADICTION"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-LIME-EXPERIMENT_DESIGN"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-THERMAL-RETRIEVAL"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-THERMAL-EXTRACTION"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-THERMAL-IDENTITY_LINEAGE"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-THERMAL-CONTRADICTION"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-THERMAL-EXPERIMENT_DESIGN"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-NULL-RETRIEVAL"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-NULL-EXTRACTION"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-NULL-IDENTITY_LINEAGE"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-NULL-CONTRADICTION"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-NULL-EXPERIMENT_DESIGN"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-OPEN-ADMITTED-RETRIEVAL"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-OPEN-ADMITTED-EXTRACTION"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-OPEN-ADMITTED-IDENTITY_LINEAGE"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-OPEN-ADMITTED-CONTRADICTION"
+          ],
+          [
+            "SUPPORT_TASK",
+            "TASK-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN"
+          ],
+          [
+            "ACTION",
+            "ACT-FETCH"
+          ],
+          [
+            "ACTION",
+            "ACT-CARD"
+          ],
+          [
+            "ACTION",
+            "ACT-BLOCKED"
+          ],
+          [
+            "ACTION",
+            "ACT-META"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-LIME-RETRIEVAL"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-LIME-EXTRACTION"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-LIME-IDENTITY_LINEAGE"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-LIME-CONTRADICTION"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-LIME-EXPERIMENT_DESIGN"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-THERMAL-RETRIEVAL"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-THERMAL-EXTRACTION"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-THERMAL-IDENTITY_LINEAGE"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-THERMAL-CONTRADICTION"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-THERMAL-EXPERIMENT_DESIGN"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-NULL-RETRIEVAL"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-NULL-EXTRACTION"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-NULL-IDENTITY_LINEAGE"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-NULL-CONTRADICTION"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-NULL-EXPERIMENT_DESIGN"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-OPEN-ADMITTED-RETRIEVAL"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-OPEN-ADMITTED-EXTRACTION"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-OPEN-ADMITTED-IDENTITY_LINEAGE"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-OPEN-ADMITTED-CONTRADICTION"
+          ],
+          [
+            "SUPPORT_REPORT",
+            "REPORT-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN"
+          ],
+          [
+            "VIEWPOINT_DOSSIER",
+            "DOSSIER-VP-LIME"
+          ],
+          [
+            "VIEWPOINT_DOSSIER",
+            "DOSSIER-VP-THERMAL"
+          ],
+          [
+            "VIEWPOINT_DOSSIER",
+            "DOSSIER-VP-NULL"
+          ],
+          [
+            "VIEWPOINT_DOSSIER",
+            "DOSSIER-VP-OPEN-ADMITTED"
+          ],
+          [
+            "CROSS_VIEWPOINT_CRITIQUE",
+            "CRITIQUE-G10R-A"
+          ]
+        ],
+        "candidate_conflicts": {
+          "SRC-META": [
+            {
+              "canonical_payload_hash": "sha256:42a3aee0093bb3542242bdabf8a7bc322be45bbc2061ecaf0acd96beff823b7e",
+              "differing_identity_fields": [
+                "title"
+              ],
+              "observed_candidate": {
+                "access_class": "METADATA_ONLY",
+                "attribution_status": "UNREVIEWED",
+                "content_hash": null,
+                "content_locator": "https://example.org/metadata",
+                "contradiction_ids": [],
+                "deduplication_key": "fixture:SRC-META",
+                "discovery_query": "offline acquisition discriminator",
+                "host": "example.org",
+                "identity_status": "IDENTITY_UNRESOLVED",
+                "locator": "https://example.org/metadata",
+                "problem_id": "roman-hot-mix",
+                "problem_version": "1.0",
+                "rights_state": "METADATA_ONLY",
+                "schema_version": "1.0",
+                "source_candidate_id": "SRC-META",
+                "status": "DISCOVERED",
+                "support_region": "offline acquisition fixture",
+                "title": "Metadata-only fixture variant"
+              },
+              "observed_payload_hash": "sha256:10ad95d2be04609fa6bb49d59257885de7065700217772d62bd716a53fe584fd",
+              "promotable_after_validation": true,
+              "resolution_status": "PENDING_REVIEW",
+              "source_candidate_id": "SRC-META"
+            }
+          ]
+        },
+        "candidate_observations": {
+          "SRC-BLOCKED": [
+            {
+              "discovery_query": "offline acquisition discriminator",
+              "payload_hash": "sha256:e3655ac00f778f783a45f9293775c0f81aa857d3f2ad514bf6c66942261de9e2",
+              "source_candidate_id": "SRC-BLOCKED",
+              "status": "DISCOVERED"
+            }
+          ],
+          "SRC-FETCH": [
+            {
+              "discovery_query": "offline acquisition discriminator",
+              "payload_hash": "sha256:ee019b17dfe8ee3f4d9bd41ce2fa2d95673147066b9b57d2b17d52dd67a926a9",
+              "source_candidate_id": "SRC-FETCH",
+              "status": "DISCOVERED"
+            }
+          ],
+          "SRC-MALFORMED": [
+            {
+              "discovery_query": "offline acquisition discriminator",
+              "payload_hash": "sha256:cd69a2471438ec99602d56c371a68b80cfdc9a787cf2348e2b58f129f3ac32d1",
+              "source_candidate_id": "SRC-MALFORMED",
+              "status": "DISCOVERED"
+            }
+          ],
+          "SRC-META": [
+            {
+              "discovery_query": "offline acquisition discriminator",
+              "payload_hash": "sha256:42a3aee0093bb3542242bdabf8a7bc322be45bbc2061ecaf0acd96beff823b7e",
+              "source_candidate_id": "SRC-META",
+              "status": "DISCOVERED"
+            },
+            {
+              "discovery_query": "offline acquisition discriminator",
+              "payload_hash": "sha256:10ad95d2be04609fa6bb49d59257885de7065700217772d62bd716a53fe584fd",
+              "source_candidate_id": "SRC-META",
+              "status": "DISCOVERED"
+            }
+          ]
+        },
+        "candidates": {
+          "SRC-BLOCKED": {
+            "access_class": "METADATA_ONLY",
+            "attribution_status": "UNREVIEWED",
+            "content_hash": null,
+            "content_locator": "https://api.openalex.org/works/W-offline",
+            "contradiction_ids": [],
+            "deduplication_key": "fixture:SRC-BLOCKED",
+            "discovery_query": "offline acquisition discriminator",
+            "host": "api.openalex.org",
+            "identity_status": "IDENTITY_UNRESOLVED",
+            "locator": "https://api.openalex.org/works/W-offline",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "rights_state": "RIGHTS_BLOCKED",
+            "schema_version": "1.0",
+            "source_candidate_id": "SRC-BLOCKED",
+            "status": "DISCOVERED",
+            "support_region": "offline acquisition fixture",
+            "title": "Rights-blocked fixture"
+          },
+          "SRC-FETCH": {
+            "access_class": "METADATA_ONLY",
+            "attribution_status": "UNREVIEWED",
+            "content_hash": null,
+            "content_locator": "https://www.repository.cam.ac.uk/fixture.pdf",
+            "contradiction_ids": [],
+            "deduplication_key": "fixture:SRC-FETCH",
+            "discovery_query": "offline acquisition discriminator",
+            "host": "www.repository.cam.ac.uk",
+            "identity_status": "IDENTITY_UNRESOLVED",
+            "locator": "https://www.repository.cam.ac.uk/fixture.pdf",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "rights_state": "METADATA_ONLY",
+            "schema_version": "1.0",
+            "source_candidate_id": "SRC-FETCH",
+            "status": "DISCOVERED",
+            "support_region": "offline acquisition fixture",
+            "title": "Fetch-positive fixture"
+          },
+          "SRC-MALFORMED": {
+            "access_class": "METADATA_ONLY",
+            "attribution_status": "UNREVIEWED",
+            "content_hash": null,
+            "content_locator": "https://example.org/malformed.pdf",
+            "contradiction_ids": [],
+            "deduplication_key": "fixture:SRC-MALFORMED",
+            "discovery_query": "offline acquisition discriminator",
+            "host": "example.org",
+            "identity_status": "IDENTITY_UNRESOLVED",
+            "locator": "https://example.org/malformed.pdf",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "rights_state": "METADATA_ONLY",
+            "schema_version": "1.0",
+            "source_candidate_id": "SRC-MALFORMED",
+            "status": "DISCOVERED",
+            "support_region": "offline acquisition fixture",
+            "title": "Malformed fixture"
+          },
+          "SRC-META": {
+            "access_class": "METADATA_ONLY",
+            "attribution_status": "UNREVIEWED",
+            "content_hash": null,
+            "content_locator": "https://example.org/metadata",
+            "contradiction_ids": [],
+            "deduplication_key": "fixture:SRC-META",
+            "discovery_query": "offline acquisition discriminator",
+            "host": "example.org",
+            "identity_status": "IDENTITY_UNRESOLVED",
+            "locator": "https://example.org/metadata",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "rights_state": "METADATA_ONLY",
+            "schema_version": "1.0",
+            "source_candidate_id": "SRC-META",
+            "status": "DISCOVERED",
+            "support_region": "offline acquisition fixture",
+            "title": "Metadata-only fixture"
+          }
+        },
+        "case_id": "G10R-A-FETCH-POSITIVE",
+        "context_hash": "sha256:g10r-a-fetch-positive",
+        "critiques": {
+          "CRITIQUE-G10R-A": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "challenge": "The fetch-positive card is useful but does not resolve comparator fit; the blocked contradiction remains a live uncertainty.",
+            "compared_viewpoint_ids": [
+              "VP-LIME",
+              "VP-THERMAL",
+              "VP-NULL",
+              "VP-OPEN-ADMITTED"
+            ],
+            "critic_id": "offline-acquisition-critic",
+            "critique_id": "CRITIQUE-G10R-A",
+            "dossier_ids": [
+              "DOSSIER-VP-LIME",
+              "DOSSIER-VP-NULL",
+              "DOSSIER-VP-OPEN-ADMITTED",
+              "DOSSIER-VP-THERMAL"
+            ],
+            "proposed_discriminator": "Retrieve a lawful matched comparator and inspect the reported endpoint.",
+            "schema_version": "1.0",
+            "source_candidate_ids": [
+              "SRC-FETCH",
+              "SRC-BLOCKED"
+            ],
+            "status": "REVIEW_REQUIRED",
+            "target_viewpoint_id": "VP-LIME"
+          }
+        },
+        "dossiers": {
+          "DOSSIER-VP-LIME": {
+            "action_ids": [
+              "ACT-CARD",
+              "ACT-FETCH"
+            ],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "diagnostics": [],
+            "dissenting_report_ids": [
+              "REPORT-VP-LIME-CONTRADICTION"
+            ],
+            "dossier_id": "DOSSIER-VP-LIME",
+            "report_ids": [
+              "REPORT-VP-LIME-CONTRADICTION",
+              "REPORT-VP-LIME-EXPERIMENT_DESIGN",
+              "REPORT-VP-LIME-EXTRACTION",
+              "REPORT-VP-LIME-IDENTITY_LINEAGE",
+              "REPORT-VP-LIME-RETRIEVAL"
+            ],
+            "schema_version": "1.0",
+            "source_candidate_ids": [
+              "SRC-FETCH"
+            ],
+            "status": "COMPLETE",
+            "support_task_ids": [
+              "TASK-VP-LIME-CONTRADICTION",
+              "TASK-VP-LIME-EXPERIMENT_DESIGN",
+              "TASK-VP-LIME-EXTRACTION",
+              "TASK-VP-LIME-IDENTITY_LINEAGE",
+              "TASK-VP-LIME-RETRIEVAL"
+            ],
+            "viewpoint_id": "VP-LIME"
+          },
+          "DOSSIER-VP-NULL": {
+            "action_ids": [
+              "ACT-BLOCKED"
+            ],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "diagnostics": [],
+            "dissenting_report_ids": [
+              "REPORT-VP-NULL-CONTRADICTION"
+            ],
+            "dossier_id": "DOSSIER-VP-NULL",
+            "report_ids": [
+              "REPORT-VP-NULL-CONTRADICTION",
+              "REPORT-VP-NULL-EXPERIMENT_DESIGN",
+              "REPORT-VP-NULL-EXTRACTION",
+              "REPORT-VP-NULL-IDENTITY_LINEAGE",
+              "REPORT-VP-NULL-RETRIEVAL"
+            ],
+            "schema_version": "1.0",
+            "source_candidate_ids": [
+              "SRC-BLOCKED"
+            ],
+            "status": "COMPLETE",
+            "support_task_ids": [
+              "TASK-VP-NULL-CONTRADICTION",
+              "TASK-VP-NULL-EXPERIMENT_DESIGN",
+              "TASK-VP-NULL-EXTRACTION",
+              "TASK-VP-NULL-IDENTITY_LINEAGE",
+              "TASK-VP-NULL-RETRIEVAL"
+            ],
+            "viewpoint_id": "VP-NULL"
+          },
+          "DOSSIER-VP-OPEN-ADMITTED": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "diagnostics": [],
+            "dissenting_report_ids": [
+              "REPORT-VP-OPEN-ADMITTED-CONTRADICTION"
+            ],
+            "dossier_id": "DOSSIER-VP-OPEN-ADMITTED",
+            "report_ids": [
+              "REPORT-VP-OPEN-ADMITTED-CONTRADICTION",
+              "REPORT-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+              "REPORT-VP-OPEN-ADMITTED-EXTRACTION",
+              "REPORT-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+              "REPORT-VP-OPEN-ADMITTED-RETRIEVAL"
+            ],
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "status": "COMPLETE",
+            "support_task_ids": [
+              "TASK-VP-OPEN-ADMITTED-CONTRADICTION",
+              "TASK-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+              "TASK-VP-OPEN-ADMITTED-EXTRACTION",
+              "TASK-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+              "TASK-VP-OPEN-ADMITTED-RETRIEVAL"
+            ],
+            "viewpoint_id": "VP-OPEN-ADMITTED"
+          },
+          "DOSSIER-VP-THERMAL": {
+            "action_ids": [
+              "ACT-META"
+            ],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "diagnostics": [],
+            "dissenting_report_ids": [
+              "REPORT-VP-THERMAL-CONTRADICTION"
+            ],
+            "dossier_id": "DOSSIER-VP-THERMAL",
+            "report_ids": [
+              "REPORT-VP-THERMAL-CONTRADICTION",
+              "REPORT-VP-THERMAL-EXPERIMENT_DESIGN",
+              "REPORT-VP-THERMAL-EXTRACTION",
+              "REPORT-VP-THERMAL-IDENTITY_LINEAGE",
+              "REPORT-VP-THERMAL-RETRIEVAL"
+            ],
+            "schema_version": "1.0",
+            "source_candidate_ids": [
+              "SRC-META"
+            ],
+            "status": "COMPLETE",
+            "support_task_ids": [
+              "TASK-VP-THERMAL-CONTRADICTION",
+              "TASK-VP-THERMAL-EXPERIMENT_DESIGN",
+              "TASK-VP-THERMAL-EXTRACTION",
+              "TASK-VP-THERMAL-IDENTITY_LINEAGE",
+              "TASK-VP-THERMAL-RETRIEVAL"
+            ],
+            "viewpoint_id": "VP-THERMAL"
+          }
+        },
+        "problem_id": "roman-hot-mix",
+        "problem_version": "1.0",
+        "reports": {
+          "REPORT-VP-LIME-CONTRADICTION": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-LIME-CONTRADICTION",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "WEAKENS",
+            "status": "COMPLETE",
+            "summary": "The contradiction path weakens confidence but remains rights-blocked or unresolved.",
+            "support_task_id": "TASK-VP-LIME-CONTRADICTION",
+            "unresolved_questions": [
+              "A lawful accessible contradiction is still needed."
+            ],
+            "viewpoint_id": "VP-LIME"
+          },
+          "REPORT-VP-LIME-EXPERIMENT_DESIGN": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-LIME-EXPERIMENT_DESIGN",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "NON_DISCRIMINATING",
+            "status": "ABSTAINED",
+            "summary": "No experiment action is authorized in this offline fixture.",
+            "support_task_id": "TASK-VP-LIME-EXPERIMENT_DESIGN",
+            "unresolved_questions": [
+              "A lab-free discriminator remains to be specified."
+            ],
+            "viewpoint_id": "VP-LIME"
+          },
+          "REPORT-VP-LIME-EXTRACTION": {
+            "action_ids": [
+              "ACT-CARD"
+            ],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-LIME-EXTRACTION",
+            "schema_version": "1.0",
+            "source_candidate_ids": [
+              "SRC-FETCH"
+            ],
+            "stance": "SUPPORTS",
+            "status": "COMPLETE",
+            "summary": "A page-located evidence card was produced without promotion.",
+            "support_task_id": "TASK-VP-LIME-EXTRACTION",
+            "unresolved_questions": [
+              "Derived card remains reviewable."
+            ],
+            "viewpoint_id": "VP-LIME"
+          },
+          "REPORT-VP-LIME-IDENTITY_LINEAGE": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-LIME-IDENTITY_LINEAGE",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "NON_DISCRIMINATING",
+            "status": "ABSTAINED",
+            "summary": "Metadata-only or unresolved support is retained without direct evidence credit.",
+            "support_task_id": "TASK-VP-LIME-IDENTITY_LINEAGE",
+            "unresolved_questions": [
+              "Content and identity remain unresolved."
+            ],
+            "viewpoint_id": "VP-LIME"
+          },
+          "REPORT-VP-LIME-RETRIEVAL": {
+            "action_ids": [
+              "ACT-FETCH"
+            ],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-LIME-RETRIEVAL",
+            "schema_version": "1.0",
+            "source_candidate_ids": [
+              "SRC-FETCH"
+            ],
+            "stance": "SUPPORTS",
+            "status": "COMPLETE",
+            "summary": "Fetch-positive source was retrieved for the assigned viewpoint.",
+            "support_task_id": "TASK-VP-LIME-RETRIEVAL",
+            "unresolved_questions": [
+              "Endpoint comparator remains for review."
+            ],
+            "viewpoint_id": "VP-LIME"
+          },
+          "REPORT-VP-NULL-CONTRADICTION": {
+            "action_ids": [
+              "ACT-BLOCKED"
+            ],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-NULL-CONTRADICTION",
+            "schema_version": "1.0",
+            "source_candidate_ids": [
+              "SRC-BLOCKED"
+            ],
+            "stance": "WEAKENS",
+            "status": "COMPLETE",
+            "summary": "The contradiction path weakens confidence but remains rights-blocked or unresolved.",
+            "support_task_id": "TASK-VP-NULL-CONTRADICTION",
+            "unresolved_questions": [
+              "A lawful accessible contradiction is still needed."
+            ],
+            "viewpoint_id": "VP-NULL"
+          },
+          "REPORT-VP-NULL-EXPERIMENT_DESIGN": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-NULL-EXPERIMENT_DESIGN",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "NON_DISCRIMINATING",
+            "status": "ABSTAINED",
+            "summary": "No experiment action is authorized in this offline fixture.",
+            "support_task_id": "TASK-VP-NULL-EXPERIMENT_DESIGN",
+            "unresolved_questions": [
+              "A lab-free discriminator remains to be specified."
+            ],
+            "viewpoint_id": "VP-NULL"
+          },
+          "REPORT-VP-NULL-EXTRACTION": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-NULL-EXTRACTION",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "NON_DISCRIMINATING",
+            "status": "ABSTAINED",
+            "summary": "Metadata-only or unresolved support is retained without direct evidence credit.",
+            "support_task_id": "TASK-VP-NULL-EXTRACTION",
+            "unresolved_questions": [
+              "Content and identity remain unresolved."
+            ],
+            "viewpoint_id": "VP-NULL"
+          },
+          "REPORT-VP-NULL-IDENTITY_LINEAGE": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-NULL-IDENTITY_LINEAGE",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "NON_DISCRIMINATING",
+            "status": "ABSTAINED",
+            "summary": "Metadata-only or unresolved support is retained without direct evidence credit.",
+            "support_task_id": "TASK-VP-NULL-IDENTITY_LINEAGE",
+            "unresolved_questions": [
+              "Content and identity remain unresolved."
+            ],
+            "viewpoint_id": "VP-NULL"
+          },
+          "REPORT-VP-NULL-RETRIEVAL": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-NULL-RETRIEVAL",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "NON_DISCRIMINATING",
+            "status": "ABSTAINED",
+            "summary": "Metadata-only or unresolved support is retained without direct evidence credit.",
+            "support_task_id": "TASK-VP-NULL-RETRIEVAL",
+            "unresolved_questions": [
+              "Content and identity remain unresolved."
+            ],
+            "viewpoint_id": "VP-NULL"
+          },
+          "REPORT-VP-OPEN-ADMITTED-CONTRADICTION": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-OPEN-ADMITTED-CONTRADICTION",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "WEAKENS",
+            "status": "COMPLETE",
+            "summary": "The contradiction path weakens confidence but remains rights-blocked or unresolved.",
+            "support_task_id": "TASK-VP-OPEN-ADMITTED-CONTRADICTION",
+            "unresolved_questions": [
+              "A lawful accessible contradiction is still needed."
+            ],
+            "viewpoint_id": "VP-OPEN-ADMITTED"
+          },
+          "REPORT-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "NON_DISCRIMINATING",
+            "status": "ABSTAINED",
+            "summary": "No experiment action is authorized in this offline fixture.",
+            "support_task_id": "TASK-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+            "unresolved_questions": [
+              "A lab-free discriminator remains to be specified."
+            ],
+            "viewpoint_id": "VP-OPEN-ADMITTED"
+          },
+          "REPORT-VP-OPEN-ADMITTED-EXTRACTION": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-OPEN-ADMITTED-EXTRACTION",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "NON_DISCRIMINATING",
+            "status": "ABSTAINED",
+            "summary": "Metadata-only or unresolved support is retained without direct evidence credit.",
+            "support_task_id": "TASK-VP-OPEN-ADMITTED-EXTRACTION",
+            "unresolved_questions": [
+              "Content and identity remain unresolved."
+            ],
+            "viewpoint_id": "VP-OPEN-ADMITTED"
+          },
+          "REPORT-VP-OPEN-ADMITTED-IDENTITY_LINEAGE": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "NON_DISCRIMINATING",
+            "status": "ABSTAINED",
+            "summary": "Metadata-only or unresolved support is retained without direct evidence credit.",
+            "support_task_id": "TASK-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+            "unresolved_questions": [
+              "Content and identity remain unresolved."
+            ],
+            "viewpoint_id": "VP-OPEN-ADMITTED"
+          },
+          "REPORT-VP-OPEN-ADMITTED-RETRIEVAL": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-OPEN-ADMITTED-RETRIEVAL",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "NON_DISCRIMINATING",
+            "status": "ABSTAINED",
+            "summary": "Metadata-only or unresolved support is retained without direct evidence credit.",
+            "support_task_id": "TASK-VP-OPEN-ADMITTED-RETRIEVAL",
+            "unresolved_questions": [
+              "Content and identity remain unresolved."
+            ],
+            "viewpoint_id": "VP-OPEN-ADMITTED"
+          },
+          "REPORT-VP-THERMAL-CONTRADICTION": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-THERMAL-CONTRADICTION",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "WEAKENS",
+            "status": "COMPLETE",
+            "summary": "The contradiction path weakens confidence but remains rights-blocked or unresolved.",
+            "support_task_id": "TASK-VP-THERMAL-CONTRADICTION",
+            "unresolved_questions": [
+              "A lawful accessible contradiction is still needed."
+            ],
+            "viewpoint_id": "VP-THERMAL"
+          },
+          "REPORT-VP-THERMAL-EXPERIMENT_DESIGN": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-THERMAL-EXPERIMENT_DESIGN",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "NON_DISCRIMINATING",
+            "status": "ABSTAINED",
+            "summary": "No experiment action is authorized in this offline fixture.",
+            "support_task_id": "TASK-VP-THERMAL-EXPERIMENT_DESIGN",
+            "unresolved_questions": [
+              "A lab-free discriminator remains to be specified."
+            ],
+            "viewpoint_id": "VP-THERMAL"
+          },
+          "REPORT-VP-THERMAL-EXTRACTION": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-THERMAL-EXTRACTION",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "NON_DISCRIMINATING",
+            "status": "ABSTAINED",
+            "summary": "Metadata-only or unresolved support is retained without direct evidence credit.",
+            "support_task_id": "TASK-VP-THERMAL-EXTRACTION",
+            "unresolved_questions": [
+              "Content and identity remain unresolved."
+            ],
+            "viewpoint_id": "VP-THERMAL"
+          },
+          "REPORT-VP-THERMAL-IDENTITY_LINEAGE": {
+            "action_ids": [],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-THERMAL-IDENTITY_LINEAGE",
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "stance": "NON_DISCRIMINATING",
+            "status": "ABSTAINED",
+            "summary": "Metadata-only or unresolved support is retained without direct evidence credit.",
+            "support_task_id": "TASK-VP-THERMAL-IDENTITY_LINEAGE",
+            "unresolved_questions": [
+              "Content and identity remain unresolved."
+            ],
+            "viewpoint_id": "VP-THERMAL"
+          },
+          "REPORT-VP-THERMAL-RETRIEVAL": {
+            "action_ids": [
+              "ACT-META"
+            ],
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "claim_ids": [],
+            "report_id": "REPORT-VP-THERMAL-RETRIEVAL",
+            "schema_version": "1.0",
+            "source_candidate_ids": [
+              "SRC-META"
+            ],
+            "stance": "NON_DISCRIMINATING",
+            "status": "ABSTAINED",
+            "summary": "Metadata-only or unresolved support is retained without direct evidence credit.",
+            "support_task_id": "TASK-VP-THERMAL-RETRIEVAL",
+            "unresolved_questions": [
+              "Content and identity remain unresolved."
+            ],
+            "viewpoint_id": "VP-THERMAL"
+          }
+        },
+        "schema_version": "1.0",
+        "tasks": {
+          "TASK-VP-LIME-CONTRADICTION": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "contradiction acquisition support for VP-LIME; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-LIME-CONTRADICTION",
+            "task_type": "CONTRADICTION",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-LIME"
+          },
+          "TASK-VP-LIME-EXPERIMENT_DESIGN": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "experiment_design acquisition support for VP-LIME; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-LIME-EXPERIMENT_DESIGN",
+            "task_type": "EXPERIMENT_DESIGN",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-LIME"
+          },
+          "TASK-VP-LIME-EXTRACTION": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "extraction acquisition support for VP-LIME; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-LIME-EXTRACTION",
+            "task_type": "EXTRACTION",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-LIME"
+          },
+          "TASK-VP-LIME-IDENTITY_LINEAGE": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "identity_lineage acquisition support for VP-LIME; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-LIME-IDENTITY_LINEAGE",
+            "task_type": "IDENTITY_LINEAGE",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-LIME"
+          },
+          "TASK-VP-LIME-RETRIEVAL": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "retrieval acquisition support for VP-LIME; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-LIME-RETRIEVAL",
+            "task_type": "RETRIEVAL",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-LIME"
+          },
+          "TASK-VP-NULL-CONTRADICTION": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "contradiction acquisition support for VP-NULL; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-NULL-CONTRADICTION",
+            "task_type": "CONTRADICTION",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-NULL"
+          },
+          "TASK-VP-NULL-EXPERIMENT_DESIGN": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "experiment_design acquisition support for VP-NULL; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-NULL-EXPERIMENT_DESIGN",
+            "task_type": "EXPERIMENT_DESIGN",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-NULL"
+          },
+          "TASK-VP-NULL-EXTRACTION": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "extraction acquisition support for VP-NULL; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-NULL-EXTRACTION",
+            "task_type": "EXTRACTION",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-NULL"
+          },
+          "TASK-VP-NULL-IDENTITY_LINEAGE": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "identity_lineage acquisition support for VP-NULL; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-NULL-IDENTITY_LINEAGE",
+            "task_type": "IDENTITY_LINEAGE",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-NULL"
+          },
+          "TASK-VP-NULL-RETRIEVAL": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "retrieval acquisition support for VP-NULL; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-NULL-RETRIEVAL",
+            "task_type": "RETRIEVAL",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-NULL"
+          },
+          "TASK-VP-OPEN-ADMITTED-CONTRADICTION": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "contradiction acquisition support for VP-OPEN-ADMITTED; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-OPEN-ADMITTED-CONTRADICTION",
+            "task_type": "CONTRADICTION",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-OPEN-ADMITTED"
+          },
+          "TASK-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "experiment_design acquisition support for VP-OPEN-ADMITTED; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+            "task_type": "EXPERIMENT_DESIGN",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-OPEN-ADMITTED"
+          },
+          "TASK-VP-OPEN-ADMITTED-EXTRACTION": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "extraction acquisition support for VP-OPEN-ADMITTED; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-OPEN-ADMITTED-EXTRACTION",
+            "task_type": "EXTRACTION",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-OPEN-ADMITTED"
+          },
+          "TASK-VP-OPEN-ADMITTED-IDENTITY_LINEAGE": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "identity_lineage acquisition support for VP-OPEN-ADMITTED; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+            "task_type": "IDENTITY_LINEAGE",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-OPEN-ADMITTED"
+          },
+          "TASK-VP-OPEN-ADMITTED-RETRIEVAL": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "retrieval acquisition support for VP-OPEN-ADMITTED; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-OPEN-ADMITTED-RETRIEVAL",
+            "task_type": "RETRIEVAL",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-OPEN-ADMITTED"
+          },
+          "TASK-VP-THERMAL-CONTRADICTION": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "contradiction acquisition support for VP-THERMAL; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-THERMAL-CONTRADICTION",
+            "task_type": "CONTRADICTION",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-THERMAL"
+          },
+          "TASK-VP-THERMAL-EXPERIMENT_DESIGN": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "experiment_design acquisition support for VP-THERMAL; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-THERMAL-EXPERIMENT_DESIGN",
+            "task_type": "EXPERIMENT_DESIGN",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-THERMAL"
+          },
+          "TASK-VP-THERMAL-EXTRACTION": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "extraction acquisition support for VP-THERMAL; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-THERMAL-EXTRACTION",
+            "task_type": "EXTRACTION",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-THERMAL"
+          },
+          "TASK-VP-THERMAL-IDENTITY_LINEAGE": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "identity_lineage acquisition support for VP-THERMAL; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-THERMAL-IDENTITY_LINEAGE",
+            "task_type": "IDENTITY_LINEAGE",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-THERMAL"
+          },
+          "TASK-VP-THERMAL-RETRIEVAL": {
+            "case_id": "G10R-A-FETCH-POSITIVE",
+            "charter": "retrieval acquisition support for VP-THERMAL; preserve uncertainty and provenance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "schema_version": "1.0",
+            "status": "ASSIGNED",
+            "task_id": "TASK-VP-THERMAL-RETRIEVAL",
+            "task_type": "RETRIEVAL",
+            "treatment_id": "A2-M",
+            "viewpoint_id": "VP-THERMAL"
+          }
+        },
+        "treatment_id": "A2-M"
+      },
+      "focus": {
+        "allocations": {
+          "TASK-VP-LIME-CONTRADICTION": 0,
+          "TASK-VP-LIME-EXPERIMENT_DESIGN": 0,
+          "TASK-VP-LIME-EXTRACTION": 0,
+          "TASK-VP-LIME-IDENTITY_LINEAGE": 0,
+          "TASK-VP-LIME-RETRIEVAL": 0,
+          "TASK-VP-NULL-CONTRADICTION": 0,
+          "TASK-VP-NULL-EXPERIMENT_DESIGN": 1,
+          "TASK-VP-NULL-EXTRACTION": 0,
+          "TASK-VP-NULL-IDENTITY_LINEAGE": 1,
+          "TASK-VP-NULL-RETRIEVAL": 0,
+          "TASK-VP-OPEN-ADMITTED-CONTRADICTION": 0,
+          "TASK-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN": 1,
+          "TASK-VP-OPEN-ADMITTED-EXTRACTION": 0,
+          "TASK-VP-OPEN-ADMITTED-IDENTITY_LINEAGE": 1,
+          "TASK-VP-OPEN-ADMITTED-RETRIEVAL": 0,
+          "TASK-VP-THERMAL-CONTRADICTION": 0,
+          "TASK-VP-THERMAL-EXPERIMENT_DESIGN": 0,
+          "TASK-VP-THERMAL-EXTRACTION": 0,
+          "TASK-VP-THERMAL-IDENTITY_LINEAGE": 0,
+          "TASK-VP-THERMAL-RETRIEVAL": 0
+        },
+        "case_id": "G10R-A-FETCH-POSITIVE",
+        "decision_id": "e7a9aecf9e4f9993",
+        "null_retained": true,
+        "ranked_tasks": [
+          "TASK-VP-NULL-EXPERIMENT_DESIGN",
+          "TASK-VP-NULL-IDENTITY_LINEAGE",
+          "TASK-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+          "TASK-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+          "TASK-VP-THERMAL-EXPERIMENT_DESIGN",
+          "TASK-VP-THERMAL-IDENTITY_LINEAGE",
+          "TASK-VP-LIME-EXPERIMENT_DESIGN",
+          "TASK-VP-LIME-IDENTITY_LINEAGE",
+          "TASK-VP-NULL-CONTRADICTION",
+          "TASK-VP-NULL-EXTRACTION",
+          "TASK-VP-NULL-RETRIEVAL",
+          "TASK-VP-OPEN-ADMITTED-CONTRADICTION",
+          "TASK-VP-OPEN-ADMITTED-EXTRACTION",
+          "TASK-VP-OPEN-ADMITTED-RETRIEVAL",
+          "TASK-VP-THERMAL-CONTRADICTION",
+          "TASK-VP-THERMAL-EXTRACTION",
+          "TASK-VP-THERMAL-RETRIEVAL",
+          "TASK-VP-LIME-CONTRADICTION",
+          "TASK-VP-LIME-EXTRACTION",
+          "TASK-VP-LIME-RETRIEVAL"
+        ],
+        "rationale": "Deterministic allocation by expected information, uncertainty, novelty, provenance risk, duplicate work, feasibility, and mandatory null/rival coverage; votes and prose length are not inputs.",
+        "remaining_actions": 4,
+        "rival_retained": true,
+        "schema_version": "1.0",
+        "scores": {
+          "TASK-VP-LIME-CONTRADICTION": 15,
+          "TASK-VP-LIME-EXPERIMENT_DESIGN": 9,
+          "TASK-VP-LIME-EXTRACTION": 15,
+          "TASK-VP-LIME-IDENTITY_LINEAGE": 9,
+          "TASK-VP-LIME-RETRIEVAL": 15,
+          "TASK-VP-NULL-CONTRADICTION": 14,
+          "TASK-VP-NULL-EXPERIMENT_DESIGN": 8,
+          "TASK-VP-NULL-EXTRACTION": 14,
+          "TASK-VP-NULL-IDENTITY_LINEAGE": 8,
+          "TASK-VP-NULL-RETRIEVAL": 14,
+          "TASK-VP-OPEN-ADMITTED-CONTRADICTION": 14,
+          "TASK-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN": 8,
+          "TASK-VP-OPEN-ADMITTED-EXTRACTION": 14,
+          "TASK-VP-OPEN-ADMITTED-IDENTITY_LINEAGE": 8,
+          "TASK-VP-OPEN-ADMITTED-RETRIEVAL": 14,
+          "TASK-VP-THERMAL-CONTRADICTION": 14,
+          "TASK-VP-THERMAL-EXPERIMENT_DESIGN": 8,
+          "TASK-VP-THERMAL-EXTRACTION": 14,
+          "TASK-VP-THERMAL-IDENTITY_LINEAGE": 8,
+          "TASK-VP-THERMAL-RETRIEVAL": 14
+        },
+        "status": "ALLOCATED",
+        "treatment_id": "A2-M"
+      },
+      "null_id": "VP-NULL",
+      "portfolio": {
+        "authority_note": "All viewpoints, support reports, and focus decisions remain REVIEW_REQUIRED; no evidence, safety, or laboratory authority is granted.",
+        "case_id": "G10R-A-FETCH-POSITIVE",
+        "credible_rival_ids": [
+          "VP-NULL",
+          "VP-OPEN-ADMITTED",
+          "VP-THERMAL"
+        ],
+        "leading_viewpoint_id": "VP-LIME",
+        "next_discriminating_action": "Run the highest-ranked support task that distinguishes the leading viewpoint from its strongest rival.",
+        "portfolio_id": "PORTFOLIO-G10R-A-FETCH-POSITIVE",
+        "preserved_dissent_ids": [
+          "REPORT-VP-LIME-CONTRADICTION",
+          "REPORT-VP-NULL-CONTRADICTION",
+          "REPORT-VP-OPEN-ADMITTED-CONTRADICTION",
+          "REPORT-VP-THERMAL-CONTRADICTION"
+        ],
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "SRC-BLOCKED",
+          "SRC-FETCH",
+          "SRC-META"
+        ],
+        "status": "REVIEW_REQUIRED",
+        "support_contribution_ids": [
+          "REPORT-VP-LIME-CONTRADICTION",
+          "REPORT-VP-LIME-EXPERIMENT_DESIGN",
+          "REPORT-VP-LIME-EXTRACTION",
+          "REPORT-VP-LIME-IDENTITY_LINEAGE",
+          "REPORT-VP-LIME-RETRIEVAL",
+          "REPORT-VP-NULL-CONTRADICTION",
+          "REPORT-VP-NULL-EXPERIMENT_DESIGN",
+          "REPORT-VP-NULL-EXTRACTION",
+          "REPORT-VP-NULL-IDENTITY_LINEAGE",
+          "REPORT-VP-NULL-RETRIEVAL",
+          "REPORT-VP-OPEN-ADMITTED-CONTRADICTION",
+          "REPORT-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+          "REPORT-VP-OPEN-ADMITTED-EXTRACTION",
+          "REPORT-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+          "REPORT-VP-OPEN-ADMITTED-RETRIEVAL",
+          "REPORT-VP-THERMAL-CONTRADICTION",
+          "REPORT-VP-THERMAL-EXPERIMENT_DESIGN",
+          "REPORT-VP-THERMAL-EXTRACTION",
+          "REPORT-VP-THERMAL-IDENTITY_LINEAGE",
+          "REPORT-VP-THERMAL-RETRIEVAL"
+        ],
+        "unresolved_disputes": [
+          "Viewpoint scores are provisional and do not establish evidence."
+        ],
+        "viewpoint_dossier_ids": [
+          "DOSSIER-VP-LIME",
+          "DOSSIER-VP-NULL",
+          "DOSSIER-VP-OPEN-ADMITTED",
+          "DOSSIER-VP-THERMAL"
+        ]
+      },
+      "private_reports": {
+        "VP-LIME": [
+          "REPORT-VP-LIME-RETRIEVAL",
+          "REPORT-VP-LIME-EXTRACTION",
+          "REPORT-VP-LIME-IDENTITY_LINEAGE",
+          "REPORT-VP-LIME-CONTRADICTION",
+          "REPORT-VP-LIME-EXPERIMENT_DESIGN"
+        ],
+        "VP-NULL": [
+          "REPORT-VP-NULL-RETRIEVAL",
+          "REPORT-VP-NULL-EXTRACTION",
+          "REPORT-VP-NULL-IDENTITY_LINEAGE",
+          "REPORT-VP-NULL-CONTRADICTION",
+          "REPORT-VP-NULL-EXPERIMENT_DESIGN"
+        ],
+        "VP-OPEN-ADMITTED": [
+          "REPORT-VP-OPEN-ADMITTED-RETRIEVAL",
+          "REPORT-VP-OPEN-ADMITTED-EXTRACTION",
+          "REPORT-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+          "REPORT-VP-OPEN-ADMITTED-CONTRADICTION",
+          "REPORT-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN"
+        ],
+        "VP-THERMAL": [
+          "REPORT-VP-THERMAL-RETRIEVAL",
+          "REPORT-VP-THERMAL-EXTRACTION",
+          "REPORT-VP-THERMAL-IDENTITY_LINEAGE",
+          "REPORT-VP-THERMAL-CONTRADICTION",
+          "REPORT-VP-THERMAL-EXPERIMENT_DESIGN"
+        ]
+      },
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "protocol": "g10d.1-viewpoint-centered-society",
+      "shared": true,
+      "treatment_id": "A2-M"
+    },
+    "envelope": {
+      "case_id": "G10R-A-FETCH-POSITIVE",
+      "critique_ids": [
+        "CRITIQUE-G10R-A"
+      ],
+      "diagnostics": [],
+      "dossier_ids": [
+        "DOSSIER-VP-LIME",
+        "DOSSIER-VP-NULL",
+        "DOSSIER-VP-OPEN-ADMITTED",
+        "DOSSIER-VP-THERMAL"
+      ],
+      "envelope_id": "ENVELOPE-G10R-A-FETCH-POSITIVE",
+      "portfolio": {
+        "authority_note": "All viewpoints, support reports, and focus decisions remain REVIEW_REQUIRED; no evidence, safety, or laboratory authority is granted.",
+        "case_id": "G10R-A-FETCH-POSITIVE",
+        "credible_rival_ids": [
+          "VP-NULL",
+          "VP-OPEN-ADMITTED",
+          "VP-THERMAL"
+        ],
+        "leading_viewpoint_id": "VP-LIME",
+        "next_discriminating_action": "Run the highest-ranked support task that distinguishes the leading viewpoint from its strongest rival.",
+        "portfolio_id": "PORTFOLIO-G10R-A-FETCH-POSITIVE",
+        "preserved_dissent_ids": [
+          "REPORT-VP-LIME-CONTRADICTION",
+          "REPORT-VP-NULL-CONTRADICTION",
+          "REPORT-VP-OPEN-ADMITTED-CONTRADICTION",
+          "REPORT-VP-THERMAL-CONTRADICTION"
+        ],
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "SRC-BLOCKED",
+          "SRC-FETCH",
+          "SRC-META"
+        ],
+        "status": "REVIEW_REQUIRED",
+        "support_contribution_ids": [
+          "REPORT-VP-LIME-CONTRADICTION",
+          "REPORT-VP-LIME-EXPERIMENT_DESIGN",
+          "REPORT-VP-LIME-EXTRACTION",
+          "REPORT-VP-LIME-IDENTITY_LINEAGE",
+          "REPORT-VP-LIME-RETRIEVAL",
+          "REPORT-VP-NULL-CONTRADICTION",
+          "REPORT-VP-NULL-EXPERIMENT_DESIGN",
+          "REPORT-VP-NULL-EXTRACTION",
+          "REPORT-VP-NULL-IDENTITY_LINEAGE",
+          "REPORT-VP-NULL-RETRIEVAL",
+          "REPORT-VP-OPEN-ADMITTED-CONTRADICTION",
+          "REPORT-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+          "REPORT-VP-OPEN-ADMITTED-EXTRACTION",
+          "REPORT-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+          "REPORT-VP-OPEN-ADMITTED-RETRIEVAL",
+          "REPORT-VP-THERMAL-CONTRADICTION",
+          "REPORT-VP-THERMAL-EXPERIMENT_DESIGN",
+          "REPORT-VP-THERMAL-EXTRACTION",
+          "REPORT-VP-THERMAL-IDENTITY_LINEAGE",
+          "REPORT-VP-THERMAL-RETRIEVAL"
+        ],
+        "unresolved_disputes": [
+          "Viewpoint scores are provisional and do not establish evidence."
+        ],
+        "viewpoint_dossier_ids": [
+          "DOSSIER-VP-LIME",
+          "DOSSIER-VP-NULL",
+          "DOSSIER-VP-OPEN-ADMITTED",
+          "DOSSIER-VP-THERMAL"
+        ]
+      },
+      "schema_version": "1.0",
+      "source_candidate_ids": [
+        "SRC-BLOCKED",
+        "SRC-FETCH",
+        "SRC-META"
+      ],
+      "status": "READY",
+      "support_task_ids": [
+        "TASK-VP-LIME-CONTRADICTION",
+        "TASK-VP-LIME-EXPERIMENT_DESIGN",
+        "TASK-VP-LIME-EXTRACTION",
+        "TASK-VP-LIME-IDENTITY_LINEAGE",
+        "TASK-VP-LIME-RETRIEVAL",
+        "TASK-VP-NULL-CONTRADICTION",
+        "TASK-VP-NULL-EXPERIMENT_DESIGN",
+        "TASK-VP-NULL-EXTRACTION",
+        "TASK-VP-NULL-IDENTITY_LINEAGE",
+        "TASK-VP-NULL-RETRIEVAL",
+        "TASK-VP-OPEN-ADMITTED-CONTRADICTION",
+        "TASK-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+        "TASK-VP-OPEN-ADMITTED-EXTRACTION",
+        "TASK-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+        "TASK-VP-OPEN-ADMITTED-RETRIEVAL",
+        "TASK-VP-THERMAL-CONTRADICTION",
+        "TASK-VP-THERMAL-EXPERIMENT_DESIGN",
+        "TASK-VP-THERMAL-EXTRACTION",
+        "TASK-VP-THERMAL-IDENTITY_LINEAGE",
+        "TASK-VP-THERMAL-RETRIEVAL"
+      ],
+      "treatment_id": "A2-M",
+      "viewpoint_ids": [
+        "VP-LIME",
+        "VP-NULL",
+        "VP-OPEN-ADMITTED",
+        "VP-THERMAL"
+      ]
+    },
+    "evidence_card_joins": [
+      {
+        "action_id": "ACT-FETCH",
+        "card_id": "CARD-G10R-A-FETCH",
+        "join_status": "ATTRIBUTED",
+        "source_candidate_id": "SRC-FETCH",
+        "support_task_id": "TASK-VP-LIME-RETRIEVAL",
+        "viewpoint_id": "VP-LIME"
+      }
+    ],
+    "external_calls": false,
+    "focus": {
+      "allocations": {
+        "TASK-VP-LIME-CONTRADICTION": 0,
+        "TASK-VP-LIME-EXPERIMENT_DESIGN": 0,
+        "TASK-VP-LIME-EXTRACTION": 0,
+        "TASK-VP-LIME-IDENTITY_LINEAGE": 0,
+        "TASK-VP-LIME-RETRIEVAL": 0,
+        "TASK-VP-NULL-CONTRADICTION": 0,
+        "TASK-VP-NULL-EXPERIMENT_DESIGN": 1,
+        "TASK-VP-NULL-EXTRACTION": 0,
+        "TASK-VP-NULL-IDENTITY_LINEAGE": 1,
+        "TASK-VP-NULL-RETRIEVAL": 0,
+        "TASK-VP-OPEN-ADMITTED-CONTRADICTION": 0,
+        "TASK-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN": 1,
+        "TASK-VP-OPEN-ADMITTED-EXTRACTION": 0,
+        "TASK-VP-OPEN-ADMITTED-IDENTITY_LINEAGE": 1,
+        "TASK-VP-OPEN-ADMITTED-RETRIEVAL": 0,
+        "TASK-VP-THERMAL-CONTRADICTION": 0,
+        "TASK-VP-THERMAL-EXPERIMENT_DESIGN": 0,
+        "TASK-VP-THERMAL-EXTRACTION": 0,
+        "TASK-VP-THERMAL-IDENTITY_LINEAGE": 0,
+        "TASK-VP-THERMAL-RETRIEVAL": 0
+      },
+      "case_id": "G10R-A-FETCH-POSITIVE",
+      "decision_id": "e7a9aecf9e4f9993",
+      "null_retained": true,
+      "ranked_tasks": [
+        "TASK-VP-NULL-EXPERIMENT_DESIGN",
+        "TASK-VP-NULL-IDENTITY_LINEAGE",
+        "TASK-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+        "TASK-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+        "TASK-VP-THERMAL-EXPERIMENT_DESIGN",
+        "TASK-VP-THERMAL-IDENTITY_LINEAGE",
+        "TASK-VP-LIME-EXPERIMENT_DESIGN",
+        "TASK-VP-LIME-IDENTITY_LINEAGE",
+        "TASK-VP-NULL-CONTRADICTION",
+        "TASK-VP-NULL-EXTRACTION",
+        "TASK-VP-NULL-RETRIEVAL",
+        "TASK-VP-OPEN-ADMITTED-CONTRADICTION",
+        "TASK-VP-OPEN-ADMITTED-EXTRACTION",
+        "TASK-VP-OPEN-ADMITTED-RETRIEVAL",
+        "TASK-VP-THERMAL-CONTRADICTION",
+        "TASK-VP-THERMAL-EXTRACTION",
+        "TASK-VP-THERMAL-RETRIEVAL",
+        "TASK-VP-LIME-CONTRADICTION",
+        "TASK-VP-LIME-EXTRACTION",
+        "TASK-VP-LIME-RETRIEVAL"
+      ],
+      "rationale": "Deterministic allocation by expected information, uncertainty, novelty, provenance risk, duplicate work, feasibility, and mandatory null/rival coverage; votes and prose length are not inputs.",
+      "remaining_actions": 4,
+      "rival_retained": true,
+      "schema_version": "1.0",
+      "scores": {
+        "TASK-VP-LIME-CONTRADICTION": 15,
+        "TASK-VP-LIME-EXPERIMENT_DESIGN": 9,
+        "TASK-VP-LIME-EXTRACTION": 15,
+        "TASK-VP-LIME-IDENTITY_LINEAGE": 9,
+        "TASK-VP-LIME-RETRIEVAL": 15,
+        "TASK-VP-NULL-CONTRADICTION": 14,
+        "TASK-VP-NULL-EXPERIMENT_DESIGN": 8,
+        "TASK-VP-NULL-EXTRACTION": 14,
+        "TASK-VP-NULL-IDENTITY_LINEAGE": 8,
+        "TASK-VP-NULL-RETRIEVAL": 14,
+        "TASK-VP-OPEN-ADMITTED-CONTRADICTION": 14,
+        "TASK-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN": 8,
+        "TASK-VP-OPEN-ADMITTED-EXTRACTION": 14,
+        "TASK-VP-OPEN-ADMITTED-IDENTITY_LINEAGE": 8,
+        "TASK-VP-OPEN-ADMITTED-RETRIEVAL": 14,
+        "TASK-VP-THERMAL-CONTRADICTION": 14,
+        "TASK-VP-THERMAL-EXPERIMENT_DESIGN": 8,
+        "TASK-VP-THERMAL-EXTRACTION": 14,
+        "TASK-VP-THERMAL-IDENTITY_LINEAGE": 8,
+        "TASK-VP-THERMAL-RETRIEVAL": 14
+      },
+      "status": "ALLOCATED",
+      "treatment_id": "A2-M"
+    },
+    "lifecycle": [
+      {
+        "event_id": "REQ-FETCH",
+        "locator": "https://www.repository.cam.ac.uk/fixture.pdf",
+        "status": "EXECUTED_CARD",
+        "task_id": "TASK-VP-LIME-RETRIEVAL"
+      },
+      {
+        "event_id": "REQ-META",
+        "locator": "https://example.org/metadata",
+        "reason": "metadata-only branch retained without content request",
+        "status": "NOT_REQUESTED",
+        "task_id": "TASK-VP-THERMAL-RETRIEVAL"
+      },
+      {
+        "event_id": "REQ-BLOCKED",
+        "locator": "https://api.openalex.org/works/W-offline",
+        "reason": "frozen source policy disallows content fetch",
+        "status": "POLICY_BLOCKED",
+        "task_id": "TASK-VP-NULL-CONTRADICTION"
+      },
+      {
+        "event_id": "REQ-MALFORMED",
+        "locator": "https://example.org/malformed.pdf",
+        "reason": "malformed document fixture",
+        "status": "NO_USABLE_RESULT",
+        "task_id": "TASK-VP-LIME-EXTRACTION"
+      },
+      {
+        "event_id": "REQ-BUDGET",
+        "locator": "https://www.repository.cam.ac.uk/fixture.pdf",
+        "reason": "bounded task budget exhausted",
+        "status": "RUNNER_REJECTED",
+        "task_id": "TASK-VP-THERMAL-EXPERIMENT_DESIGN"
+      }
+    ],
+    "paper_evidence_cards": {
+      "CARD-G10R-A-FETCH": {
+        "authority_note": "Derived extraction for review; no evidence promotion, performance claim, or laboratory authority.",
+        "card_id": "CARD-G10R-A-FETCH",
+        "document_hash": "sha256:1540877149ab6337014e32440a19059304270ac4a6d9bc18d035f2105f339e4c",
+        "extraction_status": "EXTRACTED",
+        "facts": [
+          {
+            "confidence": "HIGH",
+            "field": "endpoint",
+            "page_locator": "https://www.repository.cam.ac.uk/fixture.pdf#page=1",
+            "page_text_hash": "sha256:22f7c5b388bab89f295d3f1474a38b57cba8e1e374dfd135ceb59cfeb31055e2",
+            "reporting_status": "REPORTED",
+            "support_type": "DIRECT",
+            "value": "water-flow recovery"
+          }
+        ],
+        "page_count": 1,
+        "parser": "pypdf-6.20.0-page-text",
+        "schema_version": "1.0",
+        "source_candidate_id": "SRC-FETCH",
+        "unresolved": [
+          "Comparator details remain for expert review."
+        ]
+      }
+    },
+    "portfolio": {
+      "authority_note": "All viewpoints, support reports, and focus decisions remain REVIEW_REQUIRED; no evidence, safety, or laboratory authority is granted.",
+      "case_id": "G10R-A-FETCH-POSITIVE",
+      "credible_rival_ids": [
+        "VP-NULL",
+        "VP-OPEN-ADMITTED",
+        "VP-THERMAL"
+      ],
+      "leading_viewpoint_id": "VP-LIME",
+      "next_discriminating_action": "Run the highest-ranked support task that distinguishes the leading viewpoint from its strongest rival.",
+      "portfolio_id": "PORTFOLIO-G10R-A-FETCH-POSITIVE",
+      "preserved_dissent_ids": [
+        "REPORT-VP-LIME-CONTRADICTION",
+        "REPORT-VP-NULL-CONTRADICTION",
+        "REPORT-VP-OPEN-ADMITTED-CONTRADICTION",
+        "REPORT-VP-THERMAL-CONTRADICTION"
+      ],
+      "schema_version": "1.0",
+      "source_candidate_ids": [
+        "SRC-BLOCKED",
+        "SRC-FETCH",
+        "SRC-META"
+      ],
+      "status": "REVIEW_REQUIRED",
+      "support_contribution_ids": [
+        "REPORT-VP-LIME-CONTRADICTION",
+        "REPORT-VP-LIME-EXPERIMENT_DESIGN",
+        "REPORT-VP-LIME-EXTRACTION",
+        "REPORT-VP-LIME-IDENTITY_LINEAGE",
+        "REPORT-VP-LIME-RETRIEVAL",
+        "REPORT-VP-NULL-CONTRADICTION",
+        "REPORT-VP-NULL-EXPERIMENT_DESIGN",
+        "REPORT-VP-NULL-EXTRACTION",
+        "REPORT-VP-NULL-IDENTITY_LINEAGE",
+        "REPORT-VP-NULL-RETRIEVAL",
+        "REPORT-VP-OPEN-ADMITTED-CONTRADICTION",
+        "REPORT-VP-OPEN-ADMITTED-EXPERIMENT_DESIGN",
+        "REPORT-VP-OPEN-ADMITTED-EXTRACTION",
+        "REPORT-VP-OPEN-ADMITTED-IDENTITY_LINEAGE",
+        "REPORT-VP-OPEN-ADMITTED-RETRIEVAL",
+        "REPORT-VP-THERMAL-CONTRADICTION",
+        "REPORT-VP-THERMAL-EXPERIMENT_DESIGN",
+        "REPORT-VP-THERMAL-EXTRACTION",
+        "REPORT-VP-THERMAL-IDENTITY_LINEAGE",
+        "REPORT-VP-THERMAL-RETRIEVAL"
+      ],
+      "unresolved_disputes": [
+        "Viewpoint scores are provisional and do not establish evidence."
+      ],
+      "viewpoint_dossier_ids": [
+        "DOSSIER-VP-LIME",
+        "DOSSIER-VP-NULL",
+        "DOSSIER-VP-OPEN-ADMITTED",
+        "DOSSIER-VP-THERMAL"
+      ]
+    },
+    "score": {
+      "blocked_fixture_verified": true,
+      "candidate_variant_count": 1,
+      "checkpoint_resume_stable": true,
+      "consensus_credit": 0,
+      "contradiction_weakening_coverage": 4,
+      "discriminator_count": 1,
+      "dissent_retained": true,
+      "duplicate_action_replayed": true,
+      "equal_budget_limits": {
+        "a1_control": {
+          "action_budget": 8,
+          "document_fetches": 2,
+          "queries": 8
+        },
+        "society": {
+          "action_budget": 8,
+          "document_fetches": 2,
+          "queries": 8
+        }
+      },
+      "evidence_card_yield": 1,
+      "evidence_promotion": false,
+      "malformed_fixture_verified": true,
+      "overhead": {
+        "actions": 4,
+        "candidate_observations": 5,
+        "external_calls": 0,
+        "model_calls": 0,
+        "reports": 20
+      },
+      "page_aware_card_count": 1,
+      "primary_score": 7,
+      "request_lifecycle": {
+        "EXECUTED_CARD": 1,
+        "NOT_REQUESTED": 1,
+        "NO_USABLE_RESULT": 1,
+        "POLICY_BLOCKED": 1,
+        "RUNNER_REJECTED": 1
+      },
+      "rhetoric_credit": 0,
+      "support_contribution_count": 2,
+      "unique_attributable_acquisition": 1,
+      "useful_hypothesis_yield": 0,
+      "viewpoint_count_credit": 0,
+      "weakening_contribution_count": 4
+    },
+    "status": "COMPLETE"
+  },
+  "replay_stable": true,
+  "schema_version": "1.0",
+  "status": "ACQUISITION_DESIGN_READY"
+}

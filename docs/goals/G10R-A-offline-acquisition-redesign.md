@@ -1,6 +1,6 @@
 # G10R-A — Offline evidence-acquisition and support-task redesign
 
-**Status:** proposed — `TARGET_STATE_READY_FOR_OFFLINE_BUILD`
+**Status:** complete — `ACQUISITION_DESIGN_READY`
 **Dependencies:** refreshed G10R-P postmortem against the integrated G10R run; G10R-I `RUNTIME_INTEGRATION_READY`; G10D and G10P complete
 **Authority:** offline repository work only; no model, network, subscription, credential, laboratory, or external communication
 

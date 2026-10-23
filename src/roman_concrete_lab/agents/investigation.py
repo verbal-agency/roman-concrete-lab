@@ -886,6 +886,7 @@ class ActiveInvestigationRunner:
             self.budget.usage = BudgetUsage(**saved_budget["usage"])
         self.traces: list[dict[str, Any]] = list(self.checkpoint.get("model_traces", []))
         self.actions: list[dict[str, Any]] = list(self.checkpoint.get("action_records", []))
+        self.tool_request_events: list[dict[str, Any]] = list(self.checkpoint.get("tool_request_events", []))
         self.candidates: dict[str, dict[str, Any]] = dict(self.checkpoint.get("source_candidates", {}))
         self.paper_cards: dict[str, dict[str, Any]] = dict(self.checkpoint.get("paper_evidence_cards", {}))
         self.document_cache_dir = document_cache_dir or ROOT / "data/raw/g10r"
@@ -903,6 +904,7 @@ class ActiveInvestigationRunner:
                 "state_history": self.machine.history,
                 "model_traces": self.traces,
                 "action_records": self.actions,
+                "tool_request_events": self.tool_request_events,
                 "source_candidates": self.candidates,
                 "paper_evidence_cards": self.paper_cards,
                 "simulation_traces": self.simulation_traces,
@@ -1173,11 +1175,33 @@ class ActiveInvestigationRunner:
 
     def _execute_requested_tools(self, branch_id: str, plan: dict[str, Any]) -> None:
         for locator in plan["requested_fetch_locators"]:
+            event = {
+                "event_id": digest({"run": self.run_id, "branch": branch_id, "locator": locator})[7:23],
+                "branch_id": branch_id,
+                "locator": locator,
+                "status": "NOT_REQUESTED",
+            }
             if self.budget.remaining()["document_fetches"] <= 0:
-                break
-            documents = self._fetch(branch_id=branch_id, locator=locator, rationale="model requested lawful paper inspection")
-            for source_candidate_id, document in documents:
-                self._map_document(branch_id=branch_id, source_candidate_id=source_candidate_id, document=document)
+                event.update({"status": "RUNNER_REJECTED", "reason": "document-fetch budget exhausted"})
+                self.tool_request_events.append(event)
+                self._checkpoint()
+                continue
+            before_cards = set(self.paper_cards)
+            try:
+                documents = self._fetch(branch_id=branch_id, locator=locator, rationale="model requested lawful paper inspection")
+                for source_candidate_id, document in documents:
+                    self._map_document(branch_id=branch_id, source_candidate_id=source_candidate_id, document=document)
+                action = next((item for item in reversed(self.actions) if item["action_type"] == "FETCH_PERMITTED_CONTENT" and item["branch_id"] == branch_id and item["input"].get("locator") == locator), None)
+                if action is not None and action["policy_status"] == "RIGHTS_BLOCKED":
+                    event.update({"status": "POLICY_BLOCKED", "action_id": action["action_id"]})
+                elif set(self.paper_cards) - before_cards:
+                    event.update({"status": "EXECUTED_CARD", "action_id": action["action_id"] if action else None})
+                else:
+                    event.update({"status": "NO_USABLE_RESULT", "action_id": action["action_id"] if action else None})
+            except PolicyBlocked as exc:
+                event.update({"status": "RUNNER_REJECTED", "reason": str(exc)})
+            self.tool_request_events.append(event)
+            self._checkpoint()
         for request in plan["simulation_requests"]:
             self._simulate(branch_id=branch_id, request=request)
 
@@ -1378,7 +1402,7 @@ class ActiveInvestigationRunner:
             viewpoint_id = card["viewpoint_id"]
             plan = self._model(
                 label=f"a2m_{viewpoint_id}_plan",
-                instructions=prompts()["system"] + "\n" + prompts_m["proponent"] + "\nReturn a concise plan with exactly one primary query; use empty follow-up, fetch, and simulation arrays.",
+                instructions=prompts()["system"] + "\n" + prompts_m["proponent"] + "\nReturn a concise plan with one primary query and use follow-up, fetch, or simulation requests when the assigned viewpoint needs them; do not invent access or evidence.",
                 packet=self._packet(branch_id=f"viewpoint:{viewpoint_id}", extra={"viewpoint_card": card, "mechanism_card": mechanism_by_id[viewpoint_id]}, candidate_ids=[]),
                 maximum_output_tokens=450, output_schema=provider_schema("investigation-plan.schema.json"), format_name="g10m_proponent_plan",
             )
@@ -1413,7 +1437,7 @@ class ActiveInvestigationRunner:
         for role in structural_roles:
             plan = self._model(
                 label=f"a2m_{role}_plan",
-                instructions=prompts()["system"] + "\n" + prompts_m["structural_auditors"][role] + "\nReturn a concise plan with exactly one primary query; use empty follow-up, fetch, and simulation arrays.",
+                instructions=prompts()["system"] + "\n" + prompts_m["structural_auditors"][role] + "\nReturn a concise plan with one primary query and request follow-up or fetch work when it is the cheapest valid discriminator; do not invent access or evidence.",
                 packet=self._packet(branch_id=f"auditor:{role}", extra={"structural_role": role, "shared_viewpoint_dossiers": shared, "shared_mechanism_reports": shared}, candidate_ids=[]),
                 maximum_output_tokens=450, output_schema=provider_schema("investigation-plan.schema.json"), format_name="g10m_auditor_plan",
             )
