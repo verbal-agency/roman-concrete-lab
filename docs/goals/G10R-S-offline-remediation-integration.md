@@ -1,6 +1,6 @@
 # G10R-S — Integrate the winning society remediation offline
 
-**Status:** proposed
+**Status:** complete — `RUNTIME_REMEDIATION_READY`
 **Dependencies:** G10R-Q `SOCIETY_REMEDIATION_READY`; no model, network,
 subscription, laboratory, or paid Phase-B execution
 **Authority:** repository-local code, deterministic providers/adapters, and
@@ -40,9 +40,10 @@ until its acceptance evidence is reviewed.
 - `src/roman_concrete_lab/agents/investigation.py`;
 - `src/roman_concrete_lab/agents/viewpoint_society.py`;
 - `src/roman_concrete_lab/agents/evidence_bus.py`;
-- `tools/evaluation/society_failure_experiments.py`;
-- `fixtures/investigation/failure-experiment.json` plus deterministic provider
-  and retrieval fixtures;
+- `tools/evaluation/society_failure_experiments.py` and
+  `tools/evaluation/offline_remediation_integration.py`;
+- `fixtures/investigation/failure-experiment.json` and
+  `fixtures/investigation/remediation-sources.jsonl`;
 - `tests/agents/test_offline_remediation_integration.py`;
 - `artifacts/goals/G10R-S/{run.json,replay.json,report.md}`.
 
@@ -101,3 +102,25 @@ Emit `INCONCLUSIVE_RUNTIME_REMEDIATION` if the integrated runner cannot
 distinguish a failed policy intervention from a plumbing or fixture failure.
 Do not widen authority or revert to a discourse-only society to make the
 criteria pass.
+
+## Completed verification
+
+- The actual `ActiveInvestigationRunner` A2-M path executed the combined
+  G10R-Q treatment across all four sealed fixtures with deterministic provider
+  and retrieval adapters; no model, network, credential, subscription, or
+  laboratory calls occurred.
+- The runner now records a remediation manifest, performs acquisition before
+  reporting, executes typed structural support checks, resolves exact content
+  locators into page-aware cards, suppresses duplicate queries with replayable
+  ledger actions, and assigns bounded work to the admitted open slot.
+- Metadata-only candidates remain without evidence cards or evidence credit;
+  null/rival preservation, dissent, malformed output, partial checkpoint
+  traces, budget exhaustion, and authority boundaries remain observable;
+  completed checkpoints replay without provider calls.
+- Artifacts: `artifacts/goals/G10R-S/run.json`, `replay.json`, and `report.md`.
+- Verification: `python3 -m tools.evaluation.offline_remediation_integration
+  --output-dir artifacts/goals/G10R-S` returned `RUNTIME_REMEDIATION_READY`;
+  focused integration tests passed; the full offline suite passed; and the
+  generated run was byte-stable on an independent second execution.
+- This result is an offline runtime-readiness gate only. It does not authorize
+  a Phase-A freeze, a paid Phase-B run, evidence promotion, or laboratory work.

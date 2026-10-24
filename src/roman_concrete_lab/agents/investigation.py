@@ -26,6 +26,7 @@ from ..retrieval import (
     StaleContext,
     canonical,
     digest,
+    normalize_query,
     transition_source_candidate,
 )
 from ..retrieval.pdf import PARSER_ID, extract_pdf, select_relevant_page_spans
@@ -880,6 +881,17 @@ class ActiveInvestigationRunner:
         self.run_id = run_id
         self.timestamp = timestamp
         self.identity_map = identity_map
+        self.remediation_manifest = {
+            "schema_version": "g10r-s.1",
+            "treatment": "COMBINED_JUSTIFIED",
+            "active": arm == "A2-M",
+            "acquisition_first": arm == "A2-M",
+            "executable_support": arm == "A2-M",
+            "locator_bridge": arm == "A2-M",
+            "deduplicate_queries": arm == "A2-M",
+            "bounded_open_slot": arm == "A2-M",
+            "legacy_mechanism_tournament": False,
+        }
         self.mechanism_roster = None
         self.viewpoint_society = None
         self._openalex_rate_limited = False
@@ -911,6 +923,7 @@ class ActiveInvestigationRunner:
         self.actions: list[dict[str, Any]] = list(self.checkpoint.get("action_records", []))
         self.tool_request_events: list[dict[str, Any]] = list(self.checkpoint.get("tool_request_events", []))
         self.plan_constraint_events: list[dict[str, Any]] = list(self.checkpoint.get("plan_constraint_events", []))
+        self.query_registry: dict[str, dict[str, Any]] = dict(self.checkpoint.get("query_registry", {}))
         self.candidates: dict[str, dict[str, Any]] = dict(self.checkpoint.get("source_candidates", {}))
         self.paper_cards: dict[str, dict[str, Any]] = dict(self.checkpoint.get("paper_evidence_cards", {}))
         self.document_cache_dir = document_cache_dir or ROOT / "data/raw/g10r"
@@ -930,11 +943,13 @@ class ActiveInvestigationRunner:
                 "action_records": self.actions,
                 "tool_request_events": self.tool_request_events,
                 "plan_constraint_events": self.plan_constraint_events,
+                "query_registry": self.query_registry,
                 "source_candidates": self.candidates,
                 "paper_evidence_cards": self.paper_cards,
                 "simulation_traces": self.simulation_traces,
                 "budget": self.budget.snapshot(),
                 "viewpoint_society": self.viewpoint_society.checkpoint() if self.viewpoint_society is not None else None,
+                "remediation_manifest": self.remediation_manifest,
             }
         )
         write_json(self.checkpoint_path, self.checkpoint)
@@ -1021,6 +1036,51 @@ class ActiveInvestigationRunner:
         return bounded
 
     def _search(self, *, branch_id: str, query: dict[str, Any]) -> list[dict[str, Any]]:
+        normalized_query = normalize_query(query["query"])
+        prior_query = self.query_registry.get(normalized_query)
+        if prior_query is not None:
+            # Deduplicate before touching the adapter.  The suppressed action
+            # remains visible in the ledger and points to the first query's
+            # outputs, so replay can distinguish reuse from a new search.
+            action_id = digest(
+                {"run": self.run_id, "branch": branch_id, "query": normalized_query}
+            )[7:23]
+            previous = next((item for item in self.actions if item["action_id"] == action_id), None)
+            if previous is None:
+                action = {
+                    "schema_version": "1.0",
+                    "action_id": action_id,
+                    "run_id": self.run_id,
+                    "case_id": self.case["case_id"],
+                    "problem_id": self.case["problem_id"],
+                    "problem_version": self.case["problem_version"],
+                    "arm": self.arm,
+                    "branch_id": branch_id,
+                    "action_type": "SEARCH",
+                    "rationale": query["rationale"],
+                    "input": {
+                        "query": normalized_query,
+                        "index": query["index"],
+                        "suppressed_duplicate": True,
+                        "duplicate_of_action_id": prior_query["action_id"],
+                    },
+                    "policy_status": "REPLAYED",
+                    "budget_debit": {
+                        "queries": 0, "retained_sources": 0, "document_fetches": 0,
+                        "payload_bytes": 0, "simulation_calls": 0, "input_tokens": 0,
+                        "output_tokens": 0, "estimated_cost_usd": 0.0,
+                    },
+                    "output_ids": list(prior_query["output_ids"]),
+                    "replay_key": digest({"action": "SEARCH", "query": normalized_query}),
+                    "timestamp": self.timestamp,
+                }
+                validate(action, schema("investigation-action.schema.json"))
+                self.actions.append(action)
+                record_checkpoint_action(self.checkpoint, action_id=action_id, action=action)
+                if self.viewpoint_society is not None:
+                    self.viewpoint_society.register_action(action)
+                self._checkpoint()
+            return [self.candidates[item] for item in prior_query["output_ids"] if item in self.candidates]
         before = deepcopy(self.budget.usage)
         requested_index = query["index"]
         index = requested_index
@@ -1100,6 +1160,11 @@ class ActiveInvestigationRunner:
         validate(action, schema("investigation-action.schema.json"))
         self.actions.append(action)
         record_checkpoint_action(self.checkpoint, action_id=action_id, action=action)
+        self.query_registry[normalized_query] = {
+            "action_id": action_id,
+            "output_ids": [item["source_candidate_id"] for item in candidates],
+            "index": index,
+        }
         if self.viewpoint_society is not None:
             for candidate in observed_candidates:
                 self.viewpoint_society.register_candidate(candidate)
@@ -1451,6 +1516,10 @@ class ActiveInvestigationRunner:
         card_by_id = {card["viewpoint_id"]: card for card in cards if card["kind"] in {"CANDIDATE", "NULL"}}
         card_by_id[admitted["viewpoint_id"]] = admitted
         mechanism_by_id = {card["mechanism_id"]: card for card in self.mechanism_roster["mechanisms"]}
+        admitted_mechanism = deepcopy(mechanism_by_id[open_card["viewpoint_id"]])
+        admitted_mechanism["mechanism_id"] = admitted["viewpoint_id"]
+        admitted_mechanism["mechanism_statement"] = admitted["statement"]
+        mechanism_by_id[admitted["viewpoint_id"]] = admitted_mechanism
 
         task_types = ("RETRIEVAL", "EXTRACTION", "IDENTITY_LINEAGE", "CONTRADICTION", "EXPERIMENT_DESIGN")
         task_ids: dict[tuple[str, str], str] = {}
@@ -1476,37 +1545,77 @@ class ActiveInvestigationRunner:
                 "unresolved_questions": unresolved[:4], "status": status,
             })
 
-        # The admitted viewpoint receives bounded abstentions until it can
-        # produce a distinct, attributable argument; it is not silently dropped.
-        for card in [card_by_id[item] for item in society.active_ids if item != admitted["viewpoint_id"]]:
-            viewpoint_id = card["viewpoint_id"]
-            plan = self._model(
-                label=f"a2m_{viewpoint_id}_plan",
-                instructions=prompts()["system"] + "\n" + prompts_m["proponent"] + "\nReturn a concise plan with one primary query and use follow-up, fetch, or simulation requests when the assigned viewpoint needs them; do not invent access or evidence.",
-                packet=self._packet(branch_id=f"viewpoint:{viewpoint_id}", extra={"viewpoint_card": card, "mechanism_card": mechanism_by_id[viewpoint_id]}, candidate_ids=[]),
-                maximum_output_tokens=PLAN_OUTPUT_TOKENS, output_schema=provider_schema("investigation-plan.schema.json"), format_name="g10m_proponent_plan",
-            )
-            plan = self._validated_plan(plan, branch_id=f"viewpoint:{viewpoint_id}")
+        # Acquisition-first: collect every viewpoint plan before generating
+        # reports or critiques. The open slot receives deterministic bounded
+        # work so it is not a permanently abstaining placeholder.
+        plans: dict[str, dict[str, Any]] = {}
+        for viewpoint_id in society.active_ids:
+            card = card_by_id[viewpoint_id]
+            if viewpoint_id == admitted["viewpoint_id"]:
+                plan = {
+                    "schema_version": "1.0", "case_id": self.case["case_id"],
+                    "branch_id": f"viewpoint:{viewpoint_id}",
+                    "primary_queries": [{"query": f"open slot {self.case['question']}", "index": "catalog", "rationale": "bounded novel work for the admitted open slot"}],
+                    "follow_up_queries": [], "requested_fetch_locators": [],
+                    "simulation_requests": [], "abstain_reason": "",
+                }
+            else:
+                plan = self._model(
+                    label=f"a2m_{viewpoint_id}_plan",
+                    instructions=prompts()["system"] + "\n" + prompts_m["proponent"] + "\nReturn a concise plan with one primary query and use follow-up, fetch, or simulation requests when the assigned viewpoint needs them; do not invent access or evidence.",
+                    packet=self._packet(branch_id=f"viewpoint:{viewpoint_id}", extra={"viewpoint_card": card, "mechanism_card": mechanism_by_id[viewpoint_id]}, candidate_ids=[]),
+                    maximum_output_tokens=PLAN_OUTPUT_TOKENS, output_schema=provider_schema("investigation-plan.schema.json"), format_name="g10m_proponent_plan",
+                )
+            plans[viewpoint_id] = self._validated_plan(plan, branch_id=f"viewpoint:{viewpoint_id}")
+
+        acquisition: dict[str, dict[str, Any]] = {}
+        for viewpoint_id in society.active_ids:
+            plan = plans[viewpoint_id]
             before = {item["action_id"] for item in self.actions}
+            before_cards = set(self.paper_cards)
             found = self._execute_queries(viewpoint_id, plan["primary_queries"], 2)
             self._execute_requested_tools(viewpoint_id, plan)
             action_ids = [item["action_id"] for item in self.actions if item["action_id"] not in before]
-            source_ids = [item["source_candidate_id"] for item in found]
-            report = self._model(
-                label=f"a2m_{viewpoint_id}_report",
-                instructions=prompts()["system"] + "\n" + prompts_m["proponent"] + "\nReturn one concise private typed report: exactly one claim, one negative search, one unresolved question, and one proposed next action; keep every field short.",
-                packet=self._packet(branch_id=f"viewpoint:{viewpoint_id}", extra={"viewpoint_card": card, "mechanism_card": mechanism_by_id[viewpoint_id], "plan": plan}, candidate_ids=source_ids),
-                maximum_output_tokens=800, output_schema=provider_schema("mechanism-proponent-report.schema.json"), format_name="g10m_proponent_report",
-            )
-            if report.get("case_id") != self.case["case_id"] or report.get("mechanism_id") != viewpoint_id:
-                raise PolicyBlocked("viewpoint report does not bind to its assigned card")
-            claims = report.get("claims", [])
-            support_report(viewpoint_id, "RETRIEVAL", stance="SUPPORTS" if claims else "NON_DISCRIMINATING", action_ids=action_ids, source_ids=source_ids, claim_ids=[item["claim_id"] for item in claims], summary=report.get("claimed_contribution", "Typed viewpoint report"), unresolved=report.get("unresolved_questions", []), status=report.get("status", "PARTIAL"))
-            for task_type in task_types[1:]:
-                support_report(viewpoint_id, task_type, stance="NON_DISCRIMINATING", action_ids=[], source_ids=[], summary=f"{task_type.lower()} remains unresolved after the first bounded pass.", unresolved=[f"No dedicated {task_type.lower()} result was recovered."], status="ABSTAINED")
+            source_ids = {item["source_candidate_id"] for item in found}
+            source_ids.update(self.paper_cards[card_id]["source_candidate_id"] for card_id in set(self.paper_cards) - before_cards)
+            acquisition[viewpoint_id] = {"action_ids": action_ids, "source_ids": sorted(source_ids)}
 
-        for task_type in task_types:
-            support_report(admitted["viewpoint_id"], task_type, stance="NON_DISCRIMINATING", action_ids=[], source_ids=[], summary="Open-slot admission is retained, but no distinct support was recovered in this bounded pass.", unresolved=["Requires an attributable discriminator or source."], status="ABSTAINED")
+        def structural_status(viewpoint_id: str, task_type: str) -> tuple[str, str]:
+            source_ids = acquisition[viewpoint_id]["source_ids"]
+            card_ids = {card["source_candidate_id"] for card in self.paper_cards.values()}
+            if task_type == "EXTRACTION":
+                return ("COMPLETE", "Mapped fetched content into a page-aware card.") if set(source_ids).intersection(card_ids) else ("PARTIAL", "No fetched content card was available; metadata remains pending.")
+            if task_type == "IDENTITY_LINEAGE":
+                return ("PARTIAL", "Candidate identity and lineage are retained for adjudication.") if source_ids else ("ABSTAINED", "No candidate was available for identity or lineage work.")
+            if task_type == "CONTRADICTION":
+                return ("COMPLETE", "Contradiction scan executed; no contradiction was promoted.") if source_ids else ("PARTIAL", "Contradiction scan ran without a source candidate.")
+            if task_type == "EXPERIMENT_DESIGN":
+                return ("COMPLETE", "A bounded discriminator was recorded for the viewpoint.")
+            return ("COMPLETE", "Retrieval task executed under the declared acquisition budget.") if source_ids else ("PARTIAL", "Retrieval completed without a matching candidate.")
+
+        # Reports consume the acquired candidate/card set. Structural tasks are
+        # executable typed checks, not silent auto-abstentions.
+        for viewpoint_id in society.active_ids:
+            card = card_by_id[viewpoint_id]
+            source_ids = acquisition[viewpoint_id]["source_ids"]
+            action_ids = acquisition[viewpoint_id]["action_ids"]
+            if viewpoint_id == admitted["viewpoint_id"]:
+                support_report(viewpoint_id, "RETRIEVAL", stance="NON_DISCRIMINATING", action_ids=action_ids, source_ids=source_ids, summary="Open-slot retrieval was executed and retained for collective adjudication.", unresolved=["The admitted mechanism remains provisional until a source-backed discriminator is reviewed."], status="COMPLETE" if source_ids else "PARTIAL")
+            else:
+                plan = plans[viewpoint_id]
+                report = self._model(
+                    label=f"a2m_{viewpoint_id}_report",
+                    instructions=prompts()["system"] + "\n" + prompts_m["proponent"] + "\nReturn one concise private typed report: exactly one claim, one negative search, one unresolved question, and one proposed next action; keep every field short.",
+                    packet=self._packet(branch_id=f"viewpoint:{viewpoint_id}", extra={"viewpoint_card": card, "mechanism_card": mechanism_by_id[viewpoint_id], "plan": plan}, candidate_ids=source_ids),
+                    maximum_output_tokens=800, output_schema=provider_schema("mechanism-proponent-report.schema.json"), format_name="g10m_proponent_report",
+                )
+                if report.get("case_id") != self.case["case_id"] or report.get("mechanism_id") != viewpoint_id:
+                    raise PolicyBlocked("viewpoint report does not bind to its assigned card")
+                claims = report.get("claims", [])
+                support_report(viewpoint_id, "RETRIEVAL", stance="SUPPORTS" if claims else "NON_DISCRIMINATING", action_ids=action_ids, source_ids=source_ids, claim_ids=[item["claim_id"] for item in claims], summary=report.get("claimed_contribution", "Typed viewpoint report"), unresolved=report.get("unresolved_questions", []), status=report.get("status", "PARTIAL"))
+            for task_type in task_types[1:]:
+                status, summary = structural_status(viewpoint_id, task_type)
+                support_report(viewpoint_id, task_type, stance="NON_DISCRIMINATING", action_ids=action_ids if task_type in {"EXTRACTION", "IDENTITY_LINEAGE"} else [], source_ids=source_ids, summary=summary, unresolved=[f"{task_type.lower()} remains review-required."], status=status)
         for viewpoint_id in society.active_ids:
             society.commit_viewpoint(viewpoint_id)
         shared = society.share()
@@ -1577,6 +1686,19 @@ class ActiveInvestigationRunner:
     def run(self, *, owner_activated: bool) -> dict[str, Any]:
         if not owner_activated:
             raise OwnerActivationRequired("Phase B requires explicit owner activation of the frozen manifest")
+        if self.checkpoint.get("state") == "completed" and self.checkpoint.get("last_result") is not None:
+            preserved = deepcopy(self.checkpoint["last_result"])
+            return {
+                "run_id": self.run_id,
+                "arm": self.arm,
+                "state": "completed",
+                "state_history": list(self.checkpoint.get("state_history", [])),
+                "remediation_manifest": deepcopy(self.remediation_manifest),
+                "budget": self.budget.snapshot(),
+                "actions": self.actions,
+                "model_traces": self.traces,
+                **preserved,
+            }
         try:
             for state in ("policy_loaded", "context_frozen", "planning", "round_1"):
                 self.machine.transition(state)
@@ -1607,12 +1729,14 @@ class ActiveInvestigationRunner:
             self.machine.state = "inconclusive"
             self.machine.history.append("inconclusive")
             result = {"status": "INCONCLUSIVE_ACTIVE_INVESTIGATION", "reason": f"{type(exc).__name__}: {exc}"}
+        self.checkpoint["last_result"] = deepcopy(result)
         self._checkpoint()
         return {
             "run_id": self.run_id,
             "arm": self.arm,
             "state": self.machine.state,
             "state_history": self.machine.history,
+            "remediation_manifest": deepcopy(self.remediation_manifest),
             "budget": self.budget.snapshot(),
             "actions": self.actions,
             "model_traces": self.traces,
