@@ -162,7 +162,13 @@ def allocate_viewpoint_focus(
         if not item.get("feasible", True):
             score = -10_000
         scored.append((score, item["task_id"], item))
-    eligible = sorted((score, task_id, item) for score, task_id, item in scored if score >= 0)
+    # Highest-value work must be considered first.  The previous ascending
+    # ordering could spend the bounded follow-up budget on the least useful
+    # eligible task while a higher-information task remained available.
+    eligible = sorted(
+        ((score, task_id, item) for score, task_id, item in scored if score >= 0),
+        key=lambda value: (-value[0], value[1]),
+    )
     by_viewpoint = {item["viewpoint_id"] for _, _, item in eligible}
     null_tasks = [task_id for _, task_id, item in eligible if item["viewpoint_id"] == null_viewpoint_id]
     rival_tasks = [task_id for _, task_id, item in eligible if item["viewpoint_id"] != null_viewpoint_id]

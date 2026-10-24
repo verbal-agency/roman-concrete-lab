@@ -1,0 +1,81 @@
+{
+  "criteria": [
+    {
+      "artifact": "diagnosis.json",
+      "id": 1,
+      "tests": [
+        "test_artifacts_are_machine_readable"
+      ]
+    },
+    {
+      "artifact": "run.json",
+      "id": 2,
+      "tests": [
+        "test_search_selection_fetch_and_page_card_are_separate",
+        "test_prose_fetch_request_is_rejected_before_adapter",
+        "test_metadata_candidate_is_retained_without_evidence_credit"
+      ]
+    },
+    {
+      "artifact": "run.json",
+      "id": 3,
+      "tests": [
+        "test_support_need_requires_observable_work_for_completion"
+      ]
+    },
+    {
+      "artifact": "run.json",
+      "id": 4,
+      "tests": [
+        "test_late_reports_enter_latest_dossier_revision",
+        "test_deliberate_dossier_omission_is_a_failing_diagnostic"
+      ]
+    },
+    {
+      "artifact": "ablation-matrix.json",
+      "id": 5,
+      "tests": [
+        "test_focus_is_highest_first_and_task_specific",
+        "test_semantic_duplicate_does_not_fetch_twice"
+      ]
+    },
+    {
+      "artifact": "ablation-matrix.json",
+      "id": 6,
+      "tests": [
+        "test_open_slot_is_evidence_conditioned"
+      ]
+    },
+    {
+      "artifact": "replay.json",
+      "id": 7,
+      "tests": [
+        "test_resume_is_byte_identical_at_boundary",
+        "test_stale_checkpoint_fails_closed"
+      ]
+    },
+    {
+      "artifact": "ablation-matrix.json",
+      "id": 8,
+      "tests": [
+        "test_four_arms_have_equal_ceilings_and_r3_has_unique_contribution"
+      ]
+    },
+    {
+      "artifact": "run.json",
+      "id": 9,
+      "tests": [
+        "test_typed_score_is_invariant_to_wording"
+      ]
+    },
+    {
+      "artifact": "report.md",
+      "id": 10,
+      "tests": [
+        "test_artifacts_are_machine_readable"
+      ]
+    }
+  ],
+  "goal": "G10R-T",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/research-need.schema.json",
+  "title": "ResearchNeed",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "need_id", "case_id", "problem_id", "problem_version", "viewpoint_id", "claim_ids", "task_type", "question", "expected_decision_change", "required_evidence_kind", "known_candidate_ids", "unresolved_uncertainty", "duplication_key", "budget_request", "status", "provenance"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "need_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "problem_id": {"type": "string", "minLength": 1},
+    "problem_version": {"type": "string", "minLength": 1},
+    "viewpoint_id": {"type": "string", "minLength": 1},
+    "claim_ids": {"type": "array", "items": {"type": "string"}},
+    "task_type": {"enum": ["RETRIEVAL", "EXTRACTION", "IDENTITY_LINEAGE", "CONTRADICTION", "EXPERIMENT_DESIGN"]},
+    "question": {"type": "string", "minLength": 1},
+    "expected_decision_change": {"type": "integer", "minimum": 0},
+    "required_evidence_kind": {"enum": ["METADATA", "PUBLIC_CONTENT", "PAGE_CARD", "CONTRADICTION", "DISCRIMINATOR"]},
+    "known_candidate_ids": {"type": "array", "items": {"type": "string"}},
+    "unresolved_uncertainty": {"type": "integer", "minimum": 0},
+    "duplication_key": {"type": "string", "minLength": 1},
+    "budget_request": {"type": "integer", "minimum": 1},
+    "status": {"enum": ["OPEN", "IN_PROGRESS", "COMPLETE", "PARTIAL", "ABSTAINED", "FAILED"]},
+    "provenance": {"type": "array", "items": {"type": "string"}}
+  }
+}

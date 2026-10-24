@@ -39,3 +39,15 @@ Credit is awarded only for typed support contributions, weakening/disconfirming 
 ## Authority boundary
 
 Phase A is offline-only. No model calls, network retrieval, subscriptions, credentials, subprocesses, arbitrary document instructions, external communication, laboratory work, source-policy changes, evidence promotion, or budget expansion are permitted.
+
+## G10R-T research loop
+
+The society's structural agents are not allowed to request a fetch from prose.
+They create a typed `ResearchNeed`, search, select a discovered candidate by
+stable ID, and only then invoke fetch/map. A page-aware card is joined to the
+need before a report can claim evidence. Private dossiers are revised after
+sharing, critique, and focused follow-up; adjudication reads the latest
+monotonic revision. The open slot is evaluated only after the first shared
+round and can be admitted, rejected as redundant, or abstained when no
+distinct discriminator exists. `tools/evaluation/society_research_loop_ablation.py`
+is the provider-free reference execution.

@@ -1,0 +1,112 @@
+{
+  "causal_defects": [
+    {
+      "defect": "plans request fetch before discovered candidate locators exist",
+      "id": "D1",
+      "repair": "two-stage search, candidate selection, fetch/map",
+      "test": "test_candidate_selection_requires_stable_id"
+    },
+    {
+      "defect": "focus allocator ranks ascending",
+      "id": "D2",
+      "repair": "highest-first observed-yield focus",
+      "test": "test_focus_is_highest_first"
+    },
+    {
+      "defect": "dossiers are not revised after auditor/focus work",
+      "id": "D3",
+      "repair": "monotonic versioned dossier revisions",
+      "test": "test_late_reports_enter_latest_revision"
+    },
+    {
+      "defect": "open slot is a pre-admitted generic placeholder",
+      "id": "D4",
+      "repair": "post-sharing evidence-conditioned admission",
+      "test": "test_open_slot_three_outcomes"
+    },
+    {
+      "defect": "checkpoint retries can append outside committed dossier",
+      "id": "D5",
+      "repair": "exactly-once stateful replay",
+      "test": "test_replay_is_byte_identical"
+    }
+  ],
+  "checkpoint_snapshot_facts": {
+    "A1": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.0027107,
+      "input_tokens": 10887,
+      "model_calls": 4,
+      "output_tokens": 3244,
+      "paper_evidence_cards": 0,
+      "queries": 18
+    },
+    "A2-M": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.012685210000000002,
+      "input_tokens": 77804,
+      "model_calls": 26,
+      "output_tokens": 10078,
+      "paper_evidence_cards": 0,
+      "queries": 19
+    }
+  },
+  "historical_artifacts": {
+    "checkpoints": [
+      "sha256:6007aa12fd7dcca761cfe4d03ad98e74fdad306a4ccef4c86b9b9caa50f59d38",
+      "sha256:d132bf50afe34a2a12cd06dcf8d814ea95de424e5d43d9a6b241dd27b8e2ce1c",
+      "sha256:d2df26305fadbbe84f6e35cc5ce7af56f5a31ac0479625a525f1bfad38d5601d",
+      "sha256:745ac93d4c6be4a097a253ae18f5154cb4cc155092cfcd47cff7d81bf0fc4ef6"
+    ],
+    "report": "sha256:8e4197881bf8297efc80c07573f08326f6f293c839eaa7d5cd67a1198f623248",
+    "run": "sha256:d62cd925671a57a757d027803c2a2807d56c6db858aea600ff9991745eb07861"
+  },
+  "outcome": "DO_NOT_ESCALATE_ACTIVE_SOCIETY",
+  "paper_card_totals": {
+    "A1": 0,
+    "A2-M": 0
+  },
+  "resource_facts": {
+    "A1": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.0052148,
+      "input_tokens": 20533,
+      "model_calls": 8,
+      "output_tokens": 6323,
+      "paper_evidence_cards": 0,
+      "queries": 33
+    },
+    "A2-M": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.02531971,
+      "input_tokens": 152767,
+      "model_calls": 52,
+      "output_tokens": 20637,
+      "paper_evidence_cards": 0,
+      "queries": 35
+    }
+  },
+  "scores": {
+    "S-ACTIVE-ACCESS": {
+      "A1": 0,
+      "A2-M": 0
+    },
+    "S-ACTIVE-LINEAGE": {
+      "A1": 0,
+      "A2-M": 0
+    },
+    "S-ACTIVE-SIM": {
+      "A1": 5,
+      "A2-M": 3
+    },
+    "S-ACTIVE-TRANSFER": {
+      "A1": 0,
+      "A2-M": 0
+    }
+  },
+  "totals": {
+    "A1": 5,
+    "A2-M": 3,
+    "actual_spend_usd": 0.03953781
+  }
+}

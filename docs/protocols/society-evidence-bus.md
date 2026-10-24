@@ -48,3 +48,13 @@ The bus reads and writes repository-local derived records only. It makes no prov
 - Implementation: `src/roman_concrete_lab/agents/evidence_bus.py`.
 - Offline replay: `tools/evaluation/society_plumbing_replay.py`.
 - Tests: `tests/agents/test_evidence_bus.py` and `tests/agents/test_society_plumbing_replay.py`.
+
+## Research-loop bus extensions
+
+`ResearchNeed`, `CandidateSelection`, `ViewpointDossierRevision`, and
+`OpenViewpointAdmission` make the search-to-adjudication joins explicit. A
+metadata candidate is retained as pending, but cannot receive direct-evidence
+credit. Semantic duplicate wording reuses the first action and records
+provenance. Every accepted late report or critique must enter a newer dossier
+revision before scoring; a completed checkpoint replays without a new debit or
+membership mutation.

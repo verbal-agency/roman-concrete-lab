@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/viewpoint-dossier-revision.schema.json",
+  "title": "ViewpointDossierRevision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "dossier_id", "viewpoint_id", "revision", "parent_revision", "report_ids", "action_ids", "source_candidate_ids", "claim_ids", "critique_ids", "unresolved_joins", "revision_reason", "status", "content_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "dossier_id": {"type": "string", "minLength": 1},
+    "viewpoint_id": {"type": "string", "minLength": 1},
+    "revision": {"type": "integer", "minimum": 1},
+    "parent_revision": {"type": ["integer", "null"], "minimum": 1},
+    "report_ids": {"type": "array", "items": {"type": "string"}},
+    "action_ids": {"type": "array", "items": {"type": "string"}},
+    "source_candidate_ids": {"type": "array", "items": {"type": "string"}},
+    "claim_ids": {"type": "array", "items": {"type": "string"}},
+    "critique_ids": {"type": "array", "items": {"type": "string"}},
+    "unresolved_joins": {"type": "array", "items": {"type": "string"}},
+    "revision_reason": {"type": "string", "minLength": 1},
+    "status": {"enum": ["PARTIAL", "COMPLETE", "REVIEW_REQUIRED"]},
+    "content_hash": {"type": "string", "pattern": "^sha256:"}
+  }
+}

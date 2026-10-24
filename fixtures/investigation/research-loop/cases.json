@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "fixtures": [
+    {"fixture_id": "positive_public_content", "condition": "permitted candidate with content locator", "expected": "FETCH_AND_MAP"},
+    {"fixture_id": "metadata_only", "condition": "metadata candidate without content rights", "expected": "CANDIDATE_PENDING"},
+    {"fixture_id": "contradictory_support", "condition": "rival source weakens incumbent", "expected": "WEAKENS"},
+    {"fixture_id": "malformed_fetch", "condition": "prose fetch instruction", "expected": "INVALID_FETCH_REQUEST"},
+    {"fixture_id": "unsupported_content", "condition": "unsupported or absent content", "expected": "ABSTAINED"},
+    {"fixture_id": "rights_blocked", "condition": "restricted locator", "expected": "METADATA_ONLY"},
+    {"fixture_id": "budget_exhausted", "condition": "next action exceeds frozen ceiling", "expected": "BUDGET_EXHAUSTED"},
+    {"fixture_id": "non_ceiling_discovery", "condition": "lateral source admitted after sharing", "expected": "ADMITTED"}
+  ]
+}

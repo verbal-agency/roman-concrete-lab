@@ -39,3 +39,14 @@ The mechanism-proponent schemas, roster policy, admission rule, and offline beha
 Treatment identity is removed before deterministic case-specific scoring. Credit requires a policy-compliant source or eligible model trace, a supported novel hypothesis/contradiction/discriminator, falsifiable prediction, useful uncertainty partition, complete provenance, and appropriate rival or negative-result retention. Source count, answer length, persona variation, and consensus earn no standalone credit.
 
 The legal outcomes are `ESCALATE_ACTIVE_SOCIETY_EVALUATION`, `DO_NOT_ESCALATE_ACTIVE_SOCIETY`, and `INCONCLUSIVE_ACTIVE_INVESTIGATION`. Escalation requires at least one case-level A2 gain of one point, noninferior total score, one unique valid source-backed contribution absent from A1, equal-budget compliance, and zero critical failures. It creates only a proposed G10S adoption-grade evaluation.
+
+### Offline research-loop gate
+
+Before another paid comparison, G10R-T runs a deterministic four-arm ablation
+with equal actual ceilings. It verifies the complete search → candidate
+selection → fetch/map → revision → focus → open-slot loop and reports shared
+support, fixed viewpoint, and adaptive viewpoint marginal effects separately.
+The gate emits `SOCIETY_RESEARCH_LOOP_READY`,
+`SOCIETY_RESEARCH_LOOP_NO_GO`, or `INCONCLUSIVE_SOCIETY_RESEARCH_LOOP`; a ready
+fixture result is an engineering signal only and never activates model or
+network execution by itself.

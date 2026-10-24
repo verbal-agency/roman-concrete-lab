@@ -1,6 +1,6 @@
 # G10R-T — Repair and ablate the society research loop offline
 
-**Status:** proposed
+**Status:** complete — `SOCIETY_RESEARCH_LOOP_READY`
 **Dependencies:** G10R-S complete with `RUNTIME_REMEDIATION_READY`; completed
 post-G10R-S paid comparison at
 `artifacts/goals/G10R-S-paid-20261024-final/` with

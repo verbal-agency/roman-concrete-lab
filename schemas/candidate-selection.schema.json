@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/candidate-selection.schema.json",
+  "title": "CandidateSelection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "selection_id", "need_id", "action_ids", "source_candidate_id", "selection_reason", "candidate_status", "content_locator", "requested_operation", "policy_status", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "selection_id": {"type": "string", "minLength": 1},
+    "need_id": {"type": "string", "minLength": 1},
+    "action_ids": {"type": "array", "items": {"type": "string"}},
+    "source_candidate_id": {"type": "string", "minLength": 1},
+    "selection_reason": {"type": "string", "minLength": 1},
+    "candidate_status": {"type": "string", "minLength": 1},
+    "content_locator": {"type": ["string", "null"]},
+    "requested_operation": {"enum": ["FETCH_AND_MAP", "RETAIN_METADATA", "SEEK_LOCATOR", "ABSTAIN"]},
+    "policy_status": {"enum": ["ALLOWED", "METADATA_ONLY", "RIGHTS_BLOCKED", "INVALID_FETCH_REQUEST", "NO_USABLE_RESULT"]},
+    "status": {"enum": ["SELECTED", "FETCHABLE", "PENDING", "ABSTAINED", "REJECTED"]}
+  }
+}
