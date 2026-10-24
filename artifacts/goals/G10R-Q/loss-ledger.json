@@ -1,0 +1,45 @@
+{
+  "findings": [
+    {
+      "confidence": "HIGH",
+      "evidence_locator": "artifacts/goals/G10R-B2-retry-20261023/checkpoints/*.json",
+      "finding_id": "ACQ-001",
+      "layer": "acquisition",
+      "observed_behavior": "Eight runs produced zero document fetches and zero evidence cards.",
+      "remediation": "Experiment with acquisition-first scheduling and locator bridging.",
+      "severity": "HIGH",
+      "verification_test": "fetch-positive fixture"
+    },
+    {
+      "confidence": "HIGH",
+      "evidence_locator": "artifacts/goals/G10R-B2-retry-20261023/checkpoints/*-A2-M.json",
+      "finding_id": "DESIGN-001",
+      "layer": "architecture",
+      "observed_behavior": "A2-M used 52 model traces versus A1's 8 while producing no unique attributable contribution.",
+      "remediation": "Experiment with executable support tasks and coordination-cost accounting.",
+      "severity": "HIGH",
+      "verification_test": "support-task execution arm"
+    },
+    {
+      "confidence": "HIGH",
+      "evidence_locator": "artifacts/goals/G10R-B2-retry-20261023/replay.json",
+      "finding_id": "TASK-001",
+      "layer": "task_fixture",
+      "observed_behavior": "All candidates remained metadata-only, so content-level acquisition was untested.",
+      "remediation": "Use paired fetch-positive and metadata-only fixtures.",
+      "severity": "MEDIUM",
+      "verification_test": "locator and metadata fixtures"
+    },
+    {
+      "confidence": "HIGH",
+      "evidence_locator": "artifacts/goals/G10R-B2-retry-20261023/replay.json",
+      "finding_id": "PLUMB-001",
+      "layer": "plumbing",
+      "observed_behavior": "The replay preserved candidate, report, and authority joins without critical failures.",
+      "remediation": "Preserve evidence-bus invariants while changing acquisition behavior.",
+      "severity": "INFO",
+      "verification_test": "byte-stable replay"
+    }
+  ],
+  "schema_version": "1.0"
+}

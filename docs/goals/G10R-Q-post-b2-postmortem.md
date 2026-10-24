@@ -1,6 +1,6 @@
 # G10R-Q — Post-B2 society failure-experiment loop
 
-**Status:** proposed
+**Status:** complete — `SOCIETY_REMEDIATION_READY`
 **Dependencies:** G10R-B2 complete with
 `DO_NOT_ESCALATE_ACTIVE_SOCIETY`; `artifacts/goals/G10R-B2-retry-20261023/`;
 no model, network, subscription, or laboratory execution
@@ -168,3 +168,22 @@ cannot identify which repair failed. Do not use this goal to stop the society
 architecture. A passing offline remediation may authorize only a later Phase-A
 freeze and separately activated paid test; it never authorizes a paid run by
 itself.
+
+## Completed experiment
+
+- Runner: `tools/evaluation/society_failure_experiments.py`
+- Fixture: `fixtures/investigation/failure-experiment.json`
+- Results: `artifacts/goals/G10R-Q/experiment-results.json`
+- Matrix: `artifacts/goals/G10R-Q/experiment-matrix.json`
+- Loss ledger: `artifacts/goals/G10R-Q/loss-ledger.json`
+- Report: `artifacts/goals/G10R-Q/report.md`
+- Outcome: `SOCIETY_REMEDIATION_READY`; external calls were `false`.
+- Arms: baseline, acquisition-first, executable-support, locator-bridge,
+  deduplication/open-slot, and a justified combined treatment.
+- The combined treatment produced fetches, a page-aware evidence card, full
+  support-task execution, contradiction coverage, open-slot work, and duplicate
+  suppression under the same declared offline limits. Deduplication/open-slot
+  is retained as an enabler, not as a standalone treatment.
+- Verification: `python3 -m pytest -q` — `134 passed`; focused failure
+  experiment tests passed; byte-stability and malformed, partial, budget,
+  contradiction, metadata-only, and open-slot fixtures passed.

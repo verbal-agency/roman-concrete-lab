@@ -1,0 +1,59 @@
+{
+  "schema_version": "g10r-q.1-failure-experiment-fixture",
+  "case_id": "VS-FAILURE-EXPERIMENT",
+  "problem_id": "roman-hot-mix",
+  "problem_version": "1.0",
+  "context_hash": "sha256:g10rq-fixture",
+  "source_candidates": [
+    {
+      "source_candidate_id": "SRC-FETCH-POSITIVE",
+      "title": "Process-matched public fixture paper",
+      "locator": "https://fixture.invalid/metadata/fetch-positive",
+      "content_locator": "https://fixture.invalid/content/fetch-positive.pdf",
+      "access_class": "PUBLIC",
+      "rights_state": "PERMITTED",
+      "deduplication_key": "fixture:fetch-positive",
+      "support_region": "process-matched fixture",
+      "status": "CANDIDATE"
+    },
+    {
+      "source_candidate_id": "SRC-METADATA-ONLY",
+      "title": "Metadata-only fixture record",
+      "locator": "https://fixture.invalid/metadata/metadata-only",
+      "content_locator": null,
+      "access_class": "METADATA_ONLY",
+      "rights_state": "METADATA_ONLY",
+      "deduplication_key": "fixture:metadata-only",
+      "support_region": "metadata-only fixture",
+      "status": "METADATA_SCREENED"
+    },
+    {
+      "source_candidate_id": "SRC-OPEN-SLOT",
+      "title": "Open-slot lateral fixture record",
+      "locator": "https://fixture.invalid/metadata/open-slot",
+      "content_locator": null,
+      "access_class": "METADATA_ONLY",
+      "rights_state": "METADATA_ONLY",
+      "deduplication_key": "fixture:open-slot",
+      "support_region": "bounded lateral fixture",
+      "status": "METADATA_SCREENED"
+    }
+  ],
+  "duplicate_queries": [
+    "hot lime process matched healing",
+    "hot lime process matched healing"
+  ],
+  "documents": {
+    "SRC-FETCH-POSITIVE": {
+      "parser": "fixture-pdf-parser",
+      "extraction_status": "EXTRACTED",
+      "pages": [
+        {
+          "locator": "#page=1",
+          "text": "A process-matched fixture comparison reports a bounded recovery endpoint.",
+          "facts": ["intervention", "comparator", "endpoint"]
+        }
+      ]
+    }
+  }
+}
