@@ -1,0 +1,521 @@
+{
+  "action_records": [],
+  "actions": {},
+  "budget": {
+    "limits": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 12000,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "remaining": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 12000,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "usage": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "payload_bytes": 0,
+      "queries": 0,
+      "retained_sources": 0,
+      "simulation_calls": 0
+    }
+  },
+  "manifest_sha256": "sha256:ef1b8f68c7c1303a84ecf8f93d4570427e4bfaeaeaec4ec14fedc2d8c6d0e4ca",
+  "model_traces": [],
+  "paper_evidence_cards": {},
+  "simulation_traces": [],
+  "source_candidates": {},
+  "state": "inconclusive",
+  "state_history": [
+    "created",
+    "policy_loaded",
+    "context_frozen",
+    "planning",
+    "round_1",
+    "inconclusive"
+  ],
+  "tool_request_events": [],
+  "viewpoint_society": {
+    "action_budget": 12,
+    "active_ids": [
+      "S-ACTIVE-LINEAGE-M1",
+      "S-ACTIVE-LINEAGE-M2",
+      "S-ACTIVE-LINEAGE-NULL",
+      "S-ACTIVE-LINEAGE-OPEN-ADMITTED"
+    ],
+    "cards": {
+      "S-ACTIVE-LINEAGE-M1": {
+        "case_id": "S-ACTIVE-LINEAGE",
+        "falsifiers": [
+          "Matched specimens without reactive lime-rich regions recover identically under the same exposure."
+        ],
+        "kind": "CANDIDATE",
+        "known_alternatives": [
+          "S-ACTIVE-LINEAGE-M2",
+          "S-ACTIVE-LINEAGE-NULL"
+        ],
+        "predictions": [
+          "Recovery should track the presence and exposure of reactive lime-rich regions."
+        ],
+        "prior_basis": "Offline mechanism fixture derived from the problem context; not established evidence.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "A localized reactive lime reservoir drives functional recovery after damage.",
+        "support_region": "Modern lime-pozzolan mortar with identified lime-rich inclusions; transfer is unresolved.",
+        "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+      },
+      "S-ACTIVE-LINEAGE-M2": {
+        "case_id": "S-ACTIVE-LINEAGE",
+        "falsifiers": [
+          "Functional recovery consistently exceeds closure-only controls under matched conditions."
+        ],
+        "kind": "CANDIDATE",
+        "known_alternatives": [
+          "S-ACTIVE-LINEAGE-M1",
+          "S-ACTIVE-LINEAGE-NULL"
+        ],
+        "predictions": [
+          "Closure can occur without a matching improvement in functional water transport."
+        ],
+        "prior_basis": "Offline mechanism fixture derived from the problem context; not established evidence.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "Observed recovery is dominated by non-chemical physical crack closure.",
+        "support_region": "Crack-width and exposure conditions where closure can be separated from water-transport recovery.",
+        "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+      },
+      "S-ACTIVE-LINEAGE-NULL": {
+        "case_id": "S-ACTIVE-LINEAGE",
+        "falsifiers": [
+          "A preregistered mechanism-specific discriminator separates a candidate from the control."
+        ],
+        "kind": "NULL",
+        "known_alternatives": [
+          "S-ACTIVE-LINEAGE-M1",
+          "S-ACTIVE-LINEAGE-M2"
+        ],
+        "predictions": [
+          "A process-matched control is indistinguishable from each proposed mechanism."
+        ],
+        "prior_basis": "Required null comparator for anti-anchoring; not a claim about the material.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "No reproducible mechanism-specific recovery is present under the declared conditions.",
+        "support_region": "The declared case domain and measurement endpoint only.",
+        "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+      },
+      "S-ACTIVE-LINEAGE-OPEN": {
+        "case_id": "S-ACTIVE-LINEAGE",
+        "falsifiers": [
+          "No distinct prediction or provenance can be supplied."
+        ],
+        "kind": "OPEN_SLOT",
+        "known_alternatives": [
+          "S-ACTIVE-LINEAGE-M1",
+          "S-ACTIVE-LINEAGE-M2",
+          "S-ACTIVE-LINEAGE-NULL"
+        ],
+        "predictions": [
+          "A newly admitted mechanism must state a distinct discriminator."
+        ],
+        "prior_basis": "Required discovery slot; empty until an admission record is accepted.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "Open slot for a mechanism introduced by bounded evidence or explicit uncertainty.",
+        "support_region": "Must be declared before any new mechanism is scored.",
+        "viewpoint_id": "S-ACTIVE-LINEAGE-OPEN"
+      },
+      "S-ACTIVE-LINEAGE-OPEN-ADMITTED": {
+        "case_id": "S-ACTIVE-LINEAGE",
+        "falsifiers": [
+          "No distinct prediction or provenance can be supplied."
+        ],
+        "kind": "CANDIDATE",
+        "known_alternatives": [
+          "S-ACTIVE-LINEAGE-M1",
+          "S-ACTIVE-LINEAGE-M2",
+          "S-ACTIVE-LINEAGE-NULL"
+        ],
+        "predictions": [
+          "A newly admitted mechanism must state a distinct discriminator."
+        ],
+        "prior_basis": "Admitted only to test whether the open slot can contribute a distinct discriminator.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "A bounded newly admitted mechanism proposed by the open discovery slot.",
+        "support_region": "Must be declared before any new mechanism is scored.",
+        "viewpoint_id": "S-ACTIVE-LINEAGE-OPEN-ADMITTED"
+      }
+    },
+    "case_id": "S-ACTIVE-LINEAGE",
+    "context_hash": "sha256:ef1b8f68c7c1303a84ecf8f93d4570427e4bfaeaeaec4ec14fedc2d8c6d0e4ca",
+    "critiques": {},
+    "dossiers": {},
+    "evidence_bus": {
+      "actions": {},
+      "append_order": [
+        [
+          "SUPPORT_TASK",
+          "c2514771813c099d"
+        ],
+        [
+          "SUPPORT_TASK",
+          "7b6b811b84e5730d"
+        ],
+        [
+          "SUPPORT_TASK",
+          "bd039d900e265b74"
+        ],
+        [
+          "SUPPORT_TASK",
+          "c8860e9c84fe7249"
+        ],
+        [
+          "SUPPORT_TASK",
+          "73ed88ec857ad72f"
+        ],
+        [
+          "SUPPORT_TASK",
+          "2169390112fa905b"
+        ],
+        [
+          "SUPPORT_TASK",
+          "e7bce5f618ba6620"
+        ],
+        [
+          "SUPPORT_TASK",
+          "817748e89b3ee062"
+        ],
+        [
+          "SUPPORT_TASK",
+          "aaf2b518586f5991"
+        ],
+        [
+          "SUPPORT_TASK",
+          "7c93fffc90dea5ab"
+        ],
+        [
+          "SUPPORT_TASK",
+          "d1f1c713d117d165"
+        ],
+        [
+          "SUPPORT_TASK",
+          "7bc65a8cd71bd3c5"
+        ],
+        [
+          "SUPPORT_TASK",
+          "8ee5d37058262a33"
+        ],
+        [
+          "SUPPORT_TASK",
+          "f299104a5284feae"
+        ],
+        [
+          "SUPPORT_TASK",
+          "495fb7090cdb1765"
+        ],
+        [
+          "SUPPORT_TASK",
+          "4590fed27fba3760"
+        ],
+        [
+          "SUPPORT_TASK",
+          "2dde26ba59c466ed"
+        ],
+        [
+          "SUPPORT_TASK",
+          "d1eaf023cb204e83"
+        ],
+        [
+          "SUPPORT_TASK",
+          "481268a13b4c5b35"
+        ],
+        [
+          "SUPPORT_TASK",
+          "7e22ba9fa6159e38"
+        ]
+      ],
+      "candidate_conflicts": {},
+      "candidate_observations": {},
+      "candidates": {},
+      "case_id": "S-ACTIVE-LINEAGE",
+      "context_hash": "sha256:ef1b8f68c7c1303a84ecf8f93d4570427e4bfaeaeaec4ec14fedc2d8c6d0e4ca",
+      "critiques": {},
+      "dossiers": {},
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "reports": {},
+      "schema_version": "1.0",
+      "tasks": {
+        "2169390112fa905b": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "retrieval support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "2169390112fa905b",
+          "task_type": "RETRIEVAL",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "2dde26ba59c466ed": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "extraction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "2dde26ba59c466ed",
+          "task_type": "EXTRACTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-OPEN-ADMITTED"
+        },
+        "4590fed27fba3760": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "retrieval support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "4590fed27fba3760",
+          "task_type": "RETRIEVAL",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-OPEN-ADMITTED"
+        },
+        "481268a13b4c5b35": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "contradiction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "481268a13b4c5b35",
+          "task_type": "CONTRADICTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-OPEN-ADMITTED"
+        },
+        "495fb7090cdb1765": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "experiment_design support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "495fb7090cdb1765",
+          "task_type": "EXPERIMENT_DESIGN",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "73ed88ec857ad72f": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "experiment_design support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "73ed88ec857ad72f",
+          "task_type": "EXPERIMENT_DESIGN",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "7b6b811b84e5730d": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "extraction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "7b6b811b84e5730d",
+          "task_type": "EXTRACTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "7bc65a8cd71bd3c5": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "extraction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "7bc65a8cd71bd3c5",
+          "task_type": "EXTRACTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "7c93fffc90dea5ab": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "experiment_design support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "7c93fffc90dea5ab",
+          "task_type": "EXPERIMENT_DESIGN",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "7e22ba9fa6159e38": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "experiment_design support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "7e22ba9fa6159e38",
+          "task_type": "EXPERIMENT_DESIGN",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-OPEN-ADMITTED"
+        },
+        "817748e89b3ee062": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "identity_lineage support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "817748e89b3ee062",
+          "task_type": "IDENTITY_LINEAGE",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "8ee5d37058262a33": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "identity_lineage support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "8ee5d37058262a33",
+          "task_type": "IDENTITY_LINEAGE",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "aaf2b518586f5991": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "contradiction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "aaf2b518586f5991",
+          "task_type": "CONTRADICTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "bd039d900e265b74": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "identity_lineage support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "bd039d900e265b74",
+          "task_type": "IDENTITY_LINEAGE",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "c2514771813c099d": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "retrieval support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "c2514771813c099d",
+          "task_type": "RETRIEVAL",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "c8860e9c84fe7249": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "contradiction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "c8860e9c84fe7249",
+          "task_type": "CONTRADICTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "d1eaf023cb204e83": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "identity_lineage support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "d1eaf023cb204e83",
+          "task_type": "IDENTITY_LINEAGE",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-OPEN-ADMITTED"
+        },
+        "d1f1c713d117d165": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "retrieval support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "d1f1c713d117d165",
+          "task_type": "RETRIEVAL",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "e7bce5f618ba6620": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "extraction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "e7bce5f618ba6620",
+          "task_type": "EXTRACTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "f299104a5284feae": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "contradiction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "f299104a5284feae",
+          "task_type": "CONTRADICTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        }
+      },
+      "treatment_id": "A2-M"
+    },
+    "focus": null,
+    "null_id": "S-ACTIVE-LINEAGE-NULL",
+    "portfolio": null,
+    "private_reports": {
+      "S-ACTIVE-LINEAGE-M1": [],
+      "S-ACTIVE-LINEAGE-M2": [],
+      "S-ACTIVE-LINEAGE-NULL": [],
+      "S-ACTIVE-LINEAGE-OPEN-ADMITTED": []
+    },
+    "problem_id": "roman-hot-mix",
+    "problem_version": "1.0",
+    "protocol": "g10d.1-viewpoint-centered-society",
+    "shared": false,
+    "treatment_id": "A2-M"
+  }
+}

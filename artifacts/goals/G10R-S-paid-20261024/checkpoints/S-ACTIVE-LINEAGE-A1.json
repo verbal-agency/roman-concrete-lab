@@ -1,0 +1,1492 @@
+{
+  "action_records": [
+    {
+      "action_id": "e935ffaa0d2624f8",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime hot mix asphalt thesis transportation report",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W1956400912",
+        "OA-W2920973764",
+        "OA-W2765648563",
+        "OA-W3115107353",
+        "OA-W4386202536"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate the named thesis and transportation report and determine whether catalog records connect them.",
+      "replay_key": "sha256:796729c042cd22f29169ca056cb0f44ea2ddf4564044b4d1512b7b0de6d15182",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "e16c8e2d84dd9268",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 1,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "quicklime hot-mix asphalt utah thesis",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W1956400912",
+        "OA-W2765648563",
+        "OA-W2920973764",
+        "OA-W3115107353",
+        "OA-W2951241171"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Search scholarly metadata for a Utah thesis or related work and its cited lineage.",
+      "replay_key": "sha256:b88f946f9578bf8708692c6f7b08e288d73d1ec240d5dae9e8d56fff3a484768",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "0bb91b5c2cae05d6",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "crossref",
+        "query": "quicklime hot mix asphalt utah transportation report",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-ffce69e3ebd4",
+        "CR-2c91541cc411",
+        "CR-8890c34f652d",
+        "CR-636b554c53b3",
+        "CR-e658ea334ade"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Search publication metadata for a matching report or related article.",
+      "replay_key": "sha256:d0cc97c078a13d5c9cd4b4bfabde53c4fa002af05a335375939081e3012003db",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "c242c0813fb245f9",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "site:utah.edu quicklime asphalt thesis",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Seek institutional repository records, authorship, and accessible thesis locators.",
+      "replay_key": "sha256:288d02ca1e268dd2608a8d83c85aa238c03b85ad9efe767978d170f5e75026c2",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "b0a10616a8bf927d",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime asphalt moisture susceptibility performance endpoint",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Check whether indexed scholarly records disclose a relevant functional endpoint.",
+      "replay_key": "sha256:a43033f2fa71280183d9fc84cfca4c5729abd09a06110fd53e3c1f14111a1c37",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "6b93ed1bfea3fabf",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "crossref",
+        "query": "utah quicklime asphalt report thesis author title",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-54e4834c7c34",
+        "CR-77150ac5a96a",
+        "CR-7447ef119a7d",
+        "CR-b27519feeb64",
+        "CR-5cc6b29958fa"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Cross-check title, author, and publication relationships to assess possible shared lineage.",
+      "replay_key": "sha256:50006436a68b9eea2b9081e409b9dc0e74cb8f851f11f267c0a6d44f8ec92b4c",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "0064c48dedbf8cb0",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 3,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "quicklime asphalt independent replication utah",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W3123400244",
+        "OA-W4245760254",
+        "OA-W182432829"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Search for distinct studies that could constitute independent replication.",
+      "replay_key": "sha256:36e2fbfd1c8cabbf339ba243325e4455e9702b14e43d13740378d5ab6d7961fa",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "e8ab3e88bf28f5ac",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 2,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime hot mix asphalt transportation report",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W2017822498",
+        "OA-W1956400912",
+        "OA-W3123400244",
+        "OA-W2811214086",
+        "OA-W4245760254"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Search transport-agency and library catalogs for the report and its provenance.",
+      "replay_key": "sha256:7fde355361571b1454bd1beb252c240bedcda64c8cf886ad97f4c3918b25fde3",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "0630dd52f21d5216",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 2,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "crossref",
+        "query": "quicklime asphalt utah thesis report citations",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-54e4834c7c34",
+        "CR-05f2603dc905",
+        "CR-7447ef119a7d",
+        "CR-b27519feeb64",
+        "CR-fe4f9a189356"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Look for citation or bibliographic links between candidate records.",
+      "replay_key": "sha256:6f1645bba650950749906b818ab3fbb0d36f98d126e096a2eed877d11249d9b2",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  ],
+  "actions": {
+    "0064c48dedbf8cb0": {
+      "action_id": "0064c48dedbf8cb0",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 3,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "quicklime asphalt independent replication utah",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W3123400244",
+        "OA-W4245760254",
+        "OA-W182432829"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Search for distinct studies that could constitute independent replication.",
+      "replay_key": "sha256:36e2fbfd1c8cabbf339ba243325e4455e9702b14e43d13740378d5ab6d7961fa",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "0630dd52f21d5216": {
+      "action_id": "0630dd52f21d5216",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 2,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "crossref",
+        "query": "quicklime asphalt utah thesis report citations",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-54e4834c7c34",
+        "CR-05f2603dc905",
+        "CR-7447ef119a7d",
+        "CR-b27519feeb64",
+        "CR-fe4f9a189356"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Look for citation or bibliographic links between candidate records.",
+      "replay_key": "sha256:6f1645bba650950749906b818ab3fbb0d36f98d126e096a2eed877d11249d9b2",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "0bb91b5c2cae05d6": {
+      "action_id": "0bb91b5c2cae05d6",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "crossref",
+        "query": "quicklime hot mix asphalt utah transportation report",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-ffce69e3ebd4",
+        "CR-2c91541cc411",
+        "CR-8890c34f652d",
+        "CR-636b554c53b3",
+        "CR-e658ea334ade"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Search publication metadata for a matching report or related article.",
+      "replay_key": "sha256:d0cc97c078a13d5c9cd4b4bfabde53c4fa002af05a335375939081e3012003db",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "6b93ed1bfea3fabf": {
+      "action_id": "6b93ed1bfea3fabf",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "crossref",
+        "query": "utah quicklime asphalt report thesis author title",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-54e4834c7c34",
+        "CR-77150ac5a96a",
+        "CR-7447ef119a7d",
+        "CR-b27519feeb64",
+        "CR-5cc6b29958fa"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Cross-check title, author, and publication relationships to assess possible shared lineage.",
+      "replay_key": "sha256:50006436a68b9eea2b9081e409b9dc0e74cb8f851f11f267c0a6d44f8ec92b4c",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "b0a10616a8bf927d": {
+      "action_id": "b0a10616a8bf927d",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime asphalt moisture susceptibility performance endpoint",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Check whether indexed scholarly records disclose a relevant functional endpoint.",
+      "replay_key": "sha256:a43033f2fa71280183d9fc84cfca4c5729abd09a06110fd53e3c1f14111a1c37",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "c242c0813fb245f9": {
+      "action_id": "c242c0813fb245f9",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "site:utah.edu quicklime asphalt thesis",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Seek institutional repository records, authorship, and accessible thesis locators.",
+      "replay_key": "sha256:288d02ca1e268dd2608a8d83c85aa238c03b85ad9efe767978d170f5e75026c2",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "e16c8e2d84dd9268": {
+      "action_id": "e16c8e2d84dd9268",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 1,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "quicklime hot-mix asphalt utah thesis",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W1956400912",
+        "OA-W2765648563",
+        "OA-W2920973764",
+        "OA-W3115107353",
+        "OA-W2951241171"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Search scholarly metadata for a Utah thesis or related work and its cited lineage.",
+      "replay_key": "sha256:b88f946f9578bf8708692c6f7b08e288d73d1ec240d5dae9e8d56fff3a484768",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "e8ab3e88bf28f5ac": {
+      "action_id": "e8ab3e88bf28f5ac",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 2,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime hot mix asphalt transportation report",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W2017822498",
+        "OA-W1956400912",
+        "OA-W3123400244",
+        "OA-W2811214086",
+        "OA-W4245760254"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Search transport-agency and library catalogs for the report and its provenance.",
+      "replay_key": "sha256:7fde355361571b1454bd1beb252c240bedcda64c8cf886ad97f4c3918b25fde3",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "e935ffaa0d2624f8": {
+      "action_id": "e935ffaa0d2624f8",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime hot mix asphalt thesis transportation report",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W1956400912",
+        "OA-W2920973764",
+        "OA-W2765648563",
+        "OA-W3115107353",
+        "OA-W4386202536"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate the named thesis and transportation report and determine whether catalog records connect them.",
+      "replay_key": "sha256:796729c042cd22f29169ca056cb0f44ea2ddf4564044b4d1512b7b0de6d15182",
+      "run_id": "G10R-S-ACTIVE-LINEAGE-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  },
+  "budget": {
+    "limits": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 12000,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "remaining": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 24.9988662,
+      "input_tokens": 74852,
+      "output_tokens": 10762,
+      "payload_bytes": 5000000,
+      "queries": 3,
+      "retained_sources": 1,
+      "simulation_calls": 4
+    },
+    "usage": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.0011338,
+      "input_tokens": 5148,
+      "output_tokens": 1238,
+      "payload_bytes": 0,
+      "queries": 9,
+      "retained_sources": 23,
+      "simulation_calls": 0
+    }
+  },
+  "last_result": {
+    "portfolio": {
+      "authority_note": "All candidates remain EVIDENCE_PENDING. This portfolio grants no scientific, laboratory, or promotion authority and does not claim validated performance.",
+      "case_id": "S-ACTIVE-LINEAGE",
+      "credible_rival_ids": [],
+      "hypotheses": [
+        {
+          "comparator": "The supplied metadata-only candidate set, which contains no identified Utah quicklime thesis or report.",
+          "falsifier": "Accessible source records establish two distinct, independently conducted Utah quicklime studies and document a relevant functional endpoint for each.",
+          "hypothesis_id": "H-null-lineage",
+          "intervention": "Verify the bibliographic identity, authorship, institutional or agency provenance, cited relationships, and reported outcomes of the named Utah thesis and transportation report using accessible records or documents.",
+          "novelty_basis": "The case asks whether this record set establishes lineage and endpoint; the available candidates are adjacent asphalt-moisture metadata, not identified Utah quicklime records.",
+          "predicted_observation": "The supplied record set alone will not establish independent replication or a relevant functional endpoint.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": [
+            "E-L1",
+            "OA-W1956400912",
+            "OA-W3123400244"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W1956400912",
+            "OA-W3123400244"
+          ],
+          "support_region": "Supplied metadata-only candidates and base evidence; no claims about unexamined source contents.",
+          "transfer_type": "NULL_HYPOTHESIS",
+          "uncertainty": "High: the named records are not identified among the candidates, and no document text or lineage evidence is supplied."
+        }
+      ],
+      "leading_hypothesis_id": "H-null-lineage",
+      "negative_searches": [
+        "The supplied OpenAlex and Crossref candidates do not identify a Utah quicklime thesis or transportation report; metadata screening is not a comprehensive search or evidence of absence."
+      ],
+      "next_discriminating_action": "Use the remaining search capacity to identify the Utah thesis and transportation report in catalogs, then compare their bibliographic provenance and inspect accessible source text for study independence and endpoint reporting. Do not infer results from titles alone.",
+      "schema_version": "1.0",
+      "source_candidate_ids": [
+        "OA-W1956400912",
+        "OA-W3123400244"
+      ],
+      "status": "REVIEW_REQUIRED",
+      "summary": "The supplied search results are metadata-only and do not identify the Utah quicklime thesis or transportation report. They do not establish a relationship between those records, independent replication, or a relevant functional endpoint.",
+      "unresolved_disputes": [
+        "Whether either named Utah record is among the screened candidates or discoverable through the proposed catalog searches.",
+        "Whether the report and thesis are separate investigations, share authorship/data, or are different outputs of one study.",
+        "Whether either record reports a relevant functional endpoint."
+      ]
+    },
+    "score": {
+      "attribution_adjudications": {},
+      "authority_flags": [
+        {
+          "contextual_reference": false,
+          "negated": true,
+          "offset": 131,
+          "phrase": "validated performance",
+          "segment": 2
+        }
+      ],
+      "cited_source_candidate_ids": [],
+      "contradiction_source_candidate_ids": [],
+      "critical_failures": [],
+      "discovery_contribution_digests": [
+        "sha256:3336bc4d97ddce45e8a9d8cab41a57deee597a60a995338e76dc18b2c7c6e8d4",
+        "sha256:95a41729cc8d56c54c291601df3ca9c768fe6c5e70319b23c29b738680a18729"
+      ],
+      "discovery_score": 2,
+      "dissent_retained": true,
+      "evidence_score": 0,
+      "fabrication_proof_source_candidate_ids": [],
+      "hypothesis_contribution_digests": [
+        "sha256:e70e0901dced5651f909e425049c5150440d345d7af074aac8da5fc0ae823da7"
+      ],
+      "hypothesis_score": 1,
+      "identity_statuses": {
+        "OA-W1956400912": "IDENTITY_UNRESOLVED",
+        "OA-W3123400244": "IDENTITY_UNRESOLVED"
+      },
+      "invalid_source_candidate_ids": [],
+      "max_score": 6,
+      "negative_search_count": 1,
+      "out_of_rubric_source_candidate_ids": [],
+      "provenance_completeness": 1.0,
+      "provenance_review_source_candidate_ids": [],
+      "raw_cited_source_candidate_ids": [
+        "OA-W1956400912",
+        "OA-W3123400244"
+      ],
+      "rubric_hits": [
+        {
+          "criterion_id": "find_lineage_sources",
+          "keyword_hit": true,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "identify_derivative_lineage",
+          "keyword_hit": false,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "identify_functional_endpoint",
+          "keyword_hit": false,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "separate_endpoint_from_replication",
+          "keyword_hit": true,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "falsifiable_lineage_check",
+          "keyword_hit": false,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "review_disposition",
+          "keyword_hit": true,
+          "points": 0,
+          "source_hit": false
+        }
+      ],
+      "score": 0,
+      "source_identity_aliases": {
+        "OA-W1956400912": null,
+        "OA-W3123400244": null
+      },
+      "supported_contribution_digests": [],
+      "unattributed_source_candidate_ids": [],
+      "unresolved_source_candidate_ids": [
+        "OA-W1956400912",
+        "OA-W3123400244"
+      ]
+    },
+    "status": "COMPLETED"
+  },
+  "manifest_sha256": "sha256:d77f0786616681c298ae5a612fa94604dd2ad44f5c45006414d8505196a9f10e",
+  "model_traces": [
+    {
+      "call_id": "1a5b9d3fab60bccd",
+      "estimated_actual_cost_usd": 0.0002988,
+      "estimated_maximum_cost_usd": 0.0005033,
+      "latency_seconds": 5.0677,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "No source candidates, identifiers, or retrieval locators were supplied. Search records are needed before requesting document fetches; no conclusion about independent replication or endpoint is warranted.",
+        "branch_id": "single_investigator",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "follow_up_queries": [
+          {
+            "index": "catalog",
+            "query": "site:utah.edu quicklime asphalt thesis",
+            "rationale": "Seek institutional repository records, authorship, and accessible thesis locators."
+          },
+          {
+            "index": "openalex",
+            "query": "Utah quicklime asphalt moisture susceptibility performance endpoint",
+            "rationale": "Check whether indexed scholarly records disclose a relevant functional endpoint."
+          },
+          {
+            "index": "crossref",
+            "query": "Utah quicklime asphalt report thesis author title",
+            "rationale": "Cross-check title, author, and publication relationships to assess possible shared lineage."
+          },
+          {
+            "index": "openalex",
+            "query": "quicklime asphalt independent replication Utah",
+            "rationale": "Search for distinct studies that could constitute independent replication."
+          },
+          {
+            "index": "catalog",
+            "query": "Utah quicklime hot mix asphalt transportation report",
+            "rationale": "Search transport-agency and library catalogs for the report and its provenance."
+          },
+          {
+            "index": "crossref",
+            "query": "quicklime asphalt Utah thesis report citations",
+            "rationale": "Look for citation or bibliographic links between candidate records."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "Utah quicklime hot mix asphalt thesis transportation report",
+            "rationale": "Locate the named thesis and transportation report and determine whether catalog records connect them."
+          },
+          {
+            "index": "openalex",
+            "query": "quicklime hot-mix asphalt Utah thesis",
+            "rationale": "Search scholarly metadata for a Utah thesis or related work and its cited lineage."
+          },
+          {
+            "index": "crossref",
+            "query": "quicklime hot mix asphalt Utah transportation report",
+            "rationale": "Search publication metadata for a matching report or related article."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:b454447e050f7de28a0f0232afa3272c2c2ceb4f58f47f1d564ef3e56519c64c",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 563,
+        "output_tokens": 485
+      }
+    },
+    {
+      "call_id": "5a066054d619c767",
+      "estimated_actual_cost_usd": 0.000835,
+      "estimated_maximum_cost_usd": 0.0025294,
+      "latency_seconds": 8.0547,
+      "model": "gpt-6-luna",
+      "output": {
+        "authority_note": "All candidates remain EVIDENCE_PENDING. This portfolio grants no scientific, laboratory, or promotion authority and does not claim validated performance.",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "credible_rival_ids": [],
+        "hypotheses": [
+          {
+            "comparator": "The supplied metadata-only candidate set, which contains no identified Utah quicklime thesis or report.",
+            "falsifier": "Accessible source records establish two distinct, independently conducted Utah quicklime studies and document a relevant functional endpoint for each.",
+            "hypothesis_id": "H-null-lineage",
+            "intervention": "Verify the bibliographic identity, authorship, institutional or agency provenance, cited relationships, and reported outcomes of the named Utah thesis and transportation report using accessible records or documents.",
+            "novelty_basis": "The case asks whether this record set establishes lineage and endpoint; the available candidates are adjacent asphalt-moisture metadata, not identified Utah quicklime records.",
+            "predicted_observation": "The supplied record set alone will not establish independent replication or a relevant functional endpoint.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-L1",
+              "OA-W1956400912",
+              "OA-W3123400244"
+            ],
+            "schema_version": "1.0",
+            "source_candidate_ids": [
+              "OA-W1956400912",
+              "OA-W3123400244"
+            ],
+            "support_region": "Supplied metadata-only candidates and base evidence; no claims about unexamined source contents.",
+            "transfer_type": "NULL_HYPOTHESIS",
+            "uncertainty": "High: the named records are not identified among the candidates, and no document text or lineage evidence is supplied."
+          }
+        ],
+        "leading_hypothesis_id": "H-null-lineage",
+        "negative_searches": [
+          "The supplied OpenAlex and Crossref candidates do not identify a Utah quicklime thesis or transportation report; metadata screening is not a comprehensive search or evidence of absence."
+        ],
+        "next_discriminating_action": "Use the remaining search capacity to identify the Utah thesis and transportation report in catalogs, then compare their bibliographic provenance and inspect accessible source text for study independence and endpoint reporting. Do not infer results from titles alone.",
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W1956400912",
+          "OA-W3123400244"
+        ],
+        "status": "REVIEW_REQUIRED",
+        "summary": "The supplied search results are metadata-only and do not identify the Utah quicklime thesis or transportation report. They do not establish a relationship between those records, independent replication, or a relevant functional endpoint.",
+        "unresolved_disputes": [
+          "Whether either named Utah record is among the screened candidates or discoverable through the proposed catalog searches.",
+          "Whether the report and thesis are separate investigations, share authorship/data, or are different outputs of one study.",
+          "Whether either record reports a relevant functional endpoint."
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:48cd41b3db425da39f8f3f0598fd3515df65ebde62a3249c77a63a642fdee2a1",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 4585,
+        "output_tokens": 753
+      }
+    }
+  ],
+  "paper_evidence_cards": {},
+  "plan_constraint_events": [],
+  "query_registry": {
+    "quicklime asphalt independent replication utah": {
+      "action_id": "0064c48dedbf8cb0",
+      "index": "openalex",
+      "output_ids": [
+        "OA-W3123400244",
+        "OA-W4245760254",
+        "OA-W182432829"
+      ]
+    },
+    "quicklime asphalt utah thesis report citations": {
+      "action_id": "0630dd52f21d5216",
+      "index": "crossref",
+      "output_ids": [
+        "CR-54e4834c7c34",
+        "CR-05f2603dc905",
+        "CR-7447ef119a7d",
+        "CR-b27519feeb64",
+        "CR-fe4f9a189356"
+      ]
+    },
+    "quicklime hot mix asphalt utah transportation report": {
+      "action_id": "0bb91b5c2cae05d6",
+      "index": "crossref",
+      "output_ids": [
+        "CR-ffce69e3ebd4",
+        "CR-2c91541cc411",
+        "CR-8890c34f652d",
+        "CR-636b554c53b3",
+        "CR-e658ea334ade"
+      ]
+    },
+    "quicklime hot-mix asphalt utah thesis": {
+      "action_id": "e16c8e2d84dd9268",
+      "index": "openalex",
+      "output_ids": [
+        "OA-W1956400912",
+        "OA-W2765648563",
+        "OA-W2920973764",
+        "OA-W3115107353",
+        "OA-W2951241171"
+      ]
+    },
+    "site:utah.edu quicklime asphalt thesis": {
+      "action_id": "c242c0813fb245f9",
+      "index": "openalex",
+      "output_ids": []
+    },
+    "utah quicklime asphalt moisture susceptibility performance endpoint": {
+      "action_id": "b0a10616a8bf927d",
+      "index": "openalex",
+      "output_ids": []
+    },
+    "utah quicklime asphalt report thesis author title": {
+      "action_id": "6b93ed1bfea3fabf",
+      "index": "crossref",
+      "output_ids": [
+        "CR-54e4834c7c34",
+        "CR-77150ac5a96a",
+        "CR-7447ef119a7d",
+        "CR-b27519feeb64",
+        "CR-5cc6b29958fa"
+      ]
+    },
+    "utah quicklime hot mix asphalt thesis transportation report": {
+      "action_id": "e935ffaa0d2624f8",
+      "index": "openalex",
+      "output_ids": [
+        "OA-W1956400912",
+        "OA-W2920973764",
+        "OA-W2765648563",
+        "OA-W3115107353",
+        "OA-W4386202536"
+      ]
+    },
+    "utah quicklime hot mix asphalt transportation report": {
+      "action_id": "e8ab3e88bf28f5ac",
+      "index": "openalex",
+      "output_ids": [
+        "OA-W2017822498",
+        "OA-W1956400912",
+        "OA-W3123400244",
+        "OA-W2811214086",
+        "OA-W4245760254"
+      ]
+    }
+  },
+  "remediation_manifest": {
+    "acquisition_first": false,
+    "active": false,
+    "bounded_open_slot": false,
+    "deduplicate_queries": false,
+    "executable_support": false,
+    "legacy_mechanism_tournament": false,
+    "locator_bridge": false,
+    "schema_version": "g10r-s.1",
+    "treatment": "COMBINED_JUSTIFIED"
+  },
+  "simulation_traces": [],
+  "source_candidates": {
+    "CR-05f2603dc905": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1007/978-1-84800-009-4_6",
+      "discovery_query": "quicklime asphalt utah thesis report citations",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1007/978-1-84800-009-4_6",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-05f2603dc905",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "References and Citations"
+    },
+    "CR-2c91541cc411": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.2514/6.1983-1599",
+      "discovery_query": "quicklime hot mix asphalt utah transportation report",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.2514/6.1983-1599",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-2c91541cc411",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Evaluation of properties of recycled asphalt concrete hot mix"
+    },
+    "CR-54e4834c7c34": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.34191/ofr-8",
+      "discovery_query": "utah quicklime asphalt report thesis author title",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.34191/ofr-8",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-54e4834c7c34",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Geophysical report : Reflection seismograph of the Asphalt Ridge prospect, Uintah County, Utah"
+    },
+    "CR-5cc6b29958fa": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.2172/5160674",
+      "discovery_query": "utah quicklime asphalt report thesis author title",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.2172/5160674",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-5cc6b29958fa",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Summary of the Phase II, Title I engineering assessment of inactive uranium mill tailings, Green River Site, Green River, Utah"
+    },
+    "CR-636b554c53b3": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.17226/14524",
+      "discovery_query": "quicklime hot mix asphalt utah transportation report",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.17226/14524",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-636b554c53b3",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "A Manual for Design of Hot-Mix Asphalt with Commentary"
+    },
+    "CR-7447ef119a7d": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.34191/m-86",
+      "discovery_query": "utah quicklime asphalt report thesis author title",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.34191/m-86",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-7447ef119a7d",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Geologic thesis map index of Utah"
+    },
+    "CR-77150ac5a96a": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.2172/5160853",
+      "discovery_query": "utah quicklime asphalt report thesis author title",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.2172/5160853",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-77150ac5a96a",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Phase II, Title I engineering assessment of inactive uranium mill tailings, Green River Site, Green River, Utah"
+    },
+    "CR-8890c34f652d": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1061/41167(398)61",
+      "discovery_query": "quicklime hot mix asphalt utah transportation report",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1061/41167(398)61",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-8890c34f652d",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Evaluation of Recycled Asphalt Shingles in Hot Mix Asphalt"
+    },
+    "CR-b27519feeb64": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.34191/m-7",
+      "discovery_query": "utah quicklime asphalt report thesis author title",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.34191/m-7",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-b27519feeb64",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Index to unpublished geologic thesis mapping in Utah"
+    },
+    "CR-e658ea334ade": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.treng.2021.100046",
+      "discovery_query": "quicklime hot mix asphalt utah transportation report",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1016/j.treng.2021.100046",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-e658ea334ade",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Quantitative evaluation of asphalt binder extraction from hot mix asphalt pavement using ashing and centrifuge methods"
+    },
+    "CR-fe4f9a189356": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.34191/ss-19",
+      "discovery_query": "quicklime asphalt utah thesis report citations",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.34191/ss-19",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-fe4f9a189356",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Bituminous sandstone deposits asphalt ridge, Uintah County, Utah"
+    },
+    "CR-ffce69e3ebd4": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.17226/14615",
+      "discovery_query": "quicklime hot mix asphalt utah transportation report",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.17226/14615",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-ffce69e3ebd4",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Special Mixture Design Considerations and Methods for Warm-Mix Asphalt: A Supplement to NCHRP Report 673: A Manual for Design of Hot-Mix Asphalt with Commentary"
+    },
+    "OA-W182432829": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3133/b1905",
+      "discovery_query": "quicklime asphalt independent replication utah",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W182432829",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W182432829",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Arizona's industrial rock and mineral resources; workshop proceedings"
+    },
+    "OA-W1956400912": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "openalex:w1956400912",
+      "discovery_query": "utah quicklime hot mix asphalt thesis transportation report",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W1956400912",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W1956400912",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Nano-scale evaluation of moisture damage in asphalt"
+    },
+    "OA-W2017822498": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.conbuildmat.2011.04.072",
+      "discovery_query": "utah quicklime hot mix asphalt transportation report",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2017822498",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W2017822498",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Effects of using asphaltite as filler on mechanical properties of hot mix asphalt"
+    },
+    "OA-W2765648563": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "openalex:w2765648563",
+      "discovery_query": "utah quicklime hot mix asphalt thesis transportation report",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2765648563",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W2765648563",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Evaluating the Mechanical Properties and Long-Term Performance of Stabilized Full-Depth Reclamation Base Materials"
+    },
+    "OA-W2811214086": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3390/app8071029",
+      "discovery_query": "utah quicklime hot mix asphalt transportation report",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2811214086",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W2811214086",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Effects of Titanate Coupling Agent on Engineering Properties of Asphalt Binders and Mixtures Incorporating LLDPE-CaCO3 Pellet"
+    },
+    "OA-W2920973764": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "openalex:w2920973764",
+      "discovery_query": "utah quicklime hot mix asphalt thesis transportation report",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2920973764",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W2920973764",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Investigation into ageing and the effect of hydrated lime on mastics and mixture ageing"
+    },
+    "OA-W2951241171": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "openalex:w2951241171",
+      "discovery_query": "quicklime hot-mix asphalt utah thesis",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2951241171",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W2951241171",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "REVIEW OF LITERATURE ON EXPANSIVE CLAY SOILS."
+    },
+    "OA-W3115107353": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1080/00393630.2020.1864896",
+      "discovery_query": "utah quicklime hot mix asphalt thesis transportation report",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W3115107353",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W3115107353",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Materials and Techniques for the Coating of Nineteenth-century Plaster Casts: A Review of Historical Sources"
+    },
+    "OA-W3123400244": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "openalex:w3123400244",
+      "discovery_query": "quicklime asphalt independent replication utah",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W3123400244",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W3123400244",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Investigation of Conditions for Moisture Damage in Asphalt Concrete and Appropriate Laboratory Test Methods"
+    },
+    "OA-W4245760254": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.2172/6697695",
+      "discovery_query": "quicklime asphalt independent replication utah",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4245760254",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4245760254",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Paraho oil shale module: management summary. Final report, Volume 1"
+    },
+    "OA-W4386202536": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.2172/1996689",
+      "discovery_query": "utah quicklime hot mix asphalt thesis transportation report",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4386202536",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4386202536",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Clean Energy Technology Applications on US Mine Land: Technical Analysis"
+    }
+  },
+  "state": "completed",
+  "state_history": [
+    "created",
+    "policy_loaded",
+    "context_frozen",
+    "planning",
+    "round_1",
+    "sharing",
+    "focus_allocated",
+    "round_2",
+    "adjudicating",
+    "scored",
+    "completed"
+  ],
+  "tool_request_events": [],
+  "viewpoint_society": null
+}

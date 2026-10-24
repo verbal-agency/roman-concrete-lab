@@ -1612,7 +1612,15 @@ class ActiveInvestigationRunner:
                 if report.get("case_id") != self.case["case_id"] or report.get("mechanism_id") != viewpoint_id:
                     raise PolicyBlocked("viewpoint report does not bind to its assigned card")
                 claims = report.get("claims", [])
-                support_report(viewpoint_id, "RETRIEVAL", stance="SUPPORTS" if claims else "NON_DISCRIMINATING", action_ids=action_ids, source_ids=source_ids, claim_ids=[item["claim_id"] for item in claims], summary=report.get("claimed_contribution", "Typed viewpoint report"), unresolved=report.get("unresolved_questions", []), status=report.get("status", "PARTIAL"))
+                report_status = report.get("status", "PARTIAL")
+                # The proponent schema calls its abstention state ``ABSTAIN``;
+                # the evidence-bus report schema uses ``ABSTAINED``. Normalize
+                # that legal cross-module enum at the boundary.
+                if report_status == "ABSTAIN":
+                    report_status = "ABSTAINED"
+                if report_status not in {"COMPLETE", "PARTIAL", "ABSTAINED", "FAILED"}:
+                    raise PolicyBlocked(f"unsupported viewpoint support status: {report_status}")
+                support_report(viewpoint_id, "RETRIEVAL", stance="SUPPORTS" if claims else "NON_DISCRIMINATING", action_ids=action_ids, source_ids=source_ids, claim_ids=[item["claim_id"] for item in claims], summary=report.get("claimed_contribution", "Typed viewpoint report"), unresolved=report.get("unresolved_questions", []), status=report_status)
             for task_type in task_types[1:]:
                 status, summary = structural_status(viewpoint_id, task_type)
                 support_report(viewpoint_id, task_type, stance="NON_DISCRIMINATING", action_ids=action_ids if task_type in {"EXTRACTION", "IDENTITY_LINEAGE"} else [], source_ids=source_ids, summary=summary, unresolved=[f"{task_type.lower()} remains review-required."], status=status)
