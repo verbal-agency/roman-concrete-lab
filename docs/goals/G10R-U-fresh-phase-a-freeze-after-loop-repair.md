@@ -1,6 +1,6 @@
 # G10R-U — Freeze a fresh Phase-A manifest after research-loop repair
 
-**Status:** proposed
+**Status:** complete — `PHASE_A_READY_FOR_OWNER_ACTIVATION`
 **Dependencies:** G10R-T complete with `SOCIETY_RESEARCH_LOOP_READY`; G10R-F
 historical freeze remains immutable; no paid activation
 **Authority:** repository-local manifest and deterministic preflight work only;

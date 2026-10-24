@@ -31,6 +31,7 @@ from ..retrieval import (
 )
 from ..retrieval.pdf import PARSER_ID, extract_pdf, select_relevant_page_spans
 from .providers import BudgetExceeded, ProviderUnavailable
+from .research_loop import ResearchLoopLedger
 from ..simulation import SimulationRegistry
 from tools.tournament.replay import ROOT
 
@@ -914,6 +915,15 @@ class ActiveInvestigationRunner:
             self.viewpoint_society = ViewpointSociety.from_checkpoint(
                 self.checkpoint["viewpoint_society"], context_hash=manifest_sha256
             )
+        self.research_loop = None
+        if arm == "A2-M":
+            self.research_loop = ResearchLoopLedger(
+                case=case,
+                arm=arm,
+                run_id=run_id,
+                context_hash=manifest_sha256,
+                checkpoint=self.checkpoint.get("research_loop"),
+            )
         saved_budget = self.checkpoint.get("budget")
         if saved_budget is not None:
             if saved_budget.get("limits") != asdict(self.budget.limits):
@@ -949,6 +959,7 @@ class ActiveInvestigationRunner:
                 "simulation_traces": self.simulation_traces,
                 "budget": self.budget.snapshot(),
                 "viewpoint_society": self.viewpoint_society.checkpoint() if self.viewpoint_society is not None else None,
+                "research_loop": self.research_loop.checkpoint() if self.research_loop is not None else None,
                 "remediation_manifest": self.remediation_manifest,
             }
         )
@@ -1079,6 +1090,12 @@ class ActiveInvestigationRunner:
                 record_checkpoint_action(self.checkpoint, action_id=action_id, action=action)
                 if self.viewpoint_society is not None:
                     self.viewpoint_society.register_action(action)
+                if self.research_loop is not None:
+                    self.research_loop.record_search(
+                        branch_id=branch_id,
+                        action_id=action_id,
+                        candidates=[self.candidates[item] for item in prior_query["output_ids"] if item in self.candidates],
+                    )
                 self._checkpoint()
             return [self.candidates[item] for item in prior_query["output_ids"] if item in self.candidates]
         before = deepcopy(self.budget.usage)
@@ -1169,6 +1186,12 @@ class ActiveInvestigationRunner:
             for candidate in observed_candidates:
                 self.viewpoint_society.register_candidate(candidate)
             self.viewpoint_society.register_action(action)
+        if self.research_loop is not None:
+            self.research_loop.record_search(
+                branch_id=branch_id,
+                action_id=action_id,
+                candidates=candidates,
+            )
         self._checkpoint()
         return candidates
 
@@ -1231,6 +1254,13 @@ class ActiveInvestigationRunner:
         record_checkpoint_action(self.checkpoint, action_id=action_id, action=action)
         if self.viewpoint_society is not None:
             self.viewpoint_society.register_action(action)
+        if self.research_loop is not None:
+            self.research_loop.record_fetch(
+                branch_id=branch_id,
+                action_id=action_id,
+                candidate_ids=output_ids,
+                status=policy_status,
+            )
         self._checkpoint()
         return documents
 
@@ -1292,6 +1322,13 @@ class ActiveInvestigationRunner:
         if card["source_candidate_id"] != source_candidate_id:
             raise PolicyBlocked("evidence card source does not match fetched candidate")
         self.paper_cards[card_id] = card
+        if self.research_loop is not None:
+            self.research_loop.record_mapping(
+                branch_id=branch_id,
+                action_id=digest({"branch": branch_id, "candidate": source_candidate_id, "card": card_id})[7:23],
+                candidate_id=source_candidate_id,
+                card_id=card_id,
+            )
         self._checkpoint()
 
     def _simulate(self, *, branch_id: str, request: dict[str, Any]) -> None:
@@ -1329,6 +1366,29 @@ class ActiveInvestigationRunner:
                 self.tool_request_events.append(event)
                 self._checkpoint()
                 continue
+            if self.research_loop is not None:
+                selected_id = self.research_loop.selected_candidate(branch_id)
+                selected = self.candidates.get(selected_id) if selected_id else None
+                allowed_locators = {
+                    selected.get("source_candidate_id"),
+                    selected.get("locator"),
+                    selected.get("content_locator"),
+                } if selected else set()
+                if selected is None or locator not in allowed_locators:
+                    event.update({
+                        "status": "RESEARCH_LOOP_REJECTED_UNSELECTED_LOCATOR",
+                        "reason": "A2-M content fetch must follow a recorded candidate selection",
+                        "selected_source_candidate_id": selected_id,
+                    })
+                    self.tool_request_events.append(event)
+                    self.research_loop.record_fetch(
+                        branch_id=branch_id,
+                        action_id=event["event_id"],
+                        candidate_ids=[],
+                        status="UNSELECTED_LOCATOR",
+                    )
+                    self._checkpoint()
+                    continue
             before_cards = set(self.paper_cards)
             try:
                 documents = self._fetch(branch_id=branch_id, locator=locator, rationale="model requested lawful paper inspection")
@@ -1571,9 +1631,32 @@ class ActiveInvestigationRunner:
         acquisition: dict[str, dict[str, Any]] = {}
         for viewpoint_id in society.active_ids:
             plan = plans[viewpoint_id]
+            need_id = None
+            if self.research_loop is not None:
+                need_id = self.research_loop.open_need(
+                    branch_id=viewpoint_id,
+                    viewpoint_id=viewpoint_id,
+                    task_type="RETRIEVAL",
+                    question=(
+                        plan["primary_queries"][0]["query"]
+                        if plan["primary_queries"]
+                        else f"Find evidence that can distinguish {viewpoint_id} for {self.case['question']}"
+                    ),
+                    claim_ids=[f"CLAIM-{viewpoint_id}"],
+                    required_evidence_kind="PAGE_CARD",
+                    expected_decision_change=2,
+                )
             before = {item["action_id"] for item in self.actions}
             before_cards = set(self.paper_cards)
             found = self._execute_queries(viewpoint_id, plan["primary_queries"], 2)
+            if self.research_loop is not None:
+                action_ids = [item["action_id"] for item in self.actions if item["action_id"] not in before]
+                for candidate in found[:1]:
+                    self.research_loop.select_candidate(
+                        branch_id=viewpoint_id,
+                        candidate=candidate,
+                        action_ids=action_ids,
+                    )
             self._execute_requested_tools(viewpoint_id, plan)
             action_ids = [item["action_id"] for item in self.actions if item["action_id"] not in before]
             source_ids = {item["source_candidate_id"] for item in found}
@@ -1624,9 +1707,38 @@ class ActiveInvestigationRunner:
             for task_type in task_types[1:]:
                 status, summary = structural_status(viewpoint_id, task_type)
                 support_report(viewpoint_id, task_type, stance="NON_DISCRIMINATING", action_ids=action_ids if task_type in {"EXTRACTION", "IDENTITY_LINEAGE"} else [], source_ids=source_ids, summary=summary, unresolved=[f"{task_type.lower()} remains review-required."], status=status)
+        if self.research_loop is not None:
+            open_source_ids = acquisition.get(admitted["viewpoint_id"], {}).get("source_ids", [])
+            open_status = "ADMITTED" if open_source_ids else "ABSTAINED_NO_DISTINCT_VIEWPOINT"
+            self.research_loop.record_open_slot({
+                "schema_version": "1.0",
+                "admission_id": digest({"run": self.run_id, "open": open_source_ids})[7:23],
+                "case_id": self.case["case_id"],
+                "viewpoint_id": admitted["viewpoint_id"],
+                "novelty_basis": "the open slot is evaluated from its acquired candidate set, not from a placeholder claim",
+                "source_candidate_ids": sorted(open_source_ids),
+                "claim_ids": [f"CLAIM-{admitted['viewpoint_id']}"] if open_source_ids else [],
+                "predicted_observation": "a process-matched candidate should expose a discriminator distinct from incumbent viewpoints",
+                "falsifier": "the candidate is redundant, non-process-matched, or lacks a usable locator",
+                "discriminator": "compare the open-slot candidate's process and endpoint against the incumbent roster",
+                "overlap_decision": "DISTINCT" if open_source_ids else "NO_COMPARABLE_INCUMBENT",
+                "status": open_status,
+                "promotion_status": "REVIEW_REQUIRED",
+            })
         for viewpoint_id in society.active_ids:
             society.commit_viewpoint(viewpoint_id)
+        if self.research_loop is not None:
+            self.research_loop.revise_dossier(
+                report_ids=[report_id for ids in society.private_reports.values() for report_id in ids],
+                action_ids=[item["action_id"] for item in self.actions],
+                source_candidate_ids=sorted({source_id for item in society.bus.reports.values() for source_id in item["source_candidate_ids"]}),
+                claim_ids=sorted({claim_id for item in society.bus.reports.values() for claim_id in item["claim_ids"]}),
+                critique_ids=[],
+                reason="initial private support reports compiled before sharing",
+            )
         shared = society.share()
+        if self.research_loop is not None:
+            self.research_loop.stage("SHARING")
         self.machine.transition("sharing")
 
         critiques: list[dict[str, Any]] = []
@@ -1639,8 +1751,23 @@ class ActiveInvestigationRunner:
                 maximum_output_tokens=PLAN_OUTPUT_TOKENS, output_schema=provider_schema("investigation-plan.schema.json"), format_name="g10m_auditor_plan",
             )
             plan = self._validated_plan(plan, branch_id=f"auditor:{role}")
+            if self.research_loop is not None:
+                self.research_loop.open_need(
+                    branch_id=f"auditor:{role}",
+                    viewpoint_id=society.null_id,
+                    task_type="CONTRADICTION",
+                    question=(plan["primary_queries"][0]["query"] if plan["primary_queries"] else f"Audit {role} for {self.case['question']}"),
+                    claim_ids=[], required_evidence_kind="CONTRADICTION",
+                    expected_decision_change=1,
+                )
             before = {item["action_id"] for item in self.actions}
             found = self._execute_queries(f"auditor:{role}", plan["primary_queries"], 1)
+            if self.research_loop is not None:
+                action_ids = [item["action_id"] for item in self.actions if item["action_id"] not in before]
+                for candidate in found[:1]:
+                    self.research_loop.select_candidate(
+                        branch_id=f"auditor:{role}", candidate=candidate, action_ids=action_ids,
+                    )
             self._execute_requested_tools(f"auditor:{role}", plan)
             action_ids = [item["action_id"] for item in self.actions if item["action_id"] not in before]
             source_ids = [item["source_candidate_id"] for item in found]
@@ -1670,6 +1797,8 @@ class ActiveInvestigationRunner:
         for (viewpoint_id, task_type), task_id in sorted(task_ids.items()):
             focus_stats.append({"case_id": self.case["case_id"], "treatment_id": "A2-M", "task_id": task_id, "viewpoint_id": viewpoint_id, "expected_information": 2 if task_type in {"RETRIEVAL", "CONTRADICTION"} else 1, "unresolved_uncertainty": 1, "novelty": 1 if viewpoint_id == admitted["viewpoint_id"] else 0, "provenance_risk": 1, "duplicate_work": 0, "feasible": True})
         focus = society.allocate_focus(focus_stats, min(3, int(self.budget.remaining()["queries"])))
+        if self.research_loop is not None:
+            self.research_loop.record_focus(focus)
         self.machine.transition("focus_allocated")
         self.machine.transition("round_2")
         for task_id, count in focus.get("allocations", {}).items():
@@ -1680,6 +1809,17 @@ class ActiveInvestigationRunner:
             found = self._execute_queries(task["viewpoint_id"], [query] * count, count)
             action_ids = [item["action_id"] for item in self.actions if item["action_id"] not in before]
             support_report(task["viewpoint_id"], next(kind for (vid, kind), tid in task_ids.items() if tid == task_id), stance="NON_DISCRIMINATING", action_ids=action_ids, source_ids=[item["source_candidate_id"] for item in found], summary="Focused follow-up retained for collective adjudication.", unresolved=["Follow-up remains provisional until source identity and endpoint fit are reviewed."], status="PARTIAL")
+        if self.research_loop is not None:
+            for viewpoint_id in society.active_ids:
+                society.refresh_viewpoint(viewpoint_id)
+            self.research_loop.revise_dossier(
+                report_ids=[report_id for ids in society.private_reports.values() for report_id in ids],
+                action_ids=[item["action_id"] for item in self.actions],
+                source_candidate_ids=sorted({source_id for item in society.bus.reports.values() for source_id in item["source_candidate_ids"]}),
+                claim_ids=sorted({claim_id for item in society.bus.reports.values() for claim_id in item["claim_ids"]}),
+                critique_ids=sorted(society.critiques),
+                reason="focused follow-up and structural critiques revised the shared dossiers",
+            )
         deterministic_portfolio = society.adjudicate()
         self.machine.transition("adjudicating")
         portfolio = self._model(
@@ -1724,6 +1864,8 @@ class ActiveInvestigationRunner:
                 candidate_records=self.candidates,
                 identity_map=self.identity_map,
             )
+            if self.research_loop is not None:
+                self.research_loop.stage("SCORED")
             result = {"status": "COMPLETED", "portfolio": portfolio, "score": score}
         except (BudgetExhausted, BudgetExceeded) as exc:
             self.machine.state = "budget_exhausted"
@@ -1738,6 +1880,8 @@ class ActiveInvestigationRunner:
             self.machine.history.append("inconclusive")
             result = {"status": "INCONCLUSIVE_ACTIVE_INVESTIGATION", "reason": f"{type(exc).__name__}: {exc}"}
         self.checkpoint["last_result"] = deepcopy(result)
+        if self.research_loop is not None and result["status"] == "COMPLETED":
+            self.research_loop.stage("COMPLETED")
         self._checkpoint()
         return {
             "run_id": self.run_id,
@@ -2028,11 +2172,59 @@ def _directional_outcome(arm_results: dict[str, list[dict[str, Any]]], *, societ
     )
 
 
+def _validate_frozen_phase_input(
+    *,
+    phase_a_result: dict[str, Any],
+    frozen_path: Path,
+) -> tuple[dict[str, Any], str]:
+    """Load either a legacy phase-a result or a hash-addressed freeze manifest.
+
+    The post-G10R-T freezes are standalone manifests rather than copies of the
+    legacy ``phase-a.json`` result.  Accepting both formats keeps old fixtures
+    replayable while making a paid run fail closed when a manifest's source
+    hashes no longer describe the runner on disk.
+    """
+    frozen = load_json(frozen_path)
+    if frozen.get("status") == "AWAITING_OWNER_ACTIVATION":
+        expected_hash = phase_a_result["manifest_sha256"]
+        if frozen.get("manifest_sha256") != expected_hash:
+            raise StaleContext("stored Phase A manifest is stale relative to the runner")
+        return frozen, expected_hash
+    if not frozen.get("manifest_id") or not frozen.get("files"):
+        raise StaleContext("stored Phase A input is not a recognized freeze manifest")
+    declared_policy_hash = frozen.get("source_policy_sha256")
+    if declared_policy_hash != file_digest(ROOT / "fixtures/investigation/source-policy.json"):
+        raise StaleContext("frozen source policy differs from the checked-in policy")
+    file_entries: list[dict[str, Any]] = []
+    def collect(value: Any) -> None:
+        if isinstance(value, dict):
+            if isinstance(value.get("path"), str) and isinstance(value.get("sha256"), str):
+                file_entries.append(value)
+            else:
+                for child in value.values():
+                    collect(child)
+        elif isinstance(value, list):
+            for child in value:
+                collect(child)
+    collect(frozen["files"])
+    collect(frozen.get("g10r_w_wiring", {}))
+    for entry in file_entries:
+        path = ROOT / entry["path"]
+        if not path.exists() or file_digest(path) != entry["sha256"]:
+            raise StaleContext(f"frozen file hash no longer matches: {entry['path']}")
+    if frozen.get("model_policy", {}).get("model") != MODEL:
+        raise StaleContext("frozen model policy does not match the runner")
+    if float(frozen.get("hard_total_external_spend_cap_usd", CAP_USD)) != CAP_USD:
+        raise StaleContext("frozen aggregate spend cap does not match the runner")
+    return frozen, digest(frozen)
+
+
 def run_phase_b(
     *,
     owner_activated: bool,
     output_dir: Path | None = None,
     phase_path: Path | None = None,
+    manifest_path: Path | None = None,
     spend_roots: list[Path] | None = None,
 ) -> dict[str, Any]:
     """Execute the smallest live pilot only after an explicit owner activation.
@@ -2046,18 +2238,17 @@ def run_phase_b(
     phase_a_result = phase_a()
     if phase_a_result["status"] != "AWAITING_OWNER_ACTIVATION":
         raise PolicyBlocked("Phase A is not valid; Phase B cannot start")
-    from ..retrieval.network import ConfiguredNetworkRetrievalAdapter
-    from .providers.openai_provider import BudgetLedger, OpenAIProvider
-
     destination = output_dir or ROOT / "artifacts/goals/G10R"
     destination.mkdir(parents=True, exist_ok=True)
-    manifest_hash = phase_a_result["manifest_sha256"]
-    frozen_phase_a_path = phase_path or destination / "phase-a.json"
+    frozen_phase_a_path = manifest_path or phase_path or destination / "phase-a.json"
     if not frozen_phase_a_path.exists():
         raise OwnerActivationRequired("Phase A manifest file is missing; freeze it before activating Phase B")
-    frozen_phase_a = load_json(frozen_phase_a_path)
-    if frozen_phase_a.get("status") != "AWAITING_OWNER_ACTIVATION" or frozen_phase_a.get("manifest_sha256") != manifest_hash:
-        raise StaleContext("stored Phase A manifest is absent, invalid, or stale relative to the runner")
+    frozen_phase_a, manifest_hash = _validate_frozen_phase_input(
+        phase_a_result=phase_a_result,
+        frozen_path=frozen_phase_a_path,
+    )
+    from ..retrieval.network import ConfiguredNetworkRetrievalAdapter
+    from .providers.openai_provider import BudgetLedger, OpenAIProvider
     already_spent = 0.0
     checkpoint_directory = destination / "checkpoints"
     roots = spend_roots or [checkpoint_directory]

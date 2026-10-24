@@ -1,0 +1,26 @@
+{
+  "goal_id": "G10R-W",
+  "status": "RUNTIME_RESEARCH_LOOP_WIRED",
+  "external_calls": false,
+  "paid_run": false,
+  "model_calls": false,
+  "implementation": {
+    "live_ledger": "src/roman_concrete_lab/agents/research_loop.py",
+    "runner": "src/roman_concrete_lab/agents/investigation.py",
+    "dossier_refresh": "src/roman_concrete_lab/agents/viewpoint_society.py",
+    "wiring_test": "tests/agents/test_g10r_v_research_loop_wiring.py"
+  },
+  "verified_contracts": [
+    "typed needs and candidate selection precede A2-M fetch",
+    "unselected fetch locators are recorded and rejected",
+    "fetch/map transitions are checkpointed",
+    "dossiers receive a second revision after focused follow-up",
+    "focus and evidence-conditioned open-slot decisions are checkpointed",
+    "completed checkpoint replays without provider calls"
+  ],
+  "tests": {
+    "focused": "30 passed",
+    "full_suite": "158 passed"
+  },
+  "next_goal": "G10R-X"
+}

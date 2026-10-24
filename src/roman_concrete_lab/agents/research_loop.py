@@ -36,6 +36,11 @@ STAGES = [
 ]
 TERMINAL = {"BUDGET_EXHAUSTED", "POLICY_BLOCKED", "INCONCLUSIVE", "COMPLETED"}
 ARMS = {"R0_SINGLE", "R1_SHARED_SUPPORT", "R2_VIEWPOINT_FIXED", "R3_VIEWPOINT_ADAPTIVE"}
+LIVE_STAGES = {
+    "CREATED", "SEARCHING", "CANDIDATE_TRIAGE", "CONTENT_ACQUISITION",
+    "EVIDENCE_MAPPING", "PRIVATE_REVISION", "SHARING", "CRITIQUING",
+    "FOCUSING", "ROUND_2", "ADJUDICATING", "SCORED", "COMPLETED",
+}
 
 
 def _schema(name: str) -> dict[str, Any]:
@@ -70,6 +75,202 @@ def _card(candidate: dict[str, Any], payload: str) -> dict[str, Any]:
     }
     _validate("paper-evidence-card.schema.json", card)
     return card
+
+
+class ResearchLoopLedger:
+    """Provider-neutral ledger used by the live runner's A2-M path.
+
+    ``OfflineResearchLoop`` is deliberately a deterministic fixture runner.
+    The paid runner cannot call that fixture implementation, but it must still
+    execute the same typed transitions.  This ledger is the seam between the
+    live provider/retrieval adapters and those contracts: it records needs,
+    candidate selection, fetch/map, dossier revision, focus, open-slot, and
+    replay-safe checkpoints without making scientific claims itself.
+    """
+
+    def __init__(
+        self,
+        *,
+        case: dict[str, Any],
+        arm: str,
+        run_id: str,
+        context_hash: str,
+        checkpoint: dict[str, Any] | None = None,
+    ) -> None:
+        if arm != "A2-M":
+            raise ValueError("live research-loop ledger is only for A2-M")
+        self.case = case
+        self.arm = arm
+        self.run_id = run_id
+        self.context_hash = context_hash
+        self.state: dict[str, Any] = {
+            "schema_version": "g10r-t.live.1",
+            "run_id": run_id,
+            "case_id": case["case_id"],
+            "problem_id": case["problem_id"],
+            "problem_version": case["problem_version"],
+            "arm": arm,
+            "context_hash": context_hash,
+            "stage": "CREATED",
+            "needs": [],
+            "branch_needs": {},
+            "searches": [],
+            "selections": [],
+            "fetches": [],
+            "mappings": [],
+            "dossier_revisions": [],
+            "focus": [],
+            "open_slot": [],
+            "events": [],
+        }
+        if checkpoint is not None:
+            self._restore(checkpoint)
+
+    def _restore(self, checkpoint: dict[str, Any]) -> None:
+        expected = {
+            "schema_version": "g10r-t.live.1",
+            "run_id": self.run_id,
+            "case_id": self.case["case_id"],
+            "problem_id": self.case["problem_id"],
+            "problem_version": self.case["problem_version"],
+            "arm": self.arm,
+            "context_hash": self.context_hash,
+        }
+        for key, value in expected.items():
+            if checkpoint.get(key) != value:
+                raise PolicyBlocked(f"research-loop checkpoint mismatch for {key}")
+        payload = deepcopy(checkpoint)
+        content_hash = payload.pop("content_hash", None)
+        if content_hash is not None and content_hash != digest(payload):
+            raise PolicyBlocked("research-loop checkpoint content hash mismatch")
+        self.state = payload
+
+    def checkpoint(self) -> dict[str, Any]:
+        payload = deepcopy(self.state)
+        payload["content_hash"] = digest(payload)
+        return payload
+
+    def _event(self, kind: str, payload: dict[str, Any]) -> None:
+        event_id = _stable_id("LOOP", {"kind": kind, "payload": payload})
+        existing = next((item for item in self.state["events"] if item["event_id"] == event_id), None)
+        if existing is not None:
+            if canonical(existing["payload"]) != canonical(payload):
+                raise PolicyBlocked("conflicting duplicate research-loop event")
+            return
+        self.state["events"].append({"event_id": event_id, "kind": kind, "payload": deepcopy(payload)})
+
+    def stage(self, stage: str) -> None:
+        if stage not in LIVE_STAGES:
+            raise PolicyBlocked(f"unsupported research-loop stage: {stage}")
+        self.state["stage"] = stage
+
+    def open_need(
+        self,
+        *,
+        branch_id: str,
+        viewpoint_id: str,
+        task_type: str,
+        question: str,
+        claim_ids: list[str] | None = None,
+        required_evidence_kind: str = "PAGE_CARD",
+        expected_decision_change: int = 1,
+        budget_request: int = 1,
+    ) -> str:
+        need_id = _stable_id("NEED", {"run": self.run_id, "branch": branch_id, "task": task_type, "question": question})
+        need = {
+            "schema_version": "1.0", "need_id": need_id,
+            "case_id": self.case["case_id"], "problem_id": self.case["problem_id"], "problem_version": self.case["problem_version"],
+            "viewpoint_id": viewpoint_id, "claim_ids": claim_ids or [], "task_type": task_type,
+            "question": question, "expected_decision_change": expected_decision_change,
+            "required_evidence_kind": required_evidence_kind, "known_candidate_ids": [],
+            "unresolved_uncertainty": 1, "duplication_key": normalize_query(question),
+            "budget_request": max(1, budget_request), "status": "OPEN", "provenance": [self.run_id],
+        }
+        _validate("research-need.schema.json", need)
+        if not any(item["need_id"] == need_id for item in self.state["needs"]):
+            self.state["needs"].append(need)
+        self.state["branch_needs"][branch_id] = need_id
+        self._event("NEED_OPENED", {"branch_id": branch_id, "need_id": need_id})
+        return need_id
+
+    def need_for_branch(self, branch_id: str) -> str:
+        return self.state["branch_needs"].get(branch_id, branch_id)
+
+    def record_search(self, *, branch_id: str, action_id: str, candidates: list[dict[str, Any]]) -> None:
+        need_id = self.need_for_branch(branch_id)
+        candidate_ids = sorted({item["source_candidate_id"] for item in candidates})
+        for need in self.state["needs"]:
+            if need["need_id"] == need_id:
+                need["known_candidate_ids"] = sorted(set(need["known_candidate_ids"]) | set(candidate_ids))
+                need["status"] = "IN_PROGRESS" if candidate_ids else "PARTIAL"
+        record = {"branch_id": branch_id, "need_id": need_id, "action_id": action_id, "candidate_ids": candidate_ids}
+        if record not in self.state["searches"]:
+            self.state["searches"].append(record)
+        self.stage("SEARCHING")
+
+    def select_candidate(self, *, branch_id: str, candidate: dict[str, Any], action_ids: list[str]) -> dict[str, Any]:
+        need_id = self.need_for_branch(branch_id)
+        content_locator = candidate.get("content_locator") or candidate.get("locator")
+        fetchable = bool(candidate.get("content_locator"))
+        selection = {
+            "schema_version": "1.0",
+            "selection_id": _stable_id("SEL", {"need": need_id, "candidate": candidate["source_candidate_id"]}),
+            "need_id": need_id, "action_ids": sorted(set(action_ids)),
+            "source_candidate_id": candidate["source_candidate_id"],
+            "selection_reason": "first stable candidate retained before any content fetch" if fetchable else "metadata candidate retained pending a lawful content locator",
+            "candidate_status": candidate.get("status", "DISCOVERED"),
+            "content_locator": content_locator,
+            "requested_operation": "FETCH_AND_MAP" if fetchable else "SEEK_LOCATOR",
+            "policy_status": "ALLOWED" if fetchable else "METADATA_ONLY",
+            "status": "SELECTED" if fetchable else "PENDING",
+        }
+        _validate("candidate-selection.schema.json", selection)
+        if not any(item["selection_id"] == selection["selection_id"] for item in self.state["selections"]):
+            self.state["selections"].append(selection)
+        self.stage("CANDIDATE_TRIAGE")
+        return selection
+
+    def selected_candidate(self, branch_id: str) -> str | None:
+        need_id = self.need_for_branch(branch_id)
+        rows = [item for item in self.state["selections"] if item["need_id"] == need_id and item["status"] == "SELECTED"]
+        return rows[-1]["source_candidate_id"] if rows else None
+
+    def record_fetch(self, *, branch_id: str, action_id: str, candidate_ids: list[str], status: str) -> None:
+        row = {"branch_id": branch_id, "need_id": self.need_for_branch(branch_id), "action_id": action_id, "candidate_ids": sorted(set(candidate_ids)), "status": status}
+        if row not in self.state["fetches"]:
+            self.state["fetches"].append(row)
+        self.stage("CONTENT_ACQUISITION")
+
+    def record_mapping(self, *, branch_id: str, action_id: str, candidate_id: str, card_id: str) -> None:
+        row = {"branch_id": branch_id, "need_id": self.need_for_branch(branch_id), "action_id": action_id, "candidate_id": candidate_id, "card_id": card_id}
+        if row not in self.state["mappings"]:
+            self.state["mappings"].append(row)
+        self.stage("EVIDENCE_MAPPING")
+
+    def revise_dossier(self, *, report_ids: list[str], action_ids: list[str], source_candidate_ids: list[str], claim_ids: list[str], critique_ids: list[str], reason: str) -> dict[str, Any]:
+        revision = len(self.state["dossier_revisions"]) + 1
+        payload = {
+            "schema_version": "1.0", "dossier_id": "DOSSIER-SOCIETY", "viewpoint_id": "SOCIETY",
+            "revision": revision, "parent_revision": revision - 1 if revision > 1 else None,
+            "report_ids": sorted(set(report_ids)), "action_ids": sorted(set(action_ids)),
+            "source_candidate_ids": sorted(set(source_candidate_ids)), "claim_ids": sorted(set(claim_ids)),
+            "critique_ids": sorted(set(critique_ids)), "unresolved_joins": [],
+            "revision_reason": reason, "status": "COMPLETE", "content_hash": "sha256:pending",
+        }
+        payload["content_hash"] = digest({key: value for key, value in payload.items() if key != "content_hash"})
+        _validate("viewpoint-dossier-revision.schema.json", payload)
+        self.state["dossier_revisions"].append(payload)
+        self.stage("PRIVATE_REVISION" if revision == 1 else "ROUND_2")
+        return deepcopy(payload)
+
+    def record_focus(self, focus: dict[str, Any]) -> None:
+        self.state["focus"].append(deepcopy(focus))
+        self.stage("FOCUSING")
+
+    def record_open_slot(self, admission: dict[str, Any]) -> None:
+        _validate("open-viewpoint-admission.schema.json", admission)
+        self.state["open_slot"].append(deepcopy(admission))
+        self.stage("ADJUDICATING")
 
 
 class OfflineResearchLoop:

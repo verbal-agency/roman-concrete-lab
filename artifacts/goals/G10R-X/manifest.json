@@ -1,0 +1,345 @@
+{
+  "allowed_hosts": [
+    "api.crossref.org",
+    "api.openalex.org",
+    "biblio.ugent.be",
+    "citeseerx.ist.psu.edu",
+    "digibug.ugr.es",
+    "digitalcommons.usu.edu",
+    "docs.lib.purdue.edu",
+    "doi.org",
+    "dspace.ucacue.edu.ec",
+    "dspace.uevora.pt",
+    "ebuah.uah.es",
+    "ecommons.udayton.edu",
+    "fileserver-az.core.ac.uk",
+    "heronjournal.nl",
+    "journal.uitm.edu.my",
+    "orca.cardiff.ac.uk",
+    "papers.ssrn.com",
+    "patents.google.com",
+    "pmc.ncbi.nlm.nih.gov",
+    "research.unl.pt",
+    "researchportal.bath.ac.uk",
+    "rosap.ntl.bts.gov",
+    "shura.shu.ac.uk",
+    "upcommons.upc.edu",
+    "www.jstage.jst.go.jp",
+    "www.nature.com",
+    "www.repository.cam.ac.uk"
+  ],
+  "branch_charter_hashes": {
+    "evidence_skeptic": "sha256:024cf9946571a4aa52b613d87282ec1b80cef1daaac7ef2520ddd602b4f515e7",
+    "experiment_simulation": "sha256:0fc2af68b7af3a6f27e725ea8cebab428cb71cf5e9cc669832ceae45ec4fd345",
+    "mechanism_transfer": "sha256:78d23cf3d65d3d812c925846689eb3e29e0815e873cce0dbffd548bb7dffcf25"
+  },
+  "files": {
+    "behavior_fixtures": {
+      "path": "fixtures/investigation/behavior-fixtures.json",
+      "sha256": "sha256:811927a6c443c142c0720b174f805181cb021dd661a0ce3491f9110abdee89a3"
+    },
+    "branch_report_schema": {
+      "path": "schemas/branch-report.schema.json",
+      "sha256": "sha256:466d476e360c128d85ee29acc8aa65b176f0b55763fc4f31980b854faf379b0b"
+    },
+    "cross_viewpoint_critique_schema": {
+      "path": "schemas/cross-viewpoint-critique.schema.json",
+      "sha256": "sha256:93bd28be7ddae294aeaf2b2a7867385d529383384d6dd95836606dada2541b3f"
+    },
+    "development_cases": {
+      "path": "fixtures/investigation/development.jsonl",
+      "sha256": "sha256:c02e87ccb04dff41fc5d87f448d67bd0fe587d776f0eadce80427dfafd1039f6"
+    },
+    "evidence_bus_protocol": {
+      "path": "docs/protocols/society-evidence-bus.md",
+      "sha256": "sha256:84d7707f1916d51e19d80536e12703bcafc5dc02ed38440f2877fdfb89e02841"
+    },
+    "evidence_bus_runner": {
+      "path": "src/roman_concrete_lab/agents/evidence_bus.py",
+      "sha256": "sha256:05c940685ab5f98e74366db9205ce49ac35677cb2b3ac58663b09e9ac2a2b8fc"
+    },
+    "goal": {
+      "path": "docs/goals/G10R-open-world-lateral-research.md",
+      "sha256": "sha256:b625b25f9ffdfd01f27c0d4190f0dd907dfec845fe98894a9d381b9d4258d3dc"
+    },
+    "investigation_action_schema": {
+      "path": "schemas/investigation-action.schema.json",
+      "sha256": "sha256:ff2a6457f7c67c0d87d80197f904d054149329bc542280b620ca14b8d6aad5e0"
+    },
+    "investigation_plan_schema": {
+      "path": "schemas/investigation-plan.schema.json",
+      "sha256": "sha256:4d7175dcbf6afaabc14e2c9f8da457d6fbc55869d47628bac641d871ece4b189"
+    },
+    "lateral_hypothesis_schema": {
+      "path": "schemas/lateral-hypothesis.schema.json",
+      "sha256": "sha256:1915cb6897403dcf6bab22e01f29a1e56f7707a46172214f06f49c370708bd9f"
+    },
+    "mechanism_admission_schema": {
+      "path": "schemas/mechanism-admission.schema.json",
+      "sha256": "sha256:bc2f53b273f66c8c80c511e239aa85d1e71d7ff20587f2485d0741cffa6b0526"
+    },
+    "mechanism_card_schema": {
+      "path": "schemas/mechanism-card.schema.json",
+      "sha256": "sha256:7021adf552b9b64b7d1362d20b8659e6965266a75fec174ffb40aab4aca91644"
+    },
+    "mechanism_ledger_schema": {
+      "path": "schemas/mechanism-tournament-ledger.schema.json",
+      "sha256": "sha256:c7048fd79c3acc30448a47c9c45813f629dddf0b5822c60f41667a62391bae37"
+    },
+    "mechanism_prompts": {
+      "path": "fixtures/investigation/mechanism-prompts.json",
+      "sha256": "sha256:873a2f44c051589177780bc9ec1aef876bc06660906916a0529e1d0095a78d25"
+    },
+    "mechanism_proponent_schema": {
+      "path": "schemas/mechanism-proponent-report.schema.json",
+      "sha256": "sha256:83210e6de22f4b41377f28aeacfc08286fcef8586a3480912e7c3146ff968d04"
+    },
+    "mechanism_protocol": {
+      "path": "docs/protocols/mechanism-proponent-society.md",
+      "sha256": "sha256:1cf9cc1044576ff460697fdb10d79079292fbc0a699dd2f5c0cf8e3b5598b820"
+    },
+    "mechanism_rosters": {
+      "path": "fixtures/investigation/mechanism-rosters.json",
+      "sha256": "sha256:cecaf199bfdb5b9136d99d492a9db40c5314c06388bd9530d9173457b835817a"
+    },
+    "mechanism_runner": {
+      "path": "src/roman_concrete_lab/agents/mechanism_tournament.py",
+      "sha256": "sha256:1737d023f1dbbed9f9ad68bf8126440f59e63b0f64781934335de84df0f6b856"
+    },
+    "network_adapter": {
+      "path": "src/roman_concrete_lab/retrieval/network.py",
+      "sha256": "sha256:69e79367540127231564fc7855d1b36af0652050d9de85396bbc75c4e8137694"
+    },
+    "openai_provider": {
+      "path": "src/roman_concrete_lab/agents/providers/openai_provider.py",
+      "sha256": "sha256:ab9b030fab890c2f8918c9ace376977d6983f5d61edb6e81a5fd28984520aa8b"
+    },
+    "paper_evidence_card_schema": {
+      "path": "schemas/paper-evidence-card.schema.json",
+      "sha256": "sha256:164fbd373be55fe161fc5a8db79e970755ef77ac115d1dc3e386be1c88f7c72f"
+    },
+    "pdf_benchmark": {
+      "path": "fixtures/investigation/pdf-benchmark.json",
+      "sha256": "sha256:a7f3fe4cedc580435737e563e3376711dfbba65dda05cfb4611a230ca8925701"
+    },
+    "pdf_benchmark_payload": {
+      "path": "fixtures/investigation/pdf-benchmark.b64",
+      "sha256": "sha256:17752bb0a547fdcb002b84bd5104eecf7e87fd19ea4b70c800df3ccf694a8e7c"
+    },
+    "pdf_extractor": {
+      "path": "src/roman_concrete_lab/retrieval/pdf.py",
+      "sha256": "sha256:3b76950330518ff0550b576f3a41aa3c1f2ef3a2659224e80ed589b288dea517"
+    },
+    "pdf_parser_requirement": {
+      "path": "requirements-g10r.txt",
+      "sha256": "sha256:e7a0fb5bc4cbb4689bbe0208bab23c64f2371c839b91cdd265226d1697bea1e7"
+    },
+    "portfolio_schema": {
+      "path": "schemas/investigation-portfolio.schema.json",
+      "sha256": "sha256:4dad55d277dbfd27134c13e2aebca57305c57e4592d8624828720b30f2ffdfa9"
+    },
+    "prompts": {
+      "path": "fixtures/investigation/prompts.json",
+      "sha256": "sha256:0ab23c03819314ec53fc832bbfffc1ca267d2d90f7fb5162b16af9a93c64bb1e"
+    },
+    "protocol": {
+      "path": "docs/protocols/active-investigation-pilot.md",
+      "sha256": "sha256:781a209082d45ee0518d09eaa9213ca4d0ee059cc8b5727c4a550d024c9ac99c"
+    },
+    "recorded_sources": {
+      "path": "fixtures/investigation/recorded-sources.jsonl",
+      "sha256": "sha256:2729c0c4bd1fee6b1aeafbcb478b48cdac0808d95af48ba09e757127083e5636"
+    },
+    "retrieval_contracts": {
+      "path": "src/roman_concrete_lab/retrieval/contracts.py",
+      "sha256": "sha256:1146a24dae2828a909afb2685fdbcc8be08e25a9f33e53b9b0f16e2c4af09594"
+    },
+    "runner": {
+      "path": "src/roman_concrete_lab/agents/investigation.py",
+      "sha256": "sha256:c9ae4b70709d369c7d3efe0daa114418a8198e9f521b3ee39e680ea19de461f8"
+    },
+    "sealed_cases": {
+      "path": "fixtures/investigation/sealed.jsonl",
+      "sha256": "sha256:30997e1e8423f3e4d7f545a82c2ceb73d10444a00bf8987bbd33878a1b84264d"
+    },
+    "simulation_contracts": {
+      "path": "src/roman_concrete_lab/simulation/contracts.py",
+      "sha256": "sha256:e9cd3fda70d9528998e1bcf1c0786f1bc43fe3e951c820d78e339ec5bd154a01"
+    },
+    "simulation_trace_schema": {
+      "path": "schemas/simulation-trace.schema.json",
+      "sha256": "sha256:870037fd6be919e45db36ab123d112885f1bff729a1a3dd3bece9952e3388bfd"
+    },
+    "society_portfolio_envelope_schema": {
+      "path": "schemas/society-portfolio-envelope.schema.json",
+      "sha256": "sha256:d37347979e3d263a44b17802ad1b177352f1bf686a2df1e951c252209d8a10c9"
+    },
+    "source_attribution_audit_schema": {
+      "path": "schemas/source-attribution-audit.schema.json",
+      "sha256": "sha256:be37da5b08661a58b153e757d0180333a8e9a62b23babfb473cf902f066a6a4b"
+    },
+    "source_candidate_schema": {
+      "path": "schemas/source-candidate.schema.json",
+      "sha256": "sha256:69cf715ba3611e13f5ddbb7d18c2813649d60e3c76e2bfb53e411deb86a095a3"
+    },
+    "source_identity_map": {
+      "path": "fixtures/investigation/source-identity-map.json",
+      "sha256": "sha256:697e36eafcdc668bef4bf9a60eddf6d8ef9fff4b84f9b03cec3aa5ae10f533c7"
+    },
+    "source_policy": {
+      "path": "fixtures/investigation/source-policy.json",
+      "sha256": "sha256:30ce73d74ff7f8bd85605b36db979abd676bcb2b173760d397ec7d75e96c6d90"
+    },
+    "structural_critique_schema": {
+      "path": "schemas/structural-critique.schema.json",
+      "sha256": "sha256:3c64d2f146cd47cd49517241ecfac0587e953dd35e2bcae1e2d6c1c8aa844a49"
+    },
+    "viewpoint_card_schema": {
+      "path": "schemas/viewpoint-card.schema.json",
+      "sha256": "sha256:37961c17ff5e2fca620f5f91d5f1c684cacea3c1b9414f5f597bfaf389c8d640"
+    },
+    "viewpoint_dossier_schema": {
+      "path": "schemas/viewpoint-dossier.schema.json",
+      "sha256": "sha256:9dc3004404cc4afd1823404e662241b3569edacd086eac3ca8d65e6a01f09536"
+    },
+    "viewpoint_society_protocol": {
+      "path": "docs/protocols/viewpoint-society.md",
+      "sha256": "sha256:79e699b0dffad534c09f80b86547d014a2663691c56a65b493006a1f48bef926"
+    },
+    "viewpoint_society_runner": {
+      "path": "src/roman_concrete_lab/agents/viewpoint_society.py",
+      "sha256": "sha256:9bee251bb2b84b32859f0e71893c407990652f3f612d9787a7e302ad2081899d"
+    },
+    "viewpoint_support_report_schema": {
+      "path": "schemas/viewpoint-support-report.schema.json",
+      "sha256": "sha256:95de968d6110d10526f6df184ae285a782b7595e348769243a922f255b658bb8"
+    },
+    "viewpoint_support_task_schema": {
+      "path": "schemas/viewpoint-support-task.schema.json",
+      "sha256": "sha256:ac477b610458a820e9a58227c2ac6b27c0675acd06501d53cbd099318b13d941"
+    }
+  },
+  "freeze_goal": "G10R-X",
+  "g10r_w_verdict": "RUNTIME_RESEARCH_LOOP_WIRED",
+  "g10r_w_wiring": {
+    "external_calls": false,
+    "files": {
+      "candidate_selection_schema": {
+        "path": "schemas/candidate-selection.schema.json",
+        "sha256": "sha256:0112474f12c09462b7da93b3882cd0a64bcbd1a13c47139409f6a08aa6548cdb"
+      },
+      "dossier_revision_schema": {
+        "path": "schemas/viewpoint-dossier-revision.schema.json",
+        "sha256": "sha256:dbc6163fb6e3324ac83514aa407f6cfea3ee79024038c8a94f27a4ea56b0cf19"
+      },
+      "evidence_bus_protocol": {
+        "path": "docs/protocols/society-evidence-bus.md",
+        "sha256": "sha256:84d7707f1916d51e19d80536e12703bcafc5dc02ed38440f2877fdfb89e02841"
+      },
+      "freeze_test": {
+        "path": "tests/agents/test_g10r_x_fresh_phase_a_freeze.py",
+        "sha256": "sha256:faeac8c9cdbddc125d4ae573e578e8a9da53a1cc97581e7323d8b8105c85d981"
+      },
+      "goal": {
+        "path": "docs/goals/G10R-W-live-research-loop-wiring.md",
+        "sha256": "sha256:8b6fffba515ee1c633912e58b22fc1b3415691ab67cd2a99e833f09aadaaf49e"
+      },
+      "live_runner": {
+        "path": "src/roman_concrete_lab/agents/investigation.py",
+        "sha256": "sha256:c9ae4b70709d369c7d3efe0daa114418a8198e9f521b3ee39e680ea19de461f8"
+      },
+      "next_goal": {
+        "path": "docs/goals/G10R-X-fresh-phase-a-freeze-after-wiring.md",
+        "sha256": "sha256:e5f51b0f9a4432ba0c4c66bd8b3b6265954a547dbc17bb0edb488a1cfc983bd0"
+      },
+      "open_viewpoint_schema": {
+        "path": "schemas/open-viewpoint-admission.schema.json",
+        "sha256": "sha256:613951f7c040252c5d5d5bc58c865b74056a374f8249249e3ecafa107de255c0"
+      },
+      "pilot_protocol": {
+        "path": "docs/protocols/active-investigation-pilot.md",
+        "sha256": "sha256:781a209082d45ee0518d09eaa9213ca4d0ee059cc8b5727c4a550d024c9ac99c"
+      },
+      "research_loop_ledger": {
+        "path": "src/roman_concrete_lab/agents/research_loop.py",
+        "sha256": "sha256:e7025f467276758f3b85ff24547ffd524b5b0098aa85b11598226f3f3ac44344"
+      },
+      "research_need_schema": {
+        "path": "schemas/research-need.schema.json",
+        "sha256": "sha256:b811aa126ca2b507da67b6fb15544ac67d8473b41eb2a55d9f589e14b4a19a65"
+      },
+      "viewpoint_dossier_schema": {
+        "path": "schemas/viewpoint-dossier.schema.json",
+        "sha256": "sha256:9dc3004404cc4afd1823404e662241b3569edacd086eac3ca8d65e6a01f09536"
+      },
+      "viewpoint_protocol": {
+        "path": "docs/protocols/viewpoint-society.md",
+        "sha256": "sha256:79e699b0dffad534c09f80b86547d014a2663691c56a65b493006a1f48bef926"
+      },
+      "viewpoint_society_runner": {
+        "path": "src/roman_concrete_lab/agents/viewpoint_society.py",
+        "sha256": "sha256:9bee251bb2b84b32859f0e71893c407990652f3f612d9787a7e302ad2081899d"
+      },
+      "wiring_report": {
+        "path": "artifacts/goals/G10R-W/report.json",
+        "sha256": "sha256:6a4e5afb9286972dd8bf344304cceba2ec4920334a5c13863eb7f9d24c2cb960"
+      },
+      "wiring_test": {
+        "path": "tests/agents/test_g10r_v_research_loop_wiring.py",
+        "sha256": "sha256:eaffcadfaedc6224d6bfda5cd78616742c5a42b2f03dc26d209576fc989cb258"
+      }
+    }
+  },
+  "hard_total_external_spend_cap_usd": 25.0,
+  "legal_outcomes": [
+    "ESCALATE_ACTIVE_SOCIETY_EVALUATION",
+    "DO_NOT_ESCALATE_ACTIVE_SOCIETY",
+    "INCONCLUSIVE_ACTIVE_INVESTIGATION"
+  ],
+  "limits_per_treatment_case": {
+    "document_fetches": 4,
+    "estimated_cost_usd": 25.0,
+    "input_tokens": 80000,
+    "output_tokens": 12000,
+    "payload_bytes": 5000000,
+    "queries": 12,
+    "retained_sources": 24,
+    "simulation_calls": 4
+  },
+  "manifest_id": "G10R-X-fresh-phase-a-research-loop-wiring-v1",
+  "maximum_estimated_model_cost_usd": 0.112,
+  "maximum_provider_calls": 60,
+  "model_policy": {
+    "api": "responses",
+    "model": "gpt-6-luna",
+    "provider": "openai",
+    "provider_managed_tools": [],
+    "reasoning_effort": "low",
+    "runtime_credentials_only": true,
+    "store": false
+  },
+  "pdf_extraction_policy": {
+    "max_extracted_characters": 750000,
+    "max_pdf_pages": 250,
+    "ocr": "OCR_REQUIRED; no undeclared fallback",
+    "parser": "pypdf-6.20.0-page-text",
+    "raw_storage": "ignored local data/raw/g10r only",
+    "shared_memory": "derived source-located evidence cards only"
+  },
+  "phase_b_case_count": 4,
+  "phase_b_treatment_case_count": 8,
+  "predecessor_manifest_id": "G10R-U-fresh-phase-a-research-loop-v1",
+  "predecessor_manifest_sha256": "sha256:b0f1ad1f973bb4911b8e126f1e86a14ef5f0d26a6262d166d389858381675b87",
+  "protocol_version": "g10r.4-active-investigation-pilot",
+  "simulation_policy": {
+    "all_outputs": "MODEL_ASSERTION",
+    "roman_concrete_adapter": "SIMULATOR_UNAVAILABLE",
+    "synthetic_diagnostics_score_eligible": false
+  },
+  "source_policy_sha256": "sha256:30ce73d74ff7f8bd85605b36db979abd676bcb2b173760d397ec7d75e96c6d90",
+  "treatments": {
+    "A0": "recorded-fixture deterministic plumbing control",
+    "A1": "single tool-using investigator",
+    "A2-M": "viewpoint society with structural support tasks, evidence-bus joins, deterministic focus, and bounded adjudication"
+  }
+}

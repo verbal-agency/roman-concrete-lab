@@ -1,0 +1,48 @@
+{
+  "authority": {
+    "credentials": "none",
+    "evidence_promotion": "prohibited",
+    "laboratory": "prohibited",
+    "model_calls": "none",
+    "network": "none",
+    "subscriptions": "prohibited"
+  },
+  "checks": {
+    "aggregate_cap_usd": 25.0,
+    "focused_tests_passed": true,
+    "full_suite_passed": true,
+    "g10r_t_ready": true,
+    "g10r_t_replay_complete": true,
+    "historical_manifest_not_overwritten": true,
+    "historical_namespaces_preserved": true,
+    "manifest_id_new": true,
+    "manifest_inputs_exist_and_hash": true,
+    "no_live_side_effects": true,
+    "phase_a_manifest_stable": true,
+    "phase_a_status": "AWAITING_OWNER_ACTIVATION",
+    "repeated_manifest_not_overwritten": true,
+    "source_policy_default_deny": true,
+    "source_policy_version": "g10r-source-policy-1.0",
+    "verification_artifact_consistent": true
+  },
+  "g10r_t_replay_sha256": "sha256:049e009ceae5eda912f0b5d46befae084ed8c566786fbb10c16452c4f1601b5f",
+  "g10r_t_verdict": "SOCIETY_RESEARCH_LOOP_READY",
+  "goal": "G10R-U",
+  "manifest_id": "G10R-U-fresh-phase-a-research-loop-v1",
+  "manifest_sha256": "sha256:b0f1ad1f973bb4911b8e126f1e86a14ef5f0d26a6262d166d389858381675b87",
+  "next_action": "Owner may review and separately authorize a paid Phase-B goal.",
+  "schema_version": "1.0",
+  "status": "PHASE_A_READY_FOR_OWNER_ACTIVATION",
+  "tests": {
+    "focused": {
+      "command": "/Users/wcu/miniforge3/bin/python3 -m pytest -q tests/agents/test_society_research_loop.py tests/agents/test_society_research_loop_ablation.py tests/agents/test_g10r_u_fresh_phase_a_freeze.py",
+      "output_tail": ".................                                                        [100%]\n17 passed in 8.85s",
+      "returncode": 0
+    },
+    "full": {
+      "command": "/Users/wcu/miniforge3/bin/python3 -m pytest -q",
+      "output_tail": "........................................................................ [ 46%]\n........................................................................ [ 92%]\n............                                                             [100%]\n156 passed in 44.33s",
+      "returncode": 0
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "authority": {
+    "credentials": "none",
+    "evidence_promotion": "prohibited",
+    "laboratory": "prohibited",
+    "model_calls": "none",
+    "network": "none",
+    "subscriptions": "prohibited"
+  },
+  "checks": {
+    "aggregate_cap_usd": 25.0,
+    "focused_tests_passed": true,
+    "full_suite_passed": true,
+    "g10r_w_ready": true,
+    "manifest_id_new": true,
+    "manifest_inputs_exist_and_hash": true,
+    "no_live_side_effects": true,
+    "phase_a_stable": true,
+    "predecessor_manifest_preserved": true,
+    "repeated_manifest_not_overwritten": true,
+    "source_policy_hash_present": true
+  },
+  "goal": "G10R-X",
+  "manifest_id": "G10R-X-fresh-phase-a-research-loop-wiring-v1",
+  "manifest_sha256": "sha256:8ddb3096705d3fbfa706361d93647574646d1c70e13f14987383a9c6e3d77b3c",
+  "next_action": "Owner may review and separately authorize G10R-V with this exact manifest.",
+  "predecessor_manifest_id": "G10R-U-fresh-phase-a-research-loop-v1",
+  "predecessor_manifest_sha256": "sha256:b0f1ad1f973bb4911b8e126f1e86a14ef5f0d26a6262d166d389858381675b87",
+  "schema_version": "1.0",
+  "status": "PHASE_A_READY_FOR_OWNER_ACTIVATION",
+  "tests": {
+    "focused": {
+      "command": "/Users/wcu/miniforge3/bin/python3 -m pytest -q tests/agents/test_g10r_v_research_loop_wiring.py tests/agents/test_society_research_loop.py tests/agents/test_society_research_loop_ablation.py tests/agents/test_g10r_u_fresh_phase_a_freeze.py tests/agents/test_g10r_x_fresh_phase_a_freeze.py",
+      "output_tail": "....................                                                     [100%]\n20 passed in 9.57s",
+      "returncode": 0
+    },
+    "full": {
+      "command": "/Users/wcu/miniforge3/bin/python3 -m pytest -q",
+      "output_tail": "........................................................................ [ 45%]\n........................................................................ [ 90%]\n...............                                                          [100%]\n159 passed in 48.02s",
+      "returncode": 0
+    }
+  }
+}

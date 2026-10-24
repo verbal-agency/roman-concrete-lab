@@ -302,6 +302,33 @@ class ViewpointSociety:
         self._shared = True
         return [deepcopy(self.dossiers[viewpoint_id]) for viewpoint_id in sorted(self.dossiers)]
 
+    def refresh_viewpoint(self, viewpoint_id: str) -> dict[str, Any]:
+        """Rebuild a shared dossier after later support reports arrive.
+
+        Sharing is a visibility boundary, not a freeze boundary.  Follow-up
+        retrieval and critique must be able to revise the dossier that
+        adjudication consumes while retaining the prior dossier in the
+        evidence bus for replay and dissent analysis.
+        """
+        if not self._shared:
+            raise PolicyBlocked("dossier refresh requires an initial shared round")
+        if viewpoint_id not in self.private_reports:
+            raise PolicyBlocked("unknown viewpoint")
+        report_ids = self.private_reports[viewpoint_id]
+        if not report_ids:
+            raise PolicyBlocked("viewpoint cannot refresh without a typed support report")
+        prior = self.dossiers.get(viewpoint_id)
+        revision = 2 if prior is None else sum(
+            1 for dossier_id in self.bus.dossiers if dossier_id.startswith(f"DOSSIER-{viewpoint_id}-R")
+        ) + 2
+        dossier = self.bus.build_dossier(
+            dossier_id=f"DOSSIER-{viewpoint_id}-R{revision}",
+            viewpoint_id=viewpoint_id,
+            report_ids=report_ids,
+        )
+        self.dossiers[viewpoint_id] = dossier
+        return deepcopy(dossier)
+
     def read_shared(self) -> list[dict[str, Any]]:
         if not self._shared:
             raise PolicyBlocked("viewpoint dossiers remain private before sharing")
