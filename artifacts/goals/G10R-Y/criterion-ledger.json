@@ -1,0 +1,36 @@
+{
+  "criteria": [
+    {
+      "artifact": "diagnosis.json#case_arm_loss_ledger",
+      "id": 1,
+      "passes": true,
+      "test": "test_reconstructs_all_case_arm_loss_ledgers"
+    },
+    {
+      "artifact": "diagnosis.json#case_arm_loss_ledger",
+      "id": 2,
+      "passes": true,
+      "test": "test_preserves_raw_discovery_and_unresolved_records"
+    },
+    {
+      "artifact": "ablation-matrix.json#causal_tests",
+      "id": 3,
+      "passes": true,
+      "test": "test_metadata_only_ablation_separates_acquisition_from_agent_design"
+    },
+    {
+      "artifact": "diagnosis.json#proposed_next_treatment_thresholds",
+      "id": 4,
+      "passes": true,
+      "test": "test_next_treatment_has_measurable_thresholds_and_stop_rule"
+    },
+    {
+      "artifact": "replay.json",
+      "id": 5,
+      "passes": true,
+      "test": "test_replay_is_deterministic_external_free_and_preserves_history"
+    }
+  ],
+  "goal": "G10R-Y",
+  "schema_version": "g10r-y-criteria.1"
+}

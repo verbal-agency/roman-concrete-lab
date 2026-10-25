@@ -1,0 +1,731 @@
+{
+  "arm_totals": {
+    "A1": {
+      "candidates": 96,
+      "cases": 4,
+      "credited_contributions": 0,
+      "estimated_cost_usd": 0.0051782,
+      "evidence_score": 0,
+      "fetches": 0,
+      "input_tokens": 21682,
+      "model_calls": 8,
+      "output_tokens": 6020,
+      "paper_cards": 0,
+      "pending_selections": 0,
+      "queries": 33,
+      "raw_discovery": 20,
+      "raw_hypotheses": 7,
+      "retained_sources": 96,
+      "rubric_score": 0,
+      "selections": 0
+    },
+    "A2-M": {
+      "candidates": 71,
+      "cases": 4,
+      "credited_contributions": 0,
+      "estimated_cost_usd": 0.0268305,
+      "evidence_score": 0,
+      "fetches": 0,
+      "input_tokens": 163405,
+      "model_calls": 52,
+      "output_tokens": 20980,
+      "paper_cards": 0,
+      "pending_selections": 21,
+      "queries": 39,
+      "raw_discovery": 6,
+      "raw_hypotheses": 4,
+      "retained_sources": 71,
+      "rubric_score": 0,
+      "selections": 21
+    }
+  },
+  "case_arm_loss_ledger": [
+    {
+      "acquisition": {
+        "candidate_count": 24,
+        "candidate_statuses": {
+          "METADATA_SCREENED": 24
+        },
+        "fetch_count": 0,
+        "mapping_count": 0,
+        "paper_card_count": 0,
+        "queries": 6,
+        "recorded_fetch_count": 0,
+        "retained_sources": 24,
+        "seek_locator_count": 0,
+        "selection_count": 0,
+        "selection_statuses": {}
+      },
+      "arm": "A1",
+      "attribution_and_scoring": {
+        "credited_contribution_count": 0,
+        "critical_failures": [],
+        "discovery_score_raw": 10,
+        "evidence_score": 0,
+        "hypothesis_count": 3,
+        "hypothesis_score_raw": 3,
+        "provenance_completeness": 1.0,
+        "raw_cited_source_count": 10,
+        "rubric_score": 0,
+        "unresolved_source_count": 9
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "cost": {
+        "estimated_cost_usd": 0.0014698,
+        "input_tokens": 5388,
+        "model_calls": 2,
+        "output_tokens": 1862
+      },
+      "evidence_locators": [
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-ACCESS-A1.json#budget.usage",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-ACCESS-A1.json#source_candidates",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-ACCESS-A1.json#research_loop",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-ACCESS-A1.json#viewpoint_society",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-ACCESS-A1.json#last_result.score"
+      ],
+      "status": "COMPLETED",
+      "topology": {
+        "active_viewpoint_count": 0,
+        "active_viewpoint_ids": [],
+        "complete_without_observable_report_ids": [],
+        "critique_count": 0,
+        "dossier_count": 0,
+        "dossier_revision_count": 0,
+        "focus_decision_count": 0,
+        "open_slot_activation_mismatch": false,
+        "open_slot_statuses": [],
+        "preadmitted_open_viewpoint_ids": [],
+        "protocol": null,
+        "support_report_count": 0,
+        "support_stances": {},
+        "support_task_count": 0
+      }
+    },
+    {
+      "acquisition": {
+        "candidate_count": 18,
+        "candidate_statuses": {
+          "METADATA_SCREENED": 18
+        },
+        "fetch_count": 0,
+        "mapping_count": 0,
+        "paper_card_count": 0,
+        "queries": 10,
+        "recorded_fetch_count": 0,
+        "retained_sources": 18,
+        "seek_locator_count": 5,
+        "selection_count": 5,
+        "selection_statuses": {
+          "PENDING": 5
+        }
+      },
+      "arm": "A2-M",
+      "attribution_and_scoring": {
+        "credited_contribution_count": 0,
+        "critical_failures": [],
+        "discovery_score_raw": 1,
+        "evidence_score": 0,
+        "hypothesis_count": 1,
+        "hypothesis_score_raw": 1,
+        "provenance_completeness": 1.0,
+        "raw_cited_source_count": 1,
+        "rubric_score": 0,
+        "unresolved_source_count": 1
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "cost": {
+        "estimated_cost_usd": 0.006776300000000001,
+        "input_tokens": 41303,
+        "model_calls": 13,
+        "output_tokens": 5292
+      },
+      "evidence_locators": [
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-ACCESS-A2-M.json#budget.usage",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-ACCESS-A2-M.json#source_candidates",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-ACCESS-A2-M.json#research_loop",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-ACCESS-A2-M.json#viewpoint_society",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-ACCESS-A2-M.json#last_result.score"
+      ],
+      "status": "COMPLETED",
+      "topology": {
+        "active_viewpoint_count": 4,
+        "active_viewpoint_ids": [
+          "S-ACTIVE-ACCESS-M1",
+          "S-ACTIVE-ACCESS-M2",
+          "S-ACTIVE-ACCESS-NULL",
+          "S-ACTIVE-ACCESS-OPEN-ADMITTED"
+        ],
+        "complete_without_observable_report_ids": [
+          "406f093e414db206"
+        ],
+        "critique_count": 3,
+        "dossier_count": 4,
+        "dossier_revision_count": 2,
+        "focus_decision_count": 1,
+        "open_slot_activation_mismatch": true,
+        "open_slot_statuses": [
+          "ABSTAINED_NO_DISTINCT_VIEWPOINT"
+        ],
+        "preadmitted_open_viewpoint_ids": [
+          "S-ACTIVE-ACCESS-OPEN-ADMITTED"
+        ],
+        "protocol": "g10d.1-viewpoint-centered-society",
+        "support_report_count": 43,
+        "support_stances": {
+          "NON_DISCRIMINATING": 40,
+          "SUPPORTS": 3
+        },
+        "support_task_count": 20
+      }
+    },
+    {
+      "acquisition": {
+        "candidate_count": 24,
+        "candidate_statuses": {
+          "METADATA_SCREENED": 24
+        },
+        "fetch_count": 0,
+        "mapping_count": 0,
+        "paper_card_count": 0,
+        "queries": 9,
+        "recorded_fetch_count": 0,
+        "retained_sources": 24,
+        "seek_locator_count": 0,
+        "selection_count": 0,
+        "selection_statuses": {}
+      },
+      "arm": "A1",
+      "attribution_and_scoring": {
+        "credited_contribution_count": 0,
+        "critical_failures": [],
+        "discovery_score_raw": 0,
+        "evidence_score": 0,
+        "hypothesis_count": 1,
+        "hypothesis_score_raw": 1,
+        "provenance_completeness": 0.0,
+        "raw_cited_source_count": 0,
+        "rubric_score": 0,
+        "unresolved_source_count": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "cost": {
+        "estimated_cost_usd": 0.0011692,
+        "input_tokens": 5322,
+        "model_calls": 2,
+        "output_tokens": 1274
+      },
+      "evidence_locators": [
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-LINEAGE-A1.json#budget.usage",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-LINEAGE-A1.json#source_candidates",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-LINEAGE-A1.json#research_loop",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-LINEAGE-A1.json#viewpoint_society",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-LINEAGE-A1.json#last_result.score"
+      ],
+      "status": "COMPLETED",
+      "topology": {
+        "active_viewpoint_count": 0,
+        "active_viewpoint_ids": [],
+        "complete_without_observable_report_ids": [],
+        "critique_count": 0,
+        "dossier_count": 0,
+        "dossier_revision_count": 0,
+        "focus_decision_count": 0,
+        "open_slot_activation_mismatch": false,
+        "open_slot_statuses": [],
+        "preadmitted_open_viewpoint_ids": [],
+        "protocol": null,
+        "support_report_count": 0,
+        "support_stances": {},
+        "support_task_count": 0
+      }
+    },
+    {
+      "acquisition": {
+        "candidate_count": 5,
+        "candidate_statuses": {
+          "METADATA_SCREENED": 5
+        },
+        "fetch_count": 0,
+        "mapping_count": 0,
+        "paper_card_count": 0,
+        "queries": 9,
+        "recorded_fetch_count": 0,
+        "retained_sources": 5,
+        "seek_locator_count": 2,
+        "selection_count": 2,
+        "selection_statuses": {
+          "PENDING": 2
+        }
+      },
+      "arm": "A2-M",
+      "attribution_and_scoring": {
+        "credited_contribution_count": 0,
+        "critical_failures": [],
+        "discovery_score_raw": 2,
+        "evidence_score": 0,
+        "hypothesis_count": 1,
+        "hypothesis_score_raw": 1,
+        "provenance_completeness": 0.0,
+        "raw_cited_source_count": 2,
+        "rubric_score": 0,
+        "unresolved_source_count": 2
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "cost": {
+        "estimated_cost_usd": 0.006270899999999999,
+        "input_tokens": 34969,
+        "model_calls": 13,
+        "output_tokens": 5548
+      },
+      "evidence_locators": [
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-LINEAGE-A2-M.json#budget.usage",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-LINEAGE-A2-M.json#source_candidates",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-LINEAGE-A2-M.json#research_loop",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-LINEAGE-A2-M.json#viewpoint_society",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-LINEAGE-A2-M.json#last_result.score"
+      ],
+      "status": "COMPLETED",
+      "topology": {
+        "active_viewpoint_count": 4,
+        "active_viewpoint_ids": [
+          "S-ACTIVE-LINEAGE-M1",
+          "S-ACTIVE-LINEAGE-M2",
+          "S-ACTIVE-LINEAGE-NULL",
+          "S-ACTIVE-LINEAGE-OPEN-ADMITTED"
+        ],
+        "complete_without_observable_report_ids": [
+          "09cc05955444c149",
+          "2b4019a125893a08",
+          "89a16bf0e9b83930"
+        ],
+        "critique_count": 3,
+        "dossier_count": 4,
+        "dossier_revision_count": 2,
+        "focus_decision_count": 1,
+        "open_slot_activation_mismatch": true,
+        "open_slot_statuses": [
+          "ABSTAINED_NO_DISTINCT_VIEWPOINT"
+        ],
+        "preadmitted_open_viewpoint_ids": [
+          "S-ACTIVE-LINEAGE-OPEN-ADMITTED"
+        ],
+        "protocol": "g10d.1-viewpoint-centered-society",
+        "support_report_count": 43,
+        "support_stances": {
+          "NON_DISCRIMINATING": 40,
+          "SUPPORTS": 3
+        },
+        "support_task_count": 20
+      }
+    },
+    {
+      "acquisition": {
+        "candidate_count": 24,
+        "candidate_statuses": {
+          "METADATA_SCREENED": 24
+        },
+        "fetch_count": 0,
+        "mapping_count": 0,
+        "paper_card_count": 0,
+        "queries": 9,
+        "recorded_fetch_count": 0,
+        "retained_sources": 24,
+        "seek_locator_count": 0,
+        "selection_count": 0,
+        "selection_statuses": {}
+      },
+      "arm": "A1",
+      "attribution_and_scoring": {
+        "credited_contribution_count": 0,
+        "critical_failures": [],
+        "discovery_score_raw": 4,
+        "evidence_score": 0,
+        "hypothesis_count": 1,
+        "hypothesis_score_raw": 1,
+        "provenance_completeness": 1.0,
+        "raw_cited_source_count": 4,
+        "rubric_score": 0,
+        "unresolved_source_count": 4
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "cost": {
+        "estimated_cost_usd": 0.0011779,
+        "input_tokens": 5474,
+        "model_calls": 2,
+        "output_tokens": 1261
+      },
+      "evidence_locators": [
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-SIM-A1.json#budget.usage",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-SIM-A1.json#source_candidates",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-SIM-A1.json#research_loop",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-SIM-A1.json#viewpoint_society",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-SIM-A1.json#last_result.score"
+      ],
+      "status": "COMPLETED",
+      "topology": {
+        "active_viewpoint_count": 0,
+        "active_viewpoint_ids": [],
+        "complete_without_observable_report_ids": [],
+        "critique_count": 0,
+        "dossier_count": 0,
+        "dossier_revision_count": 0,
+        "focus_decision_count": 0,
+        "open_slot_activation_mismatch": false,
+        "open_slot_statuses": [],
+        "preadmitted_open_viewpoint_ids": [],
+        "protocol": null,
+        "support_report_count": 0,
+        "support_stances": {},
+        "support_task_count": 0
+      }
+    },
+    {
+      "acquisition": {
+        "candidate_count": 24,
+        "candidate_statuses": {
+          "METADATA_SCREENED": 24
+        },
+        "fetch_count": 0,
+        "mapping_count": 0,
+        "paper_card_count": 0,
+        "queries": 10,
+        "recorded_fetch_count": 0,
+        "retained_sources": 24,
+        "seek_locator_count": 7,
+        "selection_count": 7,
+        "selection_statuses": {
+          "PENDING": 7
+        }
+      },
+      "arm": "A2-M",
+      "attribution_and_scoring": {
+        "credited_contribution_count": 0,
+        "critical_failures": [],
+        "discovery_score_raw": 1,
+        "evidence_score": 0,
+        "hypothesis_count": 1,
+        "hypothesis_score_raw": 1,
+        "provenance_completeness": 1.0,
+        "raw_cited_source_count": 1,
+        "rubric_score": 0,
+        "unresolved_source_count": 1
+      },
+      "case_id": "S-ACTIVE-SIM",
+      "cost": {
+        "estimated_cost_usd": 0.0067938,
+        "input_tokens": 42268,
+        "model_calls": 13,
+        "output_tokens": 5134
+      },
+      "evidence_locators": [
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-SIM-A2-M.json#budget.usage",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-SIM-A2-M.json#source_candidates",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-SIM-A2-M.json#research_loop",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-SIM-A2-M.json#viewpoint_society",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-SIM-A2-M.json#last_result.score"
+      ],
+      "status": "COMPLETED",
+      "topology": {
+        "active_viewpoint_count": 4,
+        "active_viewpoint_ids": [
+          "S-ACTIVE-SIM-M1",
+          "S-ACTIVE-SIM-M2",
+          "S-ACTIVE-SIM-NULL",
+          "S-ACTIVE-SIM-OPEN-ADMITTED"
+        ],
+        "complete_without_observable_report_ids": [],
+        "critique_count": 3,
+        "dossier_count": 4,
+        "dossier_revision_count": 2,
+        "focus_decision_count": 1,
+        "open_slot_activation_mismatch": false,
+        "open_slot_statuses": [
+          "ADMITTED"
+        ],
+        "preadmitted_open_viewpoint_ids": [
+          "S-ACTIVE-SIM-OPEN-ADMITTED"
+        ],
+        "protocol": "g10d.1-viewpoint-centered-society",
+        "support_report_count": 43,
+        "support_stances": {
+          "NON_DISCRIMINATING": 40,
+          "SUPPORTS": 3
+        },
+        "support_task_count": 20
+      }
+    },
+    {
+      "acquisition": {
+        "candidate_count": 24,
+        "candidate_statuses": {
+          "METADATA_SCREENED": 24
+        },
+        "fetch_count": 0,
+        "mapping_count": 0,
+        "paper_card_count": 0,
+        "queries": 9,
+        "recorded_fetch_count": 0,
+        "retained_sources": 24,
+        "seek_locator_count": 0,
+        "selection_count": 0,
+        "selection_statuses": {}
+      },
+      "arm": "A1",
+      "attribution_and_scoring": {
+        "credited_contribution_count": 0,
+        "critical_failures": [],
+        "discovery_score_raw": 6,
+        "evidence_score": 0,
+        "hypothesis_count": 2,
+        "hypothesis_score_raw": 2,
+        "provenance_completeness": 1.0,
+        "raw_cited_source_count": 6,
+        "rubric_score": 0,
+        "unresolved_source_count": 6
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "cost": {
+        "estimated_cost_usd": 0.0013613000000000002,
+        "input_tokens": 5498,
+        "model_calls": 2,
+        "output_tokens": 1623
+      },
+      "evidence_locators": [
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-TRANSFER-A1.json#budget.usage",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-TRANSFER-A1.json#source_candidates",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-TRANSFER-A1.json#research_loop",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-TRANSFER-A1.json#viewpoint_society",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-TRANSFER-A1.json#last_result.score"
+      ],
+      "status": "COMPLETED",
+      "topology": {
+        "active_viewpoint_count": 0,
+        "active_viewpoint_ids": [],
+        "complete_without_observable_report_ids": [],
+        "critique_count": 0,
+        "dossier_count": 0,
+        "dossier_revision_count": 0,
+        "focus_decision_count": 0,
+        "open_slot_activation_mismatch": false,
+        "open_slot_statuses": [],
+        "preadmitted_open_viewpoint_ids": [],
+        "protocol": null,
+        "support_report_count": 0,
+        "support_stances": {},
+        "support_task_count": 0
+      }
+    },
+    {
+      "acquisition": {
+        "candidate_count": 24,
+        "candidate_statuses": {
+          "METADATA_SCREENED": 24
+        },
+        "fetch_count": 0,
+        "mapping_count": 0,
+        "paper_card_count": 0,
+        "queries": 10,
+        "recorded_fetch_count": 0,
+        "retained_sources": 24,
+        "seek_locator_count": 7,
+        "selection_count": 7,
+        "selection_statuses": {
+          "PENDING": 7
+        }
+      },
+      "arm": "A2-M",
+      "attribution_and_scoring": {
+        "credited_contribution_count": 0,
+        "critical_failures": [],
+        "discovery_score_raw": 2,
+        "evidence_score": 0,
+        "hypothesis_count": 1,
+        "hypothesis_score_raw": 1,
+        "provenance_completeness": 1.0,
+        "raw_cited_source_count": 2,
+        "rubric_score": 0,
+        "unresolved_source_count": 2
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "cost": {
+        "estimated_cost_usd": 0.006989499999999999,
+        "input_tokens": 44865,
+        "model_calls": 13,
+        "output_tokens": 5006
+      },
+      "evidence_locators": [
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-TRANSFER-A2-M.json#budget.usage",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-TRANSFER-A2-M.json#source_candidates",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-TRANSFER-A2-M.json#research_loop",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-TRANSFER-A2-M.json#viewpoint_society",
+        "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-TRANSFER-A2-M.json#last_result.score"
+      ],
+      "status": "COMPLETED",
+      "topology": {
+        "active_viewpoint_count": 4,
+        "active_viewpoint_ids": [
+          "S-ACTIVE-TRANSFER-M1",
+          "S-ACTIVE-TRANSFER-M2",
+          "S-ACTIVE-TRANSFER-NULL",
+          "S-ACTIVE-TRANSFER-OPEN-ADMITTED"
+        ],
+        "complete_without_observable_report_ids": [],
+        "critique_count": 3,
+        "dossier_count": 4,
+        "dossier_revision_count": 2,
+        "focus_decision_count": 1,
+        "open_slot_activation_mismatch": false,
+        "open_slot_statuses": [
+          "ADMITTED"
+        ],
+        "preadmitted_open_viewpoint_ids": [
+          "S-ACTIVE-TRANSFER-OPEN-ADMITTED"
+        ],
+        "protocol": "g10d.1-viewpoint-centered-society",
+        "support_report_count": 43,
+        "support_stances": {
+          "NON_DISCRIMINATING": 40,
+          "SUPPORTS": 3
+        },
+        "support_task_count": 20
+      }
+    }
+  ],
+  "comparisons": {
+    "a2_to_a1_cost_ratio": 5.1814,
+    "a2_to_a1_input_token_ratio": 7.5364,
+    "a2_to_a1_raw_discovery_ratio": 0.3,
+    "total_fetches": 0,
+    "total_paper_cards": 0,
+    "total_retained_candidates": 167
+  },
+  "conclusion": "The paid result combines a shared acquisition-conversion failure with independent society design and efficiency defects. It does not justify abandoning the society architecture, and it does not justify another paid run before offline repair.",
+  "external_calls": false,
+  "findings": [
+    {
+      "causal_status": "NECESSARY_COMMON_CAUSE_OF_ZERO_EVIDENCE",
+      "confidence": "HIGH",
+      "evidence": [
+        "artifacts/goals/G10R-V/spend-ledger.json#arms",
+        "artifacts/goals/G10R-V/checkpoints"
+      ],
+      "finding": "Search worked, but neither arm converted metadata into content: 167 retained candidates produced zero fetches and zero paper cards.",
+      "finding_id": "Y-F1",
+      "layer": "SHARED_ACQUISITION_CONVERSION",
+      "severity": "CRITICAL"
+    },
+    {
+      "causal_status": "DIRECT_RUNTIME_CAUSE",
+      "confidence": "HIGH",
+      "evidence": [
+        "artifacts/goals/G10R-V/checkpoints#research_loop.selections",
+        "src/roman_concrete_lab/agents/investigation.py#_run_a2m"
+      ],
+      "finding": "All 21 A2-M candidate selections remained PENDING/SEEK_LOCATOR; the live loop has no post-selection locator-resolution turn, so no selected metadata record can become fetchable unless the original plan already names a public content locator.",
+      "finding_id": "Y-F2",
+      "layer": "LOCATOR_RESOLUTION",
+      "severity": "CRITICAL"
+    },
+    {
+      "causal_status": "INDEPENDENT_AGENT_DESIGN_DEFECT",
+      "confidence": "HIGH",
+      "evidence": [
+        "artifacts/goals/G10R-V/checkpoints#viewpoint_society.active_ids",
+        "artifacts/goals/G10R-V/checkpoints#research_loop.open_slot",
+        "src/roman_concrete_lab/agents/investigation.py#_run_a2m"
+      ],
+      "finding": "The live society pre-admitted and funded an OPEN-ADMITTED viewpoint before evidence sharing in every case; two later open-slot records abstained while that viewpoint remained active with tasks, reports, and a dossier.",
+      "finding_id": "Y-F3",
+      "layer": "OPEN_SLOT_DESIGN",
+      "severity": "HIGH"
+    },
+    {
+      "causal_status": "READINESS_FIXTURE_FALSE_POSITIVE",
+      "confidence": "HIGH",
+      "evidence": [
+        "src/roman_concrete_lab/agents/research_loop.py",
+        "artifacts/goals/G10R-Y/ablation-matrix.json"
+      ],
+      "finding": "The prior positive fixture assumed direct public locators and its metadata-only branch was schema-invalid; after repair, an adaptive arm can still claim an open-slot contribution with zero evidence cards.",
+      "finding_id": "Y-F4",
+      "layer": "OFFLINE_GATE_VALIDITY",
+      "severity": "HIGH"
+    },
+    {
+      "causal_status": "INDEPENDENT_EFFICIENCY_FAILURE",
+      "confidence": "HIGH",
+      "evidence": [
+        "artifacts/goals/G10R-V/spend-ledger.json#arms"
+      ],
+      "finding": "A2-M used 52 model calls and 7.54x A1 input tokens while producing 30% of A1's raw discovery count and no evidence gain.",
+      "finding_id": "Y-F5",
+      "layer": "COORDINATION_OVERHEAD",
+      "severity": "HIGH"
+    },
+    {
+      "causal_status": "PROTECTIVE_NOT_PRIMARY_CAUSE",
+      "confidence": "HIGH",
+      "evidence": [
+        "artifacts/goals/G10R-V/run.json#arm_results",
+        "artifacts/goals/G10R-V/report.md"
+      ],
+      "finding": "The paid scorer retained unresolved discoveries and hypotheses but correctly gave zero evidence/rubric credit without a fetched card; identity relabeling alone cannot repair the result.",
+      "finding_id": "Y-F6",
+      "layer": "PAID_SCORER",
+      "severity": "LOW"
+    }
+  ],
+  "goal": "G10R-Y",
+  "historical_source_hashes": {
+    "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-ACCESS-A1.json": "sha256:62009468ecb2dd460024fa3ae7f402f59224f702732247f4ba1265a1e6066112",
+    "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-ACCESS-A2-M.json": "sha256:6f9db77232e767430a6b0c64356d3503cc86f34d95881c7d945a889e604ec46b",
+    "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-LINEAGE-A1.json": "sha256:40df1eb4877a32448b77549d39d09e8186a9da4d3f6d0606d9926c36cddb3799",
+    "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-LINEAGE-A2-M.json": "sha256:e4ba43b5bef280b9217a0de17fdb45e85ff9f960292c2d05f69034336675c1ab",
+    "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-SIM-A1.json": "sha256:119ef92545049cff55326ab6f08e979014ce6f4e077ff13fa33b0410f6962ac2",
+    "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-SIM-A2-M.json": "sha256:3a9eebd8f963100370c739faeef549b4af074e622724db7a1e15d612b29d844d",
+    "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-TRANSFER-A1.json": "sha256:e7d51bc1f7bb9324ddddb93d5a952e12a2d2f530aa8a193621da6da0067e5e66",
+    "artifacts/goals/G10R-V/checkpoints/S-ACTIVE-TRANSFER-A2-M.json": "sha256:d728fbdc315ac2fac1eb20d86a9e7628edcc76863c0d000b5c39ab578bb7386f",
+    "artifacts/goals/G10R-V/manifest.json": "sha256:f049c8dd5b45093d31dea9a2d9042e80a99fa06c4badd3888af48063d37343c4",
+    "artifacts/goals/G10R-V/replay.json": "sha256:5cb2b379d3484da9bc8ededc2b607f97dc9743929f9be98934bb5d5702b144d2",
+    "artifacts/goals/G10R-V/report.md": "sha256:91307c72ff1eb9806095aa38ae5cc4c71cd9a42eced484bd091fc799c608b48c",
+    "artifacts/goals/G10R-V/run.json": "sha256:0b6e993f17fb9621c96078a758fd82ee895cf6d15fc845fd5000a53edcea7c36",
+    "artifacts/goals/G10R-V/spend-ledger.json": "sha256:6bbecc060d2bf0225e2f2476155519be3eb77e2514120a8c71f13fbd3b71f994"
+  },
+  "manifest_sha256": "sha256:8ddb3096705d3fbfa706361d93647574646d1c70e13f14987383a9c6e3d77b3c",
+  "proposed_next_treatment_thresholds": {
+    "attribution_completeness": "100% of credited contributions resolve through action -> candidate -> card/typed discriminator -> dossier -> portfolio; unresolved candidates remain reviewable but uncredited.",
+    "budget_parity": "A1 and A2-M retain identical per-case query, fetch, payload, simulation, input-token, output-token, cost, stopping, and source-policy ceilings; actual use and value-per-cost remain separate reported outcomes and excess overhead cannot be normalized away.",
+    "evidence_card_yield": "Before a paid freeze, recorded positive fixtures for every selected case family must expose a policy-permitted content route; a live comparison is INCONCLUSIVE unless at least two cases yield a card in each arm or the trace proves an arm-specific acquisition difference.",
+    "stop_rule": "Do not freeze or pay for another comparison until all offline remediations pass metadata-only, fetchable, contradictory, malformed, partial-failure, budget-exhaustion, and replay fixtures. After any later paid run, stop escalation unless A2-M has a unique source-backed gain, noninferior total score, zero critical failures, and no common zero-content evaluation collapse.",
+    "unique_attributable_contribution": "At least one A2-M contribution absent from A1 must bind action, candidate identity, permitted content/card, claim, and final portfolio; metadata-only or open-slot admission alone earns zero."
+  },
+  "ranked_remediations": [
+    {
+      "change": "Add a typed post-search locator-resolution turn shared by A1 and A2-M, and require recorded development cases to prove at least one policy-permitted content route before any new freeze.",
+      "id": "R1_LOCATOR_HEADROOM",
+      "rank": 1,
+      "success": "Both arms can turn a metadata candidate into a selected public locator and page-aware card; metadata-only cases terminate as typed no-content, not silent completion."
+    },
+    {
+      "change": "Remove pre-admission. Propose and activate the open viewpoint only after shared evidence, with a distinct attributable basis; abstention creates no tasks, calls, dossier, or focus allocation.",
+      "id": "R2_EVIDENCE_CONDITIONED_OPEN_SLOT",
+      "rank": 2,
+      "success": "Metadata-only fixtures never admit or score an open viewpoint; admitted fixtures bind the viewpoint to a card or reviewed candidate and discriminator."
+    },
+    {
+      "change": "Align deterministic and paid scoring: COMPLETE support needs observable work, and unique attributable contribution requires the same source/action/card joins used by the paid scorer.",
+      "id": "R3_COMPLETION_AND_SCORE_PARITY",
+      "rank": 3,
+      "success": "No zero-card arm earns evidence or unique-attributable credit; unsupported records remain typed and reviewable."
+    },
+    {
+      "change": "Do not instantiate every structural task for every viewpoint. Create support work from unresolved needs, deduplicate it before model calls, and report value and actual usage separately.",
+      "id": "R4_ADAPTIVE_COORDINATION_BUDGET",
+      "rank": 4,
+      "success": "The society preserves null/rival coverage while reducing non-discriminating reports and demonstrates a source-backed gain under the same hard per-case ceilings."
+    }
+  ],
+  "schema_version": "g10r-y-diagnosis.1",
+  "source_outcome": "DO_NOT_ESCALATE_ACTIVE_SOCIETY",
+  "status": "POST_V_DIAGNOSIS_READY"
+}

@@ -1,0 +1,163 @@
+{
+  "causal_tests": {
+    "adaptive_open_slot_can_false-positive_without_content": true,
+    "agent_design_and_shared_acquisition_are_distinguishable": true,
+    "shared_content_headroom_controls_evidence_yield": true
+  },
+  "conditions": {
+    "FETCHABLE_PUBLIC_CONTENT": {
+      "R0_SINGLE": {
+        "budget_usage": {
+          "document_fetches": 1,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 171,
+          "queries": 1,
+          "retained_sources": 0,
+          "simulation_calls": 0
+        },
+        "content_hash": "sha256:6f96f43f153f63f683863a2e3e9255d21de029e400e21091b75fe10e6688b573",
+        "metrics": {
+          "authority_integrity": 1,
+          "canonical_source_recall": 1.0,
+          "contradiction_discriminator_value": 0,
+          "cost_token_efficiency": 0.1111111111111111,
+          "discovery_candidate_count": 1,
+          "dossier_membership_integrity": 1,
+          "duplicate_work_rate": 0.0,
+          "evidence_to_final_handoff_retention": 1,
+          "paper_card_count": 1,
+          "pending_novel_candidates": 0,
+          "successful_fetch_count": 1,
+          "task_accuracy": 1,
+          "unique_attributable_contributions": 1
+        },
+        "open_slot_statuses": [
+          "ABSTAINED_NO_DISTINCT_VIEWPOINT"
+        ],
+        "selection_statuses": {
+          "SELECTED": 1
+        },
+        "terminal": "COMPLETED"
+      },
+      "R3_VIEWPOINT_ADAPTIVE": {
+        "budget_usage": {
+          "document_fetches": 2,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 346,
+          "queries": 3,
+          "retained_sources": 0,
+          "simulation_calls": 0
+        },
+        "content_hash": "sha256:0edb12a949f571e6ec341185992b3ace8043e92fec8309185eaafdad03ad0249",
+        "metrics": {
+          "authority_integrity": 1,
+          "canonical_source_recall": 0.6666666666666666,
+          "contradiction_discriminator_value": 2,
+          "cost_token_efficiency": 0.06666666666666667,
+          "discovery_candidate_count": 3,
+          "dossier_membership_integrity": 1,
+          "duplicate_work_rate": 0.0,
+          "evidence_to_final_handoff_retention": 1,
+          "paper_card_count": 2,
+          "pending_novel_candidates": 1,
+          "successful_fetch_count": 2,
+          "task_accuracy": 1,
+          "unique_attributable_contributions": 3
+        },
+        "open_slot_statuses": [
+          "ADMITTED"
+        ],
+        "selection_statuses": {
+          "SELECTED": 3
+        },
+        "terminal": "COMPLETED"
+      }
+    },
+    "METADATA_ONLY": {
+      "R0_SINGLE": {
+        "budget_usage": {
+          "document_fetches": 0,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 0,
+          "queries": 1,
+          "retained_sources": 0,
+          "simulation_calls": 0
+        },
+        "content_hash": "sha256:29e1d71bc2d1ec01839a8c15b983d35129e32ab9bf31d0e00261e8e596c54e45",
+        "metrics": {
+          "authority_integrity": 1,
+          "canonical_source_recall": 0.0,
+          "contradiction_discriminator_value": 0,
+          "cost_token_efficiency": 0.14285714285714285,
+          "discovery_candidate_count": 1,
+          "dossier_membership_integrity": 1,
+          "duplicate_work_rate": 0.0,
+          "evidence_to_final_handoff_retention": 1,
+          "paper_card_count": 0,
+          "pending_novel_candidates": 1,
+          "successful_fetch_count": 0,
+          "task_accuracy": 1,
+          "unique_attributable_contributions": 0
+        },
+        "open_slot_statuses": [
+          "ABSTAINED_NO_DISTINCT_VIEWPOINT"
+        ],
+        "selection_statuses": {
+          "PENDING": 1
+        },
+        "terminal": "COMPLETED"
+      },
+      "R3_VIEWPOINT_ADAPTIVE": {
+        "budget_usage": {
+          "document_fetches": 0,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 0,
+          "queries": 3,
+          "retained_sources": 0,
+          "simulation_calls": 0
+        },
+        "content_hash": "sha256:62280be7959956c6ab37b346be2493cde2462c93584c55b1f34b3847fe0b7202",
+        "metrics": {
+          "authority_integrity": 1,
+          "canonical_source_recall": 0.0,
+          "contradiction_discriminator_value": 2,
+          "cost_token_efficiency": 0.1,
+          "discovery_candidate_count": 3,
+          "dossier_membership_integrity": 1,
+          "duplicate_work_rate": 0.0,
+          "evidence_to_final_handoff_retention": 1,
+          "paper_card_count": 0,
+          "pending_novel_candidates": 3,
+          "successful_fetch_count": 0,
+          "task_accuracy": 1,
+          "unique_attributable_contributions": 1
+        },
+        "open_slot_statuses": [
+          "ADMITTED"
+        ],
+        "selection_statuses": {
+          "PENDING": 3
+        },
+        "terminal": "COMPLETED"
+      }
+    }
+  },
+  "diagnostic_compatibility_shim": "The frozen G10R-T metadata branch emits legacy SEEK_LAWFUL_LOCATOR; this evaluator extends the schema in memory only so the path can be diagnosed without mutating G10R-X-hashed code.",
+  "experiment": "Run the same deterministic single/adaptive arms with public-content locators and with every candidate reduced to metadata-only.",
+  "external_calls": false,
+  "goal": "G10R-Y",
+  "interpretation": {
+    "agent_design": "The adaptive fixture still admits an open viewpoint and counts a unique contribution with zero cards, proving a separate open-slot/scoring defect.",
+    "scoring": "The paid scorer correctly withheld evidence credit; the deterministic readiness fixture was more permissive than the paid evaluator.",
+    "shared_acquisition": "Removing lawful content routes collapses paper-card yield in both arms, matching the paid run's zero-fetch/zero-card result."
+  },
+  "schema_version": "g10r-y-ablation.1"
+}

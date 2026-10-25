@@ -1,6 +1,6 @@
 # G10R-Y — Diagnose the post-wiring paid comparison
 
-**Status:** proposed
+**Status:** complete — `POST_V_DIAGNOSIS_READY`
 **Dependencies:** G10R-V complete with `DO_NOT_ESCALATE_ACTIVE_SOCIETY`,
 `artifacts/goals/G10R-V/run.json`, `replay.json`, `report.md`, and
 `spend-ledger.json`
@@ -52,3 +52,15 @@ informative.
 
 No result from this goal authorizes evidence promotion, lab work, or another
 paid run by itself.
+
+## Completion evidence
+
+- `artifacts/goals/G10R-Y/diagnosis.json` reconstructs all eight case/arm
+  traces and records the ranked remediations and next-treatment thresholds.
+- `artifacts/goals/G10R-Y/ablation-matrix.json` separates shared content
+  headroom from the independent open-slot/readiness-fixture false positive.
+- `artifacts/goals/G10R-Y/replay.json` is deterministic, external-free, and
+  confirms that all historical G10R-V artifacts remained unchanged.
+- `artifacts/goals/G10R-Y/criterion-ledger.json` maps all five acceptance
+  criteria to passing tests and artifacts.
+- The handoff routes only to G10R-Z, an offline repair gate.

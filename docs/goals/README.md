@@ -10,6 +10,10 @@ After the separately activated G10R-V comparison, a negative result routes to
 G10R-Y for offline diagnosis and ablation; do not repeat paid execution from a
 cycle invocation alone.
 
+After G10R-Y completes with `POST_V_DIAGNOSIS_READY`, G10R-Z is the only
+eligible society goal. It repairs acquisition headroom and treatment validity
+offline and cannot create a freeze or activate a paid run.
+
 1. Read `docs/research_program_v2.md`, `docs/roadmap.md`, the G-1 decision when the selected goal is G00 or later, and the selected goal completely.
 2. Verify that every dependency and entry gate is satisfied from repository artifacts. Do not infer a gate result.
 3. Work only inside the selected goal's scope. Record unrelated findings in `docs/backlog.md` with evidence and destination.
