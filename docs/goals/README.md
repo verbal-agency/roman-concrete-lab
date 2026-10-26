@@ -25,6 +25,12 @@ manifest and passes its offline fault-injection matrix, then requires explicit o
 the exact manifest and remains subject to the frozen source policy, budgets,
 and no-promotion authority boundary.
 
+After G10R-AB returns `INCONCLUSIVE_ACTIVE_INVESTIGATION` because common
+content headroom collapses, G10R-AC is the only eligible next goal. It builds
+the provisional-argument and open-world intake loop offline; it does not make
+live calls, expand source policy, promote evidence, or authorize another paid
+run.
+
 1. Read `docs/research_program_v2.md`, `docs/roadmap.md`, the G-1 decision when the selected goal is G00 or later, and the selected goal completely.
 2. Verify that every dependency and entry gate is satisfied from repository artifacts. Do not infer a gate result.
 3. Work only inside the selected goal's scope. Record unrelated findings in `docs/backlog.md` with evidence and destination.

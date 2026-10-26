@@ -22,6 +22,36 @@ provisional portfolio with rivals, dissent, and next discriminator
 
 Support agents do not inherit the viewpoint as truth. Every report states `SUPPORTS`, `WEAKENS`, or `NON_DISCRIMINATING`. A weakening report remains in the dossier and can reduce focus priority. A null viewpoint and an open slot are required; open-slot admission requires a typed candidate card, reason, and bounded scope.
 
+## Provisional arguments and open-world sources
+
+Viewpoints may advance a `PROVISIONAL` argument before any cited source has
+been accepted. An argument records its mechanism, prediction, uncertainty,
+requested discriminators, and the exact source references the agent is asking
+the society to investigate. A source reference is a lead, not evidence credit.
+
+Acquisition agents may discover new public locators and citation trails. A
+previously unknown route is stored in a quarantined source record with its
+locator, identity fields, retrieval outcome, rights state, content hash, parser
+status, and citation ancestry. Unknown hosts cannot earn direct evidence credit
+until the source is vetted and admitted to the reviewable corpus; the agent may
+still use the lead to defend or revise its provisional argument.
+
+Vetting operates on the claim–source edge, not only on the source record. Each
+edge must resolve to exactly one of `SUPPORTED`, `CONTRADICTED`, `UNRESOLVED`,
+`MISATTRIBUTED`, or `UNRETRIEVABLE`. A real source that does not address the
+claim is not support, and a failed fetch is not contradiction. Every supported
+or contradicted edge requires a page, figure, table, or exact locator plus a
+content hash when available.
+
+Arguments, source records, and edge decisions are append-only revisions.
+Contradiction, rejection, and failed retrieval remain visible; they cannot
+erase the original argument or silently rewrite its provenance. Work identity,
+content hash, and citation ancestry deduplicate apparent corroboration so one
+paper repeated by several agents does not become independent support. Consensus,
+repetition, rhetoric, and agent count receive zero scientific credit. An
+adversarial vetter, null position, and credible rival remain in the tournament
+when the case permits.
+
 ## State and invariants
 
 - Viewpoints are case/problem/version scoped and remain `REVIEW_REQUIRED`.
@@ -31,6 +61,11 @@ Support agents do not inherit the viewpoint as truth. Every report states `SUPPO
 - Focus allocation is deterministic and must preserve the null and one credible rival when the budget permits.
 - The adjudicator preserves all credible rivals, dissent, unresolved joins, and the next discriminator; it cannot promote evidence or authorize physical work.
 - Duplicate IDs replay identical payloads; conflicting duplicates, stale contexts, cross-problem writes, unsupported task types, and budget violations fail closed.
+- Illegal transitions fail closed: a provisional argument cannot become
+  supported without a vetted claim–source edge; an unreviewed source cannot
+  become corpus-admitted without identity/rights/provenance checks; and no
+  agent can self-promote an argument to immutable evidence or laboratory
+  authority.
 
 ## Scoring
 

@@ -1,6 +1,7 @@
 # G10R-P — Society postmortem and target-state design
 
 **Status:** complete — `TARGET_STATE_READY_FOR_OFFLINE_BUILD`
+**Target-state amendment:** v2 — provisional arguments and open-world source intake
 **Dependencies:** G10R complete with `DO_NOT_ESCALATE_ACTIVE_SOCIETY`, `artifacts/goals/G10R/run.json`, and `artifacts/goals/G10R-R/replay.json`; no new model, network, subscription, or laboratory execution
 **Advances:** determines whether the negative live signal came from society design, runtime integration, information-acquisition policy, task/case construction, or scoring, then defines the measurable target state required before another paid evaluation
 
@@ -107,6 +108,43 @@ true in an offline build and replay:
    resolution, evidence-bus joins, blind scoring, and replay are byte-stable;
    unresolved candidates remain reviewable and are not promoted automatically.
 
+8. **Provisional argument freedom.** A viewpoint may advance a mechanism
+   argument, prediction, criticism, or lateral connection before its cited
+   sources are accepted. The argument is stored as `PROVISIONAL` with its
+   exact source references and uncertainty; lack of source acceptance does not
+   erase or suppress the argument.
+9. **Open-world source intake.** Acquisition agents may discover new public
+   locators and citation trails outside the current corpus. Unknown or
+   unreviewed routes enter a quarantine record with retrieval outcome, rights
+   state, identity, content hash, and parser status. They earn no evidence
+   credit until vetting succeeds, but they remain available for collective
+   review.
+10. **Claim–source adjudication.** Each cited source is evaluated against the
+    exact claim it is meant to support. The edge state is one of
+    `SUPPORTED`, `CONTRADICTED`, `UNRESOLVED`, `MISATTRIBUTED`, or
+    `UNRETRIEVABLE`; a real but irrelevant source is not support, and a failed
+    retrieval is not contradiction.
+11. **Revision without erasure.** Arguments and source edges are append-only
+    revisions. A later vetting result can weaken, contradict, or rescue an
+    argument, but cannot delete the original claim or rewrite its provenance.
+    `CONTRADICTED` and `UNRETRIEVABLE` remain visible alongside the incumbent
+    view and any valid counterevidence.
+12. **Anti-laundering and anti-consensus safeguards.** Work identity,
+    content hash, citation ancestry, and independent-source counts are tracked
+    so repeated references to one work cannot masquerade as corroboration.
+    Consensus, repetition, rhetoric, answer length, and agent count earn zero
+    scientific credit; a null/rival and an adversarial source-vetting role are
+    retained when the case permits.
+13. **Calibrated incentives.** Viewpoint agents earn exploratory value for
+    novel candidate sources, precise claim–source links, useful weakening
+    results, and high-value discriminators—not for persuasive language or
+    winning adjudication. Vetters are scored on correct support, contradiction,
+    misattribution, and uncertainty labels.
+14. **Authority separation.** Corpus admission, evidence-card creation,
+    immutable evidence promotion, and physical/laboratory authority are
+    distinct transitions. Agents may propose and retrieve; they may not
+    self-admit a source, promote evidence, or authorize experiments.
+
 ## Deliverables
 
 - `artifacts/goals/G10R-P/postmortem.json` with per-case/per-layer diagnostics;
@@ -114,6 +152,8 @@ true in an offline build and replay:
   severity, remediation, and verification;
 - `artifacts/goals/G10R-P/target-state.json` with versioned thresholds and
   explicit non-goals;
+- a provisional-argument and open-world source-intake contract with typed
+  claim–source edge states and anti-laundering safeguards;
 - an implementation-to-contract comparison covering G10D, G10P, and the live
   G10R runner;
 - deterministic fixtures/tests for every proposed remediation that can be
@@ -139,12 +179,15 @@ true in an offline build and replay:
    fidelity, unique attributable contribution, evidence acquisition,
    contradiction coverage, attribution completeness, budget parity, and
    replayability.
-6. The target state includes a falsifiable comparison rule for a future A1 vs
+6. The target state defines provisional argument, quarantined source, claim–source
+   adjudication, revision, anti-laundering, and incentive safeguards, with
+   illegal transitions specified.
+7. The target state includes a falsifiable comparison rule for a future A1 vs
    society test and states what result would justify stopping rather than
    spending again.
-7. No model, network, subscription, credential, laboratory, evidence
+8. No model, network, subscription, credential, laboratory, evidence
    promotion, or external communication is used by this goal.
-8. The handoff emits exactly one of `TARGET_STATE_READY_FOR_OFFLINE_BUILD`,
+9. The handoff emits exactly one of `TARGET_STATE_READY_FOR_OFFLINE_BUILD`,
    `POSTMORTEM_NO_GO`, or `INCONCLUSIVE_POSTMORTEM` and identifies the next
    goal, if any.
 
