@@ -1,0 +1,56 @@
+{
+  "authority": {
+    "credentials_read": false,
+    "model_calls": 0,
+    "network_calls": 0,
+    "paid_spend_usd": 0.0
+  },
+  "checks": {
+    "arm_neutrality": true,
+    "authority_offline": true,
+    "distinct_output_namespace": true,
+    "files_exist_and_hash": true,
+    "fixture_hash_matches": true,
+    "historical_namespaces_preserved": true,
+    "input_context_valid": true,
+    "limits_frozen": true,
+    "manifest_id_unique": true,
+    "model_policy_frozen": true,
+    "policy_hash_matches": true,
+    "positive_headroom_ready": true,
+    "predecessor_criteria_pass": true,
+    "predecessor_replay_stable": true,
+    "predecessor_verdict": true
+  },
+  "fixture_hash": "sha256:c76c9a1c0bfac51aeaba8f8e6223f4d6428884103bdaf78d4a57771318972ea6",
+  "goal": "G10R-AA",
+  "input_failures": [],
+  "manifest_id": "G10R-AA-fresh-phase-a-acquisition-headroom-v1",
+  "manifest_sha256": "sha256:c162c291617c2a6f7a45b8c0b4f9c9e6c44ab145be48a772839865bfa6688b16",
+  "policy_hash": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+  "predecessor": {
+    "artifact_path": "artifacts/goals/G10R-Z/run.json",
+    "artifact_sha256": "sha256:dc1e237776757ccdef4904afe1be6e195100ca66ea34ea2e90ee8db23beb9d6c",
+    "criteria_pass": true,
+    "fixture_hash": "sha256:c76c9a1c0bfac51aeaba8f8e6223f4d6428884103bdaf78d4a57771318972ea6",
+    "goal": "G10R-Z",
+    "manifest_id": "G10R-Z-acquisition-headroom-v1",
+    "policy_hash": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+    "replay_byte_stable": true,
+    "verdict": "ACQUISITION_HEADROOM_READY"
+  },
+  "schema_version": "g10r-aa.1",
+  "status": "PHASE_A_READY_FOR_OWNER_ACTIVATION",
+  "tests": {
+    "focused": {
+      "command": "/Users/wcu/miniforge3/bin/python3 -m pytest -q tests/agents/test_g10r_aa_fresh_phase_a_freeze.py tests/agents/test_g10r_z_acquisition_headroom.py",
+      "output_tail": "................                                                         [100%]\n16 passed in 1.30s",
+      "returncode": 0
+    },
+    "full": {
+      "command": "/Users/wcu/miniforge3/bin/python3 -m pytest -q",
+      "output_tail": "........................................................................ [ 40%]\n........................................................................ [ 80%]\n....................................                                     [100%]\n180 passed in 51.06s",
+      "returncode": 0
+    }
+  }
+}

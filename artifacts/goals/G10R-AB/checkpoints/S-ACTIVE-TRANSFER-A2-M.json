@@ -1,0 +1,4335 @@
+{
+  "action_records": [
+    {
+      "action_id": "78d0edd3f0a9d3d6",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "hot-mixed lime pozzolan mortar quicklime functional recovery crack healing matched control",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Seek target-domain evidence testing M1\u2019s prediction of functional recovery beyond a control; compare material, mixing process, comparator, and endpoint. The current quicklime\u2013microcrack\u2013impermeability record is only a pending lead, not target evidence.",
+      "replay_key": "sha256:2898e737d276bbafb9ed47dd824625faa5e40559b2d9241ed0f23cd651714356",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "2ed0060266360d95",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "(\"hot-mixed\" or hot mixed) lime pozzolan mortar quicklime functional performance permeability comparator",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test for process-matched target-domain records that could falsify the transfer-only view. The sole supplied evidence, E-T1, is pending and has unknown material and comparator fit.",
+      "replay_key": "sha256:ead31c25c58f0b7fa452c9587ad641fb0fde24b1774ae84a25e31bd0149f1ac5",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "c23969f99d26ff73",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 1,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "quicklime silica fume microcracks impermeability hot-mixed lime pozzolan mortar",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W4405549715"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test whether the reported record matches the target material and process and includes a comparator and functional endpoint. The null prediction is that it remains insufficient without a process-matched target comparison; a direct target record with a valid mechanism discriminator would falsify this viewpoint. Current provenance is limited to E-T1, whose material and comparator fit are unknown.",
+      "replay_key": "sha256:16ed45f4db2b3f130aa68eb14748f9db7333891bd9a11e2cf8e17419351fe97c",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "89f0a82609fec81d",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:evidence_skeptic",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 4,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "quicklime \"silica fume\" microcracks impermeability",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W4378619188",
+        "OA-W4391970071",
+        "OA-W4415844429",
+        "OA-W4391180262",
+        "OA-W4405549715"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the cited record and establish its material, process, comparator, and measured endpoint before assessing transfer.",
+      "replay_key": "sha256:501663c12b22b6a8bf77628960a9b72b08edc24b7d2798331c155af010f1e7b4",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "0147d1a61a7081ad",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:transfer_boundary",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 2,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "quicklime silica fume microcracks impermeability",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W4378619188",
+        "OA-W4391180262",
+        "OA-W4417168112",
+        "OA-W4391970071",
+        "OA-W4411346060"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the reported record and establish its material, process, comparator, and measured endpoint before judging transfer.",
+      "replay_key": "sha256:3e05f05a402fe4a07dda4aaf57e6006f8ef455b91c95bfdda19c98b3115b28a3",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "ae6c8350ffc18bea",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:experiment_simulation",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "\"hot-mixed\" lime pozzolan mortar functional recovery comparator",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Cheapest discriminator: locate a target-domain record matching the process and functional endpoint; a direct match could distinguish target support from analogy.",
+      "replay_key": "sha256:34aba62ff933db3a5e6372c7bd857c7173f4d3c2a145d1f50ba4bbbdf8728d3c",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "123d98229e007930",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "quicklime-associated chemistry can transfer to functional recovery in the target domain. can a public quicklime-and-silica-fume record directly support the hot-mixed lime-pozzolan target, or only seed a transfer hypothesis?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic viewpoint discriminator focus",
+      "replay_key": "sha256:b1a1a6d19034a5d9f51ced7587f7500d42284b0ee61658b1471b287cb74429a5",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "f27ea333ca1e5a06",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "the available record cannot distinguish a target-domain mechanism. can a public quicklime-and-silica-fume record directly support the hot-mixed lime-pozzolan target, or only seed a transfer hypothesis?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic viewpoint discriminator focus",
+      "replay_key": "sha256:c0056f143896768ad18c8932547f312be948ad5ce890f125f37bc9401540c586",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  ],
+  "actions": {
+    "0147d1a61a7081ad": {
+      "action_id": "0147d1a61a7081ad",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:transfer_boundary",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 2,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "quicklime silica fume microcracks impermeability",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W4378619188",
+        "OA-W4391180262",
+        "OA-W4417168112",
+        "OA-W4391970071",
+        "OA-W4411346060"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the reported record and establish its material, process, comparator, and measured endpoint before judging transfer.",
+      "replay_key": "sha256:3e05f05a402fe4a07dda4aaf57e6006f8ef455b91c95bfdda19c98b3115b28a3",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "123d98229e007930": {
+      "action_id": "123d98229e007930",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "quicklime-associated chemistry can transfer to functional recovery in the target domain. can a public quicklime-and-silica-fume record directly support the hot-mixed lime-pozzolan target, or only seed a transfer hypothesis?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic viewpoint discriminator focus",
+      "replay_key": "sha256:b1a1a6d19034a5d9f51ced7587f7500d42284b0ee61658b1471b287cb74429a5",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "2ed0060266360d95": {
+      "action_id": "2ed0060266360d95",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "(\"hot-mixed\" or hot mixed) lime pozzolan mortar quicklime functional performance permeability comparator",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test for process-matched target-domain records that could falsify the transfer-only view. The sole supplied evidence, E-T1, is pending and has unknown material and comparator fit.",
+      "replay_key": "sha256:ead31c25c58f0b7fa452c9587ad641fb0fde24b1774ae84a25e31bd0149f1ac5",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "78d0edd3f0a9d3d6": {
+      "action_id": "78d0edd3f0a9d3d6",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "hot-mixed lime pozzolan mortar quicklime functional recovery crack healing matched control",
+        "requested_index": "openalex"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Seek target-domain evidence testing M1\u2019s prediction of functional recovery beyond a control; compare material, mixing process, comparator, and endpoint. The current quicklime\u2013microcrack\u2013impermeability record is only a pending lead, not target evidence.",
+      "replay_key": "sha256:2898e737d276bbafb9ed47dd824625faa5e40559b2d9241ed0f23cd651714356",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "89f0a82609fec81d": {
+      "action_id": "89f0a82609fec81d",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:evidence_skeptic",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 4,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "quicklime \"silica fume\" microcracks impermeability",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W4378619188",
+        "OA-W4391970071",
+        "OA-W4415844429",
+        "OA-W4391180262",
+        "OA-W4405549715"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the cited record and establish its material, process, comparator, and measured endpoint before assessing transfer.",
+      "replay_key": "sha256:501663c12b22b6a8bf77628960a9b72b08edc24b7d2798331c155af010f1e7b4",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "ae6c8350ffc18bea": {
+      "action_id": "ae6c8350ffc18bea",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:experiment_simulation",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "\"hot-mixed\" lime pozzolan mortar functional recovery comparator",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Cheapest discriminator: locate a target-domain record matching the process and functional endpoint; a direct match could distinguish target support from analogy.",
+      "replay_key": "sha256:34aba62ff933db3a5e6372c7bd857c7173f4d3c2a145d1f50ba4bbbdf8728d3c",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "c23969f99d26ff73": {
+      "action_id": "c23969f99d26ff73",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 1,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "quicklime silica fume microcracks impermeability hot-mixed lime pozzolan mortar",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W4405549715"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test whether the reported record matches the target material and process and includes a comparator and functional endpoint. The null prediction is that it remains insufficient without a process-matched target comparison; a direct target record with a valid mechanism discriminator would falsify this viewpoint. Current provenance is limited to E-T1, whose material and comparator fit are unknown.",
+      "replay_key": "sha256:16ed45f4db2b3f130aa68eb14748f9db7333891bd9a11e2cf8e17419351fe97c",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "f27ea333ca1e5a06": {
+      "action_id": "f27ea333ca1e5a06",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-TRANSFER-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "input": {
+        "index": "openalex",
+        "query": "the available record cannot distinguish a target-domain mechanism. can a public quicklime-and-silica-fume record directly support the hot-mixed lime-pozzolan target, or only seed a transfer hypothesis?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic viewpoint discriminator focus",
+      "replay_key": "sha256:c0056f143896768ad18c8932547f312be948ad5ce890f125f37bc9401540c586",
+      "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  },
+  "budget": {
+    "limits": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 12000,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "remaining": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 24.9941792,
+      "input_tokens": 47817,
+      "output_tokens": 6795,
+      "payload_bytes": 5000000,
+      "queries": 4,
+      "retained_sources": 17,
+      "simulation_calls": 4
+    },
+    "usage": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.005820799999999999,
+      "input_tokens": 32183,
+      "output_tokens": 5205,
+      "payload_bytes": 0,
+      "queries": 8,
+      "retained_sources": 7,
+      "simulation_calls": 0
+    }
+  },
+  "delayed_open_admission": {
+    "dossier_created_before_admission": 0,
+    "reason": "reserved open slot receives bounded candidate work",
+    "schema_version": "g10r-z.1",
+    "shared_before_admission": true,
+    "source_backed_candidate_ids": [],
+    "source_candidate_ids": [],
+    "status": "ABSTAINED_NO_DISTINCT_VIEWPOINT",
+    "tasks_created_before_admission": 0,
+    "viewpoint_id": "S-ACTIVE-TRANSFER-OPEN-ADMITTED"
+  },
+  "last_result": {
+    "portfolio": {
+      "authority_note": "All records remain EVIDENCE_PENDING; no validation, promotion, or laboratory authority is granted.",
+      "case_id": "S-ACTIVE-TRANSFER",
+      "credible_rival_ids": [
+        "S-ACTIVE-TRANSFER-NULL"
+      ],
+      "hypotheses": [
+        {
+          "comparator": "A process-matched hot-mixed lime-pozzolan mortar comparison using the same functional endpoint.",
+          "falsifier": "A direct target-domain record reports the same intervention and functional endpoint with a valid comparator.",
+          "hypothesis_id": "S-ACTIVE-TRANSFER-M2",
+          "intervention": "Verify the quicklime source\u2019s material, process, comparator, and functional endpoint.",
+          "novelty_basis": "The supplied record lacks material, process, comparator, and endpoint details needed for direct transfer.",
+          "predicted_observation": "The source may motivate a discriminator but does not establish target performance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": [
+            "E-T1",
+            "CRIT-A2M-01"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "support_region": "Cement-based records only, with an explicit transfer boundary to hot-mixed lime-pozzolan mortar.",
+          "transfer_type": "TRANSFER_HYPOTHESIS",
+          "uncertainty": "Source fit and target-domain transfer remain unverified."
+        }
+      ],
+      "leading_hypothesis_id": "S-ACTIVE-TRANSFER-M2",
+      "negative_searches": [
+        "Supplied metadata titles do not establish a matched hot-mixed lime-pozzolan mortar comparison."
+      ],
+      "next_discriminating_action": "Retrieve a public target-domain record and check for a process-matched comparator and the same functional endpoint.",
+      "schema_version": "1.0",
+      "source_candidate_ids": [],
+      "status": "REVIEW_REQUIRED",
+      "summary": "Treat the quicklime record only as a transfer analogy, not direct support for target-domain functional recovery.",
+      "unresolved_disputes": [
+        "The evidence does not distinguish a transfer analogy from the null because no matched target comparison is supplied."
+      ]
+    },
+    "score": {
+      "attribution_adjudications": {},
+      "authority_flags": [],
+      "cited_source_candidate_ids": [],
+      "contradiction_source_candidate_ids": [],
+      "critical_failures": [],
+      "discovery_contribution_digests": [],
+      "discovery_score": 0,
+      "dissent_retained": true,
+      "evidence_score": 0,
+      "fabrication_proof_source_candidate_ids": [],
+      "hypothesis_contribution_digests": [
+        "sha256:0383dde96621ef7f1d2510d90de59d9f7feaef7f0fdb4ba27fb8cda1165ca8cd"
+      ],
+      "hypothesis_score": 1,
+      "identity_statuses": {},
+      "invalid_source_candidate_ids": [],
+      "max_score": 6,
+      "negative_search_count": 1,
+      "out_of_rubric_source_candidate_ids": [],
+      "provenance_completeness": 0.0,
+      "provenance_review_source_candidate_ids": [],
+      "raw_cited_source_candidate_ids": [],
+      "rubric_hits": [
+        {
+          "criterion_id": "find_quicklime_record",
+          "keyword_hit": true,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "endpoint_relevance",
+          "keyword_hit": true,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "domain_mismatch",
+          "keyword_hit": true,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "comparator_mismatch",
+          "keyword_hit": true,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "transfer_only",
+          "keyword_hit": true,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "falsifier",
+          "keyword_hit": true,
+          "points": 0,
+          "source_hit": false
+        }
+      ],
+      "score": 0,
+      "source_identity_aliases": {},
+      "supported_contribution_digests": [],
+      "unattributed_source_candidate_ids": [],
+      "unresolved_source_candidate_ids": []
+    },
+    "status": "COMPLETED"
+  },
+  "locator_resolutions": {},
+  "manifest_sha256": "sha256:1ac055b97d74c26735c4f6fdc646f8f9fcba340e8171300cbab6ea646b599c93",
+  "model_traces": [
+    {
+      "call_id": "333f97c6ed58a426",
+      "estimated_actual_cost_usd": 0.0003737,
+      "estimated_maximum_cost_usd": 0.000598,
+      "latency_seconds": 5.4144,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "viewpoint:S-ACTIVE-TRANSFER-M1",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "follow_up_queries": [
+          {
+            "index": "crossref",
+            "query": "quicklime silica fume microcracks impermeability",
+            "rationale": "Identify and verify the reported source and its materials, process, comparator, and measured endpoint; use it only to define a transfer discriminator unless target fit is established."
+          },
+          {
+            "index": "catalog",
+            "query": "Roman hot mixed lime pozzolan mortar permeability crack healing recovery",
+            "rationale": "Check for process-matched target records. A matched comparison showing recovery would support the provisional prediction; disappearance under a matched comparator or endpoint would falsify it. Negative search results would not establish absence of an effect."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "hot-mixed lime pozzolan mortar quicklime functional recovery crack healing matched control",
+            "rationale": "Seek target-domain evidence testing M1\u2019s prediction of functional recovery beyond a control; compare material, mixing process, comparator, and endpoint. The current quicklime\u2013microcrack\u2013impermeability record is only a pending lead, not target evidence."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:9e8d1eb6f2814f1d45b632f91af123104a7512be090796be1eea598cce83c135",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1527,
+        "output_tokens": 442
+      }
+    },
+    {
+      "call_id": "031ad9ba32b51426",
+      "estimated_actual_cost_usd": 0.0004272,
+      "estimated_maximum_cost_usd": 0.0006005,
+      "latency_seconds": 6.534,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "Provisional M2 view only: E-T1 suggests a transfer hypothesis, not direct target support. Prediction: source records will provide a discriminator but lack a process-matched target performance claim. Falsifier: a process-matched target-domain record with the same intervention and functional endpoint. Support region is limited to cement-based records with an explicit transfer boundary to hot-mixed lime-pozzolan mortar. No searches have yet been run; no negative-search result or source locator is available. Promotion remains REVIEW_REQUIRED.",
+        "branch_id": "viewpoint:S-ACTIVE-TRANSFER-M2",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "follow_up_queries": [
+          {
+            "index": "crossref",
+            "query": "quicklime silica fume microcracks impermeability cement",
+            "rationale": "Identify and delimit the reported source: material, process, comparator, and measured endpoint. Treat any cement-based result as an analogy unless target matching is established."
+          },
+          {
+            "index": "catalog",
+            "query": "hot lime pozzolan mortar permeability self-healing quicklime",
+            "rationale": "Seek target-domain comparisons and functional endpoints; record unsuccessful searches as search outcomes, not evidence of absence."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "(\"hot-mixed\" OR hot mixed) lime pozzolan mortar quicklime functional performance permeability comparator",
+            "rationale": "Test for process-matched target-domain records that could falsify the transfer-only view. The sole supplied evidence, E-T1, is pending and has unknown material and comparator fit."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:fab691c5fdd5f5bae85c33805de02e25e2b0155981cf03e223c9e8979955497e",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1547,
+        "output_tokens": 545
+      }
+    },
+    {
+      "call_id": "84b50d238d1c03a3",
+      "estimated_actual_cost_usd": 0.0003608,
+      "estimated_maximum_cost_usd": 0.0005955,
+      "latency_seconds": 5.144,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "viewpoint:S-ACTIVE-TRANSFER-NULL",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "follow_up_queries": [
+          {
+            "index": "openalex",
+            "query": "hot-mixed lime pozzolan mortar quicklime functional recovery comparator",
+            "rationale": "Search for a process-matched target-domain record that could discriminate direct support from analogy."
+          },
+          {
+            "index": "crossref",
+            "query": "quicklime silica fume microcracks impermeability",
+            "rationale": "Identify the cited quicklime record so its material, process, comparator, and endpoint can be checked; do not treat a domain-limited result as target performance evidence."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "quicklime silica fume microcracks impermeability hot-mixed lime pozzolan mortar",
+            "rationale": "Test whether the reported record matches the target material and process and includes a comparator and functional endpoint. The null prediction is that it remains insufficient without a process-matched target comparison; a direct target record with a valid mechanism discriminator would falsify this viewpoint. Current provenance is limited to E-T1, whose material and comparator fit are unknown."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:6da48aacb08ab2503c3cf04ea85f2f3876d90cdc46828ff9f733ed132d9067fb",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1503,
+        "output_tokens": 421
+      }
+    },
+    {
+      "call_id": "0ce20a2b484a0d49",
+      "estimated_actual_cost_usd": 0.0003874,
+      "estimated_maximum_cost_usd": 0.0006402,
+      "latency_seconds": 4.2893,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claimed_contribution": "Frames the quicklime record as a transfer hypothesis only.",
+        "claims": [
+          {
+            "claim_id": "C1",
+            "falsifier": "The effect disappears under a matched comparator or endpoint.",
+            "prediction": "With sufficiently matched material, process, comparator, and endpoint, the target shows functional recovery beyond control.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-T1: recent record mentions quicklime, microcracks, and impermeability; fit is unknown.",
+              "Mechanism-card prior basis: offline fixture, not direct evidence."
+            ],
+            "statement": "Quicklime-associated chemistry is a provisional transfer hypothesis, not direct support for hot-mixed lime-pozzolan mortar.",
+            "support_region": "Only where material, process, comparator, and endpoint are sufficiently matched."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-TRANSFER-M1",
+        "negative_searches": [
+          "No search results supplied; target-domain evidence remains unverified."
+        ],
+        "proposed_next_actions": [
+          "Search for a process-matched target comparison and verify its materials, comparator, and endpoint."
+        ],
+        "report_id": "R-S-ACTIVE-TRANSFER-M1",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Does any target-domain record match the intervention and functional endpoint?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:61faff3f754d836bcbac2e2b7fab495383537c935945685615d9d6edd6b7d5f1",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1829,
+        "output_tokens": 409
+      }
+    },
+    {
+      "call_id": "ec2532e657a9dfc9",
+      "estimated_actual_cost_usd": 0.0003607,
+      "estimated_maximum_cost_usd": 0.0006541,
+      "latency_seconds": 3.8014,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claimed_contribution": "Frames E-T1 as a transfer hypothesis only.",
+        "claims": [
+          {
+            "claim_id": "C1",
+            "falsifier": "A process-matched target record reports the same intervention and functional endpoint.",
+            "prediction": "The record will lack a process-matched target performance comparison.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-T1; evidence pending; material and comparator fit unknown."
+            ],
+            "statement": "E-T1 is a transfer analogy, not direct support for hot-mixed lime-pozzolan mortar.",
+            "support_region": "Cement-based records with an explicit transfer boundary to hot-mixed lime-pozzolan mortar."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-TRANSFER-M2",
+        "negative_searches": [
+          "No searches run; no negative-search result established."
+        ],
+        "proposed_next_actions": [
+          "Search the supplied indexes for target-domain comparisons and document locators."
+        ],
+        "report_id": "R-S-ACTIVE-TRANSFER-M2",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Does any process-matched target-domain record exist?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:13246d0ddaf758b2ac4595a2461179778a60266f01c7c273cadafe35b688fbfd",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1917,
+        "output_tokens": 338
+      }
+    },
+    {
+      "call_id": "3089743e838fe369",
+      "estimated_actual_cost_usd": 0.0003629,
+      "estimated_maximum_cost_usd": 0.0006584,
+      "latency_seconds": 3.8612,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [
+          "A-SEARCH-TARGET"
+        ],
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claimed_contribution": "Provisional null: supplied record supports no direct target mechanism.",
+        "claims": [
+          {
+            "claim_id": "C-NULL",
+            "falsifier": "A direct target-domain record provides a valid mechanism discriminator.",
+            "prediction": "Without a process-matched target comparison, the record remains insufficient.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-T1: material and comparator fit unknown.",
+              "OA-W4405549715: metadata only; title identifies a review."
+            ],
+            "statement": "Available evidence cannot distinguish a target-domain mechanism.",
+            "support_region": "Declared material, process, comparator, and functional endpoint boundary."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-TRANSFER-NULL",
+        "negative_searches": [
+          "No process-matched target evidence supplied; only metadata and E-T1 were available."
+        ],
+        "proposed_next_actions": [
+          "Search for a process-matched hot-mixed lime-pozzolan comparison."
+        ],
+        "report_id": "R-S-ACTIVE-TRANSFER-NULL",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W4405549715"
+        ],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Does any target-domain record match the material, process, comparator, and endpoint?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:5af831969848373cb1bd6d0dfb5f6c17d39b2d7566d9f59eb78ae792fa5de4c5",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1964,
+        "output_tokens": 333
+      }
+    },
+    {
+      "call_id": "df19fc2d49b3bc65",
+      "estimated_actual_cost_usd": 0.0004113,
+      "estimated_maximum_cost_usd": 0.000652,
+      "latency_seconds": 3.8508,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "auditor:evidence_skeptic",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "follow_up_queries": [
+          {
+            "index": "openalex",
+            "query": "\"hot-mixed\" lime pozzolan mortar quicklime functional recovery comparator",
+            "rationale": "Look for a target-domain, process-matched record with a functional comparison; without one, the quicklime record can only seed a transfer hypothesis."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "quicklime \"silica fume\" microcracks impermeability",
+            "rationale": "Identify the cited record and establish its material, process, comparator, and measured endpoint before assessing transfer."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:1c59b54b6509d58fab3a4a8a7f80d02bd5cae232f85e9726088703abf31e1c73",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2443,
+        "output_tokens": 334
+      }
+    },
+    {
+      "call_id": "b4f7e766cd698fc1",
+      "estimated_actual_cost_usd": 0.00051,
+      "estimated_maximum_cost_usd": 0.0008383,
+      "latency_seconds": 4.1921,
+      "model": "gpt-6-luna",
+      "output": {
+        "auditor_role": "evidence_skeptic",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "challenge": "The claim that quicklime-associated chemistry transfers to functional recovery is unsupported: E-T1 gives no material, process, comparator, or endpoint details, and the listed candidates are metadata-only; their titles do not establish a matched hot-mixed lime-pozzolan mortar record. Treat the record only as a transfer hypothesis seed, not direct target support.",
+        "claim_ids": [
+          "C1"
+        ],
+        "contradiction_status": "UNRESOLVED",
+        "critique_id": "CRIT-A2M-01",
+        "promotion_status": "REVIEW_REQUIRED",
+        "proposed_discriminator": "Verify the source\u2019s material, process, comparator, and functional endpoint, then identify a process-matched target-domain comparison reporting recovery beyond control; absent that, retain the transfer boundary.",
+        "provenance": [
+          "E-T1",
+          "OA-W4378619188",
+          "OA-W4391970071",
+          "OA-W4415844429",
+          "OA-W4391180262",
+          "OA-W4405549715"
+        ],
+        "schema_version": "1.0",
+        "target_mechanism_id": "S-ACTIVE-TRANSFER-M1"
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:03d2a4389033d7fb52fd8216698b9cd46c721cf098897809d2c965a18936cb01",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 3430,
+        "output_tokens": 334
+      }
+    },
+    {
+      "call_id": "39391fbf6bbe440e",
+      "estimated_actual_cost_usd": 0.0004375,
+      "estimated_maximum_cost_usd": 0.0006521,
+      "latency_seconds": 4.6994,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "The supplied record lacks material and comparator details; it can only seed a transfer hypothesis until its source and any target-domain comparison are checked.",
+        "branch_id": "auditor:transfer_boundary",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "follow_up_queries": [
+          {
+            "index": "crossref",
+            "query": "hot-mixed lime pozzolan mortar functional recovery comparator",
+            "rationale": "Cheapest direct discriminator: locate target-domain evidence with a process-matched comparator and functional endpoint."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "openalex",
+            "query": "quicklime silica fume microcracks impermeability",
+            "rationale": "Identify the reported record and establish its material, process, comparator, and measured endpoint before judging transfer."
+          }
+        ],
+        "requested_fetch_locators": [
+          "OA-W4405549715"
+        ],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:fc630a8c392e29c7d4ed7b81c031624496a5c26e34503c027bf16c6ff767821c",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2440,
+        "output_tokens": 387
+      }
+    },
+    {
+      "call_id": "78c8b306ed761db9",
+      "estimated_actual_cost_usd": 0.0005205,
+      "estimated_maximum_cost_usd": 0.0008465,
+      "latency_seconds": 3.9401,
+      "model": "gpt-6-luna",
+      "output": {
+        "auditor_role": "transfer_boundary",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "challenge": "The quicklime record cannot directly support functional recovery in hot-mixed lime-pozzolan mortar: material, process, comparator, and endpoint are unspecified. The supplied metadata candidates concern other cementitious or soil systems and do not establish a matched transfer.",
+        "claim_ids": [
+          "C1"
+        ],
+        "contradiction_status": "UNRESOLVED",
+        "critique_id": "CRIT-S-ACTIVE-TRANSFER-M1",
+        "promotion_status": "REVIEW_REQUIRED",
+        "proposed_discriminator": "Check for a target-domain comparison using hot-mixed lime-pozzolan mortar, a process-matched control, and the same prespecified functional endpoint; until then, treat the record only as a transfer hypothesis.",
+        "provenance": [
+          "E-T1",
+          "OA-W4378619188",
+          "OA-W4391180262",
+          "OA-W4417168112",
+          "OA-W4391970071",
+          "OA-W4411346060"
+        ],
+        "schema_version": "1.0",
+        "target_mechanism_id": "S-ACTIVE-TRANSFER-M1"
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:eff9cefe137b1dd5a582e8c00c34cdc757d73a909409c973bc7506db79cba427",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 3465,
+        "output_tokens": 348
+      }
+    },
+    {
+      "call_id": "f4a1ae2754a3b997",
+      "estimated_actual_cost_usd": 0.0004131,
+      "estimated_maximum_cost_usd": 0.0006534,
+      "latency_seconds": 6.5086,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "No source candidates or validated simulation adapters are supplied; do not infer direct target support or request laboratory work.",
+        "branch_id": "auditor:experiment_simulation",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "follow_up_queries": [
+          {
+            "index": "catalog",
+            "query": "quicklime silica fume microcracks impermeability record material comparator endpoint",
+            "rationale": "Identify the cited source and establish its material, comparator, and endpoint to bound any transfer analogy."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "\"hot-mixed\" lime pozzolan mortar functional recovery comparator",
+            "rationale": "Cheapest discriminator: locate a target-domain record matching the process and functional endpoint; a direct match could distinguish target support from analogy."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:3e27f16b2ed32a39fb582905a7fd5b5147c64db0ae418153800011abafc2a483",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2446,
+        "output_tokens": 337
+      }
+    },
+    {
+      "call_id": "f03cc66118e8f967",
+      "estimated_actual_cost_usd": 0.0004153,
+      "estimated_maximum_cost_usd": 0.0007312,
+      "latency_seconds": 4.2156,
+      "model": "gpt-6-luna",
+      "output": {
+        "auditor_role": "experiment_simulation",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "challenge": "The quicklime record cannot directly support functional recovery in hot-mixed lime-pozzolan mortar: its material, process, comparator, and endpoint fit are unknown, and no source candidates or validated simulation adapters are supplied.",
+        "claim_ids": [
+          "C1"
+        ],
+        "contradiction_status": "UNRESOLVED",
+        "critique_id": "CRIT-S-ACTIVE-TRANSFER-01",
+        "promotion_status": "REVIEW_REQUIRED",
+        "proposed_discriminator": "Cheapest observation: retrieve a public target-domain record and check whether it reports the same intervention, a process-matched comparator, and a functional-recovery endpoint. Treat any simulation result as MODEL_ASSERTION, not empirical evidence.",
+        "provenance": [
+          "E-T1",
+          "plan.primary_queries[0]"
+        ],
+        "schema_version": "1.0",
+        "target_mechanism_id": "S-ACTIVE-TRANSFER-M1"
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:eb82dd26186e6947dc53b6aa0044e9c050280287fb42da4f287cf31e20fd2f2e",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2573,
+        "output_tokens": 316
+      }
+    },
+    {
+      "call_id": "9f507bb602980ffb",
+      "estimated_actual_cost_usd": 0.0008404,
+      "estimated_maximum_cost_usd": 0.0014543,
+      "latency_seconds": 6.0438,
+      "model": "gpt-6-luna",
+      "output": {
+        "authority_note": "All records remain EVIDENCE_PENDING; no validation, promotion, or laboratory authority is granted.",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "credible_rival_ids": [
+          "S-ACTIVE-TRANSFER-NULL"
+        ],
+        "hypotheses": [
+          {
+            "comparator": "A process-matched hot-mixed lime-pozzolan mortar comparison using the same functional endpoint.",
+            "falsifier": "A direct target-domain record reports the same intervention and functional endpoint with a valid comparator.",
+            "hypothesis_id": "S-ACTIVE-TRANSFER-M2",
+            "intervention": "Verify the quicklime source\u2019s material, process, comparator, and functional endpoint.",
+            "novelty_basis": "The supplied record lacks material, process, comparator, and endpoint details needed for direct transfer.",
+            "predicted_observation": "The source may motivate a discriminator but does not establish target performance.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-T1",
+              "CRIT-A2M-01"
+            ],
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "support_region": "Cement-based records only, with an explicit transfer boundary to hot-mixed lime-pozzolan mortar.",
+            "transfer_type": "TRANSFER_HYPOTHESIS",
+            "uncertainty": "Source fit and target-domain transfer remain unverified."
+          }
+        ],
+        "leading_hypothesis_id": "S-ACTIVE-TRANSFER-M2",
+        "negative_searches": [
+          "Supplied metadata titles do not establish a matched hot-mixed lime-pozzolan mortar comparison."
+        ],
+        "next_discriminating_action": "Retrieve a public target-domain record and check for a process-matched comparator and the same functional endpoint.",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "REVIEW_REQUIRED",
+        "summary": "Treat the quicklime record only as a transfer analogy, not direct support for target-domain functional recovery.",
+        "unresolved_disputes": [
+          "The evidence does not distinguish a transfer analogy from the null because no matched target comparison is supplied."
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:45c4fb5dd34718f5b446d59313f458f5edd92a3376e5f168ce661d4ecaba439a",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 5099,
+        "output_tokens": 661
+      }
+    }
+  ],
+  "paper_evidence_cards": {},
+  "plan_constraint_events": [],
+  "query_registry": {
+    "\"hot-mixed\" lime pozzolan mortar functional recovery comparator": {
+      "action_id": "ae6c8350ffc18bea",
+      "index": "openalex",
+      "output_ids": []
+    },
+    "(\"hot-mixed\" or hot mixed) lime pozzolan mortar quicklime functional performance permeability comparator": {
+      "action_id": "2ed0060266360d95",
+      "index": "openalex",
+      "output_ids": []
+    },
+    "hot-mixed lime pozzolan mortar quicklime functional recovery crack healing matched control": {
+      "action_id": "78d0edd3f0a9d3d6",
+      "index": "openalex",
+      "output_ids": []
+    },
+    "quicklime \"silica fume\" microcracks impermeability": {
+      "action_id": "89f0a82609fec81d",
+      "index": "openalex",
+      "output_ids": [
+        "OA-W4378619188",
+        "OA-W4391970071",
+        "OA-W4415844429",
+        "OA-W4391180262",
+        "OA-W4405549715"
+      ]
+    },
+    "quicklime silica fume microcracks impermeability": {
+      "action_id": "0147d1a61a7081ad",
+      "index": "openalex",
+      "output_ids": [
+        "OA-W4378619188",
+        "OA-W4391180262",
+        "OA-W4417168112",
+        "OA-W4391970071",
+        "OA-W4411346060"
+      ]
+    },
+    "quicklime silica fume microcracks impermeability hot-mixed lime pozzolan mortar": {
+      "action_id": "c23969f99d26ff73",
+      "index": "openalex",
+      "output_ids": [
+        "OA-W4405549715"
+      ]
+    },
+    "quicklime-associated chemistry can transfer to functional recovery in the target domain. can a public quicklime-and-silica-fume record directly support the hot-mixed lime-pozzolan target, or only seed a transfer hypothesis?": {
+      "action_id": "123d98229e007930",
+      "index": "openalex",
+      "output_ids": []
+    },
+    "the available record cannot distinguish a target-domain mechanism. can a public quicklime-and-silica-fume record directly support the hot-mixed lime-pozzolan target, or only seed a transfer hypothesis?": {
+      "action_id": "f27ea333ca1e5a06",
+      "index": "openalex",
+      "output_ids": []
+    }
+  },
+  "remediation_manifest": {
+    "acquisition_first": true,
+    "active": true,
+    "bounded_open_slot": true,
+    "deduplicate_queries": true,
+    "executable_support": true,
+    "legacy_mechanism_tournament": false,
+    "locator_bridge": true,
+    "schema_version": "g10r-s.1",
+    "treatment": "COMBINED_JUSTIFIED"
+  },
+  "research_loop": {
+    "arm": "A2-M",
+    "branch_needs": {
+      "S-ACTIVE-TRANSFER-M1": "NEED-c51b7d70b3f0",
+      "S-ACTIVE-TRANSFER-M2": "NEED-40b530ae81c2",
+      "S-ACTIVE-TRANSFER-NULL": "NEED-817f748e8632",
+      "auditor:evidence_skeptic": "NEED-3cd18cd3456e",
+      "auditor:experiment_simulation": "NEED-3d06a3ca5b17",
+      "auditor:transfer_boundary": "NEED-5f7b7b03c6b5"
+    },
+    "case_id": "S-ACTIVE-TRANSFER",
+    "content_hash": "sha256:bc156ccf176a56aa9c3553621d66393805a1047f6b2728a8a6be06f42f5b14dd",
+    "context_hash": "sha256:1ac055b97d74c26735c4f6fdc646f8f9fcba340e8171300cbab6ea646b599c93",
+    "dossier_revisions": [
+      {
+        "action_ids": [
+          "2ed0060266360d95",
+          "78d0edd3f0a9d3d6",
+          "c23969f99d26ff73"
+        ],
+        "claim_ids": [
+          "C-NULL",
+          "C1"
+        ],
+        "content_hash": "sha256:c6ee7bbba412f9d3ca8154af93c02f039c9899ec54dd6dd63d0b05bf0d93150d",
+        "critique_ids": [],
+        "dossier_id": "DOSSIER-SOCIETY",
+        "parent_revision": null,
+        "report_ids": [
+          "0c85a9d537d5c021",
+          "0da89ba15a3f10a6",
+          "37378355937d1bdc",
+          "399ccd9733942c86",
+          "52f0983d3a80701d",
+          "557de707aaaee5ae",
+          "5d3646367bc5e30f",
+          "6f4ab047af478ac1",
+          "94b12ffedaea44a7",
+          "a14bf8a9b7c8a0f2",
+          "b440741f01932ec4",
+          "bd39ee33197fb0a4",
+          "c507141afd773612",
+          "de4101d114c126dc",
+          "fd110848737e944e"
+        ],
+        "revision": 1,
+        "revision_reason": "initial private support reports compiled before sharing",
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W4405549715"
+        ],
+        "status": "COMPLETE",
+        "unresolved_joins": [],
+        "viewpoint_id": "SOCIETY"
+      },
+      {
+        "action_ids": [
+          "0147d1a61a7081ad",
+          "123d98229e007930",
+          "2ed0060266360d95",
+          "78d0edd3f0a9d3d6",
+          "89f0a82609fec81d",
+          "ae6c8350ffc18bea",
+          "c23969f99d26ff73",
+          "f27ea333ca1e5a06"
+        ],
+        "claim_ids": [
+          "C-NULL",
+          "C1"
+        ],
+        "content_hash": "sha256:e9f737f10c5815cd1a44a39be495b98710f1f183dfb882b3ebc094d7a7f477fa",
+        "critique_ids": [
+          "70c5ee4636654016",
+          "d0f440f34114e9df",
+          "ef65dc7ca960dae8"
+        ],
+        "dossier_id": "DOSSIER-SOCIETY",
+        "parent_revision": 1,
+        "report_ids": [
+          "0bfe7e7ee4f4a3ee",
+          "0c85a9d537d5c021",
+          "0da89ba15a3f10a6",
+          "0f249ce615bbf0b5",
+          "34a122312d3c8044",
+          "37378355937d1bdc",
+          "399ccd9733942c86",
+          "3a48d2bcce42bf74",
+          "459e1a43c0988f29",
+          "50b606ecd42be906",
+          "52f0983d3a80701d",
+          "557de707aaaee5ae",
+          "5d3646367bc5e30f",
+          "5d6c945588898d85",
+          "6f4ab047af478ac1",
+          "73e3d3b0fb86a960",
+          "74fe9fd9a4b27178",
+          "8d505194fc886d96",
+          "94b12ffedaea44a7",
+          "9524ed5abfc580c3",
+          "a14bf8a9b7c8a0f2",
+          "b290b648f1fdef22",
+          "b440741f01932ec4",
+          "bbaa177a058b9804",
+          "bd39ee33197fb0a4",
+          "c161fbdf57df5d05",
+          "c507141afd773612",
+          "ca4c7f366b523622",
+          "cb3be2bbd87c4f4c",
+          "cd7ea3ac93779591",
+          "de4101d114c126dc",
+          "ec950e795df7c579",
+          "fd110848737e944e"
+        ],
+        "revision": 2,
+        "revision_reason": "focused follow-up and structural critiques revised the shared dossiers",
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W4378619188",
+          "OA-W4391180262",
+          "OA-W4391970071",
+          "OA-W4405549715",
+          "OA-W4411346060",
+          "OA-W4415844429",
+          "OA-W4417168112"
+        ],
+        "status": "COMPLETE",
+        "unresolved_joins": [],
+        "viewpoint_id": "SOCIETY"
+      }
+    ],
+    "events": [
+      {
+        "event_id": "LOOP-b943d9ceaad7",
+        "kind": "NEED_OPENED",
+        "payload": {
+          "branch_id": "S-ACTIVE-TRANSFER-M1",
+          "need_id": "NEED-c51b7d70b3f0"
+        }
+      },
+      {
+        "event_id": "LOOP-fa30be0ee5e5",
+        "kind": "NEED_OPENED",
+        "payload": {
+          "branch_id": "S-ACTIVE-TRANSFER-M2",
+          "need_id": "NEED-40b530ae81c2"
+        }
+      },
+      {
+        "event_id": "LOOP-b77520f9d69e",
+        "kind": "NEED_OPENED",
+        "payload": {
+          "branch_id": "S-ACTIVE-TRANSFER-NULL",
+          "need_id": "NEED-817f748e8632"
+        }
+      },
+      {
+        "event_id": "LOOP-4843a2450c60",
+        "kind": "NEED_OPENED",
+        "payload": {
+          "branch_id": "auditor:evidence_skeptic",
+          "need_id": "NEED-3cd18cd3456e"
+        }
+      },
+      {
+        "event_id": "LOOP-efc5b09c7bfd",
+        "kind": "NEED_OPENED",
+        "payload": {
+          "branch_id": "auditor:transfer_boundary",
+          "need_id": "NEED-5f7b7b03c6b5"
+        }
+      },
+      {
+        "event_id": "LOOP-792560930874",
+        "kind": "NEED_OPENED",
+        "payload": {
+          "branch_id": "auditor:experiment_simulation",
+          "need_id": "NEED-3d06a3ca5b17"
+        }
+      }
+    ],
+    "fetches": [
+      {
+        "action_id": "f5dd37a01e4a2f51",
+        "branch_id": "auditor:transfer_boundary",
+        "candidate_ids": [],
+        "need_id": "NEED-5f7b7b03c6b5",
+        "status": "UNSELECTED_LOCATOR"
+      }
+    ],
+    "focus": [
+      {
+        "allocations": {
+          "1c689cc2aaf29f16": 0,
+          "1f50699704789092": 1,
+          "328710a8305312d7": 0,
+          "379c5f1075ca1cf3": 1,
+          "4bd29b1443dffae8": 1,
+          "691d7770f45fcb8d": 0,
+          "8f9871eebf22e4e9": 0,
+          "ad8b2dafbc314c0b": 0,
+          "b843f6a5141d1894": 0,
+          "b8af53fd22e715c3": 0,
+          "c352889a726d484e": 0,
+          "c76a67abb61293aa": 0,
+          "d3b056f9d0ca27e2": 0,
+          "d9caa76eabdf26a8": 0,
+          "f453d2209d3b933f": 0
+        },
+        "case_id": "S-ACTIVE-TRANSFER",
+        "decision_id": "56851fd8d573ceb0",
+        "null_retained": true,
+        "ranked_tasks": [
+          "1f50699704789092",
+          "379c5f1075ca1cf3",
+          "4bd29b1443dffae8",
+          "c352889a726d484e",
+          "d3b056f9d0ca27e2",
+          "d9caa76eabdf26a8",
+          "1c689cc2aaf29f16",
+          "328710a8305312d7",
+          "691d7770f45fcb8d",
+          "8f9871eebf22e4e9",
+          "ad8b2dafbc314c0b",
+          "b843f6a5141d1894",
+          "b8af53fd22e715c3",
+          "c76a67abb61293aa",
+          "f453d2209d3b933f"
+        ],
+        "rationale": "Deterministic allocation by expected information, uncertainty, novelty, provenance risk, duplicate work, feasibility, and mandatory null/rival coverage; votes and prose length are not inputs.",
+        "remaining_actions": 3,
+        "rival_retained": true,
+        "schema_version": "1.0",
+        "scores": {
+          "1c689cc2aaf29f16": 6,
+          "1f50699704789092": 9,
+          "328710a8305312d7": 6,
+          "379c5f1075ca1cf3": 9,
+          "4bd29b1443dffae8": 9,
+          "691d7770f45fcb8d": 6,
+          "8f9871eebf22e4e9": 6,
+          "ad8b2dafbc314c0b": 6,
+          "b843f6a5141d1894": 6,
+          "b8af53fd22e715c3": 6,
+          "c352889a726d484e": 9,
+          "c76a67abb61293aa": 6,
+          "d3b056f9d0ca27e2": 9,
+          "d9caa76eabdf26a8": 9,
+          "f453d2209d3b933f": 6
+        },
+        "status": "ALLOCATED",
+        "treatment_id": "A2-M"
+      }
+    ],
+    "mappings": [],
+    "needs": [
+      {
+        "budget_request": 1,
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claim_ids": [
+          "CLAIM-S-ACTIVE-TRANSFER-M1"
+        ],
+        "duplication_key": "hot-mixed lime pozzolan mortar quicklime functional recovery crack healing matched control",
+        "expected_decision_change": 2,
+        "known_candidate_ids": [],
+        "need_id": "NEED-c51b7d70b3f0",
+        "problem_id": "roman-hot-mix",
+        "problem_version": "1.0",
+        "provenance": [
+          "G10R-AB-S-ACTIVE-TRANSFER-A2-M"
+        ],
+        "question": "hot-mixed lime pozzolan mortar quicklime functional recovery crack healing matched control",
+        "required_evidence_kind": "PAGE_CARD",
+        "schema_version": "1.0",
+        "status": "PARTIAL",
+        "task_type": "RETRIEVAL",
+        "unresolved_uncertainty": 1,
+        "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+      },
+      {
+        "budget_request": 1,
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claim_ids": [
+          "CLAIM-S-ACTIVE-TRANSFER-M2"
+        ],
+        "duplication_key": "(\"hot-mixed\" or hot mixed) lime pozzolan mortar quicklime functional performance permeability comparator",
+        "expected_decision_change": 2,
+        "known_candidate_ids": [],
+        "need_id": "NEED-40b530ae81c2",
+        "problem_id": "roman-hot-mix",
+        "problem_version": "1.0",
+        "provenance": [
+          "G10R-AB-S-ACTIVE-TRANSFER-A2-M"
+        ],
+        "question": "(\"hot-mixed\" OR hot mixed) lime pozzolan mortar quicklime functional performance permeability comparator",
+        "required_evidence_kind": "PAGE_CARD",
+        "schema_version": "1.0",
+        "status": "PARTIAL",
+        "task_type": "RETRIEVAL",
+        "unresolved_uncertainty": 1,
+        "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+      },
+      {
+        "budget_request": 1,
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claim_ids": [
+          "CLAIM-S-ACTIVE-TRANSFER-NULL"
+        ],
+        "duplication_key": "quicklime silica fume microcracks impermeability hot-mixed lime pozzolan mortar",
+        "expected_decision_change": 2,
+        "known_candidate_ids": [
+          "OA-W4405549715"
+        ],
+        "need_id": "NEED-817f748e8632",
+        "problem_id": "roman-hot-mix",
+        "problem_version": "1.0",
+        "provenance": [
+          "G10R-AB-S-ACTIVE-TRANSFER-A2-M"
+        ],
+        "question": "quicklime silica fume microcracks impermeability hot-mixed lime pozzolan mortar",
+        "required_evidence_kind": "PAGE_CARD",
+        "schema_version": "1.0",
+        "status": "PARTIAL",
+        "task_type": "RETRIEVAL",
+        "unresolved_uncertainty": 1,
+        "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+      },
+      {
+        "budget_request": 1,
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claim_ids": [],
+        "duplication_key": "quicklime \"silica fume\" microcracks impermeability",
+        "expected_decision_change": 1,
+        "known_candidate_ids": [
+          "OA-W4378619188",
+          "OA-W4391180262",
+          "OA-W4391970071",
+          "OA-W4405549715",
+          "OA-W4415844429"
+        ],
+        "need_id": "NEED-3cd18cd3456e",
+        "problem_id": "roman-hot-mix",
+        "problem_version": "1.0",
+        "provenance": [
+          "G10R-AB-S-ACTIVE-TRANSFER-A2-M"
+        ],
+        "question": "quicklime \"silica fume\" microcracks impermeability",
+        "required_evidence_kind": "CONTRADICTION",
+        "schema_version": "1.0",
+        "status": "IN_PROGRESS",
+        "task_type": "CONTRADICTION",
+        "unresolved_uncertainty": 1,
+        "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+      },
+      {
+        "budget_request": 1,
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claim_ids": [],
+        "duplication_key": "quicklime silica fume microcracks impermeability",
+        "expected_decision_change": 1,
+        "known_candidate_ids": [
+          "OA-W4378619188",
+          "OA-W4391180262",
+          "OA-W4391970071",
+          "OA-W4411346060",
+          "OA-W4417168112"
+        ],
+        "need_id": "NEED-5f7b7b03c6b5",
+        "problem_id": "roman-hot-mix",
+        "problem_version": "1.0",
+        "provenance": [
+          "G10R-AB-S-ACTIVE-TRANSFER-A2-M"
+        ],
+        "question": "quicklime silica fume microcracks impermeability",
+        "required_evidence_kind": "CONTRADICTION",
+        "schema_version": "1.0",
+        "status": "IN_PROGRESS",
+        "task_type": "CONTRADICTION",
+        "unresolved_uncertainty": 1,
+        "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+      },
+      {
+        "budget_request": 1,
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claim_ids": [],
+        "duplication_key": "\"hot-mixed\" lime pozzolan mortar functional recovery comparator",
+        "expected_decision_change": 1,
+        "known_candidate_ids": [],
+        "need_id": "NEED-3d06a3ca5b17",
+        "problem_id": "roman-hot-mix",
+        "problem_version": "1.0",
+        "provenance": [
+          "G10R-AB-S-ACTIVE-TRANSFER-A2-M"
+        ],
+        "question": "\"hot-mixed\" lime pozzolan mortar functional recovery comparator",
+        "required_evidence_kind": "CONTRADICTION",
+        "schema_version": "1.0",
+        "status": "PARTIAL",
+        "task_type": "CONTRADICTION",
+        "unresolved_uncertainty": 1,
+        "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+      }
+    ],
+    "open_slot": [
+      {
+        "admission_id": "037de0b6d07d82d7",
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claim_ids": [],
+        "discriminator": "compare the open-slot candidate's process and endpoint against the incumbent roster",
+        "falsifier": "the candidate is redundant, non-process-matched, or lacks a usable locator",
+        "novelty_basis": "the open slot is evaluated from its acquired candidate set, not from a placeholder claim",
+        "overlap_decision": "NO_COMPARABLE_INCUMBENT",
+        "predicted_observation": "a process-matched candidate should expose a discriminator distinct from incumbent viewpoints",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "ABSTAINED_NO_DISTINCT_VIEWPOINT",
+        "viewpoint_id": "S-ACTIVE-TRANSFER-OPEN-ADMITTED"
+      }
+    ],
+    "problem_id": "roman-hot-mix",
+    "problem_version": "1.0",
+    "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+    "schema_version": "g10r-t.live.1",
+    "searches": [
+      {
+        "action_id": "78d0edd3f0a9d3d6",
+        "branch_id": "S-ACTIVE-TRANSFER-M1",
+        "candidate_ids": [],
+        "need_id": "NEED-c51b7d70b3f0"
+      },
+      {
+        "action_id": "2ed0060266360d95",
+        "branch_id": "S-ACTIVE-TRANSFER-M2",
+        "candidate_ids": [],
+        "need_id": "NEED-40b530ae81c2"
+      },
+      {
+        "action_id": "c23969f99d26ff73",
+        "branch_id": "S-ACTIVE-TRANSFER-NULL",
+        "candidate_ids": [
+          "OA-W4405549715"
+        ],
+        "need_id": "NEED-817f748e8632"
+      },
+      {
+        "action_id": "89f0a82609fec81d",
+        "branch_id": "auditor:evidence_skeptic",
+        "candidate_ids": [
+          "OA-W4378619188",
+          "OA-W4391180262",
+          "OA-W4391970071",
+          "OA-W4405549715",
+          "OA-W4415844429"
+        ],
+        "need_id": "NEED-3cd18cd3456e"
+      },
+      {
+        "action_id": "0147d1a61a7081ad",
+        "branch_id": "auditor:transfer_boundary",
+        "candidate_ids": [
+          "OA-W4378619188",
+          "OA-W4391180262",
+          "OA-W4391970071",
+          "OA-W4411346060",
+          "OA-W4417168112"
+        ],
+        "need_id": "NEED-5f7b7b03c6b5"
+      },
+      {
+        "action_id": "ae6c8350ffc18bea",
+        "branch_id": "auditor:experiment_simulation",
+        "candidate_ids": [],
+        "need_id": "NEED-3d06a3ca5b17"
+      },
+      {
+        "action_id": "123d98229e007930",
+        "branch_id": "S-ACTIVE-TRANSFER-M1",
+        "candidate_ids": [],
+        "need_id": "NEED-c51b7d70b3f0"
+      },
+      {
+        "action_id": "f27ea333ca1e5a06",
+        "branch_id": "S-ACTIVE-TRANSFER-NULL",
+        "candidate_ids": [],
+        "need_id": "NEED-817f748e8632"
+      }
+    ],
+    "selections": [
+      {
+        "action_ids": [
+          "c23969f99d26ff73"
+        ],
+        "candidate_status": "METADATA_SCREENED",
+        "content_locator": "https://api.openalex.org/works/W4405549715",
+        "need_id": "NEED-817f748e8632",
+        "policy_status": "METADATA_ONLY",
+        "requested_operation": "SEEK_LOCATOR",
+        "schema_version": "1.0",
+        "selection_id": "SEL-533b41fe857f",
+        "selection_reason": "metadata candidate retained pending a lawful content locator",
+        "source_candidate_id": "OA-W4405549715",
+        "status": "PENDING"
+      },
+      {
+        "action_ids": [
+          "89f0a82609fec81d"
+        ],
+        "candidate_status": "METADATA_SCREENED",
+        "content_locator": "https://api.openalex.org/works/W4378619188",
+        "need_id": "NEED-3cd18cd3456e",
+        "policy_status": "METADATA_ONLY",
+        "requested_operation": "SEEK_LOCATOR",
+        "schema_version": "1.0",
+        "selection_id": "SEL-6a530ccc6530",
+        "selection_reason": "metadata candidate retained pending a lawful content locator",
+        "source_candidate_id": "OA-W4378619188",
+        "status": "PENDING"
+      },
+      {
+        "action_ids": [
+          "0147d1a61a7081ad"
+        ],
+        "candidate_status": "METADATA_SCREENED",
+        "content_locator": "https://api.openalex.org/works/W4378619188",
+        "need_id": "NEED-5f7b7b03c6b5",
+        "policy_status": "METADATA_ONLY",
+        "requested_operation": "SEEK_LOCATOR",
+        "schema_version": "1.0",
+        "selection_id": "SEL-6c3dc73ad7bf",
+        "selection_reason": "metadata candidate retained pending a lawful content locator",
+        "source_candidate_id": "OA-W4378619188",
+        "status": "PENDING"
+      }
+    ],
+    "stage": "COMPLETED"
+  },
+  "simulation_traces": [],
+  "source_candidates": {
+    "OA-W4378619188": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3390/ma16114026",
+      "discovery_query": "quicklime \"silica fume\" microcracks impermeability",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4378619188",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4378619188",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Unveiling the Effects of Quicklime on the Properties of Sulfoaluminate Cement\u2013Ordinary Portland Cement\u2013Mineral Admixture Repairing Composites and Their Sulphate Resistance"
+    },
+    "OA-W4391180262": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.clema.2024.100219",
+      "discovery_query": "quicklime \"silica fume\" microcracks impermeability",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4391180262",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4391180262",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Effect of collated fly ash, GGBS and silica fume on index and engineering properties of expansive clays as a sustainable landfill liner"
+    },
+    "OA-W4391970071": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3390/buildings14020537",
+      "discovery_query": "quicklime \"silica fume\" microcracks impermeability",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4391970071",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4391970071",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Performance and Heavy Metal Analysis of Graphite Tailings Cured Using Cementitious Materials"
+    },
+    "OA-W4405549715": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1007/s44290-024-00154-z",
+      "discovery_query": "quicklime silica fume microcracks impermeability hot-mixed lime pozzolan mortar",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4405549715",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4405549715",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Assessing the effects of supplementary cementitious materials on concrete properties:a review"
+    },
+    "OA-W4411346060": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.3390/ma18122838",
+      "discovery_query": "quicklime silica fume microcracks impermeability",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4411346060",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4411346060",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Recycled Clay Brick Powder as a Dual-Function Additive: Mitigating the Alkali\u2013Silica Reaction (ASR) and Enhancing Strength in Eco-Friendly Mortar with Hybrid Waste Glass and Clay Brick Aggregates"
+    },
+    "OA-W4415844429": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.30684/etj.2025.162169.1982",
+      "discovery_query": "quicklime \"silica fume\" microcracks impermeability",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4415844429",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4415844429",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Properties of modified metakaolin-based geopolymer concrete with two types of waste aggregate"
+    },
+    "OA-W4417168112": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1038/s41598-025-30671-5",
+      "discovery_query": "quicklime silica fume microcracks impermeability",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4417168112",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4417168112",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Investigating the effects of employing recycled carpet fibers and micro-silica on the mechanical properties of concrete under elevated temperatures"
+    }
+  },
+  "state": "completed",
+  "state_history": [
+    "created",
+    "policy_loaded",
+    "context_frozen",
+    "planning",
+    "round_1",
+    "sharing",
+    "focus_allocated",
+    "round_2",
+    "adjudicating",
+    "scored",
+    "completed"
+  ],
+  "tool_request_events": [
+    {
+      "branch_id": "auditor:transfer_boundary",
+      "event_id": "f5dd37a01e4a2f51",
+      "locator": "OA-W4405549715",
+      "reason": "A2-M content fetch must follow a recorded candidate selection",
+      "selected_source_candidate_id": null,
+      "status": "RESEARCH_LOOP_REJECTED_UNSELECTED_LOCATOR"
+    }
+  ],
+  "viewpoint_society": {
+    "action_budget": 12,
+    "active_ids": [
+      "S-ACTIVE-TRANSFER-M1",
+      "S-ACTIVE-TRANSFER-M2",
+      "S-ACTIVE-TRANSFER-NULL"
+    ],
+    "cards": {
+      "S-ACTIVE-TRANSFER-M1": {
+        "case_id": "S-ACTIVE-TRANSFER",
+        "falsifiers": [
+          "The effect disappears under a matched comparator or endpoint."
+        ],
+        "kind": "CANDIDATE",
+        "known_alternatives": [
+          "S-ACTIVE-TRANSFER-M2",
+          "S-ACTIVE-TRANSFER-NULL"
+        ],
+        "predictions": [
+          "A process-matched target experiment shows functional recovery beyond the control."
+        ],
+        "prior_basis": "Offline mechanism fixture from the transfer case; not direct evidence.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "Quicklime-associated chemistry can transfer to functional recovery in the target domain.",
+        "support_region": "Only if material, process, comparator, and endpoint are sufficiently matched.",
+        "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+      },
+      "S-ACTIVE-TRANSFER-M2": {
+        "case_id": "S-ACTIVE-TRANSFER",
+        "falsifiers": [
+          "A process-matched target-domain record reports the same intervention and functional endpoint."
+        ],
+        "kind": "CANDIDATE",
+        "known_alternatives": [
+          "S-ACTIVE-TRANSFER-M1",
+          "S-ACTIVE-TRANSFER-NULL"
+        ],
+        "predictions": [
+          "The source supports a discriminator but not a direct target performance claim."
+        ],
+        "prior_basis": "Offline mechanism fixture for transfer skepticism.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "The observed quicklime record is a domain-limited transfer analogy rather than direct target support.",
+        "support_region": "Cement-based records with a declared transfer boundary to hot-mixed lime-pozzolan mortar.",
+        "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+      },
+      "S-ACTIVE-TRANSFER-NULL": {
+        "case_id": "S-ACTIVE-TRANSFER",
+        "falsifiers": [
+          "A direct target-domain record supplies a valid mechanism discriminator."
+        ],
+        "kind": "NULL",
+        "known_alternatives": [
+          "S-ACTIVE-TRANSFER-M1",
+          "S-ACTIVE-TRANSFER-M2"
+        ],
+        "predictions": [
+          "The record remains insufficient without a process-matched target comparison."
+        ],
+        "prior_basis": "Required null comparator for transfer uncertainty.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "The available record cannot distinguish a target-domain mechanism.",
+        "support_region": "The declared material, process, comparator, and functional endpoint boundary.",
+        "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+      },
+      "S-ACTIVE-TRANSFER-OPEN": {
+        "case_id": "S-ACTIVE-TRANSFER",
+        "falsifiers": [
+          "No distinct prediction or provenance can be supplied."
+        ],
+        "kind": "OPEN_SLOT",
+        "known_alternatives": [
+          "S-ACTIVE-TRANSFER-M1",
+          "S-ACTIVE-TRANSFER-M2",
+          "S-ACTIVE-TRANSFER-NULL"
+        ],
+        "predictions": [
+          "A new mechanism must state a target-domain discriminator."
+        ],
+        "prior_basis": "Required discovery slot.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "Open slot for a new transfer or target mechanism introduced by bounded evidence.",
+        "support_region": "Must be declared before any new mechanism is scored.",
+        "viewpoint_id": "S-ACTIVE-TRANSFER-OPEN"
+      }
+    },
+    "case_id": "S-ACTIVE-TRANSFER",
+    "context_hash": "sha256:1ac055b97d74c26735c4f6fdc646f8f9fcba340e8171300cbab6ea646b599c93",
+    "critiques": {
+      "70c5ee4636654016": {
+        "case_id": "S-ACTIVE-TRANSFER",
+        "challenge": "The claim that quicklime-associated chemistry transfers to functional recovery is unsupported: E-T1 gives no material, process, comparator, or endpoint details, and the listed candidates are metadata-only; their titles do not establish a matched hot-mixed lime-pozzolan mortar record. Treat the record only as a transfer hypothesis seed, not direct target support.",
+        "compared_viewpoint_ids": [
+          "S-ACTIVE-TRANSFER-M1",
+          "S-ACTIVE-TRANSFER-M2",
+          "S-ACTIVE-TRANSFER-NULL"
+        ],
+        "critic_id": "structural:evidence_skeptic",
+        "critique_id": "70c5ee4636654016",
+        "dossier_ids": [
+          "DOSSIER-S-ACTIVE-TRANSFER-M1",
+          "DOSSIER-S-ACTIVE-TRANSFER-M2",
+          "DOSSIER-S-ACTIVE-TRANSFER-NULL"
+        ],
+        "proposed_discriminator": "Verify the source\u2019s material, process, comparator, and functional endpoint, then identify a process-matched target-domain comparison reporting recovery beyond control; absent that, retain the transfer boundary.",
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W4378619188",
+          "OA-W4391970071",
+          "OA-W4415844429",
+          "OA-W4391180262",
+          "OA-W4405549715"
+        ],
+        "status": "REVIEW_REQUIRED",
+        "target_viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+      },
+      "d0f440f34114e9df": {
+        "case_id": "S-ACTIVE-TRANSFER",
+        "challenge": "The quicklime record cannot directly support functional recovery in hot-mixed lime-pozzolan mortar: its material, process, comparator, and endpoint fit are unknown, and no source candidates or validated simulation adapters are supplied.",
+        "compared_viewpoint_ids": [
+          "S-ACTIVE-TRANSFER-M1",
+          "S-ACTIVE-TRANSFER-M2",
+          "S-ACTIVE-TRANSFER-NULL"
+        ],
+        "critic_id": "structural:experiment_simulation",
+        "critique_id": "d0f440f34114e9df",
+        "dossier_ids": [
+          "DOSSIER-S-ACTIVE-TRANSFER-M1",
+          "DOSSIER-S-ACTIVE-TRANSFER-M2",
+          "DOSSIER-S-ACTIVE-TRANSFER-NULL"
+        ],
+        "proposed_discriminator": "Cheapest observation: retrieve a public target-domain record and check whether it reports the same intervention, a process-matched comparator, and a functional-recovery endpoint. Treat any simulation result as MODEL_ASSERTION, not empirical evidence.",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "REVIEW_REQUIRED",
+        "target_viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+      },
+      "ef65dc7ca960dae8": {
+        "case_id": "S-ACTIVE-TRANSFER",
+        "challenge": "The quicklime record cannot directly support functional recovery in hot-mixed lime-pozzolan mortar: material, process, comparator, and endpoint are unspecified. The supplied metadata candidates concern other cementitious or soil systems and do not establish a matched transfer.",
+        "compared_viewpoint_ids": [
+          "S-ACTIVE-TRANSFER-M1",
+          "S-ACTIVE-TRANSFER-M2",
+          "S-ACTIVE-TRANSFER-NULL"
+        ],
+        "critic_id": "structural:transfer_boundary",
+        "critique_id": "ef65dc7ca960dae8",
+        "dossier_ids": [
+          "DOSSIER-S-ACTIVE-TRANSFER-M1",
+          "DOSSIER-S-ACTIVE-TRANSFER-M2",
+          "DOSSIER-S-ACTIVE-TRANSFER-NULL"
+        ],
+        "proposed_discriminator": "Check for a target-domain comparison using hot-mixed lime-pozzolan mortar, a process-matched control, and the same prespecified functional endpoint; until then, treat the record only as a transfer hypothesis.",
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W4378619188",
+          "OA-W4391180262",
+          "OA-W4417168112",
+          "OA-W4391970071",
+          "OA-W4411346060"
+        ],
+        "status": "REVIEW_REQUIRED",
+        "target_viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+      }
+    },
+    "dossiers": {
+      "S-ACTIVE-TRANSFER-M1": {
+        "action_ids": [
+          "0147d1a61a7081ad",
+          "123d98229e007930",
+          "78d0edd3f0a9d3d6",
+          "89f0a82609fec81d",
+          "ae6c8350ffc18bea"
+        ],
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claim_ids": [
+          "C1"
+        ],
+        "diagnostics": [],
+        "dissenting_report_ids": [],
+        "dossier_id": "DOSSIER-S-ACTIVE-TRANSFER-M1-R2",
+        "report_ids": [
+          "34a122312d3c8044",
+          "37378355937d1bdc",
+          "399ccd9733942c86",
+          "50b606ecd42be906",
+          "557de707aaaee5ae",
+          "73e3d3b0fb86a960",
+          "74fe9fd9a4b27178",
+          "8d505194fc886d96",
+          "9524ed5abfc580c3",
+          "cb3be2bbd87c4f4c",
+          "cd7ea3ac93779591",
+          "de4101d114c126dc",
+          "fd110848737e944e"
+        ],
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W4378619188",
+          "OA-W4391180262",
+          "OA-W4391970071",
+          "OA-W4405549715",
+          "OA-W4411346060",
+          "OA-W4415844429",
+          "OA-W4417168112"
+        ],
+        "status": "COMPLETE",
+        "support_task_ids": [
+          "1f50699704789092",
+          "4bd29b1443dffae8",
+          "8f9871eebf22e4e9",
+          "b8af53fd22e715c3",
+          "c76a67abb61293aa"
+        ],
+        "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+      },
+      "S-ACTIVE-TRANSFER-M2": {
+        "action_ids": [
+          "2ed0060266360d95"
+        ],
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claim_ids": [
+          "C1"
+        ],
+        "diagnostics": [],
+        "dissenting_report_ids": [],
+        "dossier_id": "DOSSIER-S-ACTIVE-TRANSFER-M2-R2",
+        "report_ids": [
+          "0da89ba15a3f10a6",
+          "0f249ce615bbf0b5",
+          "52f0983d3a80701d",
+          "5d6c945588898d85",
+          "94b12ffedaea44a7",
+          "a14bf8a9b7c8a0f2",
+          "b290b648f1fdef22",
+          "bbaa177a058b9804",
+          "bd39ee33197fb0a4",
+          "ca4c7f366b523622"
+        ],
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "COMPLETE",
+        "support_task_ids": [
+          "1c689cc2aaf29f16",
+          "ad8b2dafbc314c0b",
+          "c352889a726d484e",
+          "d3b056f9d0ca27e2",
+          "f453d2209d3b933f"
+        ],
+        "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+      },
+      "S-ACTIVE-TRANSFER-NULL": {
+        "action_ids": [
+          "c23969f99d26ff73",
+          "f27ea333ca1e5a06"
+        ],
+        "case_id": "S-ACTIVE-TRANSFER",
+        "claim_ids": [
+          "C-NULL"
+        ],
+        "diagnostics": [],
+        "dissenting_report_ids": [],
+        "dossier_id": "DOSSIER-S-ACTIVE-TRANSFER-NULL-R2",
+        "report_ids": [
+          "0bfe7e7ee4f4a3ee",
+          "0c85a9d537d5c021",
+          "3a48d2bcce42bf74",
+          "459e1a43c0988f29",
+          "5d3646367bc5e30f",
+          "6f4ab047af478ac1",
+          "b440741f01932ec4",
+          "c161fbdf57df5d05",
+          "c507141afd773612",
+          "ec950e795df7c579"
+        ],
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W4405549715"
+        ],
+        "status": "COMPLETE",
+        "support_task_ids": [
+          "328710a8305312d7",
+          "379c5f1075ca1cf3",
+          "691d7770f45fcb8d",
+          "b843f6a5141d1894",
+          "d9caa76eabdf26a8"
+        ],
+        "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+      }
+    },
+    "evidence_bus": {
+      "actions": {
+        "0147d1a61a7081ad": {
+          "action_id": "0147d1a61a7081ad",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "auditor:transfer_boundary",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 2,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-TRANSFER",
+          "input": {
+            "index": "openalex",
+            "query": "quicklime silica fume microcracks impermeability",
+            "requested_index": "openalex"
+          },
+          "output_ids": [
+            "OA-W4378619188",
+            "OA-W4391180262",
+            "OA-W4417168112",
+            "OA-W4391970071",
+            "OA-W4411346060"
+          ],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "Identify the reported record and establish its material, process, comparator, and measured endpoint before judging transfer.",
+          "replay_key": "sha256:3e05f05a402fe4a07dda4aaf57e6006f8ef455b91c95bfdda19c98b3115b28a3",
+          "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "123d98229e007930": {
+          "action_id": "123d98229e007930",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "S-ACTIVE-TRANSFER-M1",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 0,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-TRANSFER",
+          "input": {
+            "index": "openalex",
+            "query": "quicklime-associated chemistry can transfer to functional recovery in the target domain. can a public quicklime-and-silica-fume record directly support the hot-mixed lime-pozzolan target, or only seed a transfer hypothesis?",
+            "requested_index": "catalog"
+          },
+          "output_ids": [],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "deterministic viewpoint discriminator focus",
+          "replay_key": "sha256:b1a1a6d19034a5d9f51ced7587f7500d42284b0ee61658b1471b287cb74429a5",
+          "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "2ed0060266360d95": {
+          "action_id": "2ed0060266360d95",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "S-ACTIVE-TRANSFER-M2",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 0,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-TRANSFER",
+          "input": {
+            "index": "openalex",
+            "query": "(\"hot-mixed\" or hot mixed) lime pozzolan mortar quicklime functional performance permeability comparator",
+            "requested_index": "openalex"
+          },
+          "output_ids": [],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "Test for process-matched target-domain records that could falsify the transfer-only view. The sole supplied evidence, E-T1, is pending and has unknown material and comparator fit.",
+          "replay_key": "sha256:ead31c25c58f0b7fa452c9587ad641fb0fde24b1774ae84a25e31bd0149f1ac5",
+          "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "78d0edd3f0a9d3d6": {
+          "action_id": "78d0edd3f0a9d3d6",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "S-ACTIVE-TRANSFER-M1",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 0,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-TRANSFER",
+          "input": {
+            "index": "openalex",
+            "query": "hot-mixed lime pozzolan mortar quicklime functional recovery crack healing matched control",
+            "requested_index": "openalex"
+          },
+          "output_ids": [],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "Seek target-domain evidence testing M1\u2019s prediction of functional recovery beyond a control; compare material, mixing process, comparator, and endpoint. The current quicklime\u2013microcrack\u2013impermeability record is only a pending lead, not target evidence.",
+          "replay_key": "sha256:2898e737d276bbafb9ed47dd824625faa5e40559b2d9241ed0f23cd651714356",
+          "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "89f0a82609fec81d": {
+          "action_id": "89f0a82609fec81d",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "auditor:evidence_skeptic",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 4,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-TRANSFER",
+          "input": {
+            "index": "openalex",
+            "query": "quicklime \"silica fume\" microcracks impermeability",
+            "requested_index": "catalog"
+          },
+          "output_ids": [
+            "OA-W4378619188",
+            "OA-W4391970071",
+            "OA-W4415844429",
+            "OA-W4391180262",
+            "OA-W4405549715"
+          ],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "Identify the cited record and establish its material, process, comparator, and measured endpoint before assessing transfer.",
+          "replay_key": "sha256:501663c12b22b6a8bf77628960a9b72b08edc24b7d2798331c155af010f1e7b4",
+          "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "ae6c8350ffc18bea": {
+          "action_id": "ae6c8350ffc18bea",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "auditor:experiment_simulation",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 0,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-TRANSFER",
+          "input": {
+            "index": "openalex",
+            "query": "\"hot-mixed\" lime pozzolan mortar functional recovery comparator",
+            "requested_index": "catalog"
+          },
+          "output_ids": [],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "Cheapest discriminator: locate a target-domain record matching the process and functional endpoint; a direct match could distinguish target support from analogy.",
+          "replay_key": "sha256:34aba62ff933db3a5e6372c7bd857c7173f4d3c2a145d1f50ba4bbbdf8728d3c",
+          "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "c23969f99d26ff73": {
+          "action_id": "c23969f99d26ff73",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "S-ACTIVE-TRANSFER-NULL",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 1,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-TRANSFER",
+          "input": {
+            "index": "openalex",
+            "query": "quicklime silica fume microcracks impermeability hot-mixed lime pozzolan mortar",
+            "requested_index": "catalog"
+          },
+          "output_ids": [
+            "OA-W4405549715"
+          ],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "Test whether the reported record matches the target material and process and includes a comparator and functional endpoint. The null prediction is that it remains insufficient without a process-matched target comparison; a direct target record with a valid mechanism discriminator would falsify this viewpoint. Current provenance is limited to E-T1, whose material and comparator fit are unknown.",
+          "replay_key": "sha256:16ed45f4db2b3f130aa68eb14748f9db7333891bd9a11e2cf8e17419351fe97c",
+          "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "f27ea333ca1e5a06": {
+          "action_id": "f27ea333ca1e5a06",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "S-ACTIVE-TRANSFER-NULL",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 0,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-TRANSFER",
+          "input": {
+            "index": "openalex",
+            "query": "the available record cannot distinguish a target-domain mechanism. can a public quicklime-and-silica-fume record directly support the hot-mixed lime-pozzolan target, or only seed a transfer hypothesis?",
+            "requested_index": "catalog"
+          },
+          "output_ids": [],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "deterministic viewpoint discriminator focus",
+          "replay_key": "sha256:c0056f143896768ad18c8932547f312be948ad5ce890f125f37bc9401540c586",
+          "run_id": "G10R-AB-S-ACTIVE-TRANSFER-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        }
+      },
+      "append_order": [
+        [
+          "SUPPORT_TASK",
+          "4bd29b1443dffae8"
+        ],
+        [
+          "SUPPORT_TASK",
+          "b8af53fd22e715c3"
+        ],
+        [
+          "SUPPORT_TASK",
+          "c76a67abb61293aa"
+        ],
+        [
+          "SUPPORT_TASK",
+          "1f50699704789092"
+        ],
+        [
+          "SUPPORT_TASK",
+          "8f9871eebf22e4e9"
+        ],
+        [
+          "SUPPORT_TASK",
+          "c352889a726d484e"
+        ],
+        [
+          "SUPPORT_TASK",
+          "ad8b2dafbc314c0b"
+        ],
+        [
+          "SUPPORT_TASK",
+          "1c689cc2aaf29f16"
+        ],
+        [
+          "SUPPORT_TASK",
+          "d3b056f9d0ca27e2"
+        ],
+        [
+          "SUPPORT_TASK",
+          "f453d2209d3b933f"
+        ],
+        [
+          "SUPPORT_TASK",
+          "d9caa76eabdf26a8"
+        ],
+        [
+          "SUPPORT_TASK",
+          "691d7770f45fcb8d"
+        ],
+        [
+          "SUPPORT_TASK",
+          "328710a8305312d7"
+        ],
+        [
+          "SUPPORT_TASK",
+          "379c5f1075ca1cf3"
+        ],
+        [
+          "SUPPORT_TASK",
+          "b843f6a5141d1894"
+        ],
+        [
+          "ACTION",
+          "78d0edd3f0a9d3d6"
+        ],
+        [
+          "ACTION",
+          "2ed0060266360d95"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W4405549715"
+        ],
+        [
+          "ACTION",
+          "c23969f99d26ff73"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "de4101d114c126dc"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "399ccd9733942c86"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "fd110848737e944e"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "37378355937d1bdc"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "557de707aaaee5ae"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "94b12ffedaea44a7"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "52f0983d3a80701d"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "bd39ee33197fb0a4"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "0da89ba15a3f10a6"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "a14bf8a9b7c8a0f2"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "0c85a9d537d5c021"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "6f4ab047af478ac1"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "5d3646367bc5e30f"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "c507141afd773612"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "b440741f01932ec4"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-TRANSFER-M1"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-TRANSFER-M2"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-TRANSFER-NULL"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W4378619188"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W4391970071"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W4415844429"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W4391180262"
+        ],
+        [
+          "ACTION",
+          "89f0a82609fec81d"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "74fe9fd9a4b27178"
+        ],
+        [
+          "CROSS_VIEWPOINT_CRITIQUE",
+          "70c5ee4636654016"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W4417168112"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W4411346060"
+        ],
+        [
+          "ACTION",
+          "0147d1a61a7081ad"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "73e3d3b0fb86a960"
+        ],
+        [
+          "CROSS_VIEWPOINT_CRITIQUE",
+          "ef65dc7ca960dae8"
+        ],
+        [
+          "ACTION",
+          "ae6c8350ffc18bea"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "34a122312d3c8044"
+        ],
+        [
+          "CROSS_VIEWPOINT_CRITIQUE",
+          "d0f440f34114e9df"
+        ],
+        [
+          "ACTION",
+          "123d98229e007930"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "8d505194fc886d96"
+        ],
+        [
+          "ACTION",
+          "f27ea333ca1e5a06"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "459e1a43c0988f29"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "9524ed5abfc580c3"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "0f249ce615bbf0b5"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "b290b648f1fdef22"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "c161fbdf57df5d05"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "5d6c945588898d85"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "3a48d2bcce42bf74"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "0bfe7e7ee4f4a3ee"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "cb3be2bbd87c4f4c"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "bbaa177a058b9804"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "ec950e795df7c579"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "50b606ecd42be906"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "cd7ea3ac93779591"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "ca4c7f366b523622"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-TRANSFER-M1-R2"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-TRANSFER-M2-R2"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-TRANSFER-NULL-R2"
+        ]
+      ],
+      "candidate_conflicts": {},
+      "candidate_observations": {
+        "OA-W4378619188": [
+          {
+            "discovery_query": "quicklime \"silica fume\" microcracks impermeability",
+            "payload_hash": "sha256:a6ac40d355ff25e2d3da27159761fa432b8c60e16d21c03e01a6b7c806254f12",
+            "source_candidate_id": "OA-W4378619188",
+            "status": "METADATA_SCREENED"
+          },
+          {
+            "discovery_query": "quicklime silica fume microcracks impermeability",
+            "payload_hash": "sha256:287bd3eab0d6970e2cf22a9225b125211cbbedd284fabe67acae1dd8693e7943",
+            "source_candidate_id": "OA-W4378619188",
+            "status": "DUPLICATE"
+          }
+        ],
+        "OA-W4391180262": [
+          {
+            "discovery_query": "quicklime \"silica fume\" microcracks impermeability",
+            "payload_hash": "sha256:795b27be7a443865284e2f73a504d34783897411caad94ad514cb582853d8682",
+            "source_candidate_id": "OA-W4391180262",
+            "status": "METADATA_SCREENED"
+          },
+          {
+            "discovery_query": "quicklime silica fume microcracks impermeability",
+            "payload_hash": "sha256:aad84daf339ca826697a0d69773cd29414ed5e32513d0b86d33f168270a6ea57",
+            "source_candidate_id": "OA-W4391180262",
+            "status": "DUPLICATE"
+          }
+        ],
+        "OA-W4391970071": [
+          {
+            "discovery_query": "quicklime \"silica fume\" microcracks impermeability",
+            "payload_hash": "sha256:93fc36b0de841255edd2f49e4396407a50068851a196867355ffe504b1de80bb",
+            "source_candidate_id": "OA-W4391970071",
+            "status": "METADATA_SCREENED"
+          },
+          {
+            "discovery_query": "quicklime silica fume microcracks impermeability",
+            "payload_hash": "sha256:d51cfda9cb86f5dd5c5c1bfc922765e15da727e60997caaf82d02e869f7c6a7e",
+            "source_candidate_id": "OA-W4391970071",
+            "status": "DUPLICATE"
+          }
+        ],
+        "OA-W4405549715": [
+          {
+            "discovery_query": "quicklime silica fume microcracks impermeability hot-mixed lime pozzolan mortar",
+            "payload_hash": "sha256:95d6071d928bfe251a6d626d1c022851a55db4a8660f6ce3e1f5f29f6eef923f",
+            "source_candidate_id": "OA-W4405549715",
+            "status": "METADATA_SCREENED"
+          },
+          {
+            "discovery_query": "quicklime \"silica fume\" microcracks impermeability",
+            "payload_hash": "sha256:210f5458ae9067d7022b7fa00a4f026491948ea4a9aec992cc43c23d63283470",
+            "source_candidate_id": "OA-W4405549715",
+            "status": "DUPLICATE"
+          }
+        ],
+        "OA-W4411346060": [
+          {
+            "discovery_query": "quicklime silica fume microcracks impermeability",
+            "payload_hash": "sha256:08fc8fe89f2337e0bd944064fe62ee4b28864bd395adb66bcdc8991a916f7a02",
+            "source_candidate_id": "OA-W4411346060",
+            "status": "METADATA_SCREENED"
+          }
+        ],
+        "OA-W4415844429": [
+          {
+            "discovery_query": "quicklime \"silica fume\" microcracks impermeability",
+            "payload_hash": "sha256:a739ccb0517048fff466fe9956f8f7a318215b180c1918558708236bd61078ac",
+            "source_candidate_id": "OA-W4415844429",
+            "status": "METADATA_SCREENED"
+          }
+        ],
+        "OA-W4417168112": [
+          {
+            "discovery_query": "quicklime silica fume microcracks impermeability",
+            "payload_hash": "sha256:3e75b9d4265fac0042e804fb9ffa64b0e453957a6cf441ae6ffe3fa04410be83",
+            "source_candidate_id": "OA-W4417168112",
+            "status": "METADATA_SCREENED"
+          }
+        ]
+      },
+      "candidates": {
+        "OA-W4378619188": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.3390/ma16114026",
+          "discovery_query": "quicklime \"silica fume\" microcracks impermeability",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W4378619188",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W4378619188",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Unveiling the Effects of Quicklime on the Properties of Sulfoaluminate Cement\u2013Ordinary Portland Cement\u2013Mineral Admixture Repairing Composites and Their Sulphate Resistance"
+        },
+        "OA-W4391180262": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.1016/j.clema.2024.100219",
+          "discovery_query": "quicklime \"silica fume\" microcracks impermeability",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W4391180262",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W4391180262",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Effect of collated fly ash, GGBS and silica fume on index and engineering properties of expansive clays as a sustainable landfill liner"
+        },
+        "OA-W4391970071": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.3390/buildings14020537",
+          "discovery_query": "quicklime \"silica fume\" microcracks impermeability",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W4391970071",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W4391970071",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Performance and Heavy Metal Analysis of Graphite Tailings Cured Using Cementitious Materials"
+        },
+        "OA-W4405549715": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.1007/s44290-024-00154-z",
+          "discovery_query": "quicklime silica fume microcracks impermeability hot-mixed lime pozzolan mortar",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W4405549715",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W4405549715",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Assessing the effects of supplementary cementitious materials on concrete properties:a review"
+        },
+        "OA-W4411346060": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.3390/ma18122838",
+          "discovery_query": "quicklime silica fume microcracks impermeability",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W4411346060",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W4411346060",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Recycled Clay Brick Powder as a Dual-Function Additive: Mitigating the Alkali\u2013Silica Reaction (ASR) and Enhancing Strength in Eco-Friendly Mortar with Hybrid Waste Glass and Clay Brick Aggregates"
+        },
+        "OA-W4415844429": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.30684/etj.2025.162169.1982",
+          "discovery_query": "quicklime \"silica fume\" microcracks impermeability",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W4415844429",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W4415844429",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Properties of modified metakaolin-based geopolymer concrete with two types of waste aggregate"
+        },
+        "OA-W4417168112": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.1038/s41598-025-30671-5",
+          "discovery_query": "quicklime silica fume microcracks impermeability",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W4417168112",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W4417168112",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Investigating the effects of employing recycled carpet fibers and micro-silica on the mechanical properties of concrete under elevated temperatures"
+        }
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "context_hash": "sha256:1ac055b97d74c26735c4f6fdc646f8f9fcba340e8171300cbab6ea646b599c93",
+      "critiques": {
+        "70c5ee4636654016": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "challenge": "The claim that quicklime-associated chemistry transfers to functional recovery is unsupported: E-T1 gives no material, process, comparator, or endpoint details, and the listed candidates are metadata-only; their titles do not establish a matched hot-mixed lime-pozzolan mortar record. Treat the record only as a transfer hypothesis seed, not direct target support.",
+          "compared_viewpoint_ids": [
+            "S-ACTIVE-TRANSFER-M1",
+            "S-ACTIVE-TRANSFER-M2",
+            "S-ACTIVE-TRANSFER-NULL"
+          ],
+          "critic_id": "structural:evidence_skeptic",
+          "critique_id": "70c5ee4636654016",
+          "dossier_ids": [
+            "DOSSIER-S-ACTIVE-TRANSFER-M1",
+            "DOSSIER-S-ACTIVE-TRANSFER-M2",
+            "DOSSIER-S-ACTIVE-TRANSFER-NULL"
+          ],
+          "proposed_discriminator": "Verify the source\u2019s material, process, comparator, and functional endpoint, then identify a process-matched target-domain comparison reporting recovery beyond control; absent that, retain the transfer boundary.",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W4378619188",
+            "OA-W4391970071",
+            "OA-W4415844429",
+            "OA-W4391180262",
+            "OA-W4405549715"
+          ],
+          "status": "REVIEW_REQUIRED",
+          "target_viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "d0f440f34114e9df": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "challenge": "The quicklime record cannot directly support functional recovery in hot-mixed lime-pozzolan mortar: its material, process, comparator, and endpoint fit are unknown, and no source candidates or validated simulation adapters are supplied.",
+          "compared_viewpoint_ids": [
+            "S-ACTIVE-TRANSFER-M1",
+            "S-ACTIVE-TRANSFER-M2",
+            "S-ACTIVE-TRANSFER-NULL"
+          ],
+          "critic_id": "structural:experiment_simulation",
+          "critique_id": "d0f440f34114e9df",
+          "dossier_ids": [
+            "DOSSIER-S-ACTIVE-TRANSFER-M1",
+            "DOSSIER-S-ACTIVE-TRANSFER-M2",
+            "DOSSIER-S-ACTIVE-TRANSFER-NULL"
+          ],
+          "proposed_discriminator": "Cheapest observation: retrieve a public target-domain record and check whether it reports the same intervention, a process-matched comparator, and a functional-recovery endpoint. Treat any simulation result as MODEL_ASSERTION, not empirical evidence.",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "status": "REVIEW_REQUIRED",
+          "target_viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "ef65dc7ca960dae8": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "challenge": "The quicklime record cannot directly support functional recovery in hot-mixed lime-pozzolan mortar: material, process, comparator, and endpoint are unspecified. The supplied metadata candidates concern other cementitious or soil systems and do not establish a matched transfer.",
+          "compared_viewpoint_ids": [
+            "S-ACTIVE-TRANSFER-M1",
+            "S-ACTIVE-TRANSFER-M2",
+            "S-ACTIVE-TRANSFER-NULL"
+          ],
+          "critic_id": "structural:transfer_boundary",
+          "critique_id": "ef65dc7ca960dae8",
+          "dossier_ids": [
+            "DOSSIER-S-ACTIVE-TRANSFER-M1",
+            "DOSSIER-S-ACTIVE-TRANSFER-M2",
+            "DOSSIER-S-ACTIVE-TRANSFER-NULL"
+          ],
+          "proposed_discriminator": "Check for a target-domain comparison using hot-mixed lime-pozzolan mortar, a process-matched control, and the same prespecified functional endpoint; until then, treat the record only as a transfer hypothesis.",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W4378619188",
+            "OA-W4391180262",
+            "OA-W4417168112",
+            "OA-W4391970071",
+            "OA-W4411346060"
+          ],
+          "status": "REVIEW_REQUIRED",
+          "target_viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        }
+      },
+      "dossiers": {
+        "DOSSIER-S-ACTIVE-TRANSFER-M1": {
+          "action_ids": [
+            "78d0edd3f0a9d3d6"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [
+            "C1"
+          ],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-TRANSFER-M1",
+          "report_ids": [
+            "37378355937d1bdc",
+            "399ccd9733942c86",
+            "557de707aaaee5ae",
+            "de4101d114c126dc",
+            "fd110848737e944e"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "1f50699704789092",
+            "4bd29b1443dffae8",
+            "8f9871eebf22e4e9",
+            "b8af53fd22e715c3",
+            "c76a67abb61293aa"
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "DOSSIER-S-ACTIVE-TRANSFER-M1-R2": {
+          "action_ids": [
+            "0147d1a61a7081ad",
+            "123d98229e007930",
+            "78d0edd3f0a9d3d6",
+            "89f0a82609fec81d",
+            "ae6c8350ffc18bea"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [
+            "C1"
+          ],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-TRANSFER-M1-R2",
+          "report_ids": [
+            "34a122312d3c8044",
+            "37378355937d1bdc",
+            "399ccd9733942c86",
+            "50b606ecd42be906",
+            "557de707aaaee5ae",
+            "73e3d3b0fb86a960",
+            "74fe9fd9a4b27178",
+            "8d505194fc886d96",
+            "9524ed5abfc580c3",
+            "cb3be2bbd87c4f4c",
+            "cd7ea3ac93779591",
+            "de4101d114c126dc",
+            "fd110848737e944e"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W4378619188",
+            "OA-W4391180262",
+            "OA-W4391970071",
+            "OA-W4405549715",
+            "OA-W4411346060",
+            "OA-W4415844429",
+            "OA-W4417168112"
+          ],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "1f50699704789092",
+            "4bd29b1443dffae8",
+            "8f9871eebf22e4e9",
+            "b8af53fd22e715c3",
+            "c76a67abb61293aa"
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "DOSSIER-S-ACTIVE-TRANSFER-M2": {
+          "action_ids": [
+            "2ed0060266360d95"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [
+            "C1"
+          ],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-TRANSFER-M2",
+          "report_ids": [
+            "0da89ba15a3f10a6",
+            "52f0983d3a80701d",
+            "94b12ffedaea44a7",
+            "a14bf8a9b7c8a0f2",
+            "bd39ee33197fb0a4"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "1c689cc2aaf29f16",
+            "ad8b2dafbc314c0b",
+            "c352889a726d484e",
+            "d3b056f9d0ca27e2",
+            "f453d2209d3b933f"
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "DOSSIER-S-ACTIVE-TRANSFER-M2-R2": {
+          "action_ids": [
+            "2ed0060266360d95"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [
+            "C1"
+          ],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-TRANSFER-M2-R2",
+          "report_ids": [
+            "0da89ba15a3f10a6",
+            "0f249ce615bbf0b5",
+            "52f0983d3a80701d",
+            "5d6c945588898d85",
+            "94b12ffedaea44a7",
+            "a14bf8a9b7c8a0f2",
+            "b290b648f1fdef22",
+            "bbaa177a058b9804",
+            "bd39ee33197fb0a4",
+            "ca4c7f366b523622"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "1c689cc2aaf29f16",
+            "ad8b2dafbc314c0b",
+            "c352889a726d484e",
+            "d3b056f9d0ca27e2",
+            "f453d2209d3b933f"
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "DOSSIER-S-ACTIVE-TRANSFER-NULL": {
+          "action_ids": [
+            "c23969f99d26ff73"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [
+            "C-NULL"
+          ],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-TRANSFER-NULL",
+          "report_ids": [
+            "0c85a9d537d5c021",
+            "5d3646367bc5e30f",
+            "6f4ab047af478ac1",
+            "b440741f01932ec4",
+            "c507141afd773612"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W4405549715"
+          ],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "328710a8305312d7",
+            "379c5f1075ca1cf3",
+            "691d7770f45fcb8d",
+            "b843f6a5141d1894",
+            "d9caa76eabdf26a8"
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "DOSSIER-S-ACTIVE-TRANSFER-NULL-R2": {
+          "action_ids": [
+            "c23969f99d26ff73",
+            "f27ea333ca1e5a06"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [
+            "C-NULL"
+          ],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-TRANSFER-NULL-R2",
+          "report_ids": [
+            "0bfe7e7ee4f4a3ee",
+            "0c85a9d537d5c021",
+            "3a48d2bcce42bf74",
+            "459e1a43c0988f29",
+            "5d3646367bc5e30f",
+            "6f4ab047af478ac1",
+            "b440741f01932ec4",
+            "c161fbdf57df5d05",
+            "c507141afd773612",
+            "ec950e795df7c579"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W4405549715"
+          ],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "328710a8305312d7",
+            "379c5f1075ca1cf3",
+            "691d7770f45fcb8d",
+            "b843f6a5141d1894",
+            "d9caa76eabdf26a8"
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        }
+      },
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "reports": {
+        "0bfe7e7ee4f4a3ee": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "0bfe7e7ee4f4a3ee",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "691d7770f45fcb8d",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "0c85a9d537d5c021": {
+          "action_ids": [
+            "c23969f99d26ff73"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [
+            "C-NULL"
+          ],
+          "report_id": "0c85a9d537d5c021",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W4405549715"
+          ],
+          "stance": "SUPPORTS",
+          "status": "PARTIAL",
+          "summary": "Provisional null: supplied record supports no direct target mechanism.",
+          "support_task_id": "d9caa76eabdf26a8",
+          "unresolved_questions": [
+            "Does any target-domain record match the material, process, comparator, and endpoint?"
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "0da89ba15a3f10a6": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "0da89ba15a3f10a6",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Contradiction scan ran without a source candidate.",
+          "support_task_id": "d3b056f9d0ca27e2",
+          "unresolved_questions": [
+            "contradiction remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "0f249ce615bbf0b5": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "0f249ce615bbf0b5",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "c352889a726d484e",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "34a122312d3c8044": {
+          "action_ids": [
+            "ae6c8350ffc18bea"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [
+            "C1"
+          ],
+          "report_id": "34a122312d3c8044",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "COMPLETE",
+          "summary": "The quicklime record cannot directly support functional recovery in hot-mixed lime-pozzolan mortar: its material, process, comparator, and endpoint fit are unknown, and no source candidates or validated simulation adapters are supplied.",
+          "support_task_id": "1f50699704789092",
+          "unresolved_questions": [
+            "Cheapest observation: retrieve a public target-domain record and check whether it reports the same intervention, a process-matched comparator, and a functional-recovery endpoint. Treat any simulation result as MODEL_ASSERTION, not empirical evidence."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "37378355937d1bdc": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "37378355937d1bdc",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Contradiction scan ran without a source candidate.",
+          "support_task_id": "1f50699704789092",
+          "unresolved_questions": [
+            "contradiction remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "399ccd9733942c86": {
+          "action_ids": [
+            "78d0edd3f0a9d3d6"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "399ccd9733942c86",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "No fetched content card was available; metadata remains pending.",
+          "support_task_id": "b8af53fd22e715c3",
+          "unresolved_questions": [
+            "extraction remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "3a48d2bcce42bf74": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "3a48d2bcce42bf74",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "328710a8305312d7",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "459e1a43c0988f29": {
+          "action_ids": [
+            "f27ea333ca1e5a06"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "459e1a43c0988f29",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "379c5f1075ca1cf3",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "50b606ecd42be906": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "50b606ecd42be906",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "b8af53fd22e715c3",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "52f0983d3a80701d": {
+          "action_ids": [
+            "2ed0060266360d95"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "52f0983d3a80701d",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "No fetched content card was available; metadata remains pending.",
+          "support_task_id": "ad8b2dafbc314c0b",
+          "unresolved_questions": [
+            "extraction remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "557de707aaaee5ae": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "557de707aaaee5ae",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "COMPLETE",
+          "summary": "A bounded discriminator was recorded for the viewpoint.",
+          "support_task_id": "8f9871eebf22e4e9",
+          "unresolved_questions": [
+            "experiment_design remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "5d3646367bc5e30f": {
+          "action_ids": [
+            "c23969f99d26ff73"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "5d3646367bc5e30f",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W4405549715"
+          ],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Candidate identity and lineage are retained for adjudication.",
+          "support_task_id": "328710a8305312d7",
+          "unresolved_questions": [
+            "identity_lineage remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "5d6c945588898d85": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "5d6c945588898d85",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "1c689cc2aaf29f16",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "6f4ab047af478ac1": {
+          "action_ids": [
+            "c23969f99d26ff73"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "6f4ab047af478ac1",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W4405549715"
+          ],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "No fetched content card was available; metadata remains pending.",
+          "support_task_id": "691d7770f45fcb8d",
+          "unresolved_questions": [
+            "extraction remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "73e3d3b0fb86a960": {
+          "action_ids": [
+            "0147d1a61a7081ad"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [
+            "C1"
+          ],
+          "report_id": "73e3d3b0fb86a960",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W4378619188",
+            "OA-W4391180262",
+            "OA-W4417168112",
+            "OA-W4391970071",
+            "OA-W4411346060"
+          ],
+          "stance": "NON_DISCRIMINATING",
+          "status": "COMPLETE",
+          "summary": "The quicklime record cannot directly support functional recovery in hot-mixed lime-pozzolan mortar: material, process, comparator, and endpoint are unspecified. The supplied metadata candidates concern other cementitious or soil systems and do not establish a matched transfer.",
+          "support_task_id": "1f50699704789092",
+          "unresolved_questions": [
+            "Check for a target-domain comparison using hot-mixed lime-pozzolan mortar, a process-matched control, and the same prespecified functional endpoint; until then, treat the record only as a transfer hypothesis."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "74fe9fd9a4b27178": {
+          "action_ids": [
+            "89f0a82609fec81d"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [
+            "C1"
+          ],
+          "report_id": "74fe9fd9a4b27178",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W4378619188",
+            "OA-W4391970071",
+            "OA-W4415844429",
+            "OA-W4391180262",
+            "OA-W4405549715"
+          ],
+          "stance": "NON_DISCRIMINATING",
+          "status": "COMPLETE",
+          "summary": "The claim that quicklime-associated chemistry transfers to functional recovery is unsupported: E-T1 gives no material, process, comparator, or endpoint details, and the listed candidates are metadata-only; their titles do not establish a matched hot-mixed lime-pozzolan mortar record. Treat the record only as a transfer hypothesis seed, not direct target support.",
+          "support_task_id": "1f50699704789092",
+          "unresolved_questions": [
+            "Verify the source\u2019s material, process, comparator, and functional endpoint, then identify a process-matched target-domain comparison reporting recovery beyond control; absent that, retain the transfer boundary."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "8d505194fc886d96": {
+          "action_ids": [
+            "123d98229e007930"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "8d505194fc886d96",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "1f50699704789092",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "94b12ffedaea44a7": {
+          "action_ids": [
+            "2ed0060266360d95"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [
+            "C1"
+          ],
+          "report_id": "94b12ffedaea44a7",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "SUPPORTS",
+          "status": "PARTIAL",
+          "summary": "Frames E-T1 as a transfer hypothesis only.",
+          "support_task_id": "c352889a726d484e",
+          "unresolved_questions": [
+            "Does any process-matched target-domain record exist?"
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "9524ed5abfc580c3": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "9524ed5abfc580c3",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "4bd29b1443dffae8",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "a14bf8a9b7c8a0f2": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "a14bf8a9b7c8a0f2",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "COMPLETE",
+          "summary": "A bounded discriminator was recorded for the viewpoint.",
+          "support_task_id": "f453d2209d3b933f",
+          "unresolved_questions": [
+            "experiment_design remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "b290b648f1fdef22": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "b290b648f1fdef22",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "d3b056f9d0ca27e2",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "b440741f01932ec4": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "b440741f01932ec4",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W4405549715"
+          ],
+          "stance": "NON_DISCRIMINATING",
+          "status": "COMPLETE",
+          "summary": "A bounded discriminator was recorded for the viewpoint.",
+          "support_task_id": "b843f6a5141d1894",
+          "unresolved_questions": [
+            "experiment_design remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "bbaa177a058b9804": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "bbaa177a058b9804",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "ad8b2dafbc314c0b",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "bd39ee33197fb0a4": {
+          "action_ids": [
+            "2ed0060266360d95"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "bd39ee33197fb0a4",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "No candidate was available for identity or lineage work.",
+          "support_task_id": "1c689cc2aaf29f16",
+          "unresolved_questions": [
+            "identity_lineage remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "c161fbdf57df5d05": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "c161fbdf57df5d05",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "d9caa76eabdf26a8",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "c507141afd773612": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "c507141afd773612",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W4405549715"
+          ],
+          "stance": "NON_DISCRIMINATING",
+          "status": "COMPLETE",
+          "summary": "Contradiction scan executed; no contradiction was promoted.",
+          "support_task_id": "379c5f1075ca1cf3",
+          "unresolved_questions": [
+            "contradiction remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "ca4c7f366b523622": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "ca4c7f366b523622",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "f453d2209d3b933f",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "cb3be2bbd87c4f4c": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "cb3be2bbd87c4f4c",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "8f9871eebf22e4e9",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "cd7ea3ac93779591": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "cd7ea3ac93779591",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "c76a67abb61293aa",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "de4101d114c126dc": {
+          "action_ids": [
+            "78d0edd3f0a9d3d6"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [
+            "C1"
+          ],
+          "report_id": "de4101d114c126dc",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "SUPPORTS",
+          "status": "PARTIAL",
+          "summary": "Frames the quicklime record as a transfer hypothesis only.",
+          "support_task_id": "4bd29b1443dffae8",
+          "unresolved_questions": [
+            "Does any target-domain record match the intervention and functional endpoint?"
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "ec950e795df7c579": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "ec950e795df7c579",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "b843f6a5141d1894",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "fd110848737e944e": {
+          "action_ids": [
+            "78d0edd3f0a9d3d6"
+          ],
+          "case_id": "S-ACTIVE-TRANSFER",
+          "claim_ids": [],
+          "report_id": "fd110848737e944e",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "No candidate was available for identity or lineage work.",
+          "support_task_id": "c76a67abb61293aa",
+          "unresolved_questions": [
+            "identity_lineage remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        }
+      },
+      "schema_version": "1.0",
+      "tasks": {
+        "1c689cc2aaf29f16": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "charter": "identity_lineage support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "1c689cc2aaf29f16",
+          "task_type": "IDENTITY_LINEAGE",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "1f50699704789092": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "charter": "contradiction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "1f50699704789092",
+          "task_type": "CONTRADICTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "328710a8305312d7": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "charter": "identity_lineage support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "328710a8305312d7",
+          "task_type": "IDENTITY_LINEAGE",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "379c5f1075ca1cf3": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "charter": "contradiction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "379c5f1075ca1cf3",
+          "task_type": "CONTRADICTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "4bd29b1443dffae8": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "charter": "retrieval support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "4bd29b1443dffae8",
+          "task_type": "RETRIEVAL",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "691d7770f45fcb8d": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "charter": "extraction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "691d7770f45fcb8d",
+          "task_type": "EXTRACTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "8f9871eebf22e4e9": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "charter": "experiment_design support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "8f9871eebf22e4e9",
+          "task_type": "EXPERIMENT_DESIGN",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "ad8b2dafbc314c0b": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "charter": "extraction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "ad8b2dafbc314c0b",
+          "task_type": "EXTRACTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "b843f6a5141d1894": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "charter": "experiment_design support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "b843f6a5141d1894",
+          "task_type": "EXPERIMENT_DESIGN",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "b8af53fd22e715c3": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "charter": "extraction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "b8af53fd22e715c3",
+          "task_type": "EXTRACTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "c352889a726d484e": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "charter": "retrieval support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "c352889a726d484e",
+          "task_type": "RETRIEVAL",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "c76a67abb61293aa": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "charter": "identity_lineage support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "c76a67abb61293aa",
+          "task_type": "IDENTITY_LINEAGE",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M1"
+        },
+        "d3b056f9d0ca27e2": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "charter": "contradiction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "d3b056f9d0ca27e2",
+          "task_type": "CONTRADICTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        },
+        "d9caa76eabdf26a8": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "charter": "retrieval support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "d9caa76eabdf26a8",
+          "task_type": "RETRIEVAL",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-TRANSFER-NULL"
+        },
+        "f453d2209d3b933f": {
+          "case_id": "S-ACTIVE-TRANSFER",
+          "charter": "experiment_design support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "f453d2209d3b933f",
+          "task_type": "EXPERIMENT_DESIGN",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-TRANSFER-M2"
+        }
+      },
+      "treatment_id": "A2-M"
+    },
+    "focus": {
+      "allocations": {
+        "1c689cc2aaf29f16": 0,
+        "1f50699704789092": 1,
+        "328710a8305312d7": 0,
+        "379c5f1075ca1cf3": 1,
+        "4bd29b1443dffae8": 1,
+        "691d7770f45fcb8d": 0,
+        "8f9871eebf22e4e9": 0,
+        "ad8b2dafbc314c0b": 0,
+        "b843f6a5141d1894": 0,
+        "b8af53fd22e715c3": 0,
+        "c352889a726d484e": 0,
+        "c76a67abb61293aa": 0,
+        "d3b056f9d0ca27e2": 0,
+        "d9caa76eabdf26a8": 0,
+        "f453d2209d3b933f": 0
+      },
+      "case_id": "S-ACTIVE-TRANSFER",
+      "decision_id": "56851fd8d573ceb0",
+      "null_retained": true,
+      "ranked_tasks": [
+        "1f50699704789092",
+        "379c5f1075ca1cf3",
+        "4bd29b1443dffae8",
+        "c352889a726d484e",
+        "d3b056f9d0ca27e2",
+        "d9caa76eabdf26a8",
+        "1c689cc2aaf29f16",
+        "328710a8305312d7",
+        "691d7770f45fcb8d",
+        "8f9871eebf22e4e9",
+        "ad8b2dafbc314c0b",
+        "b843f6a5141d1894",
+        "b8af53fd22e715c3",
+        "c76a67abb61293aa",
+        "f453d2209d3b933f"
+      ],
+      "rationale": "Deterministic allocation by expected information, uncertainty, novelty, provenance risk, duplicate work, feasibility, and mandatory null/rival coverage; votes and prose length are not inputs.",
+      "remaining_actions": 3,
+      "rival_retained": true,
+      "schema_version": "1.0",
+      "scores": {
+        "1c689cc2aaf29f16": 6,
+        "1f50699704789092": 9,
+        "328710a8305312d7": 6,
+        "379c5f1075ca1cf3": 9,
+        "4bd29b1443dffae8": 9,
+        "691d7770f45fcb8d": 6,
+        "8f9871eebf22e4e9": 6,
+        "ad8b2dafbc314c0b": 6,
+        "b843f6a5141d1894": 6,
+        "b8af53fd22e715c3": 6,
+        "c352889a726d484e": 9,
+        "c76a67abb61293aa": 6,
+        "d3b056f9d0ca27e2": 9,
+        "d9caa76eabdf26a8": 9,
+        "f453d2209d3b933f": 6
+      },
+      "status": "ALLOCATED",
+      "treatment_id": "A2-M"
+    },
+    "null_id": "S-ACTIVE-TRANSFER-NULL",
+    "portfolio": {
+      "authority_note": "All viewpoints, support reports, and focus decisions remain REVIEW_REQUIRED; no evidence, safety, or laboratory authority is granted.",
+      "case_id": "S-ACTIVE-TRANSFER",
+      "credible_rival_ids": [
+        "S-ACTIVE-TRANSFER-M2",
+        "S-ACTIVE-TRANSFER-NULL"
+      ],
+      "leading_viewpoint_id": "S-ACTIVE-TRANSFER-M1",
+      "next_discriminating_action": "Run the highest-ranked support task that distinguishes the leading viewpoint from its strongest rival.",
+      "portfolio_id": "PORTFOLIO-S-ACTIVE-TRANSFER",
+      "preserved_dissent_ids": [],
+      "schema_version": "1.0",
+      "source_candidate_ids": [
+        "OA-W4378619188",
+        "OA-W4391180262",
+        "OA-W4391970071",
+        "OA-W4405549715",
+        "OA-W4411346060",
+        "OA-W4415844429",
+        "OA-W4417168112"
+      ],
+      "status": "REVIEW_REQUIRED",
+      "support_contribution_ids": [
+        "0bfe7e7ee4f4a3ee",
+        "0c85a9d537d5c021",
+        "0da89ba15a3f10a6",
+        "0f249ce615bbf0b5",
+        "34a122312d3c8044",
+        "37378355937d1bdc",
+        "399ccd9733942c86",
+        "3a48d2bcce42bf74",
+        "459e1a43c0988f29",
+        "50b606ecd42be906",
+        "52f0983d3a80701d",
+        "557de707aaaee5ae",
+        "5d3646367bc5e30f",
+        "5d6c945588898d85",
+        "6f4ab047af478ac1",
+        "73e3d3b0fb86a960",
+        "74fe9fd9a4b27178",
+        "8d505194fc886d96",
+        "94b12ffedaea44a7",
+        "9524ed5abfc580c3",
+        "a14bf8a9b7c8a0f2",
+        "b290b648f1fdef22",
+        "b440741f01932ec4",
+        "bbaa177a058b9804",
+        "bd39ee33197fb0a4",
+        "c161fbdf57df5d05",
+        "c507141afd773612",
+        "ca4c7f366b523622",
+        "cb3be2bbd87c4f4c",
+        "cd7ea3ac93779591",
+        "de4101d114c126dc",
+        "ec950e795df7c579",
+        "fd110848737e944e"
+      ],
+      "unresolved_disputes": [
+        "Viewpoint scores are provisional and do not establish evidence."
+      ],
+      "viewpoint_dossier_ids": [
+        "DOSSIER-S-ACTIVE-TRANSFER-M1-R2",
+        "DOSSIER-S-ACTIVE-TRANSFER-M2-R2",
+        "DOSSIER-S-ACTIVE-TRANSFER-NULL-R2"
+      ]
+    },
+    "private_reports": {
+      "S-ACTIVE-TRANSFER-M1": [
+        "de4101d114c126dc",
+        "399ccd9733942c86",
+        "fd110848737e944e",
+        "37378355937d1bdc",
+        "557de707aaaee5ae",
+        "74fe9fd9a4b27178",
+        "73e3d3b0fb86a960",
+        "34a122312d3c8044",
+        "8d505194fc886d96",
+        "9524ed5abfc580c3",
+        "cb3be2bbd87c4f4c",
+        "50b606ecd42be906",
+        "cd7ea3ac93779591"
+      ],
+      "S-ACTIVE-TRANSFER-M2": [
+        "94b12ffedaea44a7",
+        "52f0983d3a80701d",
+        "bd39ee33197fb0a4",
+        "0da89ba15a3f10a6",
+        "a14bf8a9b7c8a0f2",
+        "0f249ce615bbf0b5",
+        "b290b648f1fdef22",
+        "5d6c945588898d85",
+        "bbaa177a058b9804",
+        "ca4c7f366b523622"
+      ],
+      "S-ACTIVE-TRANSFER-NULL": [
+        "0c85a9d537d5c021",
+        "6f4ab047af478ac1",
+        "5d3646367bc5e30f",
+        "c507141afd773612",
+        "b440741f01932ec4",
+        "459e1a43c0988f29",
+        "c161fbdf57df5d05",
+        "3a48d2bcce42bf74",
+        "0bfe7e7ee4f4a3ee",
+        "ec950e795df7c579"
+      ]
+    },
+    "problem_id": "roman-hot-mix",
+    "problem_version": "1.0",
+    "protocol": "g10d.1-viewpoint-centered-society",
+    "shared": true,
+    "treatment_id": "A2-M"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "criteria": [
+    {
+      "criterion": 1,
+      "evidence": [
+        "activation.json",
+        "run.json"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 2,
+      "evidence": [
+        "manifest.json",
+        "run.json"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 3,
+      "evidence": [
+        "spend-ledger.json",
+        "run.json"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 4,
+      "evidence": [
+        "checkpoints",
+        "event-ledger.json",
+        "offline preflight"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 5,
+      "evidence": [
+        "event-ledger.json",
+        "checkpoints"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 6,
+      "evidence": [
+        "checkpoints/*-A2-M.json"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 7,
+      "evidence": [
+        "run.json"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 8,
+      "evidence": [
+        "run.json",
+        "report.md"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 9,
+      "evidence": [
+        "replay.json"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 10,
+      "evidence": [
+        "repair-config.json",
+        "manifest.json",
+        "activation.json"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 11,
+      "evidence": [
+        "event-ledger.json",
+        "offline preflight",
+        "infrastructure-postmortem.json"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 12,
+      "evidence": [
+        "preflight.json",
+        "replay.json",
+        "full pytest"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "criteria_pass": true,
+  "goal": "G10R-AB",
+  "schema_version": "g10r-ab.1"
+}

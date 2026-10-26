@@ -1,0 +1,1516 @@
+{
+  "action_records": [
+    {
+      "action_id": "e6c6d5b3038956ea",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "crossref",
+        "query": "2025 lime mortar self-healing",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-5ac260fabe3e",
+        "CR-2643c3b4a505",
+        "CR-e3690fd04cea",
+        "CR-7914d8186134",
+        "CR-f0b6f99d9ba2"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the publisher record and bibliographic metadata for the target paper.",
+      "replay_key": "sha256:318ff6e8e99b56cfdc4f1f1024c86e29ca63dcecb9d644a14eda142b86aaaf99",
+      "run_id": "G10R-AB-S-ACTIVE-ACCESS-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "8db95d2381ca9004",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "lime mortar self-healing 2025",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W4403767876",
+        "OA-W2616317443",
+        "OA-W7133186311",
+        "OA-W4411285286",
+        "OA-W7127140486"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Search for cataloged copies, repository holdings, or other lawful access routes.",
+      "replay_key": "sha256:75735929f81cce3dbffce9ae9daa18a8a2a1c4b765990f3f3cc0246597769038",
+      "run_id": "G10R-AB-S-ACTIVE-ACCESS-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "ca2a102185332990",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "crossref",
+        "query": "publisher record lime mortar self-healing 2025",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-5ac260fabe3e",
+        "CR-2643c3b4a505",
+        "CR-e3690fd04cea",
+        "CR-7914d8186134",
+        "CR-f0b6f99d9ba2"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test for alternate title or metadata matches that could otherwise be missed.",
+      "replay_key": "sha256:5f993b4e065f03c522a26ab3ab0a841fbf41870932005676f77cbbe8600f0164",
+      "run_id": "G10R-AB-S-ACTIVE-ACCESS-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "b6ac9efc4d9c67ea",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 3,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "[identified doi] lime mortar self-healing",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W4403767876",
+        "OA-W4385614553",
+        "OA-W7133186311",
+        "OA-W2787266603",
+        "OA-W7125541133"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "If a DOI is identified, check its access status and reported locations.",
+      "replay_key": "sha256:c5d7b499efe648501fec0558fcc37e54c3224b3a7b48d1c6cc02c7056a645ac2",
+      "run_id": "G10R-AB-S-ACTIVE-ACCESS-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "7963ffadf7bbd209",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "crossref",
+        "query": "[identified doi]",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-df14d2f5d9cf",
+        "CR-c50291c41af0",
+        "CR-d11d44a0cc41",
+        "CR-3233d04ec288",
+        "CR-976d2f521c98"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Verify publisher metadata and resolve possible title or author ambiguity.",
+      "replay_key": "sha256:d0a576ea78ee709d69472c0cd9ef9355a92ecb697a0bebd3e7563c8134e750d8",
+      "run_id": "G10R-AB-S-ACTIVE-ACCESS-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "8ec13140f1b87d63",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "[identified title] accepted manuscript repository",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W2544136853",
+        "OA-W2666065146",
+        "OA-W2523582607",
+        "OA-W1847835106",
+        "OA-W4291898246"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Look for a lawful author manuscript or institutional repository copy.",
+      "replay_key": "sha256:9e375a5a1ffc89701bee24055ec8f59de38b6510384cf20363b4d0677ee472ce",
+      "run_id": "G10R-AB-S-ACTIVE-ACCESS-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "c6f4d14d29b31c2a",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 1,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "[identified doi] version of record accepted manuscript",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W3023136364"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Check for accessible versions and evidence relevant to version equivalence.",
+      "replay_key": "sha256:0c87c4a114c22e4f654083b4189b20a4c31610388986d75c962433efebf930f5",
+      "run_id": "G10R-AB-S-ACTIVE-ACCESS-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  ],
+  "actions": {
+    "7963ffadf7bbd209": {
+      "action_id": "7963ffadf7bbd209",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "crossref",
+        "query": "[identified doi]",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-df14d2f5d9cf",
+        "CR-c50291c41af0",
+        "CR-d11d44a0cc41",
+        "CR-3233d04ec288",
+        "CR-976d2f521c98"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Verify publisher metadata and resolve possible title or author ambiguity.",
+      "replay_key": "sha256:d0a576ea78ee709d69472c0cd9ef9355a92ecb697a0bebd3e7563c8134e750d8",
+      "run_id": "G10R-AB-S-ACTIVE-ACCESS-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "8db95d2381ca9004": {
+      "action_id": "8db95d2381ca9004",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "lime mortar self-healing 2025",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W4403767876",
+        "OA-W2616317443",
+        "OA-W7133186311",
+        "OA-W4411285286",
+        "OA-W7127140486"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Search for cataloged copies, repository holdings, or other lawful access routes.",
+      "replay_key": "sha256:75735929f81cce3dbffce9ae9daa18a8a2a1c4b765990f3f3cc0246597769038",
+      "run_id": "G10R-AB-S-ACTIVE-ACCESS-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "8ec13140f1b87d63": {
+      "action_id": "8ec13140f1b87d63",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "[identified title] accepted manuscript repository",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W2544136853",
+        "OA-W2666065146",
+        "OA-W2523582607",
+        "OA-W1847835106",
+        "OA-W4291898246"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Look for a lawful author manuscript or institutional repository copy.",
+      "replay_key": "sha256:9e375a5a1ffc89701bee24055ec8f59de38b6510384cf20363b4d0677ee472ce",
+      "run_id": "G10R-AB-S-ACTIVE-ACCESS-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "b6ac9efc4d9c67ea": {
+      "action_id": "b6ac9efc4d9c67ea",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 3,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "[identified doi] lime mortar self-healing",
+        "requested_index": "openalex"
+      },
+      "output_ids": [
+        "OA-W4403767876",
+        "OA-W4385614553",
+        "OA-W7133186311",
+        "OA-W2787266603",
+        "OA-W7125541133"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "If a DOI is identified, check its access status and reported locations.",
+      "replay_key": "sha256:c5d7b499efe648501fec0558fcc37e54c3224b3a7b48d1c6cc02c7056a645ac2",
+      "run_id": "G10R-AB-S-ACTIVE-ACCESS-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "c6f4d14d29b31c2a": {
+      "action_id": "c6f4d14d29b31c2a",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 1,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "openalex",
+        "query": "[identified doi] version of record accepted manuscript",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W3023136364"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Check for accessible versions and evidence relevant to version equivalence.",
+      "replay_key": "sha256:0c87c4a114c22e4f654083b4189b20a4c31610388986d75c962433efebf930f5",
+      "run_id": "G10R-AB-S-ACTIVE-ACCESS-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "ca2a102185332990": {
+      "action_id": "ca2a102185332990",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "crossref",
+        "query": "publisher record lime mortar self-healing 2025",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-5ac260fabe3e",
+        "CR-2643c3b4a505",
+        "CR-e3690fd04cea",
+        "CR-7914d8186134",
+        "CR-f0b6f99d9ba2"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Test for alternate title or metadata matches that could otherwise be missed.",
+      "replay_key": "sha256:5f993b4e065f03c522a26ab3ab0a841fbf41870932005676f77cbbe8600f0164",
+      "run_id": "G10R-AB-S-ACTIVE-ACCESS-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "e6c6d5b3038956ea": {
+      "action_id": "e6c6d5b3038956ea",
+      "action_type": "SEARCH",
+      "arm": "A1",
+      "branch_id": "single_investigator",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-ACCESS",
+      "input": {
+        "index": "crossref",
+        "query": "2025 lime mortar self-healing",
+        "requested_index": "crossref"
+      },
+      "output_ids": [
+        "CR-5ac260fabe3e",
+        "CR-2643c3b4a505",
+        "CR-e3690fd04cea",
+        "CR-7914d8186134",
+        "CR-f0b6f99d9ba2"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the publisher record and bibliographic metadata for the target paper.",
+      "replay_key": "sha256:318ff6e8e99b56cfdc4f1f1024c86e29ca63dcecb9d644a14eda142b86aaaf99",
+      "run_id": "G10R-AB-S-ACTIVE-ACCESS-A1",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  },
+  "budget": {
+    "limits": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 12000,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "remaining": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 24.998673,
+      "input_tokens": 74660,
+      "output_tokens": 10414,
+      "payload_bytes": 5000000,
+      "queries": 5,
+      "retained_sources": 0,
+      "simulation_calls": 4
+    },
+    "usage": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.001327,
+      "input_tokens": 5340,
+      "output_tokens": 1586,
+      "payload_bytes": 0,
+      "queries": 7,
+      "retained_sources": 24,
+      "simulation_calls": 0
+    }
+  },
+  "last_result": {
+    "portfolio": {
+      "authority_note": "All candidate records remain EVIDENCE_PENDING. This portfolio does not authorize access that bypasses rights, laboratory work, or claims of validated performance.",
+      "case_id": "S-ACTIVE-ACCESS",
+      "credible_rival_ids": [
+        "H-record-identity-ambiguity"
+      ],
+      "hypotheses": [
+        {
+          "comparator": "Current packet, containing metadata-only candidate records and no established public route.",
+          "falsifier": "A verified lawful access route and accessible version of the identified target, with sufficient evidence to assess version equivalence, is documented.",
+          "hypothesis_id": "H-access-undetermined",
+          "intervention": "Obtain a lawful, verifiable full-text or repository record for the precisely identified target, then assess its version and content under applicable access and rights conditions.",
+          "novelty_basis": "The packet contains only scholarly metadata and no retrieved full text, lawful public copy, or version-equivalence determination.",
+          "predicted_observation": "The current packet alone will not support inspection of the paper\u2019s methods or results, nor conclusions about its findings.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": [
+            "E-A1",
+            "CR-5ac260fabe3e",
+            "CR-7914d8186134",
+            "OA-W4403767876",
+            "OA-W2616317443"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "CR-5ac260fabe3e",
+            "CR-7914d8186134",
+            "OA-W4403767876",
+            "OA-W2616317443"
+          ],
+          "support_region": "Current supplied case packet only; no claim about external availability.",
+          "transfer_type": "NULL_HYPOTHESIS",
+          "uncertainty": "Target identity, publication date, access status, and any accessible version remain unresolved."
+        },
+        {
+          "comparator": "Treating all returned lime-mortar self-healing records as the target paper.",
+          "falsifier": "Authoritative metadata establishes that a specific candidate is the exact target and resolves the apparent date and title discrepancy.",
+          "hypothesis_id": "H-record-identity-ambiguity",
+          "intervention": "Resolve the target\u2019s exact title, DOI, authors, and publication date against authoritative publisher metadata before pursuing a copy.",
+          "novelty_basis": "Candidate metadata returned for the broad search describe different interventions and include apparent 2026 records, so they do not uniquely identify a 2025 target.",
+          "predicted_observation": "Metadata reconciliation may show that some candidates are unrelated records rather than versions or records of the target.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": [
+            "E-A1",
+            "CR-5ac260fabe3e",
+            "CR-7914d8186134",
+            "OA-W7133186311",
+            "OA-W7125541133"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "CR-5ac260fabe3e",
+            "CR-7914d8186134",
+            "OA-W7133186311",
+            "OA-W7125541133"
+          ],
+          "support_region": "Candidate metadata supplied in this case only.",
+          "transfer_type": "ARTIFACT_HYPOTHESIS",
+          "uncertainty": "The packet does not provide the target title or DOI, so the mismatch cannot be adjudicated."
+        }
+      ],
+      "leading_hypothesis_id": "H-access-undetermined",
+      "negative_searches": [
+        "Supplied candidate list contains metadata-only records and no content locator or retrieved paper evidence.",
+        "The listed candidates do not establish an accessible version of the exact 2025 target."
+      ],
+      "next_discriminating_action": "Identify the target by exact title, DOI, and authors; verify publisher metadata and rights/access status, then check for a lawful repository copy and document version equivalence before making any content-based statement.",
+      "schema_version": "1.0",
+      "source_candidate_ids": [
+        "CR-5ac260fabe3e",
+        "CR-2643c3b4a505",
+        "CR-e3690fd04cea",
+        "CR-7914d8186134",
+        "CR-f0b6f99d9ba2",
+        "OA-W4403767876",
+        "OA-W2616317443",
+        "OA-W7133186311",
+        "OA-W4411285286",
+        "OA-W7127140486",
+        "OA-W4385614553",
+        "OA-W2787266603",
+        "OA-W7125541133"
+      ],
+      "status": "REVIEW_REQUIRED",
+      "summary": "The supplied records do not establish a lawful route to inspect the target 2025 paper or provide its contents. They are metadata-only, and none establishes version equivalence. The paper\u2019s identity also remains unresolved: surfaced titles include records with differing apparent dates and topics. No scientific conclusion about self-healing can be drawn from this packet.",
+      "unresolved_disputes": [
+        "Exact target identity and publication date are not established.",
+        "No lawful public or repository access route is evidenced in the supplied packet.",
+        "No version-equivalence decision or paper contents are available."
+      ]
+    },
+    "score": {
+      "attribution_adjudications": {},
+      "authority_flags": [
+        {
+          "contextual_reference": false,
+          "negated": true,
+          "offset": 140,
+          "phrase": "validated performance",
+          "segment": 2
+        }
+      ],
+      "cited_source_candidate_ids": [],
+      "contradiction_source_candidate_ids": [],
+      "critical_failures": [],
+      "discovery_contribution_digests": [
+        "sha256:1122a36b06d4ed1a69119f74ec0b73400bf5f98ea2a09921d25184ce0f9b737a",
+        "sha256:17146988cd73807d1ce8443d47c210f21fa538fbe1e8bc88eafb70ed0237291d",
+        "sha256:2264495cbe1999de0a9c45ba18d5fc34e3468a63a70815adcc11c7fab0e551dd",
+        "sha256:4a4a6b78163238962d8cbaa61b8157f137985d3d090962e9aadf5f3e6dae5bf1",
+        "sha256:4b26e42714c10066529611e9a32deb5926fa84aafb461ccc5409b32eacdc87fa",
+        "sha256:5c9eb6d569a06815998a4f2ba97d3c1296912c9fda2c7d05fff87ef4d1136e94",
+        "sha256:70738a341d249109be6d420fce7990ac74b552dd451ad8980f33114b3a4c8230",
+        "sha256:718bebe99b4d9d9ba514141b034fe914509c198c97a4fd5f3c513bc49cacbaf3",
+        "sha256:7d68c05ddaf562825b74983b3dc5a4ffe015ed796836e9393dbac6b245aeb5fc",
+        "sha256:88a8390efbf79bd7f83b2662baf317a7bbc26ce71875bea5e7de2065f5335c50",
+        "sha256:bc112b5bfaedcfc81989a015e51e99c576b34380f947b8ab2a39da31595cdda4",
+        "sha256:bd2c0c4b0c1d6c4d77e856551b9b143f71bc560930e2a5cdb5f2aee981927bab",
+        "sha256:cc42f8812eb4e99e616de16ece5c05f880cb78b83418ca9782e431465fa062e3"
+      ],
+      "discovery_score": 13,
+      "dissent_retained": true,
+      "evidence_score": 0,
+      "fabrication_proof_source_candidate_ids": [],
+      "hypothesis_contribution_digests": [
+        "sha256:584ca3c10508ac0c5298e35914192022b6545c8268eae644bd79c3b69723e4db",
+        "sha256:ad99d32dab2411da1667e29269ebbce834adff3b7e1004b696b5bff0f2683edd"
+      ],
+      "hypothesis_score": 2,
+      "identity_statuses": {
+        "CR-2643c3b4a505": "IDENTITY_UNRESOLVED",
+        "CR-5ac260fabe3e": "IDENTITY_UNRESOLVED",
+        "CR-7914d8186134": "IDENTITY_UNRESOLVED",
+        "CR-e3690fd04cea": "IDENTITY_UNRESOLVED",
+        "CR-f0b6f99d9ba2": "IDENTITY_UNRESOLVED",
+        "OA-W2616317443": "IDENTITY_UNRESOLVED",
+        "OA-W2787266603": "IDENTITY_UNRESOLVED",
+        "OA-W4385614553": "IDENTITY_UNRESOLVED",
+        "OA-W4403767876": "OUT_OF_RUBRIC",
+        "OA-W4411285286": "IDENTITY_UNRESOLVED",
+        "OA-W7125541133": "IDENTITY_UNRESOLVED",
+        "OA-W7127140486": "IDENTITY_UNRESOLVED",
+        "OA-W7133186311": "IDENTITY_UNRESOLVED"
+      },
+      "invalid_source_candidate_ids": [],
+      "max_score": 6,
+      "negative_search_count": 2,
+      "out_of_rubric_source_candidate_ids": [
+        "OA-W4403767876"
+      ],
+      "provenance_completeness": 1.0,
+      "provenance_review_source_candidate_ids": [],
+      "raw_cited_source_candidate_ids": [
+        "CR-2643c3b4a505",
+        "CR-5ac260fabe3e",
+        "CR-7914d8186134",
+        "CR-e3690fd04cea",
+        "CR-f0b6f99d9ba2",
+        "OA-W2616317443",
+        "OA-W2787266603",
+        "OA-W4385614553",
+        "OA-W4403767876",
+        "OA-W4411285286",
+        "OA-W7125541133",
+        "OA-W7127140486",
+        "OA-W7133186311"
+      ],
+      "rubric_hits": [
+        {
+          "criterion_id": "find_public_preprint",
+          "keyword_hit": false,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "identify_matching_record",
+          "keyword_hit": true,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "retain_version_uncertainty",
+          "keyword_hit": true,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "retain_rights_limit",
+          "keyword_hit": true,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "no_evidence_promotion",
+          "keyword_hit": false,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "next_action",
+          "keyword_hit": true,
+          "points": 0,
+          "source_hit": false
+        }
+      ],
+      "score": 0,
+      "source_identity_aliases": {
+        "CR-2643c3b4a505": null,
+        "CR-5ac260fabe3e": null,
+        "CR-7914d8186134": null,
+        "CR-e3690fd04cea": null,
+        "CR-f0b6f99d9ba2": null,
+        "OA-W2616317443": null,
+        "OA-W2787266603": null,
+        "OA-W4385614553": null,
+        "OA-W4403767876": "SRC-S16-SIM",
+        "OA-W4411285286": null,
+        "OA-W7125541133": null,
+        "OA-W7127140486": null,
+        "OA-W7133186311": null
+      },
+      "supported_contribution_digests": [],
+      "unattributed_source_candidate_ids": [],
+      "unresolved_source_candidate_ids": [
+        "CR-2643c3b4a505",
+        "CR-5ac260fabe3e",
+        "CR-7914d8186134",
+        "CR-e3690fd04cea",
+        "CR-f0b6f99d9ba2",
+        "OA-W2616317443",
+        "OA-W2787266603",
+        "OA-W4385614553",
+        "OA-W4411285286",
+        "OA-W7125541133",
+        "OA-W7127140486",
+        "OA-W7133186311"
+      ]
+    },
+    "status": "COMPLETED"
+  },
+  "locator_resolutions": {},
+  "manifest_sha256": "sha256:1ac055b97d74c26735c4f6fdc646f8f9fcba340e8171300cbab6ea646b599c93",
+  "model_traces": [
+    {
+      "call_id": "8040500f07914909",
+      "estimated_actual_cost_usd": 0.000278,
+      "estimated_maximum_cost_usd": 0.0005031,
+      "latency_seconds": 5.25,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "single_investigator",
+        "case_id": "S-ACTIVE-ACCESS",
+        "follow_up_queries": [
+          {
+            "index": "openalex",
+            "query": "[identified DOI] lime mortar self-healing",
+            "rationale": "If a DOI is identified, check its access status and reported locations."
+          },
+          {
+            "index": "crossref",
+            "query": "[identified DOI]",
+            "rationale": "Verify publisher metadata and resolve possible title or author ambiguity."
+          },
+          {
+            "index": "catalog",
+            "query": "[identified title] accepted manuscript repository",
+            "rationale": "Look for a lawful author manuscript or institutional repository copy."
+          },
+          {
+            "index": "catalog",
+            "query": "[identified DOI] version of record accepted manuscript",
+            "rationale": "Check for accessible versions and evidence relevant to version equivalence."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "crossref",
+            "query": "2025 lime mortar self-healing",
+            "rationale": "Identify the publisher record and bibliographic metadata for the target paper."
+          },
+          {
+            "index": "openalex",
+            "query": "2025 lime mortar self-healing",
+            "rationale": "Cross-check the record and discover any linked open-access locations or repository versions."
+          },
+          {
+            "index": "catalog",
+            "query": "lime mortar self-healing 2025",
+            "rationale": "Search for cataloged copies, repository holdings, or other lawful access routes."
+          },
+          {
+            "index": "crossref",
+            "query": "publisher record lime mortar self-healing 2025",
+            "rationale": "Test for alternate title or metadata matches that could otherwise be missed."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:bdb28c703037476fb451eacd36a9a9dc719ca977ba9cdeaa6b7a73725370e9de",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 570,
+        "output_tokens": 442
+      }
+    },
+    {
+      "call_id": "d370050bf495daad",
+      "estimated_actual_cost_usd": 0.001049,
+      "estimated_maximum_cost_usd": 0.0025269,
+      "latency_seconds": 16.8837,
+      "model": "gpt-6-luna",
+      "output": {
+        "authority_note": "All candidate records remain EVIDENCE_PENDING. This portfolio does not authorize access that bypasses rights, laboratory work, or claims of validated performance.",
+        "case_id": "S-ACTIVE-ACCESS",
+        "credible_rival_ids": [
+          "H-record-identity-ambiguity"
+        ],
+        "hypotheses": [
+          {
+            "comparator": "Current packet, containing metadata-only candidate records and no established public route.",
+            "falsifier": "A verified lawful access route and accessible version of the identified target, with sufficient evidence to assess version equivalence, is documented.",
+            "hypothesis_id": "H-access-undetermined",
+            "intervention": "Obtain a lawful, verifiable full-text or repository record for the precisely identified target, then assess its version and content under applicable access and rights conditions.",
+            "novelty_basis": "The packet contains only scholarly metadata and no retrieved full text, lawful public copy, or version-equivalence determination.",
+            "predicted_observation": "The current packet alone will not support inspection of the paper\u2019s methods or results, nor conclusions about its findings.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-A1",
+              "CR-5ac260fabe3e",
+              "CR-7914d8186134",
+              "OA-W4403767876",
+              "OA-W2616317443"
+            ],
+            "schema_version": "1.0",
+            "source_candidate_ids": [
+              "CR-5ac260fabe3e",
+              "CR-7914d8186134",
+              "OA-W4403767876",
+              "OA-W2616317443"
+            ],
+            "support_region": "Current supplied case packet only; no claim about external availability.",
+            "transfer_type": "NULL_HYPOTHESIS",
+            "uncertainty": "Target identity, publication date, access status, and any accessible version remain unresolved."
+          },
+          {
+            "comparator": "Treating all returned lime-mortar self-healing records as the target paper.",
+            "falsifier": "Authoritative metadata establishes that a specific candidate is the exact target and resolves the apparent date and title discrepancy.",
+            "hypothesis_id": "H-record-identity-ambiguity",
+            "intervention": "Resolve the target\u2019s exact title, DOI, authors, and publication date against authoritative publisher metadata before pursuing a copy.",
+            "novelty_basis": "Candidate metadata returned for the broad search describe different interventions and include apparent 2026 records, so they do not uniquely identify a 2025 target.",
+            "predicted_observation": "Metadata reconciliation may show that some candidates are unrelated records rather than versions or records of the target.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-A1",
+              "CR-5ac260fabe3e",
+              "CR-7914d8186134",
+              "OA-W7133186311",
+              "OA-W7125541133"
+            ],
+            "schema_version": "1.0",
+            "source_candidate_ids": [
+              "CR-5ac260fabe3e",
+              "CR-7914d8186134",
+              "OA-W7133186311",
+              "OA-W7125541133"
+            ],
+            "support_region": "Candidate metadata supplied in this case only.",
+            "transfer_type": "ARTIFACT_HYPOTHESIS",
+            "uncertainty": "The packet does not provide the target title or DOI, so the mismatch cannot be adjudicated."
+          }
+        ],
+        "leading_hypothesis_id": "H-access-undetermined",
+        "negative_searches": [
+          "Supplied candidate list contains metadata-only records and no content locator or retrieved paper evidence.",
+          "The listed candidates do not establish an accessible version of the exact 2025 target."
+        ],
+        "next_discriminating_action": "Identify the target by exact title, DOI, and authors; verify publisher metadata and rights/access status, then check for a lawful repository copy and document version equivalence before making any content-based statement.",
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "CR-5ac260fabe3e",
+          "CR-2643c3b4a505",
+          "CR-e3690fd04cea",
+          "CR-7914d8186134",
+          "CR-f0b6f99d9ba2",
+          "OA-W4403767876",
+          "OA-W2616317443",
+          "OA-W7133186311",
+          "OA-W4411285286",
+          "OA-W7127140486",
+          "OA-W4385614553",
+          "OA-W2787266603",
+          "OA-W7125541133"
+        ],
+        "status": "REVIEW_REQUIRED",
+        "summary": "The supplied records do not establish a lawful route to inspect the target 2025 paper or provide its contents. They are metadata-only, and none establishes version equivalence. The paper\u2019s identity also remains unresolved: surfaced titles include records with differing apparent dates and topics. No scientific conclusion about self-healing can be drawn from this packet.",
+        "unresolved_disputes": [
+          "Exact target identity and publication date are not established.",
+          "No lawful public or repository access route is evidenced in the supplied packet.",
+          "No version-equivalence decision or paper contents are available."
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:b56711ae79eabe51b4a9407d0ba3e7da7a2c523da0ea7219420e0390a6c80906",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 4770,
+        "output_tokens": 1144
+      }
+    }
+  ],
+  "paper_evidence_cards": {},
+  "plan_constraint_events": [],
+  "query_registry": {
+    "2025 lime mortar self-healing": {
+      "action_id": "e6c6d5b3038956ea",
+      "index": "crossref",
+      "output_ids": [
+        "CR-5ac260fabe3e",
+        "CR-2643c3b4a505",
+        "CR-e3690fd04cea",
+        "CR-7914d8186134",
+        "CR-f0b6f99d9ba2"
+      ]
+    },
+    "[identified doi]": {
+      "action_id": "7963ffadf7bbd209",
+      "index": "crossref",
+      "output_ids": [
+        "CR-df14d2f5d9cf",
+        "CR-c50291c41af0",
+        "CR-d11d44a0cc41",
+        "CR-3233d04ec288",
+        "CR-976d2f521c98"
+      ]
+    },
+    "[identified doi] lime mortar self-healing": {
+      "action_id": "b6ac9efc4d9c67ea",
+      "index": "openalex",
+      "output_ids": [
+        "OA-W4403767876",
+        "OA-W4385614553",
+        "OA-W7133186311",
+        "OA-W2787266603",
+        "OA-W7125541133"
+      ]
+    },
+    "[identified doi] version of record accepted manuscript": {
+      "action_id": "c6f4d14d29b31c2a",
+      "index": "openalex",
+      "output_ids": [
+        "OA-W3023136364"
+      ]
+    },
+    "[identified title] accepted manuscript repository": {
+      "action_id": "8ec13140f1b87d63",
+      "index": "openalex",
+      "output_ids": [
+        "OA-W2544136853",
+        "OA-W2666065146",
+        "OA-W2523582607",
+        "OA-W1847835106",
+        "OA-W4291898246"
+      ]
+    },
+    "lime mortar self-healing 2025": {
+      "action_id": "8db95d2381ca9004",
+      "index": "openalex",
+      "output_ids": [
+        "OA-W4403767876",
+        "OA-W2616317443",
+        "OA-W7133186311",
+        "OA-W4411285286",
+        "OA-W7127140486"
+      ]
+    },
+    "publisher record lime mortar self-healing 2025": {
+      "action_id": "ca2a102185332990",
+      "index": "crossref",
+      "output_ids": [
+        "CR-5ac260fabe3e",
+        "CR-2643c3b4a505",
+        "CR-e3690fd04cea",
+        "CR-7914d8186134",
+        "CR-f0b6f99d9ba2"
+      ]
+    }
+  },
+  "remediation_manifest": {
+    "acquisition_first": false,
+    "active": false,
+    "bounded_open_slot": false,
+    "deduplicate_queries": false,
+    "executable_support": false,
+    "legacy_mechanism_tournament": false,
+    "locator_bridge": false,
+    "schema_version": "g10r-s.1",
+    "treatment": "COMBINED_JUSTIFIED"
+  },
+  "research_loop": null,
+  "simulation_traces": [],
+  "source_candidates": {
+    "CR-2643c3b4a505": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.62603/konteks.v2i1.244",
+      "discovery_query": "2025 lime mortar self-healing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.62603/konteks.v2i1.244",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-2643c3b4a505",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "APLIKASI SELF HEALING MORTAR BERBASIS BAKTERI UREOLITIK MELALUI METODE PERENDAMAN"
+    },
+    "CR-3233d04ec288": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.5303/pkas.2017.32.1.299",
+      "discovery_query": "[identified doi]",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.5303/pkas.2017.32.1.299",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-3233d04ec288",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "LOCAL ULTRALUMINOUS INFRARED GALAXIES IDENTIFIED IN THE AKARI ALL SKY SURVEY"
+    },
+    "CR-5ac260fabe3e": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.nxmate.2026.102417",
+      "discovery_query": "2025 lime mortar self-healing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1016/j.nxmate.2026.102417",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-5ac260fabe3e",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Experimental and data-driven study of crack self-healing in lime mortar using Bacillus subtilis"
+    },
+    "CR-7914d8186134": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1007/s41024-026-00883-x",
+      "discovery_query": "2025 lime mortar self-healing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1007/s41024-026-00883-x",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-7914d8186134",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Experimental investigation of triphala extract-modified hydraulic lime mortar for self-healing and sustainable heritage conservation"
+    },
+    "CR-976d2f521c98": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1081/erc-120016799",
+      "discovery_query": "[identified doi]",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1081/erc-120016799",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-976d2f521c98",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "ROLES OF SEVERAL DOMAINS IDENTIFIED IN THE PRIMARY STRUCTURE OF SALT-INDUCIBLE KINASE (SIK)"
+    },
+    "CR-c50291c41af0": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.29327/7330968",
+      "discovery_query": "[identified doi]",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.29327/7330968",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-c50291c41af0",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "DOI DESATIVADO"
+    },
+    "CR-d11d44a0cc41": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.29327/7321905",
+      "discovery_query": "[identified doi]",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.29327/7321905",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-d11d44a0cc41",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "DOI desativado"
+    },
+    "CR-df14d2f5d9cf": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.29327/5666807",
+      "discovery_query": "[identified doi]",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.29327/5666807",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-df14d2f5d9cf",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "DOI DESATIVADO"
+    },
+    "CR-e3690fd04cea": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.4028/www.scientific.net/kem.747.465",
+      "discovery_query": "2025 lime mortar self-healing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.4028/www.scientific.net/kem.747.465",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-e3690fd04cea",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "The Influence of Self-Healing Capacity of Lime Mortars on the Behaviour of Brick-Mortar Masonry Subassemblies"
+    },
+    "CR-f0b6f99d9ba2": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1007/978-3-031-73310-9_77",
+      "discovery_query": "2025 lime mortar self-healing",
+      "host": "doi.org",
+      "locator": "https://doi.org/10.1007/978-3-031-73310-9_77",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "CR-f0b6f99d9ba2",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Exploring Bacteria-Based Self-healing Potential in Cement-Lime Mortar Masonry"
+    },
+    "OA-W1847835106": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.2139/ssrn.1506905",
+      "discovery_query": "[identified title] accepted manuscript repository",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W1847835106",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W1847835106",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Comparing Repository Types: Challenges and Barriers for Subject-Based Repositories, Research Repositories, National Repository Systems and Institutional Repositories in Serving Scholarly Communication"
+    },
+    "OA-W2523582607": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.20381/ruor-17649",
+      "discovery_query": "[identified title] accepted manuscript repository",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2523582607",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W2523582607",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Annotated checklist of Lampman manuscripts and materials in known repositories in Canada"
+    },
+    "OA-W2544136853": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1093/nar/gkw1000",
+      "discovery_query": "[identified title] accepted manuscript repository",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2544136853",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W2544136853",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "OUP accepted manuscript"
+    },
+    "OA-W2616317443": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.compositesb.2017.05.041",
+      "discovery_query": "lime mortar self-healing 2025",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2616317443",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W2616317443",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Effect of age and level of damage on the autogenous healing of lime mortars"
+    },
+    "OA-W2666065146": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "openalex:w2666065146",
+      "discovery_query": "[identified title] accepted manuscript repository",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2666065146",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W2666065146",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Canadian Manuscripts in British Repositories"
+    },
+    "OA-W2787266603": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1080/15583058.2017.1422570",
+      "discovery_query": "[identified doi] lime mortar self-healing",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2787266603",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W2787266603",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Characterization of lime mortar additivated with crystallization modifiers"
+    },
+    "OA-W3023136364": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1093/jjfinec/nbaa006",
+      "discovery_query": "[identified doi] version of record accepted manuscript",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W3023136364",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W3023136364",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "OUP accepted manuscript"
+    },
+    "OA-W4291898246": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "openalex:w4291898246",
+      "discovery_query": "[identified title] accepted manuscript repository",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4291898246",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4291898246",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "PEER D2.1 Draft report on the provision of usage data and manuscript deposit procedures for publishers and repository managers"
+    },
+    "OA-W4385614553": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.matpr.2023.07.367",
+      "discovery_query": "[identified doi] lime mortar self-healing",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4385614553",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4385614553",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "On the use of non-destructive testing for the measurement of self-healing in lime-based mortars"
+    },
+    "OA-W4403767876": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1002/nag.3870",
+      "discovery_query": "lime mortar self-healing 2025",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4403767876",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4403767876",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Simulation of Autogenous Self\u2010Healing in Lime\u2010Based Mortars"
+    },
+    "OA-W4411285286": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1051/matecconf/202540906002",
+      "discovery_query": "lime mortar self-healing 2025",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4411285286",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4411285286",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Evaluation of self-healing capacity of 3D printable bio-based fiber-reinforced cement-lime mortars"
+    },
+    "OA-W7125541133": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1016/j.conbuildmat.2026.145154",
+      "discovery_query": "[identified doi] lime mortar self-healing",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W7125541133",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W7125541133",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Lithium silicate as a healing agent in vascular networks for natural hydraulic lime mortars: a step towards cyclic self-healing systems for heritage materials"
+    },
+    "OA-W7127140486": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1051/matecconf/202540906002/pdf",
+      "discovery_query": "lime mortar self-healing 2025",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W7127140486",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W7127140486",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Evaluation of self-healing capacity of 3D printable bio-based fiber-reinforced cement-lime mortars"
+    },
+    "OA-W7133186311": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1617/s11527-026-03007-6",
+      "discovery_query": "lime mortar self-healing 2025",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W7133186311",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W7133186311",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Nanolime dispersions as active agents in self-healing lime mortars for durable heritage preservation"
+    }
+  },
+  "state": "completed",
+  "state_history": [
+    "created",
+    "policy_loaded",
+    "context_frozen",
+    "planning",
+    "round_1",
+    "sharing",
+    "focus_allocated",
+    "round_2",
+    "adjudicating",
+    "scored",
+    "completed"
+  ],
+  "tool_request_events": [],
+  "viewpoint_society": null
+}

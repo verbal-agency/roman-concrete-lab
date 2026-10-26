@@ -1,0 +1,4254 @@
+{
+  "action_records": [
+    {
+      "action_id": "32cfd4fd1e4f98a6",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-LINEAGE-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime roman hot mix thesis transportation report study relationship functional endpoint",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the named Utah records and establish whether the thesis and report represent independent studies and measure a relevant functional recovery endpoint. M1 provisionally predicts recovery associated with reactive lime-rich regions; the supplied packet does not establish this.",
+      "replay_key": "sha256:7bfd61dfc7daaa15bc4a6cf67841971d75228262c76cc3be9a344c4cc6e6dc67",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "b66cac401e0d3e83",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-LINEAGE-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah thesis transportation report quicklime hot mix asphalt self-healing crack closure water permeability",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate the named Utah records and determine whether they are related studies or independent work, without presuming either relationship or an endpoint.",
+      "replay_key": "sha256:9399dbd1c738eb2e6317d22374b7a98ec4286b4b70c53c2809515fca67c3a348",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "495b6b9844d5965b",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-LINEAGE-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah thesis quicklime hot mix asphalt transportation report",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W1956400912",
+        "OA-W2920973764",
+        "OA-W2765648563",
+        "OA-W3115107353",
+        "OA-W4386202536"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Find the named Utah thesis and report without presuming they are related. Null-viewpoint prediction: process-matched controls are indistinguishable on the declared endpoint; falsifier: a preregistered mechanism-specific discriminator separates a candidate from control. Support is limited to the declared case domain and endpoint; current provenance is only base evidence E-L1, which leaves relationship and endpoint absent.",
+      "replay_key": "sha256:2427185401d6c022f508dabe4d7efb338f8096857e6484997032cc62b897684d",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "0ea3059b518a0b70",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:evidence_skeptic",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime thesis transportation report study relationship functional endpoint",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate the named Utah records and establish whether they describe the same study or independent studies, and whether either reports a relevant functional endpoint.",
+      "replay_key": "sha256:0806c0aec00ab01eda6d84772debc2bd954f2d96a07833fe108582b901ee60a5",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "1d73d4098343afab",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:transfer_boundary",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime thesis transportation report roman hot-mix asphalt",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W3115107353"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the named Utah records and determine whether they describe the same study or independent work, and what endpoint was measured.",
+      "replay_key": "sha256:ac0fefc1b458219d71c8a7698a7e60947b71a6e632341cea9a7b9c91e758596e",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "477c6ea3149ad43e",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:experiment_simulation",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime thesis transportation report replication functional endpoint",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the named Utah records and determine whether either reports an independent study and a functional endpoint.",
+      "replay_key": "sha256:3804227768758e3b369db7ea6221d71cd66a73cbe2dd9c034d7530ae1fb36d3d",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "a1486a980f384a7e",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-LINEAGE-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "observed recovery is dominated by non-chemical physical crack closure. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic viewpoint discriminator focus",
+      "replay_key": "sha256:8136dc7aba085821859734a8762481b2a3d096bcbe0c5ccccfeb94bde74dde4e",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "e4602d4245b4ea31",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-LINEAGE-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "a localized reactive lime reservoir drives functional recovery after damage. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic viewpoint discriminator focus",
+      "replay_key": "sha256:f28b29dcadb105fb735181039f377fe68c01045e7460c7f96e00b11dde69c83d",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    {
+      "action_id": "8ee41357b6d92e39",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-LINEAGE-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "no reproducible mechanism-specific recovery is present under the declared conditions. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic viewpoint discriminator focus",
+      "replay_key": "sha256:aece0b0e69f90926ba2c2a3d93756bb4e2489feae38d7c18b721957196d8c8ec",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  ],
+  "actions": {
+    "0ea3059b518a0b70": {
+      "action_id": "0ea3059b518a0b70",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:evidence_skeptic",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime thesis transportation report study relationship functional endpoint",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate the named Utah records and establish whether they describe the same study or independent studies, and whether either reports a relevant functional endpoint.",
+      "replay_key": "sha256:0806c0aec00ab01eda6d84772debc2bd954f2d96a07833fe108582b901ee60a5",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "1d73d4098343afab": {
+      "action_id": "1d73d4098343afab",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:transfer_boundary",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime thesis transportation report roman hot-mix asphalt",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W3115107353"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the named Utah records and determine whether they describe the same study or independent work, and what endpoint was measured.",
+      "replay_key": "sha256:ac0fefc1b458219d71c8a7698a7e60947b71a6e632341cea9a7b9c91e758596e",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "32cfd4fd1e4f98a6": {
+      "action_id": "32cfd4fd1e4f98a6",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-LINEAGE-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime roman hot mix thesis transportation report study relationship functional endpoint",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the named Utah records and establish whether the thesis and report represent independent studies and measure a relevant functional recovery endpoint. M1 provisionally predicts recovery associated with reactive lime-rich regions; the supplied packet does not establish this.",
+      "replay_key": "sha256:7bfd61dfc7daaa15bc4a6cf67841971d75228262c76cc3be9a344c4cc6e6dc67",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "477c6ea3149ad43e": {
+      "action_id": "477c6ea3149ad43e",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "auditor:experiment_simulation",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah quicklime thesis transportation report replication functional endpoint",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Identify the named Utah records and determine whether either reports an independent study and a functional endpoint.",
+      "replay_key": "sha256:3804227768758e3b369db7ea6221d71cd66a73cbe2dd9c034d7530ae1fb36d3d",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "495b6b9844d5965b": {
+      "action_id": "495b6b9844d5965b",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-LINEAGE-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 5,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah thesis quicklime hot mix asphalt transportation report",
+        "requested_index": "catalog"
+      },
+      "output_ids": [
+        "OA-W1956400912",
+        "OA-W2920973764",
+        "OA-W2765648563",
+        "OA-W3115107353",
+        "OA-W4386202536"
+      ],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Find the named Utah thesis and report without presuming they are related. Null-viewpoint prediction: process-matched controls are indistinguishable on the declared endpoint; falsifier: a preregistered mechanism-specific discriminator separates a candidate from control. Support is limited to the declared case domain and endpoint; current provenance is only base evidence E-L1, which leaves relationship and endpoint absent.",
+      "replay_key": "sha256:2427185401d6c022f508dabe4d7efb338f8096857e6484997032cc62b897684d",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "8ee41357b6d92e39": {
+      "action_id": "8ee41357b6d92e39",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-LINEAGE-NULL",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "no reproducible mechanism-specific recovery is present under the declared conditions. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic viewpoint discriminator focus",
+      "replay_key": "sha256:aece0b0e69f90926ba2c2a3d93756bb4e2489feae38d7c18b721957196d8c8ec",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "a1486a980f384a7e": {
+      "action_id": "a1486a980f384a7e",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-LINEAGE-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "observed recovery is dominated by non-chemical physical crack closure. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic viewpoint discriminator focus",
+      "replay_key": "sha256:8136dc7aba085821859734a8762481b2a3d096bcbe0c5ccccfeb94bde74dde4e",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "b66cac401e0d3e83": {
+      "action_id": "b66cac401e0d3e83",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-LINEAGE-M2",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "utah thesis transportation report quicklime hot mix asphalt self-healing crack closure water permeability",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "Locate the named Utah records and determine whether they are related studies or independent work, without presuming either relationship or an endpoint.",
+      "replay_key": "sha256:9399dbd1c738eb2e6317d22374b7a98ec4286b4b70c53c2809515fca67c3a348",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    },
+    "e4602d4245b4ea31": {
+      "action_id": "e4602d4245b4ea31",
+      "action_type": "SEARCH",
+      "arm": "A2-M",
+      "branch_id": "S-ACTIVE-LINEAGE-M1",
+      "budget_debit": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 1,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "input": {
+        "index": "openalex",
+        "query": "a localized reactive lime reservoir drives functional recovery after damage. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?",
+        "requested_index": "catalog"
+      },
+      "output_ids": [],
+      "policy_status": "ALLOWED",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rationale": "deterministic viewpoint discriminator focus",
+      "replay_key": "sha256:f28b29dcadb105fb735181039f377fe68c01045e7460c7f96e00b11dde69c83d",
+      "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+      "schema_version": "1.0",
+      "timestamp": "2026-10-10T00:00:00Z"
+    }
+  },
+  "budget": {
+    "limits": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 25.0,
+      "input_tokens": 80000,
+      "output_tokens": 12000,
+      "payload_bytes": 5000000,
+      "queries": 12,
+      "retained_sources": 24,
+      "simulation_calls": 4
+    },
+    "remaining": {
+      "document_fetches": 4,
+      "estimated_cost_usd": 24.9941601,
+      "input_tokens": 48336,
+      "output_tokens": 6653,
+      "payload_bytes": 5000000,
+      "queries": 3,
+      "retained_sources": 19,
+      "simulation_calls": 4
+    },
+    "usage": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.005839900000000001,
+      "input_tokens": 31664,
+      "output_tokens": 5347,
+      "payload_bytes": 0,
+      "queries": 9,
+      "retained_sources": 5,
+      "simulation_calls": 0
+    }
+  },
+  "delayed_open_admission": {
+    "dossier_created_before_admission": 0,
+    "reason": "reserved open slot receives bounded candidate work",
+    "schema_version": "g10r-z.1",
+    "shared_before_admission": true,
+    "source_backed_candidate_ids": [],
+    "source_candidate_ids": [],
+    "status": "ABSTAINED_NO_DISTINCT_VIEWPOINT",
+    "tasks_created_before_admission": 0,
+    "viewpoint_id": "S-ACTIVE-LINEAGE-OPEN-ADMITTED"
+  },
+  "last_result": {
+    "portfolio": {
+      "authority_note": "All claims remain REVIEW_REQUIRED; no evidence promotion or laboratory authorization.",
+      "case_id": "S-ACTIVE-LINEAGE",
+      "credible_rival_ids": [
+        "S-ACTIVE-LINEAGE-NULL",
+        "S-ACTIVE-LINEAGE-M2"
+      ],
+      "hypotheses": [
+        {
+          "comparator": "Process-matched specimens without reactive lime-rich regions.",
+          "falsifier": "Matched specimens without reactive lime-rich regions recover identically.",
+          "hypothesis_id": "H-M1",
+          "intervention": "Compare matched specimens with and without identified lime-rich regions under the declared conditions.",
+          "novelty_basis": "Candidate mechanism from the supplied roster; no supporting source evidence.",
+          "predicted_observation": "Functional recovery tracks reactive lime-rich regions.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "promotion_status": "REVIEW_REQUIRED",
+          "provenance": [
+            "E-L1",
+            "CRIT-S-ACTIVE-LINEAGE-01"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "support_region": "Modern lime-pozzolan mortar with identified lime-rich inclusions; transfer unresolved.",
+          "transfer_type": "DIRECT_HYPOTHESIS",
+          "uncertainty": "No evidence establishes the mechanism, independent replication, or a relevant endpoint."
+        }
+      ],
+      "leading_hypothesis_id": "H-M1",
+      "negative_searches": [
+        "Supplied metadata candidates do not establish the Utah records or their endpoints."
+      ],
+      "next_discriminating_action": "Compare authoritative records and methods/results for study overlap and measured functional endpoints.",
+      "schema_version": "1.0",
+      "source_candidate_ids": [],
+      "status": "REVIEW_REQUIRED",
+      "summary": "M1 is only a provisional roster leader; the packet does not establish independent replication or a relevant functional endpoint.",
+      "unresolved_disputes": [
+        "Record linkage, study independence, and functional endpoint remain unverified."
+      ]
+    },
+    "score": {
+      "attribution_adjudications": {},
+      "authority_flags": [],
+      "cited_source_candidate_ids": [],
+      "contradiction_source_candidate_ids": [],
+      "critical_failures": [],
+      "discovery_contribution_digests": [],
+      "discovery_score": 0,
+      "dissent_retained": true,
+      "evidence_score": 0,
+      "fabrication_proof_source_candidate_ids": [],
+      "hypothesis_contribution_digests": [
+        "sha256:05d9fabe2f59741c135fa0e705e05effac6dd9b51f42fb4b8e4965ec825ab73d"
+      ],
+      "hypothesis_score": 1,
+      "identity_statuses": {},
+      "invalid_source_candidate_ids": [],
+      "max_score": 6,
+      "negative_search_count": 1,
+      "out_of_rubric_source_candidate_ids": [],
+      "provenance_completeness": 0.0,
+      "provenance_review_source_candidate_ids": [],
+      "raw_cited_source_candidate_ids": [],
+      "rubric_hits": [
+        {
+          "criterion_id": "find_lineage_sources",
+          "keyword_hit": true,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "identify_derivative_lineage",
+          "keyword_hit": false,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "identify_functional_endpoint",
+          "keyword_hit": false,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "separate_endpoint_from_replication",
+          "keyword_hit": true,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "falsifiable_lineage_check",
+          "keyword_hit": false,
+          "points": 0,
+          "source_hit": false
+        },
+        {
+          "criterion_id": "review_disposition",
+          "keyword_hit": false,
+          "points": 0,
+          "source_hit": false
+        }
+      ],
+      "score": 0,
+      "source_identity_aliases": {},
+      "supported_contribution_digests": [],
+      "unattributed_source_candidate_ids": [],
+      "unresolved_source_candidate_ids": []
+    },
+    "status": "COMPLETED"
+  },
+  "locator_resolutions": {},
+  "manifest_sha256": "sha256:1ac055b97d74c26735c4f6fdc646f8f9fcba340e8171300cbab6ea646b599c93",
+  "model_traces": [
+    {
+      "call_id": "762b391cde9192a2",
+      "estimated_actual_cost_usd": 0.0003393,
+      "estimated_maximum_cost_usd": 0.0006051,
+      "latency_seconds": 4.9554,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "viewpoint:S-ACTIVE-LINEAGE-M1",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "follow_up_queries": [
+          {
+            "index": "openalex",
+            "query": "Utah quicklime thesis Roman hot mix crack healing water transport",
+            "rationale": "If catalog results do not identify the thesis, search scholarly metadata for its topic and potential endpoint."
+          },
+          {
+            "index": "crossref",
+            "query": "Utah transportation report quicklime Roman hot mix thesis citation",
+            "rationale": "Check whether the report cites or reuses the thesis, which would bear on independence rather than constitute replication by itself."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "Utah quicklime Roman hot mix thesis transportation report study relationship functional endpoint",
+            "rationale": "Identify the named Utah records and establish whether the thesis and report represent independent studies and measure a relevant functional recovery endpoint. M1 provisionally predicts recovery associated with reactive lime-rich regions; the supplied packet does not establish this."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:36eb6d9c7ce56a1291989e56a10f70559169b817a99e2eea2ba61e04726b6681",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1573,
+        "output_tokens": 364
+      }
+    },
+    {
+      "call_id": "453b504a01919c93",
+      "estimated_actual_cost_usd": 0.0004082,
+      "estimated_maximum_cost_usd": 0.0006049,
+      "latency_seconds": 6.4034,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "No source candidates or record locators are supplied, so no fetch or empirical conclusion is warranted. Provisional M2 prediction: crack closure may occur without matching water-transport recovery; a falsifier is consistent functional recovery above matched closure-only controls. Support is limited to crack-width and exposure conditions where closure can be separated from transport recovery. No negative search has yet been conducted; provenance is the supplied offline mechanism fixture, not established evidence. Promotion remains REVIEW_REQUIRED.",
+        "branch_id": "viewpoint:S-ACTIVE-LINEAGE-M2",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "follow_up_queries": [
+          {
+            "index": "openalex",
+            "query": "Utah quicklime asphalt thesis author title report study",
+            "rationale": "Check bibliographic relationships and possible shared authorship or study provenance."
+          },
+          {
+            "index": "crossref",
+            "query": "Utah quicklime hot mix asphalt transportation report crack healing permeability",
+            "rationale": "Search for report-linked publications or descriptions of measured functional endpoints."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "Utah thesis transportation report quicklime hot mix asphalt self-healing crack closure water permeability",
+            "rationale": "Locate the named Utah records and determine whether they are related studies or independent work, without presuming either relationship or an endpoint."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:ecb7e686308bcff87633ccd8be1901bc1d9d39f52261313c591165c1d92cc292",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1567,
+        "output_tokens": 503
+      }
+    },
+    {
+      "call_id": "1d6ed64ff0e9f928",
+      "estimated_actual_cost_usd": 0.000437,
+      "estimated_maximum_cost_usd": 0.0006021,
+      "latency_seconds": 6.6098,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "No source candidates or locators are supplied, so no document fetch can be responsibly requested yet. The available packet does not establish independent replication or a relevant functional endpoint; this is an investigation plan, not a finding or promotion.",
+        "branch_id": "viewpoint:S-ACTIVE-LINEAGE-NULL",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "follow_up_queries": [
+          {
+            "index": "catalog",
+            "query": "Utah quicklime thesis asphalt author title report citation",
+            "rationale": "Check bibliographic identity and citation links between thesis and report; shared authorship or citation alone would not establish independent replication."
+          },
+          {
+            "index": "openalex",
+            "query": "Utah quicklime asphalt functional performance endpoint thesis",
+            "rationale": "Seek abstract or indexed metadata describing study design and endpoint; absence of an indexed record is not evidence that the study or endpoint does not exist."
+          },
+          {
+            "index": "crossref",
+            "query": "Utah quicklime hot mix asphalt thesis transportation report",
+            "rationale": "Cross-check publication metadata and possible report/thesis lineage; do not treat matching subject terms as proof of independent replication."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "Utah thesis quicklime hot mix asphalt transportation report",
+            "rationale": "Find the named Utah thesis and report without presuming they are related. Null-viewpoint prediction: process-matched controls are indistinguishable on the declared endpoint; falsifier: a preregistered mechanism-specific discriminator separates a candidate from control. Support is limited to the declared case domain and endpoint; current provenance is only base evidence E-L1, which leaves relationship and endpoint absent."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:89f44b3c0087deb5ae791e4d9a061a9fd9e3ae82b90bee48ff9a6ca2d979907e",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1565,
+        "output_tokens": 561
+      }
+    },
+    {
+      "call_id": "ee66e5f28c07a5ca",
+      "estimated_actual_cost_usd": 0.0003918,
+      "estimated_maximum_cost_usd": 0.0006421,
+      "latency_seconds": 4.6501,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-LINEAGE",
+        "claimed_contribution": "Provisional mechanism prediction only; no replication or endpoint established.",
+        "claims": [
+          {
+            "claim_id": "C1",
+            "falsifier": "Matched specimens lacking reactive lime-rich regions recover identically under the same exposure.",
+            "prediction": "Recovery tracks the presence and exposure of reactive lime-rich regions.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "Mechanism card: S-ACTIVE-LINEAGE-M1",
+              "Base evidence: E-L1"
+            ],
+            "statement": "A localized reactive lime reservoir is a provisional explanation for functional recovery; the supplied record does not establish it.",
+            "support_region": "Modern lime-pozzolan mortar with identified lime-rich inclusions; transfer unresolved."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-LINEAGE-M1",
+        "negative_searches": [
+          "No catalog, OpenAlex, or Crossref results were supplied; independence and functional endpoint remain unverified."
+        ],
+        "proposed_next_actions": [
+          "Run the planned catalog query for the Utah records and their study relationship and endpoints."
+        ],
+        "report_id": "R-S-ACTIVE-LINEAGE-M1",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Are the Utah thesis and transportation report independent studies, and does either measure a relevant functional endpoint?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:b3c59aeeb09c1451f2f7b313d3403e032fca3fc25e28a4c3c1b8008c9112868d",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1838,
+        "output_tokens": 416
+      }
+    },
+    {
+      "call_id": "1cb0e1f851cdd440",
+      "estimated_actual_cost_usd": 0.0003608,
+      "estimated_maximum_cost_usd": 0.0006538,
+      "latency_seconds": 3.1953,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-LINEAGE",
+        "claimed_contribution": "Provisional M2 interpretation only; no independent-replication or endpoint conclusion.",
+        "claims": [
+          {
+            "claim_id": "C-M2",
+            "falsifier": "Matched tests show functional recovery consistently exceeding closure-only controls.",
+            "prediction": "Closure may occur without matching water-transport recovery.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "Supplied offline mechanism fixture; not empirical evidence."
+            ],
+            "statement": "Physical crack closure is a provisional explanation for observed recovery; it is not established by the supplied records.",
+            "support_region": "Conditions where crack closure can be distinguished from water-transport recovery."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-LINEAGE-M2",
+        "negative_searches": [
+          "No source search conducted; no record locators or candidates supplied."
+        ],
+        "proposed_next_actions": [
+          "Search supplied catalog and scholarly indexes for the Utah records and their endpoints."
+        ],
+        "report_id": "R-S-ACTIVE-LINEAGE-M2",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Do the Utah records report water-transport recovery or closure-only measurements?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:4f217b134fc1d520a2dd9dd4b30bb9489dfc30e89c99a67735ca884f13902b39",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 1888,
+        "output_tokens": 344
+      }
+    },
+    {
+      "call_id": "0f6df952224addc5",
+      "estimated_actual_cost_usd": 0.0004737,
+      "estimated_maximum_cost_usd": 0.0007662,
+      "latency_seconds": 4.2937,
+      "model": "gpt-6-luna",
+      "output": {
+        "action_ids": [],
+        "case_id": "S-ACTIVE-LINEAGE",
+        "claimed_contribution": "Null mechanism is a provisional comparator, not a material finding.",
+        "claims": [
+          {
+            "claim_id": "C1",
+            "falsifier": "A preregistered mechanism-specific discriminator separates a candidate from control.",
+            "prediction": "A process-matched control will be indistinguishable on the declared endpoint.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-L1: study relationship and endpoint are absent."
+            ],
+            "statement": "Provisionally, the packet does not establish reproducible mechanism-specific recovery.",
+            "support_region": "Declared case domain and measurement endpoint only."
+          }
+        ],
+        "mechanism_id": "S-ACTIVE-LINEAGE-NULL",
+        "negative_searches": [
+          "The supplied packet has no adjudicated source establishing thesis-report lineage or a relevant functional endpoint."
+        ],
+        "proposed_next_actions": [
+          "Search catalog records for the thesis and report, then verify their citations and study designs."
+        ],
+        "report_id": "R-S-ACTIVE-LINEAGE-NULL",
+        "role": "mechanism_proponent",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "PARTIAL",
+        "unresolved_questions": [
+          "Are the Utah thesis and transportation report independent studies, and do they measure a relevant functional endpoint?"
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:418786fba436eff1d0bc5fa4108b3c692852663b9dbd17171e71dd1302d11fe7",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2712,
+        "output_tokens": 405
+      }
+    },
+    {
+      "call_id": "7647e2e7a19fd36e",
+      "estimated_actual_cost_usd": 0.0004458,
+      "estimated_maximum_cost_usd": 0.00066,
+      "latency_seconds": 4.5557,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "No source candidates or fetch locators are supplied. Do not infer independence or a functional endpoint from the base packet; both require source-level verification.",
+        "branch_id": "auditor:evidence_skeptic",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "follow_up_queries": [
+          {
+            "index": "openalex",
+            "query": "Utah quicklime thesis transportation report authors title year",
+            "rationale": "If catalog results identify a title or author, check bibliographic identity and possible duplicate lineage; metadata alone cannot establish independent replication or an endpoint."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "Utah quicklime thesis transportation report study relationship functional endpoint",
+            "rationale": "Locate the named Utah records and establish whether they describe the same study or independent studies, and whether either reports a relevant functional endpoint."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:16f9fca351bb738861a491b14797ea21f8693fcf8f72134fb47d89efc3221c8f",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2548,
+        "output_tokens": 382
+      }
+    },
+    {
+      "call_id": "4c81038d7ac697e0",
+      "estimated_actual_cost_usd": 0.0004458,
+      "estimated_maximum_cost_usd": 0.0007411,
+      "latency_seconds": 6.4119,
+      "model": "gpt-6-luna",
+      "output": {
+        "auditor_role": "evidence_skeptic",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "challenge": "The packet does not establish that the Utah thesis and transportation report are independent studies, or that either measured a relevant functional endpoint. Dossier completion and bibliographic candidate IDs without accessible source-level evidence cannot support those claims.",
+        "claim_ids": [
+          "C1"
+        ],
+        "contradiction_status": "UNRESOLVED",
+        "critique_id": "CRIT-S-ACTIVE-LINEAGE-01",
+        "promotion_status": "REVIEW_REQUIRED",
+        "proposed_discriminator": "Verify the full records\u2019 authorship, study provenance, and overlap, then inspect methods and results for a defined functional endpoint; count replication only if the records document independent studies.",
+        "provenance": [
+          "E-L1",
+          "DOSSIER-S-ACTIVE-LINEAGE-M1",
+          "DOSSIER-S-ACTIVE-LINEAGE-NULL"
+        ],
+        "schema_version": "1.0",
+        "target_mechanism_id": "S-ACTIVE-LINEAGE-M1"
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:5c238dc59ce4004ce2c69d785dce41e3c239a70c3590cf40e517b00eefccb333",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2688,
+        "output_tokens": 354
+      }
+    },
+    {
+      "call_id": "ce5bddb781d686fb",
+      "estimated_actual_cost_usd": 0.0004406,
+      "estimated_maximum_cost_usd": 0.0006602,
+      "latency_seconds": 5.3911,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "",
+        "branch_id": "auditor:transfer_boundary",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "follow_up_queries": [
+          {
+            "index": "crossref",
+            "query": "Utah quicklime Roman hot-mix asphalt thesis transportation report",
+            "rationale": "Cross-check bibliographic records and relationships to distinguish independent replication from duplicate reporting."
+          },
+          {
+            "index": "openalex",
+            "query": "Utah quicklime Roman hot-mix asphalt thesis transportation report",
+            "rationale": "Check for linked works and accessible abstracts that clarify study independence and functional versus nonfunctional endpoints."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "Utah quicklime thesis transportation report Roman hot-mix asphalt",
+            "rationale": "Identify the named Utah records and determine whether they describe the same study or independent work, and what endpoint was measured."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:9379c0c67ded7c34a7137bd02cb603cbf4d0e2458702b6692ffa651104603ecd",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2546,
+        "output_tokens": 372
+      }
+    },
+    {
+      "call_id": "9a9b8c6ab601b4aa",
+      "estimated_actual_cost_usd": 0.0004537,
+      "estimated_maximum_cost_usd": 0.0007627,
+      "latency_seconds": 7.1416,
+      "model": "gpt-6-luna",
+      "output": {
+        "auditor_role": "transfer_boundary",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "challenge": "The Utah thesis and transportation report are not identified or linked in the base evidence, so independent replication and a functional recovery endpoint are unestablished. The only supplied candidate is metadata-only and its title concerns plaster-cast coatings, not quicklime or asphalt; it cannot support transfer to the stated mortar mechanism.",
+        "claim_ids": [
+          "C1"
+        ],
+        "contradiction_status": "UNRESOLVED",
+        "critique_id": "CRIT-S-ACTIVE-LINEAGE-TB-01",
+        "promotion_status": "REVIEW_REQUIRED",
+        "proposed_discriminator": "Resolve the records from authoritative catalog/full-text sources: compare authorship, specimens, and methods to determine whether they are independent studies, and verify whether each measured functional water-transport recovery rather than crack closure or another endpoint.",
+        "provenance": [
+          "E-L1",
+          "OA-W3115107353"
+        ],
+        "schema_version": "1.0",
+        "target_mechanism_id": "S-ACTIVE-LINEAGE-M1"
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:925fe887231d8530e8c15ce5f27f72867fd27701c8c75c96016c86954a36d49a",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2857,
+        "output_tokens": 336
+      }
+    },
+    {
+      "call_id": "4b00e82d2427e001",
+      "estimated_actual_cost_usd": 0.0004437,
+      "estimated_maximum_cost_usd": 0.0006614,
+      "latency_seconds": 7.5153,
+      "model": "gpt-6-luna",
+      "output": {
+        "abstain_reason": "No source candidates or record locators are supplied; independent replication and a relevant endpoint remain unestablished pending retrieval of the records.",
+        "branch_id": "auditor:experiment_simulation",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "follow_up_queries": [
+          {
+            "index": "catalog",
+            "query": "Utah quicklime transportation report thesis study relationship",
+            "rationale": "If the initial search returns candidate records, clarify whether the thesis and report describe distinct studies or overlapping work."
+          }
+        ],
+        "primary_queries": [
+          {
+            "index": "catalog",
+            "query": "Utah quicklime thesis transportation report replication functional endpoint",
+            "rationale": "Identify the named Utah records and determine whether either reports an independent study and a functional endpoint."
+          }
+        ],
+        "requested_fetch_locators": [],
+        "schema_version": "1.0",
+        "simulation_requests": []
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:bd7f2074a888c4d87ab5d212d3e2fed6c4525280f1458710dbb5bb8e88aa1322",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2552,
+        "output_tokens": 377
+      }
+    },
+    {
+      "call_id": "c71cc2cfcb7c1558",
+      "estimated_actual_cost_usd": 0.00045,
+      "estimated_maximum_cost_usd": 0.000739,
+      "latency_seconds": 5.2919,
+      "model": "gpt-6-luna",
+      "output": {
+        "auditor_role": "experiment_simulation",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "challenge": "The named Utah thesis and transportation report do not establish independent replication or a relevant functional endpoint; their study relationship and endpoint are absent from the packet.",
+        "claim_ids": [
+          "C1"
+        ],
+        "contradiction_status": "UNRESOLVED",
+        "critique_id": "CRIT-S-ACTIVE-LINEAGE-01",
+        "promotion_status": "REVIEW_REQUIRED",
+        "proposed_discriminator": "Cheapest observation: compare the two records\u2019 bibliographic details and methods/results to determine whether they report distinct studies and whether either measures a functional recovery endpoint. Treat absent or inaccessible details as unresolved.",
+        "provenance": [
+          "E-L1",
+          "DOSSIER-S-ACTIVE-LINEAGE-M1"
+        ],
+        "schema_version": "1.0",
+        "target_mechanism_id": "S-ACTIVE-LINEAGE-M1"
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:c72f00b45f35e00dcd053391e00354c1df1c35b3b34092166e835e6be42ac8d4",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 2670,
+        "output_tokens": 366
+      }
+    },
+    {
+      "call_id": "5a11629cd20d8e10",
+      "estimated_actual_cost_usd": 0.0007495,
+      "estimated_maximum_cost_usd": 0.0014032,
+      "latency_seconds": 6.0848,
+      "model": "gpt-6-luna",
+      "output": {
+        "authority_note": "All claims remain REVIEW_REQUIRED; no evidence promotion or laboratory authorization.",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "credible_rival_ids": [
+          "S-ACTIVE-LINEAGE-NULL",
+          "S-ACTIVE-LINEAGE-M2"
+        ],
+        "hypotheses": [
+          {
+            "comparator": "Process-matched specimens without reactive lime-rich regions.",
+            "falsifier": "Matched specimens without reactive lime-rich regions recover identically.",
+            "hypothesis_id": "H-M1",
+            "intervention": "Compare matched specimens with and without identified lime-rich regions under the declared conditions.",
+            "novelty_basis": "Candidate mechanism from the supplied roster; no supporting source evidence.",
+            "predicted_observation": "Functional recovery tracks reactive lime-rich regions.",
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "promotion_status": "REVIEW_REQUIRED",
+            "provenance": [
+              "E-L1",
+              "CRIT-S-ACTIVE-LINEAGE-01"
+            ],
+            "schema_version": "1.0",
+            "source_candidate_ids": [],
+            "support_region": "Modern lime-pozzolan mortar with identified lime-rich inclusions; transfer unresolved.",
+            "transfer_type": "DIRECT_HYPOTHESIS",
+            "uncertainty": "No evidence establishes the mechanism, independent replication, or a relevant endpoint."
+          }
+        ],
+        "leading_hypothesis_id": "H-M1",
+        "negative_searches": [
+          "Supplied metadata candidates do not establish the Utah records or their endpoints."
+        ],
+        "next_discriminating_action": "Compare authoritative records and methods/results for study overlap and measured functional endpoints.",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "REVIEW_REQUIRED",
+        "summary": "M1 is only a provisional roster leader; the packet does not establish independent replication or a relevant functional endpoint.",
+        "unresolved_disputes": [
+          "Record linkage, study independence, and functional endpoint remain unverified."
+        ]
+      },
+      "provider": "openai",
+      "reasoning_effort": "low",
+      "response_id_sha256": "sha256:521c0d7d5cca41d1635cf447474f19855cc42f33641b335c664c323a94fb6cb5",
+      "store": false,
+      "tools": [],
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 4660,
+        "output_tokens": 567
+      }
+    }
+  ],
+  "paper_evidence_cards": {},
+  "plan_constraint_events": [],
+  "query_registry": {
+    "a localized reactive lime reservoir drives functional recovery after damage. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?": {
+      "action_id": "e4602d4245b4ea31",
+      "index": "openalex",
+      "output_ids": []
+    },
+    "no reproducible mechanism-specific recovery is present under the declared conditions. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?": {
+      "action_id": "8ee41357b6d92e39",
+      "index": "openalex",
+      "output_ids": []
+    },
+    "observed recovery is dominated by non-chemical physical crack closure. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?": {
+      "action_id": "a1486a980f384a7e",
+      "index": "openalex",
+      "output_ids": []
+    },
+    "utah quicklime roman hot mix thesis transportation report study relationship functional endpoint": {
+      "action_id": "32cfd4fd1e4f98a6",
+      "index": "openalex",
+      "output_ids": []
+    },
+    "utah quicklime thesis transportation report replication functional endpoint": {
+      "action_id": "477c6ea3149ad43e",
+      "index": "openalex",
+      "output_ids": []
+    },
+    "utah quicklime thesis transportation report roman hot-mix asphalt": {
+      "action_id": "1d73d4098343afab",
+      "index": "openalex",
+      "output_ids": [
+        "OA-W3115107353"
+      ]
+    },
+    "utah quicklime thesis transportation report study relationship functional endpoint": {
+      "action_id": "0ea3059b518a0b70",
+      "index": "openalex",
+      "output_ids": []
+    },
+    "utah thesis quicklime hot mix asphalt transportation report": {
+      "action_id": "495b6b9844d5965b",
+      "index": "openalex",
+      "output_ids": [
+        "OA-W1956400912",
+        "OA-W2920973764",
+        "OA-W2765648563",
+        "OA-W3115107353",
+        "OA-W4386202536"
+      ]
+    },
+    "utah thesis transportation report quicklime hot mix asphalt self-healing crack closure water permeability": {
+      "action_id": "b66cac401e0d3e83",
+      "index": "openalex",
+      "output_ids": []
+    }
+  },
+  "remediation_manifest": {
+    "acquisition_first": true,
+    "active": true,
+    "bounded_open_slot": true,
+    "deduplicate_queries": true,
+    "executable_support": true,
+    "legacy_mechanism_tournament": false,
+    "locator_bridge": true,
+    "schema_version": "g10r-s.1",
+    "treatment": "COMBINED_JUSTIFIED"
+  },
+  "research_loop": {
+    "arm": "A2-M",
+    "branch_needs": {
+      "S-ACTIVE-LINEAGE-M1": "NEED-c2f622a107ab",
+      "S-ACTIVE-LINEAGE-M2": "NEED-c89b27891d89",
+      "S-ACTIVE-LINEAGE-NULL": "NEED-1544757aee13",
+      "auditor:evidence_skeptic": "NEED-6278e246e03c",
+      "auditor:experiment_simulation": "NEED-b5b3d30390e6",
+      "auditor:transfer_boundary": "NEED-c6c138c3ab97"
+    },
+    "case_id": "S-ACTIVE-LINEAGE",
+    "content_hash": "sha256:bf062cd7d9c1761f834075ca0bbfc1024270a32b47579caf6ae6971718a692b9",
+    "context_hash": "sha256:1ac055b97d74c26735c4f6fdc646f8f9fcba340e8171300cbab6ea646b599c93",
+    "dossier_revisions": [
+      {
+        "action_ids": [
+          "32cfd4fd1e4f98a6",
+          "495b6b9844d5965b",
+          "b66cac401e0d3e83"
+        ],
+        "claim_ids": [
+          "C-M2",
+          "C1"
+        ],
+        "content_hash": "sha256:a0d572d673d06740ed0bc758053c59856170a8337ab817fbcf5090d1a9b13dfa",
+        "critique_ids": [],
+        "dossier_id": "DOSSIER-SOCIETY",
+        "parent_revision": null,
+        "report_ids": [
+          "2fe7876f7390dfdd",
+          "57b0b2e878173207",
+          "60889ca379a2b33f",
+          "6d5452aa329db9ba",
+          "75b866b3726eefca",
+          "7d40521abbb7a35f",
+          "87c3a141eecedf20",
+          "af930022c6e031d8",
+          "b4b78e57311b1493",
+          "c1005c8b4d283053",
+          "c1f94ccedf1aa27a",
+          "db4982bc174ebb63",
+          "e59f266c2e0c9df7",
+          "f6ab89d12fd1c7da",
+          "f87c2a34d5f5d84b"
+        ],
+        "revision": 1,
+        "revision_reason": "initial private support reports compiled before sharing",
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W1956400912",
+          "OA-W2765648563",
+          "OA-W2920973764",
+          "OA-W3115107353",
+          "OA-W4386202536"
+        ],
+        "status": "COMPLETE",
+        "unresolved_joins": [],
+        "viewpoint_id": "SOCIETY"
+      },
+      {
+        "action_ids": [
+          "0ea3059b518a0b70",
+          "1d73d4098343afab",
+          "32cfd4fd1e4f98a6",
+          "477c6ea3149ad43e",
+          "495b6b9844d5965b",
+          "8ee41357b6d92e39",
+          "a1486a980f384a7e",
+          "b66cac401e0d3e83",
+          "e4602d4245b4ea31"
+        ],
+        "claim_ids": [
+          "C-M2",
+          "C1"
+        ],
+        "content_hash": "sha256:6c52c977744b209d324a34048b1c56c9c3881cdcc5bc314985f34384467cdd34",
+        "critique_ids": [
+          "114e87062c772204",
+          "2d1dba7e1b932aaf",
+          "b077c4097a6aeafa"
+        ],
+        "dossier_id": "DOSSIER-SOCIETY",
+        "parent_revision": 1,
+        "report_ids": [
+          "2fe7876f7390dfdd",
+          "380e86b69433db2c",
+          "3f9f1501782a51a9",
+          "424b2e41ca09c058",
+          "4d155680624db180",
+          "57b0b2e878173207",
+          "60889ca379a2b33f",
+          "6592b455fb5635d6",
+          "6a9925ab70242e52",
+          "6c8d6f7baf558c39",
+          "6d5452aa329db9ba",
+          "75b866b3726eefca",
+          "763ea7fd2631e92c",
+          "7d40521abbb7a35f",
+          "87c3a141eecedf20",
+          "97611e17d8ee5212",
+          "9f3efe9db520dacf",
+          "a20b72ed88012da1",
+          "af930022c6e031d8",
+          "b4b78e57311b1493",
+          "c066cc9a8bcc2f14",
+          "c1005c8b4d283053",
+          "c1f94ccedf1aa27a",
+          "d5e6aa118e17c72d",
+          "db4982bc174ebb63",
+          "dd24481dc21b3d5b",
+          "de6eeb07905b5058",
+          "e59f266c2e0c9df7",
+          "ebc023e19b02442d",
+          "ef6a220739d8839b",
+          "f6ab89d12fd1c7da",
+          "f87c2a34d5f5d84b",
+          "fbb88e066461af41"
+        ],
+        "revision": 2,
+        "revision_reason": "focused follow-up and structural critiques revised the shared dossiers",
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W1956400912",
+          "OA-W2765648563",
+          "OA-W2920973764",
+          "OA-W3115107353",
+          "OA-W4386202536"
+        ],
+        "status": "COMPLETE",
+        "unresolved_joins": [],
+        "viewpoint_id": "SOCIETY"
+      }
+    ],
+    "events": [
+      {
+        "event_id": "LOOP-569303b805c2",
+        "kind": "NEED_OPENED",
+        "payload": {
+          "branch_id": "S-ACTIVE-LINEAGE-M1",
+          "need_id": "NEED-c2f622a107ab"
+        }
+      },
+      {
+        "event_id": "LOOP-6f2f5489818b",
+        "kind": "NEED_OPENED",
+        "payload": {
+          "branch_id": "S-ACTIVE-LINEAGE-M2",
+          "need_id": "NEED-c89b27891d89"
+        }
+      },
+      {
+        "event_id": "LOOP-6b085c9389b3",
+        "kind": "NEED_OPENED",
+        "payload": {
+          "branch_id": "S-ACTIVE-LINEAGE-NULL",
+          "need_id": "NEED-1544757aee13"
+        }
+      },
+      {
+        "event_id": "LOOP-2581d620b69c",
+        "kind": "NEED_OPENED",
+        "payload": {
+          "branch_id": "auditor:evidence_skeptic",
+          "need_id": "NEED-6278e246e03c"
+        }
+      },
+      {
+        "event_id": "LOOP-88c3bd099f29",
+        "kind": "NEED_OPENED",
+        "payload": {
+          "branch_id": "auditor:transfer_boundary",
+          "need_id": "NEED-c6c138c3ab97"
+        }
+      },
+      {
+        "event_id": "LOOP-c55c750648af",
+        "kind": "NEED_OPENED",
+        "payload": {
+          "branch_id": "auditor:experiment_simulation",
+          "need_id": "NEED-b5b3d30390e6"
+        }
+      }
+    ],
+    "fetches": [],
+    "focus": [
+      {
+        "allocations": {
+          "05343f614ffda754": 0,
+          "15c2d5747175cbf8": 1,
+          "216f37b4c5121aa2": 0,
+          "4190c617d81abb51": 1,
+          "41a053daea14af21": 0,
+          "42ff76fe3b3e5c92": 0,
+          "5b631b432085044e": 0,
+          "6d5a0d93c41d5f20": 0,
+          "76a296b209270754": 0,
+          "a25af0e386ca8897": 0,
+          "b6afe8ad000e33f6": 0,
+          "cfaa4e15f0607042": 0,
+          "d64a94801afc6489": 1,
+          "de61b1295a3ed4ad": 0,
+          "fa066171260c6170": 0
+        },
+        "case_id": "S-ACTIVE-LINEAGE",
+        "decision_id": "646fc5b6c923437a",
+        "null_retained": true,
+        "ranked_tasks": [
+          "15c2d5747175cbf8",
+          "4190c617d81abb51",
+          "b6afe8ad000e33f6",
+          "d64a94801afc6489",
+          "de61b1295a3ed4ad",
+          "fa066171260c6170",
+          "05343f614ffda754",
+          "216f37b4c5121aa2",
+          "41a053daea14af21",
+          "42ff76fe3b3e5c92",
+          "5b631b432085044e",
+          "6d5a0d93c41d5f20",
+          "76a296b209270754",
+          "a25af0e386ca8897",
+          "cfaa4e15f0607042"
+        ],
+        "rationale": "Deterministic allocation by expected information, uncertainty, novelty, provenance risk, duplicate work, feasibility, and mandatory null/rival coverage; votes and prose length are not inputs.",
+        "remaining_actions": 3,
+        "rival_retained": true,
+        "schema_version": "1.0",
+        "scores": {
+          "05343f614ffda754": 6,
+          "15c2d5747175cbf8": 9,
+          "216f37b4c5121aa2": 6,
+          "4190c617d81abb51": 9,
+          "41a053daea14af21": 6,
+          "42ff76fe3b3e5c92": 6,
+          "5b631b432085044e": 6,
+          "6d5a0d93c41d5f20": 6,
+          "76a296b209270754": 6,
+          "a25af0e386ca8897": 6,
+          "b6afe8ad000e33f6": 9,
+          "cfaa4e15f0607042": 6,
+          "d64a94801afc6489": 9,
+          "de61b1295a3ed4ad": 9,
+          "fa066171260c6170": 9
+        },
+        "status": "ALLOCATED",
+        "treatment_id": "A2-M"
+      }
+    ],
+    "mappings": [],
+    "needs": [
+      {
+        "budget_request": 1,
+        "case_id": "S-ACTIVE-LINEAGE",
+        "claim_ids": [
+          "CLAIM-S-ACTIVE-LINEAGE-M1"
+        ],
+        "duplication_key": "utah quicklime roman hot mix thesis transportation report study relationship functional endpoint",
+        "expected_decision_change": 2,
+        "known_candidate_ids": [],
+        "need_id": "NEED-c2f622a107ab",
+        "problem_id": "roman-hot-mix",
+        "problem_version": "1.0",
+        "provenance": [
+          "G10R-AB-S-ACTIVE-LINEAGE-A2-M"
+        ],
+        "question": "Utah quicklime Roman hot mix thesis transportation report study relationship functional endpoint",
+        "required_evidence_kind": "PAGE_CARD",
+        "schema_version": "1.0",
+        "status": "PARTIAL",
+        "task_type": "RETRIEVAL",
+        "unresolved_uncertainty": 1,
+        "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+      },
+      {
+        "budget_request": 1,
+        "case_id": "S-ACTIVE-LINEAGE",
+        "claim_ids": [
+          "CLAIM-S-ACTIVE-LINEAGE-M2"
+        ],
+        "duplication_key": "utah thesis transportation report quicklime hot mix asphalt self-healing crack closure water permeability",
+        "expected_decision_change": 2,
+        "known_candidate_ids": [],
+        "need_id": "NEED-c89b27891d89",
+        "problem_id": "roman-hot-mix",
+        "problem_version": "1.0",
+        "provenance": [
+          "G10R-AB-S-ACTIVE-LINEAGE-A2-M"
+        ],
+        "question": "Utah thesis transportation report quicklime hot mix asphalt self-healing crack closure water permeability",
+        "required_evidence_kind": "PAGE_CARD",
+        "schema_version": "1.0",
+        "status": "PARTIAL",
+        "task_type": "RETRIEVAL",
+        "unresolved_uncertainty": 1,
+        "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+      },
+      {
+        "budget_request": 1,
+        "case_id": "S-ACTIVE-LINEAGE",
+        "claim_ids": [
+          "CLAIM-S-ACTIVE-LINEAGE-NULL"
+        ],
+        "duplication_key": "utah thesis quicklime hot mix asphalt transportation report",
+        "expected_decision_change": 2,
+        "known_candidate_ids": [
+          "OA-W1956400912",
+          "OA-W2765648563",
+          "OA-W2920973764",
+          "OA-W3115107353",
+          "OA-W4386202536"
+        ],
+        "need_id": "NEED-1544757aee13",
+        "problem_id": "roman-hot-mix",
+        "problem_version": "1.0",
+        "provenance": [
+          "G10R-AB-S-ACTIVE-LINEAGE-A2-M"
+        ],
+        "question": "Utah thesis quicklime hot mix asphalt transportation report",
+        "required_evidence_kind": "PAGE_CARD",
+        "schema_version": "1.0",
+        "status": "PARTIAL",
+        "task_type": "RETRIEVAL",
+        "unresolved_uncertainty": 1,
+        "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+      },
+      {
+        "budget_request": 1,
+        "case_id": "S-ACTIVE-LINEAGE",
+        "claim_ids": [],
+        "duplication_key": "utah quicklime thesis transportation report study relationship functional endpoint",
+        "expected_decision_change": 1,
+        "known_candidate_ids": [],
+        "need_id": "NEED-6278e246e03c",
+        "problem_id": "roman-hot-mix",
+        "problem_version": "1.0",
+        "provenance": [
+          "G10R-AB-S-ACTIVE-LINEAGE-A2-M"
+        ],
+        "question": "Utah quicklime thesis transportation report study relationship functional endpoint",
+        "required_evidence_kind": "CONTRADICTION",
+        "schema_version": "1.0",
+        "status": "PARTIAL",
+        "task_type": "CONTRADICTION",
+        "unresolved_uncertainty": 1,
+        "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+      },
+      {
+        "budget_request": 1,
+        "case_id": "S-ACTIVE-LINEAGE",
+        "claim_ids": [],
+        "duplication_key": "utah quicklime thesis transportation report roman hot-mix asphalt",
+        "expected_decision_change": 1,
+        "known_candidate_ids": [
+          "OA-W3115107353"
+        ],
+        "need_id": "NEED-c6c138c3ab97",
+        "problem_id": "roman-hot-mix",
+        "problem_version": "1.0",
+        "provenance": [
+          "G10R-AB-S-ACTIVE-LINEAGE-A2-M"
+        ],
+        "question": "Utah quicklime thesis transportation report Roman hot-mix asphalt",
+        "required_evidence_kind": "CONTRADICTION",
+        "schema_version": "1.0",
+        "status": "IN_PROGRESS",
+        "task_type": "CONTRADICTION",
+        "unresolved_uncertainty": 1,
+        "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+      },
+      {
+        "budget_request": 1,
+        "case_id": "S-ACTIVE-LINEAGE",
+        "claim_ids": [],
+        "duplication_key": "utah quicklime thesis transportation report replication functional endpoint",
+        "expected_decision_change": 1,
+        "known_candidate_ids": [],
+        "need_id": "NEED-b5b3d30390e6",
+        "problem_id": "roman-hot-mix",
+        "problem_version": "1.0",
+        "provenance": [
+          "G10R-AB-S-ACTIVE-LINEAGE-A2-M"
+        ],
+        "question": "Utah quicklime thesis transportation report replication functional endpoint",
+        "required_evidence_kind": "CONTRADICTION",
+        "schema_version": "1.0",
+        "status": "PARTIAL",
+        "task_type": "CONTRADICTION",
+        "unresolved_uncertainty": 1,
+        "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+      }
+    ],
+    "open_slot": [
+      {
+        "admission_id": "81a1e743b8f26df4",
+        "case_id": "S-ACTIVE-LINEAGE",
+        "claim_ids": [],
+        "discriminator": "compare the open-slot candidate's process and endpoint against the incumbent roster",
+        "falsifier": "the candidate is redundant, non-process-matched, or lacks a usable locator",
+        "novelty_basis": "the open slot is evaluated from its acquired candidate set, not from a placeholder claim",
+        "overlap_decision": "NO_COMPARABLE_INCUMBENT",
+        "predicted_observation": "a process-matched candidate should expose a discriminator distinct from incumbent viewpoints",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "ABSTAINED_NO_DISTINCT_VIEWPOINT",
+        "viewpoint_id": "S-ACTIVE-LINEAGE-OPEN-ADMITTED"
+      }
+    ],
+    "problem_id": "roman-hot-mix",
+    "problem_version": "1.0",
+    "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+    "schema_version": "g10r-t.live.1",
+    "searches": [
+      {
+        "action_id": "32cfd4fd1e4f98a6",
+        "branch_id": "S-ACTIVE-LINEAGE-M1",
+        "candidate_ids": [],
+        "need_id": "NEED-c2f622a107ab"
+      },
+      {
+        "action_id": "b66cac401e0d3e83",
+        "branch_id": "S-ACTIVE-LINEAGE-M2",
+        "candidate_ids": [],
+        "need_id": "NEED-c89b27891d89"
+      },
+      {
+        "action_id": "495b6b9844d5965b",
+        "branch_id": "S-ACTIVE-LINEAGE-NULL",
+        "candidate_ids": [
+          "OA-W1956400912",
+          "OA-W2765648563",
+          "OA-W2920973764",
+          "OA-W3115107353",
+          "OA-W4386202536"
+        ],
+        "need_id": "NEED-1544757aee13"
+      },
+      {
+        "action_id": "0ea3059b518a0b70",
+        "branch_id": "auditor:evidence_skeptic",
+        "candidate_ids": [],
+        "need_id": "NEED-6278e246e03c"
+      },
+      {
+        "action_id": "1d73d4098343afab",
+        "branch_id": "auditor:transfer_boundary",
+        "candidate_ids": [
+          "OA-W3115107353"
+        ],
+        "need_id": "NEED-c6c138c3ab97"
+      },
+      {
+        "action_id": "477c6ea3149ad43e",
+        "branch_id": "auditor:experiment_simulation",
+        "candidate_ids": [],
+        "need_id": "NEED-b5b3d30390e6"
+      },
+      {
+        "action_id": "a1486a980f384a7e",
+        "branch_id": "S-ACTIVE-LINEAGE-M2",
+        "candidate_ids": [],
+        "need_id": "NEED-c89b27891d89"
+      },
+      {
+        "action_id": "e4602d4245b4ea31",
+        "branch_id": "S-ACTIVE-LINEAGE-M1",
+        "candidate_ids": [],
+        "need_id": "NEED-c2f622a107ab"
+      },
+      {
+        "action_id": "8ee41357b6d92e39",
+        "branch_id": "S-ACTIVE-LINEAGE-NULL",
+        "candidate_ids": [],
+        "need_id": "NEED-1544757aee13"
+      }
+    ],
+    "selections": [
+      {
+        "action_ids": [
+          "495b6b9844d5965b"
+        ],
+        "candidate_status": "METADATA_SCREENED",
+        "content_locator": "https://api.openalex.org/works/W1956400912",
+        "need_id": "NEED-1544757aee13",
+        "policy_status": "METADATA_ONLY",
+        "requested_operation": "SEEK_LOCATOR",
+        "schema_version": "1.0",
+        "selection_id": "SEL-14394bec0d90",
+        "selection_reason": "metadata candidate retained pending a lawful content locator",
+        "source_candidate_id": "OA-W1956400912",
+        "status": "PENDING"
+      },
+      {
+        "action_ids": [
+          "1d73d4098343afab"
+        ],
+        "candidate_status": "METADATA_SCREENED",
+        "content_locator": "https://api.openalex.org/works/W3115107353",
+        "need_id": "NEED-c6c138c3ab97",
+        "policy_status": "METADATA_ONLY",
+        "requested_operation": "SEEK_LOCATOR",
+        "schema_version": "1.0",
+        "selection_id": "SEL-c5e9e97b89f5",
+        "selection_reason": "metadata candidate retained pending a lawful content locator",
+        "source_candidate_id": "OA-W3115107353",
+        "status": "PENDING"
+      }
+    ],
+    "stage": "COMPLETED"
+  },
+  "simulation_traces": [],
+  "source_candidates": {
+    "OA-W1956400912": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "openalex:w1956400912",
+      "discovery_query": "utah thesis quicklime hot mix asphalt transportation report",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W1956400912",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W1956400912",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Nano-scale evaluation of moisture damage in asphalt"
+    },
+    "OA-W2765648563": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "openalex:w2765648563",
+      "discovery_query": "utah thesis quicklime hot mix asphalt transportation report",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2765648563",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W2765648563",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Evaluating the Mechanical Properties and Long-Term Performance of Stabilized Full-Depth Reclamation Base Materials"
+    },
+    "OA-W2920973764": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "openalex:w2920973764",
+      "discovery_query": "utah thesis quicklime hot mix asphalt transportation report",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W2920973764",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W2920973764",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Investigation into ageing and the effect of hydrated lime on mastics and mixture ageing"
+    },
+    "OA-W3115107353": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.1080/00393630.2020.1864896",
+      "discovery_query": "utah thesis quicklime hot mix asphalt transportation report",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W3115107353",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W3115107353",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Materials and Techniques for the Coating of Nineteenth-century Plaster Casts: A Review of Historical Sources"
+    },
+    "OA-W4386202536": {
+      "access_class": "METADATA_ONLY",
+      "content_hash": null,
+      "content_locator": null,
+      "contradiction_ids": [],
+      "deduplication_key": "doi:10.2172/1996689",
+      "discovery_query": "utah thesis quicklime hot mix asphalt transportation report",
+      "host": "api.openalex.org",
+      "locator": "https://api.openalex.org/works/W4386202536",
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "rights_state": "METADATA_ONLY",
+      "schema_version": "1.0",
+      "source_candidate_id": "OA-W4386202536",
+      "status": "METADATA_SCREENED",
+      "support_region": "unadjudicated scholarly metadata",
+      "title": "Clean Energy Technology Applications on US Mine Land: Technical Analysis"
+    }
+  },
+  "state": "completed",
+  "state_history": [
+    "created",
+    "policy_loaded",
+    "context_frozen",
+    "planning",
+    "round_1",
+    "sharing",
+    "focus_allocated",
+    "round_2",
+    "adjudicating",
+    "scored",
+    "completed"
+  ],
+  "tool_request_events": [],
+  "viewpoint_society": {
+    "action_budget": 12,
+    "active_ids": [
+      "S-ACTIVE-LINEAGE-M1",
+      "S-ACTIVE-LINEAGE-M2",
+      "S-ACTIVE-LINEAGE-NULL"
+    ],
+    "cards": {
+      "S-ACTIVE-LINEAGE-M1": {
+        "case_id": "S-ACTIVE-LINEAGE",
+        "falsifiers": [
+          "Matched specimens without reactive lime-rich regions recover identically under the same exposure."
+        ],
+        "kind": "CANDIDATE",
+        "known_alternatives": [
+          "S-ACTIVE-LINEAGE-M2",
+          "S-ACTIVE-LINEAGE-NULL"
+        ],
+        "predictions": [
+          "Recovery should track the presence and exposure of reactive lime-rich regions."
+        ],
+        "prior_basis": "Offline mechanism fixture derived from the problem context; not established evidence.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "A localized reactive lime reservoir drives functional recovery after damage.",
+        "support_region": "Modern lime-pozzolan mortar with identified lime-rich inclusions; transfer is unresolved.",
+        "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+      },
+      "S-ACTIVE-LINEAGE-M2": {
+        "case_id": "S-ACTIVE-LINEAGE",
+        "falsifiers": [
+          "Functional recovery consistently exceeds closure-only controls under matched conditions."
+        ],
+        "kind": "CANDIDATE",
+        "known_alternatives": [
+          "S-ACTIVE-LINEAGE-M1",
+          "S-ACTIVE-LINEAGE-NULL"
+        ],
+        "predictions": [
+          "Closure can occur without a matching improvement in functional water transport."
+        ],
+        "prior_basis": "Offline mechanism fixture derived from the problem context; not established evidence.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "Observed recovery is dominated by non-chemical physical crack closure.",
+        "support_region": "Crack-width and exposure conditions where closure can be separated from water-transport recovery.",
+        "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+      },
+      "S-ACTIVE-LINEAGE-NULL": {
+        "case_id": "S-ACTIVE-LINEAGE",
+        "falsifiers": [
+          "A preregistered mechanism-specific discriminator separates a candidate from the control."
+        ],
+        "kind": "NULL",
+        "known_alternatives": [
+          "S-ACTIVE-LINEAGE-M1",
+          "S-ACTIVE-LINEAGE-M2"
+        ],
+        "predictions": [
+          "A process-matched control is indistinguishable from each proposed mechanism."
+        ],
+        "prior_basis": "Required null comparator for anti-anchoring; not a claim about the material.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "No reproducible mechanism-specific recovery is present under the declared conditions.",
+        "support_region": "The declared case domain and measurement endpoint only.",
+        "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+      },
+      "S-ACTIVE-LINEAGE-OPEN": {
+        "case_id": "S-ACTIVE-LINEAGE",
+        "falsifiers": [
+          "No distinct prediction or provenance can be supplied."
+        ],
+        "kind": "OPEN_SLOT",
+        "known_alternatives": [
+          "S-ACTIVE-LINEAGE-M1",
+          "S-ACTIVE-LINEAGE-M2",
+          "S-ACTIVE-LINEAGE-NULL"
+        ],
+        "predictions": [
+          "A newly admitted mechanism must state a distinct discriminator."
+        ],
+        "prior_basis": "Required discovery slot; empty until an admission record is accepted.",
+        "promotion_status": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "statement": "Open slot for a mechanism introduced by bounded evidence or explicit uncertainty.",
+        "support_region": "Must be declared before any new mechanism is scored.",
+        "viewpoint_id": "S-ACTIVE-LINEAGE-OPEN"
+      }
+    },
+    "case_id": "S-ACTIVE-LINEAGE",
+    "context_hash": "sha256:1ac055b97d74c26735c4f6fdc646f8f9fcba340e8171300cbab6ea646b599c93",
+    "critiques": {
+      "114e87062c772204": {
+        "case_id": "S-ACTIVE-LINEAGE",
+        "challenge": "The Utah thesis and transportation report are not identified or linked in the base evidence, so independent replication and a functional recovery endpoint are unestablished. The only supplied candidate is metadata-only and its title concerns plaster-cast coatings, not quicklime or asphalt; it cannot support transfer to the stated mortar mechanism.",
+        "compared_viewpoint_ids": [
+          "S-ACTIVE-LINEAGE-M1",
+          "S-ACTIVE-LINEAGE-M2",
+          "S-ACTIVE-LINEAGE-NULL"
+        ],
+        "critic_id": "structural:transfer_boundary",
+        "critique_id": "114e87062c772204",
+        "dossier_ids": [
+          "DOSSIER-S-ACTIVE-LINEAGE-M1",
+          "DOSSIER-S-ACTIVE-LINEAGE-M2",
+          "DOSSIER-S-ACTIVE-LINEAGE-NULL"
+        ],
+        "proposed_discriminator": "Resolve the records from authoritative catalog/full-text sources: compare authorship, specimens, and methods to determine whether they are independent studies, and verify whether each measured functional water-transport recovery rather than crack closure or another endpoint.",
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W3115107353"
+        ],
+        "status": "REVIEW_REQUIRED",
+        "target_viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+      },
+      "2d1dba7e1b932aaf": {
+        "case_id": "S-ACTIVE-LINEAGE",
+        "challenge": "The packet does not establish that the Utah thesis and transportation report are independent studies, or that either measured a relevant functional endpoint. Dossier completion and bibliographic candidate IDs without accessible source-level evidence cannot support those claims.",
+        "compared_viewpoint_ids": [
+          "S-ACTIVE-LINEAGE-M1",
+          "S-ACTIVE-LINEAGE-M2",
+          "S-ACTIVE-LINEAGE-NULL"
+        ],
+        "critic_id": "structural:evidence_skeptic",
+        "critique_id": "2d1dba7e1b932aaf",
+        "dossier_ids": [
+          "DOSSIER-S-ACTIVE-LINEAGE-M1",
+          "DOSSIER-S-ACTIVE-LINEAGE-M2",
+          "DOSSIER-S-ACTIVE-LINEAGE-NULL"
+        ],
+        "proposed_discriminator": "Verify the full records\u2019 authorship, study provenance, and overlap, then inspect methods and results for a defined functional endpoint; count replication only if the records document independent studies.",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "REVIEW_REQUIRED",
+        "target_viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+      },
+      "b077c4097a6aeafa": {
+        "case_id": "S-ACTIVE-LINEAGE",
+        "challenge": "The named Utah thesis and transportation report do not establish independent replication or a relevant functional endpoint; their study relationship and endpoint are absent from the packet.",
+        "compared_viewpoint_ids": [
+          "S-ACTIVE-LINEAGE-M1",
+          "S-ACTIVE-LINEAGE-M2",
+          "S-ACTIVE-LINEAGE-NULL"
+        ],
+        "critic_id": "structural:experiment_simulation",
+        "critique_id": "b077c4097a6aeafa",
+        "dossier_ids": [
+          "DOSSIER-S-ACTIVE-LINEAGE-M1",
+          "DOSSIER-S-ACTIVE-LINEAGE-M2",
+          "DOSSIER-S-ACTIVE-LINEAGE-NULL"
+        ],
+        "proposed_discriminator": "Cheapest observation: compare the two records\u2019 bibliographic details and methods/results to determine whether they report distinct studies and whether either measures a functional recovery endpoint. Treat absent or inaccessible details as unresolved.",
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "REVIEW_REQUIRED",
+        "target_viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+      }
+    },
+    "dossiers": {
+      "S-ACTIVE-LINEAGE-M1": {
+        "action_ids": [
+          "0ea3059b518a0b70",
+          "1d73d4098343afab",
+          "32cfd4fd1e4f98a6",
+          "477c6ea3149ad43e",
+          "e4602d4245b4ea31"
+        ],
+        "case_id": "S-ACTIVE-LINEAGE",
+        "claim_ids": [
+          "C1"
+        ],
+        "diagnostics": [],
+        "dissenting_report_ids": [],
+        "dossier_id": "DOSSIER-S-ACTIVE-LINEAGE-M1-R2",
+        "report_ids": [
+          "3f9f1501782a51a9",
+          "57b0b2e878173207",
+          "87c3a141eecedf20",
+          "97611e17d8ee5212",
+          "9f3efe9db520dacf",
+          "b4b78e57311b1493",
+          "c066cc9a8bcc2f14",
+          "dd24481dc21b3d5b",
+          "de6eeb07905b5058",
+          "e59f266c2e0c9df7",
+          "ef6a220739d8839b",
+          "f6ab89d12fd1c7da",
+          "fbb88e066461af41"
+        ],
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W3115107353"
+        ],
+        "status": "COMPLETE",
+        "support_task_ids": [
+          "05343f614ffda754",
+          "216f37b4c5121aa2",
+          "4190c617d81abb51",
+          "6d5a0d93c41d5f20",
+          "fa066171260c6170"
+        ],
+        "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+      },
+      "S-ACTIVE-LINEAGE-M2": {
+        "action_ids": [
+          "a1486a980f384a7e",
+          "b66cac401e0d3e83"
+        ],
+        "case_id": "S-ACTIVE-LINEAGE",
+        "claim_ids": [
+          "C-M2"
+        ],
+        "diagnostics": [],
+        "dissenting_report_ids": [],
+        "dossier_id": "DOSSIER-S-ACTIVE-LINEAGE-M2-R2",
+        "report_ids": [
+          "2fe7876f7390dfdd",
+          "424b2e41ca09c058",
+          "4d155680624db180",
+          "6592b455fb5635d6",
+          "6a9925ab70242e52",
+          "6d5452aa329db9ba",
+          "75b866b3726eefca",
+          "c1005c8b4d283053",
+          "ebc023e19b02442d",
+          "f87c2a34d5f5d84b"
+        ],
+        "schema_version": "1.0",
+        "source_candidate_ids": [],
+        "status": "COMPLETE",
+        "support_task_ids": [
+          "15c2d5747175cbf8",
+          "5b631b432085044e",
+          "76a296b209270754",
+          "a25af0e386ca8897",
+          "b6afe8ad000e33f6"
+        ],
+        "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+      },
+      "S-ACTIVE-LINEAGE-NULL": {
+        "action_ids": [
+          "495b6b9844d5965b",
+          "8ee41357b6d92e39"
+        ],
+        "case_id": "S-ACTIVE-LINEAGE",
+        "claim_ids": [
+          "C1"
+        ],
+        "diagnostics": [],
+        "dissenting_report_ids": [],
+        "dossier_id": "DOSSIER-S-ACTIVE-LINEAGE-NULL-R2",
+        "report_ids": [
+          "380e86b69433db2c",
+          "60889ca379a2b33f",
+          "6c8d6f7baf558c39",
+          "763ea7fd2631e92c",
+          "7d40521abbb7a35f",
+          "a20b72ed88012da1",
+          "af930022c6e031d8",
+          "c1f94ccedf1aa27a",
+          "d5e6aa118e17c72d",
+          "db4982bc174ebb63"
+        ],
+        "schema_version": "1.0",
+        "source_candidate_ids": [
+          "OA-W1956400912",
+          "OA-W2765648563",
+          "OA-W2920973764",
+          "OA-W3115107353",
+          "OA-W4386202536"
+        ],
+        "status": "COMPLETE",
+        "support_task_ids": [
+          "41a053daea14af21",
+          "42ff76fe3b3e5c92",
+          "cfaa4e15f0607042",
+          "d64a94801afc6489",
+          "de61b1295a3ed4ad"
+        ],
+        "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+      }
+    },
+    "evidence_bus": {
+      "actions": {
+        "0ea3059b518a0b70": {
+          "action_id": "0ea3059b518a0b70",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "auditor:evidence_skeptic",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 0,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-LINEAGE",
+          "input": {
+            "index": "openalex",
+            "query": "utah quicklime thesis transportation report study relationship functional endpoint",
+            "requested_index": "catalog"
+          },
+          "output_ids": [],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "Locate the named Utah records and establish whether they describe the same study or independent studies, and whether either reports a relevant functional endpoint.",
+          "replay_key": "sha256:0806c0aec00ab01eda6d84772debc2bd954f2d96a07833fe108582b901ee60a5",
+          "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "1d73d4098343afab": {
+          "action_id": "1d73d4098343afab",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "auditor:transfer_boundary",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 0,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-LINEAGE",
+          "input": {
+            "index": "openalex",
+            "query": "utah quicklime thesis transportation report roman hot-mix asphalt",
+            "requested_index": "catalog"
+          },
+          "output_ids": [
+            "OA-W3115107353"
+          ],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "Identify the named Utah records and determine whether they describe the same study or independent work, and what endpoint was measured.",
+          "replay_key": "sha256:ac0fefc1b458219d71c8a7698a7e60947b71a6e632341cea9a7b9c91e758596e",
+          "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "32cfd4fd1e4f98a6": {
+          "action_id": "32cfd4fd1e4f98a6",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "S-ACTIVE-LINEAGE-M1",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 0,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-LINEAGE",
+          "input": {
+            "index": "openalex",
+            "query": "utah quicklime roman hot mix thesis transportation report study relationship functional endpoint",
+            "requested_index": "catalog"
+          },
+          "output_ids": [],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "Identify the named Utah records and establish whether the thesis and report represent independent studies and measure a relevant functional recovery endpoint. M1 provisionally predicts recovery associated with reactive lime-rich regions; the supplied packet does not establish this.",
+          "replay_key": "sha256:7bfd61dfc7daaa15bc4a6cf67841971d75228262c76cc3be9a344c4cc6e6dc67",
+          "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "477c6ea3149ad43e": {
+          "action_id": "477c6ea3149ad43e",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "auditor:experiment_simulation",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 0,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-LINEAGE",
+          "input": {
+            "index": "openalex",
+            "query": "utah quicklime thesis transportation report replication functional endpoint",
+            "requested_index": "catalog"
+          },
+          "output_ids": [],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "Identify the named Utah records and determine whether either reports an independent study and a functional endpoint.",
+          "replay_key": "sha256:3804227768758e3b369db7ea6221d71cd66a73cbe2dd9c034d7530ae1fb36d3d",
+          "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "495b6b9844d5965b": {
+          "action_id": "495b6b9844d5965b",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "S-ACTIVE-LINEAGE-NULL",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 5,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-LINEAGE",
+          "input": {
+            "index": "openalex",
+            "query": "utah thesis quicklime hot mix asphalt transportation report",
+            "requested_index": "catalog"
+          },
+          "output_ids": [
+            "OA-W1956400912",
+            "OA-W2920973764",
+            "OA-W2765648563",
+            "OA-W3115107353",
+            "OA-W4386202536"
+          ],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "Find the named Utah thesis and report without presuming they are related. Null-viewpoint prediction: process-matched controls are indistinguishable on the declared endpoint; falsifier: a preregistered mechanism-specific discriminator separates a candidate from control. Support is limited to the declared case domain and endpoint; current provenance is only base evidence E-L1, which leaves relationship and endpoint absent.",
+          "replay_key": "sha256:2427185401d6c022f508dabe4d7efb338f8096857e6484997032cc62b897684d",
+          "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "8ee41357b6d92e39": {
+          "action_id": "8ee41357b6d92e39",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "S-ACTIVE-LINEAGE-NULL",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 0,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-LINEAGE",
+          "input": {
+            "index": "openalex",
+            "query": "no reproducible mechanism-specific recovery is present under the declared conditions. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?",
+            "requested_index": "catalog"
+          },
+          "output_ids": [],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "deterministic viewpoint discriminator focus",
+          "replay_key": "sha256:aece0b0e69f90926ba2c2a3d93756bb4e2489feae38d7c18b721957196d8c8ec",
+          "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "a1486a980f384a7e": {
+          "action_id": "a1486a980f384a7e",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "S-ACTIVE-LINEAGE-M2",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 0,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-LINEAGE",
+          "input": {
+            "index": "openalex",
+            "query": "observed recovery is dominated by non-chemical physical crack closure. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?",
+            "requested_index": "catalog"
+          },
+          "output_ids": [],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "deterministic viewpoint discriminator focus",
+          "replay_key": "sha256:8136dc7aba085821859734a8762481b2a3d096bcbe0c5ccccfeb94bde74dde4e",
+          "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "b66cac401e0d3e83": {
+          "action_id": "b66cac401e0d3e83",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "S-ACTIVE-LINEAGE-M2",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 0,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-LINEAGE",
+          "input": {
+            "index": "openalex",
+            "query": "utah thesis transportation report quicklime hot mix asphalt self-healing crack closure water permeability",
+            "requested_index": "catalog"
+          },
+          "output_ids": [],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "Locate the named Utah records and determine whether they are related studies or independent work, without presuming either relationship or an endpoint.",
+          "replay_key": "sha256:9399dbd1c738eb2e6317d22374b7a98ec4286b4b70c53c2809515fca67c3a348",
+          "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        },
+        "e4602d4245b4ea31": {
+          "action_id": "e4602d4245b4ea31",
+          "action_type": "SEARCH",
+          "arm": "A2-M",
+          "branch_id": "S-ACTIVE-LINEAGE-M1",
+          "budget_debit": {
+            "document_fetches": 0,
+            "estimated_cost_usd": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "payload_bytes": 0,
+            "queries": 1,
+            "retained_sources": 0,
+            "simulation_calls": 0
+          },
+          "case_id": "S-ACTIVE-LINEAGE",
+          "input": {
+            "index": "openalex",
+            "query": "a localized reactive lime reservoir drives functional recovery after damage. does the accessible utah quicklime record set establish independent replication and a relevant functional endpoint?",
+            "requested_index": "catalog"
+          },
+          "output_ids": [],
+          "policy_status": "ALLOWED",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rationale": "deterministic viewpoint discriminator focus",
+          "replay_key": "sha256:f28b29dcadb105fb735181039f377fe68c01045e7460c7f96e00b11dde69c83d",
+          "run_id": "G10R-AB-S-ACTIVE-LINEAGE-A2-M",
+          "schema_version": "1.0",
+          "timestamp": "2026-10-10T00:00:00Z"
+        }
+      },
+      "append_order": [
+        [
+          "SUPPORT_TASK",
+          "fa066171260c6170"
+        ],
+        [
+          "SUPPORT_TASK",
+          "216f37b4c5121aa2"
+        ],
+        [
+          "SUPPORT_TASK",
+          "05343f614ffda754"
+        ],
+        [
+          "SUPPORT_TASK",
+          "4190c617d81abb51"
+        ],
+        [
+          "SUPPORT_TASK",
+          "6d5a0d93c41d5f20"
+        ],
+        [
+          "SUPPORT_TASK",
+          "15c2d5747175cbf8"
+        ],
+        [
+          "SUPPORT_TASK",
+          "76a296b209270754"
+        ],
+        [
+          "SUPPORT_TASK",
+          "5b631b432085044e"
+        ],
+        [
+          "SUPPORT_TASK",
+          "b6afe8ad000e33f6"
+        ],
+        [
+          "SUPPORT_TASK",
+          "a25af0e386ca8897"
+        ],
+        [
+          "SUPPORT_TASK",
+          "d64a94801afc6489"
+        ],
+        [
+          "SUPPORT_TASK",
+          "cfaa4e15f0607042"
+        ],
+        [
+          "SUPPORT_TASK",
+          "42ff76fe3b3e5c92"
+        ],
+        [
+          "SUPPORT_TASK",
+          "de61b1295a3ed4ad"
+        ],
+        [
+          "SUPPORT_TASK",
+          "41a053daea14af21"
+        ],
+        [
+          "ACTION",
+          "32cfd4fd1e4f98a6"
+        ],
+        [
+          "ACTION",
+          "b66cac401e0d3e83"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W1956400912"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W2920973764"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W2765648563"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W3115107353"
+        ],
+        [
+          "SOURCE_CANDIDATE",
+          "OA-W4386202536"
+        ],
+        [
+          "ACTION",
+          "495b6b9844d5965b"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "f6ab89d12fd1c7da"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "b4b78e57311b1493"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "57b0b2e878173207"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "87c3a141eecedf20"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "e59f266c2e0c9df7"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "f87c2a34d5f5d84b"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "6d5452aa329db9ba"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "2fe7876f7390dfdd"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "c1005c8b4d283053"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "75b866b3726eefca"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "c1f94ccedf1aa27a"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "60889ca379a2b33f"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "7d40521abbb7a35f"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "af930022c6e031d8"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "db4982bc174ebb63"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-LINEAGE-M1"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-LINEAGE-M2"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-LINEAGE-NULL"
+        ],
+        [
+          "ACTION",
+          "0ea3059b518a0b70"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "3f9f1501782a51a9"
+        ],
+        [
+          "CROSS_VIEWPOINT_CRITIQUE",
+          "2d1dba7e1b932aaf"
+        ],
+        [
+          "ACTION",
+          "1d73d4098343afab"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "97611e17d8ee5212"
+        ],
+        [
+          "CROSS_VIEWPOINT_CRITIQUE",
+          "114e87062c772204"
+        ],
+        [
+          "ACTION",
+          "477c6ea3149ad43e"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "dd24481dc21b3d5b"
+        ],
+        [
+          "CROSS_VIEWPOINT_CRITIQUE",
+          "b077c4097a6aeafa"
+        ],
+        [
+          "ACTION",
+          "a1486a980f384a7e"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "6a9925ab70242e52"
+        ],
+        [
+          "ACTION",
+          "e4602d4245b4ea31"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "c066cc9a8bcc2f14"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "6592b455fb5635d6"
+        ],
+        [
+          "ACTION",
+          "8ee41357b6d92e39"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "380e86b69433db2c"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "d5e6aa118e17c72d"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "ef6a220739d8839b"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "de6eeb07905b5058"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "fbb88e066461af41"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "a20b72ed88012da1"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "6c8d6f7baf558c39"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "ebc023e19b02442d"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "9f3efe9db520dacf"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "424b2e41ca09c058"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "4d155680624db180"
+        ],
+        [
+          "SUPPORT_REPORT",
+          "763ea7fd2631e92c"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-LINEAGE-M1-R2"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-LINEAGE-M2-R2"
+        ],
+        [
+          "VIEWPOINT_DOSSIER",
+          "DOSSIER-S-ACTIVE-LINEAGE-NULL-R2"
+        ]
+      ],
+      "candidate_conflicts": {},
+      "candidate_observations": {
+        "OA-W1956400912": [
+          {
+            "discovery_query": "utah thesis quicklime hot mix asphalt transportation report",
+            "payload_hash": "sha256:62e3e6b9abffbc7125b9a3a696ad66dc5db4984360f7910ec1a25ff8f8662eba",
+            "source_candidate_id": "OA-W1956400912",
+            "status": "METADATA_SCREENED"
+          }
+        ],
+        "OA-W2765648563": [
+          {
+            "discovery_query": "utah thesis quicklime hot mix asphalt transportation report",
+            "payload_hash": "sha256:c92df074d8bbe2b042bb3e05d3daf4bf2846c4eee05eafab76b070f20f440443",
+            "source_candidate_id": "OA-W2765648563",
+            "status": "METADATA_SCREENED"
+          }
+        ],
+        "OA-W2920973764": [
+          {
+            "discovery_query": "utah thesis quicklime hot mix asphalt transportation report",
+            "payload_hash": "sha256:bd1257ac93ab11916c9ea28992ffef28417d9a66a3a946d831fd3de781ae0e30",
+            "source_candidate_id": "OA-W2920973764",
+            "status": "METADATA_SCREENED"
+          }
+        ],
+        "OA-W3115107353": [
+          {
+            "discovery_query": "utah thesis quicklime hot mix asphalt transportation report",
+            "payload_hash": "sha256:8078d33fed37656dc7f076c1a9b1e80b712fb7dc73aa6dfb8cc4a8e7e6a7e03b",
+            "source_candidate_id": "OA-W3115107353",
+            "status": "METADATA_SCREENED"
+          },
+          {
+            "discovery_query": "utah quicklime thesis transportation report roman hot-mix asphalt",
+            "payload_hash": "sha256:a9319293a90db674cf0e5ab33649eeea63274e92383a2f0b4fe6ed7136b994c6",
+            "source_candidate_id": "OA-W3115107353",
+            "status": "DUPLICATE"
+          }
+        ],
+        "OA-W4386202536": [
+          {
+            "discovery_query": "utah thesis quicklime hot mix asphalt transportation report",
+            "payload_hash": "sha256:e2bd934e304bca06d88a5ffed2caffb7d68930e6b381356550e2dfcc5d65e97a",
+            "source_candidate_id": "OA-W4386202536",
+            "status": "METADATA_SCREENED"
+          }
+        ]
+      },
+      "candidates": {
+        "OA-W1956400912": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "openalex:w1956400912",
+          "discovery_query": "utah thesis quicklime hot mix asphalt transportation report",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W1956400912",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W1956400912",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Nano-scale evaluation of moisture damage in asphalt"
+        },
+        "OA-W2765648563": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "openalex:w2765648563",
+          "discovery_query": "utah thesis quicklime hot mix asphalt transportation report",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W2765648563",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W2765648563",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Evaluating the Mechanical Properties and Long-Term Performance of Stabilized Full-Depth Reclamation Base Materials"
+        },
+        "OA-W2920973764": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "openalex:w2920973764",
+          "discovery_query": "utah thesis quicklime hot mix asphalt transportation report",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W2920973764",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W2920973764",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Investigation into ageing and the effect of hydrated lime on mastics and mixture ageing"
+        },
+        "OA-W3115107353": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.1080/00393630.2020.1864896",
+          "discovery_query": "utah thesis quicklime hot mix asphalt transportation report",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W3115107353",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W3115107353",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Materials and Techniques for the Coating of Nineteenth-century Plaster Casts: A Review of Historical Sources"
+        },
+        "OA-W4386202536": {
+          "access_class": "METADATA_ONLY",
+          "content_hash": null,
+          "content_locator": null,
+          "contradiction_ids": [],
+          "deduplication_key": "doi:10.2172/1996689",
+          "discovery_query": "utah thesis quicklime hot mix asphalt transportation report",
+          "host": "api.openalex.org",
+          "locator": "https://api.openalex.org/works/W4386202536",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "rights_state": "METADATA_ONLY",
+          "schema_version": "1.0",
+          "source_candidate_id": "OA-W4386202536",
+          "status": "METADATA_SCREENED",
+          "support_region": "unadjudicated scholarly metadata",
+          "title": "Clean Energy Technology Applications on US Mine Land: Technical Analysis"
+        }
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "context_hash": "sha256:1ac055b97d74c26735c4f6fdc646f8f9fcba340e8171300cbab6ea646b599c93",
+      "critiques": {
+        "114e87062c772204": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "challenge": "The Utah thesis and transportation report are not identified or linked in the base evidence, so independent replication and a functional recovery endpoint are unestablished. The only supplied candidate is metadata-only and its title concerns plaster-cast coatings, not quicklime or asphalt; it cannot support transfer to the stated mortar mechanism.",
+          "compared_viewpoint_ids": [
+            "S-ACTIVE-LINEAGE-M1",
+            "S-ACTIVE-LINEAGE-M2",
+            "S-ACTIVE-LINEAGE-NULL"
+          ],
+          "critic_id": "structural:transfer_boundary",
+          "critique_id": "114e87062c772204",
+          "dossier_ids": [
+            "DOSSIER-S-ACTIVE-LINEAGE-M1",
+            "DOSSIER-S-ACTIVE-LINEAGE-M2",
+            "DOSSIER-S-ACTIVE-LINEAGE-NULL"
+          ],
+          "proposed_discriminator": "Resolve the records from authoritative catalog/full-text sources: compare authorship, specimens, and methods to determine whether they are independent studies, and verify whether each measured functional water-transport recovery rather than crack closure or another endpoint.",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W3115107353"
+          ],
+          "status": "REVIEW_REQUIRED",
+          "target_viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "2d1dba7e1b932aaf": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "challenge": "The packet does not establish that the Utah thesis and transportation report are independent studies, or that either measured a relevant functional endpoint. Dossier completion and bibliographic candidate IDs without accessible source-level evidence cannot support those claims.",
+          "compared_viewpoint_ids": [
+            "S-ACTIVE-LINEAGE-M1",
+            "S-ACTIVE-LINEAGE-M2",
+            "S-ACTIVE-LINEAGE-NULL"
+          ],
+          "critic_id": "structural:evidence_skeptic",
+          "critique_id": "2d1dba7e1b932aaf",
+          "dossier_ids": [
+            "DOSSIER-S-ACTIVE-LINEAGE-M1",
+            "DOSSIER-S-ACTIVE-LINEAGE-M2",
+            "DOSSIER-S-ACTIVE-LINEAGE-NULL"
+          ],
+          "proposed_discriminator": "Verify the full records\u2019 authorship, study provenance, and overlap, then inspect methods and results for a defined functional endpoint; count replication only if the records document independent studies.",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "status": "REVIEW_REQUIRED",
+          "target_viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "b077c4097a6aeafa": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "challenge": "The named Utah thesis and transportation report do not establish independent replication or a relevant functional endpoint; their study relationship and endpoint are absent from the packet.",
+          "compared_viewpoint_ids": [
+            "S-ACTIVE-LINEAGE-M1",
+            "S-ACTIVE-LINEAGE-M2",
+            "S-ACTIVE-LINEAGE-NULL"
+          ],
+          "critic_id": "structural:experiment_simulation",
+          "critique_id": "b077c4097a6aeafa",
+          "dossier_ids": [
+            "DOSSIER-S-ACTIVE-LINEAGE-M1",
+            "DOSSIER-S-ACTIVE-LINEAGE-M2",
+            "DOSSIER-S-ACTIVE-LINEAGE-NULL"
+          ],
+          "proposed_discriminator": "Cheapest observation: compare the two records\u2019 bibliographic details and methods/results to determine whether they report distinct studies and whether either measures a functional recovery endpoint. Treat absent or inaccessible details as unresolved.",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "status": "REVIEW_REQUIRED",
+          "target_viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        }
+      },
+      "dossiers": {
+        "DOSSIER-S-ACTIVE-LINEAGE-M1": {
+          "action_ids": [
+            "32cfd4fd1e4f98a6"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [
+            "C1"
+          ],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-LINEAGE-M1",
+          "report_ids": [
+            "57b0b2e878173207",
+            "87c3a141eecedf20",
+            "b4b78e57311b1493",
+            "e59f266c2e0c9df7",
+            "f6ab89d12fd1c7da"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "05343f614ffda754",
+            "216f37b4c5121aa2",
+            "4190c617d81abb51",
+            "6d5a0d93c41d5f20",
+            "fa066171260c6170"
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "DOSSIER-S-ACTIVE-LINEAGE-M1-R2": {
+          "action_ids": [
+            "0ea3059b518a0b70",
+            "1d73d4098343afab",
+            "32cfd4fd1e4f98a6",
+            "477c6ea3149ad43e",
+            "e4602d4245b4ea31"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [
+            "C1"
+          ],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-LINEAGE-M1-R2",
+          "report_ids": [
+            "3f9f1501782a51a9",
+            "57b0b2e878173207",
+            "87c3a141eecedf20",
+            "97611e17d8ee5212",
+            "9f3efe9db520dacf",
+            "b4b78e57311b1493",
+            "c066cc9a8bcc2f14",
+            "dd24481dc21b3d5b",
+            "de6eeb07905b5058",
+            "e59f266c2e0c9df7",
+            "ef6a220739d8839b",
+            "f6ab89d12fd1c7da",
+            "fbb88e066461af41"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W3115107353"
+          ],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "05343f614ffda754",
+            "216f37b4c5121aa2",
+            "4190c617d81abb51",
+            "6d5a0d93c41d5f20",
+            "fa066171260c6170"
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "DOSSIER-S-ACTIVE-LINEAGE-M2": {
+          "action_ids": [
+            "b66cac401e0d3e83"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [
+            "C-M2"
+          ],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-LINEAGE-M2",
+          "report_ids": [
+            "2fe7876f7390dfdd",
+            "6d5452aa329db9ba",
+            "75b866b3726eefca",
+            "c1005c8b4d283053",
+            "f87c2a34d5f5d84b"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "15c2d5747175cbf8",
+            "5b631b432085044e",
+            "76a296b209270754",
+            "a25af0e386ca8897",
+            "b6afe8ad000e33f6"
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "DOSSIER-S-ACTIVE-LINEAGE-M2-R2": {
+          "action_ids": [
+            "a1486a980f384a7e",
+            "b66cac401e0d3e83"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [
+            "C-M2"
+          ],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-LINEAGE-M2-R2",
+          "report_ids": [
+            "2fe7876f7390dfdd",
+            "424b2e41ca09c058",
+            "4d155680624db180",
+            "6592b455fb5635d6",
+            "6a9925ab70242e52",
+            "6d5452aa329db9ba",
+            "75b866b3726eefca",
+            "c1005c8b4d283053",
+            "ebc023e19b02442d",
+            "f87c2a34d5f5d84b"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "15c2d5747175cbf8",
+            "5b631b432085044e",
+            "76a296b209270754",
+            "a25af0e386ca8897",
+            "b6afe8ad000e33f6"
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "DOSSIER-S-ACTIVE-LINEAGE-NULL": {
+          "action_ids": [
+            "495b6b9844d5965b"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [
+            "C1"
+          ],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-LINEAGE-NULL",
+          "report_ids": [
+            "60889ca379a2b33f",
+            "7d40521abbb7a35f",
+            "af930022c6e031d8",
+            "c1f94ccedf1aa27a",
+            "db4982bc174ebb63"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W1956400912",
+            "OA-W2765648563",
+            "OA-W2920973764",
+            "OA-W3115107353",
+            "OA-W4386202536"
+          ],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "41a053daea14af21",
+            "42ff76fe3b3e5c92",
+            "cfaa4e15f0607042",
+            "d64a94801afc6489",
+            "de61b1295a3ed4ad"
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "DOSSIER-S-ACTIVE-LINEAGE-NULL-R2": {
+          "action_ids": [
+            "495b6b9844d5965b",
+            "8ee41357b6d92e39"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [
+            "C1"
+          ],
+          "diagnostics": [],
+          "dissenting_report_ids": [],
+          "dossier_id": "DOSSIER-S-ACTIVE-LINEAGE-NULL-R2",
+          "report_ids": [
+            "380e86b69433db2c",
+            "60889ca379a2b33f",
+            "6c8d6f7baf558c39",
+            "763ea7fd2631e92c",
+            "7d40521abbb7a35f",
+            "a20b72ed88012da1",
+            "af930022c6e031d8",
+            "c1f94ccedf1aa27a",
+            "d5e6aa118e17c72d",
+            "db4982bc174ebb63"
+          ],
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W1956400912",
+            "OA-W2765648563",
+            "OA-W2920973764",
+            "OA-W3115107353",
+            "OA-W4386202536"
+          ],
+          "status": "COMPLETE",
+          "support_task_ids": [
+            "41a053daea14af21",
+            "42ff76fe3b3e5c92",
+            "cfaa4e15f0607042",
+            "d64a94801afc6489",
+            "de61b1295a3ed4ad"
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        }
+      },
+      "problem_id": "roman-hot-mix",
+      "problem_version": "1.0",
+      "reports": {
+        "2fe7876f7390dfdd": {
+          "action_ids": [
+            "b66cac401e0d3e83"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "2fe7876f7390dfdd",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "No candidate was available for identity or lineage work.",
+          "support_task_id": "5b631b432085044e",
+          "unresolved_questions": [
+            "identity_lineage remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "380e86b69433db2c": {
+          "action_ids": [
+            "8ee41357b6d92e39"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "380e86b69433db2c",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "d64a94801afc6489",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "3f9f1501782a51a9": {
+          "action_ids": [
+            "0ea3059b518a0b70"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [
+            "C1"
+          ],
+          "report_id": "3f9f1501782a51a9",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "COMPLETE",
+          "summary": "The packet does not establish that the Utah thesis and transportation report are independent studies, or that either measured a relevant functional endpoint. Dossier completion and bibliographic candidate IDs without accessible source-level evidence cannot support those claims.",
+          "support_task_id": "4190c617d81abb51",
+          "unresolved_questions": [
+            "Verify the full records\u2019 authorship, study provenance, and overlap, then inspect methods and results for a defined functional endpoint; count replication only if the records document independent studies."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "424b2e41ca09c058": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "424b2e41ca09c058",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "76a296b209270754",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "4d155680624db180": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "4d155680624db180",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "a25af0e386ca8897",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "57b0b2e878173207": {
+          "action_ids": [
+            "32cfd4fd1e4f98a6"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "57b0b2e878173207",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "ABSTAINED",
+          "summary": "No candidate was available for identity or lineage work.",
+          "support_task_id": "05343f614ffda754",
+          "unresolved_questions": [
+            "identity_lineage remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "60889ca379a2b33f": {
+          "action_ids": [
+            "495b6b9844d5965b"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "60889ca379a2b33f",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W1956400912",
+            "OA-W2765648563",
+            "OA-W2920973764",
+            "OA-W3115107353",
+            "OA-W4386202536"
+          ],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "No fetched content card was available; metadata remains pending.",
+          "support_task_id": "cfaa4e15f0607042",
+          "unresolved_questions": [
+            "extraction remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "6592b455fb5635d6": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "6592b455fb5635d6",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "b6afe8ad000e33f6",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "6a9925ab70242e52": {
+          "action_ids": [
+            "a1486a980f384a7e"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "6a9925ab70242e52",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "15c2d5747175cbf8",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "6c8d6f7baf558c39": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "6c8d6f7baf558c39",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "42ff76fe3b3e5c92",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "6d5452aa329db9ba": {
+          "action_ids": [
+            "b66cac401e0d3e83"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "6d5452aa329db9ba",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "No fetched content card was available; metadata remains pending.",
+          "support_task_id": "76a296b209270754",
+          "unresolved_questions": [
+            "extraction remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "75b866b3726eefca": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "75b866b3726eefca",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "COMPLETE",
+          "summary": "A bounded discriminator was recorded for the viewpoint.",
+          "support_task_id": "a25af0e386ca8897",
+          "unresolved_questions": [
+            "experiment_design remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "763ea7fd2631e92c": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "763ea7fd2631e92c",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "cfaa4e15f0607042",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "7d40521abbb7a35f": {
+          "action_ids": [
+            "495b6b9844d5965b"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "7d40521abbb7a35f",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W1956400912",
+            "OA-W2765648563",
+            "OA-W2920973764",
+            "OA-W3115107353",
+            "OA-W4386202536"
+          ],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Candidate identity and lineage are retained for adjudication.",
+          "support_task_id": "42ff76fe3b3e5c92",
+          "unresolved_questions": [
+            "identity_lineage remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "87c3a141eecedf20": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "87c3a141eecedf20",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Contradiction scan ran without a source candidate.",
+          "support_task_id": "4190c617d81abb51",
+          "unresolved_questions": [
+            "contradiction remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "97611e17d8ee5212": {
+          "action_ids": [
+            "1d73d4098343afab"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [
+            "C1"
+          ],
+          "report_id": "97611e17d8ee5212",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W3115107353"
+          ],
+          "stance": "NON_DISCRIMINATING",
+          "status": "COMPLETE",
+          "summary": "The Utah thesis and transportation report are not identified or linked in the base evidence, so independent replication and a functional recovery endpoint are unestablished. The only supplied candidate is metadata-only and its title concerns plaster-cast coatings, not quicklime or asphalt; it cannot support transfer to the stated mortar mechanism.",
+          "support_task_id": "4190c617d81abb51",
+          "unresolved_questions": [
+            "Resolve the records from authoritative catalog/full-text sources: compare authorship, specimens, and methods to determine whether they are independent studies, and verify whether each measured functional water-transport recovery rather than crack closure or another endpoint."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "9f3efe9db520dacf": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "9f3efe9db520dacf",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "6d5a0d93c41d5f20",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "a20b72ed88012da1": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "a20b72ed88012da1",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "41a053daea14af21",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "af930022c6e031d8": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "af930022c6e031d8",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W1956400912",
+            "OA-W2765648563",
+            "OA-W2920973764",
+            "OA-W3115107353",
+            "OA-W4386202536"
+          ],
+          "stance": "NON_DISCRIMINATING",
+          "status": "COMPLETE",
+          "summary": "Contradiction scan executed; no contradiction was promoted.",
+          "support_task_id": "de61b1295a3ed4ad",
+          "unresolved_questions": [
+            "contradiction remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "b4b78e57311b1493": {
+          "action_ids": [
+            "32cfd4fd1e4f98a6"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "b4b78e57311b1493",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "No fetched content card was available; metadata remains pending.",
+          "support_task_id": "216f37b4c5121aa2",
+          "unresolved_questions": [
+            "extraction remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "c066cc9a8bcc2f14": {
+          "action_ids": [
+            "e4602d4245b4ea31"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "c066cc9a8bcc2f14",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "4190c617d81abb51",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "c1005c8b4d283053": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "c1005c8b4d283053",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Contradiction scan ran without a source candidate.",
+          "support_task_id": "b6afe8ad000e33f6",
+          "unresolved_questions": [
+            "contradiction remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "c1f94ccedf1aa27a": {
+          "action_ids": [
+            "495b6b9844d5965b"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [
+            "C1"
+          ],
+          "report_id": "c1f94ccedf1aa27a",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W1956400912",
+            "OA-W2765648563",
+            "OA-W2920973764",
+            "OA-W3115107353",
+            "OA-W4386202536"
+          ],
+          "stance": "SUPPORTS",
+          "status": "PARTIAL",
+          "summary": "Null mechanism is a provisional comparator, not a material finding.",
+          "support_task_id": "d64a94801afc6489",
+          "unresolved_questions": [
+            "Are the Utah thesis and transportation report independent studies, and do they measure a relevant functional endpoint?"
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "d5e6aa118e17c72d": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "d5e6aa118e17c72d",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "de61b1295a3ed4ad",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "db4982bc174ebb63": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "db4982bc174ebb63",
+          "schema_version": "1.0",
+          "source_candidate_ids": [
+            "OA-W1956400912",
+            "OA-W2765648563",
+            "OA-W2920973764",
+            "OA-W3115107353",
+            "OA-W4386202536"
+          ],
+          "stance": "NON_DISCRIMINATING",
+          "status": "COMPLETE",
+          "summary": "A bounded discriminator was recorded for the viewpoint.",
+          "support_task_id": "41a053daea14af21",
+          "unresolved_questions": [
+            "experiment_design remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "dd24481dc21b3d5b": {
+          "action_ids": [
+            "477c6ea3149ad43e"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [
+            "C1"
+          ],
+          "report_id": "dd24481dc21b3d5b",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "COMPLETE",
+          "summary": "The named Utah thesis and transportation report do not establish independent replication or a relevant functional endpoint; their study relationship and endpoint are absent from the packet.",
+          "support_task_id": "4190c617d81abb51",
+          "unresolved_questions": [
+            "Cheapest observation: compare the two records\u2019 bibliographic details and methods/results to determine whether they report distinct studies and whether either measures a functional recovery endpoint. Treat absent or inaccessible details as unresolved."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "de6eeb07905b5058": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "de6eeb07905b5058",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "05343f614ffda754",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "e59f266c2e0c9df7": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "e59f266c2e0c9df7",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "COMPLETE",
+          "summary": "A bounded discriminator was recorded for the viewpoint.",
+          "support_task_id": "6d5a0d93c41d5f20",
+          "unresolved_questions": [
+            "experiment_design remains review-required."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "ebc023e19b02442d": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "ebc023e19b02442d",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "5b631b432085044e",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "ef6a220739d8839b": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "ef6a220739d8839b",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "fa066171260c6170",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "f6ab89d12fd1c7da": {
+          "action_ids": [
+            "32cfd4fd1e4f98a6"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [
+            "C1"
+          ],
+          "report_id": "f6ab89d12fd1c7da",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "SUPPORTS",
+          "status": "PARTIAL",
+          "summary": "Provisional mechanism prediction only; no replication or endpoint established.",
+          "support_task_id": "fa066171260c6170",
+          "unresolved_questions": [
+            "Are the Utah thesis and transportation report independent studies, and does either measure a relevant functional endpoint?"
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "f87c2a34d5f5d84b": {
+          "action_ids": [
+            "b66cac401e0d3e83"
+          ],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [
+            "C-M2"
+          ],
+          "report_id": "f87c2a34d5f5d84b",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "SUPPORTS",
+          "status": "PARTIAL",
+          "summary": "Provisional M2 interpretation only; no independent-replication or endpoint conclusion.",
+          "support_task_id": "15c2d5747175cbf8",
+          "unresolved_questions": [
+            "Do the Utah records report water-transport recovery or closure-only measurements?"
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "fbb88e066461af41": {
+          "action_ids": [],
+          "case_id": "S-ACTIVE-LINEAGE",
+          "claim_ids": [],
+          "report_id": "fbb88e066461af41",
+          "schema_version": "1.0",
+          "source_candidate_ids": [],
+          "stance": "NON_DISCRIMINATING",
+          "status": "PARTIAL",
+          "summary": "Focused follow-up retained for collective adjudication.",
+          "support_task_id": "216f37b4c5121aa2",
+          "unresolved_questions": [
+            "Follow-up remains provisional until source identity and endpoint fit are reviewed."
+          ],
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        }
+      },
+      "schema_version": "1.0",
+      "tasks": {
+        "05343f614ffda754": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "identity_lineage support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "05343f614ffda754",
+          "task_type": "IDENTITY_LINEAGE",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "15c2d5747175cbf8": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "retrieval support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "15c2d5747175cbf8",
+          "task_type": "RETRIEVAL",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "216f37b4c5121aa2": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "extraction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "216f37b4c5121aa2",
+          "task_type": "EXTRACTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "4190c617d81abb51": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "contradiction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "4190c617d81abb51",
+          "task_type": "CONTRADICTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "41a053daea14af21": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "experiment_design support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "41a053daea14af21",
+          "task_type": "EXPERIMENT_DESIGN",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "42ff76fe3b3e5c92": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "identity_lineage support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "42ff76fe3b3e5c92",
+          "task_type": "IDENTITY_LINEAGE",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "5b631b432085044e": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "identity_lineage support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "5b631b432085044e",
+          "task_type": "IDENTITY_LINEAGE",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "6d5a0d93c41d5f20": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "experiment_design support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "6d5a0d93c41d5f20",
+          "task_type": "EXPERIMENT_DESIGN",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        },
+        "76a296b209270754": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "extraction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "76a296b209270754",
+          "task_type": "EXTRACTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "a25af0e386ca8897": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "experiment_design support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "a25af0e386ca8897",
+          "task_type": "EXPERIMENT_DESIGN",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "b6afe8ad000e33f6": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "contradiction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "b6afe8ad000e33f6",
+          "task_type": "CONTRADICTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+        },
+        "cfaa4e15f0607042": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "extraction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "cfaa4e15f0607042",
+          "task_type": "EXTRACTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "d64a94801afc6489": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "retrieval support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "d64a94801afc6489",
+          "task_type": "RETRIEVAL",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "de61b1295a3ed4ad": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "contradiction support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "de61b1295a3ed4ad",
+          "task_type": "CONTRADICTION",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+        },
+        "fa066171260c6170": {
+          "case_id": "S-ACTIVE-LINEAGE",
+          "charter": "retrieval support for the assigned viewpoint; preserve uncertainty and provenance.",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "schema_version": "1.0",
+          "status": "ASSIGNED",
+          "task_id": "fa066171260c6170",
+          "task_type": "RETRIEVAL",
+          "treatment_id": "A2-M",
+          "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+        }
+      },
+      "treatment_id": "A2-M"
+    },
+    "focus": {
+      "allocations": {
+        "05343f614ffda754": 0,
+        "15c2d5747175cbf8": 1,
+        "216f37b4c5121aa2": 0,
+        "4190c617d81abb51": 1,
+        "41a053daea14af21": 0,
+        "42ff76fe3b3e5c92": 0,
+        "5b631b432085044e": 0,
+        "6d5a0d93c41d5f20": 0,
+        "76a296b209270754": 0,
+        "a25af0e386ca8897": 0,
+        "b6afe8ad000e33f6": 0,
+        "cfaa4e15f0607042": 0,
+        "d64a94801afc6489": 1,
+        "de61b1295a3ed4ad": 0,
+        "fa066171260c6170": 0
+      },
+      "case_id": "S-ACTIVE-LINEAGE",
+      "decision_id": "646fc5b6c923437a",
+      "null_retained": true,
+      "ranked_tasks": [
+        "15c2d5747175cbf8",
+        "4190c617d81abb51",
+        "b6afe8ad000e33f6",
+        "d64a94801afc6489",
+        "de61b1295a3ed4ad",
+        "fa066171260c6170",
+        "05343f614ffda754",
+        "216f37b4c5121aa2",
+        "41a053daea14af21",
+        "42ff76fe3b3e5c92",
+        "5b631b432085044e",
+        "6d5a0d93c41d5f20",
+        "76a296b209270754",
+        "a25af0e386ca8897",
+        "cfaa4e15f0607042"
+      ],
+      "rationale": "Deterministic allocation by expected information, uncertainty, novelty, provenance risk, duplicate work, feasibility, and mandatory null/rival coverage; votes and prose length are not inputs.",
+      "remaining_actions": 3,
+      "rival_retained": true,
+      "schema_version": "1.0",
+      "scores": {
+        "05343f614ffda754": 6,
+        "15c2d5747175cbf8": 9,
+        "216f37b4c5121aa2": 6,
+        "4190c617d81abb51": 9,
+        "41a053daea14af21": 6,
+        "42ff76fe3b3e5c92": 6,
+        "5b631b432085044e": 6,
+        "6d5a0d93c41d5f20": 6,
+        "76a296b209270754": 6,
+        "a25af0e386ca8897": 6,
+        "b6afe8ad000e33f6": 9,
+        "cfaa4e15f0607042": 6,
+        "d64a94801afc6489": 9,
+        "de61b1295a3ed4ad": 9,
+        "fa066171260c6170": 9
+      },
+      "status": "ALLOCATED",
+      "treatment_id": "A2-M"
+    },
+    "null_id": "S-ACTIVE-LINEAGE-NULL",
+    "portfolio": {
+      "authority_note": "All viewpoints, support reports, and focus decisions remain REVIEW_REQUIRED; no evidence, safety, or laboratory authority is granted.",
+      "case_id": "S-ACTIVE-LINEAGE",
+      "credible_rival_ids": [
+        "S-ACTIVE-LINEAGE-M2",
+        "S-ACTIVE-LINEAGE-NULL"
+      ],
+      "leading_viewpoint_id": "S-ACTIVE-LINEAGE-M1",
+      "next_discriminating_action": "Run the highest-ranked support task that distinguishes the leading viewpoint from its strongest rival.",
+      "portfolio_id": "PORTFOLIO-S-ACTIVE-LINEAGE",
+      "preserved_dissent_ids": [],
+      "schema_version": "1.0",
+      "source_candidate_ids": [
+        "OA-W1956400912",
+        "OA-W2765648563",
+        "OA-W2920973764",
+        "OA-W3115107353",
+        "OA-W4386202536"
+      ],
+      "status": "REVIEW_REQUIRED",
+      "support_contribution_ids": [
+        "2fe7876f7390dfdd",
+        "380e86b69433db2c",
+        "3f9f1501782a51a9",
+        "424b2e41ca09c058",
+        "4d155680624db180",
+        "57b0b2e878173207",
+        "60889ca379a2b33f",
+        "6592b455fb5635d6",
+        "6a9925ab70242e52",
+        "6c8d6f7baf558c39",
+        "6d5452aa329db9ba",
+        "75b866b3726eefca",
+        "763ea7fd2631e92c",
+        "7d40521abbb7a35f",
+        "87c3a141eecedf20",
+        "97611e17d8ee5212",
+        "9f3efe9db520dacf",
+        "a20b72ed88012da1",
+        "af930022c6e031d8",
+        "b4b78e57311b1493",
+        "c066cc9a8bcc2f14",
+        "c1005c8b4d283053",
+        "c1f94ccedf1aa27a",
+        "d5e6aa118e17c72d",
+        "db4982bc174ebb63",
+        "dd24481dc21b3d5b",
+        "de6eeb07905b5058",
+        "e59f266c2e0c9df7",
+        "ebc023e19b02442d",
+        "ef6a220739d8839b",
+        "f6ab89d12fd1c7da",
+        "f87c2a34d5f5d84b",
+        "fbb88e066461af41"
+      ],
+      "unresolved_disputes": [
+        "Viewpoint scores are provisional and do not establish evidence."
+      ],
+      "viewpoint_dossier_ids": [
+        "DOSSIER-S-ACTIVE-LINEAGE-M1-R2",
+        "DOSSIER-S-ACTIVE-LINEAGE-M2-R2",
+        "DOSSIER-S-ACTIVE-LINEAGE-NULL-R2"
+      ]
+    },
+    "private_reports": {
+      "S-ACTIVE-LINEAGE-M1": [
+        "f6ab89d12fd1c7da",
+        "b4b78e57311b1493",
+        "57b0b2e878173207",
+        "87c3a141eecedf20",
+        "e59f266c2e0c9df7",
+        "3f9f1501782a51a9",
+        "97611e17d8ee5212",
+        "dd24481dc21b3d5b",
+        "c066cc9a8bcc2f14",
+        "ef6a220739d8839b",
+        "de6eeb07905b5058",
+        "fbb88e066461af41",
+        "9f3efe9db520dacf"
+      ],
+      "S-ACTIVE-LINEAGE-M2": [
+        "f87c2a34d5f5d84b",
+        "6d5452aa329db9ba",
+        "2fe7876f7390dfdd",
+        "c1005c8b4d283053",
+        "75b866b3726eefca",
+        "6a9925ab70242e52",
+        "6592b455fb5635d6",
+        "ebc023e19b02442d",
+        "424b2e41ca09c058",
+        "4d155680624db180"
+      ],
+      "S-ACTIVE-LINEAGE-NULL": [
+        "c1f94ccedf1aa27a",
+        "60889ca379a2b33f",
+        "7d40521abbb7a35f",
+        "af930022c6e031d8",
+        "db4982bc174ebb63",
+        "380e86b69433db2c",
+        "d5e6aa118e17c72d",
+        "a20b72ed88012da1",
+        "6c8d6f7baf558c39",
+        "763ea7fd2631e92c"
+      ]
+    },
+    "problem_id": "roman-hot-mix",
+    "problem_version": "1.0",
+    "protocol": "g10d.1-viewpoint-centered-society",
+    "shared": true,
+    "treatment_id": "A2-M"
+  }
+}

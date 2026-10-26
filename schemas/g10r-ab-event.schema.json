@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/g10r-ab-event.schema.json",
+  "type": "object",
+  "required": ["schema_version", "event_id", "case_id", "arm", "stage", "outcome", "continuation", "evidence_delta", "repair_flags"],
+  "properties": {
+    "schema_version": {"const": "g10r-ab.1"},
+    "event_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "arm": {"enum": ["A1", "A2-M", "OFFLINE"]},
+    "agent_id": {"type": ["string", "null"]},
+    "stage": {"enum": ["admission", "retrieval", "parsing", "evidence", "viewpoint", "synthesis", "budget", "replay", "authority"]},
+    "action": {"type": "string", "minLength": 1},
+    "locator": {"type": ["string", "null"]},
+    "outcome": {"type": "string", "minLength": 1},
+    "continuation": {"enum": ["CONTINUE_CASE", "CONTINUE_RUN", "TERMINAL_CASE", "TERMINAL_RUN"]},
+    "evidence_delta": {"type": "number"},
+    "repair_flags": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "error_class": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}

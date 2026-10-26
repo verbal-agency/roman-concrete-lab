@@ -1,0 +1,188 @@
+{
+  "authority": {
+    "credentials": "not read",
+    "evidence_promotion": "prohibited",
+    "laboratory": "prohibited",
+    "model_calls": "none during freeze",
+    "network": "none during freeze",
+    "owner_activation": "separate pending request only",
+    "subscriptions": "prohibited"
+  },
+  "files": {
+    "action_schema": {
+      "path": "schemas/investigation-action.schema.json",
+      "sha256": "sha256:ff2a6457f7c67c0d87d80197f904d054149329bc542280b620ca14b8d6aad5e0"
+    },
+    "base_runner": {
+      "path": "src/roman_concrete_lab/agents/investigation.py",
+      "sha256": "sha256:c9ae4b70709d369c7d3efe0daa114418a8198e9f521b3ee39e680ea19de461f8"
+    },
+    "entrypoint": {
+      "path": "src/roman_concrete_lab/agents/investigation_g10r_z.py",
+      "sha256": "sha256:786e0a52fcd821cffa8eb045d6c16c49850d91b8d13d04548ac7577ed95e29d1"
+    },
+    "entrypoint_test": {
+      "path": "tests/agents/test_g10r_aa_fresh_phase_a_freeze.py",
+      "sha256": "sha256:d2cb61d65c042632af981d4390731c4950fc76eeded2ce12a47d8a0b9c1ef6ef"
+    },
+    "evidence_bus": {
+      "path": "src/roman_concrete_lab/agents/evidence_bus.py",
+      "sha256": "sha256:05c940685ab5f98e74366db9205ce49ac35677cb2b3ac58663b09e9ac2a2b8fc"
+    },
+    "evidence_bus_protocol": {
+      "path": "docs/protocols/society-evidence-bus.md",
+      "sha256": "sha256:84d7707f1916d51e19d80536e12703bcafc5dc02ed38440f2877fdfb89e02841"
+    },
+    "freeze_tool": {
+      "path": "tools/evaluation/fresh_phase_a_freeze_after_acquisition_headroom.py",
+      "sha256": "sha256:53fe95a7295f6ffcb310a41647cfddc2714f02279310c44be036ee3535fd68b8"
+    },
+    "goal": {
+      "path": "docs/goals/G10R-AA-fresh-phase-a-freeze-after-acquisition-headroom.md",
+      "sha256": "sha256:765050aa1246c3e639db45221c702abb9ff5b7d2d2dbf20a4f59113da8449ef5"
+    },
+    "headroom_cases": {
+      "path": "fixtures/investigation/g10r-z/cases.json",
+      "sha256": "sha256:608843c53171d43c9dbaf3140469c68fff12cefeee0bfa411323e7e75f157c9c"
+    },
+    "headroom_criteria": {
+      "path": "artifacts/goals/G10R-Z/criterion-ledger.json",
+      "sha256": "sha256:6716d131360f917397e96d3334b99502c277f044d413fb14c29fd4ec623c929d"
+    },
+    "headroom_matrix": {
+      "path": "artifacts/goals/G10R-Z/headroom-matrix.json",
+      "sha256": "sha256:617dd5b25f08918d08ead70ff2ba055ebb8f4777005131b8d9e30e3fad9e0eef"
+    },
+    "headroom_replay": {
+      "path": "artifacts/goals/G10R-Z/replay.json",
+      "sha256": "sha256:2cc54526a83486237dfac735d7797ebd185192833a8f3fc25718adb8e806a472"
+    },
+    "headroom_report": {
+      "path": "artifacts/goals/G10R-Z/report.md",
+      "sha256": "sha256:ee1ff79480d6e25b6c908fbd04a9e1fac8ef336fedb1de5d364e63901aae8182"
+    },
+    "headroom_run": {
+      "path": "artifacts/goals/G10R-Z/run.json",
+      "sha256": "sha256:dc1e237776757ccdef4904afe1be6e195100ca66ea34ea2e90ee8db23beb9d6c"
+    },
+    "headroom_schema": {
+      "path": "schemas/evaluation-headroom.schema.json",
+      "sha256": "sha256:ef01cedb21372d650bdcea7782623a0009a602ca4402aa825daf09d315ab5fc1"
+    },
+    "headroom_sources": {
+      "path": "fixtures/investigation/g10r-z/sources.jsonl",
+      "sha256": "sha256:8b56bc4defd83019657d7cfc7d16f53150a90688ad5bc18bb7e2d940cfe71d4b"
+    },
+    "headroom_test": {
+      "path": "tests/agents/test_g10r_z_acquisition_headroom.py",
+      "sha256": "sha256:2cc701cd7407a240ac473ed6e2d943c5c43ecbf416024cb2ba5f87995eb4a254"
+    },
+    "headroom_tool": {
+      "path": "tools/evaluation/acquisition_headroom_repair.py",
+      "sha256": "sha256:3a968f293ab5c3ef72a9241fc4ee81ab1cf1ccd53d624c05439d2785eed7cc5d"
+    },
+    "locator_schema": {
+      "path": "schemas/public-locator-resolution.schema.json",
+      "sha256": "sha256:8d27f98430f0d5ae5c4c80e183bce9e71e9bfe27e7d2979916c8b4e07dae4d9f"
+    },
+    "offline_adapter": {
+      "path": "tools/evaluation/offline_remediation_integration.py",
+      "sha256": "sha256:69904bf5cef821875315ac17e9f3a9b3718bdeda5b1654d74723edd777a0e0d8"
+    },
+    "pilot_protocol": {
+      "path": "docs/protocols/active-investigation-pilot.md",
+      "sha256": "sha256:781a209082d45ee0518d09eaa9213ca4d0ee059cc8b5727c4a550d024c9ac99c"
+    },
+    "predecessor_goal": {
+      "path": "docs/goals/G10R-Z-acquisition-headroom-and-society-validity.md",
+      "sha256": "sha256:942376ca8920cc482f7582080d8c05f0a27796a854bdc9248714e84b514940c0"
+    },
+    "research_loop": {
+      "path": "src/roman_concrete_lab/agents/research_loop.py",
+      "sha256": "sha256:e7025f467276758f3b85ff24547ffd524b5b0098aa85b11598226f3f3ac44344"
+    },
+    "shared_acquisition_resolver": {
+      "path": "src/roman_concrete_lab/agents/acquisition.py",
+      "sha256": "sha256:565684c657ae35601c353916c13348fd9d940f46e92822d1f34f6fdf5437ea9d"
+    },
+    "source_candidate_schema": {
+      "path": "schemas/source-candidate.schema.json",
+      "sha256": "sha256:69cf715ba3611e13f5ddbb7d18c2813649d60e3c76e2bfb53e411deb86a095a3"
+    },
+    "source_policy": {
+      "path": "fixtures/investigation/source-policy.json",
+      "sha256": "sha256:30ce73d74ff7f8bd85605b36db979abd676bcb2b173760d397ec7d75e96c6d90"
+    },
+    "viewpoint_protocol": {
+      "path": "docs/protocols/viewpoint-society.md",
+      "sha256": "sha256:79e699b0dffad534c09f80b86547d014a2663691c56a65b493006a1f48bef926"
+    },
+    "viewpoint_society": {
+      "path": "src/roman_concrete_lab/agents/viewpoint_society.py",
+      "sha256": "sha256:9bee251bb2b84b32859f0e71893c407990652f3f612d9787a7e302ad2081899d"
+    }
+  },
+  "fixture_hash": "sha256:c76c9a1c0bfac51aeaba8f8e6223f4d6428884103bdaf78d4a57771318972ea6",
+  "goal": "G10R-AA",
+  "limits_per_treatment_case": {
+    "document_fetches": 4,
+    "estimated_cost_usd": 25.0,
+    "input_tokens": 80000,
+    "output_tokens": 12000,
+    "payload_bytes": 5000000,
+    "queries": 12,
+    "retained_sources": 24,
+    "simulation_calls": 4
+  },
+  "manifest_id": "G10R-AA-fresh-phase-a-acquisition-headroom-v1",
+  "model_policy": {
+    "api": "responses",
+    "model": "gpt-6-luna",
+    "provider": "openai",
+    "provider_managed_tools": [],
+    "reasoning_effort": "low",
+    "runtime_credentials_only": true,
+    "store": false
+  },
+  "output_namespace": "artifacts/goals/G10R-AA/",
+  "predecessor": {
+    "artifact_path": "artifacts/goals/G10R-Z/run.json",
+    "artifact_sha256": "sha256:dc1e237776757ccdef4904afe1be6e195100ca66ea34ea2e90ee8db23beb9d6c",
+    "criteria_pass": true,
+    "fixture_hash": "sha256:c76c9a1c0bfac51aeaba8f8e6223f4d6428884103bdaf78d4a57771318972ea6",
+    "goal": "G10R-Z",
+    "manifest_id": "G10R-Z-acquisition-headroom-v1",
+    "policy_hash": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+    "replay_byte_stable": true,
+    "verdict": "ACQUISITION_HEADROOM_READY"
+  },
+  "schema_version": "g10r-aa.1",
+  "source_policy_file_sha256": "sha256:30ce73d74ff7f8bd85605b36db979abd676bcb2b173760d397ec7d75e96c6d90",
+  "source_policy_sha256": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+  "status": "PHASE_A_READY_FOR_OWNER_ACTIVATION",
+  "stopping_policy": {
+    "hard_total_external_spend_cap_usd": 25.0,
+    "legal_outcomes": [
+      "ESCALATE_ACTIVE_SOCIETY_EVALUATION",
+      "DO_NOT_ESCALATE_ACTIVE_SOCIETY",
+      "INCONCLUSIVE_ACTIVE_INVESTIGATION"
+    ],
+    "maximum_provider_calls": 60,
+    "phase_b_case_count": 4,
+    "phase_b_treatment_case_count": 8
+  },
+  "treatment_contract": {
+    "invalid_or_missing": "INVALID/NOT_FOUND remain typed and earn zero evidence credit",
+    "metadata_only": "METADATA_ONLY remains reviewable and earns zero evidence credit",
+    "open_slot": "delayed until shared evidence and no pre-admission work",
+    "positive_content": "RESOLVED_PUBLIC may fetch and map",
+    "resolver": "shared exact-route public-locator resolver",
+    "rights_blocked": "RIGHTS_BLOCKED remains typed and earns zero evidence credit",
+    "scoring": "source-backed cards only; metadata-only and open-slot admission do not earn credit",
+    "support": "need-driven and attributable to the assigned viewpoint"
+  },
+  "treatments": {
+    "A1": "single tool-using investigator with G10R-Z acquisition treatment",
+    "A2-M": "viewpoint society with delayed admission, need-driven support, and G10R-Z acquisition treatment"
+  }
+}

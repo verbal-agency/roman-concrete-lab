@@ -1,6 +1,6 @@
 # G10R-AA — Freeze Phase A after acquisition-headroom repair
 
-**Status:** proposed
+**Status:** complete — `PHASE_A_READY_FOR_OWNER_ACTIVATION`
 **Dependencies:** G10R-Z complete with `ACQUISITION_HEADROOM_READY`; owner
 review of the offline report; no paid activation
 **Authority:** repository-local manifest generation, fixture validation, and
