@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "fixtures": [
+    {"case_family":"positive_public_content","query":"z positive public","source_ids":["Z-PUBLIC-PRIMARY"],"expected_resolution":"RESOLVED_PUBLIC","expected_headroom":"READY"},
+    {"case_family":"contradictory_support","query":"z contradictory","source_ids":["Z-PUBLIC-RIVAL"],"expected_resolution":"RESOLVED_PUBLIC","expected_headroom":"READY"},
+    {"case_family":"metadata_only","query":"z metadata","source_ids":["Z-METADATA"],"expected_resolution":"METADATA_ONLY","expected_headroom":"NO_PUBLIC_CONTENT"},
+    {"case_family":"rights_blocked","query":"z blocked","source_ids":["Z-BLOCKED"],"expected_resolution":"RIGHTS_BLOCKED","expected_headroom":"NO_PUBLIC_CONTENT"},
+    {"case_family":"malformed_locator","query":"z malformed","source_ids":["Z-MALFORMED"],"expected_resolution":"INVALID","expected_headroom":"INVALID_FIXTURE"}
+  ]
+}

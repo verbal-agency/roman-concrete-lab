@@ -1,0 +1,80 @@
+{
+  "criteria": [
+    {
+      "criterion": 1,
+      "evidence": [
+        "headroom-matrix.json",
+        "run.json"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 2,
+      "evidence": [
+        "headroom-matrix.json"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 3,
+      "evidence": [
+        "headroom-matrix.json"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 4,
+      "evidence": [
+        "run.json#open_admission"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 5,
+      "evidence": [
+        "run.json#support_reports"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 6,
+      "evidence": [
+        "run.json#metadata_only"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 7,
+      "evidence": [
+        "run.json#budget"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 8,
+      "evidence": [
+        "headroom-matrix.json#edge_cases",
+        "replay.json"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 9,
+      "evidence": [
+        "replay.json"
+      ],
+      "status": "PASS"
+    },
+    {
+      "criterion": 10,
+      "evidence": [
+        "tests/agents/test_g10r_z_acquisition_headroom.py",
+        "python3 -m pytest -q"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "criteria_pass": true,
+  "goal": "G10R-Z",
+  "schema_version": "g10r-z.criteria.1"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/evaluation-headroom.schema.json",
+  "title": "EvaluationHeadroom",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_family", "fixture_hash", "expected_discovery_ids", "public_content_opportunity_ids", "policy_hash", "hidden_answer_isolation", "arm_neutrality", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "case_family": {"type": "string", "minLength": 1},
+    "fixture_hash": {"type": "string", "pattern": "^sha256:"},
+    "expected_discovery_ids": {"type": "array", "items": {"type": "string"}},
+    "public_content_opportunity_ids": {"type": "array", "items": {"type": "string"}},
+    "policy_hash": {"type": "string", "pattern": "^sha256:"},
+    "hidden_answer_isolation": {"const": true},
+    "arm_neutrality": {"const": true},
+    "status": {"enum": ["READY", "NO_PUBLIC_CONTENT", "INVALID_FIXTURE"]}
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/public-locator-resolution.schema.json",
+  "title": "PublicLocatorResolution",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "resolution_id", "case_id", "problem_id", "problem_version", "need_id", "source_candidate_id", "discovery_action_ids", "original_locator", "candidate_routes", "selected_exact_content_locator", "source_policy_hash", "policy_decision", "status", "failure_reason", "provenance"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "resolution_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "problem_id": {"type": "string", "minLength": 1},
+    "problem_version": {"type": "string", "minLength": 1},
+    "need_id": {"type": "string", "minLength": 1},
+    "source_candidate_id": {"type": "string", "minLength": 1},
+    "discovery_action_ids": {"type": "array", "items": {"type": "string"}},
+    "original_locator": {"type": ["string", "null"]},
+    "candidate_routes": {"type": "array", "items": {"type": "object"}},
+    "selected_exact_content_locator": {"type": ["string", "null"]},
+    "source_policy_hash": {"type": "string", "pattern": "^sha256:"},
+    "policy_decision": {"enum": ["ALLOW_PUBLIC_CONTENT", "RETAIN_METADATA", "DENY"]},
+    "status": {"enum": ["RESOLVED_PUBLIC", "METADATA_ONLY", "RIGHTS_BLOCKED", "NOT_FOUND", "INVALID"]},
+    "failure_reason": {"type": ["string", "null"]},
+    "provenance": {"type": "array", "items": {"type": "string"}}
+  }
+}

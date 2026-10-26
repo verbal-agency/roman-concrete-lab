@@ -1,0 +1,1459 @@
+{
+  "goal": "G10R-Z",
+  "no_external_calls": true,
+  "runs": [
+    {
+      "arm": "A1",
+      "budget": {
+        "limits": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 8,
+          "retained_sources": 8,
+          "simulation_calls": 0
+        },
+        "remaining": {
+          "document_fetches": 3,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 99918,
+          "queries": 7,
+          "retained_sources": 7,
+          "simulation_calls": 0
+        },
+        "usage": {
+          "document_fetches": 1,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 82,
+          "queries": 1,
+          "retained_sources": 1,
+          "simulation_calls": 0
+        }
+      },
+      "candidate_ids": [
+        "Z-PUBLIC-PRIMARY"
+      ],
+      "cards": [
+        {
+          "authority_note": "Derived extraction for review; no evidence promotion, performance claim, or laboratory authority.",
+          "card_id": "CARD-e792c3cece60",
+          "document_hash": "sha256:47c55a248d9a080fe5dace5e78a16091cead6a34b2eb020cee6547316a580d37",
+          "extraction_status": "EXTRACTED",
+          "facts": [
+            {
+              "confidence": "MEDIUM",
+              "field": "material_process",
+              "page_locator": "#page=1",
+              "page_text_hash": "sha256:edfe06e4773798da0ada850f73bccec1c70c0a3b88add6f8fb2d493125c143b8",
+              "reporting_status": "REPORTED",
+              "support_type": "DIRECT",
+              "value": "quicklime concrete"
+            },
+            {
+              "confidence": "LOW",
+              "field": "mechanism",
+              "page_locator": "#page=1",
+              "page_text_hash": "sha256:edfe06e4773798da0ada850f73bccec1c70c0a3b88add6f8fb2d493125c143b8",
+              "reporting_status": "REPORTED",
+              "support_type": "DIRECT",
+              "value": "Public fixture content: a page-located quicklime method and permeability endpoint."
+            }
+          ],
+          "page_count": 1,
+          "parser": "recorded-research-loop-v1",
+          "schema_version": "1.0",
+          "source_candidate_id": "Z-PUBLIC-PRIMARY",
+          "unresolved": [
+            "independence and full experimental detail require review"
+          ]
+        }
+      ],
+      "case_family": "positive_public_content",
+      "content_hash": "sha256:707e8b084b789e11b22b617ecd89c0bb8c53af1be3229de3977ab2cade97c602",
+      "external_calls": false,
+      "fetches": [
+        {
+          "candidate_id": "Z-PUBLIC-PRIMARY",
+          "locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "status": "FETCHED"
+        }
+      ],
+      "mappings": [
+        {
+          "candidate_id": "Z-PUBLIC-PRIMARY",
+          "card_id": "CARD-e792c3cece60"
+        }
+      ],
+      "metrics": {
+        "evidence_score": 1,
+        "metadata_only_credit": 0,
+        "paper_card_count": 1,
+        "raw_discovery_count": 1,
+        "support_complete_count": 1,
+        "unique_source_backed_contributions": 1
+      },
+      "open_admission": null,
+      "resolutions": [
+        {
+          "candidate_routes": [
+            {
+              "locator": "https://digitalcommons.usu.edu/etd2023/669/",
+              "recorded_exact": true,
+              "route_kind": "repository_record"
+            }
+          ],
+          "case_id": "Z-POSITIVE",
+          "discovery_action_ids": [
+            "ACT-7787d58c4fa89a53-SEARCH"
+          ],
+          "failure_reason": null,
+          "need_id": "NEED-7787d58c4fa89a53",
+          "original_locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "policy_decision": "ALLOW_PUBLIC_CONTENT",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "provenance": [],
+          "replay_key": "sha256:6c6cbc98eaadb71f3b630734ef81abb303cb5a2a36f7c0ef3792863b1ab355f1",
+          "resolution_id": "RES-0709edd6451270df",
+          "schema_version": "1.0",
+          "selected_exact_content_locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "source_candidate_id": "Z-PUBLIC-PRIMARY",
+          "source_policy_hash": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+          "status": "RESOLVED_PUBLIC"
+        }
+      ],
+      "run_id": "7787d58c4fa89a53",
+      "schema_version": "g10r-z.run.1",
+      "selections": [
+        {
+          "content_locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "need_id": "NEED-7787d58c4fa89a53",
+          "policy_status": "ALLOWED",
+          "requested_operation": "FETCH_AND_MAP",
+          "selection_id": "SEL-7787d58c4fa89a53",
+          "source_candidate_id": "Z-PUBLIC-PRIMARY",
+          "status": "SELECTED"
+        }
+      ],
+      "support_reports": [
+        {
+          "action_ids": [
+            "ACT-7787d58c4fa89a53-SEARCH"
+          ],
+          "card_ids": [
+            "CARD-e792c3cece60"
+          ],
+          "report_id": "REPORT-7787d58c4fa89a53",
+          "source_candidate_ids": [
+            "Z-PUBLIC-PRIMARY"
+          ],
+          "status": "COMPLETE"
+        }
+      ],
+      "support_tasks": [
+        {
+          "need_id": "NEED-7787d58c4fa89a53",
+          "task_id": "TASK-7787d58c4fa89a53",
+          "task_type": "RETRIEVAL",
+          "viewpoint_id": "VP-MECHANISM"
+        }
+      ]
+    },
+    {
+      "arm": "A2-M",
+      "budget": {
+        "limits": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 8,
+          "retained_sources": 8,
+          "simulation_calls": 0
+        },
+        "remaining": {
+          "document_fetches": 3,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 99918,
+          "queries": 7,
+          "retained_sources": 7,
+          "simulation_calls": 0
+        },
+        "usage": {
+          "document_fetches": 1,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 82,
+          "queries": 1,
+          "retained_sources": 1,
+          "simulation_calls": 0
+        }
+      },
+      "candidate_ids": [
+        "Z-PUBLIC-PRIMARY"
+      ],
+      "cards": [
+        {
+          "authority_note": "Derived extraction for review; no evidence promotion, performance claim, or laboratory authority.",
+          "card_id": "CARD-e792c3cece60",
+          "document_hash": "sha256:47c55a248d9a080fe5dace5e78a16091cead6a34b2eb020cee6547316a580d37",
+          "extraction_status": "EXTRACTED",
+          "facts": [
+            {
+              "confidence": "MEDIUM",
+              "field": "material_process",
+              "page_locator": "#page=1",
+              "page_text_hash": "sha256:edfe06e4773798da0ada850f73bccec1c70c0a3b88add6f8fb2d493125c143b8",
+              "reporting_status": "REPORTED",
+              "support_type": "DIRECT",
+              "value": "quicklime concrete"
+            },
+            {
+              "confidence": "LOW",
+              "field": "mechanism",
+              "page_locator": "#page=1",
+              "page_text_hash": "sha256:edfe06e4773798da0ada850f73bccec1c70c0a3b88add6f8fb2d493125c143b8",
+              "reporting_status": "REPORTED",
+              "support_type": "DIRECT",
+              "value": "Public fixture content: a page-located quicklime method and permeability endpoint."
+            }
+          ],
+          "page_count": 1,
+          "parser": "recorded-research-loop-v1",
+          "schema_version": "1.0",
+          "source_candidate_id": "Z-PUBLIC-PRIMARY",
+          "unresolved": [
+            "independence and full experimental detail require review"
+          ]
+        }
+      ],
+      "case_family": "positive_public_content",
+      "content_hash": "sha256:7bf8d3c8c185a4d6368ca6482b324c8c9ff1053e4c0b32bab22c286759030f6f",
+      "external_calls": false,
+      "fetches": [
+        {
+          "candidate_id": "Z-PUBLIC-PRIMARY",
+          "locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "status": "FETCHED"
+        }
+      ],
+      "mappings": [
+        {
+          "candidate_id": "Z-PUBLIC-PRIMARY",
+          "card_id": "CARD-e792c3cece60"
+        }
+      ],
+      "metrics": {
+        "evidence_score": 1,
+        "metadata_only_credit": 0,
+        "paper_card_count": 1,
+        "raw_discovery_count": 1,
+        "support_complete_count": 1,
+        "unique_source_backed_contributions": 1
+      },
+      "open_admission": {
+        "admission_id": "OPEN-7787d58c4fa89a53",
+        "basis_kind": "CANDIDATE_PENDING",
+        "dossier_created_before_admission": 0,
+        "shared_before_admission": true,
+        "shared_index": 1,
+        "source_candidate_ids": [],
+        "status": "ABSTAINED_NO_DISTINCT_VIEWPOINT",
+        "tasks_created_before_admission": 0
+      },
+      "resolutions": [
+        {
+          "candidate_routes": [
+            {
+              "locator": "https://digitalcommons.usu.edu/etd2023/669/",
+              "recorded_exact": true,
+              "route_kind": "repository_record"
+            }
+          ],
+          "case_id": "Z-POSITIVE",
+          "discovery_action_ids": [
+            "ACT-7787d58c4fa89a53-SEARCH"
+          ],
+          "failure_reason": null,
+          "need_id": "NEED-7787d58c4fa89a53",
+          "original_locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "policy_decision": "ALLOW_PUBLIC_CONTENT",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "provenance": [],
+          "replay_key": "sha256:6c6cbc98eaadb71f3b630734ef81abb303cb5a2a36f7c0ef3792863b1ab355f1",
+          "resolution_id": "RES-0709edd6451270df",
+          "schema_version": "1.0",
+          "selected_exact_content_locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "source_candidate_id": "Z-PUBLIC-PRIMARY",
+          "source_policy_hash": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+          "status": "RESOLVED_PUBLIC"
+        }
+      ],
+      "run_id": "7787d58c4fa89a53",
+      "schema_version": "g10r-z.run.1",
+      "selections": [
+        {
+          "content_locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "need_id": "NEED-7787d58c4fa89a53",
+          "policy_status": "ALLOWED",
+          "requested_operation": "FETCH_AND_MAP",
+          "selection_id": "SEL-7787d58c4fa89a53",
+          "source_candidate_id": "Z-PUBLIC-PRIMARY",
+          "status": "SELECTED"
+        }
+      ],
+      "support_reports": [
+        {
+          "action_ids": [
+            "ACT-7787d58c4fa89a53-SEARCH"
+          ],
+          "card_ids": [
+            "CARD-e792c3cece60"
+          ],
+          "report_id": "REPORT-7787d58c4fa89a53",
+          "source_candidate_ids": [
+            "Z-PUBLIC-PRIMARY"
+          ],
+          "status": "COMPLETE"
+        }
+      ],
+      "support_tasks": [
+        {
+          "need_id": "NEED-7787d58c4fa89a53",
+          "task_id": "TASK-7787d58c4fa89a53",
+          "task_type": "RETRIEVAL",
+          "viewpoint_id": "VP-MECHANISM"
+        }
+      ]
+    },
+    {
+      "arm": "A1",
+      "budget": {
+        "limits": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 8,
+          "retained_sources": 8,
+          "simulation_calls": 0
+        },
+        "remaining": {
+          "document_fetches": 3,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 99918,
+          "queries": 7,
+          "retained_sources": 6,
+          "simulation_calls": 0
+        },
+        "usage": {
+          "document_fetches": 1,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 82,
+          "queries": 1,
+          "retained_sources": 2,
+          "simulation_calls": 0
+        }
+      },
+      "candidate_ids": [
+        "Z-PUBLIC-PRIMARY",
+        "Z-PUBLIC-RIVAL"
+      ],
+      "cards": [
+        {
+          "authority_note": "Derived extraction for review; no evidence promotion, performance claim, or laboratory authority.",
+          "card_id": "CARD-e792c3cece60",
+          "document_hash": "sha256:47c55a248d9a080fe5dace5e78a16091cead6a34b2eb020cee6547316a580d37",
+          "extraction_status": "EXTRACTED",
+          "facts": [
+            {
+              "confidence": "MEDIUM",
+              "field": "material_process",
+              "page_locator": "#page=1",
+              "page_text_hash": "sha256:edfe06e4773798da0ada850f73bccec1c70c0a3b88add6f8fb2d493125c143b8",
+              "reporting_status": "REPORTED",
+              "support_type": "DIRECT",
+              "value": "quicklime concrete"
+            },
+            {
+              "confidence": "LOW",
+              "field": "mechanism",
+              "page_locator": "#page=1",
+              "page_text_hash": "sha256:edfe06e4773798da0ada850f73bccec1c70c0a3b88add6f8fb2d493125c143b8",
+              "reporting_status": "REPORTED",
+              "support_type": "DIRECT",
+              "value": "Public fixture content: a page-located quicklime method and permeability endpoint."
+            }
+          ],
+          "page_count": 1,
+          "parser": "recorded-research-loop-v1",
+          "schema_version": "1.0",
+          "source_candidate_id": "Z-PUBLIC-PRIMARY",
+          "unresolved": [
+            "independence and full experimental detail require review"
+          ]
+        }
+      ],
+      "case_family": "contradictory_support",
+      "content_hash": "sha256:2fb638c25e76d1bb571abe6f6f280e4730c0aa4777cf363b962a01f1b1d87d08",
+      "external_calls": false,
+      "fetches": [
+        {
+          "candidate_id": "Z-PUBLIC-PRIMARY",
+          "locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "status": "FETCHED"
+        }
+      ],
+      "mappings": [
+        {
+          "candidate_id": "Z-PUBLIC-PRIMARY",
+          "card_id": "CARD-e792c3cece60"
+        }
+      ],
+      "metrics": {
+        "evidence_score": 1,
+        "metadata_only_credit": 0,
+        "paper_card_count": 1,
+        "raw_discovery_count": 2,
+        "support_complete_count": 1,
+        "unique_source_backed_contributions": 1
+      },
+      "open_admission": null,
+      "resolutions": [
+        {
+          "candidate_routes": [
+            {
+              "locator": "https://digitalcommons.usu.edu/etd2023/669/",
+              "recorded_exact": true,
+              "route_kind": "repository_record"
+            }
+          ],
+          "case_id": "Z-POSITIVE",
+          "discovery_action_ids": [
+            "ACT-ee83db2f3afae113-SEARCH"
+          ],
+          "failure_reason": null,
+          "need_id": "NEED-ee83db2f3afae113",
+          "original_locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "policy_decision": "ALLOW_PUBLIC_CONTENT",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "provenance": [],
+          "replay_key": "sha256:6c6cbc98eaadb71f3b630734ef81abb303cb5a2a36f7c0ef3792863b1ab355f1",
+          "resolution_id": "RES-0709edd6451270df",
+          "schema_version": "1.0",
+          "selected_exact_content_locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "source_candidate_id": "Z-PUBLIC-PRIMARY",
+          "source_policy_hash": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+          "status": "RESOLVED_PUBLIC"
+        },
+        {
+          "candidate_routes": [
+            {
+              "locator": "https://papers.ssrn.com/sol3/Delivery.cfm/5216134.pdf?abstractid=5216134&mirid=1",
+              "recorded_exact": true,
+              "route_kind": "preprint"
+            }
+          ],
+          "case_id": "Z-CONTRADICTORY",
+          "discovery_action_ids": [
+            "ACT-ee83db2f3afae113-SEARCH"
+          ],
+          "failure_reason": null,
+          "need_id": "NEED-ee83db2f3afae113",
+          "original_locator": "https://papers.ssrn.com/sol3/Delivery.cfm/5216134.pdf?abstractid=5216134&mirid=1",
+          "policy_decision": "ALLOW_PUBLIC_CONTENT",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "provenance": [],
+          "replay_key": "sha256:ce2721fe4b623edb1dd096e011f1f135488aa4e0626bf84c3614d0fc4ce7de47",
+          "resolution_id": "RES-0a2dcc31fd06e906",
+          "schema_version": "1.0",
+          "selected_exact_content_locator": "https://papers.ssrn.com/sol3/Delivery.cfm/5216134.pdf?abstractid=5216134&mirid=1",
+          "source_candidate_id": "Z-PUBLIC-RIVAL",
+          "source_policy_hash": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+          "status": "RESOLVED_PUBLIC"
+        }
+      ],
+      "run_id": "ee83db2f3afae113",
+      "schema_version": "g10r-z.run.1",
+      "selections": [
+        {
+          "content_locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "need_id": "NEED-ee83db2f3afae113",
+          "policy_status": "ALLOWED",
+          "requested_operation": "FETCH_AND_MAP",
+          "selection_id": "SEL-ee83db2f3afae113",
+          "source_candidate_id": "Z-PUBLIC-PRIMARY",
+          "status": "SELECTED"
+        }
+      ],
+      "support_reports": [
+        {
+          "action_ids": [
+            "ACT-ee83db2f3afae113-SEARCH"
+          ],
+          "card_ids": [
+            "CARD-e792c3cece60"
+          ],
+          "report_id": "REPORT-ee83db2f3afae113",
+          "source_candidate_ids": [
+            "Z-PUBLIC-PRIMARY"
+          ],
+          "status": "COMPLETE"
+        }
+      ],
+      "support_tasks": [
+        {
+          "need_id": "NEED-ee83db2f3afae113",
+          "task_id": "TASK-ee83db2f3afae113",
+          "task_type": "RETRIEVAL",
+          "viewpoint_id": "VP-MECHANISM"
+        }
+      ]
+    },
+    {
+      "arm": "A2-M",
+      "budget": {
+        "limits": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 8,
+          "retained_sources": 8,
+          "simulation_calls": 0
+        },
+        "remaining": {
+          "document_fetches": 3,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 99918,
+          "queries": 7,
+          "retained_sources": 6,
+          "simulation_calls": 0
+        },
+        "usage": {
+          "document_fetches": 1,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 82,
+          "queries": 1,
+          "retained_sources": 2,
+          "simulation_calls": 0
+        }
+      },
+      "candidate_ids": [
+        "Z-PUBLIC-PRIMARY",
+        "Z-PUBLIC-RIVAL"
+      ],
+      "cards": [
+        {
+          "authority_note": "Derived extraction for review; no evidence promotion, performance claim, or laboratory authority.",
+          "card_id": "CARD-e792c3cece60",
+          "document_hash": "sha256:47c55a248d9a080fe5dace5e78a16091cead6a34b2eb020cee6547316a580d37",
+          "extraction_status": "EXTRACTED",
+          "facts": [
+            {
+              "confidence": "MEDIUM",
+              "field": "material_process",
+              "page_locator": "#page=1",
+              "page_text_hash": "sha256:edfe06e4773798da0ada850f73bccec1c70c0a3b88add6f8fb2d493125c143b8",
+              "reporting_status": "REPORTED",
+              "support_type": "DIRECT",
+              "value": "quicklime concrete"
+            },
+            {
+              "confidence": "LOW",
+              "field": "mechanism",
+              "page_locator": "#page=1",
+              "page_text_hash": "sha256:edfe06e4773798da0ada850f73bccec1c70c0a3b88add6f8fb2d493125c143b8",
+              "reporting_status": "REPORTED",
+              "support_type": "DIRECT",
+              "value": "Public fixture content: a page-located quicklime method and permeability endpoint."
+            }
+          ],
+          "page_count": 1,
+          "parser": "recorded-research-loop-v1",
+          "schema_version": "1.0",
+          "source_candidate_id": "Z-PUBLIC-PRIMARY",
+          "unresolved": [
+            "independence and full experimental detail require review"
+          ]
+        }
+      ],
+      "case_family": "contradictory_support",
+      "content_hash": "sha256:bf88c1f60e97e7e2f51d1a9d3380dfdc1f2b6f878da9b2f35955aaf8f6ca919e",
+      "external_calls": false,
+      "fetches": [
+        {
+          "candidate_id": "Z-PUBLIC-PRIMARY",
+          "locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "status": "FETCHED"
+        }
+      ],
+      "mappings": [
+        {
+          "candidate_id": "Z-PUBLIC-PRIMARY",
+          "card_id": "CARD-e792c3cece60"
+        }
+      ],
+      "metrics": {
+        "evidence_score": 1,
+        "metadata_only_credit": 0,
+        "paper_card_count": 1,
+        "raw_discovery_count": 2,
+        "support_complete_count": 1,
+        "unique_source_backed_contributions": 1
+      },
+      "open_admission": {
+        "admission_id": "OPEN-ee83db2f3afae113",
+        "basis_kind": "PAPER_CARD",
+        "dossier_created_before_admission": 0,
+        "shared_before_admission": true,
+        "shared_index": 1,
+        "source_candidate_ids": [
+          "Z-PUBLIC-RIVAL"
+        ],
+        "status": "ADMITTED",
+        "tasks_created_before_admission": 0
+      },
+      "resolutions": [
+        {
+          "candidate_routes": [
+            {
+              "locator": "https://digitalcommons.usu.edu/etd2023/669/",
+              "recorded_exact": true,
+              "route_kind": "repository_record"
+            }
+          ],
+          "case_id": "Z-POSITIVE",
+          "discovery_action_ids": [
+            "ACT-ee83db2f3afae113-SEARCH"
+          ],
+          "failure_reason": null,
+          "need_id": "NEED-ee83db2f3afae113",
+          "original_locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "policy_decision": "ALLOW_PUBLIC_CONTENT",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "provenance": [],
+          "replay_key": "sha256:6c6cbc98eaadb71f3b630734ef81abb303cb5a2a36f7c0ef3792863b1ab355f1",
+          "resolution_id": "RES-0709edd6451270df",
+          "schema_version": "1.0",
+          "selected_exact_content_locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "source_candidate_id": "Z-PUBLIC-PRIMARY",
+          "source_policy_hash": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+          "status": "RESOLVED_PUBLIC"
+        },
+        {
+          "candidate_routes": [
+            {
+              "locator": "https://papers.ssrn.com/sol3/Delivery.cfm/5216134.pdf?abstractid=5216134&mirid=1",
+              "recorded_exact": true,
+              "route_kind": "preprint"
+            }
+          ],
+          "case_id": "Z-CONTRADICTORY",
+          "discovery_action_ids": [
+            "ACT-ee83db2f3afae113-SEARCH"
+          ],
+          "failure_reason": null,
+          "need_id": "NEED-ee83db2f3afae113",
+          "original_locator": "https://papers.ssrn.com/sol3/Delivery.cfm/5216134.pdf?abstractid=5216134&mirid=1",
+          "policy_decision": "ALLOW_PUBLIC_CONTENT",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "provenance": [],
+          "replay_key": "sha256:ce2721fe4b623edb1dd096e011f1f135488aa4e0626bf84c3614d0fc4ce7de47",
+          "resolution_id": "RES-0a2dcc31fd06e906",
+          "schema_version": "1.0",
+          "selected_exact_content_locator": "https://papers.ssrn.com/sol3/Delivery.cfm/5216134.pdf?abstractid=5216134&mirid=1",
+          "source_candidate_id": "Z-PUBLIC-RIVAL",
+          "source_policy_hash": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+          "status": "RESOLVED_PUBLIC"
+        }
+      ],
+      "run_id": "ee83db2f3afae113",
+      "schema_version": "g10r-z.run.1",
+      "selections": [
+        {
+          "content_locator": "https://digitalcommons.usu.edu/etd2023/669/",
+          "need_id": "NEED-ee83db2f3afae113",
+          "policy_status": "ALLOWED",
+          "requested_operation": "FETCH_AND_MAP",
+          "selection_id": "SEL-ee83db2f3afae113",
+          "source_candidate_id": "Z-PUBLIC-PRIMARY",
+          "status": "SELECTED"
+        }
+      ],
+      "support_reports": [
+        {
+          "action_ids": [
+            "ACT-ee83db2f3afae113-SEARCH"
+          ],
+          "card_ids": [
+            "CARD-e792c3cece60"
+          ],
+          "report_id": "REPORT-ee83db2f3afae113",
+          "source_candidate_ids": [
+            "Z-PUBLIC-PRIMARY"
+          ],
+          "status": "COMPLETE"
+        }
+      ],
+      "support_tasks": [
+        {
+          "need_id": "NEED-ee83db2f3afae113",
+          "task_id": "TASK-ee83db2f3afae113",
+          "task_type": "RETRIEVAL",
+          "viewpoint_id": "VP-MECHANISM"
+        }
+      ]
+    },
+    {
+      "arm": "A1",
+      "budget": {
+        "limits": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 8,
+          "retained_sources": 8,
+          "simulation_calls": 0
+        },
+        "remaining": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 7,
+          "retained_sources": 7,
+          "simulation_calls": 0
+        },
+        "usage": {
+          "document_fetches": 0,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 0,
+          "queries": 1,
+          "retained_sources": 1,
+          "simulation_calls": 0
+        }
+      },
+      "candidate_ids": [
+        "Z-METADATA"
+      ],
+      "cards": [],
+      "case_family": "metadata_only",
+      "content_hash": "sha256:680412b625f3cd94cfb5bd639301c8213f603d711a3bf9a7a2bc9cff8141e2c6",
+      "external_calls": false,
+      "fetches": [],
+      "mappings": [],
+      "metrics": {
+        "evidence_score": 0,
+        "metadata_only_credit": 0,
+        "paper_card_count": 0,
+        "raw_discovery_count": 1,
+        "support_complete_count": 0,
+        "unique_source_backed_contributions": 0
+      },
+      "open_admission": null,
+      "resolutions": [
+        {
+          "candidate_routes": [
+            {
+              "locator": "https://doi.org/10.0000/z-metadata",
+              "recorded_exact": true,
+              "route_kind": "doi_metadata"
+            }
+          ],
+          "case_id": "Z-METADATA",
+          "discovery_action_ids": [
+            "ACT-a4b0810493b5b643-SEARCH"
+          ],
+          "failure_reason": "recorded routes expose metadata only",
+          "need_id": "NEED-a4b0810493b5b643",
+          "original_locator": "https://doi.org/10.0000/z-metadata",
+          "policy_decision": "RETAIN_METADATA",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "provenance": [],
+          "replay_key": "sha256:065baccd597064ad3cdba451866bd69df8647485e95b66384af241e0f4632cb2",
+          "resolution_id": "RES-9946b70b5fc416cb",
+          "schema_version": "1.0",
+          "selected_exact_content_locator": null,
+          "source_candidate_id": "Z-METADATA",
+          "source_policy_hash": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+          "status": "METADATA_ONLY"
+        }
+      ],
+      "run_id": "a4b0810493b5b643",
+      "schema_version": "g10r-z.run.1",
+      "selections": [
+        {
+          "content_locator": null,
+          "need_id": "NEED-a4b0810493b5b643",
+          "policy_status": "METADATA_ONLY",
+          "requested_operation": "SEEK_LOCATOR",
+          "selection_id": "SEL-a4b0810493b5b643",
+          "source_candidate_id": "Z-METADATA",
+          "status": "PENDING"
+        }
+      ],
+      "support_reports": [
+        {
+          "action_ids": [
+            "ACT-a4b0810493b5b643-SEARCH"
+          ],
+          "card_ids": [],
+          "report_id": "REPORT-a4b0810493b5b643",
+          "source_candidate_ids": [
+            "Z-METADATA"
+          ],
+          "status": "PARTIAL"
+        }
+      ],
+      "support_tasks": [
+        {
+          "need_id": "NEED-a4b0810493b5b643",
+          "task_id": "TASK-a4b0810493b5b643",
+          "task_type": "RETRIEVAL",
+          "viewpoint_id": "VP-MECHANISM"
+        }
+      ]
+    },
+    {
+      "arm": "A2-M",
+      "budget": {
+        "limits": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 8,
+          "retained_sources": 8,
+          "simulation_calls": 0
+        },
+        "remaining": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 7,
+          "retained_sources": 7,
+          "simulation_calls": 0
+        },
+        "usage": {
+          "document_fetches": 0,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 0,
+          "queries": 1,
+          "retained_sources": 1,
+          "simulation_calls": 0
+        }
+      },
+      "candidate_ids": [
+        "Z-METADATA"
+      ],
+      "cards": [],
+      "case_family": "metadata_only",
+      "content_hash": "sha256:77f655a0cfe7e8e0392ad62399fa8ff357fdca52a6550fd5480661a7a082708a",
+      "external_calls": false,
+      "fetches": [],
+      "mappings": [],
+      "metrics": {
+        "evidence_score": 0,
+        "metadata_only_credit": 0,
+        "paper_card_count": 0,
+        "raw_discovery_count": 1,
+        "support_complete_count": 0,
+        "unique_source_backed_contributions": 0
+      },
+      "open_admission": {
+        "admission_id": "OPEN-a4b0810493b5b643",
+        "basis_kind": "CANDIDATE_PENDING",
+        "dossier_created_before_admission": 0,
+        "shared_before_admission": true,
+        "shared_index": 1,
+        "source_candidate_ids": [],
+        "status": "ABSTAINED_NO_DISTINCT_VIEWPOINT",
+        "tasks_created_before_admission": 0
+      },
+      "resolutions": [
+        {
+          "candidate_routes": [
+            {
+              "locator": "https://doi.org/10.0000/z-metadata",
+              "recorded_exact": true,
+              "route_kind": "doi_metadata"
+            }
+          ],
+          "case_id": "Z-METADATA",
+          "discovery_action_ids": [
+            "ACT-a4b0810493b5b643-SEARCH"
+          ],
+          "failure_reason": "recorded routes expose metadata only",
+          "need_id": "NEED-a4b0810493b5b643",
+          "original_locator": "https://doi.org/10.0000/z-metadata",
+          "policy_decision": "RETAIN_METADATA",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "provenance": [],
+          "replay_key": "sha256:065baccd597064ad3cdba451866bd69df8647485e95b66384af241e0f4632cb2",
+          "resolution_id": "RES-9946b70b5fc416cb",
+          "schema_version": "1.0",
+          "selected_exact_content_locator": null,
+          "source_candidate_id": "Z-METADATA",
+          "source_policy_hash": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+          "status": "METADATA_ONLY"
+        }
+      ],
+      "run_id": "a4b0810493b5b643",
+      "schema_version": "g10r-z.run.1",
+      "selections": [
+        {
+          "content_locator": null,
+          "need_id": "NEED-a4b0810493b5b643",
+          "policy_status": "METADATA_ONLY",
+          "requested_operation": "SEEK_LOCATOR",
+          "selection_id": "SEL-a4b0810493b5b643",
+          "source_candidate_id": "Z-METADATA",
+          "status": "PENDING"
+        }
+      ],
+      "support_reports": [
+        {
+          "action_ids": [
+            "ACT-a4b0810493b5b643-SEARCH"
+          ],
+          "card_ids": [],
+          "report_id": "REPORT-a4b0810493b5b643",
+          "source_candidate_ids": [
+            "Z-METADATA"
+          ],
+          "status": "PARTIAL"
+        }
+      ],
+      "support_tasks": [
+        {
+          "need_id": "NEED-a4b0810493b5b643",
+          "task_id": "TASK-a4b0810493b5b643",
+          "task_type": "RETRIEVAL",
+          "viewpoint_id": "VP-MECHANISM"
+        }
+      ]
+    },
+    {
+      "arm": "A1",
+      "budget": {
+        "limits": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 8,
+          "retained_sources": 8,
+          "simulation_calls": 0
+        },
+        "remaining": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 7,
+          "retained_sources": 7,
+          "simulation_calls": 0
+        },
+        "usage": {
+          "document_fetches": 0,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 0,
+          "queries": 1,
+          "retained_sources": 1,
+          "simulation_calls": 0
+        }
+      },
+      "candidate_ids": [
+        "Z-BLOCKED"
+      ],
+      "cards": [],
+      "case_family": "rights_blocked",
+      "content_hash": "sha256:555e1341b961fff6e0625c319c1251d98c3ddf05f93f96fb2a7dbc1a9a15bd7e",
+      "external_calls": false,
+      "fetches": [],
+      "mappings": [],
+      "metrics": {
+        "evidence_score": 0,
+        "metadata_only_credit": 0,
+        "paper_card_count": 0,
+        "raw_discovery_count": 1,
+        "support_complete_count": 0,
+        "unique_source_backed_contributions": 0
+      },
+      "open_admission": null,
+      "resolutions": [
+        {
+          "candidate_routes": [
+            {
+              "locator": "https://example.invalid/restricted",
+              "recorded_exact": true,
+              "route_kind": "publisher"
+            }
+          ],
+          "case_id": "Z-BLOCKED",
+          "discovery_action_ids": [
+            "ACT-340c0b7c3f5cfb3c-SEARCH"
+          ],
+          "failure_reason": "host is not in frozen allowlist: example.invalid",
+          "need_id": "NEED-340c0b7c3f5cfb3c",
+          "original_locator": "https://example.invalid/restricted",
+          "policy_decision": "DENY",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "provenance": [],
+          "replay_key": "sha256:5154e849cc3c4281d96b32badb9816288c6d2407681145bc360a736c28e06d56",
+          "resolution_id": "RES-9983f0c193c40197",
+          "schema_version": "1.0",
+          "selected_exact_content_locator": null,
+          "source_candidate_id": "Z-BLOCKED",
+          "source_policy_hash": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+          "status": "INVALID"
+        }
+      ],
+      "run_id": "340c0b7c3f5cfb3c",
+      "schema_version": "g10r-z.run.1",
+      "selections": [
+        {
+          "content_locator": null,
+          "need_id": "NEED-340c0b7c3f5cfb3c",
+          "policy_status": "INVALID",
+          "requested_operation": "SEEK_LOCATOR",
+          "selection_id": "SEL-340c0b7c3f5cfb3c",
+          "source_candidate_id": "Z-BLOCKED",
+          "status": "PENDING"
+        }
+      ],
+      "support_reports": [
+        {
+          "action_ids": [
+            "ACT-340c0b7c3f5cfb3c-SEARCH"
+          ],
+          "card_ids": [],
+          "report_id": "REPORT-340c0b7c3f5cfb3c",
+          "source_candidate_ids": [
+            "Z-BLOCKED"
+          ],
+          "status": "PARTIAL"
+        }
+      ],
+      "support_tasks": [
+        {
+          "need_id": "NEED-340c0b7c3f5cfb3c",
+          "task_id": "TASK-340c0b7c3f5cfb3c",
+          "task_type": "RETRIEVAL",
+          "viewpoint_id": "VP-MECHANISM"
+        }
+      ]
+    },
+    {
+      "arm": "A2-M",
+      "budget": {
+        "limits": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 8,
+          "retained_sources": 8,
+          "simulation_calls": 0
+        },
+        "remaining": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 7,
+          "retained_sources": 7,
+          "simulation_calls": 0
+        },
+        "usage": {
+          "document_fetches": 0,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 0,
+          "queries": 1,
+          "retained_sources": 1,
+          "simulation_calls": 0
+        }
+      },
+      "candidate_ids": [
+        "Z-BLOCKED"
+      ],
+      "cards": [],
+      "case_family": "rights_blocked",
+      "content_hash": "sha256:b978a0f2e85b6a567db0a60d88c0528f351c2d0dbae2047a5d4d0e1855060764",
+      "external_calls": false,
+      "fetches": [],
+      "mappings": [],
+      "metrics": {
+        "evidence_score": 0,
+        "metadata_only_credit": 0,
+        "paper_card_count": 0,
+        "raw_discovery_count": 1,
+        "support_complete_count": 0,
+        "unique_source_backed_contributions": 0
+      },
+      "open_admission": {
+        "admission_id": "OPEN-340c0b7c3f5cfb3c",
+        "basis_kind": "CANDIDATE_PENDING",
+        "dossier_created_before_admission": 0,
+        "shared_before_admission": true,
+        "shared_index": 1,
+        "source_candidate_ids": [],
+        "status": "ABSTAINED_NO_DISTINCT_VIEWPOINT",
+        "tasks_created_before_admission": 0
+      },
+      "resolutions": [
+        {
+          "candidate_routes": [
+            {
+              "locator": "https://example.invalid/restricted",
+              "recorded_exact": true,
+              "route_kind": "publisher"
+            }
+          ],
+          "case_id": "Z-BLOCKED",
+          "discovery_action_ids": [
+            "ACT-340c0b7c3f5cfb3c-SEARCH"
+          ],
+          "failure_reason": "host is not in frozen allowlist: example.invalid",
+          "need_id": "NEED-340c0b7c3f5cfb3c",
+          "original_locator": "https://example.invalid/restricted",
+          "policy_decision": "DENY",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "provenance": [],
+          "replay_key": "sha256:5154e849cc3c4281d96b32badb9816288c6d2407681145bc360a736c28e06d56",
+          "resolution_id": "RES-9983f0c193c40197",
+          "schema_version": "1.0",
+          "selected_exact_content_locator": null,
+          "source_candidate_id": "Z-BLOCKED",
+          "source_policy_hash": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+          "status": "INVALID"
+        }
+      ],
+      "run_id": "340c0b7c3f5cfb3c",
+      "schema_version": "g10r-z.run.1",
+      "selections": [
+        {
+          "content_locator": null,
+          "need_id": "NEED-340c0b7c3f5cfb3c",
+          "policy_status": "INVALID",
+          "requested_operation": "SEEK_LOCATOR",
+          "selection_id": "SEL-340c0b7c3f5cfb3c",
+          "source_candidate_id": "Z-BLOCKED",
+          "status": "PENDING"
+        }
+      ],
+      "support_reports": [
+        {
+          "action_ids": [
+            "ACT-340c0b7c3f5cfb3c-SEARCH"
+          ],
+          "card_ids": [],
+          "report_id": "REPORT-340c0b7c3f5cfb3c",
+          "source_candidate_ids": [
+            "Z-BLOCKED"
+          ],
+          "status": "PARTIAL"
+        }
+      ],
+      "support_tasks": [
+        {
+          "need_id": "NEED-340c0b7c3f5cfb3c",
+          "task_id": "TASK-340c0b7c3f5cfb3c",
+          "task_type": "RETRIEVAL",
+          "viewpoint_id": "VP-MECHANISM"
+        }
+      ]
+    },
+    {
+      "arm": "A1",
+      "budget": {
+        "limits": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 8,
+          "retained_sources": 8,
+          "simulation_calls": 0
+        },
+        "remaining": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 7,
+          "retained_sources": 7,
+          "simulation_calls": 0
+        },
+        "usage": {
+          "document_fetches": 0,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 0,
+          "queries": 1,
+          "retained_sources": 1,
+          "simulation_calls": 0
+        }
+      },
+      "candidate_ids": [
+        "Z-MALFORMED"
+      ],
+      "cards": [],
+      "case_family": "malformed_locator",
+      "content_hash": "sha256:ddcbb8bb2944af500cf01a27981d74fff236425753c8e888f37fa356e7bbb0bc",
+      "external_calls": false,
+      "fetches": [],
+      "mappings": [],
+      "metrics": {
+        "evidence_score": 0,
+        "metadata_only_credit": 0,
+        "paper_card_count": 0,
+        "raw_discovery_count": 1,
+        "support_complete_count": 0,
+        "unique_source_backed_contributions": 0
+      },
+      "open_admission": null,
+      "resolutions": [
+        {
+          "candidate_routes": [
+            {
+              "locator": "download this paper from whatever host the model chooses",
+              "recorded_exact": false,
+              "route_kind": "prose"
+            }
+          ],
+          "case_id": "Z-MALFORMED",
+          "discovery_action_ids": [
+            "ACT-cbc6a248f00ce178-SEARCH"
+          ],
+          "failure_reason": "route is not explicitly recorded exact",
+          "need_id": "NEED-cbc6a248f00ce178",
+          "original_locator": "https://doi.org/10.0000/z-malformed",
+          "policy_decision": "DENY",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "provenance": [],
+          "replay_key": "sha256:e10b65b3ac75910c25340204f6e74a2efe5f6a76dde9d04fbb1334c57f3193e0",
+          "resolution_id": "RES-9b3ec2892aa6f1f5",
+          "schema_version": "1.0",
+          "selected_exact_content_locator": null,
+          "source_candidate_id": "Z-MALFORMED",
+          "source_policy_hash": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+          "status": "INVALID"
+        }
+      ],
+      "run_id": "cbc6a248f00ce178",
+      "schema_version": "g10r-z.run.1",
+      "selections": [
+        {
+          "content_locator": null,
+          "need_id": "NEED-cbc6a248f00ce178",
+          "policy_status": "INVALID",
+          "requested_operation": "SEEK_LOCATOR",
+          "selection_id": "SEL-cbc6a248f00ce178",
+          "source_candidate_id": "Z-MALFORMED",
+          "status": "PENDING"
+        }
+      ],
+      "support_reports": [
+        {
+          "action_ids": [
+            "ACT-cbc6a248f00ce178-SEARCH"
+          ],
+          "card_ids": [],
+          "report_id": "REPORT-cbc6a248f00ce178",
+          "source_candidate_ids": [
+            "Z-MALFORMED"
+          ],
+          "status": "PARTIAL"
+        }
+      ],
+      "support_tasks": [
+        {
+          "need_id": "NEED-cbc6a248f00ce178",
+          "task_id": "TASK-cbc6a248f00ce178",
+          "task_type": "RETRIEVAL",
+          "viewpoint_id": "VP-MECHANISM"
+        }
+      ]
+    },
+    {
+      "arm": "A2-M",
+      "budget": {
+        "limits": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 8,
+          "retained_sources": 8,
+          "simulation_calls": 0
+        },
+        "remaining": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 100000,
+          "queries": 7,
+          "retained_sources": 7,
+          "simulation_calls": 0
+        },
+        "usage": {
+          "document_fetches": 0,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 0,
+          "queries": 1,
+          "retained_sources": 1,
+          "simulation_calls": 0
+        }
+      },
+      "candidate_ids": [
+        "Z-MALFORMED"
+      ],
+      "cards": [],
+      "case_family": "malformed_locator",
+      "content_hash": "sha256:ea50486c8605d346f078445b53307c610c68c4d772a40d00dc4458ed1d421f1b",
+      "external_calls": false,
+      "fetches": [],
+      "mappings": [],
+      "metrics": {
+        "evidence_score": 0,
+        "metadata_only_credit": 0,
+        "paper_card_count": 0,
+        "raw_discovery_count": 1,
+        "support_complete_count": 0,
+        "unique_source_backed_contributions": 0
+      },
+      "open_admission": {
+        "admission_id": "OPEN-cbc6a248f00ce178",
+        "basis_kind": "CANDIDATE_PENDING",
+        "dossier_created_before_admission": 0,
+        "shared_before_admission": true,
+        "shared_index": 1,
+        "source_candidate_ids": [],
+        "status": "ABSTAINED_NO_DISTINCT_VIEWPOINT",
+        "tasks_created_before_admission": 0
+      },
+      "resolutions": [
+        {
+          "candidate_routes": [
+            {
+              "locator": "download this paper from whatever host the model chooses",
+              "recorded_exact": false,
+              "route_kind": "prose"
+            }
+          ],
+          "case_id": "Z-MALFORMED",
+          "discovery_action_ids": [
+            "ACT-cbc6a248f00ce178-SEARCH"
+          ],
+          "failure_reason": "route is not explicitly recorded exact",
+          "need_id": "NEED-cbc6a248f00ce178",
+          "original_locator": "https://doi.org/10.0000/z-malformed",
+          "policy_decision": "DENY",
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "provenance": [],
+          "replay_key": "sha256:e10b65b3ac75910c25340204f6e74a2efe5f6a76dde9d04fbb1334c57f3193e0",
+          "resolution_id": "RES-9b3ec2892aa6f1f5",
+          "schema_version": "1.0",
+          "selected_exact_content_locator": null,
+          "source_candidate_id": "Z-MALFORMED",
+          "source_policy_hash": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+          "status": "INVALID"
+        }
+      ],
+      "run_id": "cbc6a248f00ce178",
+      "schema_version": "g10r-z.run.1",
+      "selections": [
+        {
+          "content_locator": null,
+          "need_id": "NEED-cbc6a248f00ce178",
+          "policy_status": "INVALID",
+          "requested_operation": "SEEK_LOCATOR",
+          "selection_id": "SEL-cbc6a248f00ce178",
+          "source_candidate_id": "Z-MALFORMED",
+          "status": "PENDING"
+        }
+      ],
+      "support_reports": [
+        {
+          "action_ids": [
+            "ACT-cbc6a248f00ce178-SEARCH"
+          ],
+          "card_ids": [],
+          "report_id": "REPORT-cbc6a248f00ce178",
+          "source_candidate_ids": [
+            "Z-MALFORMED"
+          ],
+          "status": "PARTIAL"
+        }
+      ],
+      "support_tasks": [
+        {
+          "need_id": "NEED-cbc6a248f00ce178",
+          "task_id": "TASK-cbc6a248f00ce178",
+          "task_type": "RETRIEVAL",
+          "viewpoint_id": "VP-MECHANISM"
+        }
+      ]
+    }
+  ],
+  "schema_version": "g10r-z.manifest.1",
+  "verdict": "ACQUISITION_HEADROOM_READY"
+}

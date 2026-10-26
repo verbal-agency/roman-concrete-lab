@@ -1,6 +1,6 @@
 # G10R-Z — Repair acquisition headroom and society validity offline
 
-**Status:** proposed
+**Status:** complete — `ACQUISITION_HEADROOM_READY`
 **Dependencies:** G10R-Y complete with `POST_V_DIAGNOSIS_READY` and its
 diagnosis, ablation, replay, and criterion-ledger artifacts
 **Authority:** repository-local code, recorded fixtures, and deterministic
@@ -9,13 +9,15 @@ laboratory, external communication, Phase-A freeze, or paid execution
 
 ## Objective
 
-Repair the live-capable investigation path so both A1 and A2-M can resolve a
-discovered metadata record to an exact policy-permitted public-content route,
-while making society work genuinely evidence-conditioned: the open viewpoint
-is proposed only after sharing, support work is created from unresolved needs,
-and metadata-only contributions remain useful discovery candidates without
-earning source-backed credit. Prove the repairs with an arm-neutral offline
-headroom matrix before any new freeze is eligible.
+Repair and prove the acquisition/headroom and society-validity contracts in an
+offline, provider-neutral path so a later goal can wire them into the
+live-capable runner without invalidating frozen G10R-X inputs. Both A1 and A2-M
+must resolve a discovered metadata record to an exact policy-permitted
+public-content route, while the open viewpoint is proposed only after sharing,
+support work is created from unresolved needs, and metadata-only contributions
+remain useful discovery candidates without earning source-backed credit. Prove
+the repairs with an arm-neutral offline headroom matrix before any new freeze
+is eligible.
 
 ## Project outcomes advanced
 
@@ -81,7 +83,8 @@ headroom matrix before any new freeze is eligible.
 - `tools/evaluation/acquisition_headroom_repair.py`;
 - `tests/agents/test_g10r_z_acquisition_headroom.py` and focused existing
   research-loop/wiring tests;
-- the three society/investigation protocol documents; and
+- `docs/protocols/g10r-z-acquisition-headroom.md`, which records the additive
+  repair protocol without mutating frozen G10R-X inputs; and
 - `artifacts/goals/G10R-Z/{headroom-matrix.json,run.json,replay.json,criterion-ledger.json,report.md}`.
 
 Equivalent paths are allowed only when the report maps them to this contract.
@@ -253,3 +256,22 @@ only when all ten criteria pass.
 A ready result may propose a distinct fresh Phase-A freeze goal. It does not
 create that freeze, initialize a provider, open the network, spend money,
 promote evidence, or authorize laboratory work.
+
+## Completion evidence
+
+- `artifacts/goals/G10R-Z/headroom-matrix.json` records the same policy hash,
+  exact locator resolutions, public-content opportunities, typed no-content
+  outcomes, and equal A1/A2-M ceilings for every recorded fixture family.
+- `artifacts/goals/G10R-Z/run.json` records one deterministic arm-neutral
+  acquisition run per fixture family and shows that metadata-only output earns
+  zero evidence and zero source-backed unique contribution.
+- `artifacts/goals/G10R-Z/replay.json` is byte-stable, external-free, and
+  reports zero duplicate calls and zero replay budget debits.
+- `artifacts/goals/G10R-Z/criterion-ledger.json` marks all ten criteria PASS;
+  focused G10R-Z tests pass and the repository suite was run after the repair.
+- `artifacts/goals/G10R-Z/report.md` emits exactly
+  `ACQUISITION_HEADROOM_READY` and preserves the no-freeze/no-paid-run
+  boundary.
+
+The next eligible work is a separate fresh Phase-A freeze after owner review;
+this goal itself does not create or activate that freeze.
