@@ -31,6 +31,11 @@ the provisional-argument and open-world intake loop offline; it does not make
 live calls, expand source policy, promote evidence, or authorize another paid
 run.
 
+After G10R-AC returns `PROVISIONAL_EVIDENCE_LOOP_READY`, G10R-AD is the only
+eligible platform-continuation goal. It wires those contracts into the actual
+A1/A2-M runner and adds offline conflict adjudication; it does not authorize a
+live or paid run.
+
 1. Read `docs/research_program_v2.md`, `docs/roadmap.md`, the G-1 decision when the selected goal is G00 or later, and the selected goal completely.
 2. Verify that every dependency and entry gate is satisfied from repository artifacts. Do not infer a gate result.
 3. Work only inside the selected goal's scope. Record unrelated findings in `docs/backlog.md` with evidence and destination.
