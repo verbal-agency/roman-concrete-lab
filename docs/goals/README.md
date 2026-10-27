@@ -36,6 +36,10 @@ eligible platform-continuation goal. It wires those contracts into the actual
 A1/A2-M runner and adds offline conflict adjudication; it does not authorize a
 live or paid run.
 
+After G10R-AD returns `RUNNER_PROVISIONAL_INTAKE_READY`, G10R-AE is the only
+eligible platform-continuation goal. It freezes a distinct Phase-A manifest and
+records pending owner activation; it does not authorize live or paid execution.
+
 1. Read `docs/research_program_v2.md`, `docs/roadmap.md`, the G-1 decision when the selected goal is G00 or later, and the selected goal completely.
 2. Verify that every dependency and entry gate is satisfied from repository artifacts. Do not infer a gate result.
 3. Work only inside the selected goal's scope. Record unrelated findings in `docs/backlog.md` with evidence and destination.

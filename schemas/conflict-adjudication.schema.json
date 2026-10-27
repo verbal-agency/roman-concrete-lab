@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/conflict-adjudication.schema.json",
+  "title": "ConflictAdjudication",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "adjudication_id", "conflict_set_id", "reviewer_role", "comparable", "scope_checks", "outcome", "rationale", "unresolved_questions", "revision_ids", "preserves_prior"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "adjudication_id": {"type": "string", "minLength": 1},
+    "conflict_set_id": {"type": "string", "minLength": 1},
+    "reviewer_role": {"enum": ["ADVERSARIAL_VETTER", "ADJUDICATOR", "STRUCTURAL_REVIEWER"]},
+    "comparable": {"type": "boolean"},
+    "scope_checks": {"type": "object", "additionalProperties": false, "required": ["material", "process", "comparator", "endpoint", "method", "independence"], "properties": {"material": {"type": "boolean"}, "process": {"type": "boolean"}, "comparator": {"type": "boolean"}, "endpoint": {"type": "boolean"}, "method": {"type": "boolean"}, "independence": {"type": "boolean"}}},
+    "outcome": {"enum": ["SCOPE_DIFFERENCE", "METHOD_DIFFERENCE", "WEIGHTED_CONFLICT", "UNRESOLVED"]},
+    "rationale": {"type": "string", "minLength": 1},
+    "unresolved_questions": {"type": "array", "items": {"type": "string"}},
+    "revision_ids": {"type": "array", "items": {"type": "string"}},
+    "preserves_prior": {"const": true}
+  }
+}

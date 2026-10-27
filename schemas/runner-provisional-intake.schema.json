@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/runner-provisional-intake.schema.json",
+  "title": "RunnerProvisionalIntakeCheckpoint",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_id", "arm", "run_id", "context_hash", "arguments", "sources", "edges", "revisions", "conflict_sets", "adjudications", "lineage", "authority"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "case_id": {"type": "string", "minLength": 1},
+    "arm": {"enum": ["A1", "A2-M"]},
+    "run_id": {"type": "string", "minLength": 1},
+    "context_hash": {"type": "string", "pattern": "^sha256:"},
+    "arguments": {"type": "array", "items": {"type": "object"}},
+    "sources": {"type": "array", "items": {"type": "object"}},
+    "edges": {"type": "array", "items": {"type": "object"}},
+    "revisions": {"type": "array", "items": {"type": "object"}},
+    "conflict_sets": {"type": "array", "items": {"type": "object"}},
+    "adjudications": {"type": "array", "items": {"type": "object"}},
+    "lineage": {"type": "array", "items": {"type": "object"}},
+    "authority": {"type": "object", "additionalProperties": false, "required": ["model_calls", "network_calls", "credentials_read", "paid_spend_usd"], "properties": {"model_calls": {"const": 0}, "network_calls": {"const": 0}, "credentials_read": {"const": false}, "paid_spend_usd": {"const": 0}}}
+  }
+}

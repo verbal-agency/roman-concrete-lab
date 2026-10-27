@@ -1,0 +1,1397 @@
+{
+  "authority": {
+    "credentials_read": false,
+    "model_calls": 0,
+    "network_calls": 0,
+    "paid_spend_usd": 0
+  },
+  "checkpoints": {
+    "A1": {
+      "action_records": [],
+      "actions": {},
+      "budget": {
+        "limits": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 25.0,
+          "input_tokens": 80000,
+          "output_tokens": 12000,
+          "payload_bytes": 5000000,
+          "queries": 12,
+          "retained_sources": 24,
+          "simulation_calls": 4
+        },
+        "remaining": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 25.0,
+          "input_tokens": 80000,
+          "output_tokens": 12000,
+          "payload_bytes": 5000000,
+          "queries": 12,
+          "retained_sources": 24,
+          "simulation_calls": 4
+        },
+        "usage": {
+          "document_fetches": 0,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 0,
+          "queries": 0,
+          "retained_sources": 0,
+          "simulation_calls": 0
+        }
+      },
+      "manifest_sha256": "sha256:e96cbd2c3efcc52d316d0565bbaac302c6f3fbfa5d4791ab8977f067360f3ad4",
+      "model_traces": [],
+      "paper_evidence_cards": {},
+      "plan_constraint_events": [],
+      "provisional_intake": {
+        "adjudications": [
+          {
+            "adjudication_id": "ADJ-001",
+            "comparable": true,
+            "conflict_set_id": "CONFLICT-c35bff7e4113dc83",
+            "outcome": "WEIGHTED_CONFLICT",
+            "preserves_prior": true,
+            "rationale": "Comparable independent studies disagree; retain both pending review rather than vote.",
+            "reviewer_role": "ADJUDICATOR",
+            "revision_ids": [],
+            "schema_version": "1.0",
+            "scope_checks": {
+              "comparator": true,
+              "endpoint": true,
+              "independence": true,
+              "material": true,
+              "method": true,
+              "process": true
+            },
+            "unresolved_questions": [
+              "Does a third independent family resolve the discrepancy?"
+            ]
+          },
+          {
+            "adjudication_id": "ADJ-002",
+            "comparable": false,
+            "conflict_set_id": "CONFLICT-3634e8d06b9d1219",
+            "outcome": "SCOPE_DIFFERENCE",
+            "preserves_prior": true,
+            "rationale": "The transfer source uses a different material and endpoint.",
+            "reviewer_role": "STRUCTURAL_REVIEWER",
+            "revision_ids": [],
+            "schema_version": "1.0",
+            "scope_checks": {
+              "comparator": false,
+              "endpoint": false,
+              "independence": true,
+              "material": false,
+              "method": false,
+              "process": false
+            },
+            "unresolved_questions": [
+              "Can a process-matched functional comparison be located?"
+            ]
+          }
+        ],
+        "arguments": [
+          {
+            "argument_id": "ARG-AD-A1",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claims": [
+              {
+                "claim_id": "CLAIM-AD-A1",
+                "text": "The hot-lime process changes functional recovery."
+              }
+            ],
+            "credit": {
+              "evidence": 0,
+              "reason": "provisional arguments and unaccepted sources earn no evidence credit"
+            },
+            "null_or_rival": false,
+            "predictions": [
+              "The hot-lime arm will recover more water-flow function than its matched control."
+            ],
+            "requested_discriminators": [
+              "matched endpoint",
+              "independent process comparison"
+            ],
+            "revision_number": 1,
+            "schema_version": "1.0",
+            "source_ids": [
+              "SRC-AD-PROCESS",
+              "SRC-AD-CONFLICT",
+              "SRC-AD-SCOPE",
+              "SRC-AD-BLOCKED",
+              "SRC-AD-PROCESS-DUP"
+            ],
+            "status": "CONTRADICTED",
+            "thesis": "Hot-lime processing remains a testable variable, but functional benefit is contradicted by one comparable fixture study and requires adjudication.",
+            "uncertainty": "The process effect is provisional until independent functional comparisons are adjudicated.",
+            "viewpoint_id": "VP-AD-A1"
+          }
+        ],
+        "arm": "A1",
+        "authority": {
+          "credentials_read": false,
+          "model_calls": 0,
+          "network_calls": 0,
+          "paid_spend_usd": 0
+        },
+        "case_id": "S-ACTIVE-LINEAGE",
+        "conflict_sets": [
+          {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claim_id": "CLAIM-AD-A1",
+            "conflict_set_id": "CONFLICT-3634e8d06b9d1219",
+            "edge_ids": [
+              "EDGE-AD-SCOPE-A1",
+              "EDGE-AD-SUPPORT-A1"
+            ],
+            "independent_source_ids": [
+              "SRC-AD-PROCESS",
+              "SRC-AD-SCOPE"
+            ],
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "revision_number": 1,
+            "schema_version": "1.0",
+            "scope": {
+              "comparator": "not comparable",
+              "endpoint": "different",
+              "material": "mixed",
+              "method": "different",
+              "process": "different"
+            },
+            "status": "SCOPE_DIFFERENCE"
+          },
+          {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claim_id": "CLAIM-AD-A1",
+            "conflict_set_id": "CONFLICT-c35bff7e4113dc83",
+            "edge_ids": [
+              "EDGE-AD-CONTRADICT-A1",
+              "EDGE-AD-SUPPORT-A1"
+            ],
+            "independent_source_ids": [
+              "SRC-AD-CONFLICT",
+              "SRC-AD-PROCESS"
+            ],
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "revision_number": 1,
+            "schema_version": "1.0",
+            "scope": {
+              "comparator": "matched process control",
+              "endpoint": "functional water transport",
+              "material": "lime-pozzolan mortar",
+              "method": "permeability",
+              "process": "hot-lime mix"
+            },
+            "status": "WEIGHTED_CONFLICT"
+          }
+        ],
+        "context_hash": "sha256:e96cbd2c3efcc52d316d0565bbaac302c6f3fbfa5d4791ab8977f067360f3ad4",
+        "edges": [
+          {
+            "argument_id": "ARG-AD-A1",
+            "claim_id": "CLAIM-AD-A1",
+            "claim_scope": "hot-lime functional recovery",
+            "content_hash": null,
+            "edge_id": "EDGE-AD-BLOCKED-A1",
+            "locator": null,
+            "locator_type": "NONE",
+            "rationale": "Access failure is not contradiction.",
+            "revision_number": 1,
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-BLOCKED",
+            "status": "UNRETRIEVABLE"
+          },
+          {
+            "argument_id": "ARG-AD-A1",
+            "claim_id": "CLAIM-AD-A1",
+            "claim_scope": "hot-lime functional recovery",
+            "content_hash": "sha256:ad-conflict",
+            "edge_id": "EDGE-AD-CONTRADICT-A1",
+            "locator": "https://repository.example/conflict-paper#table=2",
+            "locator_type": "TABLE",
+            "rationale": "The matched comparison reports no functional advantage.",
+            "revision_number": 1,
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-CONFLICT",
+            "status": "CONTRADICTED"
+          },
+          {
+            "argument_id": "ARG-AD-A1",
+            "claim_id": "CLAIM-AD-A1",
+            "claim_scope": "cement-based crack closure",
+            "content_hash": "sha256:ad-scope",
+            "edge_id": "EDGE-AD-SCOPE-A1",
+            "locator": "https://repository.example/scope-paper#figure=3",
+            "locator_type": "FIGURE",
+            "rationale": "The source supports a different material and endpoint.",
+            "revision_number": 1,
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-SCOPE",
+            "status": "SUPPORTED"
+          },
+          {
+            "argument_id": "ARG-AD-A1",
+            "claim_id": "CLAIM-AD-A1",
+            "claim_scope": "hot-lime functional recovery",
+            "content_hash": "sha256:ad-process",
+            "edge_id": "EDGE-AD-SUPPORT-A1",
+            "locator": "https://dspace.uevora.pt/rdpc/bitstream/10174/4948/1/hot-lime.pdf#page=4",
+            "locator_type": "PAGE",
+            "rationale": "Exact recorded locator supports the process claim.",
+            "revision_number": 1,
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-PROCESS",
+            "status": "SUPPORTED"
+          }
+        ],
+        "lineage": [
+          {
+            "action_ids": [
+              "ACTION-SEARCH-A1"
+            ],
+            "argument_id": "ARG-AD-A1",
+            "arm": "A1",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "dossier_revision_ids": [
+              "DOSSIER-REV-A1-1"
+            ],
+            "portfolio_ids": [
+              "PORTFOLIO-A1"
+            ],
+            "viewpoint_id": "VP-AD-A1"
+          },
+          {
+            "action_ids": [
+              "ACTION-FETCH-BLOCKED-A1"
+            ],
+            "argument_id": "ARG-AD-A1",
+            "arm": "A1",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claim_id": "CLAIM-AD-A1",
+            "edge_id": "EDGE-AD-BLOCKED-A1",
+            "source_id": "SRC-AD-BLOCKED"
+          },
+          {
+            "action_ids": [
+              "ACTION-FETCH-CONFLICT-A1"
+            ],
+            "argument_id": "ARG-AD-A1",
+            "arm": "A1",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claim_id": "CLAIM-AD-A1",
+            "edge_id": "EDGE-AD-CONTRADICT-A1",
+            "source_id": "SRC-AD-CONFLICT"
+          },
+          {
+            "action_ids": [
+              "ACTION-FETCH-SCOPE-A1"
+            ],
+            "argument_id": "ARG-AD-A1",
+            "arm": "A1",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claim_id": "CLAIM-AD-A1",
+            "edge_id": "EDGE-AD-SCOPE-A1",
+            "source_id": "SRC-AD-SCOPE"
+          },
+          {
+            "action_ids": [
+              "ACTION-FETCH-PROCESS-A1"
+            ],
+            "argument_id": "ARG-AD-A1",
+            "arm": "A1",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claim_id": "CLAIM-AD-A1",
+            "edge_id": "EDGE-AD-SUPPORT-A1",
+            "source_id": "SRC-AD-PROCESS"
+          }
+        ],
+        "revisions": [
+          {
+            "from_status": "DISCOVERED",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-001",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-PROCESS",
+            "target_type": "SOURCE",
+            "to_status": "RETRIEVAL_PENDING"
+          },
+          {
+            "from_status": "RETRIEVAL_PENDING",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-002",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-PROCESS",
+            "target_type": "SOURCE",
+            "to_status": "RETRIEVED_UNVETTED"
+          },
+          {
+            "from_status": "RETRIEVED_UNVETTED",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-003",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-PROCESS",
+            "target_type": "SOURCE",
+            "to_status": "VETTING"
+          },
+          {
+            "from_status": "VETTING",
+            "preserves_prior": true,
+            "reason": "Recorded identity and payload hash agree.",
+            "revision_id": "REV-004",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-PROCESS",
+            "target_type": "SOURCE",
+            "to_status": "ADMITTED_CORPUS"
+          },
+          {
+            "from_status": "DISCOVERED",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-005",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-CONFLICT",
+            "target_type": "SOURCE",
+            "to_status": "RETRIEVAL_PENDING"
+          },
+          {
+            "from_status": "RETRIEVAL_PENDING",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-006",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-CONFLICT",
+            "target_type": "SOURCE",
+            "to_status": "RETRIEVED_UNVETTED"
+          },
+          {
+            "from_status": "RETRIEVED_UNVETTED",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-007",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-CONFLICT",
+            "target_type": "SOURCE",
+            "to_status": "VETTING"
+          },
+          {
+            "from_status": "VETTING",
+            "preserves_prior": true,
+            "reason": "Recorded identity and payload hash agree.",
+            "revision_id": "REV-008",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-CONFLICT",
+            "target_type": "SOURCE",
+            "to_status": "ADMITTED_CORPUS"
+          },
+          {
+            "from_status": "DISCOVERED",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-009",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-SCOPE",
+            "target_type": "SOURCE",
+            "to_status": "RETRIEVAL_PENDING"
+          },
+          {
+            "from_status": "RETRIEVAL_PENDING",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-010",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-SCOPE",
+            "target_type": "SOURCE",
+            "to_status": "RETRIEVED_UNVETTED"
+          },
+          {
+            "from_status": "RETRIEVED_UNVETTED",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-011",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-SCOPE",
+            "target_type": "SOURCE",
+            "to_status": "VETTING"
+          },
+          {
+            "from_status": "VETTING",
+            "preserves_prior": true,
+            "reason": "Recorded identity and payload hash agree.",
+            "revision_id": "REV-012",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-SCOPE",
+            "target_type": "SOURCE",
+            "to_status": "ADMITTED_CORPUS"
+          },
+          {
+            "from_status": "DISCOVERED",
+            "preserves_prior": true,
+            "reason": "bounded fetch attempted",
+            "revision_id": "REV-013",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-BLOCKED",
+            "target_type": "SOURCE",
+            "to_status": "RETRIEVAL_PENDING"
+          },
+          {
+            "from_status": "RETRIEVAL_PENDING",
+            "preserves_prior": true,
+            "reason": "Access-controlled route has no lawful payload.",
+            "revision_id": "REV-014",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-BLOCKED",
+            "target_type": "SOURCE",
+            "to_status": "UNRETRIEVABLE"
+          },
+          {
+            "from_status": "UNRESOLVED",
+            "preserves_prior": true,
+            "reason": "Exact recorded locator supports the process claim.",
+            "revision_id": "REV-015",
+            "schema_version": "1.0",
+            "target_id": "EDGE-AD-SUPPORT-A1",
+            "target_type": "EDGE",
+            "to_status": "SUPPORTED"
+          },
+          {
+            "from_status": "UNRESOLVED",
+            "preserves_prior": true,
+            "reason": "The matched comparison reports no functional advantage.",
+            "revision_id": "REV-016",
+            "schema_version": "1.0",
+            "target_id": "EDGE-AD-CONTRADICT-A1",
+            "target_type": "EDGE",
+            "to_status": "CONTRADICTED"
+          },
+          {
+            "from_status": "UNRESOLVED",
+            "preserves_prior": true,
+            "reason": "The source supports a different material and endpoint.",
+            "revision_id": "REV-017",
+            "schema_version": "1.0",
+            "target_id": "EDGE-AD-SCOPE-A1",
+            "target_type": "EDGE",
+            "to_status": "SUPPORTED"
+          },
+          {
+            "from_status": "UNRESOLVED",
+            "preserves_prior": true,
+            "reason": "Access failure is not contradiction.",
+            "revision_id": "REV-018",
+            "schema_version": "1.0",
+            "target_id": "EDGE-AD-BLOCKED-A1",
+            "target_type": "EDGE",
+            "to_status": "UNRETRIEVABLE"
+          },
+          {
+            "from_status": "PROVISIONAL",
+            "preserves_prior": true,
+            "reason": "A comparable source directly conflicts with the performance claim.",
+            "revision_id": "REV-019",
+            "schema_version": "1.0",
+            "target_id": "ARG-AD-A1",
+            "target_type": "ARGUMENT",
+            "to_status": "CONTRADICTED"
+          }
+        ],
+        "run_id": "AD-A1",
+        "schema_version": "1.0",
+        "sources": [
+          {
+            "canonical_source_id": null,
+            "case_id": "S-ACTIVE-LINEAGE",
+            "citation_ancestors": [],
+            "content_hash": null,
+            "evidence_credit": 0,
+            "host": "publisher.example",
+            "identity_key": "doi:10.9999/ad.blocked.1",
+            "independent_work": true,
+            "locator": "https://publisher.example/blocked",
+            "retrieval_note": "No lawful full-text payload.",
+            "rights_state": "RIGHTS_BLOCKED",
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-BLOCKED",
+            "status": "UNRETRIEVABLE",
+            "title": "Potential comparator behind access control"
+          },
+          {
+            "canonical_source_id": null,
+            "case_id": "S-ACTIVE-LINEAGE",
+            "citation_ancestors": [],
+            "content_hash": "sha256:ad-conflict",
+            "evidence_credit": 0,
+            "host": "repository.example",
+            "identity_key": "doi:10.9999/ad.conflict.1",
+            "independent_work": true,
+            "locator": "https://repository.example/conflict-paper",
+            "retrieval_note": "Recorded public contradiction fixture.",
+            "rights_state": "PERMITTED",
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-CONFLICT",
+            "status": "ADMITTED_CORPUS",
+            "title": "Matched process comparison with no functional advantage"
+          },
+          {
+            "canonical_source_id": null,
+            "case_id": "S-ACTIVE-LINEAGE",
+            "citation_ancestors": [],
+            "content_hash": "sha256:ad-process",
+            "evidence_credit": 0,
+            "host": "dspace.uevora.pt",
+            "identity_key": "doi:10.1016/j.cemconcomp.2011.05.008",
+            "independent_work": true,
+            "locator": "https://dspace.uevora.pt/rdpc/bitstream/10174/4948/1/hot-lime.pdf",
+            "retrieval_note": "Recorded public process fixture.",
+            "rights_state": "PERMITTED",
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-PROCESS",
+            "status": "ADMITTED_CORPUS",
+            "title": "Traditional methods of mortar preparation: The hot lime mix method"
+          },
+          {
+            "canonical_source_id": "SRC-AD-PROCESS",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "citation_ancestors": [
+              "SRC-AD-PROCESS"
+            ],
+            "content_hash": "sha256:ad-process",
+            "evidence_credit": 0,
+            "host": "mirror.example",
+            "identity_key": "doi:10.1016/j.cemconcomp.2011.05.008",
+            "independent_work": false,
+            "locator": "https://mirror.example/hot-lime",
+            "retrieval_note": "Duplicate DOI, hash, and citation ancestor.",
+            "rights_state": "PERMITTED",
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-PROCESS-DUP",
+            "status": "DUPLICATE",
+            "title": "Traditional methods of mortar preparation: The hot lime mix method"
+          },
+          {
+            "canonical_source_id": null,
+            "case_id": "S-ACTIVE-LINEAGE",
+            "citation_ancestors": [],
+            "content_hash": "sha256:ad-scope",
+            "evidence_credit": 0,
+            "host": "repository.example",
+            "identity_key": "doi:10.9999/ad.scope.1",
+            "independent_work": true,
+            "locator": "https://repository.example/scope-paper",
+            "retrieval_note": "Different material and endpoint; scope-difference fixture.",
+            "rights_state": "PERMITTED",
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-SCOPE",
+            "status": "ADMITTED_CORPUS",
+            "title": "Cement-based quicklime crack closure study"
+          }
+        ]
+      },
+      "query_registry": {},
+      "remediation_manifest": {
+        "acquisition_first": false,
+        "active": false,
+        "bounded_open_slot": false,
+        "deduplicate_queries": false,
+        "executable_support": false,
+        "legacy_mechanism_tournament": false,
+        "locator_bridge": false,
+        "schema_version": "g10r-s.1",
+        "treatment": "COMBINED_JUSTIFIED"
+      },
+      "research_loop": null,
+      "simulation_traces": [],
+      "source_candidates": {},
+      "state": "created",
+      "state_history": [
+        "created"
+      ],
+      "tool_request_events": [],
+      "viewpoint_society": null
+    },
+    "A2-M": {
+      "action_records": [],
+      "actions": {},
+      "budget": {
+        "limits": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 25.0,
+          "input_tokens": 80000,
+          "output_tokens": 12000,
+          "payload_bytes": 5000000,
+          "queries": 12,
+          "retained_sources": 24,
+          "simulation_calls": 4
+        },
+        "remaining": {
+          "document_fetches": 4,
+          "estimated_cost_usd": 25.0,
+          "input_tokens": 80000,
+          "output_tokens": 12000,
+          "payload_bytes": 5000000,
+          "queries": 12,
+          "retained_sources": 24,
+          "simulation_calls": 4
+        },
+        "usage": {
+          "document_fetches": 0,
+          "estimated_cost_usd": 0.0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "payload_bytes": 0,
+          "queries": 0,
+          "retained_sources": 0,
+          "simulation_calls": 0
+        }
+      },
+      "manifest_sha256": "sha256:e96cbd2c3efcc52d316d0565bbaac302c6f3fbfa5d4791ab8977f067360f3ad4",
+      "model_traces": [],
+      "paper_evidence_cards": {},
+      "plan_constraint_events": [],
+      "provisional_intake": {
+        "adjudications": [
+          {
+            "adjudication_id": "ADJ-001",
+            "comparable": true,
+            "conflict_set_id": "CONFLICT-c8faec33d36e632b",
+            "outcome": "WEIGHTED_CONFLICT",
+            "preserves_prior": true,
+            "rationale": "Comparable independent studies disagree; retain both pending review rather than vote.",
+            "reviewer_role": "ADJUDICATOR",
+            "revision_ids": [],
+            "schema_version": "1.0",
+            "scope_checks": {
+              "comparator": true,
+              "endpoint": true,
+              "independence": true,
+              "material": true,
+              "method": true,
+              "process": true
+            },
+            "unresolved_questions": [
+              "Does a third independent family resolve the discrepancy?"
+            ]
+          },
+          {
+            "adjudication_id": "ADJ-002",
+            "comparable": false,
+            "conflict_set_id": "CONFLICT-c7d50785cb7f1870",
+            "outcome": "SCOPE_DIFFERENCE",
+            "preserves_prior": true,
+            "rationale": "The transfer source uses a different material and endpoint.",
+            "reviewer_role": "STRUCTURAL_REVIEWER",
+            "revision_ids": [],
+            "schema_version": "1.0",
+            "scope_checks": {
+              "comparator": false,
+              "endpoint": false,
+              "independence": true,
+              "material": false,
+              "method": false,
+              "process": false
+            },
+            "unresolved_questions": [
+              "Can a process-matched functional comparison be located?"
+            ]
+          }
+        ],
+        "arguments": [
+          {
+            "argument_id": "ARG-AD-A2-M",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claims": [
+              {
+                "claim_id": "CLAIM-AD-A2-M",
+                "text": "The hot-lime process changes functional recovery."
+              }
+            ],
+            "credit": {
+              "evidence": 0,
+              "reason": "provisional arguments and unaccepted sources earn no evidence credit"
+            },
+            "null_or_rival": false,
+            "predictions": [
+              "The hot-lime arm will recover more water-flow function than its matched control."
+            ],
+            "requested_discriminators": [
+              "matched endpoint",
+              "independent process comparison"
+            ],
+            "revision_number": 1,
+            "schema_version": "1.0",
+            "source_ids": [
+              "SRC-AD-PROCESS",
+              "SRC-AD-CONFLICT",
+              "SRC-AD-SCOPE",
+              "SRC-AD-BLOCKED",
+              "SRC-AD-PROCESS-DUP"
+            ],
+            "status": "CONTRADICTED",
+            "thesis": "Hot-lime processing remains a testable variable, but functional benefit is contradicted by one comparable fixture study and requires adjudication.",
+            "uncertainty": "The process effect is provisional until independent functional comparisons are adjudicated.",
+            "viewpoint_id": "VP-AD-A2-M"
+          }
+        ],
+        "arm": "A2-M",
+        "authority": {
+          "credentials_read": false,
+          "model_calls": 0,
+          "network_calls": 0,
+          "paid_spend_usd": 0
+        },
+        "case_id": "S-ACTIVE-LINEAGE",
+        "conflict_sets": [
+          {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claim_id": "CLAIM-AD-A2-M",
+            "conflict_set_id": "CONFLICT-c7d50785cb7f1870",
+            "edge_ids": [
+              "EDGE-AD-SCOPE-A2-M",
+              "EDGE-AD-SUPPORT-A2-M"
+            ],
+            "independent_source_ids": [
+              "SRC-AD-PROCESS",
+              "SRC-AD-SCOPE"
+            ],
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "revision_number": 1,
+            "schema_version": "1.0",
+            "scope": {
+              "comparator": "not comparable",
+              "endpoint": "different",
+              "material": "mixed",
+              "method": "different",
+              "process": "different"
+            },
+            "status": "SCOPE_DIFFERENCE"
+          },
+          {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claim_id": "CLAIM-AD-A2-M",
+            "conflict_set_id": "CONFLICT-c8faec33d36e632b",
+            "edge_ids": [
+              "EDGE-AD-CONTRADICT-A2-M",
+              "EDGE-AD-SUPPORT-A2-M"
+            ],
+            "independent_source_ids": [
+              "SRC-AD-CONFLICT",
+              "SRC-AD-PROCESS"
+            ],
+            "problem_id": "roman-hot-mix",
+            "problem_version": "1.0",
+            "revision_number": 1,
+            "schema_version": "1.0",
+            "scope": {
+              "comparator": "matched process control",
+              "endpoint": "functional water transport",
+              "material": "lime-pozzolan mortar",
+              "method": "permeability",
+              "process": "hot-lime mix"
+            },
+            "status": "WEIGHTED_CONFLICT"
+          }
+        ],
+        "context_hash": "sha256:e96cbd2c3efcc52d316d0565bbaac302c6f3fbfa5d4791ab8977f067360f3ad4",
+        "edges": [
+          {
+            "argument_id": "ARG-AD-A2-M",
+            "claim_id": "CLAIM-AD-A2-M",
+            "claim_scope": "hot-lime functional recovery",
+            "content_hash": null,
+            "edge_id": "EDGE-AD-BLOCKED-A2-M",
+            "locator": null,
+            "locator_type": "NONE",
+            "rationale": "Access failure is not contradiction.",
+            "revision_number": 1,
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-BLOCKED",
+            "status": "UNRETRIEVABLE"
+          },
+          {
+            "argument_id": "ARG-AD-A2-M",
+            "claim_id": "CLAIM-AD-A2-M",
+            "claim_scope": "hot-lime functional recovery",
+            "content_hash": "sha256:ad-conflict",
+            "edge_id": "EDGE-AD-CONTRADICT-A2-M",
+            "locator": "https://repository.example/conflict-paper#table=2",
+            "locator_type": "TABLE",
+            "rationale": "The matched comparison reports no functional advantage.",
+            "revision_number": 1,
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-CONFLICT",
+            "status": "CONTRADICTED"
+          },
+          {
+            "argument_id": "ARG-AD-A2-M",
+            "claim_id": "CLAIM-AD-A2-M",
+            "claim_scope": "cement-based crack closure",
+            "content_hash": "sha256:ad-scope",
+            "edge_id": "EDGE-AD-SCOPE-A2-M",
+            "locator": "https://repository.example/scope-paper#figure=3",
+            "locator_type": "FIGURE",
+            "rationale": "The source supports a different material and endpoint.",
+            "revision_number": 1,
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-SCOPE",
+            "status": "SUPPORTED"
+          },
+          {
+            "argument_id": "ARG-AD-A2-M",
+            "claim_id": "CLAIM-AD-A2-M",
+            "claim_scope": "hot-lime functional recovery",
+            "content_hash": "sha256:ad-process",
+            "edge_id": "EDGE-AD-SUPPORT-A2-M",
+            "locator": "https://dspace.uevora.pt/rdpc/bitstream/10174/4948/1/hot-lime.pdf#page=4",
+            "locator_type": "PAGE",
+            "rationale": "Exact recorded locator supports the process claim.",
+            "revision_number": 1,
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-PROCESS",
+            "status": "SUPPORTED"
+          }
+        ],
+        "lineage": [
+          {
+            "action_ids": [
+              "ACTION-SEARCH-A2-M"
+            ],
+            "argument_id": "ARG-AD-A2-M",
+            "arm": "A2-M",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "dossier_revision_ids": [
+              "DOSSIER-REV-A2-M-1"
+            ],
+            "portfolio_ids": [
+              "PORTFOLIO-A2-M"
+            ],
+            "viewpoint_id": "VP-AD-A2-M"
+          },
+          {
+            "action_ids": [
+              "ACTION-FETCH-BLOCKED-A2-M"
+            ],
+            "argument_id": "ARG-AD-A2-M",
+            "arm": "A2-M",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claim_id": "CLAIM-AD-A2-M",
+            "edge_id": "EDGE-AD-BLOCKED-A2-M",
+            "source_id": "SRC-AD-BLOCKED"
+          },
+          {
+            "action_ids": [
+              "ACTION-FETCH-CONFLICT-A2-M"
+            ],
+            "argument_id": "ARG-AD-A2-M",
+            "arm": "A2-M",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claim_id": "CLAIM-AD-A2-M",
+            "edge_id": "EDGE-AD-CONTRADICT-A2-M",
+            "source_id": "SRC-AD-CONFLICT"
+          },
+          {
+            "action_ids": [
+              "ACTION-FETCH-SCOPE-A2-M"
+            ],
+            "argument_id": "ARG-AD-A2-M",
+            "arm": "A2-M",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claim_id": "CLAIM-AD-A2-M",
+            "edge_id": "EDGE-AD-SCOPE-A2-M",
+            "source_id": "SRC-AD-SCOPE"
+          },
+          {
+            "action_ids": [
+              "ACTION-FETCH-PROCESS-A2-M"
+            ],
+            "argument_id": "ARG-AD-A2-M",
+            "arm": "A2-M",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "claim_id": "CLAIM-AD-A2-M",
+            "edge_id": "EDGE-AD-SUPPORT-A2-M",
+            "source_id": "SRC-AD-PROCESS"
+          }
+        ],
+        "revisions": [
+          {
+            "from_status": "DISCOVERED",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-001",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-PROCESS",
+            "target_type": "SOURCE",
+            "to_status": "RETRIEVAL_PENDING"
+          },
+          {
+            "from_status": "RETRIEVAL_PENDING",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-002",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-PROCESS",
+            "target_type": "SOURCE",
+            "to_status": "RETRIEVED_UNVETTED"
+          },
+          {
+            "from_status": "RETRIEVED_UNVETTED",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-003",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-PROCESS",
+            "target_type": "SOURCE",
+            "to_status": "VETTING"
+          },
+          {
+            "from_status": "VETTING",
+            "preserves_prior": true,
+            "reason": "Recorded identity and payload hash agree.",
+            "revision_id": "REV-004",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-PROCESS",
+            "target_type": "SOURCE",
+            "to_status": "ADMITTED_CORPUS"
+          },
+          {
+            "from_status": "DISCOVERED",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-005",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-CONFLICT",
+            "target_type": "SOURCE",
+            "to_status": "RETRIEVAL_PENDING"
+          },
+          {
+            "from_status": "RETRIEVAL_PENDING",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-006",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-CONFLICT",
+            "target_type": "SOURCE",
+            "to_status": "RETRIEVED_UNVETTED"
+          },
+          {
+            "from_status": "RETRIEVED_UNVETTED",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-007",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-CONFLICT",
+            "target_type": "SOURCE",
+            "to_status": "VETTING"
+          },
+          {
+            "from_status": "VETTING",
+            "preserves_prior": true,
+            "reason": "Recorded identity and payload hash agree.",
+            "revision_id": "REV-008",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-CONFLICT",
+            "target_type": "SOURCE",
+            "to_status": "ADMITTED_CORPUS"
+          },
+          {
+            "from_status": "DISCOVERED",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-009",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-SCOPE",
+            "target_type": "SOURCE",
+            "to_status": "RETRIEVAL_PENDING"
+          },
+          {
+            "from_status": "RETRIEVAL_PENDING",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-010",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-SCOPE",
+            "target_type": "SOURCE",
+            "to_status": "RETRIEVED_UNVETTED"
+          },
+          {
+            "from_status": "RETRIEVED_UNVETTED",
+            "preserves_prior": true,
+            "reason": "recorded public route",
+            "revision_id": "REV-011",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-SCOPE",
+            "target_type": "SOURCE",
+            "to_status": "VETTING"
+          },
+          {
+            "from_status": "VETTING",
+            "preserves_prior": true,
+            "reason": "Recorded identity and payload hash agree.",
+            "revision_id": "REV-012",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-SCOPE",
+            "target_type": "SOURCE",
+            "to_status": "ADMITTED_CORPUS"
+          },
+          {
+            "from_status": "DISCOVERED",
+            "preserves_prior": true,
+            "reason": "bounded fetch attempted",
+            "revision_id": "REV-013",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-BLOCKED",
+            "target_type": "SOURCE",
+            "to_status": "RETRIEVAL_PENDING"
+          },
+          {
+            "from_status": "RETRIEVAL_PENDING",
+            "preserves_prior": true,
+            "reason": "Access-controlled route has no lawful payload.",
+            "revision_id": "REV-014",
+            "schema_version": "1.0",
+            "target_id": "SRC-AD-BLOCKED",
+            "target_type": "SOURCE",
+            "to_status": "UNRETRIEVABLE"
+          },
+          {
+            "from_status": "UNRESOLVED",
+            "preserves_prior": true,
+            "reason": "Exact recorded locator supports the process claim.",
+            "revision_id": "REV-015",
+            "schema_version": "1.0",
+            "target_id": "EDGE-AD-SUPPORT-A2-M",
+            "target_type": "EDGE",
+            "to_status": "SUPPORTED"
+          },
+          {
+            "from_status": "UNRESOLVED",
+            "preserves_prior": true,
+            "reason": "The matched comparison reports no functional advantage.",
+            "revision_id": "REV-016",
+            "schema_version": "1.0",
+            "target_id": "EDGE-AD-CONTRADICT-A2-M",
+            "target_type": "EDGE",
+            "to_status": "CONTRADICTED"
+          },
+          {
+            "from_status": "UNRESOLVED",
+            "preserves_prior": true,
+            "reason": "The source supports a different material and endpoint.",
+            "revision_id": "REV-017",
+            "schema_version": "1.0",
+            "target_id": "EDGE-AD-SCOPE-A2-M",
+            "target_type": "EDGE",
+            "to_status": "SUPPORTED"
+          },
+          {
+            "from_status": "UNRESOLVED",
+            "preserves_prior": true,
+            "reason": "Access failure is not contradiction.",
+            "revision_id": "REV-018",
+            "schema_version": "1.0",
+            "target_id": "EDGE-AD-BLOCKED-A2-M",
+            "target_type": "EDGE",
+            "to_status": "UNRETRIEVABLE"
+          },
+          {
+            "from_status": "PROVISIONAL",
+            "preserves_prior": true,
+            "reason": "A comparable source directly conflicts with the performance claim.",
+            "revision_id": "REV-019",
+            "schema_version": "1.0",
+            "target_id": "ARG-AD-A2-M",
+            "target_type": "ARGUMENT",
+            "to_status": "CONTRADICTED"
+          }
+        ],
+        "run_id": "AD-A2-M",
+        "schema_version": "1.0",
+        "sources": [
+          {
+            "canonical_source_id": null,
+            "case_id": "S-ACTIVE-LINEAGE",
+            "citation_ancestors": [],
+            "content_hash": null,
+            "evidence_credit": 0,
+            "host": "publisher.example",
+            "identity_key": "doi:10.9999/ad.blocked.1",
+            "independent_work": true,
+            "locator": "https://publisher.example/blocked",
+            "retrieval_note": "No lawful full-text payload.",
+            "rights_state": "RIGHTS_BLOCKED",
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-BLOCKED",
+            "status": "UNRETRIEVABLE",
+            "title": "Potential comparator behind access control"
+          },
+          {
+            "canonical_source_id": null,
+            "case_id": "S-ACTIVE-LINEAGE",
+            "citation_ancestors": [],
+            "content_hash": "sha256:ad-conflict",
+            "evidence_credit": 0,
+            "host": "repository.example",
+            "identity_key": "doi:10.9999/ad.conflict.1",
+            "independent_work": true,
+            "locator": "https://repository.example/conflict-paper",
+            "retrieval_note": "Recorded public contradiction fixture.",
+            "rights_state": "PERMITTED",
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-CONFLICT",
+            "status": "ADMITTED_CORPUS",
+            "title": "Matched process comparison with no functional advantage"
+          },
+          {
+            "canonical_source_id": null,
+            "case_id": "S-ACTIVE-LINEAGE",
+            "citation_ancestors": [],
+            "content_hash": "sha256:ad-process",
+            "evidence_credit": 0,
+            "host": "dspace.uevora.pt",
+            "identity_key": "doi:10.1016/j.cemconcomp.2011.05.008",
+            "independent_work": true,
+            "locator": "https://dspace.uevora.pt/rdpc/bitstream/10174/4948/1/hot-lime.pdf",
+            "retrieval_note": "Recorded public process fixture.",
+            "rights_state": "PERMITTED",
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-PROCESS",
+            "status": "ADMITTED_CORPUS",
+            "title": "Traditional methods of mortar preparation: The hot lime mix method"
+          },
+          {
+            "canonical_source_id": "SRC-AD-PROCESS",
+            "case_id": "S-ACTIVE-LINEAGE",
+            "citation_ancestors": [
+              "SRC-AD-PROCESS"
+            ],
+            "content_hash": "sha256:ad-process",
+            "evidence_credit": 0,
+            "host": "mirror.example",
+            "identity_key": "doi:10.1016/j.cemconcomp.2011.05.008",
+            "independent_work": false,
+            "locator": "https://mirror.example/hot-lime",
+            "retrieval_note": "Duplicate DOI, hash, and citation ancestor.",
+            "rights_state": "PERMITTED",
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-PROCESS-DUP",
+            "status": "DUPLICATE",
+            "title": "Traditional methods of mortar preparation: The hot lime mix method"
+          },
+          {
+            "canonical_source_id": null,
+            "case_id": "S-ACTIVE-LINEAGE",
+            "citation_ancestors": [],
+            "content_hash": "sha256:ad-scope",
+            "evidence_credit": 0,
+            "host": "repository.example",
+            "identity_key": "doi:10.9999/ad.scope.1",
+            "independent_work": true,
+            "locator": "https://repository.example/scope-paper",
+            "retrieval_note": "Different material and endpoint; scope-difference fixture.",
+            "rights_state": "PERMITTED",
+            "schema_version": "1.0",
+            "source_id": "SRC-AD-SCOPE",
+            "status": "ADMITTED_CORPUS",
+            "title": "Cement-based quicklime crack closure study"
+          }
+        ]
+      },
+      "query_registry": {},
+      "remediation_manifest": {
+        "acquisition_first": true,
+        "active": true,
+        "bounded_open_slot": true,
+        "deduplicate_queries": true,
+        "executable_support": true,
+        "legacy_mechanism_tournament": false,
+        "locator_bridge": true,
+        "schema_version": "g10r-s.1",
+        "treatment": "COMBINED_JUSTIFIED"
+      },
+      "research_loop": {
+        "arm": "A2-M",
+        "branch_needs": {},
+        "case_id": "S-ACTIVE-LINEAGE",
+        "content_hash": "sha256:a771c2683f92c7bd9af4e286ac3c3da727891451f21510cad7a2dd13f74860c8",
+        "context_hash": "sha256:e96cbd2c3efcc52d316d0565bbaac302c6f3fbfa5d4791ab8977f067360f3ad4",
+        "dossier_revisions": [],
+        "events": [],
+        "fetches": [],
+        "focus": [],
+        "mappings": [],
+        "needs": [],
+        "open_slot": [],
+        "problem_id": "roman-hot-mix",
+        "problem_version": "1.0",
+        "run_id": "AD-A2-M",
+        "schema_version": "g10r-t.live.1",
+        "searches": [],
+        "selections": [],
+        "stage": "CREATED"
+      },
+      "simulation_traces": [],
+      "source_candidates": {},
+      "state": "created",
+      "state_history": [
+        "created"
+      ],
+      "tool_request_events": [],
+      "viewpoint_society": {
+        "action_budget": 12,
+        "active_ids": [
+          "S-ACTIVE-LINEAGE-M1",
+          "S-ACTIVE-LINEAGE-M2",
+          "S-ACTIVE-LINEAGE-NULL"
+        ],
+        "cards": {
+          "S-ACTIVE-LINEAGE-M1": {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "falsifiers": [
+              "Matched specimens without reactive lime-rich regions recover identically under the same exposure."
+            ],
+            "kind": "CANDIDATE",
+            "known_alternatives": [
+              "S-ACTIVE-LINEAGE-M2",
+              "S-ACTIVE-LINEAGE-NULL"
+            ],
+            "predictions": [
+              "Recovery should track the presence and exposure of reactive lime-rich regions."
+            ],
+            "prior_basis": "Offline mechanism fixture derived from the problem context; not established evidence.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "schema_version": "1.0",
+            "statement": "A localized reactive lime reservoir drives functional recovery after damage.",
+            "support_region": "Modern lime-pozzolan mortar with identified lime-rich inclusions; transfer is unresolved.",
+            "viewpoint_id": "S-ACTIVE-LINEAGE-M1"
+          },
+          "S-ACTIVE-LINEAGE-M2": {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "falsifiers": [
+              "Functional recovery consistently exceeds closure-only controls under matched conditions."
+            ],
+            "kind": "CANDIDATE",
+            "known_alternatives": [
+              "S-ACTIVE-LINEAGE-M1",
+              "S-ACTIVE-LINEAGE-NULL"
+            ],
+            "predictions": [
+              "Closure can occur without a matching improvement in functional water transport."
+            ],
+            "prior_basis": "Offline mechanism fixture derived from the problem context; not established evidence.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "schema_version": "1.0",
+            "statement": "Observed recovery is dominated by non-chemical physical crack closure.",
+            "support_region": "Crack-width and exposure conditions where closure can be separated from water-transport recovery.",
+            "viewpoint_id": "S-ACTIVE-LINEAGE-M2"
+          },
+          "S-ACTIVE-LINEAGE-NULL": {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "falsifiers": [
+              "A preregistered mechanism-specific discriminator separates a candidate from the control."
+            ],
+            "kind": "NULL",
+            "known_alternatives": [
+              "S-ACTIVE-LINEAGE-M1",
+              "S-ACTIVE-LINEAGE-M2"
+            ],
+            "predictions": [
+              "A process-matched control is indistinguishable from each proposed mechanism."
+            ],
+            "prior_basis": "Required null comparator for anti-anchoring; not a claim about the material.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "schema_version": "1.0",
+            "statement": "No reproducible mechanism-specific recovery is present under the declared conditions.",
+            "support_region": "The declared case domain and measurement endpoint only.",
+            "viewpoint_id": "S-ACTIVE-LINEAGE-NULL"
+          },
+          "S-ACTIVE-LINEAGE-OPEN": {
+            "case_id": "S-ACTIVE-LINEAGE",
+            "falsifiers": [
+              "No distinct prediction or provenance can be supplied."
+            ],
+            "kind": "OPEN_SLOT",
+            "known_alternatives": [
+              "S-ACTIVE-LINEAGE-M1",
+              "S-ACTIVE-LINEAGE-M2",
+              "S-ACTIVE-LINEAGE-NULL"
+            ],
+            "predictions": [
+              "A newly admitted mechanism must state a distinct discriminator."
+            ],
+            "prior_basis": "Required discovery slot; empty until an admission record is accepted.",
+            "promotion_status": "REVIEW_REQUIRED",
+            "schema_version": "1.0",
+            "statement": "Open slot for a mechanism introduced by bounded evidence or explicit uncertainty.",
+            "support_region": "Must be declared before any new mechanism is scored.",
+            "viewpoint_id": "S-ACTIVE-LINEAGE-OPEN"
+          }
+        },
+        "case_id": "S-ACTIVE-LINEAGE",
+        "context_hash": "sha256:e96cbd2c3efcc52d316d0565bbaac302c6f3fbfa5d4791ab8977f067360f3ad4",
+        "critiques": {},
+        "dossiers": {},
+        "evidence_bus": {
+          "actions": {},
+          "append_order": [],
+          "candidate_conflicts": {},
+          "candidate_observations": {},
+          "candidates": {},
+          "case_id": "S-ACTIVE-LINEAGE",
+          "context_hash": "sha256:e96cbd2c3efcc52d316d0565bbaac302c6f3fbfa5d4791ab8977f067360f3ad4",
+          "critiques": {},
+          "dossiers": {},
+          "problem_id": "roman-hot-mix",
+          "problem_version": "1.0",
+          "reports": {},
+          "schema_version": "1.0",
+          "tasks": {},
+          "treatment_id": "A2-M"
+        },
+        "focus": null,
+        "null_id": "S-ACTIVE-LINEAGE-NULL",
+        "portfolio": null,
+        "private_reports": {
+          "S-ACTIVE-LINEAGE-M1": [],
+          "S-ACTIVE-LINEAGE-M2": [],
+          "S-ACTIVE-LINEAGE-NULL": []
+        },
+        "problem_id": "roman-hot-mix",
+        "problem_version": "1.0",
+        "protocol": "g10d.1-viewpoint-centered-society",
+        "shared": false,
+        "treatment_id": "A2-M"
+      }
+    }
+  },
+  "context_hash": "sha256:e96cbd2c3efcc52d316d0565bbaac302c6f3fbfa5d4791ab8977f067360f3ad4",
+  "criteria": {
+    "contradiction_revision_and_conflict": true,
+    "historical_contracts_present": true,
+    "joins_and_fail_closed": true,
+    "legal_edges_and_authority": true,
+    "no_vote_or_double_count": true,
+    "offline_deterministic_replay": true,
+    "runner_checkpoint_intake": true,
+    "typed_failures_and_dedup": true,
+    "typed_scope_and_weighted_conflict": true
+  },
+  "fail_closed": {
+    "budget": true,
+    "cross_case": true,
+    "stale_context": true
+  },
+  "protocol": "g10r-ad.1-runner-provisional-intake",
+  "replay": {
+    "deterministic": true,
+    "first_digest": "sha256:fa80c772d625c44effaeb0d404d59d7e796e5e13d5dcce4765cbc60db8874e95",
+    "second_digest": "sha256:fa80c772d625c44effaeb0d404d59d7e796e5e13d5dcce4765cbc60db8874e95"
+  },
+  "schema_version": "1.0",
+  "status": "RUNNER_PROVISIONAL_INTAKE_READY"
+}

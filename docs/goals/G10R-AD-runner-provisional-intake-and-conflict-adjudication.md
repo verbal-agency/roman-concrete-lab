@@ -1,6 +1,6 @@
 # G10R-AD — Integrate provisional intake and conflict adjudication into the runner
 
-**Status:** proposed
+**Status:** complete — `RUNNER_PROVISIONAL_INTAKE_READY`
 **Dependencies:** G10R-AC `PROVISIONAL_EVIDENCE_LOOP_READY`; no live model,
 network, subscription, credential, laboratory, or paid execution
 **Authority:** offline repository implementation and deterministic replay only;
@@ -154,3 +154,11 @@ Return exactly one of `RUNNER_PROVISIONAL_INTAKE_READY`,
 `RUNNER_PROVISIONAL_INTAKE_READY` permits proposing a new Phase-A freeze or a
 separately authorized live integration evaluation; it does not authorize
 either action.
+
+## Completion evidence
+
+The offline replay in `artifacts/goals/G10R-AD/replay.json` passed all nine
+criteria with zero model calls, zero network calls, zero credential reads, and
+`$0` paid spend. The focused runner/intake tests pass (`5 passed`); the full
+repository suite passes (`193 passed`); and `git diff --check` passes. The
+historical G10R-AC, G10R-AB, and G10R-X artifacts remain unchanged.
