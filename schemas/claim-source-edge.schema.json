@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/claim-source-edge.schema.json",
+  "title": "ClaimSourceEdge",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "edge_id", "argument_id", "claim_id", "source_id", "status", "claim_scope", "locator", "locator_type", "content_hash", "rationale", "revision_number"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "edge_id": {"type": "string", "minLength": 1},
+    "argument_id": {"type": "string", "minLength": 1},
+    "claim_id": {"type": "string", "minLength": 1},
+    "source_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["SUPPORTED", "CONTRADICTED", "UNRESOLVED", "MISATTRIBUTED", "UNRETRIEVABLE"]},
+    "claim_scope": {"type": "string", "minLength": 1},
+    "locator": {"type": ["string", "null"]},
+    "locator_type": {"enum": ["PAGE", "FIGURE", "TABLE", "SECTION", "URL_FRAGMENT", "NONE"]},
+    "content_hash": {"type": ["string", "null"]},
+    "rationale": {"type": "string", "minLength": 1},
+    "revision_number": {"type": "integer", "minimum": 0}
+  }
+}

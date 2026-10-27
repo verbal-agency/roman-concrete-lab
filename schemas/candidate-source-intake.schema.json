@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/candidate-source-intake.schema.json",
+  "title": "CandidateSourceIntake",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "source_id", "case_id", "locator", "title", "host", "status", "rights_state", "identity_key", "content_hash", "citation_ancestors", "independent_work", "evidence_credit"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "source_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "locator": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "host": {"type": "string", "minLength": 1},
+    "status": {"enum": ["DISCOVERED", "RETRIEVAL_PENDING", "RETRIEVED_UNVETTED", "VETTING", "ADMITTED_CORPUS", "REJECTED", "UNRETRIEVABLE", "DUPLICATE"]},
+    "rights_state": {"enum": ["UNKNOWN", "PERMITTED", "METADATA_ONLY", "RIGHTS_BLOCKED", "REVIEW_REQUIRED"]},
+    "identity_key": {"type": "string", "minLength": 1},
+    "content_hash": {"type": ["string", "null"]},
+    "citation_ancestors": {"type": "array", "items": {"type": "string"}},
+    "independent_work": {"type": "boolean"},
+    "canonical_source_id": {"type": ["string", "null"]},
+    "evidence_credit": {"type": "number", "minimum": 0},
+    "retrieval_note": {"type": "string"}
+  }
+}

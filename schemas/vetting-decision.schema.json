@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/vetting-decision.schema.json",
+  "title": "VettingDecision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "decision_id", "source_id", "reviewer_role", "outcome", "identity_verified", "content_verified", "exact_locator_verified", "rationale"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "decision_id": {"type": "string", "minLength": 1},
+    "source_id": {"type": "string", "minLength": 1},
+    "reviewer_role": {"enum": ["ACQUISITION", "VETTER", "ADVERSARIAL_VETTER", "ADJUDICATOR"]},
+    "outcome": {"enum": ["ADMIT", "REJECT", "UNRESOLVED", "UNRETRIEVABLE"]},
+    "identity_verified": {"type": "boolean"},
+    "content_verified": {"type": "boolean"},
+    "exact_locator_verified": {"type": "boolean"},
+    "rationale": {"type": "string", "minLength": 1}
+  }
+}

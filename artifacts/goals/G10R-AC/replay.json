@@ -1,0 +1,537 @@
+{
+  "authority": {
+    "credentials_read": false,
+    "model_calls": 0,
+    "network_calls": 0,
+    "paid_spend_usd": 0
+  },
+  "budget": {
+    "limits": {
+      "document_fetches": 1,
+      "estimated_cost_usd": 0.01,
+      "input_tokens": 100,
+      "output_tokens": 100,
+      "payload_bytes": 100,
+      "queries": 1,
+      "retained_sources": 1,
+      "simulation_calls": 1
+    },
+    "remaining": {
+      "document_fetches": 1,
+      "estimated_cost_usd": 0.01,
+      "input_tokens": 100,
+      "output_tokens": 100,
+      "payload_bytes": 100,
+      "queries": 0,
+      "retained_sources": 1,
+      "simulation_calls": 1
+    },
+    "usage": {
+      "document_fetches": 0,
+      "estimated_cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "payload_bytes": 0,
+      "queries": 1,
+      "retained_sources": 0,
+      "simulation_calls": 0
+    }
+  },
+  "conflicting_duplicate_rejected": true,
+  "criteria": {
+    "adversarial_null_rival_zero_credit": true,
+    "append_only_revision": true,
+    "deduplication": true,
+    "exact_locator_hash_gate": true,
+    "legal_edge_statuses": true,
+    "offline_replay_and_budget": true,
+    "provisional_argument": true,
+    "quarantine_unknown_and_rights": true,
+    "repository_contracts_and_artifacts": true
+  },
+  "fixture_digest": "sha256:093028e6ab603e6df47ae984d6002a4994fef0e046258346a806906e82985343",
+  "illegal_transition_rejected": true,
+  "observations": [
+    {
+      "host": "unknown-repository.example",
+      "independent_work": true,
+      "source_id": "SRC-UNKNOWN-LEAD",
+      "status": "DISCOVERED"
+    },
+    {
+      "host": "dspace.uevora.pt",
+      "independent_work": true,
+      "source_id": "SRC-PUBLIC-HOTLIME",
+      "status": "DISCOVERED"
+    },
+    {
+      "host": "repository.example",
+      "independent_work": false,
+      "source_id": "SRC-PUBLIC-HOTLIME-DUP",
+      "status": "DUPLICATE"
+    },
+    {
+      "host": "repository.example",
+      "independent_work": true,
+      "source_id": "SRC-RIVAL-DUP",
+      "status": "DISCOVERED"
+    },
+    {
+      "host": "publisher.example",
+      "independent_work": true,
+      "source_id": "SRC-RIGHTS-BLOCKED",
+      "status": "DISCOVERED"
+    },
+    {
+      "host": "dspace.uevora.pt",
+      "independent_work": true,
+      "source_id": "SRC-MALFORMED",
+      "status": "DISCOVERED"
+    }
+  ],
+  "protocol": "g10r-ac.1-provisional-open-world-intake",
+  "replay": {
+    "deterministic": true,
+    "snapshot_digest": "sha256:6f8308f7a60546441def6f458b60b4e19073343932b193a4b3844aa9f0dbff23"
+  },
+  "schema_version": "1.0",
+  "snapshot": {
+    "arguments": [
+      {
+        "argument_id": "ARG-HOTLIME",
+        "case_id": "roman-hot-mix",
+        "claims": [
+          {
+            "claim_id": "CL-HOTLIME-1",
+            "text": "A hot-lime preparation route could change the later healing response relative to lime putty."
+          }
+        ],
+        "credit": {
+          "evidence": 0,
+          "reason": "provisional arguments and unaccepted sources earn no evidence credit"
+        },
+        "null_or_rival": false,
+        "predictions": [
+          "The hot-mixed arm will show lower post-crack water flow than the matched putty arm."
+        ],
+        "requested_discriminators": [
+          "matched hot-mix versus putty comparator",
+          "page-located permeability endpoint"
+        ],
+        "revision_number": 2,
+        "schema_version": "1.0",
+        "source_ids": [
+          "SRC-UNKNOWN-LEAD",
+          "SRC-PUBLIC-HOTLIME"
+        ],
+        "status": "WEAKENED",
+        "thesis": "Hot mixing is a testable process variable that may create reactive lime domains, but the healing effect is still unresolved.",
+        "uncertainty": "The proposed reactive-domain mechanism is not yet established for the Roman-concrete case.",
+        "viewpoint_id": "mechanism-hot-lime"
+      },
+      {
+        "argument_id": "ARG-RIVAL",
+        "case_id": "roman-hot-mix",
+        "claims": [
+          {
+            "claim_id": "CL-RIVAL-1",
+            "text": "A no-hot-mix comparator is required before assigning a mechanism to hot mixing."
+          }
+        ],
+        "credit": {
+          "evidence": 0,
+          "reason": "provisional arguments and unaccepted sources earn no evidence credit"
+        },
+        "null_or_rival": true,
+        "predictions": [
+          "A matched control can explain the observed change without invoking a special hot-lime mechanism."
+        ],
+        "requested_discriminators": [
+          "independent comparator",
+          "blinded water-transport measurement"
+        ],
+        "revision_number": 0,
+        "schema_version": "1.0",
+        "source_ids": [
+          "SRC-RIVAL-DUP"
+        ],
+        "status": "PROVISIONAL",
+        "thesis": "Any apparent healing may be ordinary crack closure or test drift rather than a hot-mix mechanism.",
+        "uncertainty": "The rival remains credible until a process-matched comparator is inspected.",
+        "viewpoint_id": "null-rival"
+      }
+    ],
+    "case_id": "roman-hot-mix",
+    "edges": [
+      {
+        "argument_id": "ARG-RIVAL",
+        "claim_id": "CL-RIVAL-1",
+        "claim_scope": "hot-lime process identity",
+        "content_hash": "sha256:hotlime-content-v1",
+        "edge_id": "EDGE-CONTRADICT",
+        "locator": "https://dspace.uevora.pt/rdpc/bitstream/10174/4948/1/hot-lime.pdf#page=4",
+        "locator_type": "PAGE",
+        "rationale": "The source documents a process distinction, but does not establish that no comparator is needed; this edge is retained as a direct challenge to the rival wording.",
+        "revision_number": 1,
+        "schema_version": "1.0",
+        "source_id": "SRC-PUBLIC-HOTLIME",
+        "status": "CONTRADICTED"
+      },
+      {
+        "argument_id": "ARG-HOTLIME",
+        "claim_id": "CL-HOTLIME-1",
+        "claim_scope": "hot-lime process identity",
+        "content_hash": "sha256:hotlime-content-v1",
+        "edge_id": "EDGE-SUPPORT",
+        "locator": "https://dspace.uevora.pt/rdpc/bitstream/10174/4948/1/hot-lime.pdf#page=4",
+        "locator_type": "PAGE",
+        "rationale": "The cited page identifies the hot-lime preparation route; it supports the process subclaim, not performance.",
+        "revision_number": 1,
+        "schema_version": "1.0",
+        "source_id": "SRC-PUBLIC-HOTLIME",
+        "status": "SUPPORTED"
+      },
+      {
+        "argument_id": "ARG-HOTLIME",
+        "claim_id": "CL-HOTLIME-1",
+        "claim_scope": "functional crack-closure outcome",
+        "content_hash": null,
+        "edge_id": "EDGE-UNRETRIEVABLE",
+        "locator": null,
+        "locator_type": "NONE",
+        "rationale": "Rights/access failure is not evidence against the claim.",
+        "revision_number": 1,
+        "schema_version": "1.0",
+        "source_id": "SRC-RIGHTS-BLOCKED",
+        "status": "UNRETRIEVABLE"
+      }
+    ],
+    "revisions": [
+      {
+        "from_status": "DISCOVERED",
+        "preserves_prior": true,
+        "reason": "recorded fixture advances one bounded retrieval stage",
+        "revision_id": "REV-001",
+        "schema_version": "1.0",
+        "target_id": "SRC-PUBLIC-HOTLIME",
+        "target_type": "SOURCE",
+        "to_status": "RETRIEVAL_PENDING"
+      },
+      {
+        "from_status": "RETRIEVAL_PENDING",
+        "preserves_prior": true,
+        "reason": "recorded fixture advances one bounded retrieval stage",
+        "revision_id": "REV-002",
+        "schema_version": "1.0",
+        "target_id": "SRC-PUBLIC-HOTLIME",
+        "target_type": "SOURCE",
+        "to_status": "RETRIEVED_UNVETTED"
+      },
+      {
+        "from_status": "RETRIEVED_UNVETTED",
+        "preserves_prior": true,
+        "reason": "recorded fixture advances one bounded retrieval stage",
+        "revision_id": "REV-003",
+        "schema_version": "1.0",
+        "target_id": "SRC-PUBLIC-HOTLIME",
+        "target_type": "SOURCE",
+        "to_status": "VETTING"
+      },
+      {
+        "from_status": "VETTING",
+        "preserves_prior": true,
+        "reason": "DOI, title, payload hash, and recorded page route agree.",
+        "revision_id": "REV-004",
+        "schema_version": "1.0",
+        "target_id": "SRC-PUBLIC-HOTLIME",
+        "target_type": "SOURCE",
+        "to_status": "ADMITTED_CORPUS"
+      },
+      {
+        "from_status": "DISCOVERED",
+        "preserves_prior": true,
+        "reason": "bounded retrieval attempted",
+        "revision_id": "REV-005",
+        "schema_version": "1.0",
+        "target_id": "SRC-RIVAL-DUP",
+        "target_type": "SOURCE",
+        "to_status": "RETRIEVAL_PENDING"
+      },
+      {
+        "from_status": "RETRIEVAL_PENDING",
+        "preserves_prior": true,
+        "reason": "No admissible full-text payload was available.",
+        "revision_id": "REV-006",
+        "schema_version": "1.0",
+        "target_id": "SRC-RIVAL-DUP",
+        "target_type": "SOURCE",
+        "to_status": "UNRETRIEVABLE"
+      },
+      {
+        "from_status": "DISCOVERED",
+        "preserves_prior": true,
+        "reason": "bounded retrieval attempted",
+        "revision_id": "REV-007",
+        "schema_version": "1.0",
+        "target_id": "SRC-RIGHTS-BLOCKED",
+        "target_type": "SOURCE",
+        "to_status": "RETRIEVAL_PENDING"
+      },
+      {
+        "from_status": "RETRIEVAL_PENDING",
+        "preserves_prior": true,
+        "reason": "No admissible full-text payload was available.",
+        "revision_id": "REV-008",
+        "schema_version": "1.0",
+        "target_id": "SRC-RIGHTS-BLOCKED",
+        "target_type": "SOURCE",
+        "to_status": "UNRETRIEVABLE"
+      },
+      {
+        "from_status": "DISCOVERED",
+        "preserves_prior": true,
+        "reason": "bounded retrieval attempted",
+        "revision_id": "REV-009",
+        "schema_version": "1.0",
+        "target_id": "SRC-MALFORMED",
+        "target_type": "SOURCE",
+        "to_status": "RETRIEVAL_PENDING"
+      },
+      {
+        "from_status": "RETRIEVAL_PENDING",
+        "preserves_prior": true,
+        "reason": "No admissible full-text payload was available.",
+        "revision_id": "REV-010",
+        "schema_version": "1.0",
+        "target_id": "SRC-MALFORMED",
+        "target_type": "SOURCE",
+        "to_status": "UNRETRIEVABLE"
+      },
+      {
+        "from_status": "UNRESOLVED",
+        "preserves_prior": true,
+        "reason": "The cited page identifies the hot-lime preparation route; it supports the process subclaim, not performance.",
+        "revision_id": "REV-011",
+        "schema_version": "1.0",
+        "target_id": "EDGE-SUPPORT",
+        "target_type": "EDGE",
+        "to_status": "SUPPORTED"
+      },
+      {
+        "from_status": "UNRESOLVED",
+        "preserves_prior": true,
+        "reason": "The source documents a process distinction, but does not establish that no comparator is needed; this edge is retained as a direct challenge to the rival wording.",
+        "revision_id": "REV-012",
+        "schema_version": "1.0",
+        "target_id": "EDGE-CONTRADICT",
+        "target_type": "EDGE",
+        "to_status": "CONTRADICTED"
+      },
+      {
+        "from_status": "UNRESOLVED",
+        "preserves_prior": true,
+        "reason": "Rights/access failure is not evidence against the claim.",
+        "revision_id": "REV-013",
+        "schema_version": "1.0",
+        "target_id": "EDGE-UNRETRIEVABLE",
+        "target_type": "EDGE",
+        "to_status": "UNRETRIEVABLE"
+      },
+      {
+        "from_status": "PROVISIONAL",
+        "preserves_prior": true,
+        "reason": "A process subclaim is supported, while functional performance remains provisional.",
+        "revision_id": "REV-014",
+        "schema_version": "1.0",
+        "target_id": "ARG-HOTLIME",
+        "target_type": "ARGUMENT",
+        "to_status": "REVISED"
+      },
+      {
+        "from_status": "REVISED",
+        "preserves_prior": true,
+        "reason": "Adversarial vetting found no exact functional endpoint in the admitted source.",
+        "revision_id": "REV-015",
+        "schema_version": "1.0",
+        "target_id": "ARG-HOTLIME",
+        "target_type": "ARGUMENT",
+        "to_status": "WEAKENED"
+      }
+    ],
+    "score": {
+      "agent_count_credit": 0,
+      "consensus_credit": 0,
+      "evidence_credit": 1,
+      "independent_source_count": 5,
+      "provisional_argument_count": 2,
+      "rhetoric_credit": 0,
+      "supported_edge_ids": [
+        "EDGE-SUPPORT"
+      ]
+    },
+    "sources": [
+      {
+        "canonical_source_id": null,
+        "case_id": "roman-hot-mix",
+        "citation_ancestors": [],
+        "content_hash": null,
+        "evidence_credit": 0,
+        "host": "dspace.uevora.pt",
+        "identity_key": "sha256:b87d02b4a106677dd2a052d88973ed9f74b1acef4869ca4362c9b9b36d381195",
+        "independent_work": true,
+        "locator": "https://dspace.uevora.pt/rdpc/bitstream/bad",
+        "retrieval_note": "Recorded payload is not a parseable document.",
+        "rights_state": "REVIEW_REQUIRED",
+        "schema_version": "1.0",
+        "source_id": "SRC-MALFORMED",
+        "status": "UNRETRIEVABLE",
+        "title": "Malformed record"
+      },
+      {
+        "canonical_source_id": null,
+        "case_id": "roman-hot-mix",
+        "citation_ancestors": [],
+        "content_hash": "sha256:hotlime-content-v1",
+        "evidence_credit": 0,
+        "host": "dspace.uevora.pt",
+        "identity_key": "doi:10.1016/j.cemconcomp.2011.05.008",
+        "independent_work": true,
+        "locator": "https://dspace.uevora.pt/rdpc/bitstream/10174/4948/1/hot-lime.pdf",
+        "retrieval_note": "Recorded public fixture with page-located process content.",
+        "rights_state": "PERMITTED",
+        "schema_version": "1.0",
+        "source_id": "SRC-PUBLIC-HOTLIME",
+        "status": "ADMITTED_CORPUS",
+        "title": "Traditional methods of mortar preparation: The hot lime mix method"
+      },
+      {
+        "canonical_source_id": "SRC-PUBLIC-HOTLIME",
+        "case_id": "roman-hot-mix",
+        "citation_ancestors": [
+          "SRC-PUBLIC-HOTLIME"
+        ],
+        "content_hash": "sha256:hotlime-content-v1",
+        "evidence_credit": 0,
+        "host": "repository.example",
+        "identity_key": "doi:10.1016/j.cemconcomp.2011.05.008",
+        "independent_work": false,
+        "locator": "https://repository.example/duplicate-hotlime",
+        "retrieval_note": "Duplicate DOI, hash, and citation ancestry.",
+        "rights_state": "PERMITTED",
+        "schema_version": "1.0",
+        "source_id": "SRC-PUBLIC-HOTLIME-DUP",
+        "status": "DUPLICATE",
+        "title": "Traditional methods of mortar preparation: The hot lime mix method"
+      },
+      {
+        "canonical_source_id": null,
+        "case_id": "roman-hot-mix",
+        "citation_ancestors": [],
+        "content_hash": null,
+        "evidence_credit": 0,
+        "host": "publisher.example",
+        "identity_key": "doi:10.9999/blocked.1",
+        "independent_work": true,
+        "locator": "https://publisher.example/article/blocked",
+        "retrieval_note": "Abstract metadata is visible, full text unavailable.",
+        "rights_state": "RIGHTS_BLOCKED",
+        "schema_version": "1.0",
+        "source_id": "SRC-RIGHTS-BLOCKED",
+        "status": "UNRETRIEVABLE",
+        "title": "Mechanism of lime crack closure"
+      },
+      {
+        "canonical_source_id": null,
+        "case_id": "roman-hot-mix",
+        "citation_ancestors": [],
+        "content_hash": null,
+        "evidence_credit": 0,
+        "host": "repository.example",
+        "identity_key": "sha256:7e9baddbb223f46e7eae93678d1cc1aa0412d38ccd5f1dda0360c885013e9981",
+        "independent_work": true,
+        "locator": "https://repository.example/rival",
+        "retrieval_note": "Metadata-only rival lead; no evidence credit.",
+        "rights_state": "METADATA_ONLY",
+        "schema_version": "1.0",
+        "source_id": "SRC-RIVAL-DUP",
+        "status": "UNRETRIEVABLE",
+        "title": "Matched lime mortar comparator"
+      },
+      {
+        "canonical_source_id": null,
+        "case_id": "roman-hot-mix",
+        "citation_ancestors": [],
+        "content_hash": null,
+        "evidence_credit": 0,
+        "host": "unknown-repository.example",
+        "identity_key": "sha256:80b9018abf4a71d5612647f6df9883174ffed935c78c566ff7ca1ec299e9cbf0",
+        "independent_work": true,
+        "locator": "https://unknown-repository.example/record/42",
+        "retrieval_note": "Unknown public lead; quarantine until source policy review.",
+        "rights_state": "UNKNOWN",
+        "schema_version": "1.0",
+        "source_id": "SRC-UNKNOWN-LEAD",
+        "status": "DISCOVERED",
+        "title": "Hot lime preparation and later crack closure"
+      }
+    ],
+    "vetting": [
+      {
+        "content_verified": true,
+        "decision_id": "VET-PUBLIC",
+        "exact_locator_verified": true,
+        "identity_verified": true,
+        "outcome": "ADMIT",
+        "rationale": "DOI, title, payload hash, and recorded page route agree.",
+        "reviewer_role": "VETTER",
+        "schema_version": "1.0",
+        "source_id": "SRC-PUBLIC-HOTLIME"
+      },
+      {
+        "content_verified": false,
+        "decision_id": "VET-SRC-RIVAL-DUP",
+        "exact_locator_verified": false,
+        "identity_verified": false,
+        "outcome": "UNRETRIEVABLE",
+        "rationale": "No admissible full-text payload was available.",
+        "reviewer_role": "VETTER",
+        "schema_version": "1.0",
+        "source_id": "SRC-RIVAL-DUP"
+      },
+      {
+        "content_verified": false,
+        "decision_id": "VET-SRC-RIGHTS-BLOCKED",
+        "exact_locator_verified": false,
+        "identity_verified": false,
+        "outcome": "UNRETRIEVABLE",
+        "rationale": "No admissible full-text payload was available.",
+        "reviewer_role": "VETTER",
+        "schema_version": "1.0",
+        "source_id": "SRC-RIGHTS-BLOCKED"
+      },
+      {
+        "content_verified": false,
+        "decision_id": "VET-SRC-MALFORMED",
+        "exact_locator_verified": false,
+        "identity_verified": false,
+        "outcome": "UNRETRIEVABLE",
+        "rationale": "No admissible full-text payload was available.",
+        "reviewer_role": "VETTER",
+        "schema_version": "1.0",
+        "source_id": "SRC-MALFORMED"
+      },
+      {
+        "content_verified": true,
+        "decision_id": "VET-ADVERSARIAL",
+        "exact_locator_verified": false,
+        "identity_verified": true,
+        "outcome": "UNRESOLVED",
+        "rationale": "Process evidence is real, but the functional healing claim still needs a matched endpoint.",
+        "reviewer_role": "ADVERSARIAL_VETTER",
+        "schema_version": "1.0",
+        "source_id": "SRC-PUBLIC-HOTLIME"
+      }
+    ]
+  },
+  "status": "PROVISIONAL_EVIDENCE_LOOP_READY"
+}

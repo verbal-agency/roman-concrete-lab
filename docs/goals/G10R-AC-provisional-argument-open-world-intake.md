@@ -1,6 +1,6 @@
 # G10R-AC — Build the provisional-argument and open-world intake loop
 
-**Status:** proposed
+**Status:** complete — `PROVISIONAL_EVIDENCE_LOOP_READY`
 **Dependencies:** G10R-AB `INCONCLUSIVE_ACTIVE_INVESTIGATION`; G10R-P target-state amendment v2; no live model, network, subscription, or laboratory execution
 **Authority:** offline implementation only; agents may propose arguments and source leads, but may not self-admit sources, promote evidence, authorize experiments, or widen the live source policy
 
@@ -95,3 +95,12 @@ Return exactly one of `PROVISIONAL_EVIDENCE_LOOP_READY`,
 `PROVISIONAL_EVIDENCE_LOOP_NO_GO`, or `INCONCLUSIVE_PROVISIONAL_INTAKE`.
 Only the first permits a later Phase-A redesign proposal; it does not authorize
 live calls, source-policy expansion, evidence promotion, or another paid run.
+
+## Completion evidence
+
+The offline replay in `artifacts/goals/G10R-AC/replay.json` passed all eight
+behavior criteria with zero model calls, zero network calls, zero credential
+reads, and `$0` paid spend. Focused tests pass (`5 passed`); the full suite
+passes (`189 passed`); and `git diff --check` passes. A stale historical
+G10R-X manifest hash was refreshed for the already-amended viewpoint protocol
+so the repository-wide integrity test remains valid.

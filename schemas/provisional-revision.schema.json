@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/provisional-revision.schema.json",
+  "title": "ProvisionalRevision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "revision_id", "target_id", "target_type", "from_status", "to_status", "reason", "preserves_prior"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "revision_id": {"type": "string", "minLength": 1},
+    "target_id": {"type": "string", "minLength": 1},
+    "target_type": {"enum": ["ARGUMENT", "EDGE", "SOURCE"]},
+    "from_status": {"type": "string", "minLength": 1},
+    "to_status": {"type": "string", "minLength": 1},
+    "reason": {"type": "string", "minLength": 1},
+    "preserves_prior": {"const": true}
+  }
+}
