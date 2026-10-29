@@ -1,0 +1,123 @@
+{
+  "activation_status": "PENDING_OWNER_ACTIVATION",
+  "authority": {
+    "credentials": "not read",
+    "evidence_promotion": "prohibited",
+    "laboratory": "prohibited",
+    "model_calls": "none during freeze",
+    "network": "none during freeze",
+    "owner_activation": "separate pending request only",
+    "source_policy": "frozen read-only exact-host policy"
+  },
+  "files": {
+    "base_runner": {
+      "path": "src/roman_concrete_lab/agents/investigation.py",
+      "sha256": "sha256:c9ae4b70709d369c7d3efe0daa114418a8198e9f521b3ee39e680ea19de461f8"
+    },
+    "claim_edge_schema": {
+      "path": "schemas/claim-source-edge.schema.json",
+      "sha256": "sha256:d271a6b92b66a1dc5f8734aa5714b39075c5667b473adb13d78c55abd0d65da7"
+    },
+    "conflict_adjudication_schema": {
+      "path": "schemas/conflict-adjudication.schema.json",
+      "sha256": "sha256:3a3cd119c77fd0825e2ccde67f5562ee9cebb48e3bed123ad690a7b27785b7a6"
+    },
+    "conflict_adjudicator": {
+      "path": "src/roman_concrete_lab/agents/conflict_adjudication.py",
+      "sha256": "sha256:962e75360f3092fe0fea311d19aa2953d6915bb2006f688dfa3e92a32b257e88"
+    },
+    "conflict_set_schema": {
+      "path": "schemas/conflict-set.schema.json",
+      "sha256": "sha256:1d868874a26bbfa9342647d9194f79d6389f28a4c38fcb6b578a81904b744161"
+    },
+    "focused_test": {
+      "path": "tests/agents/test_runner_provisional_intake.py",
+      "sha256": "sha256:27896349b2edd596deb2497157f66fae23577400cfe6399f38e7eb96ab249355"
+    },
+    "predecessor_goal": {
+      "path": "docs/goals/G10R-AD-runner-provisional-intake-and-conflict-adjudication.md",
+      "sha256": "sha256:b625bc8eb556a3baa7385fcda1d53f21a3cff6e7cb3e9f6cfbabc99d7dfce5ca"
+    },
+    "predecessor_replay": {
+      "path": "artifacts/goals/G10R-AD/replay.json",
+      "sha256": "sha256:73da66ad870e65f596fb1bd7515b8bd1ec230368b5807703baa79868df711949"
+    },
+    "protocol": {
+      "path": "docs/protocols/viewpoint-society.md",
+      "sha256": "sha256:949962683bb256b86ccaac9ed5da1db307e70f22ac84ab3ca1257f86b2fb0787"
+    },
+    "provisional_argument_schema": {
+      "path": "schemas/exploratory-argument.schema.json",
+      "sha256": "sha256:ac18481b11da8bcc9e69d9478d5e3bf67a226f2e71dd6065b085b105be6527f2"
+    },
+    "runner_cases": {
+      "path": "fixtures/investigation/g10r-ad/runner-cases.jsonl",
+      "sha256": "sha256:3c958541b78407ca167b081739fdff3da60f9044f378948a1b357eb96a286685"
+    },
+    "runner_intake_adapter": {
+      "path": "src/roman_concrete_lab/agents/runner_intake.py",
+      "sha256": "sha256:288de18c0f1262251b7bef6c23e27d3fdd7162935fed40eb34c30cf19cf4e1e6"
+    },
+    "runner_intake_schema": {
+      "path": "schemas/runner-provisional-intake.schema.json",
+      "sha256": "sha256:772b923f85ff8ef28035736f1a7d4f9b2a3a4ceeb5d3a13c32bdbb1cb5f1534c"
+    },
+    "runner_replay": {
+      "path": "tools/evaluation/runner_provisional_intake_replay.py",
+      "sha256": "sha256:9c7b27d88ebe0b6e102f788e0b21e62518aedb4aa8e480ff279e6ec6ff47b979"
+    },
+    "source_leads": {
+      "path": "fixtures/investigation/g10r-ad/source-leads.jsonl",
+      "sha256": "sha256:72f9ece9a3887d93ebb2a52eead536f05deaa64f9b3b62cfab41d416d27c6adf"
+    },
+    "source_policy": {
+      "path": "fixtures/investigation/source-policy.json",
+      "sha256": "sha256:30ce73d74ff7f8bd85605b36db979abd676bcb2b173760d397ec7d75e96c6d90"
+    }
+  },
+  "goal": "G10R-AE",
+  "hard_total_external_spend_cap_usd": 25.0,
+  "limits_per_treatment_case": {
+    "document_fetches": 4,
+    "estimated_cost_usd": 25.0,
+    "input_tokens": 80000,
+    "output_tokens": 12000,
+    "payload_bytes": 5000000,
+    "queries": 12,
+    "retained_sources": 24,
+    "simulation_calls": 4
+  },
+  "manifest_id": "G10R-AE-fresh-phase-a-runner-intake-v1",
+  "model_policy": {
+    "api": "responses",
+    "model": "gpt-6-luna",
+    "provider": "openai",
+    "provider_managed_tools": [],
+    "reasoning_effort": "low",
+    "runtime_credentials_only": true,
+    "store": false
+  },
+  "output_namespace": "artifacts/goals/G10R-AE/",
+  "predecessor": {
+    "artifact_path": "artifacts/goals/G10R-AD/replay.json",
+    "artifact_sha256": "sha256:73da66ad870e65f596fb1bd7515b8bd1ec230368b5807703baa79868df711949",
+    "goal": "G10R-AD",
+    "verdict": "RUNNER_PROVISIONAL_INTAKE_READY"
+  },
+  "runner_contract": {
+    "adapter": "RunnerIntakeActiveInvestigationRunner",
+    "checkpoint_field": "provisional_intake",
+    "conflict_statuses": [
+      "OPEN",
+      "SCOPE_DIFFERENCE",
+      "METHOD_DIFFERENCE",
+      "WEIGHTED_CONFLICT",
+      "UNRESOLVED"
+    ],
+    "winner_selection": "PROHIBITED"
+  },
+  "schema_version": "g10r-ae.1",
+  "source_policy_file_sha256": "sha256:30ce73d74ff7f8bd85605b36db979abd676bcb2b173760d397ec7d75e96c6d90",
+  "source_policy_sha256": "sha256:7b9c0de21a47874cf14a101a37562da3a4bffcfbae9506e42a626fb9caece07a",
+  "status": "PENDING_OWNER_ACTIVATION"
+}

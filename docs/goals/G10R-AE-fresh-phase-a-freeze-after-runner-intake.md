@@ -1,6 +1,6 @@
 # G10R-AE — Freeze Phase A after runner intake integration
 
-**Status:** proposed
+**Status:** complete — `PHASE_A_READY_FOR_OWNER_ACTIVATION`
 **Dependencies:** G10R-AD `RUNNER_PROVISIONAL_INTAKE_READY`; no live model,
 network, subscription, credential, laboratory, or paid execution
 **Authority:** offline manifest construction, fault injection, and deterministic
@@ -74,3 +74,14 @@ Return exactly one of `PHASE_A_READY_FOR_OWNER_ACTIVATION`,
 `PHASE_A_FREEZE_NO_GO`, or `INCONCLUSIVE_PHASE_A_FREEZE`. The first permits a
 separately authorized owner activation; it does not itself make live calls or
 authorize a paid run.
+
+## Completion evidence
+
+The freeze artifacts under `artifacts/goals/G10R-AE/` pass all six criteria.
+The focused freeze/intake tests pass (`11 passed`); the full repository suite
+passes (`195 passed`); and `git diff --check` passes. The fault matrix exercises
+the real rejection paths for stale manifests, changed inputs, conflicting
+duplicates, cross-case checkpoints, malformed conflict records, and cap
+violations. Historical G10R-X, G10R-AC,
+and G10R-AB artifacts remain unchanged. The freeze made zero model calls,
+network calls, credential reads, or paid spend.
