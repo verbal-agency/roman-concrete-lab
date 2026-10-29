@@ -1,0 +1,82 @@
+{
+  "authority": {
+    "credentials": "not read",
+    "evidence_promotion": "prohibited",
+    "laboratory": "prohibited",
+    "model_calls": "none",
+    "network": "none",
+    "paid_activation": "separate owner decision naming G10R-AE manifest"
+  },
+  "budgets": {
+    "document_fetches": 4,
+    "estimated_cost_usd": 25.0,
+    "input_tokens": 80000,
+    "output_tokens": 7200,
+    "payload_bytes": 5000000,
+    "queries": 12,
+    "retained_sources": 24,
+    "simulation_calls": 4
+  },
+  "files": {
+    "cases": {
+      "path": "fixtures/investigation/g10r-af/cases.json",
+      "sha256": "sha256:811eb21cc5a8689742696287e5695331e819f28c4a522d65f1e1ebdd6df8bc5c"
+    },
+    "fault_cases": {
+      "path": "fixtures/investigation/g10r-af/fault-cases.json",
+      "sha256": "sha256:db060b626a135866e9009c57156e3a8d9a8420e62a394c643783fe72ccd94134"
+    },
+    "focused_test": {
+      "path": "tests/agents/test_proposal_machinery.py",
+      "sha256": "sha256:04949f268ca5c668068c9ca4357f12a8ac7c3b7f73916ca2d8d2fd3c191b1907"
+    },
+    "predecessor_manifest": {
+      "path": "artifacts/goals/G10R-AE/manifest.json",
+      "sha256": "sha256:82085adc916431b432265642b5d34dffd684ad249d044394f6a0e0bae0ab7cda"
+    },
+    "predecessor_preflight": {
+      "path": "artifacts/goals/G10R-AE/preflight.json",
+      "sha256": "sha256:87e760323f7d37c032a3eedde5111aa3a29aa204ba910c9fc9866ec28dbba1f1"
+    },
+    "proposal_module": {
+      "path": "src/roman_concrete_lab/agents/proposal_machinery.py",
+      "sha256": "sha256:32fadadcd82acb100fc13320b91f01a0c4487ad65799a94860809e289ed8ea99"
+    },
+    "proposal_protocol": {
+      "path": "docs/protocols/proposal-machinery.md",
+      "sha256": "sha256:679b38ea0d85cbf18eb07709e784f5b4e1b1f804b64850f228e88e312defbc29"
+    },
+    "proposal_schema": {
+      "path": "schemas/proposal-packet.schema.json",
+      "sha256": "sha256:637ca5ae2a274f1bab5701b1dc61d088a3a0c8f111a084d80053e3fc3cbc290b"
+    },
+    "proposals": {
+      "path": "fixtures/investigation/g10r-af/proposals.jsonl",
+      "sha256": "sha256:ec942a12ebaf8496b4db8fdc5ee5c6f72eeb8111523f64bae8d16155becd04b6"
+    },
+    "source_policy": {
+      "path": "fixtures/investigation/source-policy.json",
+      "sha256": "sha256:30ce73d74ff7f8bd85605b36db979abd676bcb2b173760d397ec7d75e96c6d90"
+    }
+  },
+  "goal": "G10R-AF",
+  "manifest_id": "G10R-AF-proposal-machinery-v1",
+  "model_policy": {
+    "calls": "none in G10R-AF",
+    "model": "gpt-6-luna",
+    "provider": "openai"
+  },
+  "output_namespace": "artifacts/goals/G10R-AF/",
+  "predecessor": {
+    "goal": "G10R-AE",
+    "manifest_id": "G10R-AE-fresh-phase-a-runner-intake-v1",
+    "manifest_sha256": "sha256:82085adc916431b432265642b5d34dffd684ad249d044394f6a0e0bae0ab7cda"
+  },
+  "schema_version": "g10r-af.1",
+  "source_policy_sha256": "sha256:30ce73d74ff7f8bd85605b36db979abd676bcb2b173760d397ec7d75e96c6d90",
+  "status": "PROPOSAL_MACHINERY_READY",
+  "treatments": {
+    "A1": "single investigator proposal packet",
+    "A2-M": "viewpoint society proposal packets"
+  }
+}

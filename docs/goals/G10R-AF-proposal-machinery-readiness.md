@@ -1,6 +1,6 @@
 # G10R-AF — Proposal-machinery readiness
 
-**Status:** proposed
+**Status:** complete — `PROPOSAL_MACHINERY_READY`
 **Dependencies:** G10R-AE `PHASE_A_READY_FOR_OWNER_ACTIVATION`; no live model,
 network, subscription, credential, laboratory, or paid execution
 **Advances:** tests whether the repaired runner can turn viewpoint work into
@@ -104,3 +104,14 @@ Return exactly one of `PROPOSAL_MACHINERY_READY`,
 `PROPOSAL_MACHINERY_NO_GO`, or `INCONCLUSIVE_PROPOSAL_MACHINERY`. A ready
 result permits drafting a separate paid-evaluation goal; it does not authorize
 provider initialization, network access, or a laboratory handoff.
+
+## Completion evidence
+
+The offline replay returns `PROPOSAL_MACHINERY_READY`. The focused proposal,
+runner, and intake tests pass (`14 passed`); the full repository suite passes
+(`200 passed`); and `git diff --check` passes. The replay retains supporting,
+contradictory, metadata-only, unresolvable, and incomplete proposal states,
+rejects malformed, duplicate, cross-case, stale, and over-cap inputs, and
+retains valid packets after a partial failure. Blinded scoring gives zero credit
+to rhetoric, consensus, answer length, viewpoint count, and agent count. The
+gate made zero model calls, network calls, credential reads, or paid spend.

@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roman-concrete-lab.local/schemas/proposal-packet.schema.json",
+  "title": "ProposalPacket",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "proposal_id", "case_id", "arm", "viewpoint_id",
+    "status", "intervention_or_process", "comparator", "primary_endpoint",
+    "predicted_observation", "falsifier", "discriminator", "support_region",
+    "uncertainty", "source_edges", "conflict_set_ids", "rival_proposal_ids",
+    "provenance", "rhetorical_metadata"
+  ],
+  "properties": {
+    "schema_version": {"const": "g10r-af.1"},
+    "proposal_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "arm": {"enum": ["A1", "A2-M"]},
+    "viewpoint_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["PROPOSAL_REVIEWABLE", "PROPOSAL_INCOMPLETE", "REVIEW_REQUIRED"]},
+    "intervention_or_process": {"type": "string"},
+    "comparator": {"type": "string"},
+    "primary_endpoint": {"type": "string"},
+    "predicted_observation": {"type": "string"},
+    "falsifier": {"type": "string"},
+    "discriminator": {"type": "string"},
+    "support_region": {"type": "string"},
+    "uncertainty": {"type": "string"},
+    "source_edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["edge_id", "source_id", "claim_id", "status", "locator", "content_hash", "action_ids", "rationale"],
+        "properties": {
+          "edge_id": {"type": "string", "minLength": 1},
+          "source_id": {"type": "string", "minLength": 1},
+          "claim_id": {"type": "string", "minLength": 1},
+          "status": {"enum": ["SUPPORTED", "CONTRADICTED", "UNRETRIEVABLE", "METADATA_ONLY", "REVIEW_REQUIRED"]},
+          "locator": {"type": ["string", "null"]},
+          "content_hash": {"type": ["string", "null"]},
+          "action_ids": {"type": "array", "items": {"type": "string"}},
+          "rationale": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "conflict_set_ids": {"type": "array", "items": {"type": "string"}},
+    "rival_proposal_ids": {"type": "array", "items": {"type": "string"}},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action_ids", "dossier_revision_ids", "portfolio_ids"],
+      "properties": {
+        "action_ids": {"type": "array", "items": {"type": "string"}},
+        "dossier_revision_ids": {"type": "array", "items": {"type": "string"}},
+        "portfolio_ids": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "rhetorical_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["consensus_signal", "answer_length", "viewpoint_count", "agent_count"],
+      "properties": {
+        "consensus_signal": {"type": "number", "minimum": 0},
+        "answer_length": {"type": "integer", "minimum": 0},
+        "viewpoint_count": {"type": "integer", "minimum": 0},
+        "agent_count": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

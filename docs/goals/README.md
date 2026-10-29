@@ -52,6 +52,11 @@ proposal machinery rather than rhetorical debate. G11 remains deferred until
 that machinery produces a reviewable candidate package and qualified scientific
 and safety reviewers are available.
 
+After G10R-AF returns `PROPOSAL_MACHINERY_READY`, G10R-AG is the only eligible
+live proposal-evaluation goal. It requires explicit activation of the exact
+frozen manifest, compares blinded proposal usefulness rather than debate
+volume, and cannot authorize laboratory work or G11 approval.
+
 1. Read `docs/research_program_v2.md`, `docs/roadmap.md`, the G-1 decision when the selected goal is G00 or later, and the selected goal completely.
 2. Verify that every dependency and entry gate is satisfied from repository artifacts. Do not infer a gate result.
 3. Work only inside the selected goal's scope. Record unrelated findings in `docs/backlog.md` with evidence and destination.

@@ -1,0 +1,509 @@
+{
+  "budgets": {
+    "A1": {
+      "limits": {
+        "document_fetches": 4,
+        "estimated_cost_usd": 25.0,
+        "input_tokens": 80000,
+        "output_tokens": 7200,
+        "payload_bytes": 5000000,
+        "queries": 12,
+        "retained_sources": 24,
+        "simulation_calls": 4
+      },
+      "remaining": {
+        "document_fetches": 4,
+        "estimated_cost_usd": 25.0,
+        "input_tokens": 80000,
+        "output_tokens": 7200,
+        "payload_bytes": 5000000,
+        "queries": 12,
+        "retained_sources": 24,
+        "simulation_calls": 4
+      },
+      "usage": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0.0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 0,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      }
+    },
+    "A2-M": {
+      "limits": {
+        "document_fetches": 4,
+        "estimated_cost_usd": 25.0,
+        "input_tokens": 80000,
+        "output_tokens": 7200,
+        "payload_bytes": 5000000,
+        "queries": 12,
+        "retained_sources": 24,
+        "simulation_calls": 4
+      },
+      "remaining": {
+        "document_fetches": 4,
+        "estimated_cost_usd": 25.0,
+        "input_tokens": 80000,
+        "output_tokens": 7200,
+        "payload_bytes": 5000000,
+        "queries": 12,
+        "retained_sources": 24,
+        "simulation_calls": 4
+      },
+      "usage": {
+        "document_fetches": 0,
+        "estimated_cost_usd": 0.0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "payload_bytes": 0,
+        "queries": 0,
+        "retained_sources": 0,
+        "simulation_calls": 0
+      }
+    }
+  },
+  "checkpoints": [
+    {
+      "arm": "A1",
+      "authority": {
+        "credentials_read": false,
+        "model_calls": 0,
+        "network_calls": 0,
+        "paid_spend_usd": 0
+      },
+      "case_id": "AF-CLAST",
+      "context_hash": "sha256:7a850e59ab2ea4a11d358b642d5d0c4253be946c7c094760bed648a64d7a0747",
+      "proposals": [
+        {
+          "arm": "A1",
+          "case_id": "AF-CLAST",
+          "comparator": "",
+          "conflict_set_ids": [],
+          "discriminator": "",
+          "falsifier": "",
+          "intervention_or_process": "reactive lime clasts",
+          "predicted_observation": "",
+          "primary_endpoint": "permeability recovery at 28 days",
+          "proposal_id": "AF-CLAST-A1",
+          "provenance": {
+            "action_ids": [
+              "AF-ACTION-5"
+            ],
+            "dossier_revision_ids": [
+              "AF-REV-A1-CLAST"
+            ],
+            "portfolio_ids": [
+              "AF-PORT-2"
+            ]
+          },
+          "rhetorical_metadata": {
+            "agent_count": 6,
+            "answer_length": 3800,
+            "consensus_signal": 0.8,
+            "viewpoint_count": 4
+          },
+          "rival_proposal_ids": [],
+          "schema_version": "g10r-af.1",
+          "source_edges": [
+            {
+              "action_ids": [
+                "AF-ACTION-5"
+              ],
+              "claim_id": "AF-C3",
+              "content_hash": null,
+              "edge_id": "AF-E5",
+              "locator": null,
+              "rationale": "metadata identifies a potentially relevant study but no payload is admitted",
+              "source_id": "AF-SRC-METADATA",
+              "status": "METADATA_ONLY"
+            }
+          ],
+          "status": "PROPOSAL_INCOMPLETE",
+          "support_region": "modern terrestrial lime-pozzolan mortar",
+          "uncertainty": "the comparator and falsifier are not yet specified",
+          "viewpoint_id": "A1-SINGLE"
+        }
+      ],
+      "schema_version": "g10r-af.1"
+    },
+    {
+      "arm": "A2-M",
+      "authority": {
+        "credentials_read": false,
+        "model_calls": 0,
+        "network_calls": 0,
+        "paid_spend_usd": 0
+      },
+      "case_id": "AF-CLAST",
+      "context_hash": "sha256:7a850e59ab2ea4a11d358b642d5d0c4253be946c7c094760bed648a64d7a0747",
+      "proposals": [
+        {
+          "arm": "A2-M",
+          "case_id": "AF-CLAST",
+          "comparator": "matched hot-mixed mortar without reactive clasts",
+          "conflict_set_ids": [],
+          "discriminator": "pre-register crack-to-clast intersection strata and blinded permeability analysis",
+          "falsifier": "no interaction between clast presence and crack intersection",
+          "intervention_or_process": "reactive lime clasts in hot-mixed lime-pozzolan mortar",
+          "predicted_observation": "clast-containing specimens recover more permeability when cracks intersect reactive inclusions",
+          "primary_endpoint": "permeability recovery at 28 days",
+          "proposal_id": "AF-CLAST-A2-M",
+          "provenance": {
+            "action_ids": [
+              "AF-ACTION-6",
+              "AF-ACTION-7"
+            ],
+            "dossier_revision_ids": [
+              "AF-REV-A2-CLAST"
+            ],
+            "portfolio_ids": [
+              "AF-PORT-2"
+            ]
+          },
+          "rhetorical_metadata": {
+            "agent_count": 2,
+            "answer_length": 300,
+            "consensus_signal": 0.0,
+            "viewpoint_count": 1
+          },
+          "rival_proposal_ids": [
+            "AF-CLAST-A1"
+          ],
+          "schema_version": "g10r-af.1",
+          "source_edges": [
+            {
+              "action_ids": [
+                "AF-ACTION-6"
+              ],
+              "claim_id": "AF-C4",
+              "content_hash": null,
+              "edge_id": "AF-E6",
+              "locator": null,
+              "rationale": "candidate source is retained for collective review",
+              "source_id": "AF-SRC-LEAD",
+              "status": "REVIEW_REQUIRED"
+            },
+            {
+              "action_ids": [
+                "AF-ACTION-7"
+              ],
+              "claim_id": "AF-C4",
+              "content_hash": null,
+              "edge_id": "AF-E7",
+              "locator": null,
+              "rationale": "lawful content retrieval failed; this is not contradiction",
+              "source_id": "AF-SRC-NEGATIVE",
+              "status": "UNRETRIEVABLE"
+            }
+          ],
+          "status": "PROPOSAL_REVIEWABLE",
+          "support_region": "modern terrestrial lime-pozzolan mortar with controlled cracking",
+          "uncertainty": "the source lead is unresolved and the interaction may be absent",
+          "viewpoint_id": "VP-CLAST"
+        }
+      ],
+      "schema_version": "g10r-af.1"
+    },
+    {
+      "arm": "A1",
+      "authority": {
+        "credentials_read": false,
+        "model_calls": 0,
+        "network_calls": 0,
+        "paid_spend_usd": 0
+      },
+      "case_id": "AF-HOT-LIME",
+      "context_hash": "sha256:edd41d060d6f7e0589aec446b5a15ba7eaa3b73c1b96b105c89d9618ae39d769",
+      "proposals": [
+        {
+          "arm": "A1",
+          "case_id": "AF-HOT-LIME",
+          "comparator": "process-matched slaked-lime control",
+          "conflict_set_ids": [],
+          "discriminator": "randomized matched batches with blinded water-flow measurement",
+          "falsifier": "no between-arm difference after accounting for initial crack width and exposure",
+          "intervention_or_process": "hot-mixed quicklime lime-pozzolan mortar",
+          "predicted_observation": "hot mixing produces greater functional recovery than the matched control",
+          "primary_endpoint": "water-transport recovery at 28 days",
+          "proposal_id": "AF-HOT-LIME-A1",
+          "provenance": {
+            "action_ids": [
+              "AF-ACTION-1"
+            ],
+            "dossier_revision_ids": [
+              "AF-REV-A1"
+            ],
+            "portfolio_ids": [
+              "AF-PORT-1"
+            ]
+          },
+          "rhetorical_metadata": {
+            "agent_count": 1,
+            "answer_length": 1200,
+            "consensus_signal": 0.1,
+            "viewpoint_count": 1
+          },
+          "rival_proposal_ids": [
+            "AF-HOT-LIME-A2-M"
+          ],
+          "schema_version": "g10r-af.1",
+          "source_edges": [
+            {
+              "action_ids": [
+                "AF-ACTION-1"
+              ],
+              "claim_id": "AF-C1",
+              "content_hash": "sha256:af-process",
+              "edge_id": "AF-E1",
+              "locator": "https://example.org/af/process.pdf#page=4",
+              "rationale": "recorded process comparison supports the intervention distinction",
+              "source_id": "AF-SRC-PROCESS",
+              "status": "SUPPORTED"
+            }
+          ],
+          "status": "PROPOSAL_REVIEWABLE",
+          "support_region": "modern terrestrial lime-pozzolan mortar with controlled cracking",
+          "uncertainty": "the mechanism and effect size remain provisional",
+          "viewpoint_id": "A1-SINGLE"
+        }
+      ],
+      "schema_version": "g10r-af.1"
+    },
+    {
+      "arm": "A2-M",
+      "authority": {
+        "credentials_read": false,
+        "model_calls": 0,
+        "network_calls": 0,
+        "paid_spend_usd": 0
+      },
+      "case_id": "AF-HOT-LIME",
+      "context_hash": "sha256:edd41d060d6f7e0589aec446b5a15ba7eaa3b73c1b96b105c89d9618ae39d769",
+      "proposals": [
+        {
+          "arm": "A2-M",
+          "case_id": "AF-HOT-LIME",
+          "comparator": "process-matched slaked-lime control without clasts",
+          "conflict_set_ids": [
+            "AF-CONFLICT-1"
+          ],
+          "discriminator": "stratified clast-presence experiment with permeability and crack-location measurements",
+          "falsifier": "matched clast and no-clast groups have indistinguishable recovery distributions",
+          "intervention_or_process": "hot-mixed quicklime with reactive lime-clast reservoir",
+          "predicted_observation": "clast-containing hot-mixed mortar shows localized recovery without a universal mean shift",
+          "primary_endpoint": "water-transport recovery at 28 days",
+          "proposal_id": "AF-HOT-LIME-A2-M",
+          "provenance": {
+            "action_ids": [
+              "AF-ACTION-2",
+              "AF-ACTION-3",
+              "AF-ACTION-4"
+            ],
+            "dossier_revision_ids": [
+              "AF-REV-A2-1",
+              "AF-REV-A2-2"
+            ],
+            "portfolio_ids": [
+              "AF-PORT-1"
+            ]
+          },
+          "rhetorical_metadata": {
+            "agent_count": 5,
+            "answer_length": 4200,
+            "consensus_signal": 0.9,
+            "viewpoint_count": 3
+          },
+          "rival_proposal_ids": [
+            "AF-HOT-LIME-A1"
+          ],
+          "schema_version": "g10r-af.1",
+          "source_edges": [
+            {
+              "action_ids": [
+                "AF-ACTION-2"
+              ],
+              "claim_id": "AF-C2",
+              "content_hash": "sha256:af-process",
+              "edge_id": "AF-E2",
+              "locator": "https://example.org/af/process.pdf#page=4",
+              "rationale": "recorded process comparison supports hot-mix process identity",
+              "source_id": "AF-SRC-PROCESS",
+              "status": "SUPPORTED"
+            },
+            {
+              "action_ids": [
+                "AF-ACTION-3"
+              ],
+              "claim_id": "AF-C2",
+              "content_hash": "sha256:af-conflict",
+              "edge_id": "AF-E3",
+              "locator": "https://example.org/af/conflict.pdf#table=2",
+              "rationale": "matched comparison reports no general functional advantage",
+              "source_id": "AF-SRC-CONFLICT",
+              "status": "CONTRADICTED"
+            },
+            {
+              "action_ids": [
+                "AF-ACTION-4"
+              ],
+              "claim_id": "AF-C2",
+              "content_hash": null,
+              "edge_id": "AF-E4",
+              "locator": null,
+              "rationale": "new lead is retained pending identity and content review",
+              "source_id": "AF-SRC-LEAD",
+              "status": "REVIEW_REQUIRED"
+            }
+          ],
+          "status": "PROPOSAL_REVIEWABLE",
+          "support_region": "modern terrestrial lime-pozzolan mortar with controlled cracking",
+          "uncertainty": "clast reactivity, crack access, and exposure may modify the effect",
+          "viewpoint_id": "VP-HOT-LIME"
+        }
+      ],
+      "schema_version": "g10r-af.1"
+    }
+  ],
+  "criteria": {
+    "byte_stable_replay": true,
+    "case_and_arm_contract": true,
+    "contradictions_and_pending_retained": true,
+    "equal_blinded_comparison": true,
+    "fault_matrix_passed": true,
+    "rhetoric_zeroed": true,
+    "typed_proposal_components": true,
+    "zero_external_authority": true
+  },
+  "fault_matrix": {
+    "all_faults_rejected": true,
+    "budget_overage_rejected": true,
+    "conflicting_duplicate_rejected": true,
+    "cross_case_rejected": true,
+    "malformed_rejected": true,
+    "partial_success_retained": true,
+    "stale_checkpoint_rejected": true
+  },
+  "first_digest": "sha256:b13eb31de014cc7bf9c4f40f7896aa9acc1b5a397282228f321a2434012db170",
+  "goal": "G10R-AF",
+  "manifest_id": "G10R-AF-proposal-machinery-v1",
+  "replay": {
+    "byte_stable": true,
+    "credentials_read": false,
+    "external_calls": false,
+    "network_calls": 0,
+    "paid_spend_usd": 0,
+    "provider_calls": 0
+  },
+  "schema_version": "g10r-af.1",
+  "scores": [
+    {
+      "agent_count_credit": 0,
+      "answer_length_credit": 0,
+      "case_id": "AF-CLAST",
+      "components": {
+        "attributable_support": 0,
+        "contradiction_retention": 0,
+        "discriminator_quality": 0,
+        "falsifiability": 0,
+        "proposal_completeness": 0,
+        "rival_retention": 0,
+        "uncertainty_preservation": 1
+      },
+      "consensus_credit": 0,
+      "contradicted_edge_count": 0,
+      "missing_fields": [
+        "comparator",
+        "discriminator",
+        "falsifier",
+        "predicted_observation"
+      ],
+      "pending_edge_count": 1,
+      "proposal_credit": 0,
+      "proposal_id": "AF-CLAST-A1",
+      "rhetoric_credit": 0,
+      "status": "PROPOSAL_INCOMPLETE",
+      "supported_edge_count": 0,
+      "treatment_identity_available": false,
+      "viewpoint_count_credit": 0
+    },
+    {
+      "agent_count_credit": 0,
+      "answer_length_credit": 0,
+      "case_id": "AF-CLAST",
+      "components": {
+        "attributable_support": 0,
+        "contradiction_retention": 0,
+        "discriminator_quality": 1,
+        "falsifiability": 1,
+        "proposal_completeness": 1,
+        "rival_retention": 1,
+        "uncertainty_preservation": 1
+      },
+      "consensus_credit": 0,
+      "contradicted_edge_count": 0,
+      "missing_fields": [],
+      "pending_edge_count": 2,
+      "proposal_credit": 5,
+      "proposal_id": "AF-CLAST-A2-M",
+      "rhetoric_credit": 0,
+      "status": "PROPOSAL_REVIEWABLE",
+      "supported_edge_count": 0,
+      "treatment_identity_available": false,
+      "viewpoint_count_credit": 0
+    },
+    {
+      "agent_count_credit": 0,
+      "answer_length_credit": 0,
+      "case_id": "AF-HOT-LIME",
+      "components": {
+        "attributable_support": 1,
+        "contradiction_retention": 0,
+        "discriminator_quality": 1,
+        "falsifiability": 1,
+        "proposal_completeness": 1,
+        "rival_retention": 1,
+        "uncertainty_preservation": 1
+      },
+      "consensus_credit": 0,
+      "contradicted_edge_count": 0,
+      "missing_fields": [],
+      "pending_edge_count": 0,
+      "proposal_credit": 6,
+      "proposal_id": "AF-HOT-LIME-A1",
+      "rhetoric_credit": 0,
+      "status": "PROPOSAL_REVIEWABLE",
+      "supported_edge_count": 1,
+      "treatment_identity_available": false,
+      "viewpoint_count_credit": 0
+    },
+    {
+      "agent_count_credit": 0,
+      "answer_length_credit": 0,
+      "case_id": "AF-HOT-LIME",
+      "components": {
+        "attributable_support": 1,
+        "contradiction_retention": 1,
+        "discriminator_quality": 1,
+        "falsifiability": 1,
+        "proposal_completeness": 1,
+        "rival_retention": 1,
+        "uncertainty_preservation": 1
+      },
+      "consensus_credit": 0,
+      "contradicted_edge_count": 1,
+      "missing_fields": [],
+      "pending_edge_count": 1,
+      "proposal_credit": 7,
+      "proposal_id": "AF-HOT-LIME-A2-M",
+      "rhetoric_credit": 0,
+      "status": "PROPOSAL_REVIEWABLE",
+      "supported_edge_count": 1,
+      "treatment_identity_available": false,
+      "viewpoint_count_credit": 0
+    }
+  ],
+  "second_digest": "sha256:b13eb31de014cc7bf9c4f40f7896aa9acc1b5a397282228f321a2434012db170"
+}

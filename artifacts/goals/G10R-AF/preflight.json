@@ -1,0 +1,37 @@
+{
+  "authority": {
+    "byte_stable": true,
+    "credentials_read": false,
+    "external_calls": false,
+    "network_calls": 0,
+    "paid_spend_usd": 0,
+    "provider_calls": 0
+  },
+  "criteria": {
+    "byte_stable_replay": true,
+    "case_and_arm_contract": true,
+    "contradictions_and_pending_retained": true,
+    "equal_blinded_comparison": true,
+    "fault_matrix_passed": true,
+    "rhetoric_zeroed": true,
+    "typed_proposal_components": true,
+    "zero_external_authority": true
+  },
+  "goal": "G10R-AF",
+  "manifest_id": "G10R-AF-proposal-machinery-v1",
+  "manifest_sha256": "sha256:b3e6b1a5040f9d80b3eb46feb9654b26dfbd81b32194649aa98d464a5cd337c6",
+  "schema_version": "g10r-af.1",
+  "status": "PROPOSAL_MACHINERY_READY",
+  "tests": {
+    "focused": {
+      "command": "/Users/wcu/miniforge3/bin/python3 -m pytest -q tests/agents/test_proposal_machinery.py tests/agents/test_runner_provisional_intake.py tests/agents/test_provisional_intake.py",
+      "output_tail": "..............                                                           [100%]\n14 passed in 2.88s",
+      "returncode": 0
+    },
+    "full": {
+      "command": "/Users/wcu/miniforge3/bin/python3 -m pytest -q",
+      "output_tail": "........................................................................ [ 36%]\n........................................................................ [ 72%]\n........................................................                 [100%]\n200 passed in 53.84s",
+      "returncode": 0
+    }
+  }
+}
